@@ -23,20 +23,6 @@
 				"server": "HAMTOP2000\\SQLEXPRESS",
 				"username": "sqltools"
 			}
-		],
-		"workbench.colorCustomizations": {
-			"activityBar.background": "#56bec6",
-			"activityBar.foreground": "#15202b",
-			"activityBar.inactiveForeground": "#15202b99",
-			"activityBarBadge.background": "#bf40b6",
-			"activityBarBadge.foreground": "#e7e7e7",
-			"titleBar.activeBackground": "#3ba6ae",
-			"titleBar.inactiveBackground": "#3ba6ae99",
-			"titleBar.activeForeground": "#15202b",
-			"titleBar.inactiveForeground": "#15202b99",
-			"statusBar.background": "#3ba6ae",
-			"statusBarItem.hoverBackground": "#2e8288",
-			"statusBar.foreground": "#15202b"
-		}
+		]
 	}
 }
