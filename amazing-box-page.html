@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        h1{
+            text-align: center;
+            position: relative;
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 0px 0px 5px 0px;
+            padding: 5px 0px;
+            background-color: rgb(77, 119, 235);
+            width: 90%;
+            animation-name: header-animation ;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        @keyframes header-animation {
+            0% {background-color: rgb(77, 119, 235); margin-right: 50%;text-align: center; color: white; padding: 15px 0px; font-size: 26px; font-weight: 900}
+            30% {background-color: rgb(199, 137, 5);  width: 50%; margin-right: 0%; margin-left: 50%;  text-align: right;  color: rgb(68, 68, 68);  padding: 5px 0px; font-size: 12px; font-weight: 400}
+            60% {background-color: rgb(255, 255, 255); width: 50%; margin-right: 50%; color: rgb(78, 184, 226); text-align: right; padding: 15px 0px; font-size: 22px; font-weight: 600}
+            75% {background-color: rgb(0, 121, 151); width: 90%; margin-bottom: 2%; margin-right: 0%; color: rgb(255, 255, 255); text-align: left; padding: 5px 15px; font-size: 22px; font-weight: 600}
+            100% {background-color: rgb(175, 45, 45); margin-bottom: 5%;  text-align: right;  color: rgb(160, 49, 49);  padding: 5px 5px; font-size: 12px; font-weight: 400}
+
+        }
+
+        .color-box {
+            width: 100px;
+            height: 100px;
+            position: relative;
+                background-color: red;
+            -webkit-animation-name: color-box-animation;
+            /* Safari 4.0 - 8.0 */
+            -webkit-animation-duration: 15s;
+            /* Safari 4.0 - 8.0 */
+            animation-name: color-box-animation;
+            animation-duration: 10s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+        }
+        /* Safari 4.0 - 8.0 */
+        @-webkit-keyframes color-box-animation {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+
+        /* Standard syntax */
+        @keyframes color-box-animation {
+            0% {background-color: red; left: 0px; height: 100px; width: 100px;  top: 150px}
+            15% {background-color: rgb(255, 255, 255); left: 250px; height: 40px; width: 300px;  top: 0px}
+            25% {background-color: rgb(231, 81, 199); left: 900px; height: 400px; width: 500px;  top:0px}
+            50% {background-color: rgb(248, 248, 245); left: 0px; height: 250px; width: 400px; top: 100px}
+            65% {background-color: rgb(104, 22, 70); left: 1200px; height: 1px; width: 1px; top: 0px} 
+            70% {background-color: rgb(0, 255, 0); left: 200px; height: 1000px; width: 1000px;  top: -100x}
+            80% {background-color: rgb(249, 253, 249); left: 200px; height: 1000px; width: 1000px;  top: -100x}
+            100% {background-color: rgb(35, 90, 190); left: 600px; height: 100px; width: 100px;  top: 0px}
+        }
+    </style>
+    <title>The Shapeshifting Box</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="header">The Amazing Shapeshifting Box!</h1>
+
+    </header>
+    <div class="content-container">
+        <div class="color-box"></div>
+
+    </div>
+
+</body>
+
+</html>
