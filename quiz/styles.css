@@ -1,0 +1,132 @@
+body {
+    font-size: 20px;
+    font-family: 'Work Sans', sans-serif;
+    color: rgb(80, 80, 80);
+    font-weight: 400;
+    text-align: center;
+    background-color: #f8f6f0;
+}
+
+button {
+    font-family: 'Work Sans', sans-serif;
+    font-size:20px;
+    background-color:  rgb(59, 116, 170);
+    color: #fff;
+    border: 2px;
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #38a;
+    animation-name: button-hover;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+.slide {
+    position: absolute;
+    margin: 0%  10%;
+    left: 0px;
+    top: 0px;
+    width: 80%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2;
+}
+
+.quiz-container {
+    position: relative;
+    height: 200px;
+    margin-top: 40px;
+}
+
+.question {
+    margin: px 0px;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: rgb(59, 116, 170);
+    box-shadow: 4px 0px 4px rgba(133, 133, 133, 0.582);
+    animation-name: question-animation;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.answers {
+    background-color: rgba(136, 177, 216, 0.623);
+    margin: 2px 0px 20px 8px;
+    width: 95%;
+    padding: 5px;
+    display: inline-block;
+    text-align: left;
+    box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582);
+    animation-name: answers-animation;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.answers label {
+    display: block;
+    padding-bottom: 5px;
+ 
+}
+.answers label:hover {
+    background-color: rgba(217, 225, 238, 0.582);
+}
+.color-box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+        background-color: red;
+    -webkit-animation-name: color-box-animation;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 15s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: color-box-animation;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+/* Standard syntax */
+@keyframes answers-animation{
+    0% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}
+    25% {box-shadow: -4px -5px 8px rgba(133, 133, 133, 0.582)}
+    50% {box-shadow: -12px 5px 0px rgba(133, 133, 133, 0.582)}
+    75% {box-shadow: 11px -12px 4px rgba(133, 133, 133, 0.582)}
+    100%{box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582)}
+}
+@keyframes question-animation{
+    0%{box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582)}
+    15% {box-shadow: 11px -12px 4px rgba(133, 133, 133, 0.582)}
+    45% {box-shadow: -20px 5px 15px rgba(133, 133, 133, 0.582)}
+    75% {box-shadow: -4px -5px 8px rgba(133, 133, 133, 0.582)}
+    100% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}
+}
+@keyframes button-hover{
+
+    0% {background-color: rgb(33, 166, 199)}
+    50% {background-color: rgba(209, 207, 204, 0.979)}
+    100% {background-color:  rgba(209, 207, 204, 0.979); color: rgba(16, 76, 100, 0.774)}
+    
+    /* 
+    0% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}
+    25% {box-shadow: -4px -5px 8px rgba(133, 133, 133, 0.582)}
+    50% {box-shadow: -12px 5px 0px rgba(133, 133, 133, 0.582)}
+    75% {box-shadow: 11px -12px 4px rgba(133, 133, 133, 0.582)}
+    100%{box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582)}
+    */
+}

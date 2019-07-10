@@ -1,146 +1,177 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator App</title>
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+<style>
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #d4dbb8;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: rgba(215, 249, 255, 0.534);
+  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgba(177, 122, 5, 0.952);
+  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+  margin-bottom: 1%;
+
+ 
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 24%;
+  background-color: #d4dbb8;
+  padding-left: 20px;
+  margin-left: 1%;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: rgb(253, 253, 253);
+  width: 100%;
+  padding: 10px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: rgba(241, 253, 255, 0.712);;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+  background-color: rgba(215, 249, 255, 0.534);
+  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
-
-
 <body>
 
-    <header>
-        <h1 class="header">The Calc!</h1>
-    </header>
-
-        <div class="content">
-        <ul class="top-navigation-list">
-            <li class="top-navbar-link" data-link-destination="Ottergram" data-navbar-link>
-                <a class="anchor-link" href="otter-page.html">
-                    <span class="navbar-link-text">
-                        Check out Ottergram - Sweet ass site!
-                    </span>
-                </a>
-            </li>
-            <li class="top-navbar-link" data-link-destination="soundcloud" data-navbar-link>
-                <a class="anchor-link" href="playlist.html">
-                    <span class="navbar-link-text">
-                        Or try some Header Jams...Ham's Jams!
-
-                    </span>
-                </a>
-
-            </li>
-        </ul>
-
-    
-
-    <div class="calculator-grid">
-        <div class="output">
-            <div data-previous-operand class="previous-operand"></div>
-            <div data-current-operand class="current-operand"></div>
-        </div>
-        <button data-all-clear class="span-two">AC</button>
-        <button data-delete>DEL</button>
-        <button data-operation>÷</button>
-        <button data-number>1</button>
-        <button data-number>2</button>
-        <button data-number>3</button>
-        <button data-operation>*</button>
-        <button data-number>4</button>
-        <button data-number>5</button>
-        <button data-number>6</button>
-        <button data-operation>+</button>
-        <button data-number>7</button>
-        <button data-number>8</button>
-        <button data-number>9</button>
-        <button data-operation>-</button>
-        <button data-number>.</button>
-        <button data-number>0</button>
-        <button data-equals class="span-two">=</button>
-
-
-
-    </div>
-    </div>
-</body>
-
-=======
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator App</title>
-    <link href="styles.css" rel="stylesheet">
-    <script src="script.js" defer></script>
-
-</head>
-
-
-<body>
-        <div class="whole-thing">
-    <header>
-        <h1 class="header">The Calc!</h1>
-
-        <ul class="top-navigation-list">
-            <li class="top-navbar-link" data-link-destination="Ottergram" data-navbar-link>
-                <a class="anchor-link" href="otter-page.html">
-                    <span class="navbar-link-text">
-                        Check out Ottergram - Sweet ass  site! 
-                    </span>
-                </a>
-            </li>
-            <li class="top-navbar-link" data-link-destination="soundcloud" data-navbar-link>
-                <a class="anchor-link" href="playlist.html">
-                    <span class="navbar-link-text">
-                        Or try some Header Jams...Ham's Jams!
-                        
-                    </span>
-                </a>
-                
-            </li>
-        </ul>
-
-    </header>
-    
-        <div class="calculator-grid">
-            <div class="output">
-                <div data-previous-operand class="previous-operand"></div>
-                <div data-current-operand class="current-operand"></div>
-            </div>
-        <button data-all-clear class="span-two">AC</button>
-        <button data-delete>DEL</button>
-        <button data-operation>÷</button>
-        <button data-number>1</button>
-        <button data-number>2</button>
-        <button data-number>3</button>
-        <button data-operation>*</button>
-        <button data-number>4</button>
-        <button data-number>5</button>
-        <button data-number>6</button>
-        <button data-operation>+</button>
-        <button data-number>7</button>
-        <button data-number>8</button>
-        <button data-number>9</button>
-        <button data-operation>-</button>
-        <button data-number>.</button>
-        <button data-number>0</button>
-        <button data-equals class="span-two">=</button>
-        
-        
-
+<div class="header">
+  <h1>hamhome.</h1>
+  <p>Where it do.</p>
 </div>
-</div>
-</body>
 
->>>>>>> 18a9836c0216efe4a5fc938e31963cec781f2e9d
+<div class="topnav">
+  <a href="#">Otters</a>
+  <a href="#">The Calc</a>
+  <a href="#">Are Ya Dumb?</a>
+  <a href="#" style="float:right">Link</a>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>welcome to hamhome</h2>
+      <h5>Where wings take dream, Jul 9, 2019</h5>
+      <div class="fakeimg" style="height:100%;">
+        <iframe src="/amazing-box-page.html" frameborder="0"></iframe>
+    </div>
+      <p>Some text..</p>
+      <p>Bitches love text</p>
+    </div>
+    <div class="card">
+      <h2>TITLE HEADING</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+      <div class="fakeimg" style="height:200px;">Image</div>
+      <p>Some text..</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Ham's Jams</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Other Stuff</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>What this for?</h2>
+</div>
+
+</body>
 </html>

@@ -1,0 +1,74 @@
+/* CSCI 261 A02: Rock, Paper, Scissors
+ *
+ * Author: _INSERT_YOUR_NAME_HERE_ (original code by Dr. Paone)
+ *
+ * This program allows a human to play a game of Rock, Paper, Scissors
+ * against the computer.  The computer makes a random choice of what
+ * to throw.
+ */
+
+#include <cctype>		// for tolower()
+#include <cstdlib>		// for srand() and rand()
+#include <ctime>		// for time()
+#include <iostream>		// for cout, cin, endl
+using namespace std;
+
+int main() {
+	
+	// seed our RNG with the current time
+	srand( time(0) );
+		
+	// variables to hold the player's and computer's choice to throw
+	// initialize them both to rock.  trusty old rock, nothing beats rock
+	char playerChoice = 'r', computerChoice = 'r';
+	
+	cout << "Welcome one and all to a round of Rock, Paper, Scissors! (Enter P, R, or S)" << endl;
+	
+	// prompt the user to enter their choice
+	cout << "Player one: ";
+	cin >> playerChoice;
+	
+	// force the user's choice to be lower case
+	playerChoice = tolower( playerChoice );
+	
+	// generate a random number in the range [0, 2] inclusive
+	int computerRandomValue = rand() % 3;
+	
+	// check the random value and assign the appropriate value to the computer's choice
+	if( computerRandomValue == 0 ) {			// if the random value is 0
+		computerChoice = 'r';						// then the computer chose rock
+	} else if( computerRandomValue == 1 ) {		// if the random value is 1
+		computerChoice = 'p';						// then the computer chose paper
+	} else {									// otherwise the random value is 2
+		computerChoice = 's';						// and the computer chose scissors
+	}
+	
+	// print computer's choice
+	cout << "Computer: " << computerChoice << endl;
+	
+	// check our various win conditions
+	
+	// Player One win scenarios
+	if( playerChoice == 'r' && computerChoice == 's' ) {
+		cout << "Rock beats Scissors.  Player one wins!" << endl;
+	} else if( playerChoice == 's' && computerChoice == 'p' ) {
+		cout << "Scissors beats Paper.  Player one wins!" << endl;
+	} else if( playerChoice == 'p' && computerChoice == 'r' ) {
+		cout << "Paper beats Rock.  Player one wins!" << endl;
+	} 
+	// Computer win scenarios
+	else if( playerChoice == 'r' && computerChoice == 'p' ) {
+		cout << "Paper beats Rock.  Computer wins!" << endl;
+	} else if( playerChoice == 's' && computerChoice == 'r' ) {
+		cout << "Rock beats Scissors.  Computer wins!" << endl;
+	} else if( playerChoice == 'p' && computerChoice == 's' ) {
+		cout << "Scissors beats Paper.  Computer wins!" << endl;
+	} 
+	// Tie scenario
+	else {
+		// unless we want to print "Rock ties Rock", we don't need to check all three draw scenarios
+		cout << "It's a draw!" << endl;
+	}
+	
+	return EXIT_SUCCESS;						// signals the operating system that our program ended OK
+}
