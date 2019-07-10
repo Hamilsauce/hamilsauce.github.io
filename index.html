@@ -1,194 +1,214 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-* {
-  box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #d4dbb8;
-}
+    body {
+      font-family: Arial;
+      padding: 10px;
+      background: #d4dbb8;
+    }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: rgba(215, 249, 255, 0.534);
-  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      text-align: center;
+      background: rgba(215, 249, 255, 0.534);
+      box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
 
-}
+    }
 
-.header h1 {
-  font-size: 50px;
-}
+    .header h1, {
+      font-size: 50px;
+    }
+    h2{
+      text-decoration: none;
+    }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: rgba(177, 122, 5, 0.952);
-  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
-  margin-bottom: 1%;
+    /* Style the top navigation bar */
+    .topnav {
+      overflow: hidden;
+      background-color: rgba(177, 122, 5, 0.952);
+      box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+      margin-bottom: 1%;
 
- 
-}
 
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  
-}
+    }
 
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    /* Style the topnav links */
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 70%;
+    }
 
-}
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-.playlist-frame{
- 
-  position: relative;
-height: 400px;
-outline: 5px;
-border: black 5px;
-box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582);
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 70%;
 
-}
+    }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 29%;
- height: 100%;
-  background-color: #d4dbb8;
-  padding-left: 20px;
-  margin-left: 1%;
-}
+    .playlist-frame {
 
-/* Fake image */
-.fakeimg {
-  background-color: rgb(253, 253, 253);
+      position: relative;
+      height: 400px;
+      outline: 5px;
+      border: black 5px;
+      box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582);
 
-  width: 100%;
-  padding: 10px;
+    }
 
-}
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 29%;
+      height: 100%;
+      background-color: #d4dbb8;
+      padding-left: 20px;
+      margin-left: 1%;
+    }
 
-/* Add a card effect for articles */
-.card {
-  background-color: rgba(241, 253, 255, 0.712);;
-  padding: 20px;
-  margin-top: 20px;
-  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
- 
-}
+    /* Fake image */
+    .fakeimg {
+      background-color: rgb(253, 253, 253);
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+      width: 100%;
+      padding: 10px;
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-  background-color: rgba(215, 249, 255, 0.534);
-  box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
-}
+    }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
+    /* Add a card effect for articles */
+    .card {
+      background-color: rgba(241, 253, 255, 0.712);
+      ;
+      padding: 20px;
+      margin-top: 20px;
+      box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
+      background-color: rgba(215, 249, 255, 0.534);
+      box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+    }
+
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+    @media screen and (max-width: 400px) {
+      .topnav a {
+        float: none;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="header">
-  <h1>hamhome.</h1>
-  <p>Where it do.</p>
-</div>
-
-<div class="topnav">
-  <a href="./otter/otter-page.html">Otters</a>
-  <a href="./calculator-app/the-calc.html">The Calc</a>
-  <a href="./quiz/quiz-page.html">Are Ya Dumb?</a>
-  <a href="#" style="float:right">Link</a>
-</div>
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>welcome to hamhome</h2>
-      <h5>Where wings take dream, Jul 9, 2019</h5>
-      <div class="fakeimg" style="height:100%;">
-       <a href="/amazing-box/amazing-box-page.html"><iframe src="/amazing-box/amazing-box-page.html" frameborder="0"></iframe></a> 
-    </div>
-      <p>Some text..</p>
-      <p>Bitches love text</p>
-    </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
+  <div class="header">
+    <h1>hamhome.</h1>
+    <p>Where it do.</p>
   </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>Ham's Jams</h2>
-      <div class="fakeimg" style="height:100px;"><iframe class="playlist-frame" width="100%" height="300" scrolling="yes" frameborder="yes" allow="autoplay"
+
+  <div class="topnav">
+    <a href="./otter/otter-page.html">Otters</a>
+    <a href="./calculator-app/the-calc.html">The Calc</a>
+    <a href="./quiz/quiz-page.html">Are Ya Dumb?</a>
+    <a href="#" style="float:right">Link</a>
+  </div>
+
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <a href="/amazing-box/amazing-box-page.html">
+          <h2>welcome to hamhome</h2>
+        </a>
+        <h5>Where wings take dream, Jul 9, 2019</h5>
+        <div class="fakeimg" style="height:100%;">
+          <iframe src="/amazing-box/amazing-box-page.html" frameborder="0"></iframe>
+        </div>
+        <p>Some text..</p>
+        <p>Bitches love text</p>
+      </div>
+      <div class="card">
+        <h2>TITLE HEADING</h2>
+        <h5>Title description, Sep 2, 2017</h5>
+        <div class="fakeimg" style="height:200px;">Image</div>
+        <p>Some text..</p>
+        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco.</p>
+      </div>
+    </div>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>Ham's Jams</h2>
+        <div class="fakeimg" style="height:100px;"><iframe class="playlist-frame" width="100%" height="300"
+            scrolling="yes" frameborder="yes" allow="autoplay"
             src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/808675707&color=%23946c3c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false"></iframe>
-</div>
-      <!-- <p>Some text about me in culpa qui officia deserunt mollit anim..</p> -->
-    </div>
-    <div class="card">
-      <h3>Other Stuff</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
+        </div>
+        <!-- <p>Some text about me in culpa qui officia deserunt mollit anim..</p> -->
+      </div>
+      <div class="card">
+        <h3>Other Stuff</h3>
+        <div class="fakeimg">
+          <p>Image</p>
+        </div>
+        <div class="fakeimg">
+          <p>Image</p>
+        </div>
+        <div class="fakeimg">
+          <p>Image</p>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Follow Me</h3>
+        <p>Some text..</p>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="footer">
-  <h2>What this for?</h2>
-</div>
+  <div class="footer">
+    <h2>What this for?</h2>
+  </div>
 
 </body>
+
 </html>
