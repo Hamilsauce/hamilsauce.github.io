@@ -1,30 +1,50 @@
 body {
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Work Sans', sans-serif;
     color: rgb(80, 80, 80);
-    font-weight: 400;
+    font-weight: 33380;
     text-align: center;
     background-color: #f8f6f0;
+    
 }
 
 button {
     font-family: 'Work Sans', sans-serif;
-    font-size:20px;
-    background-color:  rgb(59, 116, 170);
+    font-size: 16px;
+    background-color:  rgba(48, 118, 184, 0.89);
     color: #fff;
-    border: 2px;
+    border: 50px;
+    
     border-radius: 3px;
     padding: 10px;
     cursor: pointer;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    display: inline-block;
+    position: relative;
+    margin-top: 20%
 }
 
 button:hover {
-    background-color: #38a;
+    background-color: rgb(34, 99, 124);
+    font-weight: 500;
     animation-name: button-hover;
     animation-duration: 3s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
+}
+@keyframes button-hover{
+
+    0% {background-color: rgb(84, 146, 197)}
+    25% {background-color: rgba(82, 126, 155, 0.644);color: rgba(148, 148, 148, 0.774)}
+    100% {background-color:  rgba(255, 255, 255, 0.979); color: rgba(16, 76, 100, 0.774)}
+    
+    /* 
+    0% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}
+    25% {box-shadow: -4px -5px 8px rgba(133, 133, 133, 0.582)}
+    50% {box-shadow: -12px 5px 0px rgba(133, 133, 133, 0.582)}
+    75% {box-shadow: 11px -12px 4px rgba(133, 133, 133, 0.582)}
+    100%{box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582)}
+    */
 }
 
 
@@ -46,12 +66,14 @@ button:hover {
 
 .quiz-container {
     position: relative;
+
+    display: block;
     height: 200px;
     margin-top: 40px;
 }
 
 .question {
-    margin: px 0px;
+    margin: 2px 0px;
     padding: 5px;
     font-weight: 700;
     font-size: 24px;
@@ -66,7 +88,7 @@ button:hover {
 
 .answers {
     background-color: rgba(136, 177, 216, 0.623);
-    margin: 2px 0px 20px 8px;
+    margin-bottom: 10px;
     width: 95%;
     padding: 5px;
     display: inline-block;
@@ -78,13 +100,15 @@ button:hover {
     animation-iteration-count: infinite;
 }
 
+
 .answers label {
     display: block;
-    padding-bottom: 5px;
+padding-bottom: 5px; 
  
 }
 .answers label:hover {
     background-color: rgba(217, 225, 238, 0.582);
+    font-weight: 500;
 }
 .color-box {
     width: 100px;
@@ -115,18 +139,4 @@ button:hover {
     45% {box-shadow: -20px 5px 15px rgba(133, 133, 133, 0.582)}
     75% {box-shadow: -4px -5px 8px rgba(133, 133, 133, 0.582)}
     100% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}
-}
-@keyframes button-hover{
-
-    0% {background-color: rgb(33, 166, 199)}
-    50% {background-color: rgba(209, 207, 204, 0.979)}
-    100% {background-color:  rgba(209, 207, 204, 0.979); color: rgba(16, 76, 100, 0.774)}
-    
-    /* 
-    0% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}
-    25% {box-shadow: -4px -5px 8px rgba(133, 133, 133, 0.582)}
-    50% {box-shadow: -12px 5px 0px rgba(133, 133, 133, 0.582)}
-    75% {box-shadow: 11px -12px 4px rgba(133, 133, 133, 0.582)}
-    100%{box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582)}
-    */
 }
