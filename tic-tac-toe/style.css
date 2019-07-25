@@ -1,29 +1,34 @@
 
 body {
 margin: 0;
-padding: 0;
-background-color: rgba(235, 230, 226, 0.733);
+padding: 10px;
+background-color: rgba(190, 189, 180, 0.37);
 }
 .content-container {
-    display: flexbox;
+    display: flex;
     position: relative;
     /* box-sizing: border-box; */
-    /* align-content:  space-between;
-    justify-content: space-evenly
+     align-content:  space-between;
+    justify-content: center;
+    top: 25px;
 } 
 .table-container {
-    /* display: flex;
-    position: relative;
+    display: flex;
+    position: absolute;
     justify-content: center;
     align-content: center;
-    flex-direction: column; */
+    flex-direction: column;
+    border: 5px solid rgba(243, 187, 3, 0.068);
+    border-radius: 5%;
+    box-shadow: 0px 0px 20px rgba(54, 51, 47, 0.548);
+    overflow: hidden;
 }
 .button-container {
     display: block;
     position: relative;
     /* left: 150px; */
     margin: auto;
-    margin-top: -125px;
+    margin-top: 250px;
     text-align: center;
     font-family: 'Schoolbell', cursive;   
     color: rgba(230, 96, 34, 0.9);
@@ -72,36 +77,40 @@ table {
     justify-content: center;
     /* left: 50%; */
     /* margin-left: -160px; */
-    top: 50px;
+    /* top: 50px; */
     /* box-shadow: -5px 5px 15px rgba(36, 34, 21, 0.363); */
 
 }
 
 td {
-    background-color:  rgb(255, 251, 230);
+    background-color:  rgba(255, 239, 160, 0.356);
     padding: 0px;
-    margin: 0px;
-    border: 10px solid rgba(45, 91, 122, 0.8);
-    height: 150px;
-    width: 125px;
+    margin: 5px;
+    border-radius: 5%;
+    border: 5px solid rgba(54, 97, 126, 0.8);
+    height: 125px;
+    width: 100px;
     text-align: center;
     vertical-align: middle;
     font-family: 'Schoolbell', cursive;    
     font-weight: 100;
-    font-size:  7rem;
+    font-size:  6em;
     cursor: pointer;
     color: rgba(43, 40, 40, 0.781);
     text-shadow: 0px 0px 15px rgba(221, 189, 145, 0.8);
-    box-shadow: -5px 5px 15px rgba(48, 65, 66, 0.685);
+    box-shadow: 0px 0px 10px rgba(48, 65, 66, 0.5);
+    z-index: 3;
 }
 
 td:hover {
 
     background-color: rgba(252, 252, 252, 0.918);
-    box-shadow: -5px -5px 15px rgba(202, 177, 162, 0.473);
+    box-shadow: 0px 0px 15px rgba(61, 61, 61, 0.795);
+    
+    z-index: 2;
 }
 td:active {
-    background-color: rgba(48, 52, 54, 0.795);
+    background-color: rgba(48, 52, 54, 0.452);
     box-shadow: -5px -5px 10px rgba(66, 66, 66, 0.589);
 }
 

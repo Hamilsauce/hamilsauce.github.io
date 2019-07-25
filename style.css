@@ -1,0 +1,200 @@
+:root {
+    --header-backgroundColor: rgba(238, 176, 61, 0.781);
+    --brown-text: rgba(63, 51, 27, 0.877);
+    --header-shadow: 0px 0px 5px rgba(78, 78, 78, 0.664);
+    --card-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+    --card-backgroundColor: rgba(226, 218, 202, 0.897);
+  
+    
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #ffffff;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: var(--header-backgroundColor);
+    box-shadow: var(--card-shadow);
+
+}
+
+.header h1 {
+    font-size: 60px;
+    color: var(--brown-text);
+    text-shadow: var(--header-shadow);
+    
+}
+
+.header h2 {
+    text-decoration: none;
+    color: var(--brown-text);
+    text-shadow: var(--header-shadow);
+}
+
+.card h2 {
+    color: var(--brown-text);
+
+
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: rgba(26, 106, 131, 0.952);
+    box-shadow: 4px 4px 7px rgba(77, 76, 76, 0.26);
+    margin-bottom: 1%;
+
+
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.856);
+    color: rgba(139, 110, 46, 0.952);
+    font-weight: 700;
+    box-shadow: 4px 5px 4px rgba(76, 77, 77, 0.651);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 70%;
+
+}
+
+.playlist-frame {
+
+    position: relative;
+    height: 400px;
+    outline: 5px;
+    border: black 5px;
+    box-shadow: var(--card-shadow);
+
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 29%;
+    height: 100%;
+    background-color: #ffffff;
+    padding-left: 20px;
+    margin-left: 1%;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: rgb(253, 253, 253);
+    position: relative;
+    display: contents;
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+
+}
+
+#seahag-logo {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.iframe-container {
+    /* position: relative; */
+    /* display: contents; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* margin: auto; */
+    /* padding: 10px; */
+
+}
+
+.tictactoe-frame {
+    height: 700px;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgba(77, 76, 76, 0.267);
+
+
+}
+.amaze-frame {
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid rgba(77, 76, 76, 0.267);
+
+
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: var(--card-backgroundColor);
+    text-decoration: none;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: var(--card-shadow);
+
+}
+
+.card a {
+    text-decoration: none;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    background-color: rgba(215, 249, 255, 0.534);
+    box-shadow: var(--card-shadow);
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}

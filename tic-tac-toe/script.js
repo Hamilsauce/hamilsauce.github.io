@@ -26,7 +26,8 @@ function startGame() {
         console.log(origBoard);
 
     for (let i = 0; i < cells.length; i++) {      //game reset - remove any existing values from  in the tic tac toe board
-        cells[i].innerText = '';
+        cells[i].innerText = ' ';
+       
         cells[i].style.removeProperty('background-color');
         cells[i].style.color = "rgba(43, 40, 40, 0.781)";
         cells[i].addEventListener('click', turnClick, false);
