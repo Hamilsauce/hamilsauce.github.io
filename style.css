@@ -40,11 +40,7 @@ body {
     text-shadow: var(--header-shadow);
 }
 
-.card h2 {
-    color: var(--brown-text);
 
-
-}
 
 /* Style the top navigation bar */
 .topnav {
@@ -163,11 +159,17 @@ body {
 }
 
 .card a {
-    text-decoration: none;
+    color: var(--brown-text);
+    text-decoration: none
+
 }
 
+.card #text-link {
+    text-decoration: underline;
+    color: blue;
+}
 /* Clear floats after the columns */
-.row:after {
+    .row: after {
     content: "";
     display: table;
     clear: both;
