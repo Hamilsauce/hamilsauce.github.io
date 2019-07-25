@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic Tac Toe Boy!</title>
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>tic-tac-toe bitches</h1>
+    <div class="content-container">
+        <div class="table-container">
+            <table>
+                <tr>
+                    <td class="cell" id="0"></td>
+                    <td class="cell" id="1"></td>
+                    <td class="cell" id="2"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="3"></td>
+                    <td class="cell" id="4"></td>
+                    <td class="cell" id="5"></td>
+                </tr>
+                <tr>
+                    <td class="cell" id="6"></td>
+                    <td class="cell" id="7"></td>
+                    <td class="cell" id="8"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="button-container">
+            <span class="replay-text" onclick="startGame()">replay?</span>
+            <!-- <button id="btn" onclick="startGame()">Replay!</button> -->
+        </div>
+
+        <div class="endgame" onclick="startGame()">
+            <div class="winner-text">replay</div>
+            <div class="replay-text">
+
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

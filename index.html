@@ -10,14 +10,14 @@
     body {
       font-family: Arial;
       padding: 10px;
-      background: #d4dbb8;
+      background: #ffffff;
     }
 
     /* Header/Blog Title */
     .header {
       padding: 30px;
       text-align: center;
-      background: rgba(215, 249, 255, 0.534);
+      background: rgba(216, 182, 88, 0.781);
       box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
 
     }
@@ -26,7 +26,8 @@
       font-size: 60px;
       color: rgba(53, 53, 53, 0.856);
     }
-    h2{
+
+    h2 {
       text-decoration: none;
       color: rgba(53, 53, 53, 0.856);
     }
@@ -34,7 +35,7 @@
     /* Style the top navigation bar */
     .topnav {
       overflow: hidden;
-      background-color: rgba(52, 161, 180, 0.952);
+      background-color: rgba(26, 106, 131, 0.952);
       box-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
       margin-bottom: 1%;
 
@@ -83,7 +84,7 @@
       float: left;
       width: 29%;
       height: 100%;
-      background-color: #d4dbb8;
+      background-color: #ffffff;
       padding-left: 20px;
       margin-left: 1%;
     }
@@ -100,6 +101,12 @@
 
     }
 
+    #seahag-logo {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
     .amaze-box-frame {
       position: relative;
       display: contents;
@@ -109,19 +116,20 @@
       padding: 10px;
 
     }
+
     .amaze-frame {
       height: 300px;
       width: 100%;
       margin: auto;
       padding: 10px;
-      border: 2px solid  rgba(77, 76, 76, 0.267);
-    
+      border: 2px solid rgba(77, 76, 76, 0.267);
+
 
     }
 
     /* Add a card effect for articles */
     .card {
-      background-color: rgba(255, 251, 241, 0.712);
+      background-color: rgba(226, 218, 202, 0.897);
       ;
       padding: 20px;
       margin-top: 20px;
@@ -198,7 +206,7 @@
         <h2>A Day in the Life uh</h2>
         <h5>Title description, Jul 9, 2019</h5>
         <div class="fakeimg" style="height:200px;">
-          <img src="/img/seahagSolid.png" alt="">
+          <img id="seahag-logo" src="/img/seahagSolid.png" alt="">
         </div>
         <p>The average day</p>
         <p>Goes like...</p>
@@ -207,9 +215,11 @@
     <div class="rightcolumn">
       <div class="card">
         <h2>Ham's Jams</h2>
-        <div class="fakeimg" style="height:100px;"><iframe class="playlist-frame" width="100%" height="300"
+        <div class="fakeimg" style="height:100px;">
+          <iframe class="playlist-frame" width="100%" height="300"
             scrolling="yes" frameborder="yes" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/808675707&color=%23946c3c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false"></iframe>
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/808675707&color=%23946c3c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=false">
+          </iframe>
         </div>
         <!-- <p>Some text about me in culpa qui officia deserunt mollit anim..</p> -->
       </div>
