@@ -1,0 +1,206 @@
+:root {
+    --gunmetal-color: rgba(52, 58, 64, 0.959);
+    --default-grey: rgba(202, 202, 202, 0.692);
+}
+body {
+    background-color: rgba(219, 219, 219, 0.411);
+}
+.grid-container {
+    /* position: relative; */
+    margin: 20%;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-column-gap: 0.1em;
+    grid-row-gap: 0.3em;
+    grid-auto-rows: minmax(100px, auto);
+    background: var(--default-grey);
+    border-top: 8px solid rgba(52, 58, 64, 0.808);
+    border-left: 1px solid rgba(52, 58, 64, 0.438);
+    border-right: 1px solid rgba(52, 58, 64, 0.438);
+    
+}
+
+.results-container {
+    display: none;
+    width: auto;
+    /* padding: 15px; */
+    background:  rgba(52, 58, 64, 0.808);
+    color: rgb(230, 230, 230);
+    border: 2px solid rgba(255, 255, 255, 0.479);
+    border-top: 0px solid rgba(255, 255, 255, 0.479);
+}
+#result-list {
+    background-color: rgba(213, 214, 218, 0.979);
+    color: var(--gunmetal-color);
+    padding-left: 15px;
+}
+
+.setting-inputs {
+    padding: 10px;
+    background: rgba(52, 58, 64, 0.301);
+    border: 1px solid rgba(255, 255, 255, 0.37);
+}
+
+.player-settings-interior {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 4%;
+    background-color: rgb(253, 251, 251);
+    border-left: 3px solid var(--default-grey);
+    border: 1px solid rgba(40, 44, 48, 0.493);
+}
+
+.player-settings-interior>span {
+    padding-left: 5px;
+    background-color: rgba(52, 58, 64, 0.144);
+    border-top: 2px solid rgba(52, 58, 64, 0.068);
+    border-bottom: 2px solid rgba(52, 58, 64, 0.068);
+    font-weight: 00;
+    font-size: 2em;
+    margin-left: 10px;
+}
+
+.player-counter-container {
+    border: 1px solid rgba(255, 255, 255, 0.767);
+    border-top: 0;
+    margin: auto;
+    background-color: var(--default-grey)
+}
+#player-counter {
+    margin-left: 15%;
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+#choice-counter {
+    margin-left: 15%;
+    width: 20%;
+    margin-bottom: 10px;
+}
+
+#player-details-container {
+    border: 1px solid rgba(255, 255, 255, 0.192);
+    padding-left: 0px;
+    margin: 0;
+}
+
+#player-details-container>label {
+    background-color: rgba(204, 204, 204, 0.925);
+    /* border-left: 3px solid var(--default-grey);
+    border-right: 3px solid var(--default-grey); */
+    border: 1px solid rgba(255, 255, 255, 0.342);
+    padding-bottom: 0px;
+    padding-left: 10px;
+    /* padding-left: 10px;  */
+    /* width: auto; */
+    margin: auto;
+    margin-top: 15px;
+    /* position: relative; */
+    /* display: flex; */
+    /* align-content: space-around; */
+}
+
+.name-input-field {
+    /* padding-top: 15px; */
+    width: auto;
+    margin: auto;
+    color: var(--gunmetal-color);
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.name-input-field {
+    margin-left: 25%;
+    padding-right: 10px;
+    width: 45%;
+    
+}
+
+.bottom-container {
+    padding: 10px;
+    background-color: var(--gunmetal-color);
+    grid-area: 2/span 2;
+    width: 100%;
+    color: var(--gunmetal-color);
+}
+
+.section-header {
+    border-bottom: 2px solid rgba(52, 60, 68, 0.397);
+    padding-left: 5px;
+    width: 95%;
+    margin-left: 10px;
+    padding-top: 5px;
+}
+
+/* RACE SELECTION BOX STYLES */
+#select-btn {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+#clear-btn {
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+.raceList {
+    height: 250px;
+    overflow: auto;
+    width: 220px;
+    border: 0.15em inset rgba(52, 58, 64, 0.623);
+    margin-left: 10px;
+    padding: 5px;
+    margin-bottom: 5px;
+    background: rgba(243, 243, 243, 0.945);
+    /* display: flexbox; */
+}
+
+ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 5px;
+    /* overflow-x: hidden; */
+}
+
+li {
+    padding-left: 0px;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0)
+}
+
+label {
+    /* position: relative; */
+    display: contents;
+    color: WindowText;
+    background-color: Window;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    border: 2px solid white;
+    /* align-self:flex-end; */
+}
+
+.raceList label:hover {
+    background-color: Highlight;
+    color: HighlightText;
+    border: 2px solid Highlight;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bottom-container {
+        /* padding: 10px; */
+        background-color: var(--gunmetal-color);
+        grid-area: 3/span 1;
+    }
+}

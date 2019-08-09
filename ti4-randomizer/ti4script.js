@@ -1,11 +1,18 @@
     
+const bottomContainer = document.querySelector('.bottom-container');
+const playerCounter = document.querySelector('#player-counter');
+const raceListCard = document.querySelector('.setting-inputs');
+const resultListContainer = document.querySelector('.results-container');
 
+const raceDisplay = document.getElementById('result-list');
 
+let counter = playerCounter.addEventListener('change',() => {
+    let playerCount = parseInt(playerCounter.value); 
+    return addInputs(playerCount);
+});
 
-const raceDisplay = document.getElementById('texter');
 
 function getRaces(frm) {
-
     const raceChecks = frm.getElementsByClassName('raceBox');
     console.log(raceChecks);
     let selectBoxes = [];
@@ -18,24 +25,45 @@ function getRaces(frm) {
     }
     console.log(selectBoxes);
     console.log(showRaces(selectBoxes));
-}
+
+    resultListContainer.style.display="block";
+    
+}   
 
 function showRaces(lister) {
-    const raceDisplay = document.getElementById('texter');
+    const raceDisplay = document.getElementById('result-list');
     let i = 0;
     let newList = [];
     lister.forEach(race => {
         newList[i] = race + '';
         i++;
     });
-
+    // raceListCard.style.display="none";
+    
     raceDisplay.innerHTML = newList.join('</br>');
-
+  
  console.log(raceDisplay.innerHTML);
  return raceDisplay.innerHTML;
 }
 
-
+const nameInputContainer = document.querySelector('.player-details-container');
+function addInputs (count) {
+//for each player, add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly.
+//Then join the array elems and write it to the inner html of the 'player-details-container' div
+    
+    const output = [];
+    
+    for (let i = 1; i <= count; i++) {
+        output.push(`
+            <label for="playername-textbox1">Player ${i} 
+                <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
+                    placeholder="Enter a name...">
+            </label><br>         
+        `);
+        
+    }
+    nameInputContainer.innerHTML = output.join('');
+}
 /*
 ---constructs html elements with values derived from object props
 function buildQuiz() {
