@@ -135,13 +135,19 @@ body {
 
 /* RACE SELECTION BOX STYLES */
 #select-btn {
-    margin-left: 15px;
+    margin-left: 10px;
     margin-bottom: 10px;
 }
 
 #clear-btn {
-    margin-left: 5px;
+    margin-left: 2px;
     margin-bottom: 10px;
+}
+
+#submit-btn {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(214, 216, 219, 0.767);
 }
 
 .raceList {
