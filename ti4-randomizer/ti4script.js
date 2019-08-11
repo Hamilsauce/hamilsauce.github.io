@@ -43,7 +43,7 @@ function addInputs(count) {
 
     for (let i = 1; i <= count; i++) {
         output.push(`
-            <label for="playername-textbox1">Player ${i} 
+            <label for="playername-textbox${i}">Player ${i} 
                 <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
                     placeholder="Enter a name...">
             </label><br>         
