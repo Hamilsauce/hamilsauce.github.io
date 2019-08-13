@@ -1,14 +1,14 @@
-    const bottomContainer = document.querySelector('.bottom-container');
-    const playerCounter = document.querySelector('#player-counter');
-    const raceListCard = document.querySelector('.setting-inputs');
-    const resultListContainer = document.querySelector('.results-container');
-    const nameInputContainer = document.querySelector('.player-details-container');
-    const raceDisplay = document.getElementById('result-list');
+const bottomContainer = document.querySelector('.bottom-container');
+const playerCounter = document.querySelector('#player-counter');
+const raceListCard = document.querySelector('.setting-inputs');
+const resultListContainer = document.querySelector('.results-container');
+const nameInputContainer = document.querySelector('.player-details-container');
+const raceDisplay = document.getElementById('result-list');
 
-    let counter = playerCounter.addEventListener('change', () => {
-        let playerCount = parseInt(playerCounter.value);
-        return addInputs(playerCount);
-    });
+let counter = playerCounter.addEventListener('change', () => {
+    let playerCount = parseInt(playerCounter.value);
+    return addInputs(playerCount);
+});
 
 
 function getRaces(frm) {
@@ -37,7 +37,7 @@ function showRaces(raceList) {
 
 
 function addInputs(count) {
-    /*for each player, 1) add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly.
+    /*for each player (according to counter selection), 1) add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly.
         Then 2) join the array elems and write it to the inner html of the 'player-details-container' div */
     const output = [];
 
@@ -46,7 +46,7 @@ function addInputs(count) {
             <label for="playername-textbox${i}">Player ${i} 
                 <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
                     placeholder="Enter a name...">
-            </label><br>         
+            </label>    
         `);
     }
     nameInputContainer.innerHTML = output.join('');

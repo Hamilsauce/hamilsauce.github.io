@@ -2,9 +2,12 @@
     --gunmetal-color: rgba(52, 58, 64, 0.959);
     --default-grey: rgba(202, 202, 202, 0.692);
 }
+
 body {
     background-color: rgba(219, 219, 219, 0.411);
+    height:fit-content;
 }
+
 .grid-container {
     /* position: relative; */
     margin: 20%;
@@ -18,18 +21,19 @@ body {
     border-top: 8px solid rgba(52, 58, 64, 0.808);
     border-left: 1px solid rgba(52, 58, 64, 0.438);
     border-right: 1px solid rgba(52, 58, 64, 0.438);
-    
+
 }
 
 .results-container {
     display: none;
     width: auto;
     /* padding: 15px; */
-    background:  rgba(52, 58, 64, 0.808);
+    background: rgba(52, 58, 64, 0.808);
     color: rgb(230, 230, 230);
     border: 2px solid rgba(255, 255, 255, 0.479);
     border-top: 0px solid rgba(255, 255, 255, 0.479);
 }
+
 #result-list {
     background-color: rgba(213, 214, 218, 0.979);
     color: var(--gunmetal-color);
@@ -39,7 +43,7 @@ body {
 .setting-inputs {
     padding: 10px;
     background: rgba(52, 58, 64, 0.301);
-    border: 1px solid rgba(255, 255, 255, 0.37);
+    /* border: 1px solid rgba(255, 255, 255, 0.37); */
 }
 
 .player-settings-interior {
@@ -49,34 +53,30 @@ body {
     background-color: rgb(253, 251, 251);
     border-left: 3px solid var(--default-grey);
     border: 1px solid rgba(40, 44, 48, 0.493);
-}
-
-.player-settings-interior>span {
-    padding-left: 5px;
-    background-color: rgba(52, 58, 64, 0.144);
-    border-top: 2px solid rgba(52, 58, 64, 0.068);
-    border-bottom: 2px solid rgba(52, 58, 64, 0.068);
-    font-weight: 00;
-    font-size: 2em;
-    margin-left: 10px;
+    border: 0.15em inset rgba(52, 58, 64, 0.623);
 }
 
 .player-counter-container {
-    border: 1px solid rgba(255, 255, 255, 0.767);
+    /* border: 1px solid rgba(255, 255, 255, 0.767); */
     border-top: 0;
     margin: auto;
-    background-color: var(--default-grey)
+    background: rgba(52, 58, 64, 0.301);
+    padding-bottom: 2px;
+
 }
+
 #player-counter {
     margin-left: 15%;
     width: 20%;
     margin-bottom: 10px;
+    font-size: 0.8em;
 }
 
 #choice-counter {
     margin-left: 15%;
     width: 20%;
     margin-bottom: 10px;
+    font-size: 0.8em;
 }
 
 #player-details-container {
@@ -101,6 +101,10 @@ body {
     /* align-content: space-around; */
 }
 
+#player-inputs {
+    padding-top: 10px;
+}
+
 .name-input-field {
     /* padding-top: 15px; */
     width: auto;
@@ -114,7 +118,7 @@ body {
     margin-left: 25%;
     padding-right: 10px;
     width: 45%;
-    
+
 }
 
 .bottom-container {
@@ -177,7 +181,7 @@ li {
 
 label {
     /* position: relative; */
-    display: contents;
+    display: block;
     color: WindowText;
     background-color: Window;
     margin: 0px;
@@ -191,7 +195,7 @@ label {
     background-color: Highlight;
     color: HighlightText;
     border: 2px solid Highlight;
-    font-weight: 500;
+    /* font-weight: 500; */
 }
 
 @media screen and (max-width: 400px) {
