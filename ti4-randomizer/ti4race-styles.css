@@ -6,6 +6,7 @@
 body {
     background-color: rgba(219, 219, 219, 0.411);
     height:fit-content;
+     border-radius: 4%;
 }
 
 .grid-container {
@@ -17,10 +18,11 @@ body {
     grid-column-gap: 0.1em;
     grid-row-gap: 0.3em;
     grid-auto-rows: minmax(100px, auto);
-    background: var(--default-grey);
+    background:  rgba(52, 58, 64, 0.151);
     border-top: 8px solid rgba(52, 58, 64, 0.808);
     border-left: 1px solid rgba(52, 58, 64, 0.438);
     border-right: 1px solid rgba(52, 58, 64, 0.438);
+    border-radius: 4%;
 
 }
 
@@ -28,22 +30,25 @@ body {
     display: none;
     width: auto;
     /* padding: 15px; */
-    background: rgba(52, 58, 64, 0.808);
+    background: rgb(52, 58, 64);
     color: rgb(230, 230, 230);
     border: 2px solid rgba(255, 255, 255, 0.479);
     border-top: 0px solid rgba(255, 255, 255, 0.479);
+    border-radius: 4%;
 }
 
 #result-list {
     background-color: rgba(213, 214, 218, 0.979);
     color: var(--gunmetal-color);
     padding-left: 15px;
+    border-radius: 4%;
 }
 
 .setting-inputs {
     padding: 10px;
-    background: rgba(52, 58, 64, 0.301);
+    background: rgba(52, 58, 64, 0.801);
     /* border: 1px solid rgba(255, 255, 255, 0.37); */
+    border-radius: 4%;
 }
 
 .player-settings-interior {
@@ -60,8 +65,9 @@ body {
     /* border: 1px solid rgba(255, 255, 255, 0.767); */
     border-top: 0;
     margin: auto;
-    background: rgba(52, 58, 64, 0.301);
+    background: rgba(201, 201, 201, 0.897);
     padding-bottom: 2px;
+    border-radius: 0%  0%  4%  0%;
 
 }
 
@@ -80,9 +86,11 @@ body {
 }
 
 #player-details-container {
-    border: 1px solid rgba(255, 255, 255, 0.192);
+    border: 1px solid rgba(255, 255, 255, 0.863);
     padding-left: 0px;
     margin: 0;
+    border-radius: 4%;
+ 
 }
 
 #player-details-container>label {
@@ -90,6 +98,7 @@ body {
     /* border-left: 3px solid var(--default-grey);
     border-right: 3px solid var(--default-grey); */
     border: 1px solid rgba(255, 255, 255, 0.342);
+   
     padding-bottom: 0px;
     padding-left: 10px;
     /* padding-left: 10px;  */
@@ -111,7 +120,7 @@ body {
     margin: auto;
     color: var(--gunmetal-color);
     font-size: 0.9em;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .name-input-field {
@@ -122,11 +131,12 @@ body {
 }
 
 .bottom-container {
-    padding: 10px;
+    padding: 0px;
     background-color: var(--gunmetal-color);
     grid-area: 2/span 2;
-    width: 100%;
+    width: auto;
     color: var(--gunmetal-color);
+    border-radius: 2%;
 }
 
 .section-header {
@@ -152,6 +162,7 @@ body {
     margin-left: 20px;
     margin-bottom: 10px;
     border: 2px solid rgba(214, 216, 219, 0.767);
+    display: none;
 }
 
 .raceList {
@@ -162,7 +173,7 @@ body {
     margin-left: 10px;
     padding: 5px;
     margin-bottom: 5px;
-    background: rgba(243, 243, 243, 0.945);
+    background: rgb(243, 243, 243);
     /* display: flexbox; */
 }
 
@@ -170,13 +181,14 @@ ul {
     list-style-type: none;
     margin: 5px;
     padding: 5px;
+    background-color: rgba(243, 243, 243, 0);
     /* overflow-x: hidden; */
 }
 
 li {
     padding-left: 0px;
     width: fit-content;
-    background-color: rgba(255, 255, 255, 0)
+    background-color: rgba(243, 243, 243, 0);
 }
 
 label {
@@ -212,5 +224,6 @@ label {
         /* padding: 10px; */
         background-color: var(--gunmetal-color);
         grid-area: 3/span 1;
+        border-radius: 4%;
     }
 }
