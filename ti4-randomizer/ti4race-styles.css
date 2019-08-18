@@ -1,180 +1,273 @@
 :root {
     --gunmetal-color: rgba(52, 58, 64, 0.959);
-    --default-grey: rgba(202, 202, 202, 0.692);
+    --default-grey: rgba(224, 224, 224, 0.829);
 }
 
 body {
     background-color: rgba(219, 219, 219, 0.411);
-    height:fit-content;
-     border-radius: 4%;
+    height: fit-content;
+    border-radius: 4%;
+}
+
+.mt-4{
+    box-sizing: border-box;
+    margin: 0;
 }
 
 .grid-container {
     /* position: relative; */
+    /* padding: 5px; */
     margin: 20%;
     margin-top: 25px;
     display: grid;
     grid-template-columns: 4fr 8fr;
-    grid-column-gap: 0.1em;
-    grid-row-gap: 0.3em;
-    grid-auto-rows: minmax(100px, auto);
-    background:  rgba(52, 58, 64, 0.151);
-    border-top: 8px solid rgba(52, 58, 64, 0.808);
-    border-left: 1px solid rgba(52, 58, 64, 0.438);
-    border-right: 1px solid rgba(52, 58, 64, 0.438);
-    border-radius: 4%;
-
+    grid-column-gap: 0.5em;
+    grid-row-gap: 0.5em;
+    grid-auto-rows: minmax(15px, auto);
+    background: rgba(255, 255, 255, 0.151);
 }
 
 .results-container {
-    display: none;
+  
     width: auto;
-    /* padding: 15px; */
-    background: rgb(52, 58, 64);
+    padding-left: 15px;
+    padding-right: 15px;
+   
+    background: rgba(52, 58, 64, 0.842);
     color: rgb(230, 230, 230);
-    border: 2px solid rgba(255, 255, 255, 0.479);
+    border: 1px solid rgb(255, 255, 255);
     border-top: 0px solid rgba(255, 255, 255, 0.479);
-    border-radius: 4%;
+    border-radius: 15px;
+    box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
 #result-list {
-    background-color: rgba(213, 214, 218, 0.979);
+    background-color: rgb(255, 255, 255);
     color: var(--gunmetal-color);
     padding-left: 15px;
-    border-radius: 4%;
+    border-radius: 10px;
+    border: 2px solid rgba(37, 37, 37, 0.61);
+    display: none;
+    padding: 20px;
+    padding-left: 40px;
+    margin-top: 10px;
+    /* font-weight: 500; */
+    font-size: 1.3em;
+    box-shadow: 2px 2px 6px rgba(10, 10, 10, 0.37);
+
+}
+.display-header {
+    padding-top: 15px;
+
 }
 
 .setting-inputs {
-    padding: 10px;
-    background: rgba(52, 58, 64, 0.801);
-    /* border: 1px solid rgba(255, 255, 255, 0.37); */
-    border-radius: 4%;
+    width: 275px;
+    position: relative;
+    justify-content: space-between;
+    padding: 15px;
+    background: rgba(52, 58, 64, 0.842);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    box-shadow: 1px 0px 3px rgb(0, 0, 0);
+}
+
+.race-container {
+    position: relative;
+    margin: auto;
+    /* margin-bottom: 5px; */
+    /* padding: 10px; */
+    background: var(--default-grey);
+    border: 2px solid rgba(37, 37, 37, 0.61);
+    border-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+    box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.856);
+}
+
+/* BUTTONS */
+.button-container {
+    width: 220px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    /* padding-left: 15px; */
+    margin: auto;
+}
+
+.list-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit-container {
+    position: relative;
+}
+
+#select-btn {
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(214, 216, 219, 0.767);
+    border-radius: 5px;
+}
+
+#clear-btn {
+    border: 2px solid rgba(214, 216, 219, 0.767);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#submit-btn {
+    /* margin-left: 20px; */
+    margin-bottom: 10px;
+    border: 2px solid rgba(214, 216, 219, 0.767);
+    display: none;
+    border-radius: 5px;
+}
+
+#player-inputs {
+    /* padding-top: 10px; */
+    position: relative;
+    border: 2px solid rgba(37, 37, 37, 0.61);
+    border-top: 0;
+    margin: auto;
+    background: var(--default-grey);
+    padding-bottom: 2px;
+    padding: 15px;
+    padding-top: 10px;
+    border-radius: 0% 0% 4% 4%;
+    box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.856);
 }
 
 .player-settings-interior {
-    margin: 10px;
-    padding: 5px;
-    border-radius: 4%;
+
+    /* margin: 10px; */
+    /* padding: 10px; */
+    /* padding-top: 10px; */
+    margin-top: 0px;
+
     background-color: rgb(253, 251, 251);
     border-left: 3px solid var(--default-grey);
     border: 1px solid rgba(40, 44, 48, 0.493);
     border: 0.15em inset rgba(52, 58, 64, 0.623);
+    /* border-radius: 4%; */
 }
 
-.player-counter-container {
-    /* border: 1px solid rgba(255, 255, 255, 0.767); */
-    border-top: 0;
-    margin: auto;
-    background: rgba(201, 201, 201, 0.897);
-    padding-bottom: 2px;
-    border-radius: 0%  0%  4%  0%;
 
+.player-counter-container {
+    margin: auto;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    /* margin-bottom: 10px; */
+    padding-top: 10px;
+    background: rgba(218, 216, 216, 0.438);
+    border-top: 1px solid rgba(40, 44, 48, 0.377);
+    border-bottom: 2px solid rgba(40, 44, 48, 0.377);
+}
+
+
+.flexInput {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
 }
 
 #player-counter {
-    margin-left: 15%;
-    width: 20%;
+    width: 40px;
     margin-bottom: 10px;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    background: rgb(219, 219, 219);
+    border: 1px solid rgba(40, 44, 48, 0.377);
+    border-radius: 5px;
+    padding-left: 2px;
+}
+.player-choice-label {
+    padding: px;
+    margin: 0;
+    
 }
 
 #choice-counter {
-    margin-left: 15%;
-    width: 20%;
-    margin-bottom: 10px;
-    font-size: 0.8em;
+    width: 40px;
+    margin-bottom: 0px;
+    font-size: 0.9em;
+    background: rgb(219, 219, 219);
+    border: 1px solid rgba(40, 44, 48, 0.377);
+    border-radius: 5px;
+    padding: 2px;
 }
 
 #player-details-container {
+   
+    display: flex;
     border: 1px solid rgba(255, 255, 255, 0.863);
     padding-left: 0px;
-    margin: 0;
+    /* margin: auto; */
     border-radius: 4%;
- 
+ margin-top: 10px;
+ padding-top: 10px;
 }
 
-#player-details-container>label {
-    background-color: rgba(204, 204, 204, 0.925);
-    /* border-left: 3px solid var(--default-grey);
-    border-right: 3px solid var(--default-grey); */
-    border: 1px solid rgba(255, 255, 255, 0.342);
-   
-    padding-bottom: 0px;
-    padding-left: 10px;
-    /* padding-left: 10px;  */
-    /* width: auto; */
-    margin: auto;
-    margin-top: 15px;
-    /* position: relative; */
-    /* display: flex; */
-    /* align-content: space-around; */
-}
-
-#player-inputs {
-    padding-top: 10px;
-}
 
 .name-input-field {
     /* padding-top: 15px; */
-    width: auto;
-    margin: auto;
+    padding-left: 5px;
+    width: 60%;
+    height: 30px;
+    /* margin: auto; */
     color: var(--gunmetal-color);
     font-size: 0.9em;
     margin-bottom: 5px;
+    background: rgba(40, 44, 48, 0.082);
+    border: 1px solid rgba(40, 44, 48, 0.377);
+    border-radius: 5px;
 }
 
-.name-input-field {
-    margin-left: 25%;
-    padding-right: 10px;
-    width: 45%;
 
+.top-container {
+    padding: 0px;
+    background: rgba(52, 58, 64, 0.952);
+    grid-area: 1/span 2;
+    width: auto;
+    color: var(--gunmetal-color);
+    border: 2px solid rgb(124, 124, 124);
+    border-radius: 3px;
+    height: 20px;
+ 
 }
 
 .bottom-container {
     padding: 0px;
-    background-color: var(--gunmetal-color);
-    grid-area: 2/span 2;
+    background: rgba(52, 58, 64, 0.993);
+    grid-area: 3/span 2;
     width: auto;
-    color: var(--gunmetal-color);
-    border-radius: 2%;
+    border: 2px solid rgb(124, 124, 124);
+    border-radius: 3px;
+    height: 100px;
 }
-
 .section-header {
+    position: relative;
     border-bottom: 2px solid rgba(52, 60, 68, 0.397);
-    padding-left: 5px;
-    width: 95%;
-    margin-left: 10px;
+    width: 88%;
+   margin: auto;
     padding-top: 5px;
 }
 
 /* RACE SELECTION BOX STYLES */
-#select-btn {
-    margin-left: 10px;
-    margin-bottom: 10px;
-}
-
-#clear-btn {
-    margin-left: 2px;
-    margin-bottom: 10px;
-}
-
-#submit-btn {
-    margin-left: 20px;
-    margin-bottom: 10px;
-    border: 2px solid rgba(214, 216, 219, 0.767);
-    display: none;
-}
-
 .raceList {
-    height: 250px;
+    height: 225px;
     overflow: auto;
     width: 220px;
     border: 0.15em inset rgba(52, 58, 64, 0.623);
-    margin-left: 10px;
+    margin: auto;
     padding: 5px;
     margin-bottom: 5px;
+    margin-top: 10px;
+
     background: rgb(243, 243, 243);
-    /* display: flexbox; */
 }
 
 ul {
@@ -182,7 +275,6 @@ ul {
     margin: 5px;
     padding: 5px;
     background-color: rgba(243, 243, 243, 0);
-    /* overflow-x: hidden; */
 }
 
 li {
@@ -192,7 +284,6 @@ li {
 }
 
 label {
-    /* position: relative; */
     display: block;
     color: WindowText;
     background-color: Window;
@@ -217,6 +308,7 @@ label {
         margin: auto;
         margin-top: 10px;
     }
+
 }
 
 @media screen and (max-width: 400px) {

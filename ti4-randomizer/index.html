@@ -55,160 +55,172 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h4 class="mt-4" style="width: 100%">The new convenient solution to the White Man's Burden!</h4>
-                <p class="lead" style="width: 100%;  margin: 0; line-height: 0.95; padding: 10px">Select races, choose
+                <p class="lead" style="width: 100%;  margin: 0; line-height: 0.85; padding: px">Select races, choose
                     number of players, enter names.</p>
             </div>
 
             <div class="grid-container">
+                <div class="top-container">
 
-                <form>
-                    <div class="setting-inputs">
-                        <h5 class="section-header">Select Races</h5>
-                        <ul class="raceList">
-                            <li>
-                                <label for="arborecChk">
-                                    <input checked class="raceBox" type="checkbox" name="arborecChk" id="arborecChk"
-                                        value="Arborec"> Arborec
-                                </label>
-                            </li>
-                            <li>
-                                <label for="baronyChk">
-                                    <input checked class="raceBox" type="checkbox" name="baronyChk" id="baronyChk"
-                                        value="Barony of Letnev"> Barony of Letnev
-                                </label>
-                            </li>
-                            <li>
-                                <label for="clanChk">
-                                    <input checked class="raceBox" type="checkbox" name="clanChk" id="clanChk"
-                                        value="Clan of Saar"> Clan of Saar
-                                </label>
-                            </li>
-                            <li>
-                                <label for="embersChk">
-                                    <input checked class="raceBox" type="checkbox" name="embersChk" id="embersChk"
-                                        value="Embers of Muaat"> Embers of Muaat
-                                </label>
-                            </li>
-                            <li>
-                                <label for="emiratesChk">
-                                    <input checked class="raceBox" type="checkbox" name="emiratesChk" id="emiratesChk"
-                                        value="Emirates of Hacan"> Emirates of Hacan
-                                </label>
-                            </li>
-                            <li>
-                                <label for="federationChk">
-                                    <input checked class="raceBox" type="checkbox" name="federationChk"
-                                        id="federationChk" value="Federation of Sol"> Federation of Sol
-                                </label>
-                            </li>
-                            <li>
-                                <label for="ghostsChk">
-                                    <input checked class="raceBox" type="checkbox" name="ghostsChk" id="ghostsChk"
-                                        value="Ghosts of Creuss"> Ghosts of Creuss
-                                </label>
-                            </li>
-                            <li>
-                                <label for="l1z1xChk">
-                                    <input checked class="raceBox" type="checkbox" name="l1z1xChk" id="l1z1xChk"
-                                        value="L1Z1X Mindnet"> L1Z1X Mindnet
-                                </label>
-                            </li>
-                            <li>
-                                <label for="mentakChk">
-                                    <input checked class="raceBox" type="checkbox" name="mentakChk" id="mentakChk"
-                                        value="Mentak Coalition"> Mentak Coalition
-                                </label>
-                            </li>
-                            <li>
-                                <label for="naaluChk">
-                                    <input checked class="raceBox" type="checkbox" name="naaluChk" id="naaluChk"
-                                        value="Naalu Collective"> Naalu Collective
-                                </label>
-                            </li>
-                            <li>
-                                <label for="nekroChk">
-                                    <input checked class="raceBox" type="checkbox" name="nekroChk" id="nekroChk"
-                                        value="Nekro Virus"> Nekro Virus
-                                </label>
-                            </li>
-                            <li>
-                                <label for="sardakkChk">
-                                    <input checked class="raceBox" type="checkbox" name="sardakkChk" id="sardakkChk"
-                                        value="Sardakk NOrr"> Sardakk N'Orr
-                                </label>
-                            </li>
-                            <li>
-                                <label for="universitiesChk">
-                                    <input checked class="raceBox" type="checkbox" name="universitiesChk"
-                                        id="universitiesChk" value="Universities of Jol-Nar"> Universities of
-                                    Jol-Nar
-                                </label>
-                            </li>
-                            <li>
-                                <label for="winnuChk">
-                                    <input checked class="raceBox" type="checkbox" name="winnuChk" id="winnuChk"
-                                        value="Winnu"> Winnu
-                                </label>
-                            </li>
-                            <li>
-                                <label for="xxchaChk">
-                                    <input checked class="raceBox" type="checkbox" name="xxchaChk" id="xxchaChk"
-                                        value="Xxcha Kingdom"> Xxcha Kingdom
-                                </label></li>
-                            <li>
-                                <label for="yinChk">
-                                    <input checked class="raceBox" type="checkbox" name="yinChk" id="yinChk"
-                                        value="Yin Brotherhood"> Yin Brotherhood
-                                </label>
-                            </li>
-                            <li>
-                                <label for="yssarilChk">
-                                    <input checked class="raceBox" type="checkbox" name="yssarilChk" id="yssarilChk"
-                                        value="Yssaril Tribes"> Yssaril Tribes
-                                </label>
-                            </li>
-                        </ul>
-
-                        <!-- need to replace function in the onclick attrbute -->
-                        <input id="select-btn" class="btn btn-dark btn-sm" type="button" value="Select All"
-                            onclick="">
-                        <input id="clear-btn" class="btn btn-dark btn-sm" type="button" value="Clear"
-                            onclick="">
-                        <input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!"
-                            onclick="getRaceList(this.form)">
-                    </div>
-                    <div class="player-counter-container">
-                        <h5 class="section-header">Players</h5>
-                        <div class="player-settings-interior">
-                            <div id="player-inputs">
-                                <span>Number of players:</span>
-                                <select name="player-counter" id="player-counter">
-                                    <option value="0">-</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select><br>
-
-                                <span>Choices per player: </span>
-                                <select name="choice-counter" id="choice-counter">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select>
+                </div>
+                <div class="setting-inputs">
+                    <form>
+                        <div class="race-container">
+                            <h5 class="section-header">Select Races</h5>
+                            <ul class="raceList">
+                                <li>
+                                    <label for="arborecChk">
+                                        <input checked class="raceBox" type="checkbox" name="arborecChk" id="arborecChk"
+                                            value="Arborec"> Arborec
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="baronyChk">
+                                        <input checked class="raceBox" type="checkbox" name="baronyChk" id="baronyChk"
+                                            value="Barony of Letnev"> Barony of Letnev
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="clanChk">
+                                        <input checked class="raceBox" type="checkbox" name="clanChk" id="clanChk"
+                                            value="Clan of Saar"> Clan of Saar
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="embersChk">
+                                        <input checked class="raceBox" type="checkbox" name="embersChk" id="embersChk"
+                                            value="Embers of Muaat"> Embers of Muaat
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="emiratesChk">
+                                        <input checked class="raceBox" type="checkbox" name="emiratesChk"
+                                            id="emiratesChk" value="Emirates of Hacan"> Emirates of Hacan
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="federationChk">
+                                        <input checked class="raceBox" type="checkbox" name="federationChk"
+                                            id="federationChk" value="Federation of Sol"> Federation of Sol
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="ghostsChk">
+                                        <input checked class="raceBox" type="checkbox" name="ghostsChk" id="ghostsChk"
+                                            value="Ghosts of Creuss"> Ghosts of Creuss
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="l1z1xChk">
+                                        <input checked class="raceBox" type="checkbox" name="l1z1xChk" id="l1z1xChk"
+                                            value="L1Z1X Mindnet"> L1Z1X Mindnet
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="mentakChk">
+                                        <input checked class="raceBox" type="checkbox" name="mentakChk" id="mentakChk"
+                                            value="Mentak Coalition"> Mentak Coalition
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="naaluChk">
+                                        <input checked class="raceBox" type="checkbox" name="naaluChk" id="naaluChk"
+                                            value="Naalu Collective"> Naalu Collective
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="nekroChk">
+                                        <input checked class="raceBox" type="checkbox" name="nekroChk" id="nekroChk"
+                                            value="Nekro Virus"> Nekro Virus
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="sardakkChk">
+                                        <input checked class="raceBox" type="checkbox" name="sardakkChk" id="sardakkChk"
+                                            value="Sardakk NOrr"> Sardakk N'Orr
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="universitiesChk">
+                                        <input checked class="raceBox" type="checkbox" name="universitiesChk"
+                                            id="universitiesChk" value="Universities of Jol-Nar"> Universities of
+                                        Jol-Nar
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="winnuChk">
+                                        <input checked class="raceBox" type="checkbox" name="winnuChk" id="winnuChk"
+                                            value="Winnu"> Winnu
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="xxchaChk">
+                                        <input checked class="raceBox" type="checkbox" name="xxchaChk" id="xxchaChk"
+                                            value="Xxcha Kingdom"> Xxcha Kingdom
+                                    </label></li>
+                                <li>
+                                    <label for="yinChk">
+                                        <input checked class="raceBox" type="checkbox" name="yinChk" id="yinChk"
+                                            value="Yin Brotherhood"> Yin Brotherhood
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="yssarilChk">
+                                        <input checked class="raceBox" type="checkbox" name="yssarilChk" id="yssarilChk"
+                                            value="Yssaril Tribes"> Yssaril Tribes
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="button-container">
+                                <!-- need to replace function in the onclick attrbute -->
+                                <div class="list-buttons">
+                                <input id="select-btn" class="btn btn-dark btn-sm" type="button" value="Select All" onclick="">
+                                <input id="clear-btn" class="btn btn-dark btn-sm" type="button" value="Clear" onclick="">
+                                </div>
+                                <div class="submit-container">
+                                <input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!" onclick="getRaceList(this.form)">
                             </div>
-                            <br>
-                            <!-- need this markup for template literals -->
-                            <div class="player-details-container">
+                            </div>
+                            <h5 class="section-header">Players</h5>
+                        </div>
+                        <div id="player-inputs">
+                            
+                            <div class="player-settings-interior">
+                                <div class="player-counter-container">
+                                   <div class="flexInput">
+                                       <p>Player Count:</p>
+                                        <!-- <label for="choice-counter">Player Count:</label> -->
+                                        <select name="player-counter" id="player-counter">
+                                            <option value="0">-</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="flexInput">
+                                        <p class="player-choice-label">Player Choice:</p>
+                                        <!-- <label for="choice-counter">Player Choices:</label> -->
+                                        <select name="choice-counter" id="choice-counter">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+                                    
+                                    </div>
+                                </div>
+                                
+                                <!-- need this markup for template literals -->
+                                <div class="player-details-container">
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
-
+                    </form>
+                </div>
 
                 <div class="results-container">
-                    <h5 class="section-header">The Races!</h5>
+                    <h5 class="display-header">Race Assignments</h5>
                     <p id="result-list"> </p>
                 </div>
                 <div class="bottom-container">
@@ -220,14 +232,16 @@
                 <div class="sidebar"> -->
 
                 </div>
+
             </div>
+            <!--grid-container -->
         </div>
     </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.slim.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="ti4script.js"></script>
+    <script src="ti4scriptClean.js"></script>
 
 </body>
 
