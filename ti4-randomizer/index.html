@@ -7,10 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>The TI4 Race Dispenser</title>
+    <title>The Randomeister for TI4</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="ti4race-styles.css">
 </head>
 
@@ -19,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="#">The Race Dispenser</a>
+            <a class="navbar-brand" href="#">The Randomeister</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -54,9 +55,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h4 class="mt-4" style="width: 100%">The new convenient solution to the White Man's Burden!</h4>
-                <p class="lead" style="width: 100%;  margin: 0; line-height: 0.85; padding: px">Select races, choose
-                    number of players, enter names.</p>
+                <h4 class="mt-4" style="width: 100%">Get your random on</h4>
+                <p class="lead" style="width: 100%;  margin: 0; line-height: 1; padding: 5px">ya dig?</p>
             </div>
 
             <div class="grid-container">
@@ -177,13 +177,13 @@
                                 <input id="select-btn" class="btn btn-dark btn-sm" type="button" value="Select All" onclick="">
                                 <input id="clear-btn" class="btn btn-dark btn-sm" type="button" value="Clear" onclick="">
                                 </div>
-                                <div class="submit-container">
+                                <!-- <div class="submit-container">
                                 <input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!" onclick="getRaceList(this.form)">
+                                 </div> -->
                             </div>
-                            </div>
-                            <h5 class="section-header">Players</h5>
                         </div>
                         <div id="player-inputs">
+                                <h5 class="section-header">Players</h5>
                             
                             <div class="player-settings-interior">
                                 <div class="player-counter-container">
@@ -214,13 +214,24 @@
                                 <div class="player-details-container">
 
                                 </div>
+                                
                             </div>
+                            
                         </div>
+                        
                     </form>
                 </div>
 
                 <div class="results-container">
+                    <div class="display-header-controls">
                     <h5 class="display-header">Race Assignments</h5>
+                    <div class="submit-container">
+                            <div><input id="submit-btn" class="btn btn-success btn-sm" type="button"
+                                value="Dispense!" onclick="getRaceList(this.form)"></div>
+                            <div><input id="reset-btn" class="btn btn-outline-secondary btn-sm" type="button"
+                                value="Reset" onclick="getRaceList(this.form)"></div>
+                        </div>
+                </div>
                     <p id="result-list"> </p>
                 </div>
                 <div class="bottom-container">
@@ -242,6 +253,7 @@
     <script src="vendor/jquery/jquery.slim.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="ti4script.js"></script>
+    <!-- <script src="ti4script2Revisions.js"></script> -->
 
 </body>
 

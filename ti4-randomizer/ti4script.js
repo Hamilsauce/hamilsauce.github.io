@@ -4,10 +4,12 @@ const resultListContainer = document.querySelector('.results-container');
 const nameInputContainer = document.querySelector('.player-details-container');
 const raceDisplay = document.getElementById('result-list');
 const submitButton = document.querySelector('#submit-btn');
+const resetButton = document.querySelector('#reset-btn');
 
 let textBoxes;
 let playerNames = [];
 let players = [];
+let raceList = [];
 
 let nameBoxes = playerCounter.addEventListener('change', () => {
     //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
@@ -17,8 +19,7 @@ let nameBoxes = playerCounter.addEventListener('change', () => {
 
 submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
-    let raceList = getRaceList();
-console.log(raceList);
+    raceList = getRaceList()
     getPlayerData(playerNames, raceList);
     doleOut(raceList);
     displays();
@@ -26,12 +27,16 @@ console.log(raceList);
 
 function getPlayerNames(boxes) {
     //function is run everytime a user deselects a text input - adds text content to playername list 
+    
     let box = document.querySelector(boxes);
     let input = box.value;
-
-    if (input != "") {
+    if (playerNames.length >= 6) {
+        alert("Already Got enough players. Click Reset to start over.");
+        return;
+    } else if (input != "") {
         playerNames.push(input);
     }
+   console.log(playerNames);
 }
 
 function getRaceList() {
@@ -61,7 +66,7 @@ function addInputs(count) {
             </div>
         `);
     }
-    nameInputContainer.innerHTML = `<br> ${output.join('')}`;
+    nameInputContainer.innerHTML = ` ${output.join('')}`;
     toggleSubmit();
 }
 
@@ -69,9 +74,11 @@ function toggleSubmit() {
     //show or hide subit buton 
     let textFields = document.querySelectorAll(".name-input-field");
     if (textFields.length > 0) {
-        submitButton.style.display = "inline";
+        submitButton.style.display = "inline";  
+        resetButton.style.display = "inline";  
     } else {
         submitButton.style.display = "none";
+        resetButton.style.display = "none";
     }
     return textFields;
 }
@@ -87,8 +94,8 @@ function getPlayerData(names, races) {
             displayData: function() {
                 let Output = '';
                 output =
-                    `<p class="player-header"><b>Player ${this.id}: ${this.playername}</b></p> 
-                     <p class="player-details"> ${this.gotRaces[0]}</p>`;
+                    `<p class="player-header"><span class="output-id">Player ${this.id}</span></p>
+                     <p class="player-details"><span class="output-playername">${this.playername}</span> - ${this.gotRaces[0]}</p>`;
                 return output;
             },
             getRace: function(races) {
@@ -97,7 +104,8 @@ function getPlayerData(names, races) {
                     let j =Math.floor(Math.random() * (i + 1));
                     [races[i], races[j]] = [races[j], races[i]];
                 }
-                this.gotRaces.push(races[0]);
+                this.gotRaces.push(races.splice(0, 1));
+                console.log(this.gotRaces);
             }
             }); 
         i++;
@@ -112,6 +120,8 @@ function doleOut(races) {
             p.getRace(races);
         });
     };
+
+    console.log(races);
 }
 
 function displays() {
@@ -126,4 +136,41 @@ function displays() {
     raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
 }
+
+
+
+
+resetButton.addEventListener('click',() => {
+    document.location.reload(true);
+});
+
+
+/*
+// resetButton.addEventListener('click',() => {
+//     const resultList = document.querySelector('#result-list');
+
+//     players.length = 0;
+//     // raceList.length = 0;
+//     console.log(players);
+//     console.log(playerNames);
+//     console.log(selectBoxes);
+//     // playerNames.length = 0;
+//     // selectBoxes.length = 0;
+
+//     resultList.style.display = "none";
+//     raceDisplay.innerHTML = "";
+
+//     // submitButton.style.display = "none";
+
+// //Need to clear players objects, races array, 
+// //clean out the result list HTML, 
+// //Hide buttons, and clear names in textboxes.
+
+// });
+// // function resetData() {
+    
+// // }
+*/
+
+
 
