@@ -62,7 +62,7 @@ body {
 }
 
 .setting-inputs {
-    width: 275px;
+    width: auto;
     position: relative;
     justify-content: space-between;
     padding: 15px;
@@ -126,6 +126,7 @@ body {
 
 #player-inputs {
     /* padding-top: 10px; */
+    width: auto;
     position: relative;
     border: 2px solid rgba(37, 37, 37, 0.61);
     border-top: 0;
