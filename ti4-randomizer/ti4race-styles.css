@@ -1,4 +1,4 @@
-:root {
+root {
     --gunmetal-color: rgba(52, 58, 64, 0.959);
     --default-grey: rgba(224, 224, 224, 0.829);
 }
@@ -10,101 +10,146 @@ body {
     padding: 0px;
 }
 
-.mt-4{
+.mt-4 {
     box-sizing: border-box;
-    margin: 0;
+    margin: 5px;
 }
 
 .grid-container {
-    /* position: relative; */
-    padding: 0px;
-    margin: 0%;
-    margin-top: 25px;
     display: grid;
-    grid-template-columns: 4fr 8fr;
-    grid-column-gap: 0.5em;
-    grid-row-gap: 0.2em;
+    margin: auto;
+    padding: 0px;
+    margin-top: 25px;
+    grid-template-columns: minmax(275, auto) 4fr 8fr;
+    grid-column-gap: 0.3em;
+    grid-row-gap: 0.3em;
     grid-auto-rows: minmax(15px, auto);
     background: rgba(255, 255, 255, 0.151);
 }
 
 .results-container {
-  
     width: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-   
-    background: rgba(52, 58, 64, 0.842);
+    padding-left: 0px;
+    padding-right: 0px;
+    background: rgba(52, 58, 64, 0.719);
     color: rgb(230, 230, 230);
     border: 1px solid rgb(255, 255, 255);
-    border-top: 0px solid rgba(255, 255, 255, 0.479);
+    border-top: 0px solid rgba(255, 255, 255, 0.363);
     border-radius: 15px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
 #result-list {
-    background-color: rgb(255, 255, 255);
-    color: var(--gunmetal-color);
-    border-radius: 10px;
-    border: 5px solid rgba(37, 37, 37, 0.61);
-    border-radius: 15px;
     display: none;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
     padding: 20px;
-    padding-left: 20px;
-    margin-top: 10px;
-    /* font-weight: 500; */
-    font-size: 1.3em;
-    box-shadow: 2px 2px 6px rgba(10, 10, 10, 0.37);
-
+    padding-right: 0px;
+    font-size: 1.1em;
+    color: var(--gunmetal-color);
+    background-color: rgb(255, 255, 255);
+    border: 3px solid rgba(156, 156, 156, 0.986);
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
 }
-.display-header {
-	margin: 0px;
-	padding: 5px;
-    padding-top: 5px;
-    font-size: 18px;
 
+
+.output-id {
+    font-weight: 500;
+}
+
+.output-playername {
+    padding-left: 3px;
+    /* font-weight: 500; */
 }
 
 .player-header {
-	margin: 0px;
-	padding-left: 5px;
-	 background: rgba(218, 216, 216, 0.438);
-
+    margin: 0px;
+    padding: 2px;
+    padding-left: 10px;
+    font-size: 1.1em;
+    background: rgba(214, 214, 214, 0.911);
+    border-radius: 15px 0px 0px 15px;
+    border-bottom: 2px solid rgba(156, 156, 156, 0.418);
+    border-left: 2px solid rgba(156, 156, 156, 0.418);
 }
 
-
 .player-details {
-	padding-left: 15px;
-	margin-bottom: 5px;
-	margin-top: 5px;
-	//font-size: 16px;
+    padding-left: 25px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    font-size: 1em;
+    /* font-weight: 500; */
 }
 
 .setting-inputs {
-    width: auto;
+    box-sizing: border-box;
     position: relative;
+    width: 100%;
+    ;
+    margin: auto;
     justify-content: space-between;
+    /* width: 275px; */
     padding: 15px;
     background: rgba(52, 58, 64, 0.842);
     border: 1px solid rgb(255, 255, 255);
- 
     border-radius: 15px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
 .race-container {
-	padding-left: 15px;
-    padding-right: 15px;
     position: relative;
     margin: auto;
-    /* margin-bottom: 5px; */
-    /* padding: 10px; */
-    background: var(--default-grey);
-    border: 2px solid rgba(37, 37, 37, 0.6);
-    border-bottom: 1px solid rgba(224, 224, 224, 0.9);
+    padding-left: 15px;
+    padding-right: 15px;
+    background: rgb(200, 200, 201);
+    border: 2px solid rgba(37, 37, 37, 0.61);
+    border-bottom: 0px solid rgba(37, 37, 37, 0.61);
     border-radius: 10px 10px 0px 0px;
-    box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.856);
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
 }
+
+#player-inputs {
+    position: relative;
+    width: auto;
+    margin: auto;
+    background: rgb(200, 200, 201);
+    padding: 15px;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    border: 2px solid rgba(37, 37, 37, 0.61);
+    border-top: 0px;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+}
+
+.player-settings-interior {
+    margin-top: 0px;
+    background-color: rgb(253, 251, 251);
+    border-left: 3px solid var(--default-grey);
+    border: 1px solid rgba(40, 44, 48, 0.493);
+    border: 0.15em inset rgba(52, 58, 64, 0.623);
+    border-radius: 15px;
+    padding-bottom: 10px;
+    margin: auto;
+}
+
+.player-counter-container {
+
+    width: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    background: rgba(218, 216, 216, 0.438);
+    padding: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 1px solid rgba(40, 44, 48, 0.219);
+
+    vertical-align: middle;
+}
+
 
 /* BUTTONS */
 .button-container {
@@ -121,94 +166,116 @@ body {
     justify-content: space-between;
 }
 
-.submit-container {
-    position: relative; 
-
-}
-
 #select-btn {
     background: var(--gunmetal-color);
-	font-size: 16px;
-	color: white;
+    font-size: 14px;
+    color: white;
     border: 2px solid rgba(214, 216, 219, 0.767);
     margin-bottom: 10px;
     border-radius: 5px;
 }
+
 #clear-btn {
-	background: var(--gunmetal-color);
-	font-size: 16px;
-	color: white;
+    background: var(--gunmetal-color);
+    font-size: 14px;
+    color: white;
     border: 2px solid rgba(214, 216, 219, 0.767);
     margin-bottom: 10px;
     border-radius: 5px;
+}
+
+.display-header {
+    margin: auto;
+    width: auto;
+    padding: 5px;
+
+    font-size: 1.2em;
+    height: auto;
+    margin-bottom: 0px;
+    vertical-align: middle;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    /* height: auto; */
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    vertical-align: middle;
+
 }
 
 #submit-btn {
-   background: ;
-	font-size: 16px;
-    margin-bottom: 10px;
-    border: 2px solid rgba(214, 216, 219, 0.767);
+
+    /* margin-bottom: 10px; */
+    border: 1px solid rgba(214, 216, 219, 0.767);
     display: none;
-    border-radius: 5px;
+    border-radius: 15px;
+    font-size: 1.1em;
+    /* background: rgba(22, 175, 43, 0.651); */
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493);
+    border: 2px solid rgba(170, 171, 173, 0.705);
+
 }
 
-#player-inputs {
-    /* padding-top: 10px; */
-	width: auto;
-	position: relative;
-	border-top: 2px solid rgba(224, 224, 224, 0.1);
-	border-left: 2px solid rgba(37, 37, 37, 0.61);
-	border-right: 2px solid rgba(37, 37, 37, 0.61);
-     border-left: 2px solid rgba(37, 37, 37, 0.61);
-   border-bottom: 2px solid rgba(37, 37, 37, 0.61);
-    margin: auto;
-    background: var(--default-grey);
-    padding-bottom: 2px;
-    padding: 15px;
-    padding-top: 10px;
-    border-radius: 0px 0px 15px 15px;
-    box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.856);
-}
-
-.player-settings-interior {
-
-    /* margin: 10px; */
-    /* padding: 10px; */
-    /* padding-top: 10px; */
-    margin-top: 0px;
-    
-    background-color: rgb(253, 251, 251);
-    border-left: 3px solid var(--default-grey);
-    border: 1px solid rgba(40, 44, 48, 0.493);
-    border: 0.15em inset rgba(52, 58, 64, 0.623);
-    /* border-radius: 4%; */
-}
-
-
-.player-counter-container {
-    margin: auto;
+#reset-btn {
+    border-radius: 15px;
+    font-size: 1.1em;
     width: auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 5%;
-  //  margin-bottom: 10px; 
-    padding-top: 10px;
-    background: rgba(218, 216, 216, 0.438);
-    border-top: 2px solid rgba(224, 224, 224, 0.82);
-    border-bottom: 2px solid rgba(40, 44, 48, 0.377);
-	
-vertical-align: middle;
+    margin: auto;
+    margin-left: 20px;
+    padding: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: none;
+    border: 2px solid rgba(170, 171, 173, 0.705);
+
+
 }
 
-
-.flexInput {
+.display-header-controls {
+    display: flex;
+    position: relative;
+    /* z-index: 0; */
+    justify-content: space-between;
+    vertical-align: middle;
+    background: rgba(45, 48, 51, 0.473);
+    /* height: auto; */
+    width: 100%;
+    margin: auto;
+    /* margin-left: -15px; */
+    padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    border-radius: 15px 15px 0px 0px;
+    border-bottom: 2px solid rgba(214, 214, 214, 0.473);
+
+}
+
+.flexInput {
     display: flex;
     justify-content: space-between;
-   vertical-align: middle;
+    vertical-align: middle;
+    margin: auto;
+    width: auto;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+
 }
+
+
+
+
 
 #player-counter {
     width: 40px;
@@ -225,7 +292,7 @@ vertical-align: middle;
     padding: 0px;
     margin: 0;
     vertical-align: middle;
-    
+
 }
 
 .player-count-label {
@@ -246,35 +313,42 @@ vertical-align: middle;
 }
 
 #player-details-container {
-   
     display: flex;
+    justify-content: space-evenly;
     border: 1px solid rgba(255, 255, 255, 0.863);
-    padding-left: 0px;
-    /* margin: auto; */
+    width: auto;
+    padding-left: 15px;
+    margin: auto;
     border-radius: 4%;
- margin-top: 10px;
- padding-top: 10px;
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 10px;
 }
 
 .textbox-label {
-	vertical-align: bottom;
-	padding: 0px;
-	margin: 0px;
+    vertical-align: middle;
+    padding-bottom: 5px;
+    margin: auto;
+    width: 100%;
+    font-size: 1.1em;
 }
 
 .name-input-field {
-    /* padding-top: 15px; */
+    padding-top: 0px;
+
     padding: 5px;
-    width: 60%;
-   // height: 30px;
+    width: 100%;
+    height: 30px;
     margin: auto;
-    //vertical-align: middle;
+    /* width: auto; */
+    vertical-align: middle;
     color: var(--gunmetal-color);
     font-size: 0.9em;
     margin-bottom: 5px;
     background: rgba(40, 44, 48, 0.082);
     border: 1px solid rgba(40, 44, 48, 0.377);
     border-radius: 5px;
+    /* margin-left: 20px; */
 }
 
 
@@ -288,7 +362,8 @@ vertical-align: middle;
     border: 2px solid rgb(124, 124, 124);
     border-radius: 3px;
     height: 20px;
- 
+    display: none;
+
 }
 
 .bottom-container {
@@ -300,13 +375,15 @@ vertical-align: middle;
     border-radius: 3px;
     height: 100px;
 }
+
 .section-header {
     position: relative;
     border-bottom: 2px solid rgba(52, 60, 68, 0.397);
-    width: 88%;
-   margin: auto;
+    width: auto;
+    margin: auto;
+    margin-bottom: 10px;
     padding-top: 5px;
-    font-size: 18px;
+    font-size: 1.3em;
 }
 
 /* RACE SELECTION BOX STYLES */
@@ -327,13 +404,13 @@ ul {
     list-style-type: none;
     margin: 5px;
     padding: 5px;
-//    background-color: rgba(243, 243, 243, 0);
+    background-color: rgba(243, 243, 243, 0);
 }
 
 li {
     padding-left: 0px;
     width: fit-content;
-    //background-color: rgba(243, 243, 243,1 );
+    background-color: rgba(243, 243, 243, 1);
 }
 
 label {
@@ -368,34 +445,14 @@ label {
 @media screen and (max-width: 400px) {
     .bottom-container {
         /* padding: 10px; */
-        grid-area: 4/span 1;
+        grid-area: 3/span 1;
 
     }
+
     .top-container {
         grid-area: 1/span 1;
-    width: auto;
+        width: auto;
     }
 
 
 }
-    
-/*
-
-@media screen and (max-width: 400px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-        width: 95%;
-        margin: auto;
-        margin-top: 10px;
-    }
-    .top-container {
-    grid-area: 1/span 2;
-    width: auto;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .bottom-container {
-        /* padding: 10px; */
-        
-/
