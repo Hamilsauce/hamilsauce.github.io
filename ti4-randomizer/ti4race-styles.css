@@ -319,6 +319,12 @@ label {
         grid-area: 3/span 1;
         border-radius: 4%;
     }
+    .top-container {
+        grid-area: 1/span 1;
+    width: auto;
+    }
+
+
 }
     
 /*
@@ -330,7 +336,10 @@ label {
         margin: auto;
         margin-top: 10px;
     }
-
+    .top-container {
+    grid-area: 1/span 2;
+    width: auto;
+    }
 }
 
 @media screen and (max-width: 400px) {
