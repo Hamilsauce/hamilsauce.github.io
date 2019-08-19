@@ -301,6 +301,28 @@ label {
     /* font-weight: 500; */
 }
 
+
+
+@media screen and (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bottom-container {
+        /* padding: 10px; */
+        background-color: var(--gunmetal-color);
+        grid-area: 3/span 1;
+        border-radius: 4%;
+    }
+}
+    
+/*
+
 @media screen and (max-width: 400px) {
     .grid-container {
         grid-template-columns: 1fr;
@@ -319,3 +341,4 @@ label {
         border-radius: 4%;
     }
 }
+*/
