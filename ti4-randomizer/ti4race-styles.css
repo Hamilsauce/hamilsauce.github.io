@@ -5,8 +5,9 @@
 
 body {
     background-color: rgba(219, 219, 219, 0.411);
-    height: fit-content;
-    border-radius: 4%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
 }
 
 .mt-4{
@@ -16,13 +17,13 @@ body {
 
 .grid-container {
     /* position: relative; */
-    /* padding: 5px; */
-    margin: 20%;
+    padding: 0px;
+    margin: 0%;
     margin-top: 25px;
     display: grid;
     grid-template-columns: 4fr 8fr;
     grid-column-gap: 0.5em;
-    grid-row-gap: 0.5em;
+    grid-row-gap: 0.2em;
     grid-auto-rows: minmax(15px, auto);
     background: rgba(255, 255, 255, 0.151);
 }
@@ -44,12 +45,12 @@ body {
 #result-list {
     background-color: rgb(255, 255, 255);
     color: var(--gunmetal-color);
-    padding-left: 15px;
     border-radius: 10px;
-    border: 2px solid rgba(37, 37, 37, 0.61);
+    border: 5px solid rgba(37, 37, 37, 0.61);
+    border-radius: 15px;
     display: none;
     padding: 20px;
-    padding-left: 40px;
+    padding-left: 20px;
     margin-top: 10px;
     /* font-weight: 500; */
     font-size: 1.3em;
@@ -57,8 +58,26 @@ body {
 
 }
 .display-header {
-    padding-top: 15px;
+	margin: 0px;
+	padding: 5px;
+    padding-top: 5px;
+    font-size: 18px;
 
+}
+
+.player-header {
+	margin: 0px;
+	padding-left: 5px;
+	 background: rgba(218, 216, 216, 0.438);
+
+}
+
+
+.player-details {
+	padding-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	//font-size: 16px;
 }
 
 .setting-inputs {
@@ -68,25 +87,28 @@ body {
     padding: 15px;
     background: rgba(52, 58, 64, 0.842);
     border: 1px solid rgb(255, 255, 255);
+ 
     border-radius: 15px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
 .race-container {
+	padding-left: 15px;
+    padding-right: 15px;
     position: relative;
     margin: auto;
     /* margin-bottom: 5px; */
     /* padding: 10px; */
     background: var(--default-grey);
-    border: 2px solid rgba(37, 37, 37, 0.61);
-    border-bottom: 0px;
+    border: 2px solid rgba(37, 37, 37, 0.6);
+    border-bottom: 1px solid rgba(224, 224, 224, 0.9);
     border-radius: 10px 10px 0px 0px;
     box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.856);
 }
 
 /* BUTTONS */
 .button-container {
-    width: 220px;
+    width: 100%;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -100,24 +122,30 @@ body {
 }
 
 .submit-container {
-    position: relative;
+    position: relative; 
+
 }
 
 #select-btn {
-    margin-right: 5px;
-    margin-bottom: 10px;
+    background: var(--gunmetal-color);
+	font-size: 16px;
+	color: white;
     border: 2px solid rgba(214, 216, 219, 0.767);
+    margin-bottom: 10px;
     border-radius: 5px;
 }
-
 #clear-btn {
+	background: var(--gunmetal-color);
+	font-size: 16px;
+	color: white;
     border: 2px solid rgba(214, 216, 219, 0.767);
     margin-bottom: 10px;
     border-radius: 5px;
 }
 
 #submit-btn {
-    /* margin-left: 20px; */
+   background: ;
+	font-size: 16px;
     margin-bottom: 10px;
     border: 2px solid rgba(214, 216, 219, 0.767);
     display: none;
@@ -126,16 +154,19 @@ body {
 
 #player-inputs {
     /* padding-top: 10px; */
-    width: auto;
-    position: relative;
-    border: 2px solid rgba(37, 37, 37, 0.61);
-    border-top: 0;
+	width: auto;
+	position: relative;
+	border-top: 2px solid rgba(224, 224, 224, 0.1);
+	border-left: 2px solid rgba(37, 37, 37, 0.61);
+	border-right: 2px solid rgba(37, 37, 37, 0.61);
+     border-left: 2px solid rgba(37, 37, 37, 0.61);
+   border-bottom: 2px solid rgba(37, 37, 37, 0.61);
     margin: auto;
     background: var(--default-grey);
     padding-bottom: 2px;
     padding: 15px;
     padding-top: 10px;
-    border-radius: 0% 0% 4% 4%;
+    border-radius: 0px 0px 15px 15px;
     box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.856);
 }
 
@@ -145,7 +176,7 @@ body {
     /* padding: 10px; */
     /* padding-top: 10px; */
     margin-top: 0px;
-
+    
     background-color: rgb(253, 251, 251);
     border-left: 3px solid var(--default-grey);
     border: 1px solid rgba(40, 44, 48, 0.493);
@@ -156,24 +187,27 @@ body {
 
 .player-counter-container {
     margin: auto;
-    width: 100%;
+    width: auto;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 5%;
-    /* margin-bottom: 10px; */
+  //  margin-bottom: 10px; 
     padding-top: 10px;
     background: rgba(218, 216, 216, 0.438);
-    border-top: 1px solid rgba(40, 44, 48, 0.377);
+    border-top: 2px solid rgba(224, 224, 224, 0.82);
     border-bottom: 2px solid rgba(40, 44, 48, 0.377);
+	
+vertical-align: middle;
 }
 
 
 .flexInput {
     padding-left: 5px;
     padding-right: 5px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    vertical-align: middle;
+   vertical-align: middle;
 }
 
 #player-counter {
@@ -183,12 +217,21 @@ body {
     background: rgb(219, 219, 219);
     border: 1px solid rgba(40, 44, 48, 0.377);
     border-radius: 5px;
-    padding-left: 2px;
+    padding: 2px;
+    vertical-align: middle;
 }
+
 .player-choice-label {
-    padding: px;
+    padding: 0px;
     margin: 0;
+    vertical-align: middle;
     
+}
+
+.player-count-label {
+    padding: 0px;
+    margin: 0;
+    vertical-align: middle;
 }
 
 #choice-counter {
@@ -199,6 +242,7 @@ body {
     border: 1px solid rgba(40, 44, 48, 0.377);
     border-radius: 5px;
     padding: 2px;
+    vertical-align: middle;
 }
 
 #player-details-container {
@@ -212,13 +256,19 @@ body {
  padding-top: 10px;
 }
 
+.textbox-label {
+	vertical-align: bottom;
+	padding: 0px;
+	margin: 0px;
+}
 
 .name-input-field {
     /* padding-top: 15px; */
-    padding-left: 5px;
+    padding: 5px;
     width: 60%;
-    height: 30px;
-    /* margin: auto; */
+   // height: 30px;
+    margin: auto;
+    //vertical-align: middle;
     color: var(--gunmetal-color);
     font-size: 0.9em;
     margin-bottom: 5px;
@@ -230,9 +280,10 @@ body {
 
 .top-container {
     padding: 0px;
+    margin: 0px;
     background: rgba(52, 58, 64, 0.952);
     grid-area: 1/span 2;
-    width: auto;
+    width: 100%;
     color: var(--gunmetal-color);
     border: 2px solid rgb(124, 124, 124);
     border-radius: 3px;
@@ -255,33 +306,34 @@ body {
     width: 88%;
    margin: auto;
     padding-top: 5px;
+    font-size: 18px;
 }
 
 /* RACE SELECTION BOX STYLES */
 .raceList {
     height: 225px;
     overflow: auto;
-    width: 220px;
+    width: 220;
     border: 0.15em inset rgba(52, 58, 64, 0.623);
     margin: auto;
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
 
-    background: rgb(243, 243, 243);
+    background: rgb(255, 255, 255, 1);
 }
 
 ul {
     list-style-type: none;
     margin: 5px;
     padding: 5px;
-    background-color: rgba(243, 243, 243, 0);
+//    background-color: rgba(243, 243, 243, 0);
 }
 
 li {
     padding-left: 0px;
     width: fit-content;
-    background-color: rgba(243, 243, 243, 0);
+    //background-color: rgba(243, 243, 243,1 );
 }
 
 label {
@@ -316,9 +368,8 @@ label {
 @media screen and (max-width: 400px) {
     .bottom-container {
         /* padding: 10px; */
-        background-color: var(--gunmetal-color);
-        grid-area: 3/span 1;
-        border-radius: 4%;
+        grid-area: 4/span 1;
+
     }
     .top-container {
         grid-area: 1/span 1;
@@ -346,9 +397,5 @@ label {
 @media screen and (max-width: 400px) {
     .bottom-container {
         /* padding: 10px; */
-        background-color: var(--gunmetal-color);
-        grid-area: 3/span 1;
-        border-radius: 4%;
-    }
-}
-*/
+        
+/
