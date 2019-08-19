@@ -87,8 +87,7 @@ function getPlayerData(names, races) {
             displayData: function() {
                 let Output = '';
                 output =
-                    `<p class="player-header"><b>Player ${this.id}</b></p>
-                     <p class="player-details">${this.playername}</p> 
+                    `<p class="player-header"><b>Player ${this.id}: ${this.playername}</b></p> 
                      <p class="player-details"> ${this.gotRaces[0]}</p>`;
                 return output;
             },
