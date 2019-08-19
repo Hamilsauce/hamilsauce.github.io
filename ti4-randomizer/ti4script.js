@@ -55,7 +55,7 @@ function addInputs(count) {
     for (let i = 1; i <= count; i++) {
         output.push(` 
            <div class="flexInput">
-                <p>Player ${i}</p>
+                <p class="textbox-label">Player ${i}</p>
                 <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
                 placeholder="Enter a name..." onblur="getPlayerNames('#playername-textbox${i}')">
             </div>
@@ -87,8 +87,9 @@ function getPlayerData(names, races) {
             displayData: function() {
                 let Output = '';
                 output =
-                    `<b>Player ${this.id}</b><br>
-                     ${this.playername} - ${this.gotRaces[0]}`;
+                    `<p class="player-header"><b>Player ${this.id}</b></p>
+                     <p class="player-details">${this.playername}</p> 
+                     <p class="player-details"> ${this.gotRaces[0]}</p>`;
                 return output;
             },
             getRace: function(races) {
@@ -123,7 +124,7 @@ function displays() {
     pl.forEach(p => {
         outText.push(p.displayData());
     });
-    raceDisplay.innerHTML = outText.join('</br></br>');
+    raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
 }
 
