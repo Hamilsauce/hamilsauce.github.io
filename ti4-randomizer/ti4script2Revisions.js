@@ -1,4 +1,4 @@
-const playerCounter = document.querySelector('#player-counter');
+const playerCounter = document.querySelector('#player-counter'); 
 const raceListCard = document.querySelector('.race-container');
 const resultListContainer = document.querySelector('.results-container');
 const nameInputContainer = document.querySelector('.player-details-container');
@@ -20,23 +20,32 @@ let nameBoxes = playerCounter.addEventListener('change', () => {
 submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
     raceList = getRaceList()
-    getPlayerData(playerNames, raceList);
+    let names = getPlayerNames();
+    console.log(names);
+    getPlayerData(names, raceList);
     doleOut(raceList);
     displays();
 });
 
-function getPlayerNames(boxes) {
+function getPlayerNames() {
     //function is run everytime a user deselects a text input - adds text content to playername list 
-
-    let box = document.querySelector(boxes);
-    let input = box.value;
-    if (playerNames.length >= 6) {
-        alert("Already Got enough players. Click Reset to start over.");
-        return;
-    } else if (input != "") {
-        playerNames.push(input);
+    const boxes = document.querySelectorAll('.name-input-field');
+    let n = "";
+console.log(boxes);
+    if (boxes.length <= 0) {
+        prompt("Add Names Stooge");
+    } else {
+        boxes.forEach(b => {
+            n = b.value;
+            if (playerNames.Length < 6 && n != "") {
+                playerNames.push(n);
+            }
+            console.log(n)
+            b.value = "";
+            console.log(playerNames);
+       });
     }
-    console.log(playerNames);
+    return playerNames;
 }
 
 function getRaceList() {
@@ -48,7 +57,7 @@ function getRaceList() {
         if (raceChecks[i].type == 'checkbox' && raceChecks[i].checked == true) {
             selectBoxes.push(raceChecks[i].value);
         }
-        console.log(selectBoxes);
+    console.log(selectBoxes);
     }
     return selectBoxes;
 }
@@ -62,7 +71,7 @@ function addInputs(count) {
            <div class="flexInput">
                 <p class="textbox-label">Player ${i}</p>
                 <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
-                placeholder="Enter a name..." onblur="getPlayerNames('#playername-textbox${i}')">
+                placeholder="Enter a name...">
             </div>
         `);
     }
@@ -74,8 +83,8 @@ function toggleSubmit() {
     //show or hide subit buton 
     let textFields = document.querySelectorAll(".name-input-field");
     if (textFields.length > 0) {
-        submitButton.style.display = "inline";
-        resetButton.style.display = "inline";
+        submitButton.style.display = "inline";  
+        resetButton.style.display = "inline";  
     } else {
         submitButton.style.display = "none";
         resetButton.style.display = "none";
@@ -91,28 +100,26 @@ function getPlayerData(names, races) {
             playername: name,
             id: i,
             gotRaces: [],
-            displayData: function () {
+            displayData: function() {
                 let Output = '';
                 output =
-                    `<h4 class="player-header"><span class="output-id">Player ${this.id}</span></h4>
-                     <p class="player-details">${this.playername} - ${this.gotRaces[0]}</p>`;
+                    `<p class="player-header"><span class="output-id">Player ${this.id}</span></p>
+                     <p class="player-details"><span class="output-playername">${this.playername}</span> - ${this.gotRaces[0]}</p>`;
                 return output;
             },
-            getRace: function (races) {
+            getRace: function(races) {
                 //randomize/shuffle race array and select first element, then remove that from array 
                 for (let i = races.length - 1; i > 0; i--) {
-                    let j = Math.floor(Math.random() * (i + 1));
+                    let j =Math.floor(Math.random() * (i + 1));
                     [races[i], races[j]] = [races[j], races[i]];
                 }
-                this.gotRaces.push(races.splice(0, 1));
-                console.log(this.gotRaces);
+                this.gotRaces.push(races[0]);
             }
-        });
+            }); 
         i++;
     });
     return players;
 }
-
 //Calls getRace method for each player, repeat once
 function doleOut(races) {
     let pl = players;
@@ -121,14 +128,16 @@ function doleOut(races) {
             p.getRace(races);
         });
     };
+
     console.log(races);
 }
-    //concats the player displayData() output and pushes to DOM 
+
 function displays() {
+    //concats the player displayData() output and pushes to DOM 
     const resultList = document.querySelector('#result-list');
+
     let pl = players;
     let outText = [];
-    
     pl.forEach(p => {
         outText.push(p.displayData());
     });
@@ -136,31 +145,12 @@ function displays() {
     resultList.style.display = "block";
 }
 
-// eed to clear players objects, races array, clean out the result list HTML, 
-// Hide buttons, and clear names in textboxes.
 
-//When reset button is pressed, fire off page reload
-resetButton.addEventListener('click', () => {
+
+
+resetButton.addEventListener('click',() => {
     document.location.reload(true);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*
@@ -180,10 +170,15 @@ resetButton.addEventListener('click', () => {
 
 //     // submitButton.style.display = "none";
 
-
+// //Need to clear players objects, races array, 
+// //clean out the result list HTML, 
+// //Hide buttons, and clear names in textboxes.
 
 // });
 // // function resetData() {
     
 // // }
 */
+
+
+

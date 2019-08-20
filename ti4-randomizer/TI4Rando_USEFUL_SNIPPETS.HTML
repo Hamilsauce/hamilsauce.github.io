@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+<!--  LINKS
+    How to get multiple, random, unique elements from a JavaScript array: https://alvinalexander.com/source-code/javascript-multiple-random-unique-elements-from-array 
+
+    FISCHER-YATES algo for shuffling (see below)
+-->
+    <input type="button" value="Do it" class="submit-button" >
+    <div class="output-container">
+        <p class="output1"></p><br>
+        <p class="output2"></p><br>
+    </div>
+
+<SCRIPT>
+const textDisplay1 = document.querySelector('.output1');
+const textDisplay2 = document.querySelector('.output2');  
+const submitButton = document.querySelector('.submit-button');  
+//sample
+const colors = [
+    '#FFFFFF', 
+    '#F06B4F', 
+    '#F2AE52', 
+    '#B0CD6D', 
+    '#A33120'
+];
+
+//SAMPLE STANDARD RANDOMIZE ALGO
+submitButton.addEventListener('click',() => {
+    const randArr = [];
+    colors.forEach(color => {
+        const rand1 = Math.floor(Math.random() * colors.length);
+        // const rand1 = colors[Math.floor(Math.random() * colors.length)];
+        randArr.push(rand1);
+    });
+    // const rand2 = Math.floor(Math.random() * (i + 1));
+    
+    textDisplay1.innerHTML = randArr.join('<br>'); 
+ //   textDisplay2.innerHTML = rand2;
+});
+
+
+// FISCHER YATES
+
+            function shuffle(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+
+            // While there remain elements to shuffle...
+            while (0 !== currentIndex) {
+
+                // Pick a remaining element...
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+
+                // And swap it with the current element.
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+
+            return array;
+            }
+
+            // Used like so
+            var arr = [2, 11, 37, 42];
+            arr = shuffle(arr);
+            console.log(arr);
+
+
+</SCRIPT>
+
+
+</body>
+
+</html>
+

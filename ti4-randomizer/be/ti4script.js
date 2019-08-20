@@ -166,7 +166,6 @@ resetButton.addEventListener('click', () => {
 /*
 // resetButton.addEventListener('click',() => {
 //     const resultList = document.querySelector('#result-list');
-
 //     players.length = 0;
 //     // raceList.length = 0;
 //     console.log(players);
@@ -174,14 +173,18 @@ resetButton.addEventListener('click', () => {
 //     console.log(selectBoxes);
 //     // playerNames.length = 0;
 //     // selectBoxes.length = 0;
-
 //     resultList.style.display = "none";
 //     raceDisplay.innerHTML = "";
-
 //     // submitButton.style.display = "none";
+<<<<<<< Updated upstream
+// //Need to clear players objects, races array, 
+// //clean out the result list HTML, 
+// //Hide buttons, and clear names in textboxes.
+=======
 
 
 
+>>>>>>> Stashed changes
 // });
 // // function resetData() {
     
