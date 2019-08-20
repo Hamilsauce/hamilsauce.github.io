@@ -1,4 +1,4 @@
-const playerCounter = document.querySelector('#player-counter'); 
+const playerCounter = document.querySelector('#player-counter');
 const raceListCard = document.querySelector('.race-container');
 const resultListContainer = document.querySelector('.results-container');
 const nameInputContainer = document.querySelector('.player-details-container');
@@ -27,7 +27,7 @@ submitButton.addEventListener('click', () => {
 
 function getPlayerNames(boxes) {
     //function is run everytime a user deselects a text input - adds text content to playername list 
-    
+
     let box = document.querySelector(boxes);
     let input = box.value;
     if (playerNames.length >= 6) {
@@ -36,7 +36,7 @@ function getPlayerNames(boxes) {
     } else if (input != "") {
         playerNames.push(input);
     }
-   console.log(playerNames);
+    console.log(playerNames);
 }
 
 function getRaceList() {
@@ -48,7 +48,7 @@ function getRaceList() {
         if (raceChecks[i].type == 'checkbox' && raceChecks[i].checked == true) {
             selectBoxes.push(raceChecks[i].value);
         }
-    console.log(selectBoxes);
+        console.log(selectBoxes);
     }
     return selectBoxes;
 }
@@ -74,8 +74,8 @@ function toggleSubmit() {
     //show or hide subit buton 
     let textFields = document.querySelectorAll(".name-input-field");
     if (textFields.length > 0) {
-        submitButton.style.display = "inline";  
-        resetButton.style.display = "inline";  
+        submitButton.style.display = "inline";
+        resetButton.style.display = "inline";
     } else {
         submitButton.style.display = "none";
         resetButton.style.display = "none";
@@ -91,27 +91,28 @@ function getPlayerData(names, races) {
             playername: name,
             id: i,
             gotRaces: [],
-            displayData: function() {
+            displayData: function () {
                 let Output = '';
                 output =
-                    `<p class="player-header"><span class="output-id">Player ${this.id}</span></p>
-                     <p class="player-details"><span class="output-playername">${this.playername}</span> - ${this.gotRaces[0]}</p>`;
+                    `<h4 class="player-header"><span class="output-id">Player ${this.id}</span></h4>
+                     <p class="player-details">${this.playername} - ${this.gotRaces[0]}</p>`;
                 return output;
             },
-            getRace: function(races) {
+            getRace: function (races) {
                 //randomize/shuffle race array and select first element, then remove that from array 
                 for (let i = races.length - 1; i > 0; i--) {
-                    let j =Math.floor(Math.random() * (i + 1));
+                    let j = Math.floor(Math.random() * (i + 1));
                     [races[i], races[j]] = [races[j], races[i]];
                 }
                 this.gotRaces.push(races.splice(0, 1));
                 console.log(this.gotRaces);
             }
-            }); 
+        });
         i++;
     });
     return players;
 }
+
 //Calls getRace method for each player, repeat once
 function doleOut(races) {
     let pl = players;
@@ -120,16 +121,14 @@ function doleOut(races) {
             p.getRace(races);
         });
     };
-
     console.log(races);
 }
-
-function displays() {
     //concats the player displayData() output and pushes to DOM 
+function displays() {
     const resultList = document.querySelector('#result-list');
-
     let pl = players;
     let outText = [];
+    
     pl.forEach(p => {
         outText.push(p.displayData());
     });
@@ -137,18 +136,36 @@ function displays() {
     resultList.style.display = "block";
 }
 
+// eed to clear players objects, races array, clean out the result list HTML, 
+// Hide buttons, and clear names in textboxes.
 
-
-
-resetButton.addEventListener('click',() => {
+//When reset button is pressed, fire off page reload
+resetButton.addEventListener('click', () => {
     document.location.reload(true);
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
 // resetButton.addEventListener('click',() => {
 //     const resultList = document.querySelector('#result-list');
-
 //     players.length = 0;
 //     // raceList.length = 0;
 //     console.log(players);
@@ -156,21 +173,20 @@ resetButton.addEventListener('click',() => {
 //     console.log(selectBoxes);
 //     // playerNames.length = 0;
 //     // selectBoxes.length = 0;
-
 //     resultList.style.display = "none";
 //     raceDisplay.innerHTML = "";
-
 //     // submitButton.style.display = "none";
-
+<<<<<<< Updated upstream
 // //Need to clear players objects, races array, 
 // //clean out the result list HTML, 
 // //Hide buttons, and clear names in textboxes.
+=======
 
+
+
+>>>>>>> Stashed changes
 // });
 // // function resetData() {
     
 // // }
 */
-
-
-

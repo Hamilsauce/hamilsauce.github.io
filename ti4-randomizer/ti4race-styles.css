@@ -1,4 +1,4 @@
-root {
+:root {
     --gunmetal-color: rgba(52, 58, 64, 0.959);
     --default-grey: rgba(224, 224, 224, 0.829);
 }
@@ -10,7 +10,7 @@ body {
     padding: 0px;
 }
 
-.mt-4 {
+.mt-4{
     box-sizing: border-box;
     margin: 5px;
 }
@@ -20,11 +20,14 @@ body {
     margin: auto;
     padding: 0px;
     margin-top: 25px;
-    grid-template-columns: minmax(275, auto) 4fr 8fr;
+    grid-template-columns: minmax(min-content, 300px) minmax(350px, 1fr);
+
+    /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
     grid-column-gap: 0.3em;
     grid-row-gap: 0.3em;
     grid-auto-rows: minmax(15px, auto);
     background: rgba(255, 255, 255, 0.151);
+
 }
 
 .results-container {
@@ -41,13 +44,15 @@ body {
 
 #result-list {
     display: none;
+    width: auto;
     margin-top: 15px;
     margin-left: 15px;
     margin-right: 15px;
     padding: 20px;
     padding-right: 0px;
+    padding-left: 10px;
     font-size: 1.1em;
-    color: var(--gunmetal-color);
+    color: rgba(52, 58, 64, 0.842);
     background-color: rgb(255, 255, 255);
     border: 3px solid rgba(156, 156, 156, 0.986);
     border-radius: 15px;
@@ -60,25 +65,38 @@ body {
 }
 
 .output-playername {
-    padding-left: 3px;
+    padding-left: 5px;
     /* font-weight: 500; */
 }
 
 .player-header {
     margin: 0px;
-    padding: 2px;
-    padding-left: 10px;
+<<<<<<< Updated upstream
+      padding: 2px;
+   padding-left: 10px;
     font-size: 1.1em;
     background: rgba(214, 214, 214, 0.911);
+=======
+    padding: 5px;
+    padding-left: 10px;
+    font-size: 1em;
+    background: rgb(214, 214, 214);
+>>>>>>> Stashed changes
     border-radius: 15px 0px 0px 15px;
-    border-bottom: 2px solid rgba(156, 156, 156, 0.418);
-    border-left: 2px solid rgba(156, 156, 156, 0.418);
+    border-bottom: 2px solid rgba(156, 156, 156, 0.336);
+    border-left: 2px solid rgba(156, 156, 156, 0.349);
 }
 
 .player-details {
-    padding-left: 25px;
+<<<<<<< Updated upstream
+	padding-left: 25px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+=======
+    padding-left: 15px;
     margin-bottom: 0px;
-    margin-top: 5px;
+    margin-top: 2px;
+>>>>>>> Stashed changes
     font-size: 1em;
     /* font-weight: 500; */
 }
@@ -86,18 +104,16 @@ body {
 .setting-inputs {
     box-sizing: border-box;
     position: relative;
-    width: 100%;
-    ;
+    width: 100%;;
     margin: auto;
     justify-content: space-between;
-    /* width: 275px; */
+    width: 100%;
     padding: 15px;
     background: rgba(52, 58, 64, 0.842);
     border: 1px solid rgb(255, 255, 255);
     border-radius: 15px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
-
 .race-container {
     position: relative;
     margin: auto;
@@ -121,11 +137,11 @@ body {
     border: 2px solid rgba(37, 37, 37, 0.61);
     border-top: 0px;
     border-radius: 0px 0px 15px 15px;
-    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+    box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);  
 }
 
 .player-settings-interior {
-    margin-top: 0px;
+    margin-top: 0px;    
     background-color: rgb(253, 251, 251);
     border-left: 3px solid var(--default-grey);
     border: 1px solid rgba(40, 44, 48, 0.493);
@@ -134,20 +150,19 @@ body {
     padding-bottom: 10px;
     margin: auto;
 }
-
 .player-counter-container {
-
+    
     width: auto;
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 10px; 
     background: rgba(218, 216, 216, 0.438);
     padding: 5px;
     padding-bottom: 5px;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 1px solid rgba(40, 44, 48, 0.219);
-
-    vertical-align: middle;
+	
+vertical-align: middle;
 }
 
 
@@ -167,50 +182,71 @@ body {
 }
 
 #select-btn {
+<<<<<<< Updated upstream
     background: var(--gunmetal-color);
-    font-size: 14px;
-    color: white;
+	font-size: 14px;
+	color: white;
     border: 2px solid rgba(214, 216, 219, 0.767);
+=======
+    background: rgba(50, 55, 59, 0.87);
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.836);
+    border: 2px solid rgba(214, 216, 219, 0.918);
+>>>>>>> Stashed changes
     margin-bottom: 10px;
     border-radius: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
-
 #clear-btn {
+<<<<<<< Updated upstream
     background: var(--gunmetal-color);
-    font-size: 14px;
-    color: white;
+	font-size: 14px;
+	color: white;
     border: 2px solid rgba(214, 216, 219, 0.767);
+=======
+    background: rgba(50, 55, 59, 0.87);
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.842);
+    border: 2px solid rgba(214, 216, 219, 0.918);
+>>>>>>> Stashed changes
     margin-bottom: 10px;
     border-radius: 5px;
 }
-
 .display-header {
     margin: auto;
     width: auto;
-    padding: 5px;
+    padding: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 
     font-size: 1.2em;
     height: auto;
     margin-bottom: 0px;
-    vertical-align: middle;
+    vertical-align: middle;   
 }
 
 .submit-container {
     display: flex;
+<<<<<<< Updated upstream
     justify-content: space-evenly;
+    
+=======
+    justify-content: space-between;
 
+>>>>>>> Stashed changes
     /* height: auto; */
-    width: 70%;
+    width: 80%;
     margin: auto;
-    padding: 20px;
+    padding: 15px;
+    margin-right: 0%;
     padding-top: 5px;
     padding-bottom: 5px;
     vertical-align: middle;
 
 }
-
 #submit-btn {
-
+	
     /* margin-bottom: 10px; */
     border: 1px solid rgba(214, 216, 219, 0.767);
     display: none;
@@ -221,22 +257,27 @@ body {
     padding-left: 10px;
     padding-right: 10px;
     box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493);
-    border: 2px solid rgba(170, 171, 173, 0.705);
+    border: 1px solid rgba(224, 225, 226, 0.705);
 
 }
-
 #reset-btn {
     border-radius: 15px;
-    font-size: 1.1em;
+    font-size: 1em;
     width: auto;
     margin: auto;
-    margin-left: 20px;
-    padding: 2px;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-left: 0px;
+    padding-bottom: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
     display: none;
+<<<<<<< Updated upstream
     border: 2px solid rgba(170, 171, 173, 0.705);
+ 
+=======
+    vertical-align: middle;
+    border: 1px solid rgba(255, 255, 255, 0.705);
 
+>>>>>>> Stashed changes
 
 }
 
@@ -244,15 +285,24 @@ body {
     display: flex;
     position: relative;
     /* z-index: 0; */
+<<<<<<< Updated upstream
+    justify-content:space-between;
+   vertical-align: middle;
+   background: rgba(45, 48, 51, 0.473);
+   /* height: auto; */
+   width: 100%;
+    margin: auto;
+=======
     justify-content: space-between;
     vertical-align: middle;
     background: rgba(45, 48, 51, 0.473);
     /* height: auto; */
     width: 100%;
-    margin: auto;
+    margin: 0;
+>>>>>>> Stashed changes
     /* margin-left: -15px; */
     padding-top: 5px;
-    padding-left: 5px;
+    padding-left: 0px;
     padding-right: 5px;
     margin-bottom: 5px;
     border-radius: 15px 15px 0px 0px;
@@ -262,8 +312,8 @@ body {
 
 .flexInput {
     display: flex;
-    justify-content: space-between;
-    vertical-align: middle;
+    justify-content:space-between;
+   vertical-align: middle;
     margin: auto;
     width: auto;
     padding: 0px;
@@ -292,7 +342,7 @@ body {
     padding: 0px;
     margin: 0;
     vertical-align: middle;
-
+    
 }
 
 .player-count-label {
@@ -313,21 +363,21 @@ body {
 }
 
 #player-details-container {
-    display: flex;
-    justify-content: space-evenly;
-    border: 1px solid rgba(255, 255, 255, 0.863);
-    width: auto;
-    padding-left: 15px;
-    margin: auto;
-    border-radius: 4%;
-    margin-top: 0px;
-    padding-top: 0px;
-    margin-bottom: 10px;
+   display: flex;
+   justify-content: space-evenly;
+   border: 1px solid rgba(255, 255, 255, 0.863);
+   width: auto;
+   padding-left: 15px;
+   margin: auto;
+   border-radius: 4%;
+   margin-top: 0px;
+   padding-top: 0px;
+   margin-bottom: 10px;
 }
 
 .textbox-label {
-    vertical-align: middle;
-    padding-bottom: 5px;
+	vertical-align: middle;
+	padding-bottom: 5px;
     margin: auto;
     width: 100%;
     font-size: 1.1em;
@@ -335,13 +385,13 @@ body {
 
 .name-input-field {
     padding-top: 0px;
-
+    
     padding: 5px;
     width: 100%;
-    height: 30px;
+   height: 30px;
     margin: auto;
     /* width: auto; */
-    vertical-align: middle;
+   vertical-align: middle;
     color: var(--gunmetal-color);
     font-size: 0.9em;
     margin-bottom: 5px;
@@ -358,30 +408,34 @@ body {
     background: rgba(52, 58, 64, 0.952);
     grid-area: 1/span 2;
     width: 100%;
-    color: var(--gunmetal-color);
     border: 2px solid rgb(124, 124, 124);
     border-radius: 3px;
     height: 20px;
+<<<<<<< Updated upstream
     display: none;
+ 
+=======
 
+
+
+>>>>>>> Stashed changes
 }
 
 .bottom-container {
     padding: 0px;
     background: rgba(52, 58, 64, 0.993);
-    grid-area: 3/span 2;
+    grid-area: 2/span 2;
     width: auto;
     border: 2px solid rgb(124, 124, 124);
     border-radius: 3px;
     height: 100px;
 }
-
 .section-header {
     position: relative;
     border-bottom: 2px solid rgba(52, 60, 68, 0.397);
     width: auto;
-    margin: auto;
-    margin-bottom: 10px;
+   margin: auto;
+   margin-bottom: 10px;
     padding-top: 5px;
     font-size: 1.3em;
 }
@@ -396,7 +450,7 @@ body {
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
-
+    font-size: 1.1em;
     background: rgb(255, 255, 255, 1);
 }
 
@@ -410,7 +464,7 @@ ul {
 li {
     padding-left: 0px;
     width: fit-content;
-    background-color: rgba(243, 243, 243, 1);
+   background-color: rgba(243, 243, 243,1 );
 }
 
 label {
@@ -448,11 +502,11 @@ label {
         grid-area: 3/span 1;
 
     }
-
     .top-container {
         grid-area: 1/span 1;
-        width: auto;
+    width: auto;
     }
 
 
 }
+    
