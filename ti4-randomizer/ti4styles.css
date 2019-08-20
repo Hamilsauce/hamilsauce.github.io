@@ -1,4 +1,4 @@
-root {
+:root {
     --gunmetal-color: rgba(52, 58, 64, 0.959);
     --default-grey: rgba(224, 224, 224, 0.829);
 }
@@ -208,7 +208,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    /* height: auto; */
+    height: auto;
     width: 80%;
     margin: auto;
     padding: 15px;
@@ -221,12 +221,12 @@ body {
 
 #submit-btn {
 
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
     border: 1px solid rgba(214, 216, 219, 0.767);
     display: none;
     border-radius: 15px;
     font-size: 1.1em;
-    /* background: rgba(22, 175, 43, 0.651); */
+    background: rgba(22, 175, 43, 0.651);
     padding: 2px;
     padding-left: 10px;
     padding-right: 10px;
@@ -421,7 +421,7 @@ ul {
 li {
     padding-left: 0px;
     width: fit-content;
-    background-color: rgba(243, 243, 243, 1);
+    /* background-color: rgba(243, 243, 243, 1); */
 }
 
 label {
@@ -432,14 +432,14 @@ label {
     padding: 0px;
     width: 100%;
     border: 2px solid white;
-    /* align-self:flex-end; */
+    align-self:flex-end;
 }
 
 .raceList label:hover {
     background-color: Highlight;
     color: HighlightText;
     border: 2px solid Highlight;
-    /* font-weight: 500; */
+    font-weight: 500;
 }
 
 
@@ -455,7 +455,7 @@ label {
 
 @media screen and (max-width: 400px) {
     .bottom-container {
-        /* padding: 10px; */
+        padding: 10px;
         grid-area: 3/span 1;
 
     }

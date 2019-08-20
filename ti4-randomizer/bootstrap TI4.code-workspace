@@ -3,5 +3,22 @@
 		{
 			"path": "C:\\Users\\jacob\\OneDrive - Sea Hag Enterprises\\Twilight Imperium"
 		}
-	]
+	],
+	"settings": {
+		"peacock.color": "#979797",
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#b0b0b0",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#5858c7",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"titleBar.activeBackground": "#979797",
+			"titleBar.inactiveBackground": "#97979799",
+			"titleBar.activeForeground": "#15202b",
+			"titleBar.inactiveForeground": "#15202b99",
+			"statusBar.background": "#979797",
+			"statusBarItem.hoverBackground": "#7d7d7d",
+			"statusBar.foreground": "#15202b"
+		}
+	}
 }
