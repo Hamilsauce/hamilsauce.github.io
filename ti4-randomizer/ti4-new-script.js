@@ -36,8 +36,7 @@ submitButton.addEventListener('click', () => {
 
 selectAllButton.addEventListener('click', () => {
     const raceItems = document.querySelectorAll('.raceBox');
-
-
+    
     raceItems.forEach(r => {
         r.checked = true;
     });
@@ -155,7 +154,7 @@ function addPlayer(names, races) {
             id: i,
             gotRaces: [],
             displayData: function (c) {
-                let showRaces = c === 2 ? this.gotRaces.join(', ') : this.gotRaces[0];
+                let showRaces = c == 2 ? this.gotRaces.join(', ') : this.gotRaces[0];
                 let Output = '';
                 output =
                     `<h4 class="player-header"><span class="output-id">Player ${this.id}</span></h4>

@@ -123,12 +123,12 @@ function doleOut(races) {
     };
     console.log(races);
 }
-//concats the player displayData() output and pushes to DOM 
+    //concats the player displayData() output and pushes to DOM 
 function displays() {
     const resultList = document.querySelector('#result-list');
     let pl = players;
     let outText = [];
-
+    
     pl.forEach(p => {
         outText.push(p.displayData());
     });
