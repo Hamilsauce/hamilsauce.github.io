@@ -15,7 +15,7 @@ let players = [];
 let raceList = [];
 let usedBoxes = [];
 
-let nameBoxes = playerCounter.addEventListener('change', () => {
+playerCounter.addEventListener('change', () => {
     //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
     let playerCount = parseInt(playerCounter.value);
     return addInputs(playerCount);
@@ -23,20 +23,19 @@ let nameBoxes = playerCounter.addEventListener('change', () => {
 
 submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
-
     let nameArr = trimNames(playerNames);
-    console.log(trimNames);
-
     raceList = getRaceList()
+
     addPlayer(nameArr, raceList);
     doleOut(raceList);
     displays();
+    getResultHeight();
 });
 
 
 selectAllButton.addEventListener('click', () => {
     const raceItems = document.querySelectorAll('.raceBox');
-    
+
     raceItems.forEach(r => {
         r.checked = true;
     });
@@ -46,53 +45,44 @@ selectAllButton.addEventListener('click', () => {
 
 clearButton.addEventListener('click', () => {
     const raceItems = document.querySelectorAll('.raceBox');
-
-
+  
     raceItems.forEach(r => {
         r.checked = false;
     });
     return;
 });
 
-
-function getPlayerNames(boxes) {
-    //function is run everytime a user deselects a text input - adds text content to playername list 
-    let box = document.querySelector(boxes);
-    //  let document.querySelectorAll('.name-input-field')]m0;
-    let [bName, bVal, pos] = [box.name, box.value, parseInt(box.name.split('').pop()) - 1];
-
-    if (bVal == '' || bVal === undefined) /*&& playerNames[pos].length > 1) */ {
-        console.log(`pName elem  = ${playerNames[pos]}, getting erased`);
-        playerNames[pos] = '';
-        box.style.color = 'black';
+ //function is run everytime a user deselects a text input - adds text content to playername list 
+function getPlayerData(activeTextbox) {
+    let box = document.querySelector(activeTextbox);
+    let [bName, bVal, boxID] = [box.name, box.value, parseInt(box.name.split('').pop()) - 1];
+   
+    if (bVal.length === 0 || bVal == ' ') {
+        console.log(`${bVal} empty`);
+        playerNames[boxID] = '';
         box.style.border = '1px solid rgba(40, 44, 48, 0.377)';
+        // console.log(playerNames[boxID].length);    
 
-        // playerNames.splice(pos, 1);
-    } else if (bVal == playerNames[pos]) {
+    } else if (bVal == playerNames[boxID]) {
         console.log(`${bVal} is already in ${bName}`);
-        //return;
-    } else {
-        if (playerNames.length > 6) {
-            alert("Already Got enough players. Click Reset to start over.");
-        } else {
-            playerNames[pos] = bVal;
-            // box.disabled = true;
-            box.style.color = 'grey';
-            box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
-            console.log('last conditon reached');
-        }
-    }
-    console.log('pNames ' + playerNames);
-    console.log('pNames len' + playerNames.length);
-    console.log(`val at pos ${pos} = ${playerNames[pos]} vs ${bVal} in box`);
+        box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
 
+    } else if (playerNames.length > 6) {
+        alert("Already Got enough players. Click Reset to start over.");
+    } else {
+        box.style.color = "rgb(100, 100, 100)";
+        box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
+        
+
+        playerNames[boxID] = [boxID, cleanNames(bVal)];
+    }
     return playerNames;
 }
 
 
 function trimNames(names) {
     let trimmed = names.filter(n => {
-        if (typeof n === 'string' && (n != '' && n != ' ')) {
+        if ((n != '' && n != ' ')) {
             console.log('passing ' + n);
             return n;
         }
@@ -124,7 +114,7 @@ function addInputs(count) {
            <div class="flexInput">
                 <p class="textbox-label">Player ${i}</p>
                 <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
-                placeholder="Enter a name..." onblur="getPlayerNames('#playername-textbox${i}')">
+                placeholder="Enter a name..." onblur="getPlayerData('#playername-textbox${i}')">
             </div>
         `);
     }
@@ -209,3 +199,31 @@ function displays() {
 resetButton.addEventListener('click', () => {
     document.location.reload(true);
 });
+
+function getResultHeight() {
+   let resultY = raceDisplay.clientHeight;
+
+    if (parseInt(resultY) >= 350) {
+        raceDisplay.style.borderTopRightRadius = '3px';
+        raceDisplay.style.borderBottomRightRadius = '3px';
+    }
+
+   return resultY;
+
+}
+
+function cleanNames(name){
+    let chars = name.split('');
+    let trailer = name.split('').pop();
+
+    if (chars.pop()  == " " ) {
+        return chars.join('');
+    } else {
+        return name;
+    }
+    // let cleanedName = ? trailer : name;
+
+    // console.log(cleanedName);
+    // return cleanedName
+
+}

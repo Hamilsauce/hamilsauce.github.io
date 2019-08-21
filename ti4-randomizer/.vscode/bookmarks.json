@@ -43,8 +43,48 @@
 		"path": "$ROOTPATH$\\ti4-new-styles.css",
 		"bookmarks": [
 			{
-				"line": 359,
+				"line": 315,
+				"column": 1,
+				"label": ""
+			},
+			{
+				"line": 365,
 				"column": 0,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\ti4-new-script.js",
+		"bookmarks": [
+			{
+				"line": 54,
+				"column": 101,
+				"label": ""
+			},
+			{
+				"line": 76,
+				"column": 43,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\index.html",
+		"bookmarks": [
+			{
+				"line": 18,
+				"column": 1,
+				"label": ""
+			},
+			{
+				"line": 62,
+				"column": 19,
+				"label": ""
+			},
+			{
+				"line": 65,
+				"column": 29,
 				"label": ""
 			}
 		]

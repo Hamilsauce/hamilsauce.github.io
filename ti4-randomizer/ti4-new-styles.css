@@ -30,9 +30,10 @@ body {
 
 /* Result Display Styles */
 .results-container {
-    width: auto;
+    width: 350px;
+
     padding-left: 0px;
-    padding-right: 0px;
+    padding-right: px;
     background: rgba(52, 58, 64, 0.719);
     color: rgb(230, 230, 230);
     border: 1px solid rgb(255, 255, 255);
@@ -40,6 +41,7 @@ body {
     border-radius: 15px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
+
 
 #result-list {
     box-sizing: border-box;
@@ -49,7 +51,7 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     padding: 20px;
-    padding-right: 0px;
+    padding-right: 5px;
     padding-left: 10px;
     font-size: 1.1em;
     color: rgba(52, 58, 64, 0.842);
@@ -57,6 +59,9 @@ body {
     border: 3px solid rgba(156, 156, 156, 0.986);
     border-radius: 15px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+    max-height:450px;
+     
+    overflow-y: auto;
 }
 
 .display-header-controls {
@@ -115,6 +120,8 @@ body {
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
+
+/* RACE SELECTION BOX STYLES */
 .race-container {
     position: relative;
     margin: auto;
@@ -127,7 +134,6 @@ body {
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
 }
 
-/* RACE SELECTION BOX STYLES */
 .raceList {
     height: 200px;
     overflow: auto;
@@ -185,6 +191,8 @@ label {
     border-top: 0px;
     border-radius: 0px 0px 15px 15px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+    max-height: 350px;
+    overflow-y:auto;
 }
 
 .player-settings-interior {
@@ -196,8 +204,8 @@ label {
     border: 0.15em inset rgba(52, 58, 64, 0.623);
     border-radius: 5px;
     padding: 5px;
-   max-height:  230px;         
-    overflow-y: scroll;
+   max-height:  200px;         
+    overflow-y: auto;
     width: 220;
     margin: auto;
 }
@@ -264,7 +272,6 @@ label {
 .submit-container {
     display: flex;
     justify-content: space-around;
-
     height: auto;
     width: 100%;
     margin: auto;
@@ -276,19 +283,16 @@ label {
 }
 
 #submit-btn {
-
     margin-bottom: 0px;
     border: 1px solid rgba(214, 216, 219, 0.767);
     display: none;
     border-radius: 8px;
     font-size: 1em;
-    /* background: rgba(5, 236, 36, 0.349); */
+    background: rgba(5, 236, 36, 0.349); 
     padding: 2px;
     padding-left: 10px;
-    padding-right: 10px;
-    /* box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493); */
-    border: 1px solid rgba(224, 225, 226, 0.705);
-    border-color: 2px solid rgb(0, 128, 0);
+    padding-right: 10px; 
+    box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493); 
 }
 
 #reset-btn {
@@ -303,10 +307,9 @@ label {
     padding-right: 5px;
     display: none;
     vertical-align: middle;
-    border: 1px solid rgba(255, 255, 255, 0.705);
+    border: 1px solid rgb(43, 48, 48);
+    border: 1px solid rgba(221, 221, 221, 0.705);
 }
-
-
 
 .flexInput {
     display: flex;
@@ -336,7 +339,6 @@ label {
     padding: 0px;
     margin: 0;
     vertical-align: middle;
-
 }
 
 .player-count-label {
@@ -381,14 +383,13 @@ label {
 
 .name-input-field {
     padding-top: 0px;
-
     padding: 5px;
     width: 100%;
     height: 28px;
     margin: 0;
     /* width: auto; */
     vertical-align: middle;
-    color: var(--gunmetal-color);
+    /* color: var(--gunmetal-color); */
     font-size: 0.9em;
     margin-bottom: 10px;
     background: rgba(40, 44, 48, 0.082);
