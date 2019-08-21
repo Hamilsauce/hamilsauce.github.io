@@ -8,5 +8,45 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\newt-ti4-files\\ti4-new-script.js",
+		"bookmarks": [
+			{
+				"line": 177,
+				"column": 0,
+				"label": ""
+			},
+			{
+				"line": 188,
+				"column": 0,
+				"label": ""
+			},
+			{
+				"line": 209,
+				"column": 1,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\ti4-index.html",
+		"bookmarks": [
+			{
+				"line": 214,
+				"column": 34,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\ti4-new-styles.css",
+		"bookmarks": [
+			{
+				"line": 359,
+				"column": 0,
+				"label": ""
+			}
+		]
 	}
 ]

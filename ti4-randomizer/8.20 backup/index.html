@@ -1,7 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
-<head <meta charset="utf-8">
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -9,12 +10,9 @@
     <title>The Randomeister for TI4</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="ti4-new-styles.css">
-
-
-
+    <link rel="stylesheet" href="ti4styles.css">
 </head>
 
 <body>
@@ -62,7 +60,7 @@
             </div>
 
             <div class="grid-container">
-
+             
                 <div class="setting-inputs">
                     <form>
                         <div class="race-container">
@@ -174,10 +172,8 @@
                             <div class="button-container">
                                 <!-- need to replace function in the onclick attrbute -->
                                 <div class="list-buttons">
-                                    <input id="select-btn" class="btn btn-dark btn-sm" type="button" value="Select All"
-                                        onclick="">
-                                    <input id="clear-btn" class="btn btn-dark btn-sm" type="button" value="Clear"
-                                        onclick="">
+                                <input id="select-btn" class="btn btn-dark btn-sm" type="button" value="Select All" onclick="">
+                                <input id="clear-btn" class="btn btn-dark btn-sm" type="button" value="Clear" onclick="">
                                 </div>
                                 <!-- <div class="submit-container">
                                 <input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!" onclick="getRaceList(this.form)">
@@ -185,12 +181,12 @@
                             </div>
                         </div>
                         <div id="player-inputs">
-                            <h5 class="section-header">Players</h5>
-
+                                <h5 class="section-header">Players</h5>
+                            
                             <div class="player-settings-interior">
                                 <div class="player-counter-container">
-                                    <div class="flexInput">
-                                        <p class="player-count-label">Player Count:</p>
+                                   <div class="flexInput">
+                                       <p class="player-count-label">Player Count:</p>
                                         <!-- <label for="choice-counter">Player Count:</label> -->
                                         <select name="player-counter" id="player-counter">
                                             <option value="0">-</option>
@@ -208,35 +204,42 @@
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                         </select>
-
+                                    
                                     </div>
                                 </div>
-
-                                <!-- THIS CONTAINER WILL RECEIVE DYNAMIC HTML FOR TEXTBOXES -->
+                                
+                                <!-- need this markup for template literals -->
                                 <div class="player-details-container">
 
                                 </div>
-
+                                
                             </div>
-
+                            
                         </div>
-
+                        
                     </form>
                 </div>
 
                 <div class="results-container">
                     <div class="display-header-controls">
-                        <h5 class="display-header">Race Assignments</h5>
-                        <div class="submit-container">
-                            <div><input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!"
-                                    onclick="getRaceList(this.form)"></div>
+                    <h5 class="display-header">Race Assignments</h5>
+                    <div class="submit-container">
+                            <div><input id="submit-btn" class="btn btn-success btn-sm" type="button"
+                                value="Dispense!" onclick="getRaceList(this.form)"></div>
                             <div><input id="reset-btn" class="btn btn-outline-secondary btn-sm" type="button"
-                                    value="Reset"></div>
+                                value="Reset"></div>
                         </div>
-                    </div>
+                </div>
                     <p id="result-list"> </p>
                 </div>
                 <div class="bottom-container">
+
+                    <!-- </div>
+                <div class="sidebar">
+
+                </div>
+                <div class="sidebar"> -->
+
                 </div>
 
             </div>
@@ -247,11 +250,9 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.slim.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="ti4-new-script.js"></script>
-    
-    <!--<script src="ti4script2Revisions.js"></script> -->
+    <script src="ti4-new-script.js"></script>
+    <!-- <script src="ti4script2Revisions.js"></script> -->
 
+</body>
 
-
-
-    <script>
+</html>
