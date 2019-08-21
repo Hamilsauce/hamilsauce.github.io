@@ -135,13 +135,13 @@ function toggleSubmit() {
     return textFields;
 }
 
-function addPlayer(names, races) {
+function addPlayer(data, races) {
     //for each name in array, add a new player object to array
     let i = 1;
-    names.forEach(name => {
+    data.forEach(d => {
         players.push({
-            playername: name,
-            id: i,
+            playername: d[1],
+            id: d[0],
             gotRaces: [],
             displayData: function (c) {
                 let showRaces = c == 2 ? this.gotRaces.join(', ') : this.gotRaces[0];
