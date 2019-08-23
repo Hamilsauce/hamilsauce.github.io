@@ -4,41 +4,58 @@
 }
 
 body {
-    background-color: rgba(219, 219, 219, 0.411);
+    background-color: rgba(219, 219, 219, 0.288);
     height: auto;
     margin: 0px;
     padding: 0px;
 }
 
 .mt-4 {
+    display: block;
     box-sizing: border-box;
-    margin: 5px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.lead {
+    font-size: 1em;
+}
+
+.row {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
 .grid-container {
     display: grid;
-    margin: auto;
-    padding: 0px;
-    margin-top: 25px;
-    grid-template-columns: minmax(min-content, 300px) minmax(350px, 1fr);
+    position: relative;
+    padding: 10px 10px 0px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.336);
+    border-radius: 30px 30px 50px 50px;
+    margin-top: 15px;
+    grid-template-columns: minmax(300px, 300px) minmax(350px, 1fr);
     /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
     grid-column-gap: 0.3em;
     grid-row-gap: 0.3em;
     grid-auto-rows: minmax(15px, auto);
-    background: rgba(255, 255, 255, 0.151);
+    background: rgba(165, 165, 165, 0.226);
 }
 
 /* Result Display Styles */
 .results-container {
-    width: 350px;
-
+    box-sizing: border-box;
+    position: relative;
+    justify-content: space-between;
+    top: 0px;
+    padding-bottom: 10px;
     padding-left: 0px;
-    padding-right: px;
+    padding-right: 0px;
     background: rgba(52, 58, 64, 0.719);
     color: rgb(230, 230, 230);
     border: 1px solid rgb(255, 255, 255);
     border-top: 0px solid rgba(255, 255, 255, 0.363);
-    border-radius: 15px;
+    border-radius: 30px 30px 30px 30px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
@@ -51,17 +68,19 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     padding: 20px;
-    padding-right: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
     padding-left: 10px;
-    font-size: 1.1em;
+    font-size: 1.0em;
     color: rgba(52, 58, 64, 0.842);
     background-color: rgb(255, 255, 255);
     border: 3px solid rgba(156, 156, 156, 0.986);
-    border-radius: 15px;
+    border-radius: 15px 5px 5px 15px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
-    max-height:450px;
-     
+    max-height: 450px;
+    text-align: center;
     overflow-y: auto;
+
 }
 
 .display-header-controls {
@@ -72,11 +91,9 @@ body {
     background: rgba(45, 48, 51, 0.473);
     width: 100%;
     margin: 0;
-    padding-top: 5px;
+    padding: 5px;
     padding-left: 0px;
-    padding-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 30px 30px 5px 5px;
     border-bottom: 2px solid rgba(214, 214, 214, 0.473);
 }
 
@@ -89,36 +106,48 @@ body {
 }
 
 .player-header {
-    margin: 0px;
-    padding: 5px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+    padding-bottom: 0px;
     padding-left: 10px;
     font-size: 1em;
     background: rgb(214, 214, 214);
     border-radius: 15px 0px 0px 15px;
     border-bottom: 2px solid rgba(156, 156, 156, 0.336);
     border-left: 2px solid rgba(156, 156, 156, 0.349);
+    text-align: left;
+}
+
+.detes-container {
+    box-sizing: border-box;
+    width: auto;
+    display: inline-block;
+    padding: 0px;
+    padding-left: 15px;
+    margin: 0px;
+    margin-bottom: 15px;
+
 }
 
 .player-details {
-    display: inline-block;
-    padding-left: 15px;
-    margin-bottom: 15px;
-    margin-top: 2px;
-    margin-left: 0px;
-    font-size: 0.9em;
+    position: relative;
+    display: inline;
+    padding-left: 0px;
+    padding-right: 0px;
+
 }
 
 .setting-inputs {
     box-sizing: border-box;
     position: relative;
     width: 100%;
-    margin: auto;
+    margin: 0;
     justify-content: space-between;
     width: 100%;
     padding: 15px;
     background: rgba(52, 58, 64, 0.842);
     border: 1px solid rgb(255, 255, 255);
-    border-radius: 15px;
+    border-radius: 20px 20px 5px 5px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
@@ -132,7 +161,7 @@ body {
     background: rgb(200, 200, 201);
     border: 2px solid rgba(37, 37, 37, 0.61);
     border-bottom: 0px solid rgba(37, 37, 37, 0.61);
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
 }
 
@@ -191,10 +220,10 @@ label {
     padding-top: 00px;
     border: 2px solid rgba(37, 37, 37, 0.61);
     border-top: 0px;
-    border-radius: 0px 0px 15px 15px;
+    border-radius: 0px 0px 5px 5px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
     max-height: 350px;
-    overflow-y:auto;
+    overflow-y: auto;
 }
 
 .player-settings-interior {
@@ -206,7 +235,7 @@ label {
     border: 0.15em inset rgba(52, 58, 64, 0.623);
     border-radius: 5px;
     padding: 5px;
-   max-height:  200px;         
+    max-height: 200px;
     overflow-y: auto;
     width: 220;
     margin: auto;
@@ -265,7 +294,7 @@ label {
     padding: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     height: auto;
     margin-bottom: 0px;
     vertical-align: middle;
@@ -290,15 +319,15 @@ label {
     display: none;
     border-radius: 8px;
     font-size: 1em;
-    background: rgba(5, 236, 36, 0.349); 
+    background: rgba(5, 236, 36, 0.349);
     padding: 2px;
     padding-left: 10px;
-    padding-right: 10px; 
-    box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493); 
+    padding-right: 10px;
+    box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493);
 }
 
 #reset-btn {
-    border-radius:25px;
+    border-radius: 25px;
     font-size: 1em;
     text-justify: auto;
     width: auto;
@@ -307,7 +336,6 @@ label {
     padding: 2px;
     padding-left: 5px;
     padding-right: 5px;
-    /* display: none; */
     vertical-align: middle;
     border: 1px solid rgb(43, 48, 48);
     border: 1px solid rgba(221, 221, 221, 0.705);
@@ -322,8 +350,6 @@ label {
     padding: 0px;
     padding-left: 5px;
     padding-right: 5px;
-    /* margin-bottom: 5px; */
-
 }
 
 #player-counter {
@@ -361,7 +387,7 @@ label {
 }
 
 #player-details-container {
-    
+
     display: flex;
     justify-content: space-evenly;
     border: 1px solid rgba(255, 255, 255, 0.863);
@@ -372,8 +398,6 @@ label {
     margin-top: 0px;
     padding-top: 0px;
     margin-bottom: 10px;
-
-
 }
 
 .textbox-label {
@@ -390,16 +414,13 @@ label {
     width: 100%;
     height: 28px;
     margin: 0;
-    /* width: auto; */
     vertical-align: middle;
-    /* color: var(--gunmetal-color); */
     font-size: 0.9em;
     margin-bottom: 10px;
     background: rgba(40, 44, 48, 0.082);
     border: 1px solid rgba(40, 44, 48, 0.377);
     border-radius: 5px;
 }
-
 
 .top-container {
     padding: 0px;
@@ -418,8 +439,8 @@ label {
     grid-area: 2/span 2;
     width: auto;
     border: 2px solid rgb(124, 124, 124);
-    border-radius: 3px;
-    height: 100px;
+    height: 50px;
+    border-radius: 5px 5px 50px 50px;
 }
 
 .section-header {
@@ -432,16 +453,16 @@ label {
     font-size: 1.3em;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width:600px) {
     .grid-container {
-        grid-template-columns: 1fr;
-        width: 95%;
+        grid-template-columns: minmax(300px, min-content);
+        width: auto;
         margin: auto;
         margin-top: 10px;
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .bottom-container {
         padding: 10px;
         grid-area: 3/span 1;

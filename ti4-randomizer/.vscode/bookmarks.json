@@ -43,13 +43,13 @@
 		"path": "$ROOTPATH$\\ti4-new-styles.css",
 		"bookmarks": [
 			{
-				"line": 317,
-				"column": 1,
+				"line": 161,
+				"column": 21,
 				"label": ""
 			},
 			{
-				"line": 367,
-				"column": 0,
+				"line": 346,
+				"column": 1,
 				"label": ""
 			}
 		]
@@ -58,12 +58,12 @@
 		"path": "$ROOTPATH$\\ti4-new-script.js",
 		"bookmarks": [
 			{
-				"line": 49,
+				"line": 53,
 				"column": 101,
 				"label": ""
 			},
 			{
-				"line": 70,
+				"line": 74,
 				"column": 43,
 				"label": ""
 			}
@@ -85,6 +85,31 @@
 			{
 				"line": 65,
 				"column": 29,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\ti4-single-file8.22.html",
+		"bookmarks": [
+			{
+				"line": 16,
+				"column": 7,
+				"label": ""
+			},
+			{
+				"line": 479,
+				"column": 9,
+				"label": ""
+			},
+			{
+				"line": 513,
+				"column": 12,
+				"label": ""
+			},
+			{
+				"line": 701,
+				"column": 8,
 				"label": ""
 			}
 		]

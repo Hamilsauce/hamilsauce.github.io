@@ -11,6 +11,10 @@ let playerNames = [];
 let players = [];
 let raceList = [];
 
+// window.onload(event => {
+
+// });
+
 playerCounter.addEventListener('change', () => {
     //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
     let playerCount = parseInt(playerCounter.value);
@@ -139,7 +143,7 @@ function addPlayer(data, races) {
             id: d[0],
             gotRaces: [],
             displayData: function (c) {
-                let choiceText =c > 1 ? ' (Choose One)' : ' plays as...';
+                let choiceText =c > 1 ? ' Choose One: <br>' : ' Plays as ';
                 let showRaces = "";
 
                 if (this.gotRaces.length == 0) {
@@ -151,8 +155,8 @@ function addPlayer(data, races) {
                 }
                 let Output = '';
                 output =
-                    `<h4 class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} ${choiceText}</span></h4>
-                     <span class="player-details">${showRaces}</span>`;
+                    `<p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
+                    <div class="detes-container">${choiceText}<span class="player-details">${showRaces}</span></div>`;
                 return output;
             },
              //randomize/shuffle race array and select first element, then remove that from array 
@@ -230,6 +234,9 @@ function cleanNames(name){
 
 function clearInputs( ) {
     const nameInputs = document.querySelectorAll('.name-input-field');
+    const inputColumn = document.querySelector('.setting-inputs'); 
+    const gridContainer = document.querySelector('.grid-container'); 
+     
    let remainingRaces = raceList;
 
    raceList.length = 0;
@@ -246,5 +253,9 @@ function clearInputs( ) {
     playerCounter.value = 0;
 
     // nameInputContainer.style.display = 'none';
+     inputColumn.style.display = 'none';
+     gridContainer.style.gridTemplateColumns = "1fr";
+    // ;
+
     
 }
