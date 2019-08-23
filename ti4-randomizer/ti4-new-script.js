@@ -113,7 +113,7 @@ function addInputs(count) {
         `);
     }
     nameInputContainer.innerHTML = ` ${output.join('')}`;
-    nameInputContainer.style.display = 'block';
+    // nameInputContainer.style.display = 'block';
     toggleSubmit();
 }
 
@@ -245,6 +245,6 @@ function clearInputs( ) {
     playerCounter.value = 0;
     playerCounter.value = 0;
 
-    nameInputContainer.style.display = 'none';
+    // nameInputContainer.style.display = 'none';
     
 }
