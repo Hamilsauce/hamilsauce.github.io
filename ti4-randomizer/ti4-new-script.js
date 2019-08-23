@@ -1,6 +1,4 @@
 const playerCounter = document.querySelector('#player-counter');
-const raceListCard = document.querySelector('.race-container');
-const resultListContainer = document.querySelector('.results-container');
 const nameInputContainer = document.querySelector('.player-details-container');
 const raceDisplay = document.getElementById('result-list');
 const submitButton = document.querySelector('#submit-btn');
@@ -9,22 +7,22 @@ const selectAllButton = document.querySelector('#select-btn');
 const clearButton = document.querySelector('#clear-btn');
 //const raceItems = document.querySelectorAll('.raceBox');
 
-let textBoxes;
 let playerNames = [];
 let players = [];
 let raceList = [];
-let usedBoxes = [];
 
 playerCounter.addEventListener('change', () => {
     //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
     let playerCount = parseInt(playerCounter.value);
+    raceList = getRaceList();
     return addInputs(playerCount);
+
 });
 
 submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
     let nameArr = trimNames(playerNames);
-    raceList = getRaceList()
+  
 
     addPlayer(nameArr, raceList);
     doleOut(raceList);
@@ -32,16 +30,13 @@ submitButton.addEventListener('click', () => {
     getResultHeight();
 });
 
-
 selectAllButton.addEventListener('click', () => {
     const raceItems = document.querySelectorAll('.raceBox');
-
     raceItems.forEach(r => {
         r.checked = true;
     });
     return;
 });
-
 
 clearButton.addEventListener('click', () => {
     const raceItems = document.querySelectorAll('.raceBox');
@@ -73,7 +68,6 @@ function getPlayerData(activeTextbox) {
         box.style.color = "rgb(100, 100, 100)";
         box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
         
-
         playerNames[boxID] = [boxID, cleanNames(bVal)];
     }
     return playerNames;
@@ -119,6 +113,7 @@ function addInputs(count) {
         `);
     }
     nameInputContainer.innerHTML = ` ${output.join('')}`;
+    nameInputContainer.style.display = 'block';
     toggleSubmit();
 }
 
@@ -130,7 +125,7 @@ function toggleSubmit() {
         resetButton.style.display = "inline";
     } else {
         submitButton.style.display = "none";
-        resetButton.style.display = "none";
+        // resetButton.style.display = "none";
     }
     return textFields;
 }
@@ -144,11 +139,20 @@ function addPlayer(data, races) {
             id: d[0],
             gotRaces: [],
             displayData: function (c) {
-                let showRaces = c == 2 ? this.gotRaces.join(', ') : this.gotRaces[0];
+                let choiceText =c > 1 ? ' (Choose One)' : ' plays as...';
+                let showRaces = "";
+
+                if (this.gotRaces.length == 0) {
+                    showRaces = "Not a single race to be assigned";
+                } else if (c == 2) {
+                    showRaces = this.gotRaces.join('<b> or </b>');
+                } else {
+                    showRaces = this.gotRaces[0];
+                }
                 let Output = '';
                 output =
-                    `<h4 class="player-header"><span class="output-id">Player ${this.id}</span></h4>
-                     <p class="player-details">${this.playername} - ${showRaces}</p>`;
+                    `<h4 class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} ${choiceText}</span></h4>
+                     <span class="player-details">${showRaces}</span>`;
                 return output;
             },
              //randomize/shuffle race array and select first element, then remove that from array 
@@ -162,6 +166,7 @@ function addPlayer(data, races) {
         });
         i++;
     });
+
     return players;
 }
 
@@ -190,6 +195,7 @@ function displays() {
 
     raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
+    clearInputs();
 }
 
 // Need to clear players objects, races array, clean out the result list HTML, 
@@ -207,9 +213,7 @@ function getResultHeight() {
         raceDisplay.style.borderTopRightRadius = '3px';
         raceDisplay.style.borderBottomRightRadius = '3px';
     }
-
    return resultY;
-
 }
 
 function cleanNames(name){
@@ -221,9 +225,26 @@ function cleanNames(name){
     } else {
         return name;
     }
-    // let cleanedName = ? trailer : name;
+}
 
-    // console.log(cleanedName);
-    // return cleanedName
 
+function clearInputs( ) {
+    const nameInputs = document.querySelectorAll('.name-input-field');
+   let remainingRaces = raceList;
+
+   raceList.length = 0;
+    playerNames.length = 0;
+    nameInputs.forEach(n => {
+        n.value = "";
+        n.disabled = true;
+        n.style.border = '1px solid rgba(40, 44, 48, 0.377)';
+    });
+    submitButton.disabled = true;
+    resetButton.style.border = "1px solid  rgba(224, 224, 224, 0.9)";
+    resetButton.style.color = "rgba(224, 224, 224, 0.9)";
+    playerCounter.value = 0;
+    playerCounter.value = 0;
+
+    nameInputContainer.style.display = 'none';
+    
 }

@@ -25,10 +25,10 @@ submitButton.addEventListener('click', () => {
     displays();
 });
 
-function getPlayerNames(boxes) {
+function getPlayerNames(inputBox) {
     //function is run everytime a user deselects a text input - adds text content to playername list 
 
-    let box = document.querySelector(boxes);
+    let box = document.querySelector(inputBox);
     let input = box.value;
     if (playerNames.length >= 6) {
         alert("Already Got enough players. Click Reset to start over.");

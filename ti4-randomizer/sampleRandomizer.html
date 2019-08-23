@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twilight Imperium - Choose Your Race</title>
+    <style>
+        div.column {
+            -webkit-column-width: 250px;
+            -moz-column-width: 250px;
+            column-width: 250px;
+        }
+
+        div.nobreak {
+            -webkit-column-break-inside: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      
+      function GetSelectedChbox(frm) {
+            var selchbox = []; // array that will store the value of selected checkboxes
+
+            // gets all the input tags in frm, and their number
+            var inpfields = frm.getElementsByTagName('input');
+            var nr_inpfields = inpfields.length;
+
+            // traverse the inpfields elements, and adds the value of selected (checked) checkbox in selchbox
+            for (var i = 0; i < nr_inpfields; i++) {
+                if (inpfields[i].type == 'checkbox' && inpfields[i].checked == true) selchbox.push(inpfields[i].value);
+            }
+
+            return selchbox;
+        }
+
+        function SanitizeString(str) {
+            var newstr = "";
+            var newstr = str.replace(/&/g, '').replace(/</g, '').replace(/>/g, '').replace(/;/g, '');
+            console.log(newstr);
+            return newstr;
+        }
+
+
+        function RecalculateAll(frm) {
+            var race_num = GetSelectedChbox(frm).length;
+            var player_num = document.getElementById('players').value;
+            var current_choice = document.getElementById('choices').value;
+            var speaker_option = document.getElementById('speaker').value;
+            if (speaker_option == "houserule") {
+                var race_total = race_num + 1;
+            } else {
+                var race_total = race_num;
+            }
+            var choice_max = parseInt(race_total / player_num, 10);
+
+            //  -- DEBUG STUFF --
+            //	var unsanitized_box = "";
+            //	var sanitized_box = "";
+            //	var player_names = "";
+            //	var unsanitized_box = document.getElementById('playernames').value;
+            //	var sanitized_box = SanitizeString(unsanitized_box);
+            //	var player_names = sanitized_box.split(',');
+
+            //document.getElementById("debugging").innerHTML = 'Races: ' + race_num + ', Players: ' + player_num + ', Max Choices: ' + choice_max + ', Current Choice: ' + current_choice + ', Sanitized Player List: ' + sanitized_box;
+
+            document.getElementById("howmany").innerHTML = race_num;
+
+            document.getElementById("choices").length = 0;
+
+            var error_msg = "";
+            if (choice_max < 1) {
+                error_msg = "You cannot choose fewer races than you have players!<br />";
+                document.getElementById("zero_choices").innerHTML = error_msg;
+                return;
+            }
+
+            for (i = 0; i < choice_max; i++) {
+                document.getElementById("choices").options[i] = new Option(i + 1, i + 1);
+            }
+
+            if (current_choice > choice_max) {
+                current_choice = choice_max
+            }
+            if (current_choice < 1) {
+                current_choice = 1
+            }
+            $("#choices").val(current_choice);
+
+            if (current_choice < 2 && speaker_option == "houserule") {
+                error_msg = "To use the Speaker house rule, &quot;Choices Per Player&quot; must be 2+!<br />";
+            }
+            document.getElementById("zero_choices").innerHTML = error_msg;
+        }
+
+
+        function GenerateList(frm) {
+            var race_list = GetSelectedChbox(frm);
+            var race_num = race_list.length;
+            var player_num = document.getElementById('players').value;
+            var choice_num = document.getElementById('choices').value;
+            var speaker_option = document.getElementById('speaker').value;
+            var speaker_player = Math.floor(Math.random() * player_num);
+
+            var unsanitized_box = "";
+            var sanitized_box = "";
+            var untrimmed_names = "";
+            var player_names = "";
+            var unsanitized_box = document.getElementById('playernames').value;
+            var sanitized_box = SanitizeString(unsanitized_box);
+            var player_names = sanitized_box.split(',');
+            player_names.push("unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown", "unknown");
+            player_names.length = player_num;
+
+
+            //Getting player list and assigning races
+
+            var list_output = "";
+
+            race_list.sort(function (a, b) {
+                return 0.5 - Math.random()
+            });
+            race_list.sort(function (a, b) {
+                return 0.5 - Math.random()
+            });
+
+            player_names.sort(function (a, b) {
+                return 0.5 - Math.random()
+            });
+            player_names.sort(function (a, b) {
+                return 0.5 - Math.random()
+            });
+
+
+            for (i = 0; i < player_num; i++) {
+                var player_choices = choice_num;
+
+                list_output += "Player ";
+                list_output += parseInt(i + 1, 10);
+
+                list_output += " (";
+                if (player_names[i].trim() == "") {
+                    list_output += "unknown";
+                } else {
+                    list_output += player_names[i].trim();
+                }
+                list_output += ") ";
+
+                if (speaker_option != "ignore" && i == speaker_player) {
+                    list_output += "is <b>the Speaker</b> and ";
+                }
+
+                if (speaker_option == "houserule" && i == speaker_player) {
+                    player_choices--;
+                    var unused_race = race_list[((i + 1) * choice_num) - 1];
+                    race_list.push(unused_race); // In case we run out!
+                }
+
+                if (player_choices < 2) {
+                    list_output += "is playing ";
+                } else {
+                    list_output += "may choose from ";
+                }
+                for (j = 0; j < player_choices; j++) {
+                    if (j > (player_choices - 2) && player_choices > 1) {
+                        list_output += " or";
+                    }
+                    array_pos = (i * choice_num) + j;
+                    list_output += race_list[array_pos];
+                    if (j < (player_choices - 1) && player_choices > 2) {
+                        list_output += ", ";
+                    }
+                }
+                list_output += ".<BR /><BR>";
+            }
+
+            document.getElementById("results").innerHTML = list_output;
+        }
+        
+
+        function checkAll(yesno) {
+            var cbs = document.getElementsByTagName('input');
+            for (var i = 0; i < cbs.length; i++) {
+                if (cbs[i].type == 'checkbox') {
+                    cbs[i].checked = yesno;
+                }
+            }
+        }
+    </script>
+
+
+    <form action="http://www.enable-javascript.com/" method="post">
+        <p><b>Races in Use: <span id="howmany">17</span></b>
+            <span style="padding:25px"></span><input type="button" value="Check All"
+                onclick="checkAll(true); RecalculateAll(this.form)">
+            <span style="padding:5px"></span><input type="button" value="Clear All"
+                onclick="checkAll(false); RecalculateAll(this.form)">
+            <br />
+            <div class="column">
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Arborec" />The Arborec^<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Barony of Letnev" />The Barony of Letnev*<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Clan of Saar" />The Clan of Saar^<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Embers of Muaat" />The Embers of Muaat<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Emirates of Hacan" />The Emirates of Hacan*<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Federation of Sol" />The Federation of Sol*<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Ghosts of Creuss" />The Ghosts of Creuss^<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The L1Z1X Mindnet" />The L1Z1X Mindnet<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Mentak Coalition" />The Mentak Coalition<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Naalu Collective" />The Naalu Collective<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Nekro Virus" />The Nekro Virus^<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" Sardakk N'orr" />Sardakk N'orr*<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Universities of Jol-Nar" />The Universities of Jol-Nar*<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)" value=" The Winnu" />The
+                Winnu<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Xxcha Kingdom" />The Xxcha Kingdom*<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Yin Brotherhood" />The Yin Brotherhood<br />
+                <input type="checkbox" checked name="chb[]" onclick="RecalculateAll(this.form)"
+                    value=" The Yssaril Tribes" />The Yssaril Tribes<br />
+            </div>
+        </p>
+
+        <div class="column">
+            <b>Number of Players: </b>
+            <select name="players" id="players" onchange="RecalculateAll(this.form)">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+            </select><br />
+
+            <p><b>Choices Per Player: </b>
+                <select name="choices" id="choices" onchange="RecalculateAll(this.form)">
+                    <option value="1" selected="selected">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select></p>
+
+            <p><b>Speaker: </b>
+                <select name="speaker" id="speaker" onchange="RecalculateAll(this.form)">
+                    <option value="ignore">Don't Determine</option>
+                    <option value="random" selected="selected">Determine Randomly</option>
+                    <option value="houserule">Use House Rule (above)</option>
+                </select></p>
+
+            <div class="nobreak">
+                <p><b>Players' Names, Separated By Commas:</b><br>
+                    <i>(optional, to randomize seating order)</i><br>
+                    <textarea name="playernames" id="playernames" cols="36" rows="2"
+                        placeholder="Christian, Dane, Peterson, Beltrani">
+                    </textarea></p>
+            </div>
+
+        </div>
+        </p>
+        <p id="zero_choices" style="color:red;font-weight:bold"></p>
+
+        <p id="debugging" style="color:blue;font-weight:bold"></p>
+
+        <input type="button" value="Deal the Races!" onclick="GenerateList(this.form)" />
+
+    </form>
+
+    <p id="results"></p>
+
+</body>
+
+</html>
