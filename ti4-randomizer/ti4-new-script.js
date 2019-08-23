@@ -27,7 +27,6 @@ submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
     let nameArr = trimNames(playerNames);
   
-
     addPlayer(nameArr, raceList);
     doleOut(raceList);
     displays();
