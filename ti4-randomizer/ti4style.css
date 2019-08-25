@@ -30,16 +30,17 @@ body {
 .grid-container {
     display: grid;
     position: relative;
-    padding: 10px 10px 0px 10px;
-    border: 1px solid rgba(128, 128, 128, 0.336);
-    border-radius: 30px 30px 50px 50px;
+    padding: 3px 10px 3px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    border-radius: 50px 50px 50px 50px;
     margin-top: 15px;
     grid-template-columns: minmax(300px, 300px) minmax(350px, 1fr);
     /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
     grid-column-gap: 0.3em;
     grid-row-gap: 0.3em;
     grid-auto-rows: minmax(15px, auto);
-    background: rgba(165, 165, 165, 0.226);
+    background: rgba(165, 165, 165, 0.171);
+    
 }
 
 /* Result Display Styles */
@@ -71,7 +72,7 @@ body {
     padding-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
-    font-size: 1.0em;
+    font-size:15px;;
     color: rgba(52, 58, 64, 0.842);
     background-color: rgb(255, 255, 255);
     border: 3px solid rgba(156, 156, 156, 0.986);
@@ -106,12 +107,13 @@ body {
 }
 
 .player-header {
-    margin-top: 0px;
+    margin-top: 3px;
     margin-bottom: 1px;
-    padding-bottom: 0px;
+    padding-bottom: 4px;
+    padding-top: 4px;
     padding-left: 10px;
-    font-size: 1em;
-    background: rgb(214, 214, 214);
+    font-size: 14px;;
+    background: rgb(209, 209, 209);
     border-radius: 15px 0px 0px 15px;
     border-bottom: 2px solid rgba(156, 156, 156, 0.336);
     border-left: 2px solid rgba(156, 156, 156, 0.349);
@@ -174,9 +176,10 @@ body {
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     background: rgb(255, 255, 255, 1);
     border-radius: 5px;
+
 }
 
 ul {
@@ -294,7 +297,7 @@ label {
     padding: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
-    font-size: 1.1em;
+    font-size: 1em;
     height: auto;
     margin-bottom: 0px;
     vertical-align: middle;
@@ -450,7 +453,7 @@ label {
     margin: auto;
     margin-bottom: 10px;
     padding-top: 5px;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 @media screen and (max-width:600px) {
