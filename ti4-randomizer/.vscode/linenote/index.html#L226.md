@@ -1,0 +1,1 @@
+ <!-- removed... onclick="getRaceList(this.form)" from submit button -->

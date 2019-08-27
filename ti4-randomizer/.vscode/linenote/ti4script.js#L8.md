@@ -1,0 +1,1 @@
+replaced raceItems variable name with original raceChecks (diverged at some point for 2 functions)

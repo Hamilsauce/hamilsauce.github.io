@@ -5,28 +5,38 @@ const submitButton = document.querySelector('#submit-btn');
 const resetButton = document.querySelector('#reset-btn');
 const selectAllButton = document.querySelector('#select-btn');
 const clearButton = document.querySelector('#clear-btn');
-//const raceItems = document.querySelectorAll('.raceBox');
+const raceChecks = document.querySelectorAll('.raceBox');
+
+
+const formMan = document.querySelectorAll('form');
 
 let playerNames = [];
 let players = [];
 let raceList = [];
 
 // window.onload(event => {
-
+// getRaceList()
 // });
 
-playerCounter.addEventListener('change', () => {
+
+playerCounter.addEventListener('click', () => {
     //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
     let playerCount = parseInt(playerCounter.value);
-    raceList = getRaceList();
     return addInputs(playerCount);
 
 });
+/*
+formMan.addEventListener('change', () => {
+    console.log(1);
+    raceList = getRaceList();
+});*/
+
 
 submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
     let nameArr = trimNames(playerNames);
-
+    raceList = getRaceList();
+   
     addPlayer(nameArr, raceList);
     doleOut(raceList);
     displays();
@@ -34,17 +44,17 @@ submitButton.addEventListener('click', () => {
 });
 
 selectAllButton.addEventListener('click', () => {
-    const raceItems = document.querySelectorAll('.raceBox');
-    raceItems.forEach(r => {
+    const raceChecks = document.querySelectorAll('.raceBox');
+    raceChecks.forEach(r => {
         r.checked = true;
     });
     return;
 });
 
 clearButton.addEventListener('click', () => {
-    const raceItems = document.querySelectorAll('.raceBox');
+    const raceChecks = document.querySelectorAll('.raceBox');
 
-    raceItems.forEach(r => {
+    raceChecks.forEach(r => {
         r.checked = false;
     });
     return;
@@ -53,7 +63,7 @@ clearButton.addEventListener('click', () => {
 //function is run everytime a user deselects a text input - adds text content to playername list 
 function getPlayerData(activeTextbox) {
     let box = document.querySelector(activeTextbox);
-    let [bName, bVal, boxID] = [box.name, box.value, parseInt(box.name.split('').pop()) - 1];
+    let [bVal, boxID] = [box.value, parseInt(box.name.split('').pop()) - 1];
 
     if (bVal.length === 0 || bVal == ' ') {
         console.log(`${bVal} empty`);
@@ -62,7 +72,6 @@ function getPlayerData(activeTextbox) {
         // console.log(playerNames[boxID].length);    
 
     } else if (bVal == playerNames[boxID]) {
-        console.log(`${bVal} is already in ${bName}`);
         box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
 
     } else if (playerNames.length > 6) {
@@ -90,15 +99,16 @@ function trimNames(names) {
 
 function getRaceList() {
     //iterate over checklist of races, snag the checked ones, note that for loop is preferable to forEach here because need to reference index of each checklist item/race 
-    const raceChecks = document.querySelectorAll('.raceBox');
-    console.log(raceChecks);
+    
     let selectBoxes = [];
     for (let i = 0; i < raceChecks.length; i++) {
         if (raceChecks[i].type == 'checkbox' && raceChecks[i].checked == true) {
             selectBoxes.push(raceChecks[i].value);
         }
-        console.log(selectBoxes);
+      
     }
+    console.log(selectBoxes);
+    
     return selectBoxes;
 }
 

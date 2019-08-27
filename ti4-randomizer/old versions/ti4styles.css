@@ -1,6 +1,6 @@
 :root {
     --gunmetal-color: rgba(52, 58, 64, 0.959);
-    --default-grey: rgba(224, 224, 224, 0.829);
+    --default-grey: rgb(250, 250, 241);
 }
 
 body {

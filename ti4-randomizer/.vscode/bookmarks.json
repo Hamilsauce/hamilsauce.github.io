@@ -1,75 +1,5 @@
 [
 	{
-		"path": "$ROOTPATH$\\ti4styles.css",
-		"bookmarks": [
-			{
-				"line": 190,
-				"column": 23,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\newt-ti4-files\\ti4-new-script.js",
-		"bookmarks": [
-			{
-				"line": 177,
-				"column": 0,
-				"label": ""
-			},
-			{
-				"line": 188,
-				"column": 0,
-				"label": ""
-			},
-			{
-				"line": 209,
-				"column": 1,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\ti4-index.html",
-		"bookmarks": [
-			{
-				"line": 214,
-				"column": 34,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\ti4-new-styles.css",
-		"bookmarks": [
-			{
-				"line": 164,
-				"column": 21,
-				"label": ""
-			},
-			{
-				"line": 349,
-				"column": 1,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\ti4-new-script.js",
-		"bookmarks": [
-			{
-				"line": 52,
-				"column": 101,
-				"label": ""
-			},
-			{
-				"line": 73,
-				"column": 43,
-				"label": ""
-			}
-		]
-	},
-	{
 		"path": "$ROOTPATH$\\index.html",
 		"bookmarks": [
 			{
@@ -110,6 +40,16 @@
 			{
 				"line": 701,
 				"column": 8,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\ti4script.js",
+		"bookmarks": [
+			{
+				"line": 63,
+				"column": 29,
 				"label": ""
 			}
 		]
