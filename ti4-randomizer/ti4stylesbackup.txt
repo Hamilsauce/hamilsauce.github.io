@@ -38,7 +38,7 @@ body {
     border: 1px solid rgba(128, 128, 128, 0.233);
     border-radius: 50px 50px 50px 50px;
     margin-top: 15px;
-    grid-template-columns: minmax(min-content, 280px) minmax(min-content, 400px);
+    grid-template-columns: minmax(300px, 280px) minmax(min-content, 400px);
     /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
     grid-column-gap: 0.3em;
     grid-row-gap: 0.3em;
@@ -188,7 +188,7 @@ body {
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
-    font-size: 0.85em;
+    font-size: 0.9em;
     background: rgb(255, 255, 255, 1);
     border-radius: 5px;
 
@@ -239,7 +239,7 @@ label {
     border-radius: 0px 0px 5px 5px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
     max-height: 250px;
-    /* overflow-y: auto; */
+    overflow-y: auto;
 }
 
 .player-settings-interior {
@@ -383,11 +383,9 @@ label {
     padding: 0px;
     margin: 0;
     vertical-align: middle;
-    font-size: 0.9em;
 }
 
 .player-count-label {
-    font-size: 0.9em;
     padding: 0px;
     margin: 0;
     vertical-align: middle;

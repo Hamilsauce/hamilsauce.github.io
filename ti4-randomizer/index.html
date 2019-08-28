@@ -11,8 +11,11 @@
     <!-- Bootstrap core CSS -->
     <link href="https://hamilsauce.github.io/ti4-randomizer/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/ti4style.css">
-    <!-- <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/ti4stylish.css"> -->
+    <!-- <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/ti4style.css"> -->
+    <!-- <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/Stylish Rando/ti4stylish.css"> -->
+    <link rel="stylesheet" href="./ti4style.css">
+    <!-- <link rel="stylesheet" href="./ti4stylish.css"> -->
+    
 
 </head>
 
@@ -57,14 +60,14 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h4 class="mt-4" style="width: 100%">Get your random on</h4>
-                <p class="lead" style="width: 100%;  margin: 0; line-height: 1; padding: 5px">ya dig?</p>
+                <!-- <p class="lead" style="width: 100%;  margin: 0; line-height: 1; padding: 5px">ya dig?</p> -->
             </div>
 
             <div class="grid-container">
                 <div class="setting-inputs">
                     <form id="settings-form">
                         <div class="race-container">
-                            <h5 class="section-header">Select Races</h5>
+                            <h5 id="raceListHeade" class="section-header">Select Races</h5>
                             <ul class="raceList">
                                 <li>
                                     <label for="arborecChk">
@@ -228,9 +231,11 @@
                                     value="Reset"></div>
                         </div>
                     </div>
-                    <p id="result-list"> </p>
+                    <div id="result-list"> </div>
                 </div>
                 <div class="bottom-container">
+                    <span id="picker-label">Stylish Rando?  </span>
+                        <input type="checkbox" name="style-picker" id="style-picker" onclick="stylishDisplay()"></label>
                 </div>
 
             </div>

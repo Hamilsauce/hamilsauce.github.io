@@ -25,14 +25,9 @@ formMan.addEventListener('change', () => {
 });*/
 
 //Event Listeners
-playerCounter.addEventListener('change', () => {
+playerCounter.addEventListener('click', () => {
     //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
-    const resultHeader = document.querySelector('.display-header-controls');
     let playerCount = parseInt(playerCounter.value);
-
-    if (playerCount >= 1) {
-        resultHeader.style.display = "flex";
-    };
     return addInputs(playerCount);
 
 });
@@ -76,13 +71,13 @@ function getPlayerData(activeTextbox) {
         playerNames[boxID] = '';
         box.style.border = '1px solid rgba(40, 44, 48, 0.377)';
     } else if (bVal == playerNames[boxID]) {
-        box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
+        box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
 
     } else if (playerNames.length > 6) {
         alert("Already Got enough players. Click Reset to start over.");
     } else {
         box.style.color = "rgb(100, 100, 100)";
-        box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
+        box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
 
         playerNames[boxID] = [boxID, cleanNames(bVal)];
     }
@@ -126,9 +121,8 @@ function filterNames(names) {
 
 function addInputs(count) {
     /*for each player (according to counter selection), 1) add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly. 
-    Then ) join the array elems and write it to the inner html of the 'player-details-container' div */
+    Then 2) join the array elems and write it to the inner html of the 'player-details-container' div */
     const output = [];
-    const resultHeader = document.querySelector('.display-header-controls');
    
     for (let i = 1; i <= count; i++) {
         output.push(` 
@@ -139,9 +133,7 @@ function addInputs(count) {
             </div>
         `);
     }
-
     nameInputContainer.innerHTML = ` ${output.join('')}`;
-    
    toggleSubmit();
 }
 
@@ -186,7 +178,7 @@ function addPlayer(data) {
                     [races[i], races[j]] = [races[j], races[i]];
                 }
                 let racePick = races.splice(0, 1);
-
+                alert(racePick);
                 if (racePick.length == 0) {
                     this.gotRaces.push('No Available Race. Sad!');
                 } else {
@@ -199,7 +191,7 @@ function addPlayer(data) {
     return players;
 }
 
-//Calls getRace method for each player, repeat once (in order to get  races per player)
+//Calls getRace method for each player, repeat once (in order to get 2 races per player)
 function doleOut(races) {
     let pl = players;
     for (let i = 0; i < 2; i++) {
@@ -224,7 +216,7 @@ function displays() {
         outText.push(p.displayData(choiceCount));
     });
 
-    raceDisplay.style.background = "rgb(255, 255, 255);)";
+    raceDisplay.style.background = "rgba(244, 244, 244, 0.95)";
     raceDisplay.style.textAlign = "center";
     raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
@@ -259,13 +251,14 @@ function clearInputs() {
         n.style.border = '1px solid rgba(40, 44, 48, 0.377)';
     });
     submitButton.disabled = true;
-    resetButton.style.border = "1px solid rgba(4, 4, 4, 0.9)";
-    resetButton.style.color = "rgba(4, 4, 4, 0.9)";
+    resetButton.style.border = "1px solid rgba(224, 224, 224, 0.9)";
+    resetButton.style.color = "rgba(224, 224, 224, 0.9)";
 
     //hide inputs section after everythings been cleand up
     inputColumn.style.display = 'none';
     gridContainer.style.gridTemplateColumns = "1fr";
 }
+
 (function createGreeting() {
     const resultHeader = document.querySelector('.display-header-controls');
     const greetMessage = /*html*/ `
@@ -290,50 +283,3 @@ function clearInputs() {
 
 
 })();
-
-
-
-// function stylishDisplay() {
-//     let gridContainer = document.querySelector('.grid-container');
-//  //   let playerDetails = document.querySelector('.player-details');
-//     let settingsContainer = document.querySelector('.setting-inputs');
-//     let raceContainer = document.querySelector('.race-container');
-//     let raceList = document.querySelector('.raceList');
-//     let playerInputs = document.querySelector('#player-inputs');
-
-//     const stylePicker = document.querySelector('#style-picker');
-    
-//     if (stylePicker.checked == true) {
-//         gridContainer.classList = '.grid-container2';
-//        // playerDetails.classList.toggle('.player-details');
-//         settingsContainer.classList = '.setting-inputs2';
-//         raceContainer.classList = '.race-container2';
-//         raceList.classList = '.raceList2';
-//         playerInputs.classList = '#player-inputs2';
-        
-//     } else {
-//         gridContainer.classList = '.grid-container';
-
-//         settingsContainer.classList.toggle('.setting-inputs');
-//         raceContainer.classList.toggle('.race-container');
-//         raceList.classList.toggle('.raceList');
-//         playerInputs.classList.toggle('#player-inputs');
-        
-//     }
-// }
-
-    
-    // let element = document.getElementById("myDIV");
-    
-    // if (element.classList) { 
-    //     element.classList.toggle("mystyle");
-    // } else {
-    //     var classes = element.className.split(" ");
-    //     var i = classes.indexOf("mystyle");
-    
-    //     if (i >= 0) 
-    //     classes.splice(i, 1);
-    //     else 
-    //     classes.push("mystyle");
-    //     element.className = classes.join(" "); 
-    // }

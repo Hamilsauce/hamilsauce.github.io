@@ -129,7 +129,7 @@ function addInputs(count) {
     Then ) join the array elems and write it to the inner html of the 'player-details-container' div */
     const output = [];
     const resultHeader = document.querySelector('.display-header-controls');
-   
+    
     for (let i = 1; i <= count; i++) {
         output.push(` 
            <div class="flexInput">
@@ -177,7 +177,7 @@ function addPlayer(data) {
                 }
                 output =
                     `<p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
-                    <div class="detes-container"><span style="font-size: 12px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>`;
+                    <div class="detes-container"><span style="font-size: 1px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>`;
                 return output;
             },
             getRace: function (races) {
@@ -224,7 +224,7 @@ function displays() {
         outText.push(p.displayData(choiceCount));
     });
 
-    raceDisplay.style.background = "rgb(255, 255, 255);)";
+    raceDisplay.style.background = "rgba(244, 244, 244, 0.95)";
     raceDisplay.style.textAlign = "center";
     raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
@@ -293,34 +293,34 @@ function clearInputs() {
 
 
 
-// function stylishDisplay() {
-//     let gridContainer = document.querySelector('.grid-container');
-//  //   let playerDetails = document.querySelector('.player-details');
-//     let settingsContainer = document.querySelector('.setting-inputs');
-//     let raceContainer = document.querySelector('.race-container');
-//     let raceList = document.querySelector('.raceList');
-//     let playerInputs = document.querySelector('#player-inputs');
+function stylishDisplay() {
+    let gridContainer = document.querySelector('.grid-container');
+ //   let playerDetails = document.querySelector('.player-details');
+    let settingsContainer = document.querySelector('.setting-inputs');
+    let raceContainer = document.querySelector('.race-container');
+    let raceList = document.querySelector('.raceList');
+    let playerInputs = document.querySelector('#player-inputs');
 
-//     const stylePicker = document.querySelector('#style-picker');
+    const stylePicker = document.querySelector('#style-picker');
     
-//     if (stylePicker.checked == true) {
-//         gridContainer.classList = '.grid-container2';
-//        // playerDetails.classList.toggle('.player-details');
-//         settingsContainer.classList = '.setting-inputs2';
-//         raceContainer.classList = '.race-container2';
-//         raceList.classList = '.raceList2';
-//         playerInputs.classList = '#player-inputs2';
+    if (stylePicker.checked == true) {
+        gridContainer.classList = '.grid-container2';
+        // playerDetails.classList.toggle('.player-details');
+        settingsContainer.classList = '.setting-inputs2';
+        raceContainer.classList = '.race-container2';
+        raceList.classList = '.raceList2';
+        playerInputs.classList = '#player-inputs2';
         
-//     } else {
-//         gridContainer.classList = '.grid-container';
+    } else (stylePicker.checked == false) {
+        gridContainer.classList = '.grid-container';
 
-//         settingsContainer.classList.toggle('.setting-inputs');
-//         raceContainer.classList.toggle('.race-container');
-//         raceList.classList.toggle('.raceList');
-//         playerInputs.classList.toggle('#player-inputs');
+        settingsContainer.classList.toggle('.setting-inputs');
+        raceContainer.classList.toggle('.race-container');
+        raceList.classList.toggle('.raceList');
+        playerInputs.classList.toggle('#player-inputs');
         
-//     }
-// }
+    }
+}
 
     
     // let element = document.getElementById("myDIV");

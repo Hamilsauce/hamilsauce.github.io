@@ -8,6 +8,7 @@ body {
     height: auto;
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
 }
 
 .mt-4 {
@@ -22,28 +23,33 @@ body {
 }
 
 .row {
+    transition: all 0.3s;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
 }
 
 .grid-container {
+    transition: all 0.3s;
+    box-sizing: border-box;
     display: grid;
     position: relative;
-    padding: 2px 15px 2px 15px;
-    border: 1px solid rgba(51, 56, 63, 0.158);
-    border-radius:  50px 50px 50px 50px;
+    padding: 3px 10px 3px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.233);
+    border-radius: 50px 50px 50px 50px;
     margin-top: 15px;
-    grid-template-columns: minmax(300px, 300px) minmax(350px, 1fr);
+    grid-template-columns: minmax(300px, 280px) minmax(min-content, 400px);
     /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
     grid-column-gap: 0.3em;
     grid-row-gap: 0.3em;
     grid-auto-rows: minmax(15px, auto);
-    background: rgba(89, 89, 94, 0.014);
+    background: rgba(165, 165, 165, 0.171);
+    
 }
 
 /* Result Display Styles */
 .results-container {
+    transition: all 0.3s;
     box-sizing: border-box;
     position: relative;
     justify-content: space-between;
@@ -55,12 +61,14 @@ body {
     color: rgb(230, 230, 230);
     border: 1px solid rgb(255, 255, 255);
     border-top: 0px solid rgba(255, 255, 255, 0.363);
-    border-radius: 50px 50px 10px 10px;
-    box-shadow: 1px 1px 3px 3px   rgba(0, 0, 0, 0.514);
+    width: auto;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
 
 #result-list {
+    transition: all 0.3s;
     box-sizing: border-box;
     display: none;
     width: auto;
@@ -71,19 +79,21 @@ body {
     padding-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
-    font-size: 1.0em;
+    font-size:15px;;
     color: rgba(52, 58, 64, 0.842);
     background-color: rgb(255, 255, 255);
     border: 3px solid rgba(156, 156, 156, 0.986);
     border-radius: 15px 5px 5px 15px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
-    max-height: 450px;
+    max-height: 425px;
     text-align: center;
     overflow-y: auto;
+    
 
 }
 
 .display-header-controls {
+    transition: all 0.3s;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -92,8 +102,8 @@ body {
     width: 100%;
     margin: 0;
     padding: 5px;
-    padding-left: 7px;
-    border-radius:  50px 50px 5px 5px;
+    padding-left: 0px;
+    border-radius: 30px 30px 5px 5px;
     border-bottom: 2px solid rgba(214, 214, 214, 0.473);
 }
 
@@ -106,16 +116,17 @@ body {
 }
 
 .player-header {
-    margin-top: 0px;
+    margin-top: 3px;
     margin-bottom: 1px;
-    padding-bottom: 0px;
+    padding-bottom: 4px;
+    padding-top: 4px;
     padding-left: 10px;
-    font-size: 1em;
-    background: rgb(214, 214, 214);
+    font-size: 14px;;
+    background: rgb(209, 209, 209);
     border-radius: 15px 0px 0px 15px;
     border-bottom: 2px solid rgba(156, 156, 156, 0.336);
     border-left: 2px solid rgba(156, 156, 156, 0.349);
-    text-align: left;
+    text-align: center;
 }
 
 .detes-container {
@@ -134,7 +145,7 @@ body {
     display: inline;
     padding-left: 0px;
     padding-right: 0px;
-
+    transition: all 0.3s;
 }
 
 .setting-inputs {
@@ -146,37 +157,41 @@ body {
     width: 100%;
     padding: 15px;
     background: rgba(52, 58, 64, 0.842);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius:  30px 30px 250px 50px;  
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px 20px 5px 5px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
+    transition: all 0.3s;
 }
 
 
 /* RACE SELECTION BOX STYLES */
 .race-container {
+    transition: all 0.3s;
     position: relative;
     margin: auto;
     padding-left: 15px;
     padding-right: 15px;
     background: rgb(200, 200, 201);
-    border: 2px solid rgba(65, 72, 85, 0.644);
+    border: 2px solid rgba(37, 37, 37, 0.61);
     border-bottom: 0px solid rgba(37, 37, 37, 0.61);
-    border-radius: 300px 25px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
 }
 
 .raceList {
+    transition: all 0.3s;
     height: 200px;
     overflow: auto;
     width: 220;
-    border: 0.15em outset rgba(83, 86, 88, 0.623);
+    border: 0.15em inset rgba(52, 58, 64, 0.623);
     margin: auto;
     padding: 5px;
     margin-bottom: 5px;
     margin-top: 10px;
-    font-size: 1.1em;
+    font-size: 0.9em;
     background: rgb(255, 255, 255, 1);
-    border-radius: 15px;
+    border-radius: 5px;
+
 }
 
 ul {
@@ -200,6 +215,7 @@ label {
     width: 100%;
     border: 2px solid white;
     align-self: flex-end;
+    transition: all 0.3s;
 }
 
 .raceList label:hover {
@@ -218,11 +234,11 @@ label {
     padding: 15px;
     padding-bottom: 15px;
     padding-top: 00px;
-    border: 2px solid rgba(65, 72, 85, 0.644);
+    border: 2px solid rgba(37, 37, 37, 0.61);
     border-top: 0px;
-    border-radius: 0px 0px 30px 30px;
+    border-radius: 0px 0px 5px 5px;
     box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
-    max-height: 350px;
+    max-height: 250px;
     overflow-y: auto;
 }
 
@@ -233,7 +249,7 @@ label {
     border-left: 3px solid var(--default-grey);
     border: 1px solid rgba(40, 44, 48, 0.493);
     border: 0.15em inset rgba(52, 58, 64, 0.623);
-    border-radius:15px;
+    border-radius: 5px;
     padding: 5px;
     max-height: 200px;
     overflow-y: auto;
@@ -294,7 +310,7 @@ label {
     padding: 15px;
     padding-bottom: 10px;
     padding-top: 10px;
-    font-size: 1.1em;
+    font-size: 1em;
     height: auto;
     margin-bottom: 0px;
     vertical-align: middle;
@@ -405,17 +421,17 @@ label {
     padding-bottom: 10px;
     margin: auto;
     width: 100%;
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 
 .name-input-field {
     padding-top: 0px;
     padding: 5px;
     width: 100%;
-    height: 28px;
+    height: 25px;
     margin: 0;
     vertical-align: middle;
-    font-size: 0.9em;
+    font-size: 0.8em;
     margin-bottom: 10px;
     background: rgba(40, 44, 48, 0.082);
     border: 1px solid rgba(40, 44, 48, 0.377);
@@ -434,14 +450,36 @@ label {
 }
 
 .bottom-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
     padding: 0px;
     background: rgba(52, 58, 64, 0.993);
     grid-area: 2/span 2;
     width: auto;
-    border: 2px solid rgba(189, 189, 189, 0.507);
+    border: 2px solid rgb(124, 124, 124);
     height: 50px;
     border-radius: 5px 5px 50px 50px;
 }
+    #picker-label {        
+        /* display: block; */
+        box-sizing: border-box;
+        padding: 5px;
+        margin: 0;
+        background: transparent;
+        font-size: 13px;
+        color: rgba(214, 216, 219, 0.918);
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+    .style-picker {
+        box-sizing: border-box;
+        vertical-align: middle;
+        padding: 1px;
+        margin-left: 25px;
+        
+    }
 
 .section-header {
     position: relative;
@@ -450,7 +488,7 @@ label {
     margin: auto;
     margin-bottom: 10px;
     padding-top: 5px;
-    font-size: 1.3em;
+    font-size: 1.1em;
 }
 
 @media screen and (max-width:600px) {
