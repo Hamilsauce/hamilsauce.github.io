@@ -1,0 +1,1 @@
+ //randomize/shuffle race array and select first element, then remove that from array 

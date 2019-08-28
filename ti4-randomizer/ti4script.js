@@ -18,33 +18,32 @@ let raceList = [];
 // getRaceList()
 // });
 
-
-playerCounter.addEventListener('click', () => {
-    //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
-    let playerCount = parseInt(playerCounter.value);
-    return addInputs(playerCount);
-
-});
 /*
 formMan.addEventListener('change', () => {
     console.log(1);
     raceList = getRaceList();
 });*/
 
+//Event Listeners
+playerCounter.addEventListener('click', () => {
+    //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
+    let playerCount = parseInt(playerCounter.value);
+    return addInputs(playerCount);
+
+});
 
 submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
-    let nameArr = trimNames(playerNames);
+    let nameArr = filterNames(playerNames);
     raceList = getRaceList();
    
-    addPlayer(nameArr, raceList);
+    addPlayer(nameArr);
     doleOut(raceList);
     displays();
     getResultHeight();
 });
 
 selectAllButton.addEventListener('click', () => {
-    const raceChecks = document.querySelectorAll('.raceBox');
     raceChecks.forEach(r => {
         r.checked = true;
     });
@@ -52,25 +51,25 @@ selectAllButton.addEventListener('click', () => {
 });
 
 clearButton.addEventListener('click', () => {
-    const raceChecks = document.querySelectorAll('.raceBox');
-
     raceChecks.forEach(r => {
         r.checked = false;
     });
     return;
 });
 
+resetButton.addEventListener('click', () => {
+    document.location.reload(true);
+});
+
+
 //function is run everytime a user deselects a text input - adds text content to playername list 
 function getPlayerData(activeTextbox) {
-    let box = document.querySelector(activeTextbox);
+    const box = document.querySelector(activeTextbox);
     let [bVal, boxID] = [box.value, parseInt(box.name.split('').pop()) - 1];
 
     if (bVal.length === 0 || bVal == ' ') {
-        console.log(`${bVal} empty`);
         playerNames[boxID] = '';
         box.style.border = '1px solid rgba(40, 44, 48, 0.377)';
-        // console.log(playerNames[boxID].length);    
-
     } else if (bVal == playerNames[boxID]) {
         box.style.border = '2px outset  rgba(0, 128, 25, 0.3)';
 
@@ -85,8 +84,31 @@ function getPlayerData(activeTextbox) {
     return playerNames;
 }
 
+//iterate over checklist of races, snag the checked ones, note that for loop is preferable to forEach here because need to reference index of each checklist item/race 
+function getRaceList() {
+    let selectBoxes = [];
+    
+    for (let i = 0; i < raceChecks.length; i++) {
+        if (raceChecks[i].type == 'checkbox' && raceChecks[i].checked == true) {
+            selectBoxes.push(raceChecks[i].value);
+        }
+    }
+    console.log(selectBoxes);
+    return selectBoxes;
+}
 
-function trimNames(names) {
+//trim trailing spaces from names (split name into array, if a space is found at end, return the new array sans the space, if no trialing space, return original array)
+function cleanNames(name) {
+    let chars = name.split('');
+
+    if (chars.pop() == " ") {
+        return chars.join('');
+    } else {
+        return name;
+    }
+}
+
+function filterNames(names) {
     let trimmed = names.filter(n => {
         if ((n != '' && n != ' ')) {
             console.log('passing ' + n);
@@ -97,25 +119,11 @@ function trimNames(names) {
     return trimmed;
 }
 
-function getRaceList() {
-    //iterate over checklist of races, snag the checked ones, note that for loop is preferable to forEach here because need to reference index of each checklist item/race 
-    
-    let selectBoxes = [];
-    for (let i = 0; i < raceChecks.length; i++) {
-        if (raceChecks[i].type == 'checkbox' && raceChecks[i].checked == true) {
-            selectBoxes.push(raceChecks[i].value);
-        }
-      
-    }
-    console.log(selectBoxes);
-    
-    return selectBoxes;
-}
-
 function addInputs(count) {
     /*for each player (according to counter selection), 1) add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly. 
     Then 2) join the array elems and write it to the inner html of the 'player-details-container' div */
     const output = [];
+   
     for (let i = 1; i <= count; i++) {
         output.push(` 
            <div class="flexInput">
@@ -126,8 +134,7 @@ function addInputs(count) {
         `);
     }
     nameInputContainer.innerHTML = ` ${output.join('')}`;
-    // nameInputContainer.style.display = 'block';
-    toggleSubmit();
+   toggleSubmit();
 }
 
 function toggleSubmit() {
@@ -138,14 +145,12 @@ function toggleSubmit() {
         resetButton.style.display = "inline";
     } else {
         submitButton.style.display = "none";
-        // resetButton.style.display = "none";
+
     }
     return textFields;
 }
 
-function addPlayer(data, races) {
-    //for each name in array, add a new player object to array
-    let i = 1;
+function addPlayer(data) {
     data.forEach(d => {
         players.push({
             playername: d[1],
@@ -162,39 +167,43 @@ function addPlayer(data, races) {
                 } else {
                     showRaces = this.gotRaces[0];
                 }
-                let Output = '';
                 output =
                     `<p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
                     <div class="detes-container"><span style="font-size: 12px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>`;
                 return output;
             },
-            //randomize/shuffle race array and select first element, then remove that from array 
             getRace: function (races) {
                 for (let i = races.length - 1; i > 0; i--) {
                     let j = Math.floor(Math.random() * (i + 1));
                     [races[i], races[j]] = [races[j], races[i]];
                 }
-                this.gotRaces.push(races.splice(0, 1));
+                let racePick = races.splice(0, 1);
+                alert(racePick);
+                if (racePick.length == 0) {
+                    this.gotRaces.push('No Available Race. Sad!');
+                } else {
+                    this.gotRaces.push(racePick);
+                }
             }
         });
-        i++;
+        //i++;
     });
-
     return players;
 }
 
-//Calls getRace method for each player, repeat once
+//Calls getRace method for each player, repeat once (in order to get 2 races per player)
 function doleOut(races) {
     let pl = players;
     for (let i = 0; i < 2; i++) {
         pl.forEach(p => {
-            p.getRace(races);
+            let pick = p.getRace(races);
+            
         });
     };
     console.log(races);
 }
 
-//concats the player displayData() output and pushes to DOM 
+//concats the player displayData() output from each player object and pushes to DOM 
 function displays() {
     const resultList = document.querySelector('#result-list');
     const choiceCount = document.querySelector('#choice-counter').value;
@@ -211,14 +220,6 @@ function displays() {
     clearInputs();
 }
 
-// Need to clear players objects, races array, clean out the result list HTML, 
-// Hide buttons, and clear names in textboxes.
-
-//When reset button is pressed, fire off page reload
-resetButton.addEventListener('click', () => {
-    document.location.reload(true);
-});
-
 function getResultHeight() {
     let resultY = raceDisplay.clientHeight;
 
@@ -229,28 +230,16 @@ function getResultHeight() {
     return resultY;
 }
 
-function cleanNames(name) {
-    let chars = name.split('');
-    let trailer = name.split('').pop();
-
-    if (chars.pop() == " ") {
-        return chars.join('');
-    } else {
-        return name;
-    }
-}
-
 function clearInputs() {
     const nameInputs = document.querySelectorAll('.name-input-field');
     const inputColumn = document.querySelector('.setting-inputs');
     const gridContainer = document.querySelector('.grid-container');
 
-    let remainingRaces = raceList;
-
     raceList.length = 0;
     playerNames.length = 0;
     playerCounter.value = 0;
     choiceCount = 0;
+
     document.querySelector('#choice-counter').value = choiceCount;
 
     nameInputs.forEach(n => {
@@ -259,13 +248,10 @@ function clearInputs() {
         n.style.border = '1px solid rgba(40, 44, 48, 0.377)';
     });
     submitButton.disabled = true;
-    resetButton.style.border = "1px solid  rgba(224, 224, 224, 0.9)";
+    resetButton.style.border = "1px solid rgba(224, 224, 224, 0.9)";
     resetButton.style.color = "rgba(224, 224, 224, 0.9)";
 
     //hide inputs section after everythings been cleand up
     inputColumn.style.display = 'none';
     gridContainer.style.gridTemplateColumns = "1fr";
-    // ;
-
-
 }
