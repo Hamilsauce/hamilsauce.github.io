@@ -293,47 +293,36 @@ function clearInputs() {
 
 
 
-// function stylishDisplay() {
-//     let gridContainer = document.querySelector('.grid-container');
-//  //   let playerDetails = document.querySelector('.player-details');
-//     let settingsContainer = document.querySelector('.setting-inputs');
-//     let raceContainer = document.querySelector('.race-container');
-//     let raceList = document.querySelector('.raceList');
-//     let playerInputs = document.querySelector('#player-inputs');
+(function listenForModal() {
+    const modal = document.querySelector('#modal-menu');
+     const backdrop = document.querySelector('.dimmer');
+     const modalButton = document.querySelector('#modal-button');
 
-//     const stylePicker = document.querySelector('#style-picker');
-    
-//     if (stylePicker.checked == true) {
-//         gridContainer.classList = '.grid-container2';
-//        // playerDetails.classList.toggle('.player-details');
-//         settingsContainer.classList = '.setting-inputs2';
-//         raceContainer.classList = '.race-container2';
-//         raceList.classList = '.raceList2';
-//         playerInputs.classList = '#player-inputs2';
+
+     modalButton.addEventListener('click', () => {
+         showModal(modal, backdrop);
+     
         
-//     } else {
-//         gridContainer.classList = '.grid-container';
 
-//         settingsContainer.classList.toggle('.setting-inputs');
-//         raceContainer.classList.toggle('.race-container');
-//         raceList.classList.toggle('.raceList');
-//         playerInputs.classList.toggle('#player-inputs');
-        
-//     }
-// }
+    });
+    backdrop.addEventListener('click', () => {
+        backdrop.style.display = "none";
+        modal.style.display = "none";
 
-    
-    // let element = document.getElementById("myDIV");
-    
-    // if (element.classList) { 
-    //     element.classList.toggle("mystyle");
-    // } else {
-    //     var classes = element.className.split(" ");
-    //     var i = classes.indexOf("mystyle");
-    
-    //     if (i >= 0) 
-    //     classes.splice(i, 1);
-    //     else 
-    //     classes.push("mystyle");
-    //     element.className = classes.join(" "); 
-    // }
+    });
+})();
+
+
+function showModal(modal, backdrop) {
+    backdrop.style.display = "block";
+    modal.style.display = "block";
+  
+//     backdrop.addEventListener('click', (modal, backdrop) => {
+//         backdrop.style.display = "none";
+//         modal.style.display = "none";
+
+//     });
+}
+
+// const modal = document.querySelector('#modal-menu');
+// const backdrop = document.querySelector('.dimmer');

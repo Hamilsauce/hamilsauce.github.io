@@ -12,7 +12,7 @@
     <link href="https://hamilsauce.github.io/ti4-randomizer/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/ti4style.css"> -->
-    <!-- <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/Stylish Rando/ti4stylish.css"> -->
+    <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/Stylish Rando/ti4stylish.css">
     <link rel="stylesheet" href="./ti4style.css">
     <!-- <link rel="stylesheet" href="./ti4stylish.css"> -->
     
@@ -234,14 +234,43 @@
                     <div id="result-list"> </div>
                 </div>
                 <div class="bottom-container">
+                    <input type="button" id="modal-button"  value="Show Modal Tech" onclick="listenForModal()">
+
                     <span id="picker-label">Stylish Rando?  </span>
                         <input type="checkbox" name="style-picker" id="style-picker" onclick="stylishDisplay()"></label>
                 </div>
 
+            </div><!--grid-container -->
+            <div id="modal-menu">
+                <div id="modal-grid">
+                    <p class="modal-text">Welcome to the Randomeister
+                        Select the races to include in the race draw to the left.
+                        Under that, select the number of players to draw races for,
+                        and if they should have a choice between two races.</p>
+                    <p class="modal-text">Enter the player names in the textboxes that appear in order for them to be
+                        included.
+                        Any textboxes not completed will be ignored by the program.
+                        Finally, click "Dispense" and take in the awesome power of automated race randomization!</p>
+                    <!-- <div class="modal-cell" id="modal-top">top</div>
+                <div class="modal-cell" id="modal-cell1">2</div>
+                <div class="modal-cell" id="modal-cell2">3</div>
+                <div class="modal-cell" id="modal-cell3">4</div>
+                <div class="modal-cell" id="modal-cell4">5</div>
+                <div class="modal-cell" id="modal-cell5">6</div>
+                <div class="modal-cell" id="modal-cell6">7</div>
+                <div class="modal-cell" id="modal-bottom">bottom -->
+
+                </div>
             </div>
-            <!--grid-container -->
-        </div>
-    </div>
+
+            </div>
+
+            </div><!-- "row" div -->
+            <div class="dimmer">
+
+            </div>
+            </div>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://hamilsauce.github.io/ti4-randomizer/vendor/jquery/jquery.slim.min.js"></script>

@@ -16,6 +16,11 @@
 				"line": 67,
 				"column": 29,
 				"label": ""
+			},
+			{
+				"line": 245,
+				"column": 13,
+				"label": ""
 			}
 		]
 	},
@@ -110,6 +115,16 @@
 			{
 				"line": 131,
 				"column": 5,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\ti4style.css",
+		"bookmarks": [
+			{
+				"line": 272,
+				"column": 12,
 				"label": ""
 			}
 		]
