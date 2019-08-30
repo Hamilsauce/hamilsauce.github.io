@@ -517,7 +517,7 @@ font-size: 13px;
 #modal-grid {
     text-align: center;
     padding: 0;
-    margins: 0;
+    margin: 0;
     transition: all 1s;
     box-sizing: border-box;
    display: grid;
@@ -599,9 +599,13 @@ z-index: 1;
 @media screen and (max-width:600px) {
     .grid-container {
         grid-template-columns: minmax(300px, min-content);
+        grid-template-columns: 1fr; 
         width: auto;
         margin: auto;
         margin-top: 10px;
+    }
+    body {
+        overflow: auto;
     }
 }
 

@@ -213,7 +213,7 @@ function doleOut(races) {
 
 //concats the player displayData() output from each player object and pushes to DOM 
 function displays() {
-    const resultHeader = document.querySelector('.display-header-controls');
+    // const resultHeader = document.querySelector('.display-header-controls');
     const resultList = document.querySelector('#result-list');
     const choiceCount = document.querySelector('#choice-counter').value;
 
