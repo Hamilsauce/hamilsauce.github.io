@@ -6,3 +6,9 @@ ti4-randomizer/auxillary-docs/Annotation 2019-08-19 sdfsdfsfs.png
 ti4-randomizer/auxillary-docs/small2.png
 ti4-randomizer/auxillary-docs/ti4RandoDiagrams.pdf
 ti4-randomizer/ti4-randomizer - Shortcut.lnk
+ti4-randomizer/.gitignore
+node_modules
+ti4-randomizer/.vscode/*
+ti4-randomizer/.vscode/bookmarks.json
+ti4-randomizer/ti4_randomizer.code-workspace
+ti4-randomizer/settingsCleanup.code-workspace

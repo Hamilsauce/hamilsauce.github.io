@@ -1,0 +1,1251 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>The Randomeister for TI4</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" ; rel="stylesheet">
+    <!-- <link rel="stylesheet" href="ti4styles.css"> -->
+    <style type="text/css" id="dcoder_stylesheet">
+        :root {
+            --gunmetal-color: #343a40f5;
+            --default-grey: #e0e0e0d3;
+        }
+
+        body {
+            background-color: rgba(219, 219, 219, 0.288);
+            height: auto;
+            margin: 0px;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .mt-4 {
+            display: block;
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .lead {
+            font-size: 1em;
+        }
+
+        .row {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+        }
+
+        .grid-container {
+            box-sizing: border-box;
+            display: grid;
+            position: relative;
+            padding: 5px 5px 5px 5px;
+            border: 1px solid rgba(128, 128, 128, 0.233);
+            border-radius: 30px 30px 50px 50px;
+            margin-top: 15px;
+            grid-template-columns: minmax(min-content, 280px) minmax(min-content, 400px);
+            /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
+            grid-column-gap: 0.3em;
+            grid-row-gap: 0.3em;
+            grid-auto-rows: minmax(15px, auto);
+            background: rgba(165, 165, 165, 0.171);
+
+        }
+
+        /* Result Display Styles */
+        .results-container {
+            box-sizing: border-box;
+            position: relative;
+            justify-content: space-between;
+            top: 0px;
+            padding-bottom: 10px;
+            padding-left: 0px;
+            padding-right: 0px;
+            background: rgba(52, 58, 64, 0.719);
+            color: rgb(230, 230, 230);
+            border: 1px solid rgb(255, 255, 255);
+            border-top: 0px solid rgba(255, 255, 255, 0.363);
+            width: auto;
+            border-radius: 20px 20px 5px 5px;
+            box-shadow: 1px 0px 3px rgb(0, 0, 0);
+        }
+
+
+        #result-list {
+            box-sizing: border-box;
+            display: none;
+            width: auto;
+            margin-top: 15px;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 20px;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-size: 15px;
+            ;
+            color: rgba(52, 58, 64, 0.842);
+            background-color: rgb(255, 255, 255);
+            border: 3px solid rgba(156, 156, 156, 0.986);
+            border-radius: 15px 5px 5px 15px;
+            box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+            max-height: 425px;
+            text-align: center;
+            overflow-y: auto;
+
+
+        }
+
+        .display-header-controls {
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            vertical-align: middle;
+            background: rgba(45, 48, 51, 0.473);
+            width: 100%;
+            margin: 0;
+            padding: 5px;
+            padding-left: 0px;
+            border-radius: 30px 30px 5px 5px;
+            border-bottom: 2px solid rgba(214, 214, 214, 0.473);
+        }
+
+        .output-id {
+            font-weight: 500;
+        }
+
+        .output-playername {
+            padding-left: 5px;
+        }
+
+        .player-header {
+            margin-top: 3px;
+            margin-bottom: 1px;
+            padding-bottom: 4px;
+            padding-top: 4px;
+            padding-left: 10px;
+            font-size: 14px;
+            ;
+            background: rgb(209, 209, 209);
+            border-radius: 15px 0px 0px 15px;
+            border-bottom: 2px solid rgba(156, 156, 156, 0.336);
+            border-left: 2px solid rgba(156, 156, 156, 0.349);
+            text-align: center;
+        }
+
+        .detes-container {
+            box-sizing: border-box;
+            width: auto;
+            display: inline-block;
+            padding: 0px;
+            padding-left: 15px;
+            margin: 0px;
+            margin-bottom: 15px;
+
+        }
+
+        .player-details {
+            position: relative;
+            display: inline;
+            padding-left: 0px;
+            padding-right: 0px;
+
+        }
+
+        .setting-inputs {
+            box-sizing: border-box;
+            display: block;
+            position: relative;
+            width: 100%;
+            margin: 0;
+            justify-content: space-between;
+            width: 100%;
+            padding: 15px;
+            background: rgba(52, 58, 64, 0.842);
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 20px 20px 5px 5px;
+            box-shadow: 1px 0px 3px rgb(0, 0, 0);
+        }
+
+
+        /* RACE SELECTION BOX STYLES */
+        .race-container {
+            position: relative;
+            margin: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            background: rgb(200, 200, 201);
+            border: 2px solid rgba(37, 37, 37, 0.61);
+            border-bottom: 0px solid rgba(37, 37, 37, 0.61);
+            border-radius: 5px 5px 0px 0px;
+            box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+        }
+
+        .raceList {
+            height: 200px;
+            overflow: auto;
+            width: 220;
+            border: 0.15em inset rgba(52, 58, 64, 0.623);
+            margin: auto;
+            padding: 5px;
+            margin-bottom: 5px;
+            margin-top: 10px;
+            font-size: 0.85em;
+            background: rgb(255, 255, 255, 1);
+            border-radius: 5px;
+
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 5px;
+            padding: 5px;
+            background-color: rgba(243, 243, 243, 0);
+        }
+
+        li {
+            padding-left: 0px;
+            width: fit-content;
+        }
+
+        label {
+            display: block;
+            color: WindowText;
+            background-color: Window;
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            border: 2px solid white;
+            align-self: flex-end;
+
+        }
+
+        .raceList label:hover {
+            background-color: Highlight;
+            color: HighlightText;
+            border: 2px solid Highlight;
+            font-weight: 500;
+        }
+
+        /* PLAYER DATA FORM STYLES -  input area bottom left */
+        #player-inputs {
+            position: relative;
+            width: auto;
+            margin: auto;
+            background: rgb(200, 200, 201);
+            padding: 15px;
+            padding-bottom: 15px;
+            padding-top: 00px;
+            border: 2px solid rgba(37, 37, 37, 0.61);
+            border-top: 0px;
+            border-radius: 0px 0px 5px 5px;
+            box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+            max-height: 250px;
+            /* overflow-y: auto; */
+        }
+
+        .player-settings-interior {
+            box-sizing: border-box;
+            margin-top: 0px;
+            background-color: rgb(253, 251, 251);
+            border-left: 3px solid var(--default-grey);
+            border: 1px solid rgba(40, 44, 48, 0.493);
+            border: 0.15em inset rgba(52, 58, 64, 0.623);
+            border-radius: 5px;
+            padding: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            width: 220;
+            margin: auto;
+        }
+
+        .player-counter-container {
+            width: auto;
+            margin: auto;
+            margin-bottom: 10px;
+            background: rgba(218, 216, 216, 0.438);
+            padding: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid rgba(40, 44, 48, 0.219);
+            vertical-align: middle;
+        }
+
+        /* BUTTONS */
+        .button-container {
+            width: 100%;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+            margin: auto;
+        }
+
+        .list-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #select-btn {
+            background: rgba(50, 55, 59, 0.87);
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.836);
+            border: 2px solid rgba(214, 216, 219, 0.918);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        #clear-btn {
+            background: rgba(50, 55, 59, 0.87);
+            font-size: 0.8em;
+            color: rgba(255, 255, 255, 0.842);
+            border: 2px solid rgba(214, 216, 219, 0.918);
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .display-header {
+            margin: auto;
+            width: auto;
+            padding: 15px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            font-size: 1em;
+            height: auto;
+            margin-bottom: 0px;
+            vertical-align: middle;
+        }
+
+        .submit-container {
+            display: flex;
+            justify-content: space-around;
+            height: auto;
+            width: 100%;
+            margin: auto;
+            padding: 10px;
+            margin-right: 0%;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            vertical-align: middle;
+        }
+
+        #submit-btn {
+            margin-bottom: 0px;
+            border: 1px solid rgba(214, 216, 219, 0.767);
+            display: none;
+            border-radius: 8px;
+            font-size: 1em;
+            background: rgba(5, 236, 36, 0.349);
+            padding: 2px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493);
+        }
+
+        #reset-btn {
+            border-radius: 25px;
+            font-size: 1em;
+            text-justify: auto;
+            width: auto;
+            margin: auto;
+            margin-left: 0px;
+            padding: 2px;
+            padding-left: 5px;
+            padding-right: 5px;
+            vertical-align: middle;
+            border: 1px solid rgb(43, 48, 48);
+            border: 1px solid rgba(221, 221, 221, 0.705);
+        }
+
+        .flexInput {
+            display: flex;
+            justify-content: space-between;
+            vertical-align: middle;
+            margin: auto;
+            width: auto;
+            padding: 0px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #player-counter {
+            width: 40px;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+            background: rgb(219, 219, 219);
+            border: 1px solid rgba(40, 44, 48, 0.377);
+            border-radius: 5px;
+            padding: 2px;
+            vertical-align: middle;
+        }
+
+        .player-choice-label {
+            padding: 0px;
+            margin: 0;
+            vertical-align: middle;
+            font-size: 0.9em;
+        }
+
+        .player-count-label {
+            font-size: 0.9em;
+            padding: 0px;
+            margin: 0;
+            vertical-align: middle;
+        }
+
+        #choice-counter {
+            width: 40px;
+            margin-bottom: 0px;
+            font-size: 0.9em;
+            background: rgb(219, 219, 219);
+            border: 1px solid rgba(40, 44, 48, 0.377);
+            border-radius: 5px;
+            padding: 2px;
+            vertical-align: middle;
+        }
+
+        #player-details-container {
+            display: flex;
+            justify-content: space-evenly;
+            border: 1px solid rgba(255, 255, 255, 0.863);
+            width: auto;
+            padding-left: 10px;
+            margin: auto;
+            border-radius: 4%;
+            margin-top: 0px;
+            padding-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .textbox-label {
+            vertical-align: middle;
+            padding-bottom: 10px;
+            margin: auto;
+            width: 100%;
+            font-size: 0.9em;
+        }
+
+        .name-input-field {
+            padding-top: 0px;
+            padding: 5px;
+            width: 100%;
+            height: 25px;
+            margin: 0;
+            vertical-align: middle;
+            font-size: 0.8em;
+            margin-bottom: 10px;
+            background: rgba(40, 44, 48, 0.082);
+            border: 1px solid rgba(40, 44, 48, 0.377);
+            border-radius: 5px;
+        }
+
+        .top-container {
+            padding: 0px;
+            margin: 0px;
+            background: rgba(52, 58, 64, 0.952);
+            grid-area: 1/span 2;
+            width: 100%;
+            border: 2px solid rgb(124, 124, 124);
+            border-radius: 3px;
+            height: 20px;
+        }
+
+        .bottom-container {
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            padding: 0px;
+            background: rgba(52, 58, 64, 0.993);
+            grid-area: 2/span 2;
+            width: auto;
+            border: 2px solid rgb(124, 124, 124);
+            height: 50px;
+            border-radius: 5px 5px 50px 50px;
+        }
+
+        #picker-label {
+            /* display: block; */
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 0;
+            background: transparent;
+            font-size: 13px;
+            color: rgba(214, 216, 219, 0.918);
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+
+        .style-picker {
+            box-sizing: border-box;
+            vertical-align: middle;
+            padding: 1px;
+            margin-left: 25px;
+
+        }
+
+        .section-header {
+            position: relative;
+            border-bottom: 2px solid rgba(52, 60, 68, 0.397);
+            width: auto;
+            margin: auto;
+            margin-bottom: 10px;
+            padding-top: 5px;
+            font-size: 1.1em;
+        }
+
+        #modal-menu {
+            transition: all 5s;
+            display: none;
+            box-sizing: border-box;
+            font-size: 13px;
+            position: absolute;
+            justify-content: center;
+            align-content: space-around;
+            margin: auto;
+            padding: 5px;
+            height: 500px;
+            width: 500px;
+            background: rgba(49, 56, 58, 0.932);
+            border-radius: 180%;
+            border: 4px solid rgba(39, 43, 44, 0.705);
+            box-shadow: 1px 1px 7px 2px rgba(10, 10, 10, 0.493);
+            z-index: 3;
+            top: 100px;
+            overflow: visible;
+        }
+
+        #modal-grid {
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            /* transition: all 5s; */
+            box-sizing: border-box;
+            display: grid;
+            /* grid-template: repeat(1,1fr) / repeat(1, 1fr); */
+
+            position: relative;
+            justify-content: center;
+            align-content: center;
+            height: 450px;
+            width: 450px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.801);
+            border-radius: 180%;
+            border: 4px solid rgba(133, 139, 146, 0.644);
+            box-shadow: 2px 2px 3px 2px rgba(35, 38, 41, 0.493);
+            z-index: 3;
+
+            overflow: auto;
+            ;
+        }
+
+        .modal-text {
+            margin: 0;
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px;
+            height: 100%;
+        }
+
+        .dimmer {
+            transition: all 3s;
+            display: none;
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(60, 71, 85, 0.507);
+            z-index: 1;
+            position: absolute;
+            justify-content: center;
+            align-content: space-around;
+            margin: auto;
+            padding: 5px;
+            height: 100%;
+            width: 100%;
+        }
+
+
+        #modal-button {
+            padding: 2px;
+            border: 1px solid rgb(124, 124, 124);
+            font-size: 0.8em;
+            background: rgba(255, 255, 255, 0.651);
+            border-radius: 5px;
+        }
+
+        /*
+
+display: none;
+position: absolute;
+justify-content: center;
+width: 300px;
+height: auto;
+top: 100px;
+background-color: rgba(34, 110, 133, 0.938);
+border-radius: 20px;
+left: 50%;
+margin-left: -155px;
+padding-top: 50px;
+padding-bottom: 50px;
+text-align: center;
+font-family: 'Schoolbell', cursive;
+color: rgba(255, 255, 255, 0.822);
+font-size :3.2em;
+font-weight: 300;
+cursor: pointer;
+border: 8px solid rgba(255, 255, 255, 0.7);
+box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+z-index: 1;
+} */
+
+        @media screen and (max-width:600px) {
+            .grid-container {
+                grid-template-columns: minmax(300px, min-content);
+                grid-template-columns: 1fr;
+                width: auto;
+                margin: auto;
+                margin-top: 10px;
+            }
+
+            body {
+                overflow: auto;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .bottom-container {
+                padding: 10px;
+                grid-area: 3/span 1;
+
+            }
+
+            .top-container {
+                grid-area: 1/span 1;
+                width: auto;
+            }
+
+        }
+
+        /* @keyframes modal-animation {
+    0% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}
+    25% {box-shadow: -4px -5px 8px rgba(133, 133, 133, 0.582)}
+    50% {box-shadow: -12px 5px 0px rgba(133, 133, 133, 0.582)}
+    75% {box-shadow: 11px -12px 4px rgba(133, 133, 133, 0.582)}
+    100%{box-shadow: 8px 10px 16px rgba(133, 133, 133, 0.582)}
+} */
+    </style>
+</head>
+
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">The Randomeister</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./auxillary-docs/ti-rando-mock.svg">ti4 rando mockup</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.soundcloud.com/hamilsauce">Ham's Jams</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://hamilsauce.github.io">hamhome</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                            href="https://seahag.sharepoint.com/sites/ti4/SitePages/TI-Game-Result-Data.aspx">Crazy TI
+                            Game Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h4 class="mt-4" style="width: 100%">Get your random on</h4>
+                <!-- <p class="lead" style="width: 100%;  margin: 0; line-height: 1; padding: 5px">ya dig?</p> -->
+            </div>
+
+            <div class="grid-container">
+                <div class="setting-inputs">
+                    <form id="settings-form">
+                        <div class="race-container">
+                            <h5 id="raceListHeade" class="section-header">Select Races</h5>
+                            <ul class="raceList">
+                                <li>
+                                    <label for="arborecChk">
+                                        <input checked class="raceBox" type="checkbox" name="arborecChk" id="arborecChk"
+                                            value="Arborec"> Arborec
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="baronyChk">
+                                        <input checked class="raceBox" type="checkbox" name="baronyChk" id="baronyChk"
+                                            value="Barony of Letnev"> Barony of Letnev
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="clanChk">
+                                        <input checked class="raceBox" type="checkbox" name="clanChk" id="clanChk"
+                                            value="Clan of Saar"> Clan of Saar
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="embersChk">
+                                        <input checked class="raceBox" type="checkbox" name="embersChk" id="embersChk"
+                                            value="Embers of Muaat"> Embers of Muaat
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="emiratesChk">
+                                        <input checked class="raceBox" type="checkbox" name="emiratesChk"
+                                            id="emiratesChk" value="Emirates of Hacan"> Emirates of Hacan
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="federationChk">
+                                        <input checked class="raceBox" type="checkbox" name="federationChk"
+                                            id="federationChk" value="Federation of Sol"> Federation of Sol
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="ghostsChk">
+                                        <input checked class="raceBox" type="checkbox" name="ghostsChk" id="ghostsChk"
+                                            value="Ghosts of Creuss"> Ghosts of Creuss
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="l1z1xChk">
+                                        <input checked class="raceBox" type="checkbox" name="l1z1xChk" id="l1z1xChk"
+                                            value="L1Z1X Mindnet"> L1Z1X Mindnet
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="mentakChk">
+                                        <input checked class="raceBox" type="checkbox" name="mentakChk" id="mentakChk"
+                                            value="Mentak Coalition"> Mentak Coalition
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="naaluChk">
+                                        <input checked class="raceBox" type="checkbox" name="naaluChk" id="naaluChk"
+                                            value="Naalu Collective"> Naalu Collective
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="nekroChk">
+                                        <input checked class="raceBox" type="checkbox" name="nekroChk" id="nekroChk"
+                                            value="Nekro Virus"> Nekro Virus
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="sardakkChk">
+                                        <input checked class="raceBox" type="checkbox" name="sardakkChk" id="sardakkChk"
+                                            value="Sardakk NOrr"> Sardakk N'Orr
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="universitiesChk">
+                                        <input checked class="raceBox" type="checkbox" name="universitiesChk"
+                                            id="universitiesChk" value="Universities of Jol-Nar"> Universities of
+                                        Jol-Nar
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="winnuChk">
+                                        <input checked class="raceBox" type="checkbox" name="winnuChk" id="winnuChk"
+                                            value="Winnu"> Winnu
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="xxchaChk">
+                                        <input checked class="raceBox" type="checkbox" name="xxchaChk" id="xxchaChk"
+                                            value="Xxcha Kingdom"> Xxcha Kingdom
+                                    </label></li>
+                                <li>
+                                    <label for="yinChk">
+                                        <input checked class="raceBox" type="checkbox" name="yinChk" id="yinChk"
+                                            value="Yin Brotherhood"> Yin Brotherhood
+                                    </label>
+                                </li>
+                                <li>
+                                    <label for="yssarilChk">
+                                        <input checked class="raceBox" type="checkbox" name="yssarilChk" id="yssarilChk"
+                                            value="Yssaril Tribes"> Yssaril Tribes
+                                    </label>
+                                </li>
+                            </ul>
+                            <div class="button-container">
+                                <div class="list-buttons">
+                                    <input id="select-btn" class="btn btn-dark btn-sm" type="button" value="Select All"
+                                        onclick="">
+                                    <input id="clear-btn" class="btn btn-dark btn-sm" type="button" value="Clear"
+                                        onclick="">
+                                </div>
+                                <!-- <div class="submit-container">
+                            <input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!" onclick="getRaceList(this.form)">
+                             </div> -->
+                            </div>
+                        </div>
+                        <div id="player-inputs">
+                            <h5 class="section-header">Players</h5>
+
+                            <div class="player-settings-interior">
+                                <div class="player-counter-container">
+                                    <div class="flexInput">
+                                        <p class="player-count-label">Player Count:</p>
+                                        <!-- <label for="choice-counter">Player Count:</label> -->
+                                        <select name="player-counter" id="player-counter">
+                                            <option value="0">-</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="flexInput">
+                                        <p class="player-choice-label">Player Choice:</p>
+                                        <!-- <label for="choice-counter">Player Choices:</label> -->
+                                        <select name="choice-counter" id="choice-counter">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+
+                                <!-- THIS CONTAINER WILL RECEIVE DYNAMIC HTML FOR TEXTBOXES -->
+                                <div class="player-details-container">
+
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="results-container">
+                    <div class="display-header-controls">
+                        <h5 class="display-header">Race Assignments</h5>
+                        <div class="submit-container">
+
+                            <div><input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!">
+                            </div>
+                            <div><input id="reset-btn" class="btn btn-outline-secondary btn-sm" type="button"
+                                    value="Reset"></div>
+                        </div>
+                    </div>
+                    <div id="result-list"> </div>
+                </div>
+                <div class="bottom-container">
+                    <input type="button" id="modal-button" value="Show Modal Tech" onclick="listenForModal()">
+                </div>
+
+            </div>
+            <!--grid-container -->
+            <div id="modal-menu">
+                <div id="modal-grid">
+                    <p class="modal-text">Welcome to the Randomeister
+                        Select the races to include in the race draw to the left.
+                        Under that, select the number of players to draw races for,
+                        and if they should have a choice between two races.</p>
+                    <p class="modal-text">Enter the player names in the textboxes that appear in order for them to be
+                        included.
+                        Any textboxes not completed will be ignored by the program.
+                        Finally, click "Dispense" and take in the awesome power of automated race randomization!</p>
+                    <!-- <div class="modal-cell" id="modal-top">top</div>
+            <div class="modal-cell" id="modal-cell1">2</div>
+            <div class="modal-cell" id="modal-cell2">3</div>
+            <div class="modal-cell" id="modal-cell3">4</div>
+            <div class="modal-cell" id="modal-cell4">5</div>
+            <div class="modal-cell" id="modal-cell5">6</div>
+            <div class="modal-cell" id="modal-cell6">7</div>
+            <div class="modal-cell" id="modal-bottom">bottom -->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- "row" div -->
+    <div class="dimmer" id="modal-backdrop">
+
+    </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://hamilsauce.github.io/ti4-randomizer/vendor/jquery/jquery.slim.min.js"></script>
+    <script src="https://hamilsauce.github.io/ti4-randomizer/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" id="dcoder_script">
+        const playerCounter = document.querySelector('#player-counter');
+        const nameInputContainer = document.querySelector('.player-details-container');
+        const raceDisplay = document.getElementById('result-list');
+        const submitButton = document.querySelector('#submit-btn');
+        const resetButton = document.querySelector('#reset-btn');
+        const selectAllButton = document.querySelector('#select-btn');
+        const clearButton = document.querySelector('#clear-btn');
+        const raceChecks = document.querySelectorAll('.raceBox');
+
+
+
+        let playerNames = [];
+        let players = [];
+        let raceList = [];
+
+        // window.onload(event => {
+        // getRaceList()
+        // });
+
+        //Event Listeners
+        playerCounter.addEventListener('change', () => {
+            //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
+            const resultHeader = document.querySelector('.display-header-controls');
+            let playerCount = parseInt(playerCounter.value);
+
+            if (playerCount >= 1) {
+                resultHeader.style.display = "flex";
+            };
+            return addInputs(playerCount);
+
+        });
+
+        submitButton.addEventListener('click', () => {
+            //on submit button, dole races and display 
+            let nameArr = filterNames(playerNames);
+            raceList = getRaceList();
+
+            addPlayer(nameArr);
+            doleOut(raceList);
+            displays();
+            getResultHeight();
+        });
+
+        selectAllButton.addEventListener('click', () => {
+            raceChecks.forEach(r => {
+                r.checked = true;
+            });
+            return;
+        });
+
+        clearButton.addEventListener('click', () => {
+            raceChecks.forEach(r => {
+                r.checked = false;
+            });
+            return;
+        });
+
+        resetButton.addEventListener('click', () => {
+            document.location.reload(true);
+        });
+
+
+        //function is run everytime a user deselects a text input - adds text content to playername list 
+        function getPlayerData(activeTextbox) {
+            const box = document.querySelector(activeTextbox);
+            let [bVal, boxID] = [box.value, parseInt(box.name.split('').pop()) - 1];
+
+            if (bVal.length === 0 || bVal == ' ') {
+                playerNames[boxID] = '';
+                box.style.border = '1px solid rgba(40, 44, 48, 0.377)';
+            } else if (bVal == playerNames[boxID]) {
+                box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
+
+            } else if (playerNames.length > 6) {
+                alert("Already Got enough players. Click Reset to start over.");
+            } else {
+                box.style.color = "rgb(100, 100, 100)";
+                box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
+
+                playerNames[boxID] = [boxID, cleanNames(bVal)];
+            }
+            return playerNames;
+        }
+
+        //iterate over checklist of races, snag the checked ones, note that for loop is preferable to forEach here because need to reference index of each checklist item/race 
+        function getRaceList() {
+            let selectBoxes = [];
+
+            for (let i = 0; i < raceChecks.length; i++) {
+                if (raceChecks[i].type == 'checkbox' && raceChecks[i].checked == true) {
+                    selectBoxes.push(raceChecks[i].value);
+                }
+            }
+            console.log(selectBoxes);
+            return selectBoxes;
+        }
+
+        //trim trailing spaces from names (split name into array, if a space is found at end, return the new array sans the space, if no trialing space, return original array)
+        function cleanNames(name) {
+            let chars = name.split('');
+
+            if (chars.pop() == " ") {
+                return chars.join('');
+            } else {
+                return name;
+            }
+        }
+
+        function filterNames(names) {
+            let trimmed = names.filter(n => {
+                if ((n != '' && n != ' ')) {
+                    console.log('passing ' + n);
+                    return n;
+                }
+                console.log('filteting thisnel');
+            });
+            return trimmed;
+        }
+
+        function addInputs(count) {
+            /*for each player (according to counter selection), 1) add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly. 
+            Then ) join the array elems and write it to the inner html of the 'player-details-container' div */
+            const output = [];
+            const resultHeader = document.querySelector('.display-header-controls');
+
+            for (let i = 1; i <= count; i++) {
+                output.push( /*html*/ ` 
+           <div class="flexInput">
+                <p class="textbox-label">Player ${i}</p>
+                <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
+                placeholder="Enter a name..." onblur="getPlayerData('#playername-textbox${i}')">
+            </div>
+        `);
+            }
+
+            nameInputContainer.innerHTML = ` ${output.join('')}`;
+
+            toggleSubmit();
+        }
+
+        function toggleSubmit() {
+            //show or hide subit buton 
+            let textFields = document.querySelectorAll(".name-input-field");
+            if (textFields.length > 0) {
+                submitButton.style.display = "inline";
+                resetButton.style.display = "inline";
+            } else {
+                submitButton.style.display = "none";
+
+            }
+            return textFields;
+        }
+
+        function addPlayer(data) {
+            data.forEach(d => {
+                players.push({
+                    playername: d[1],
+                    id: d[0],
+                    gotRaces: [],
+                    displayData: function (c) {
+                        let choiceText = c > 1 ? ' Choose One: <br>' : ' Plays as ';
+                        let showRaces = "";
+
+                        if (this.gotRaces.length == 0) {
+                            showRaces = "Not a single race to be assigned";
+                        } else if (c == 2) {
+                            showRaces = this.gotRaces.join('<b> or </b>');
+                        } else {
+                            showRaces = this.gotRaces[0];
+                        }
+                        output = /*html*/ `
+                    <p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
+                    <div class="detes-container"><span style="font-size: 12px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>
+                `;
+                        return output;
+                    },
+                    getRace: function (races) {
+                        for (let i = races.length - 1; i > 0; i--) {
+                            let j = Math.floor(Math.random() * (i + 1));
+                            [races[i], races[j]] = [races[j], races[i]];
+                        }
+                        let racePick = races.splice(0, 1);
+
+                        if (racePick.length == 0) {
+                            this.gotRaces.push('No Available Race. Sad!');
+                        } else {
+                            this.gotRaces.push(racePick);
+                        }
+                    }
+                });
+                //i++;
+            });
+            return players;
+        }
+
+        //Calls getRace method for each player, repeat once (in order to get  races per player)
+        function doleOut(races) {
+            let pl = players;
+            for (let i = 0; i < 2; i++) {
+                pl.forEach(p => {
+                    let pick = p.getRace(races);
+
+                });
+            };
+            console.log(races);
+        }
+
+        //concats the player displayData() output from each player object and pushes to DOM 
+        function displays() {
+            const resultHeader = document.querySelector('.display-header-controls');
+            const resultList = document.querySelector('#result-list');
+            const choiceCount = document.querySelector('#choice-counter').value;
+
+            let pl = players;
+            let outText = [];
+
+            pl.forEach(p => {
+                outText.push(p.displayData(choiceCount));
+            });
+
+            raceDisplay.style.background = "rgb(255, 255, 255);)";
+            raceDisplay.style.textAlign = "center";
+            raceDisplay.innerHTML = outText.join('<br>');
+            resultList.style.display = "block";
+
+            localStorage.setItem('pastResults', JSON.stringify(players));
+            clearInputs();
+        }
+
+
+
+        function getResultHeight() {
+            let resultY = raceDisplay.clientHeight;
+
+            if (parseInt(resultY) >= 350) {
+                raceDisplay.style.borderTopRightRadius = '3px';
+                raceDisplay.style.borderBottomRightRadius = '3px';
+            }
+            return resultY;
+        }
+
+        function clearInputs() {
+            const nameInputs = document.querySelectorAll('.name-input-field');
+            const inputColumn = document.querySelector('.setting-inputs');
+            const gridContainer = document.querySelector('.grid-container');
+
+            raceList.length = 0;
+            playerNames.length = 0;
+            playerCounter.value = 0;
+            choiceCount = 0;
+
+            document.querySelector('#choice-counter').value = choiceCount;
+
+            nameInputs.forEach(n => {
+                n.value = "";
+                n.disabled = true;
+                n.style.border = '1px solid rgba(40, 44, 48, 0.377)';
+            });
+            submitButton.disabled = true;
+            resetButton.style.border = "1px solid rgba(4, 4, 4, 0.9)";
+            resetButton.style.color = "rgba(4, 4, 4, 0.9)";
+
+            //hide inputs section after everythings been cleand up
+            inputColumn.style.display = 'none';
+            gridContainer.style.gridTemplateColumns = "1fr";
+        }
+
+        (function createGreeting() {
+            const resultHeader = document.querySelector('.display-header-controls');
+            const greetMessage = /*html*/ `
+        <h6>Welcome to the Randomeister</h6>
+        <p class="greeting-text" id="modal-text1" >
+            Select the races to include in the race draw to the left.
+            Under that, select the number of players to draw races for, and if they should have a choice between two races
+
+            Enter the player names in the textboxes that appear in order for them to be included. Any textboxes not 
+            completed will be ignored by the program. 
+        
+            Finally, click "Dispense" and take in the awesome power of automated race randomization!
+     
+            fin</p>
+    `;
+            resultHeader.style.display = "none";
+            raceDisplay.style.display = "block";
+            raceDisplay.style.background = "rgba(244, 244, 244, 0.95)";
+            raceDisplay.style.textAlign = "left";
+            raceDisplay.innerHTML = greetMessage;
+
+        })();
+
+
+
+        function listenForModal() {
+            const modal = document.querySelector('#modal-menu');
+            const backdrop = document.querySelector('#modal-backdrop');
+            const modalButton = document.querySelector('#modal-button');
+
+            modalButton.addEventListener('click', () => {
+                showModal(modal, backdrop);
+            });
+
+            backdrop.addEventListener('click', () => {
+                backdrop.style.display = "none";
+                modal.style.display = "none";
+            });
+
+            function showModal(modal, backdrop) {
+                const modalText = document.querySelector('#modal-text1');
+
+                // let getPast = JSON.parse(localStorage.getItem('lastResults'));
+
+                // modalText.innerHTML = getPast;
+
+                backdrop.style.display = "block";
+                modal.style.display = "block";
+            }
+        };
+
+
+        // resetButton.addEventListener('click', () => {
+        //     document.location.reload(true);
+        //     });
+
+        //     function stashData(pl) {
+
+
+        //     console.log(JSON.stringify(pl));
+        //     console.log(JSON.parse(localStorage.getItem('pastResults')));
+        //     };
+        function stashData(pl) {
+            localStorage.setItem('pastResults', JSON.stringify(pl));
+
+            console.log(JSON.stringify(pl));
+            console.log(JSON.parse(localStorage.getItem('pastResults')));
+        };
+    </script>
+</body>
+
+</html>

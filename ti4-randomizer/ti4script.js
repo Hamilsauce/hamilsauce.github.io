@@ -8,7 +8,6 @@ const clearButton = document.querySelector('#clear-btn');
 const raceChecks = document.querySelectorAll('.raceBox');
 
 
-const formMan = document.querySelectorAll('form');
 
 let playerNames = [];
 let players = [];
@@ -17,12 +16,6 @@ let raceList = [];
 // window.onload(event => {
 // getRaceList()
 // });
-
-/*
-formMan.addEventListener('change', () => {
-    console.log(1);
-    raceList = getRaceList();
-});*/
 
 //Event Listeners
 playerCounter.addEventListener('change', () => {
@@ -41,7 +34,7 @@ submitButton.addEventListener('click', () => {
     //on submit button, dole races and display 
     let nameArr = filterNames(playerNames);
     raceList = getRaceList();
-   
+
     addPlayer(nameArr);
     doleOut(raceList);
     displays();
@@ -92,7 +85,7 @@ function getPlayerData(activeTextbox) {
 //iterate over checklist of races, snag the checked ones, note that for loop is preferable to forEach here because need to reference index of each checklist item/race 
 function getRaceList() {
     let selectBoxes = [];
-    
+
     for (let i = 0; i < raceChecks.length; i++) {
         if (raceChecks[i].type == 'checkbox' && raceChecks[i].checked == true) {
             selectBoxes.push(raceChecks[i].value);
@@ -129,9 +122,9 @@ function addInputs(count) {
     Then ) join the array elems and write it to the inner html of the 'player-details-container' div */
     const output = [];
     const resultHeader = document.querySelector('.display-header-controls');
-   
+
     for (let i = 1; i <= count; i++) {
-        output.push(` 
+        output.push( /*html*/ ` 
            <div class="flexInput">
                 <p class="textbox-label">Player ${i}</p>
                 <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
@@ -141,8 +134,8 @@ function addInputs(count) {
     }
 
     nameInputContainer.innerHTML = ` ${output.join('')}`;
-    
-   toggleSubmit();
+
+    toggleSubmit();
 }
 
 function toggleSubmit() {
@@ -175,9 +168,10 @@ function addPlayer(data) {
                 } else {
                     showRaces = this.gotRaces[0];
                 }
-                output =
-                    `<p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
-                    <div class="detes-container"><span style="font-size: 12px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>`;
+                output = /*html*/ `
+                    <p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
+                    <div class="detes-container"><span style="font-size: 12px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>
+                `;
                 return output;
             },
             getRace: function (races) {
@@ -205,7 +199,7 @@ function doleOut(races) {
     for (let i = 0; i < 2; i++) {
         pl.forEach(p => {
             let pick = p.getRace(races);
-            
+
         });
     };
     console.log(races);
@@ -228,8 +222,12 @@ function displays() {
     raceDisplay.style.textAlign = "center";
     raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
+
+    localStorage.setItem('pastResults', JSON.stringify(players));
     clearInputs();
 }
+
+
 
 function getResultHeight() {
     let resultY = raceDisplay.clientHeight;
@@ -266,20 +264,20 @@ function clearInputs() {
     inputColumn.style.display = 'none';
     gridContainer.style.gridTemplateColumns = "1fr";
 }
+
 (function createGreeting() {
     const resultHeader = document.querySelector('.display-header-controls');
     const greetMessage = /*html*/ `
         <h6>Welcome to the Randomeister</h6>
-        <p class="greeting-text">
+        <p class="greeting-text" id="modal-text1" >
             Select the races to include in the race draw to the left.
-             Under that, select the number of players to draw races for, and if they should have a choice between two races.</p>
+            Under that, select the number of players to draw races for, and if they should have a choice between two races
 
-        <p class="greeting-text">
             Enter the player names in the textboxes that appear in order for them to be included. Any textboxes not 
-            completed will be ignored by the program. </p>
-        <p class="greeting-text">
-            Finally, click "Dispense" and take in the awesome power of automated race randomization!</p>
-        <p class="greeting-text">   
+            completed will be ignored by the program. 
+        
+            Finally, click "Dispense" and take in the awesome power of automated race randomization!
+     
             fin</p>
     `;
     resultHeader.style.display = "none";
@@ -288,41 +286,44 @@ function clearInputs() {
     raceDisplay.style.textAlign = "left";
     raceDisplay.innerHTML = greetMessage;
 
-
 })();
 
 
 
-(function listenForModal() {
+function listenForModal() {
     const modal = document.querySelector('#modal-menu');
-     const backdrop = document.querySelector('.dimmer');
-     const modalButton = document.querySelector('#modal-button');
+    const backdrop = document.querySelector('#modal-backdrop');
+    const modalButton = document.querySelector('#modal-button');
 
-
-     modalButton.addEventListener('click', () => {
-         showModal(modal, backdrop);
-     
-        
-
+    modalButton.addEventListener('click', () => {
+        showModal(modal, backdrop);
     });
+
     backdrop.addEventListener('click', () => {
         backdrop.style.display = "none";
         modal.style.display = "none";
-
     });
-})();
+
+    function showModal(modal, backdrop) {
+        const modalText = document.querySelector('#modal-text1');
+
+       // let getPast = JSON.parse(localStorage.getItem('lastResults'));
+
+       // modalText.innerHTML = getPast;
+
+        backdrop.style.display = "block";
+        modal.style.display = "block";
+    }
+};
 
 
-function showModal(modal, backdrop) {
-    backdrop.style.display = "block";
-    modal.style.display = "block";
-  
-//     backdrop.addEventListener('click', (modal, backdrop) => {
-//         backdrop.style.display = "none";
-//         modal.style.display = "none";
-
+// resetButton.addEventListener('click', () => {
+//     document.location.reload(true);
 //     });
-}
 
-// const modal = document.querySelector('#modal-menu');
-// const backdrop = document.querySelector('.dimmer');
+//     function stashData(pl) {
+
+
+//     console.log(JSON.stringify(pl));
+//     console.log(JSON.parse(localStorage.getItem('pastResults')));
+//     };

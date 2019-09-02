@@ -1,6 +1,6 @@
 :root {
-    --gunmetal-color: rgba(52, 58, 64, 0.959);
-    --default-grey: rgba(224, 224, 224, 0.829);
+    --gunmetal-color: #343a40f5;
+    --default-grey: #e0e0e0d3;
 }
 
 body {
@@ -23,20 +23,18 @@ body {
 }
 
 .row {
-    transition: all 0.3s;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
 }
 
 .grid-container {
-    transition: all 0.3s;
     box-sizing: border-box;
     display: grid;
     position: relative;
-    padding: 3px 10px 3px 10px;
+    padding: 5px 5px 5px 5px;
     border: 1px solid rgba(128, 128, 128, 0.233);
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 30px  30px 50px 50px;
     margin-top: 15px;
     grid-template-columns: minmax(min-content, 280px) minmax(min-content, 400px);
     /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
@@ -44,12 +42,11 @@ body {
     grid-row-gap: 0.3em;
     grid-auto-rows: minmax(15px, auto);
     background: rgba(165, 165, 165, 0.171);
-    
+
 }
 
 /* Result Display Styles */
 .results-container {
-    transition: all 0.3s;
     box-sizing: border-box;
     position: relative;
     justify-content: space-between;
@@ -62,13 +59,12 @@ body {
     border: 1px solid rgb(255, 255, 255);
     border-top: 0px solid rgba(255, 255, 255, 0.363);
     width: auto;
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 20px 20px 5px  5px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
 }
 
 
 #result-list {
-    transition: all 0.3s;
     box-sizing: border-box;
     display: none;
     width: auto;
@@ -88,12 +84,11 @@ body {
     max-height: 425px;
     text-align: center;
     overflow-y: auto;
-    
+
 
 }
 
 .display-header-controls {
-    transition: all 0.3s;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -145,11 +140,12 @@ body {
     display: inline;
     padding-left: 0px;
     padding-right: 0px;
-    transition: all 0.3s;
+    
 }
 
 .setting-inputs {
     box-sizing: border-box;
+    display: block;
     position: relative;
     width: 100%;
     margin: 0;
@@ -160,13 +156,11 @@ body {
     border: 1px solid rgb(255, 255, 255);
     border-radius: 20px 20px 5px 5px;
     box-shadow: 1px 0px 3px rgb(0, 0, 0);
-    transition: all 0.3s;
 }
 
 
 /* RACE SELECTION BOX STYLES */
 .race-container {
-    transition: all 0.3s;
     position: relative;
     margin: auto;
     padding-left: 15px;
@@ -179,7 +173,6 @@ body {
 }
 
 .raceList {
-    transition: all 0.3s;
     height: 200px;
     overflow: auto;
     width: 220;
@@ -215,7 +208,7 @@ label {
     width: 100%;
     border: 2px solid white;
     align-self: flex-end;
-    transition: all 0.3s;
+    
 }
 
 .raceList label:hover {
@@ -405,7 +398,6 @@ label {
 }
 
 #player-details-container {
-
     display: flex;
     justify-content: space-evenly;
     border: 1px solid rgba(255, 255, 255, 0.863);
@@ -464,7 +456,7 @@ label {
     height: 50px;
     border-radius: 5px 5px 50px 50px;
 }
-    #picker-label {        
+    #picker-label {
         /* display: block; */
         box-sizing: border-box;
         padding: 5px;
@@ -480,7 +472,7 @@ label {
         vertical-align: middle;
         padding: 1px;
         margin-left: 25px;
-        
+
     }
 
 .section-header {
@@ -494,7 +486,7 @@ label {
 }
 
 #modal-menu {
-    transition: all 1.5s;
+    transition: all 5s;
     display: none;
     box-sizing: border-box;
 font-size: 13px;
@@ -518,11 +510,11 @@ font-size: 13px;
     text-align: center;
     padding: 0;
     margin: 0;
-    transition: all 1s;
+    /* transition: all 5s; */
     box-sizing: border-box;
    display: grid;
      /* grid-template: repeat(1,1fr) / repeat(1, 1fr); */
- 
+
     position: relative;
     justify-content: center;
     align-content: center;
@@ -534,8 +526,8 @@ font-size: 13px;
     border: 4px solid rgba(133, 139, 146, 0.644);
     box-shadow: 2px 2px 3px 2px rgba(35, 38, 41, 0.493);
     z-index:3;
-    
-    overflow: auto; 
+
+    overflow: auto;
 ;
 }
 .modal-text {
@@ -545,6 +537,7 @@ font-size: 13px;
     padding: 10px;
     height: 100%;
 }
+
 .dimmer {
     transition: all 3s;
     display: none;
@@ -560,7 +553,7 @@ font-size: 13px;
     margin: auto;
     padding: 5px;
     height: 100%;
-    width: 100%
+    width: 100%;
 }
 
 
@@ -571,7 +564,7 @@ font-size: 13px;
     background: rgba(255, 255, 255, 0.651) ;
     border-radius: 5px;
 }
-/* 
+/*
 
 display: none;
 position: absolute;
@@ -586,7 +579,7 @@ margin-left: -155px;
 padding-top: 50px;
 padding-bottom: 50px;
 text-align: center;
-font-family: 'Schoolbell', cursive;   
+font-family: 'Schoolbell', cursive;
 color: rgba(255, 255, 255, 0.822);
 font-size :3.2em;
 font-weight: 300;
@@ -599,7 +592,7 @@ z-index: 1;
 @media screen and (max-width:600px) {
     .grid-container {
         grid-template-columns: minmax(300px, min-content);
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
         width: auto;
         margin: auto;
         margin-top: 10px;
@@ -621,7 +614,7 @@ z-index: 1;
         width: auto;
     }
 
-} 
+}
 
 /* @keyframes modal-animation {
     0% {box-shadow: 4px 5px 4px rgba(133, 133, 133, 0.582)}

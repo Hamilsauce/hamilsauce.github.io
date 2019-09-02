@@ -120,3 +120,48 @@
         "editor.defaultFormatter": "HookyQR.beautify"
     }
 }
+
+
+
+
+{
+	"folders": [
+		{
+			"path": "C:\\Users\\jacob\\source\\hamilsauce.github.io\\ti4-randomizer"
+		}
+	],
+	"settings": {
+		"workbench.colorCustomizations": {
+			"activityBar.border": "#9e9e9e",
+			"panelTitle.activeBorder": "#e0e0e0d3",
+			"editorGroupHeader.tabsBackground": "#1213143d",
+			"editor.background": "#292b3031",
+			"sideBar.background": "#2b313691",
+			"sideBarSectionHeader.background": "#191b1d31",
+			"sideBarTitle.foreground": "#e0e0e0d3",
+			"statusBar.border": "#bbbbbbea",
+			"statusBarItem.activeBackground": "#317997",
+			"tab.activeBackground": "#666b7783",
+			"tab.inactiveBackground": "#343a40a6",
+			"tab.inactiveForeground": "#e0e0e06e",
+			"terminal.background": "#202020",
+			"titleBar.border": "#bbbbbb02",
+			"breadcrumb.background": "#191b1d31",
+			"activityBar.background": "#e0e0e0d3",
+			"activityBar.foreground": "#343a40f5",
+			"activityBar.inactiveForeground": "#6666667a",
+			"activityBarBadge.background": "#343a40f5",
+			"activityBarBadge.foreground": "#e0e0e0d3",
+			"titleBar.activeBackground": "#2c3135ec",
+			"titleBar.inactiveBackground": "#e7e7e799",
+			"titleBar.activeForeground": "#e0e0e0ef",
+			"titleBar.inactiveForeground": "#66666699",
+			"statusBar.background": "#343a40f5",
+			"statusBarItem.hoverBackground": "#40464ee0",
+			"statusBar.foreground": "#e0e0e0d3"
+		},
+		"liveServer.settings.port": 5501,
+		"peacock.color": "#e7e7e7",
+		// "peacock.color": "#5f9c10f8"
+	}
+}
