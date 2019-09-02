@@ -269,7 +269,7 @@ function clearInputs() {
     const resultHeader = document.querySelector('.display-header-controls');
     const greetMessage = /*html*/ `
         <h6>Welcome to the Randomeister</h6>
-        <p class="greeting-text" id="modal-text1" >
+        <p class="greeting-text" id="greet-text1" >
             Select the races to include in the race draw to the left.
             Under that, select the number of players to draw races for, and if they should have a choice between two races
 
@@ -286,36 +286,38 @@ function clearInputs() {
     raceDisplay.style.textAlign = "left";
     raceDisplay.innerHTML = greetMessage;
 
+
 })();
 
+const modal = document.querySelector('#modal-menu');
+const backdrop = document.querySelector('#modal-backdrop');
+const modalButton = document.querySelector('#modal-button');
 
 
-function listenForModal() {
-    const modal = document.querySelector('#modal-menu');
-    const backdrop = document.querySelector('#modal-backdrop');
-    const modalButton = document.querySelector('#modal-button');
+modalButton.addEventListener('click', () => {
+    showModal(modal, backdrop);
+});
 
-    modalButton.addEventListener('click', () => {
-        showModal(modal, backdrop);
-    });
+backdrop.addEventListener('click', () => {
+    backdrop.style.display = "none";
+    modal.style.display = "none";
+});
 
-    backdrop.addEventListener('click', () => {
-        backdrop.style.display = "none";
-        modal.style.display = "none";
-    });
 
-    function showModal(modal, backdrop) {
-        const modalText = document.querySelector('#modal-text1');
+// (function listenForModal() {
 
-       let getPast = JSON.parse(localStorage.getItem('pastResults'));
 
-      modalText.innerHTML = getPast;
+   
+// })();
+function showModal(modal, backdrop) {
+    const modalText = document.querySelector('.modal-text');
 
-        backdrop.style.display = "block";
-        modal.style.display = "block";
-    }
-};
+   let getPast = localStorage.getItem('pastResults');
 
+    backdrop.style.display = "block";
+    modal.style.display = "block";
+    modalText.innerHTML = getPast;
+}
 
 // resetButton.addEventListener('click', () => {
 //     document.location.reload(true);
