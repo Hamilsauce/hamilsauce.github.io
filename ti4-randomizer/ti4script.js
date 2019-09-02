@@ -307,9 +307,9 @@ function listenForModal() {
     function showModal(modal, backdrop) {
         const modalText = document.querySelector('#modal-text1');
 
-       // let getPast = JSON.parse(localStorage.getItem('lastResults'));
+       let getPast = JSON.parse(localStorage.getItem('pastResults'));
 
-       // modalText.innerHTML = getPast;
+      modalText.innerHTML = getPast;
 
         backdrop.style.display = "block";
         modal.style.display = "block";
