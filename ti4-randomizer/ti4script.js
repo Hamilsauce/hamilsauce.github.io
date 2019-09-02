@@ -13,10 +13,6 @@ let playerNames = [];
 let players = [];
 let raceList = [];
 
-// window.onload(event => {
-// getRaceList()
-// });
-
 //Event Listeners
 playerCounter.addEventListener('change', () => {
     //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
@@ -25,9 +21,8 @@ playerCounter.addEventListener('change', () => {
 
     if (playerCount >= 1) {
         resultHeader.style.display = "flex";
-    };
+    }
     return addInputs(playerCount);
-
 });
 
 submitButton.addEventListener('click', () => {
@@ -132,9 +127,7 @@ function addInputs(count) {
             </div>
         `);
     }
-
     nameInputContainer.innerHTML = ` ${output.join('')}`;
-
     toggleSubmit();
 }
 
@@ -146,7 +139,6 @@ function toggleSubmit() {
         resetButton.style.display = "inline";
     } else {
         submitButton.style.display = "none";
-
     }
     return textFields;
 }
@@ -200,7 +192,6 @@ function doleOut(races) {
     for (let i = 0; i < 2; i++) {
         pl.forEach(p => {
             let pick = p.getRace(races);
-
         });
     }
     console.log(races);
@@ -227,8 +218,6 @@ function displays() {
     localStorage.setItem('pastResults', JSON.stringify(players));
     clearInputs();
 }
-
-
 
 function getResultHeight() {
     let resultY = raceDisplay.clientHeight;
@@ -286,15 +275,12 @@ function clearInputs() {
     raceDisplay.style.background = "rgba(244, 244, 244, 0.95)";
     raceDisplay.style.textAlign = "left";
     raceDisplay.innerHTML = greetMessage;
-
-
 })();
 
 (function modalMan() {
     const modal = document.querySelector('#modal-menu');
     const backdrop = document.querySelector('#modal-backdrop');
     const modalButton = document.querySelector('#modal-button');
-
 
     modalButton.addEventListener('click', () => {
         showModal(modal, backdrop);
@@ -305,12 +291,6 @@ function clearInputs() {
         modal.style.display = "none";
     });
 
-
-    // (function listenForModal() {
-
-
-   
-    // })();
     function showModal(modal, backdrop) {
         const modalText = document.querySelector('.modal-text');
         let pastPlayers = [];
@@ -324,17 +304,5 @@ function clearInputs() {
         
         backdrop.style.display = "block";
         modal.style.display = "block";
-        
     }
 })();
-
-// resetButton.addEventListener('click', () => {
-//     document.location.reload(true);
-//     });
-
-//     function stashData(pl) {
-
-
-//     console.log(JSON.stringify(pl));
-//     console.log(JSON.parse(localStorage.getItem('pastResults')));
-//     };

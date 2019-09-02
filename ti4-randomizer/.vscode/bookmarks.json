@@ -53,18 +53,18 @@
 		"path": "$ROOTPATH$\\ti4script.js",
 		"bookmarks": [
 			{
-				"line": 26,
-				"column": 15,
+				"line": 29,
+				"column": 5,
 				"label": ""
 			},
 			{
-				"line": 64,
+				"line": 59,
 				"column": 6,
 				"label": ""
 			},
 			{
-				"line": 86,
-				"column": 15,
+				"line": 80,
+				"column": 10,
 				"label": ""
 			},
 			{
@@ -78,23 +78,18 @@
 				"label": ""
 			},
 			{
-				"line": 152,
-				"column": 22,
+				"line": 149,
+				"column": 3,
 				"label": ""
 			},
 			{
-				"line": 158,
-				"column": 27,
+				"line": 169,
+				"column": 6,
 				"label": ""
 			},
 			{
-				"line": 177,
-				"column": 15,
-				"label": ""
-			},
-			{
-				"line": 269,
-				"column": 0,
+				"line": 257,
+				"column": 23,
 				"label": ""
 			}
 		]
