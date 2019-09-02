@@ -36,6 +36,8 @@
 		},
 		"liveServer.settings.port": 5501,
 		"peacock.color": "#e7e7e7",
+		"jake.autoDetect": "on",
+		"jshint.options": {"esversion": 6}
 		// "peacock.color": "#5f9c10f8"
 	}
 }

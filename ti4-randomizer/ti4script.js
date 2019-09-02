@@ -180,11 +180,12 @@ function addPlayer(data) {
                     [races[i], races[j]] = [races[j], races[i]];
                 }
                 let racePick = races.splice(0, 1);
-
+                console.log(racePick[0]);
+                
                 if (racePick.length == 0) {
                     this.gotRaces.push('No Available Race. Sad!');
                 } else {
-                    this.gotRaces.push(racePick);
+                    this.gotRaces.push(racePick[0]);
                 }
             }
         });
@@ -201,7 +202,7 @@ function doleOut(races) {
             let pick = p.getRace(races);
 
         });
-    };
+    }
     console.log(races);
 }
 
@@ -289,35 +290,43 @@ function clearInputs() {
 
 })();
 
-const modal = document.querySelector('#modal-menu');
-const backdrop = document.querySelector('#modal-backdrop');
-const modalButton = document.querySelector('#modal-button');
+(function modalMan() {
+    const modal = document.querySelector('#modal-menu');
+    const backdrop = document.querySelector('#modal-backdrop');
+    const modalButton = document.querySelector('#modal-button');
 
 
-modalButton.addEventListener('click', () => {
-    showModal(modal, backdrop);
-});
+    modalButton.addEventListener('click', () => {
+        showModal(modal, backdrop);
+    });
 
-backdrop.addEventListener('click', () => {
-    backdrop.style.display = "none";
-    modal.style.display = "none";
-});
+    backdrop.addEventListener('click', () => {
+        backdrop.style.display = "none";
+        modal.style.display = "none";
+    });
 
 
-// (function listenForModal() {
+    // (function listenForModal() {
 
 
    
-// })();
-function showModal(modal, backdrop) {
-    const modalText = document.querySelector('.modal-text');
-
-   let getPast = localStorage.getItem('pastResults');
-
-    backdrop.style.display = "block";
-    modal.style.display = "block";
-    modalText.innerHTML = getPast;
-}
+    // })();
+    function showModal(modal, backdrop) {
+        const modalText = document.querySelector('.modal-text');
+        let pastPlayers = [];
+        let getPast = JSON.parse(localStorage.getItem('pastResults'));
+        getPast.forEach(p => {
+            console.log(p);
+            pastPlayers.push(Object.values(p).join('<br>'));
+        });
+    
+        modalText.innerHTML = pastPlayers.join('<br><br>');
+        
+        backdrop.style.display = "block";
+        modal.style.display = "block";
+        
+    }
+})();
 
 // resetButton.addEventListener('click', () => {
 //     document.location.reload(true);
