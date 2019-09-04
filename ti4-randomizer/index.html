@@ -277,6 +277,60 @@
     <script src="https://hamilsauce.github.io/ti4-randomizer/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="https://hamilsauce.github.io/ti4-randomizer/ti4script.js"></script> -->
     <script src="./ti4script.js"></script>
+    <!-- <script src="./playerCode.js"></script> -->
+
+<script>
+(function() {
+    const modal = document.querySelector('#modal-menu');
+    const backdrop = document.querySelector('#modal-backdrop');
+    const modalButton = document.querySelector('#modal-button');
+
+    modalButton.addEventListener('click', () => {
+        showModal(modal, backdrop);
+    });
+
+    backdrop.addEventListener('click', () => {
+        backdrop.style.display = "none";
+        modal.style.display = "none";
+    });
+
+    function showModal(modal, backdrop) {
+        const modalText = document.querySelector('.modal-text');
+        let pastPlayers = [];
+        let getPast = JSON.parse(localStorage.getItem('pastResults'));
+      // console.log('getPast: ' + JSON.stringify(getPast));
+
+       
+        getPast.forEach(p => {
+         
+            pastPlayers.push(getKeys(p));
+        });
+    	console.log(pastPlayers.length);
+
+        modalText.innerHTML = pastPlayers.join('<br>');
+        
+        backdrop.style.display = "block";
+        modal.style.display = "block";
+        
+        return getPast;
+        //return Object.keys(p);
+   
+   }
+
+	function getKeys (pl) {
+	let pairs = [];
+	Object.keys(pl).forEach(key => {
+		let value = pl[key];
+		pairs.push(`${key}: ${value}<br>`);
+	//console.log(pairs);
+	});
+	return pairs
+}
+})();
+
+
+
+</script>
 
 </body>
 

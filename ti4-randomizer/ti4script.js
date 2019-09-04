@@ -55,7 +55,7 @@ resetButton.addEventListener('click', () => {
 });
 
 
-//function is run everytime a user deselects a text input - adds text content to playername list 
+//See button HTML in addInput() below - function is run everytime a user deselects a text input - adds text content to playername list 
 function getPlayerData(activeTextbox) {
     const box = document.querySelector(activeTextbox);
     let [bVal, boxID] = [box.value, parseInt(box.name.split('').pop()) - 1];
@@ -145,42 +145,44 @@ function toggleSubmit() {
 
 function addPlayer(data) {
     data.forEach(d => {
-        players.push({
-            playername: d[1],
-            id: d[0],
-            gotRaces: [],
-            displayData: function (c) {
-                let choiceText = c > 1 ? ' Choose One: <br>' : ' Plays as ';
-                let showRaces = "";
+        players.push(
+            {
+                id: d[0],
+                playername: d[1],
+                gotRaces: [],
+                displayData: function (c) {
+                    let choiceText = c > 1 ? ' Choose One: <br>' : ' Plays as ';
+                    let showRaces = "";
 
-                if (this.gotRaces.length == 0) {
-                    showRaces = "Not a single race to be assigned";
-                } else if (c == 2) {
-                    showRaces = this.gotRaces.join('<b> or </b>');
-                } else {
-                    showRaces = this.gotRaces[0];
-                }
-                output = /*html*/ `
-                    <p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
-                    <div class="detes-container"><span style="font-size: 12px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>
-                `;
-                return output;
-            },
-            getRace: function (races) {
-                for (let i = races.length - 1; i > 0; i--) {
-                    let j = Math.floor(Math.random() * (i + 1));
-                    [races[i], races[j]] = [races[j], races[i]];
-                }
-                let racePick = races.splice(0, 1);
-                console.log(racePick[0]);
-                
-                if (racePick.length == 0) {
-                    this.gotRaces.push('No Available Race. Sad!');
-                } else {
-                    this.gotRaces.push(racePick[0]);
+                    if (this.gotRaces.length == 0) {
+                        showRaces = "Not a single race to be assigned";
+                    } else if (c == 2) {
+                        showRaces = this.gotRaces.join('<b> or </b>');
+                    } else {
+                        showRaces = this.gotRaces[0];
+                    }
+                    output = /*html*/ `
+                        <p class="player-header"><span class="output-id">Player ${this.id + 1} - ${this.playername} </span></p>
+                        <div class="detes-container"><span style="font-size: 12px;">${choiceText}</span><span class="player-details">${showRaces}</span></div>
+                    `;
+                    return output;
+                },
+                getRace: function (races) {
+                    for (let i = races.length - 1; i > 0; i--) {
+                        let j = Math.floor(Math.random() * (i + 1));
+                        [races[i], races[j]] = [races[j], races[i]];
+                    }
+                    let racePick = races.splice(0, 1);
+                    console.log(racePick[0]);
+                    
+                    if (racePick.length == 0) {
+                        this.gotRaces.push('No Available Race. Sad!');
+                    } else {
+                        this.gotRaces.push(racePick[0]);
+                    }
                 }
             }
-        });
+        );
         //i++;
     });
     return players;
@@ -262,12 +264,12 @@ function clearInputs() {
         <p class="greeting-text" id="greet-text1" >
             Select the races to include in the race draw to the left.
             Under that, select the number of players to draw races for, and if they should have a choice between two races
-
+            <br><br>
             Enter the player names in the textboxes that appear in order for them to be included. Any textboxes not 
             completed will be ignored by the program. 
         
             Finally, click "Dispense" and take in the awesome power of automated race randomization!
-     
+            <br><br>
             fin</p>
     `;
     resultHeader.style.display = "none";
@@ -277,6 +279,7 @@ function clearInputs() {
     raceDisplay.innerHTML = greetMessage;
 })();
 
+/* --See Working Code in HTML---
 (function modalMan() {
     const modal = document.querySelector('#modal-menu');
     const backdrop = document.querySelector('#modal-backdrop');
@@ -306,3 +309,4 @@ function clearInputs() {
         modal.style.display = "block";
     }
 })();
+*/
