@@ -1,3 +1,5 @@
+
+:root {
 --gunmetal-color: #343a40f5;
 --default-grey: #e0e0e0d3;
 }
@@ -491,7 +493,7 @@ box-sizing: border-box;
 font-size: 13px;
 position: absolute;
 justify-content: center;
-align-content: space-evenly;
+align-content: space-around;
 margin: auto;
 padding: 5px;
 height: 70%;
@@ -501,7 +503,7 @@ border-radius: 10%;
 border: 4px solid rgba(39, 43, 44, 0.308);
 box-shadow: 1px 1px 7px 5px rgba(10, 10, 10, 0.363);
 z-index: 3;
-top: 25%;
+top: 20%;
 overflow:visible;
 }
 
@@ -513,17 +515,17 @@ margin: 0;
 /* transition: all 5s; */
 box-sizing: border-box;
 display: grid;
- /* grid-template: repeat(1,1fr) / repeat(1, 1fr); */
+ grid-template: repeat(1,3fr) / repeat(1, 1fr);
 
 position: relative;
-justify-content: left;
+justify-content: space-evenly;
 align-content: center;
 height: 93%;
 width: 93%;
-margin: 5%;
+margin: auto;
 background: rgba(255, 255, 255, 0.76);
 border-radius: 10%;
-border: 4px solid rgba(133, 139, 146, 0.74);
+border: 4px solid rgb(255, 255, 255);
 box-shadow: 2px 2px 5px 5px rgba(35, 38, 41, 0.835);
 z-index:3;
 
@@ -560,7 +562,10 @@ padding: 5px;
 height: 100%;
 width: 100%;
 }
-
+.modal-cell {
+    border: 1px solid white;
+    background: rgba(10, 10, 10, 0.363);
+}
 
 #modal-button {
 padding: 2px;
