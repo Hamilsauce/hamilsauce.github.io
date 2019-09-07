@@ -10,6 +10,7 @@ height: auto;
 margin: 0px;
 padding: 0px;
 overflow: hidden;
+user-select: none;
 }
 
 .mt-4 {
@@ -17,6 +18,7 @@ display: block;
 box-sizing: border-box;
 margin: 0px;
 padding: 0px;
+margin-bottom: 10px;
 }
 
 .lead {
@@ -41,8 +43,8 @@ grid-template-columns: minmax(min-content, 280px) minmax(min-content, 400px);
 /* grid-template-columns: minmax(min-content, 1fr) minmax(min-content, 1fr); */
 grid-column-gap: 0.3em;
 grid-row-gap: 0.3em;
-grid-auto-rows: minmax(15px, auto);
-background: rgba(165, 165, 165, 0.171);
+grid-auto-rows: minmax(1px, auto);
+background: rgba(165, 165, 165, 0.315);
 
 }
 
@@ -55,13 +57,13 @@ top: 0px;
 padding-bottom: 10px;
 padding-left: 0px;
 padding-right: 0px;
-background: rgba(52, 58, 64, 0.719);
+background: rgba(52, 58, 64, 0.788);
 color: rgb(230, 230, 230);
 border: 1px solid rgb(255, 255, 255);
 border-top: 0px solid rgba(255, 255, 255, 0.363);
 width: auto;
 border-radius: 20px 20px 5px  5px;
-box-shadow: 1px 0px 3px rgb(0, 0, 0);
+box-shadow: 0px 0px 5px 2px rgba(26, 25, 25, 0.418);
 }
 
 
@@ -99,7 +101,7 @@ width: 100%;
 margin: 0;
 padding: 5px;
 padding-left: 0px;
-border-radius: 30px 30px 5px 5px;
+border-radius: 20px 20px 5px 5px;
 border-bottom: 2px solid rgba(214, 214, 214, 0.473);
 }
 
@@ -153,10 +155,10 @@ margin: 0;
 justify-content: space-between;
 width: 100%;
 padding: 15px;
-background: rgba(52, 58, 64, 0.842);
+background: rgba(52, 58, 64, 0.788);
 border: 1px solid rgb(255, 255, 255);
 border-radius: 20px 20px 5px 5px;
-box-shadow: 1px 0px 3px rgb(0, 0, 0);
+box-shadow: 0px 0px 5px 2px rgba(26, 25, 25, 0.418);
 }
 
 
@@ -167,10 +169,10 @@ margin: auto;
 padding-left: 15px;
 padding-right: 15px;
 background: rgb(200, 200, 201);
-border: 2px solid rgba(37, 37, 37, 0.61);
-border-bottom: 0px solid rgba(37, 37, 37, 0.61);
+border: 2px solid rgba(156, 156, 156, 0.986);
+border-bottom: 0px solid rgba(156, 156, 156, 0);
 border-radius: 5px 5px 0px 0px;
-box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+box-shadow: 2px 2px 5px rgba(10, 10, 10, 0.651);
 }
 
 .raceList {
@@ -227,11 +229,11 @@ margin: auto;
 background: rgb(200, 200, 201);
 padding: 15px;
 padding-bottom: 15px;
-padding-top: 00px;
-border: 2px solid rgba(37, 37, 37, 0.61);
-border-top: 0px;
+padding-top: 0px;
+border: 2px solid rgba(156, 156, 156, 0.856);
+border-top: 0px solid rgba(185, 185, 185, 0);
 border-radius: 0px 0px 5px 5px;
-box-shadow: 3px 3px 5px rgba(10, 10, 10, 0.651);
+box-shadow: 4px 4px 3px rgba(10, 10, 10, 0.37);
 max-height: 250px;
 /* overflow-y: auto; */
 }
@@ -239,7 +241,7 @@ max-height: 250px;
 .player-settings-interior {
 box-sizing: border-box;
 margin-top: 0px;
-background-color: rgb(253, 251, 251);
+background-color: rgb(255, 255, 255);
 border-left: 3px solid var(--default-grey);
 border: 1px solid rgba(40, 44, 48, 0.493);
 border: 0.15em inset rgba(52, 58, 64, 0.623);
@@ -329,11 +331,11 @@ border: 1px solid rgba(214, 216, 219, 0.767);
 display: none;
 border-radius: 8px;
 font-size: 1em;
-background: rgba(5, 236, 36, 0.349);
+/* background: rgba(5, 236, 36, 0.349); */
 padding: 2px;
 padding-left: 10px;
 padding-right: 10px;
-box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493);
+/* box-shadow: 0px 1px 2px rgba(10, 10, 10, 0.493); */
 }
 
 #reset-btn {
@@ -428,8 +430,8 @@ margin: 0;
 vertical-align: middle;
 font-size: 0.8em;
 margin-bottom: 10px;
-background: rgba(40, 44, 48, 0.082);
-border: 1px solid rgba(40, 44, 48, 0.377);
+background: rgba(146, 151, 156, 0.082);
+border: 1px solid rgba(124, 124, 124, 0.377);
 border-radius: 5px;
 }
 
@@ -495,9 +497,9 @@ position: absolute;
 justify-content: center;
 align-content: space-around;
 margin: auto;
-padding: 5px;
-height: 70%;
-width: auto;
+/* padding: 5px; */
+height: 400px;
+width: 400px;
 background: rgba(65, 75, 78, 0.746);
 border-radius: 10%;
 border: 4px solid rgba(39, 43, 44, 0.308);
@@ -508,7 +510,7 @@ overflow:visible;
 }
 
 #modal-grid {
-top: 3%;
+top: 2%;
 text-align: left;
 padding: 0;
 margin: 0;
@@ -520,18 +522,32 @@ display: grid;
 position: relative;
 justify-content: space-evenly;
 align-content: center;
-height: 93%;
-width: 93%;
+height: 325px;
+width: 95%;
 margin: auto;
 background: rgba(255, 255, 255, 0.76);
-border-radius: 10%;
-border: 4px solid rgb(255, 255, 255);
+border-radius: 5%;
+border: 3px solid rgba(255, 255, 255, 0.274);
 box-shadow: 2px 2px 5px 5px rgba(35, 38, 41, 0.835);
 z-index:3;
-
+user-select: auto;
 overflow: hidden;
-;
 }
+
+#modal-header-container {
+    position: relative;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-top: 10px;
+    
+    color: rgba(214, 216, 219, 0.918);
+}
+#modal-header-container>h6 {
+    
+    text-shadow: 0px 0px 3px 3px rgba(235, 24, 235, 0.835);
+}
+
 .modal-text {
 
 text-align: left;
@@ -541,7 +557,7 @@ height: 100%;
 font-size: 15px;
 font-weight: 500;
 overflow: auto;
-
+user-select: text;
 margin-top: 20px;
 }
 
@@ -554,7 +570,7 @@ top: 0;
 left: 0;
 background: rgba(60, 71, 85, 0.507);
 z-index: 1;
-position: absolute;
+position: fixed;
 justify-content: center;
 align-content: space-around;
 margin: auto;

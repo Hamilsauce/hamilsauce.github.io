@@ -1,130 +1,4 @@
 {
-    "bookmarks.backgroundLineColor": "rgba(150, 200, 220, 0.1)",
-    "bookmarks.navigateThroughAllFiles": true,
-    "bookmarks.saveBookmarksInProject": true,
-    "bookmarks.useWorkaroundForFormatters": true,
-    "breadcrumbs.enabled": true,
-    "debug.console.fontFamily": "InputSans, sans-serif",
-    "diffEditor.renderSideBySide": false,
-    "editor.cursorBlinking": "phase",
-    "editor.cursorSmoothCaretAnimation": true,
-    "editor.cursorStyle": "underline",
-    "editor.cursorWidth": 5,
-    "editor.defaultFormatter": "HookyQR.beautify",
-    "editor.find.autoFindInSelection": true,
-    "editor.fontLigatures": false,
-    "editor.fontSize": 15,
-    "editor.formatOnType": true,
-    "editor.letterSpacing": 1.1,
-    "editor.lineHeight": 20,
-    "editor.lineNumbers": "interval",
-    "editor.mouseWheelZoom": true,
-    "editor.parameterHints.cycle": true,
-    "editor.suggestLineHeight": 19,
-    "emmet.triggerExpansionOnTab": true,
-    "eslint.alwaysShowStatus": true,
-    "eslint.autoFixOnSave": true,
-    "eslint.experimental.incrementalSync": true,
-    "eslint.lintTask.enable": true,
-    "explorer.confirmDelete": false,
-    "files.autoSave": "afterDelay",
-    "git.autofetch": true,
-    "html-css-class-completion.enableEmmetSupport": true,
-    "jshint.lintHTML": true,
-    "linenote.lineColor": "rgba(150, 160, 200, 0.1)",
-    "linenote.rulerColor": "rgba(5, 255,00.4)",
-    "liveshare.account": "jake@seahag.onmicrosoft.com",
-    "peacock.darkenLightenPercentage": 0,
-    "peacock.darkForegroundColor": "#666666",
-    "peacock.surpriseMeOnStartup": true,
-    "scm.alwaysShowActions": true,
-    "sync.autoDownload": true,
-    "sync.forceDownload": true,
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorStyle": "underline",
-    "terminal.integrated.drawBoldTextInBrightColors": false,
-    "terminal.integrated.fontFamily": "'Input Mono Narrow', monospace",
-    "terminal.integrated.fontSize": 15,
-    "terminal.integrated.fontWeight": "400",
-    "terminal.integrated.letterSpacing": 1,
-    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
-    "turboConsoleLog.addSemicolonInTheEnd": true,
-    "vetur.format.options.tabSize": 2,
-    "vsicons.dontShowNewVersionMessage": true,
-    "window.autoDetectHighContrast": false,
-    "window.newWindowDimensions": "inherit",
-    "window.openFoldersInNewWindow": "on",
-    "window.zoomLevel": 0,
-    "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Flatland Monokai",
-    "workbench.editor.showIcons": true,
-    "workbench.settings.editor": "json",
-    "workbench.settings.openDefaultKeybindings": true,
-    "workbench.sideBar.location": "right",
-    
-    "mssql.connections": [
-        {
-            "server": "HAMTOP2000\\SQLEXPRESS",
-            "database": "amibase",
-            "authenticationType": "Integrated",
-            "profileName": "Amiprofile",
-            "password": ""
-        },
-        {
-            "Server": "HAMTOP2000\\SQLEXPRESS",
-            "database": "AdventureWorksDW2014",
-        }
-    ],
-    "editor.snippetSuggestions": "top",
-    "workbench.iconTheme": "vscode-icons",
-    "[javascript]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    },
-    "editor.renderControlCharacters": false,
-    "editor.renderWhitespace": "none",
-    "[html]": {
-        "editor.defaultFormatter": "HookyQR.beautify",
-    },
-    "editor.minimap.enabled": true,
-    "window.menuBarVisibility": "toggle",
-    "multiCommand.commands": [
-        {
-            "command": "multiCommand.makeRoom",
-            "sequence": [
-                "workbench.action.toggleSidebarVisibility",
-                "workbench.action.toggleActivityBarVisibility"
-            ]
-        }
-    ],
-    "sqltools.connections": [
-        {
-            "askForPassword": false,
-            "connectionTimeout": 30,
-            "database": "AdventureWorksDW2014",
-            "dialect": "MSSQL",
-            "name": "SqlSeverConnection",
-            "password": "Nellydog1",
-            "port": 1434,
-            "server": "HAMTOP2000\\SQLEXPRESS",
-            "username": "HAMTOP2000\\jacob"
-        }
-    ],
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "search.location": "panel",
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[css]": {
-        "editor.defaultFormatter": "HookyQR.beautify"
-    }
-}
-
-
-
-
-{
 	"folders": [
 		{
 			"path": "C:\\Users\\jacob\\source\\hamilsauce.github.io\\ti4-randomizer"
@@ -132,36 +6,39 @@
 	],
 	"settings": {
 		"workbench.colorCustomizations": {
-			"activityBar.border": "#9e9e9e",
-			"panelTitle.activeBorder": "#e0e0e0d3",
-			"editorGroupHeader.tabsBackground": "#1213143d",
-			"editor.background": "#292b3031",
-			"sideBar.background": "#2b313691",
-			"sideBarSectionHeader.background": "#191b1d31",
+			"activityBar.border": "#3c454e",
+			"panelTitle.activeBorder": "#bbbbbbc4",
+			"editorGroupHeader.tabsBackground": "#343a408e",
+			"editor.background": "#36393f13",
+			"sideBar.background": "#343a408e",
+			"sideBarSectionHeader.background": "#3c454e",
 			"sideBarTitle.foreground": "#e0e0e0d3",
-			"statusBar.border": "#bbbbbbea",
-			"statusBarItem.activeBackground": "#317997",
-			"tab.activeBackground": "#666b7783",
+			"statusBar.border": "#bbbbbb67",
+			"statusBarItem.activeBackground": "#7c7c7c",
+			"tab.activeBackground": "#3c454e",
 			"tab.inactiveBackground": "#343a40a6",
 			"tab.inactiveForeground": "#e0e0e06e",
+			"tab.activeBorder": "#bbbbbbc4",
 			"terminal.background": "#202020",
-			"titleBar.border": "#bbbbbb02",
-			"breadcrumb.background": "#191b1d31",
-			"activityBar.background": "#e0e0e0d3",
+			"titleBar.border": "#bbbbbb59",
+			"breadcrumb.background": "#3c454e",
+			"activityBar.background": "#bbbbbb",
 			"activityBar.foreground": "#343a40f5",
 			"activityBar.inactiveForeground": "#6666667a",
 			"activityBarBadge.background": "#343a40f5",
 			"activityBarBadge.foreground": "#e0e0e0d3",
-			"titleBar.activeBackground": "#2c3135ec",
+			"titleBar.activeBackground": "#3c454e",
 			"titleBar.inactiveBackground": "#e7e7e799",
 			"titleBar.activeForeground": "#e0e0e0ef",
 			"titleBar.inactiveForeground": "#66666699",
-			"statusBar.background": "#343a40f5",
+			"statusBar.background": "#3c454e",
 			"statusBarItem.hoverBackground": "#40464ee0",
 			"statusBar.foreground": "#e0e0e0d3"
 		},
 		"liveServer.settings.port": 5501,
-		"peacock.color": "#e7e7e7",
+		// "peacock.color": "#e7e7e7",
+		"jake.autoDetect": "on",
+		"jshint.options": {"esversion": 6}
 		// "peacock.color": "#5f9c10f8"
 	}
 }

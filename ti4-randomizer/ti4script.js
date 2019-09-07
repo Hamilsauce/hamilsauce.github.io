@@ -6,6 +6,8 @@ const resetButton = document.querySelector('#reset-btn');
 const selectAllButton = document.querySelector('#select-btn');
 const clearButton = document.querySelector('#clear-btn');
 const raceChecks = document.querySelectorAll('.raceBox');
+const settingsForm = document.querySelector('#settings-form');
+
 
 
 
@@ -25,16 +27,30 @@ playerCounter.addEventListener('change', () => {
     return addInputs(playerCount);
 });
 
-submitButton.addEventListener('click', () => {
-    //on submit button, dole races and display 
-    let nameArr = filterNames(playerNames);
-    raceList = getRaceList();
+settingsForm.addEventListener('submit', e => {
+    e.preventDefault();
 
-    addPlayer(nameArr);
-    doleOut(raceList);
-    displays();
-    getResultHeight();
+       //on submit button, dole races and display 
+       let nameArr = filterNames(playerNames);
+       raceList = getRaceList();
+   
+       addPlayer(nameArr);
+       doleOut(raceList);
+       displays();
+       getResultHeight();
+
+    
 });
+// submitButton.addEventListener('click', () => {
+//     //on submit button, dole races and display 
+//     let nameArr = filterNames(playerNames);
+//     raceList = getRaceList();
+
+//     addPlayer(nameArr);
+//     doleOut(raceList);
+//     displays();
+//     getResultHeight();
+// });
 
 selectAllButton.addEventListener('click', () => {
     raceChecks.forEach(r => {
@@ -53,6 +69,8 @@ clearButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     document.location.reload(true);
 });
+
+
 
 
 //See button HTML in addInput() below - function is run everytime a user deselects a text input - adds text content to playername list 
@@ -123,7 +141,7 @@ function addInputs(count) {
            <div class="flexInput">
                 <p class="textbox-label">Player ${i}</p>
                 <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
-                placeholder="Enter a name..." onblur="getPlayerData('#playername-textbox${i}')">
+                placeholder="Enter a name..." onchange="getPlayerData('#playername-textbox${i}')">
             </div>
         `);
     }
@@ -204,6 +222,7 @@ function displays() {
     const resultHeader = document.querySelector('.display-header-controls');
     const resultList = document.querySelector('#result-list');
     const choiceCount = document.querySelector('#choice-counter').value;
+    const detesContainer = document.querySelector('.detes-container');
 
     let pl = players;
     let outText = [];
@@ -212,11 +231,12 @@ function displays() {
         outText.push(p.displayData(choiceCount));
     });
 
-    raceDisplay.style.background = "rgb(255, 255, 255);)";
+    raceDisplay.style.background = "rgb(255, 255, 255)";
     raceDisplay.style.textAlign = "center";
     raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
-
+    resultList.style.userSelect = "text";
+    
     localStorage.setItem('pastResults', JSON.stringify(players));
     clearInputs();
 }
@@ -249,8 +269,8 @@ function clearInputs() {
         n.style.border = '1px solid rgba(40, 44, 48, 0.377)';
     });
     submitButton.disabled = true;
-    resetButton.style.border = "1px solid rgba(4, 4, 4, 0.9)";
-    resetButton.style.color = "rgba(4, 4, 4, 0.9)";
+    resetButton.style.border = "1px solid rgba(255, 255, 255, 0.7)";
+    resetButton.style.color = "rgba(255, 255, 255, 0.7)";
 
     //hide inputs section after everythings been cleand up
     inputColumn.style.display = 'none';
@@ -274,7 +294,7 @@ function clearInputs() {
     `;
     resultHeader.style.display = "none";
     raceDisplay.style.display = "block";
-    raceDisplay.style.background = "rgba(244, 244, 244, 0.95)";
+    raceDisplay.style.background = "rgba(250, 250, 250, 1)";
     raceDisplay.style.textAlign = "left";
     raceDisplay.innerHTML = greetMessage;
 })();

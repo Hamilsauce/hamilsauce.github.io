@@ -10,6 +10,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="https://hamilsauce.github.io/ti4-randomizer/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="./vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"> -->
     <!-- <link rel="stylesheet" href="https://hamilsauce.github.io/ti4-randomizer/ti4style.css"> -->
 
@@ -218,7 +219,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+
                 </div>
 
                 <div class="results-container">
@@ -226,7 +227,7 @@
                         <h5 class="display-header">Race Assignments</h5>
                         <div class="submit-container">
 
-                            <div><input id="submit-btn" class="btn btn-success btn-sm" type="button" value="Dispense!">
+                            <div><input id="submit-btn" class="btn btn-success btn-sm" type="submit" value="Dispense!">
                             </div>
                             <div><input id="reset-btn" class="btn btn-outline-secondary btn-sm" type="button"
                                     value="Reset"></div>
@@ -237,38 +238,42 @@
                 <div class="bottom-container">
                     <input type="button" id="modal-button" value="Show Modal Tech">
                 </div>
-
+                </form>
+                <!--MAIN GRID DIV ENDS -->
             </div>
-            <!--grid-container -->
+
             <div id="modal-menu">
+                <div id="modal-header-container">
+                            <h6>The Modal Record Keeper Man!</h6>
+                </div>
                 <div id="modal-grid">
                     <p class="modal-text">Welcome to the Randomeister
                         Select the races to include in the race draw to the left.
                         Under that, select the number of players to draw races for,
                         and if they should have a choice between two races.
-                    <br> Enter the player names in the textboxes that appear in order for them to be
+                        <br> Enter the player names in the textboxes that appear in order for them to be
                         included.
                         Any textboxes not completed will be ignored by the program.
                         Finally, click "Dispense" and take in the awesome power of automated race randomization!</p>
                     </p>
-                        <div class="modal-cell" id="modal-top">top</div>
-                <!-- <div class="modal-cell" id="modal-cell1">2</div>
+                    <div class="modal-cell" id="modal-top">top</div>
+                    <!-- <div class="modal-cell" id="modal-cell1">2</div>
                 <div class="modal-cell" id="modal-cell2">3</div>
                 <div class="modal-cell" id="modal-cell3">4</div>
                 <div class="modal-cell" id="modal-cell4">5</div> -->
-                <div class="modal-cell" id="modal-cell5">6</div>
-                <div class="modal-cell" id="modal-cell6">7</div>
-                <div class="modal-cell" id="modal-bottom">bottom
+                    <div class="modal-cell" id="modal-cell5">6</div>
+                    <div class="modal-cell" id="modal-cell6">7</div>
+                    <div class="modal-cell" id="modal-bottom">bottom
 
+                    </div>
                 </div>
+
             </div>
-
+            <!-- "row" div ends -->
         </div>
-
-    </div><!-- "row" div -->
+    </div>
     <div class="dimmer" id="modal-backdrop">
 
-    </div>
     </div>
 
 
@@ -279,58 +284,63 @@
     <script src="./ti4script.js"></script>
     <!-- <script src="./playerCode.js"></script> -->
 
-<script>
-(function() {
-    const modal = document.querySelector('#modal-menu');
-    const backdrop = document.querySelector('#modal-backdrop');
-    const modalButton = document.querySelector('#modal-button');
+    <script>
+        (function () {
+            const modal = document.querySelector('#modal-menu');
+            const backdrop = document.querySelector('#modal-backdrop');
+            const modalButton = document.querySelector('#modal-button');
 
-    modalButton.addEventListener('click', () => {
-        showModal(modal, backdrop);
-    });
+            modalButton.addEventListener('click', () => {
+                showModal(modal, backdrop);
+            });
 
-    backdrop.addEventListener('click', () => {
-        backdrop.style.display = "none";
-        modal.style.display = "none";
-    });
+            backdrop.addEventListener('click', () => {
+                backdrop.style.display = "none";
+                modal.style.display = "none";
+            });
 
-    function showModal(modal, backdrop) {
-        const modalText = document.querySelector('.modal-text');
-        let pastPlayers = [];
-        let getPast = JSON.parse(localStorage.getItem('pastResults'));
-      // console.log('getPast: ' + JSON.stringify(getPast));
+            function showModal(modal, backdrop) {
+                const modalText = document.querySelector('.modal-text');
+                let pastPlayers = [];
+                let getPast = JSON.parse(localStorage.getItem('pastResults'));
 
-       
-        getPast.forEach(p => {
-         
-            pastPlayers.push(getKeys(p));
-        });
-    	console.log(pastPlayers.length);
+                console.log('before getKeys');
 
-        modalText.innerHTML = pastPlayers.join('<br>');
-        
-        backdrop.style.display = "block";
-        modal.style.display = "block";
-        
-        return getPast;
-        //return Object.keys(p);
-   
-   }
+                console.log(getPast);
+                console.log(pastPlayers);
 
-	function getKeys (pl) {
-	let pairs = [];
-	Object.keys(pl).forEach(key => {
-		let value = pl[key];
-		pairs.push(`${key}: ${value}<br>`);
-	//console.log(pairs);
-	});
-	return pairs
-}
-})();
+                getPast.forEach(p => {
+                    pastPlayers.push(getKeys(p));
 
+                });
+                console.log('after getKeys');
+                console.log(getPast);
 
+                //console.log(`Object Keys (after getKeys): ${Object.keys(pastPlayers[5])}`);
 
-</script>
+                modalText.innerHTML = pastPlayers.join('<br><br>');
+
+                backdrop.style.display = "block";
+                modal.style.display = "block";
+
+                return getPast;
+                //return Object.keys(p);
+
+            }
+
+            function getKeys(pl) {
+                let pairs = [];
+                Object.keys(pl).forEach(key => {
+                    let value = pl[key];
+                    pairs.push(`${key}: ${value}`);
+
+                    //console.log(pairs);
+                });
+                let joined = pairs.join('<br>');
+                return joined;
+            }
+        })();
+    </script>
 
 </body>
 
