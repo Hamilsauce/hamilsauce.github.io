@@ -8,7 +8,9 @@ const clearButton = document.querySelector('#clear-btn');
 const raceChecks = document.querySelectorAll('.raceBox');
 const settingsForm = document.querySelector('#settings-form');
 
-
+class Player {
+    constructor(id, )
+}
 
 
 let playerNames = [];
@@ -17,7 +19,7 @@ let raceList = [];
 
 //Event Listeners
 playerCounter.addEventListener('change', () => {
-    //Changes name textboxes displayed when player counter changes, returns the textbox form elements 
+    //Changes name textboxes displayed when player counter changes, returns the textbox form elements
     const resultHeader = document.querySelector('.display-header-controls');
     let playerCount = parseInt(playerCounter.value);
 
@@ -30,19 +32,19 @@ playerCounter.addEventListener('change', () => {
 settingsForm.addEventListener('submit', e => {
     e.preventDefault();
 
-       //on submit button, dole races and display 
+       //on submit button, dole races and display
        let nameArr = filterNames(playerNames);
        raceList = getRaceList();
-   
+
        addPlayer(nameArr);
        doleOut(raceList);
        displays();
        getResultHeight();
 
-    
+
 });
 // submitButton.addEventListener('click', () => {
-//     //on submit button, dole races and display 
+//     //on submit button, dole races and display
 //     let nameArr = filterNames(playerNames);
 //     raceList = getRaceList();
 
@@ -73,7 +75,7 @@ resetButton.addEventListener('click', () => {
 
 
 
-//See button HTML in addInput() below - function is run everytime a user deselects a text input - adds text content to playername list 
+//See button HTML in addInput() below - function is run everytime a user deselects a text input - adds text content to playername list
 function getPlayerData(activeTextbox) {
     const box = document.querySelector(activeTextbox);
     let [bVal, boxID] = [box.value, parseInt(box.name.split('').pop()) - 1];
@@ -95,7 +97,7 @@ function getPlayerData(activeTextbox) {
     return playerNames;
 }
 
-//iterate over checklist of races, snag the checked ones, note that for loop is preferable to forEach here because need to reference index of each checklist item/race 
+//iterate over checklist of races, snag the checked ones, note that for loop is preferable to forEach here because need to reference index of each checklist item/race
 function getRaceList() {
     let selectBoxes = [];
 
@@ -131,16 +133,16 @@ function filterNames(names) {
 }
 
 function addInputs(count) {
-    /*for each player (according to counter selection), 1) add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly. 
+    /*for each player (according to counter selection), 1) add text input html to output array, each with player ID label/Id/Name/selectors incremented accordingly.
     Then ) join the array elems and write it to the inner html of the 'player-details-container' div */
     const output = [];
     const resultHeader = document.querySelector('.display-header-controls');
 
     for (let i = 1; i <= count; i++) {
-        output.push( /*html*/ ` 
+        output.push( /*html*/ `
            <div class="flexInput">
                 <p class="textbox-label">Player ${i}</p>
-                <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value="" 
+                <input type="text" class="name-input-field" name="playername-textbox${i}" id="playername-textbox${i}" value=""
                 placeholder="Enter a name..." onchange="getPlayerData('#playername-textbox${i}')">
             </div>
         `);
@@ -150,7 +152,7 @@ function addInputs(count) {
 }
 
 function toggleSubmit() {
-    //show or hide subit buton 
+    //show or hide subit buton
     let textFields = document.querySelectorAll(".name-input-field");
     if (textFields.length > 0) {
         submitButton.style.display = "inline";
@@ -192,7 +194,7 @@ function addPlayer(data) {
                     }
                     let racePick = races.splice(0, 1);
                     console.log(racePick[0]);
-                    
+
                     if (racePick.length == 0) {
                         this.gotRaces.push('No Available Race. Sad!');
                     } else {
@@ -217,7 +219,7 @@ function doleOut(races) {
     console.log(races);
 }
 
-//concats the player displayData() output from each player object and pushes to DOM 
+//concats the player displayData() output from each player object and pushes to DOM
 function displays() {
     const resultHeader = document.querySelector('.display-header-controls');
     const resultList = document.querySelector('#result-list');
@@ -236,7 +238,7 @@ function displays() {
     raceDisplay.innerHTML = outText.join('<br>');
     resultList.style.display = "block";
     resultList.style.userSelect = "text";
-    
+
     localStorage.setItem('pastResults', JSON.stringify(players));
     clearInputs();
 }
@@ -285,9 +287,9 @@ function clearInputs() {
             Select the races to include in the race draw to the left.
             Under that, select the number of players to draw races for, and if they should have a choice between two races
             <br><br>
-            Enter the player names in the textboxes that appear in order for them to be included. Any textboxes not 
-            completed will be ignored by the program. 
-        
+            Enter the player names in the textboxes that appear in order for them to be included. Any textboxes not
+            completed will be ignored by the program.
+
             Finally, click "Dispense" and take in the awesome power of automated race randomization!
             <br><br>
             fin</p>
@@ -322,9 +324,9 @@ function clearInputs() {
             console.log(p);
             pastPlayers.push(Object.values(p).join('<br>'));
         });
-    
+
         modalText.innerHTML = pastPlayers.join('<br><br>');
-        
+
         backdrop.style.display = "block";
         modal.style.display = "block";
     }
