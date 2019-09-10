@@ -184,8 +184,8 @@ margin: auto;
 padding: 5px;
 margin-bottom: 5px;
 margin-top: 10px;
-font-size: 0.85em;
-background: rgb(255, 255, 255, 1);
+font-size: 1em;
+background: rgb(255, 255, 255);
 border-radius: 5px;
 
 }
@@ -500,8 +500,8 @@ margin: auto;
 /* padding: 5px; */
 height: 400px;
 width: 400px;
-background: rgba(65, 75, 78, 0.746);
-border-radius: 10%;
+background: rgba(65, 75, 78, 0.836);
+border-radius: 5%;
 border: 4px solid rgba(39, 43, 44, 0.308);
 box-shadow: 1px 1px 7px 5px rgba(10, 10, 10, 0.363);
 z-index: 3;
@@ -513,7 +513,7 @@ overflow:visible;
 top: 2%;
 text-align: left;
 padding: 0;
-margin: 0;
+
 /* transition: all 5s; */
 box-sizing: border-box;
 display: grid;
@@ -525,7 +525,7 @@ align-content: center;
 height: 325px;
 width: 95%;
 margin: auto;
-background: rgba(255, 255, 255, 0.76);
+background: rgba(255, 255, 255, 0.795);
 border-radius: 5%;
 border: 3px solid rgba(255, 255, 255, 0.274);
 box-shadow: 2px 2px 5px 5px rgba(35, 38, 41, 0.835);
@@ -540,11 +540,11 @@ overflow: hidden;
     margin: auto;
     justify-content: center;
     padding-top: 10px;
-    
-    color: rgba(214, 216, 219, 0.918);
+
+    color: rgba(235, 235, 235, 0.911);
 }
 #modal-header-container>h6 {
-    
+    font-size: 1.5em;
     text-shadow: 0px 0px 3px 3px rgba(235, 24, 235, 0.835);
 }
 
@@ -579,8 +579,15 @@ height: 100%;
 width: 100%;
 }
 .modal-cell {
-    border: 1px solid white;
-    background: rgba(10, 10, 10, 0.363);
+    border: 2px solid rgba(255, 255, 255, 0.712);
+    border-radius: 20px;
+    background: rgba(38, 39, 44, 0.486);
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1em;
+    font-weight: 400;
+    box-shadow: 0px 0px 4px 3px inset rgba(46, 45, 54, 0.219);
 }
 
 #modal-button {
