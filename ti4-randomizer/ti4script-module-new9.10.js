@@ -16,6 +16,9 @@ let players = [];
 let raceList = [];
 
 //Event Listeners
+
+document.querySelector('#modal-button').addEventListener('click', e => modularMan.modularity());
+
 playerCounter.addEventListener('change', () => {
     const resultHeader = document.querySelector('.display-header-controls');
     let playerCount = parseInt(playerCounter.value);
@@ -61,25 +64,22 @@ resetButton.addEventListener('click', () => {
 function getPlayerData(nameBoxes) {
 
     nameBoxes.forEach(box => {
-  //  const box = document.querySelector(activeTextbox);
-    let [bVal, boxID] = [box.value, parseInt(box.name.split('').pop()) - 1];
+        //Input Validation
+        let [bVal, boxID] = [box.value, parseInt(box.name.split('').pop()) - 1];
 
-    if (bVal.length === 0 || bVal == ' ') {
-        playerNames[boxID] = '';
-        box.style.border = '1px solid rgba(40, 44, 48, 0.377)';
-    } else if (bVal == playerNames[boxID]) {
-        box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
-
-    } else if (playerNames.length > 6) {
-        alert("Already Got enough players. Click Reset to start over.");
-    } else {
-        box.style.color = "rgb(100, 100, 100)";
-        box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
-
-        playerNames[boxID] = [boxID, cleanNames(bVal)];
-    }
-        console.log(playerNames);
-
+        if (bVal.length === 0 || bVal == ' ') {
+            playerNames[boxID] = '';
+            box.style.border = '1px solid rgba(40, 44, 48, 0.377)';
+        } else if (bVal == playerNames[boxID]) {
+            box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
+        } else if (playerNames.length > 6) {
+            alert("Already Got enough players. Click Reset to start over.");
+        } else {
+            box.style.color = "rgb(100, 100, 100)";
+            box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
+            playerNames[boxID] = [boxID, cleanNames(bVal)];
+        }
+            console.log(playerNames);
     });
     return playerNames;
 }
@@ -202,7 +202,7 @@ function doleOut(races) {
     let pl = players;
     for (let i = 0; i < 2; i++) {
         pl.forEach(p => {
-            let pick = p.getRace(races);
+        p.getRace(races);
         });
     }
     console.log(races);
@@ -210,10 +210,8 @@ function doleOut(races) {
 
 //concats the player displayData() output from each player object and pushes to DOM
 function displays() {
-    const resultHeader = document.querySelector('.display-header-controls');
     const resultList = document.querySelector('#result-list');
     const choiceCount = document.querySelector('#choice-counter').value;
-    const detesContainer = document.querySelector('.detes-container');
 
     let pl = players;
     let outText = [];
@@ -289,5 +287,5 @@ function clearInputs(cCount) {
     raceDisplay.style.textAlign = "left";
     raceDisplay.innerHTML = greetMessage;
 
-    modularMan.modularity();
+
 })();

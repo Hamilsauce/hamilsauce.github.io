@@ -15,7 +15,7 @@ const winCombos = [
     [6, 4, 2]
 ];
 
-const cells = document.querySelectorAll('.cell');        
+const cells = document.querySelectorAll('.cell');
 startGame();
 
 
@@ -27,11 +27,11 @@ function startGame() {
 
     for (let i = 0; i < cells.length; i++) {      //game reset - remove any existing values from  in the tic tac toe board
         cells[i].innerText = ' ';
-       
+
         cells[i].style.removeProperty('background-color');
         cells[i].style.color = "rgba(43, 40, 40, 0.781)";
         cells[i].addEventListener('click', turnClick, false);
-    }   
+    }
 }
 
 //Since human and AI turns must be treated differetnyl, their actions get separate functions
@@ -45,7 +45,7 @@ function turnClick(square) {
     }
 }
 
-
+{sdsd}
 function turn(squareId, player) {
     origBoard[squareId] = player;
     document.getElementById(squareId).innerText = player;
@@ -55,9 +55,9 @@ function turn(squareId, player) {
 }
 
 function checkWin(board, player ) {
-	let plays = board.reduce((a, e, i) => 
+	let plays = board.reduce((a, e, i) =>
 		(e === player) ? a.concat(i) : a, []);
-    
+
     let gameWon = null;
     for (let [index, win] of winCombos.entries()) {
         if (win.every(elem => plays.indexOf(elem) > -1)) {
@@ -86,7 +86,7 @@ function declareWinner(who) {
     document.querySelector('.endgame').style.display = "block";
     document.querySelector('.button-container').style.display = "block";
     document.querySelector('.endgame, .text').innerText = who;
-   
+
 }
 
 
@@ -104,7 +104,7 @@ function checkTie() {                                   //if no available spaces
     if (emptySquares().length == 0) {
         for (let i = 0; i < cells.length; i++) {
             cells[i].style.backgroundColor = "rgba(66, 170, 68, 0.7)";
-            
+
             if (cells[i].innerText == 'O') {
                 cells[i].style.color = "#3689e2";
             } else {
@@ -113,7 +113,7 @@ function checkTie() {                                   //if no available spaces
             cells[i].removeEventListener('click', turnClick, false);
         }
         declareWinner('Tie Game!');
-        
+
         return true;
     } else {
         return false;
