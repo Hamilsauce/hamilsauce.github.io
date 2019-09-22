@@ -45,7 +45,6 @@ function turnClick(square) {
     }
 }
 
-{sdsd}
 function turn(squareId, player) {
     origBoard[squareId] = player;
     document.getElementById(squareId).innerText = player;
