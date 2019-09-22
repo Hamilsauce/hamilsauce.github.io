@@ -158,7 +158,6 @@ position: relative;
     background-color: var(--card-backgroundColor);
     text-decoration: none;
 position: relative;
-    justify-content: ce
     padding: 20px;
     margin-top: 20px;
     box-shadow: var(--card-shadow);
@@ -169,7 +168,7 @@ position: relative;
 
 .card a {
     color: var(--brown-text);
-    text-decoration: none;
+    text-decoration: none
 
 }
 
@@ -178,14 +177,6 @@ position: relative;
     color: blue;
 }
 
-.content-box {
-    display: flex;
-    margin: 5px;
-    widows: 100%;
-    justify-content: center;
-    
-
-}
 /* Clear floats after the columns */
 .row:after {
     content: "";
@@ -213,12 +204,12 @@ body {
     background-color: rgba(219, 219, 208, 0.479);
     } */
     .content-container {
-        /* display: flex; */
+        display: flex;
         position: relative;
         padding: 5%;
         margin-bottom: 2%;
-        height: auto;
-        width: auto;
+        height: 550px;
+        width: 80%;
         /* box-sizing: border-box; */
         align-content: flex-start;
         justify-content: center;
