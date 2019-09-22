@@ -62,7 +62,7 @@ body {
     /* position: fixed; */
 	justify-content: center;
 	align-content:center;
-	padding: 10px;
+	padding: 15px;
     margin: auto;
     /* top: 150px; */
 	background: rgba(155, 155, 155, 0.7);
@@ -70,8 +70,8 @@ body {
     width: 430px;
     /* height:  */
     background-image: linear-gradient(to top left, rgba(190, 190, 190, 0.705) , rgba(255, 255, 255, 0.747));
-border-radius: 10px;
-	border: 8px outset rgba(165, 165, 165, 0.63);
+border-radius: 20px;
+	border: 12px outset rgba(165, 165, 165, 0.63);
 }
 /* #container1  {
 	box-sizing: border-box;
@@ -248,7 +248,7 @@ button:active{
 }
 
 @media screen and (max-width:700px) {
-#mainLeaderboard {height:60px}
+#mainLeaderboard {height:100px}
 #div-gpt-ad-1422003450156-0 {float:none;margin-left:auto;margin-right:auto}
 #div-gpt-ad-1422003450156-3 {float:none;margin-left:auto;margin-right:auto}
 }
@@ -302,9 +302,10 @@ startGame()
 
 function startGame() {
     myGameArea = new gamearea();
-    myGamePiece = new component(50, 30, "red", 10, 75);
-    myscore = new component("15px", "Consolas", "black", 220, 25, "text");
+    myGamePiece = new component(30, 30, "red", 10, 75);
+    myscore = new component("25px", "Arial", "black", 220, 25, "text");
     myGameArea.start();
+
 }
 
 function gamearea() {
@@ -363,6 +364,9 @@ function component(width, height, color, x, y, type) {
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
         }
+       if(crash == true) {
+          this.color = "blue";
+       }
         return crash;
     }
 }
@@ -390,8 +394,8 @@ function updateGameArea() {
             min = 50;
             max = 100;
             gap = Math.floor(Math.random()*(max-min+1)+min);
-            myObstacles.push(new component(10, height, "green", x, 0));
-            myObstacles.push(new component(10, x - height - gap, "green", x, height + gap));
+            myObstacles.push(new component(50, height, "teal", x, 0));
+            myObstacles.push(new component(35, x - height - gap, "darkblue", x, height + gap));
         }
         for (i = 0; i < myObstacles.length; i += 1) {
             myObstacles[i].x += -1;
@@ -401,37 +405,38 @@ function updateGameArea() {
         myscore.update();
         myGamePiece.x += myGamePiece.speedX;
         myGamePiece.y += myGamePiece.speedY;
+
         myGamePiece.update();
     }
 }
 
 function everyinterval(n) {
-    if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
+    if ((myGameArea.frameNo / n) % 0.7 == 0) {return true;}
     return false;
 }
 
 function moveup(e) {
-    myGamePiece.speedY = -1;
+    myGamePiece.speedY = -2;
 }
 
 function movedown() {
-    myGamePiece.speedY = 1;
+    myGamePiece.speedY = 2;
 }
 
 function moveleft() {
-    myGamePiece.speedX = -1;
+    myGamePiece.speedX = -2;
 }
 
 function moveright() {
-    myGamePiece.speedX = 1;
+    myGamePiece.speedX = 2;
 }
 
 function clearmove(e) {
-    myGamePiece.speedX = 0;
+    myGamePiece.speedX = 0.2;
     myGamePiece.speedY = 0;
 }
 startGame();
-
+console.log('gamepiece = '+  Object.entries(myGamePiece));
 </script>
 
 
