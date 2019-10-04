@@ -15,7 +15,7 @@ let playerNames = [];
 let players = [];
 let raceList = [];
 
-//Event Listeners
+/* Event Listeners */
 
 document.querySelector('#modal-button').addEventListener('click', e => modularMan.modularity());
 
@@ -33,13 +33,13 @@ playerCounter.addEventListener('change', () => {
 settingsForm.addEventListener('submit', e => {
     e.preventDefault();
 
-       let nameArr = filterNames(getPlayerData(nameInputFields));
-       raceList = getRaceList();
+    let nameArr = filterNames(getPlayerData(nameInputFields));
+    raceList = getRaceList();
 
-       addPlayer(nameArr);
-       doleOut(raceList);
-       displays();
-       getResultHeight();
+    addPlayer(nameArr);
+    doleOut(raceList);
+    displays();
+    getResultHeight();
 });
 
 selectAllButton.addEventListener('click', () => {
@@ -60,6 +60,8 @@ resetButton.addEventListener('click', () => {
     document.location.reload(true);
 });
 
+/* End of Eventlisteners */
+
 //See button HTML in addInput() below - function is run everytime a user deselects a text input - adds text content to playername list
 function getPlayerData(nameBoxes) {
 
@@ -79,7 +81,7 @@ function getPlayerData(nameBoxes) {
             box.style.border = 'px outset  rgba(0, 18, 5, 0.3)';
             playerNames[boxID] = [boxID, cleanNames(bVal)];
         }
-            console.log(playerNames);
+        console.log(playerNames);
     });
     return playerNames;
 }
@@ -99,8 +101,7 @@ function getRaceList() {
 }
 
 function cleanNames(name) {
-//trim trailing spaces from names (split name into array, if a space is found at end, return the new array sans the space, if no trialing space, return original array)
-
+    //trim trailing spaces from names (split name into array, if a space is found at end, return the new array sans the space, if no trialing space, return original array)
     let chars = name.split('');
 
     if (chars.pop() == " ") {
@@ -111,6 +112,7 @@ function cleanNames(name) {
 }
 
 function filterNames(names) {
+    // filter out elements in playerName array that are empty or only space
     let trimmed = names.filter(n => {
         if ((n != '' && n != ' ')) {
             console.log('passing ' + n);
@@ -142,7 +144,7 @@ function addInputs(count) {
 }
 
 function toggleSubmit() {
-    //show or hide subit buton
+    //show or hide submit buton
     let textFields = document.querySelectorAll(".name-input-field");
     if (textFields.length > 0) {
         submitButton.style.display = "inline";
@@ -177,6 +179,7 @@ function addPlayer(data) {
                     `;
                     return output;
                 },
+
                 getRace: function (races) {
                     for (let i = races.length - 1; i > 0; i--) {
                         let j = Math.floor(Math.random() * (i + 1));
@@ -202,14 +205,15 @@ function doleOut(races) {
     let pl = players;
     for (let i = 0; i < 2; i++) {
         pl.forEach(p => {
-        p.getRace(races);
+            p.getRace(races);
         });
     }
     console.log(races);
 }
 
-//concats the player displayData() output from each player object and pushes to DOM
+
 function displays() {
+    //concats the player displayData() output from each player object and pushes to DOM
     const resultList = document.querySelector('#result-list');
     const choiceCount = document.querySelector('#choice-counter').value;
 
@@ -226,11 +230,14 @@ function displays() {
     resultList.style.display = "block";
     resultList.style.userSelect = "text";
 
+    //move player data to storage session data gets cleared
+
     localStorage.setItem('pastResults', JSON.stringify(players));
     clearInputs(choiceCount);
 }
 
 function getResultHeight() {
+    // just used to fix some styling depending on height (due to scroll bar making it look shitty)
     let resultY = raceDisplay.clientHeight;
 
     if (parseInt(resultY) >= 350) {
@@ -267,6 +274,7 @@ function clearInputs(cCount) {
 }
 
 (function createGreeting() {
+    //creates the greeting display that shows in the Race Assignments section after the dispense button's been clicked
     const resultHeader = document.querySelector('.display-header-controls');
     const greetMessage = /*html*/ `
         <h6>Welcome to the Randomeister</h6>
@@ -286,6 +294,4 @@ function clearInputs(cCount) {
     raceDisplay.style.background = "rgba(250, 250, 250, 1)";
     raceDisplay.style.textAlign = "left";
     raceDisplay.innerHTML = greetMessage;
-
-
 })();
