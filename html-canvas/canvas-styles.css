@@ -1,0 +1,119 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    background: rgba(248, 253, 230, 0.452);
+}
+
+#content-container {
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    /* justify-content: center;
+    align-content: center; */
+    margin: auto;
+    padding: 20px;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    top: 50px;
+    border: 2px solid rgba(216, 216, 216, 0.671);
+    background: rgba(245, 245, 245, 0.397);
+    box-shadow: 0px 0px 15px 6px rgba(200, 200, 200, 0.5)
+}
+
+h1 {
+    /* margin: auto; */
+    right: 50%;
+    text-align: center;
+    color: rgba(80, 80, 80, 0.527)
+}
+
+#canvas-container {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    padding: 20px;
+    width: 350px;
+    width: 350px;
+    background: rgba(236, 236, 236, 0.39);
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 50%;
+    /* overflow: scroll; */
+    box-shadow: 0px 0px 25px 15px rgba(223, 223, 223, 0.842)
+}
+
+#canvas-test {
+    background: rgba(255, 255, 255, 0.884);
+    border-radius: 50%;
+    border: 2px solid rgb(216, 216, 216);
+    box-shadow: 0px 0px 15px 8px inset rgb(241, 241, 241)
+}
+
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+    /* background: blue; */
+}
+
+#fuck-button {
+    width: 125px;
+    height: 125px;
+    color: aliceblue;
+    background: rgba(77, 168, 74, 0.829);
+    border: 5px solid rgba(250, 250, 250, 0.856);
+    border-radius: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    box-shadow: 0px 0px 15px 5px rgba(107, 107, 107, 0.555)
+}
+
+#unfuck-button {
+    text-align: center;
+    width: 125px;
+    height: 125px;
+    color: aliceblue;
+    background: rgba(187, 28, 28, 0.829);
+    border: 5px solid rgba(250, 250, 250, 0.856);
+    border-radius: 50%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4rem;
+    box-shadow: 0px 0px 15px 5px rgba(107, 107, 107, 0.555)
+}
+
+#unfuck-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 10px rgba(90, 90, 90, 0.548);
+    background: rgb(207, 35, 35);
+}
+
+#unfuck-button:active {
+    box-shadow: 0px 0px 20px 10px inset rgba(90, 90, 90, 0.548);
+    background: rgb(209, 3, 3);
+
+}
+
+#unfuck-button:focus {
+    outline: none;
+}
+
+#fuck-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 10px rgba(90, 90, 90, 0.548);
+    background: rgba(39, 156, 35, 0.829);
+    ;
+}
+
+#fuck-button:active {
+    box-shadow: 0px 0px 20px 10px inset rgba(90, 90, 90, 0.548);
+    background: rgba(36, 133, 33, 0.986);
+
+}
+
+#fuck-button:focus {
+    outline: none;
+}
