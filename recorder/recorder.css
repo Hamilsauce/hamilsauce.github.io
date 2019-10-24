@@ -1,0 +1,164 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button:focus {
+    outline: 0;
+}
+
+/* button {
+    font-family: 'Segoe UI';
+    font-weight: 900;
+    font-size: 28px;
+    font-weight: bolder;
+    padding: 0px 10px;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
+    border: 3px solid rgb(94, 94, 94);
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px rgb(0, 0, 0);
+} */
+
+#recorder-header {
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(45, 67, 83, 0.842);
+
+}
+
+#content-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    margin: auto;
+    padding: 15px;
+    margin-top: 150px;
+    justify-content: center;
+    align-items: center;
+    background: rgb(202, 221, 230);
+    border: 10px solid rgba(57, 83, 100, 0.747);
+    border-radius: 15px;
+    box-shadow: 0px 0px 35px 8px inset rgba(255, 255, 255, 0.747);
+
+}
+
+
+#button-container {
+    min-width: 300px;
+    margin: auto;
+    background: rgba(87, 109, 121, 0.678);
+    border-radius: 7px;
+    border: 3px inset rgba(77, 115, 134, 0.356);
+    box-shadow: 0px 0px 35px 8px inset rgba(45, 67, 83, 0.342);
+
+}
+
+#shadow-button {
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px rgba(51, 68, 80, 0.438);
+}
+
+#button-display {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+#record-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    background: rgb(184, 7, 7);
+    border: 1px solid rgba(255, 255, 255, 0.63);
+    border-radius: 50%;
+    box-shadow: 0px 0px 25px inset rgba(107, 11, 11, 0.377);
+    transition: 700ms color ease, 1000ms border ease, 2000ms box-shadow ease;
+    color: transparent;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#record-button:hover {
+    border: 1px solid rgba(255, 255, 255, 0.815);
+
+    color: rgba(255, 235, 235, 0.884);
+    /* background: rgb(214, 8, 8); */
+    box-shadow: 0px 0px 20px inset rgba(248, 198, 198, 0.76);
+}
+
+#record-button:active {
+    transition: 100ms border ease;
+    border: 1px solid rgba(255, 255, 255, 0.815);
+
+    color: rgba(255, 235, 235, 0.884);
+    /* background: rgb(214, 8, 8); */
+    box-shadow: 0px 0px 20px inset rgba(80, 23, 23, 0.76);
+
+}
+
+
+#recorded-audio {
+    height: 30px;
+    margin: 0;
+    padding: 0%;
+    box-shadow: 0px 0px 5px rgba(69, 82, 88, 0.473);
+    background: transparent;
+    border-radius: 25px;
+    display: block;
+}
+
+#recorded-audio>input {
+    fill: pink;
+    ;
+    color: pink background pink;
+    ;
+
+}
+
+/* pause button
+#pause-record {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    box-sizing: border-box;
+    height: 100px;
+    width: 50px;
+    background: transparent;
+    border-width: 0px 20px 0px 20px;
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 0%;
+    box-shadow: 0px 0px 2px rgb(255, 255, 255);
+     transition: 500ms all ease;
+     color: transparent;
+     font-size: 70px;
+     font-weight: bolder;
+}
+
+#pause-record:hover {
+    border-color: #000000;
+    color: black;
+
+}
+
+#pause-record:active {
+    border-width: 30px 20px 5px 30px;
+    height: 90px;
+    width: 120px;
+    border-radius: 50%;
+}
+
+#pause-record:blur {
+    border-width: 30px 5px 20px 30px;
+
+}
+*/
