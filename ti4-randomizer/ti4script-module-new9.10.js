@@ -2,8 +2,8 @@ import * as modularMan from "./modal-component.js";
 
 const playerCounter = document.querySelector('#player-counter');
 const nameInputContainer = document.querySelector('.player-details-container');
-const raceDisplay = document.getElementById('result-list');
 const submitButton = document.querySelector('#submit-btn');
+const raceDisplay = document.getElementById('result-list');
 const resetButton = document.querySelector('#reset-btn');
 const selectAllButton = document.querySelector('#select-btn');
 const clearButton = document.querySelector('#clear-btn');
