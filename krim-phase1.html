@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Hella</title>
+     <link rel='icon' href='./krim-favicon.ico' type='image/x-icon' />
+    <title>krim-phase1</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <!-- <link rel="stylesheet" type="text/css" href="./krimreset1.css"> -->
     <style>
         html {
-            background-color: rgb(13, 20, 30, 0.5);
+            background-color: #282329;
             background-repeat: no-repeat;
-            background-image: url(https://i2.wp.com/musicaficionado.blog/wp-content/uploads/2019/10/In-The-Court-of-the-Crimson-King-Front-Cover.jpg);
+            background-image: url(./krimages/krimson-bg.jpg);
+            /* background-image: url(https://i2.wp.com/musicaficionado.blog/wp-content/uploads/2019/10/In-The-Court-of-the-Crimson-King-Front-Cover.jpg); */
             background-size: cover;
             /* background-position: center 6vw; */
         }
@@ -52,23 +54,24 @@
         }
 
         #grid {
-         grid-gap: 0.5vw;
-         grid-template-rows: 6vw;
-         grid-auto-rows: 8vw;
-         grid-template-columns: 1fr repeat(6, 3fr) 1fr;
+            grid-gap: 0.5vw;
+            width: 80vw;
+            grid-template-rows: 6vw;
+            grid-auto-rows: 8vw;
+            grid-template-columns: 1fr repeat(6, 3fr) 1fr;
         }
 
         #grid>div {
             position: relative;
-                padding: 3px;
-      background-color: rgba(13, 20, 30, 0.95);
-      outline-style: solid;
-      outline-color: rgba(25, 24, 29, 0.8);
-      outline-width: 0.7vw;
+            padding: 3px;
+            background-color: rgba(13, 20, 30, 0.95);
+            outline-style: solid;
+            outline-color: rgba(25, 24, 29, 0.8);
+            outline-width: 0.7vw;
             -webkit-animation-name: grid-item-phase2;
-            -webkit-animation-duration: 30s;
+            -webkit-animation-duration:10s;
             animation-name: grid-item-phase2;
-            animation-duration: 30s;
+            animation-duration: 10s;
             animation-iteration-count: infinite;
             animation-direction: alternate-reverse;
 
@@ -104,8 +107,7 @@
         div#row8a,
         div#row8b,
         div#row9a,
-        div#row12a
-        div#row2b {
+        div#row12a div#row2b {
             grid-row-end: span 2;
         }
 
@@ -115,330 +117,337 @@
             outline-width: 0.v7w;
             transition: 1000ms outline-width ease-in-out, 800ms background-color ease-in-out;
         }
-            #filler {
-                width: 100vw;
-                height: 30vw;
-                background-color: rgba(151, 150, 151, 0.5);
-                margin-left: -1vw;
-            }
+
+        #filler {
+            width: 100vw;
+            height: 30vw;
+            background-color: rgba(151, 150, 151, 0.5);
+            margin-left: -1vw;
+        }
 
 
-            body {
+        body {
 
-                font-family: 'Roboto Slab', serif;
-                font-size: 1.8vw;
-                height: 60vw;
-                width: 100vw;
+            font-family: 'Roboto Slab', serif;
+            font-size: 1.8vw;
+            height: 60vw;
+            width: 100vw;
 
-                color: #D3E6D9;
-            }
+            color: #D3E6D9;
+        }
 
-            a {
-                color: #D3E6D9;
-            }
+        a {
+            color: #D3E6D9;
+        }
 
-            p {
-                position: absolute;
-                bottom: 0;
-                margin-bottom: 0.4vw;
-            }
+        p {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 0.4vw;
+        }
 
-            #row2b {
-                text-align: right;
-            }
+        #row2b {
+            text-align: right;
+        }
 
-            #row2b>p {
-                font-family: 'Rozha One', serif;
-                position: relative;
-                font-size: 5vw;
-            }
+        #row2b>p {
+            font-family: 'Rozha One', serif;
+            position: relative;
+            font-size: 5vw;
+        }
 
-            #row2b>p:nth-child(1) {
-                margin-top: 5vw;
-            }
+        #row2b>p:nth-child(1) {
+            margin-top: 5vw;
+        }
 
-            #row2b>p:nth-child(2) {
-                margin-top: -1vw;
-                font-size: 7.5vw;
-            }
+        #row2b>p:nth-child(2) {
+            margin-top: -1vw;
+            font-size: 7.5vw;
+        }
 
-            #grid {
-                display: grid;
-                height: 100vw;
-                width: 100vw;
-                grid-gap: 0.5vw;
-                grid-template-rows: 5vw;
-                grid-auto-rows: 9vw;
-                grid-template-columns: 1fr repeat(1, 3r) 1fr;
-            }
+        #grid {
+            display: grid;
+            height: 100vw;
+            width: 100vw;
+            grid-gap: 0.5vw;
+            grid-template-rows: 5vw;
+            grid-auto-rows: 9vw;
+            grid-template-columns: 1fr repeat(1, 3r) 1fr;
+        }
 
-            #grid>div {
-                position: relative;
-                padding: 3px;
-                background-color: rgba(13, 20, 30, 0.55);
-                outline-style: solid;
-                outline-color: rgba(25, 24, 29, 0.8);
-                outline-width: 1vw;
-                -webkit-animation-name: grid-item-phase2;
-                -webkit-animation-duration: 20s;
-                animation-name: grid-item-phase2;
-                animation-duration: 20s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate-reverse;
-            }
+        #grid>div {
+            position: relative;
+            padding: 3px;
+            background-color: rgba(13, 20, 30, 0.55);
+            outline-style: solid;
+            outline-color: rgba(25, 24, 29, 0.8);
+            outline-width: 1vw;
+            -webkit-animation-name: grid-item-phase2;
+            -webkit-animation-duration: 7s;
+            animation-name: grid-item-phase2;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
 
-            /* Safari 4.0-8.0 */
-            @-webkit-keyframes grid-item-phase2 {
-                /* 0% {}
+        /* Safari 4.0-8.0 */
+        @-webkit-keyframes grid-item-phase2 {
+            /* 0% {}
                             25% {background-color: yellow;}
                             50% {background-color: blue;}
                             100% {background-color: green;} */
+        }
+
+
+        /* Standard syntax */
+        @keyframes grid-item-phase {
+            0% {
+                outline-width: 1vw;
+                background-color: rgba(25, 24, 29, 0.5);
             }
 
-
-            /* Standard syntax */
-            @keyframes grid-item-phase {
-                0% {
-                    outline-width: 1vw;
-                    background-color: rgba(25, 24, 29, 0.5);
-                }
-
-                40% {
-                    outline-width: 0.5vw;
-                    outline-color: rgba(25, 24, 29, 0.2);
-                }
-
-                70% {
-                    outline-width: 0.vw;
-                    outline-color: rgba(41, 9, 16, 0.623);
-                    background-color: rgba(255, 255, 255, 0.2);
-                }
-
-                100% {
-                    outline-width: 1vw;
-                    outline-color: rgba(25, 24, 29, 0.1);
-                }
+            40% {
+                outline-width: 0.5vw;
+                outline-color: rgba(25, 24, 29, 0);
             }
 
-            @keyframes grid-item-phase2 {
-                0% {
-                    outline-width: 1vw;
-                    outline-color: rgba(25, 24, 29, 0.1);
-                }
-
-                40% {
-                    outline-width: 0.vw;
-                    outline-color: rgba(41, 9, 16, 0.623);
-                    background-color: rgba(255, 255, 255, 0.2);
-                }
-
-                70% {
-                    outline-width: 0.5vw;
-                    outline-color: rgba(25, 24, 29, 0.2);
-                }
-
-                100% {
-                    outline-width: 1vw;
-                    background-color: rgba(25, 24, 29, 1);
-                }
-            }
-
-
-
-
-            div#row1a,
-            div#row2a,
-            div#row3a,
-            div#row3b,
-            div#row4a,
-            div#row5a,
-            div#row5b,
-            div#row6a,
-            div#row7a,
-            div#row8a,
-            div#row9a,
-            div#row10a,
-            div#row12a {
-
-
-                background-color: rgba(64, 67, 78, 0.4);
-                -webkit-animation-name: grid-item-phase;
-                -webkit-animation-duration: 10s;
-                animation-name: grid-item-phase;
-                animation-duration: 10s;
-                animation-iteration-count: infinite;
-                animation-direction: alternate-reverse;
-            }
-
-            #row1a,
-            div#row5a {
-                grid-column-end: span 3;
-            }
-
-            #row1b,
-            div#row2b,
-            div#row3b,
-            div#row5c,
-            div#row8a,
-            div#row8b,
-            div#row9a,
-            div#row12a {
-                grid-column-end: span 3;
-                background-color: rgba(47, 51, 56, 0.4);
-            }
-
-            div#row2b {
-                grid-row: span 2;
-            }
-
-
-
-            *:hover {
-                /* border-radius: 6%; */
-                /* border: 2 solid rgba(47, 51, 56, 0.6); */
-
-
-            }
-
-            #grid>div:hover {
+            70% {
+                outline-width: 0.vw;
+                outline-color: rgba(41, 9, 16, 0.623);
                 background-color: rgba(255, 255, 255, 0.2);
-                /* border-radius: 50%; */
-                outline-width: 0.v7w;
-                transition: 1000ms outline-width ease-in-out, 800ms background-color ease-in-out;
-
             }
+
+            100% {
+                outline-width: 1vw;
+                outline-color: rgba(25, 24, 29, 0.8);
+            }
+        }
+
+        @keyframes grid-item-phase2 {
+            0% {
+                outline-width: 1vw;
+                outline-color: rgba(25, 24, 29, 0.1);
+            }
+
+            40% {
+                outline-width: 0.vw;
+                outline-color: rgba(41, 9, 16, 0.623);
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            70% {
+                outline-width: 0.5vw;
+                outline-color: rgba(25, 24, 29, 0.3);
+                background-color: rgba(25, 24, 29, 0.5);
+            }
+
+            100% {
+                outline-width: 1vw;
+                outline-color: rgba(25, 24, 29, 0.7);
+                background-color: rgba(25, 24, 29, 0.9);
+            }
+        }
+
+
+
+
+        div#row1a,
+        div#row2a,
+        div#row3a,
+        div#row3b,
+        div#row4a,
+        div#row5a,
+        div#row5b,
+        div#row6a,
+        div#row7a,
+        div#row8a,
+        div#row9a,
+        div#row10a,
+        div#row12a {
+
+
+            background-color: rgba(64, 67, 78, 0.4);
+            -webkit-animation-name: grid-item-phase;
+            -webkit-animation-duration: 15s;
+            animation-name: grid-item-phase;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        #row1a,
+        div#row5a {
+            grid-column-end: span 3;
+        }
+
+        #row1b,
+        div#row2b,
+        div#row3b,
+        div#row5c,
+        div#row8a,
+        div#row8b,
+        div#row9a,
+        div#row12a {
+            grid-column-end: span 3;
+            background-color: rgba(47, 51, 56, 0.4);
+        }
+
+        div#row2b {
+            grid-row: span 2;
+        }
+
+
+
+        *:hover {
+            /* border-radius: 6%; */
+            /* border: 2 solid rgba(47, 51, 56, 0.6); */
+
+
+        }
+
+        #grid>div:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            /* border-radius: 50%; */
+            outline-width: 0.v7w;
+            transition: 1000ms outline-width ease-in-out, 800ms background-color ease-in-out;
+        }
+
+
     </style>
 </head>
 
 <body>
-<div id="grid">
-    <!-- row0 -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <!-- row1 -->
-    <div></div>
-    <div></div>
-    <div id="row1a"></div>
-    <div id="row1b"></div>
 
-    <div></div>
-    <!-- row2 -->
-    <div></div>
-    <div id="row2a"></div>
-    <div id="row2b">
+    <div id="grid">
+        <!-- row0 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!-- row1 -->
+        <div></div>
+        <div></div>
+        <div id="row1a"></div>
+        <div id="row1b"></div>
 
+        <div></div>
+        <!-- row2 -->
+        <div style="opacity: 0;"></div>
+        <div id="row2a1" style="opacity: 0;"></div>
+        <div id="row2a2" style="opacity: 0;"></div>
+        <div id="row2a3"></div>
+        <div id="row2b">
+
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!-- row3 -->
+        <div></div>
+        <div id="row3a"></div>
+        <div id="row3b"></div>
+        <div></div>
+        <div></div>
+        <!-- row4 -->
+        <div></div>
+        <div >        </div>
+        <div></div>
+        <div id="row4a"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!-- row5 -->
+        <div></div>
+        <div id="row5a"></div>
+        <div id="row5b"></div>
+        <div id="row5c">
+        </div>
+        <div></div>
+        <!-- row6 -->
+        <div></div>
+        <div></div>
+        <div id="row6a"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!-- row7 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="row7a"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!-- row8 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="row8a"></div>
+        <div id="row8b">
+        </div>
+        <div></div>
+        <!-- row9 -->
+        <div></div>
+        <div id="row9a"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!-- row10 -->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div id="row10a"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!--row11-->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!--row12-->
+        <div></div>
+        <div></div>
+        <div id="row12a"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!--row13-->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <!--row14-->
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <!-- row3 -->
-    <div></div>
-    <div id="row3a"></div>
-    <div id="row3b"></div>
-    <div></div>
-    <div></div>
-    <!-- row4 -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div id="row4a"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <!-- row5 -->
-    <div></div>
-    <div id="row5a"></div>
-    <div id="row5b"></div>
-    <div id="row5c">
-    </div>
-    <div></div>
-    <!-- row6 -->
-    <div></div>
-    <div></div>
-    <div id="row6a"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <!-- row7 -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div id="row7a"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <!-- row8 -->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div id="row8a"></div>
-    <div id="row8b">
-    </div>
-    <div></div>
-    <!-- row9 -->
-    <div></div>
-    <div id="row9a"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-   <!-- row10 -->
-   <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div id="row10a"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-   <!--row11-->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-<!--row12-->
-    <div></div>
-    <div></div>
-    <div id="row12a"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-<!--row13-->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-<!--row14-->
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
     <!--<script src="./imageGrid.js"></script>-->
     <script>
         const gridContainer = document.querySelector('#grid');
@@ -512,7 +521,7 @@
             //     console.log('current doesnt exst :' + typeof currDur);
 
             // }
-            console.log(current.slice(0, current.length -1));
+            console.log(current.slice(0, current.length - 1));
             let currNum = parseInt(current);
             currNum >= 15 ? currNum = 0 : currNum++;
             let newDur = currNum;
