@@ -1,5 +1,5 @@
 
-const ROOT_URL = 'https://hamilsauce.github.io/';
+const ROOT_NAME = 'https://hamilsauce.github.io/';
 
  const musicFileList = [
     'audio/crimsom-picture-of-a-city-09102019.mp3',
@@ -10,9 +10,9 @@ const ROOT_URL = 'https://hamilsauce.github.io/';
     'audio/lazystar remaster.mp3'
 ];
 
-export default fullUrlList = musicFileList
+export default const fullUrlList = musicFileList
     .map(track => {
-        return `${ROOT_URL}${track}`;
+        return `${ROOT_NAME}${track}`;
     });
 
 console.log(fullUrlList);
