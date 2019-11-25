@@ -10,12 +10,12 @@ const ROOT_URL = 'https://hamilsauce.github.io/';
     'audio/lazystar remaster.mp3'
 ];
 
-export default let fullUrls = musicFileList
+export default fullUrlList = musicFileList
     .map(track => {
         return `${ROOT_URL}${track}`;
     });
 
-console.log(fullUrls);
+console.log(fullUrlList);
 
 
- //   export {fullUrls}
+ //   export {fullUrlList}
