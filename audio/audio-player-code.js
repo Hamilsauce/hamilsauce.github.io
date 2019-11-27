@@ -29,7 +29,6 @@ window.onload = function () {
                 return `<option class="song-option" value="${urls[titles.indexOf(title)]}">${title}</option>`
             })
             .reduce((itemOut, acc) => {
-
                 return acc += itemOut;
             }, '');
         return listArr;
@@ -52,19 +51,19 @@ window.onload = function () {
     function playAudio() {
         if (!audioPlayer.currentTime == 0) {
             audioPlayer.pause();
-             audioPlayer.currentTime = 0;
+            audioPlayer.currentTime = 0;
         }
 
-        // let songUrl = source.getAttribute('src');
+   
         let songUrl = trackMenu.options[trackMenu.selectedIndex].value;
         let songName = trackMenu.options[trackMenu.selectedIndex].text;
 
-        source.setAttribute('src', songUrl)
-
+        source.setAttribute('src', songUrl);
         document.querySelector('.showTime').innerHTML = songName;
-audioPlayer = document.getElementById('audio-player')
+        audioPlayer.load();
         audioPlayer.play();
     }
+     
 
 
     function pauseAudio() {
