@@ -7,7 +7,7 @@ export const musicFileList = [
     'audio/new%20space%20reduced.mp3',
     'audio/new%20space%20guitar%20mix.mp3',
     'audio/lazystar%20remaster.mp3',
-     'audio/Offworld.mp3',
+     'audio/Offworld.wav',
     'audio/The%203rd%20Face3.mp3'
 ];
 
