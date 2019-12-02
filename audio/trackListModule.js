@@ -1,14 +1,13 @@
 const ROOT_NAME = 'https://hamilsauce.github.io/';
 
 export const musicFileList = [
-    'audio/crimsom-picture-of-a-city-09102019.mp3',
-    'audio/Ink%20Erodes%20Slowly2.mp3',
-    'audio/incaSteepleDorian.mp3',
-    'audio/new%20space%20reduced.mp3',
-    'audio/new%20space%20guitar%20mix.mp3',
-    'audio/lazystar%20remaster.mp3',
-     'audio/Offworld.wav',
-    'audio/The%203rd%20Face3.mp3'
+'audio/Ink%20Erodes%20Slowly2.mp3',
+'audio/Offworld%20(up).mp3',
+'audio/appalachia.wav',
+'audio/incaSteepleDorian.mp3',
+'audio/new%20space%20reduced.mp3',
+'audio/syntheticdreams.mp3',
+'audio/the-third-face.mp3'
 ];
 
 export const songNames = musicFileList
