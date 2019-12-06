@@ -31,6 +31,9 @@
       --blue4: #588FA1;
       --blue5: #446C81;
     }
+    * {
+      user-select: none;
+    }
     .app {
       box-sizing: border-box;
       display: grid;
@@ -52,7 +55,7 @@
       padding: 0px 0px;
     }
     .content-container {
-      padding: 10px 0px;
+      padding: 10px 0px 5px 0px;
       box-sizing: border-box;
       color: rgb(54, 54, 54);
       margin: 0px 2px;
@@ -127,7 +130,7 @@
       box-sizing: border-box;
       border: 1px solid rgba(73, 73, 73, 0.349);
       border-radius: 2px;
-      padding: 3px 10px;
+      padding:10px 10px;
       margin: auto;
       background: rgba(255, 255, 255, 0.425);
     }
@@ -151,6 +154,7 @@
     .results-container {
       padding-top: 0;
       box-sizing: border-box;
+      user-select: initial;
     }
     .display-header {
       display: grid;
@@ -167,14 +171,7 @@
       margin: 0;
       text-align: center;
     }
-    .footer {
-      box-sizing: border-box;
-      height: 100%;
-      width: 100%;
-      margin: 0px 0px 0px 0px;
-      padding: 3px;
-      background: rgba(36, 36, 23, 0.527);
-    }
+
     .getDataButton {
       text-align: center;
       padding: 4px;
@@ -184,6 +181,17 @@
       text-align: center;
       padding: 4px;
   font-size: 1em;
+    }
+      .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      padding: 3px;
+      background: rgba(36, 36, 23, 0.527);
     }
 
   </style>
@@ -216,8 +224,8 @@
 
       <form class="userform">
         <div class="field">
-          <label>Query Input: </label>
-          <input class="text-input" id="input1" placeholder="Search keyword">
+          <label>Enter a name: </label>
+          <input class="text-input name-input" id="input1" placeholder="Search sender name">
         </div>
         <div class="field">
           <label for="select-el">Select something: </label>
@@ -232,7 +240,7 @@
           </select>
         </div>
         <div class="button-container">
-          <input class="getDataButton menu-button" id=" submit-button " type=" submit" value="Get messages">
+          <input class="getDataButton menu-button" id=" submit-button " type="submit" value="Get messages">
           <button class="saveButton menu-button" onclick="saveDataToFile();">Save to File</button> </div>
       </form>
 
@@ -240,19 +248,19 @@
     <div class="toolbar content-container">
       <label class="search-label" for="date-input">Search for date</label>
       <div class="search-container">
-        <input class="text-input" id="date-input" type="text" placeholder="Search date (mm/dd/yyyy)">
+        <input class="text-input date-input" type="text" placeholder="Search date (mm/dd/yyyy)">
         <button class="btn" id="find-button">Find</button>
       </div>
     </div>
     <div class="results-container content-container">
       <div class="display-header">
-        <div class="data-header-item">1532 messages</div>
-        <div class="data-header-item">0% of all</div>
-        <div class="data-header-item">Dates</div>
+        <div class="data-header-item display-header1"></div>
+        <div class="data-header-item display-header2"></div>
+        <div class="data-header-item display-header3">Dates!</div>
       </div>
       <div class="data-display"></div>
     </div>
-    <div class="footer">footer</div>
+    <div class="footer">SEAHAG 2019</div>
   </div>
   <script src="telegramQuery.js"></script>
   <script>

@@ -7,15 +7,20 @@ const url = `https://hamilsauce.github.io/tgram-fun-chat.json`; //${apiKey}
 /* list builder */
 const lister = list => {
   let listArr = list.map(item => {
-          return `<li class="listItem" id="${item}">${item}</li>`
-      })
-      .reduce((itemOut, acc) => {
-          return acc += itemOut;
-      }, '');
+      return `<li class="listItem" id="${item}">${item}</li>`
+    })
+    .reduce((itemOut, acc) => {
+      return acc += itemOut;
+    }, '');
   console.log(listArr);
   return listArr;
 }
 /* end list builder */
+
+//! general purpose/reusable functions
+const validateName = name => {
+  return name.trim() ? true : false;
+}
 
 const showData = data => {
   let objData = Object.entries(data);
@@ -26,60 +31,87 @@ const htmlOut = list => {
   let dataDisplay = document.querySelector('#divContents');
   dataDisplay.innerHTML = `<ul class="list">${list}</ul>`
 }
+//!end resuable stuff
 
 let request = obj => {
-return new Promise((resolve, reject) => {
-  let xhr = new XMLHttpRequest();
-  xhr.open(obj.mthod || 'GET', obj.url, true);
+  return new Promise((resolve, reject) => {
+    let xhr = new XMLHttpRequest();
+
+    xhr.open(obj.mthod || 'GET', obj.url, true);
     if (obj.headers) {
       Object.keys(obj.headers).forEach(key => {
         xhr.setRequestHeader(key, obj.headers[key]);
       });
     }
-  xhr.onload = () => {
-    if (xhr.status >= 200 && xhr.status < 300) {
-      resolve(xhr.response);
-    } else {
-      reject(xhr.statusText);
-    }
-  };
-  xhr.onerror = () => reject(xhr.statusText);
-  xhr.send(obj.body);
-});
+    xhr.onload = () => {
+      if (xhr.status >= 200 && xhr.status < 300) {
+        resolve(xhr.response);
+      } else {
+        reject(xhr.statusText);
+      }
+    };
+    xhr.onerror = () => reject(xhr.statusText);
+    xhr.send(obj.body);
+  });
 }
-/**/
+//* Call request function
 request({url: url})
-.then(data => {
-  let chatData = JSON.parse(data);
-  messages = chatData.chats['list'][0].messages;
-});
+  .then(data => {
+    let chatData = JSON.parse(data);
+    messages = chatData.chats['list'][0].messages;
+  });
+
 
 const filterMessagesByName = name => {
-  let msgByName = messages
+  const errorMessage = `Name entered isn't valid.`;
+
+  if (validateName(name) === false) {
+    return errorMessage;
+  } else {
+    let msgByName = messages
       .filter(msg => {
-          return msg.from === name;
+        return msg.from === name;
       });
-  return msgByName;
+    return msgByName;
+  }
 }
 
+//* Listens for the request submit button to run query and return some results
 document.querySelector('.getDataButton').addEventListener('click', (e) => {
-const display = document.querySelector('.data-display');
-e.preventDefault();
-  let stevesMsgs = filterMessagesByName('Ian Nantucket');
+  e.preventDefault();
+  const displayTotal = document.querySelector('.display-header1');
+  const displayPerc = document.querySelector('.display-header2');
+  const nameInput = document.querySelector('.name-input');
 
-  display.innerText = stevesMsgs.length;
-  //console.log(stevesMsgs);
-  // htmlOut(lister(Object.entries(stevesMsgs)))
+  let resultMsgs = filterMessagesByName(nameInput.value);
+  let percent = Math.round(((resultMsgs.length / messages.length) * 100));
+
+  displayTotal.innerText = `${resultMsgs.length} messages`;
+  displayPerc.innerText = `${percent}% of all`;
 })
 
+//TODO under construction -- will return unique list of names
 const userList = msgs => {
-let uniqueNames = msgs
-  .map(msg => {
-    c
-  })
+  let uniqueNames = msgs
+    .map(msg => {
+      //...
+    })
 }
 
 
+
+
+document.querySelector('.collapse').addEventListener('click', (e) => {
+  const userform = document.querySelector('.userform');
+  const container = document.querySelector('.top-container');
+
+  if (userform.style.display === 'none') {
+    userform.style.display = 'block';
+  } else {
+    userform.style.display = 'none';
+    // container.style.height = '1px';
+  }
+})
 // console.log(records);n
 //console.log(lister(records));
 
