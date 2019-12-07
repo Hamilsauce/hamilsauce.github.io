@@ -4,7 +4,7 @@ let htmlArray = [];
 let messages = [];
 const url = `https://hamilsauce.github.io/tgram-fun-chat.json`; //${apiKey}
 
-/* list builder */
+//! list builder
 const lister = list => {
   let listArr = list.map(item => {
       return `<li class="listItem" id="${item}">${item}</li>`
@@ -15,7 +15,7 @@ const lister = list => {
   console.log(listArr);
   return listArr;
 }
-/* end list builder */
+//! end list builder
 
 //! general purpose/reusable functions
 const validateName = name => {
@@ -88,15 +88,22 @@ document.querySelector('.getDataButton').addEventListener('click', (e) => {
 
   displayTotal.innerText = `${resultMsgs.length} messages`;
   displayPerc.innerText = `${percent}% of all`;
+
+  //* will return unique list of names
+let newMsgs = messages.map(msg => {
+    return msg.from;
+  });
+  console.log(newMsgs);
 })
 
 //TODO under construction -- will return unique list of names
-const userList = msgs => {
-  let uniqueNames = msgs
-    .map(msg => {
-      //...
-    })
-}
+
+//todo let mymsgs = Object.entries(messages)[0][1];
+//todo let newMsgs = mymsgs.map(msg => {
+//todo   return msg.from;
+//todo });
+//todo console.log(newMsgs);
+
 
 
 
@@ -112,8 +119,37 @@ document.querySelector('.collapse').addEventListener('click', (e) => {
     // container.style.height = '1px';
   }
 })
-// console.log(records);n
-//console.log(lister(records));
+
+function saveDataToFile() {
+  // const data = document.querySelector('#divContents');
+  const blob = new Blob([JSON.stringify(messages)]);
+  let a = document.body.appendChild(document.createElement('a'));
+
+  a.href = window.URL.createObjectURL(blob);
+  a.download = 'telegram-messages' + '.txt';
+  a.click();
+  a = null;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
