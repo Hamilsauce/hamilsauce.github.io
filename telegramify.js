@@ -2,7 +2,7 @@
 let records = [];
 let htmlArray = [];
 let messages = [];
-const url = `https://hamilsauce.github.io/tgram-fun-chat.json`; //${apiKey}
+const url = `https://hamilsauce.github.io/telegramData.json`; //${apiKey}
 
 //! list builder
 const lister = list => {
@@ -27,11 +27,25 @@ const showData = data => {
   console.log(objData);
 };
 
-const htmlOut = list => {
+const htmlListOut = list => {
   let dataDisplay = document.querySelector('#divContents');
   dataDisplay.innerHTML = `<ul class="list">${list}</ul>`
 }
 //!end resuable stuff
+
+
+//* will return unique list of names
+const getNameList = messageList => {
+  let uniques = messageList
+    .map(msg => {
+      return msg.from;
+    })
+  return uniques;
+
+}
+
+
+
 
 let request = obj => {
   return new Promise((resolve, reject) => {
@@ -54,12 +68,30 @@ let request = obj => {
     xhr.send(obj.body);
   });
 }
-//* Call request function
-request({url: url})
+request({
+    url: url
+  })
   .then(data => {
+
     let chatData = JSON.parse(data);
-    messages = chatData.chats['list'][0].messages;
-  });
+    let chatList = chatData.chats['list'];
+  let chatNameQuery = document.querySelector('.chatInput').value;
+
+  let chatTarget = chatList.find(chat => {
+    return chat.name === chatNameQuery;
+  })
+
+  messages = chatTarget.messages
+    .filter(msg => {
+      return msg.type === 'message';
+    })
+  console.log(messages)
+
+
+    let uniqueNames = getNameList(messages);
+
+
+  })
 
 
 const filterMessagesByName = name => {
@@ -75,47 +107,27 @@ const filterMessagesByName = name => {
     return msgByName;
   }
 }
+//* gets the chat specified by uer
+
+const writeMsgCard = msg => {
+
+}
 
 //* Listens for the request submit button to run query and return some results
-document.querySelector('.getDataButton').addEventListener('click', (e) => {
+document.querySelector('.getDataButton').addEventListener('click', e => {
   e.preventDefault();
   const displayTotal = document.querySelector('.display-header1');
   const displayPerc = document.querySelector('.display-header2');
-  const nameInput = document.querySelector('.name-input');
+  const nameInput = document.querySelector('.name-input').value;
 
-  let resultMsgs = filterMessagesByName(nameInput.value);
+  let resultMsgs = filterMessagesByName(nameInput);
   let percent = Math.round(((resultMsgs.length / messages.length) * 100));
 
   displayTotal.innerText = `${resultMsgs.length} messages`;
   displayPerc.innerText = `${percent}% of all`;
 
-  //* will return unique list of names
-let newMsgs = messages.map(msg => {
-  let uniques = Object.entries(msg)
-    .map(msgProp => {
-      if (msgProp[0] === 'from') {
-        console.log(msgProp[1].toLowerCase());
-        return msgProp[1].toLowerCase();
-      };
-    })
-    .reduce((uniqueList, currName) => {
-      // if (!uniqueList.includes(currName)) {
-       return uniqueList += currName;
-    }, []);
-  console.log(uniques);
-  });
-
 })
 console.log();
-
-//TODO under construction -- will return unique list of names
-
-//todo let mymsgs = Object.entries(messages)[0][1];
-//todo let newMsgs = mymsgs.map(msg => {
-//todo   return msg.from;
-//todo });
-//todo console.log(newMsgs);
-
 
 
 
@@ -142,78 +154,3 @@ function saveDataToFile() {
   a.click();
   a = null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-let dataDisplay = document.querySelector('#divContents');
-let dataMessage = document.querySelector('#data-display-message');
-  let propNames = Object.keys(VARIABLE);
-        */
-/*
-*This is all optional, just didgs through the json to get data and display it.
-*Request has been made tho
-records = Object.entries(VARIABLE[propNames[1]]);
-records.forEach(ITEM => {
-    let [entryName, entryDetails] = ITEM;
-    let entryDate = new Date(entryName).toDateString();
-    let printData = rec => {
-        let recOut = [];
-        rec.forEach(recProp => {
-            let propKey = recProp[0];
-            let propVal = recProp[1]
-            if (propKey !== '5. volume') {
-                let line = `
-                <li style="text-align: center;">
-                    <p>${propKey.slice(3)}</p> ${currencyFormatter.format(propVal)}
-                </li>`;
-              recOut.push(line);
-            }
-        });
-        return recOut.join('');
-    };
-    let recordHTML = `
-                <div class="record">
-                    <div class="entry-name-container">${entryDate}</div>
-                    <ul class="entry-details-list">${printData(Object.entries(entryDetails))}</ul>
-                </div>`;
-    htmlArray.push(recordHTML);
-});*/
-/*
-  dataMessage.innerHTML = `Currently viewing results`;
-  dataDisplay.innerHTML = htmlArray.join('');
-  document.querySelector('.date-finder-container').style.display = "flex";
-  document.querySelector('#data-container').style.borderTop = "0px";
-})
-.catch(error => {
-  let dataMessage = document.querySelector('#data-display-message');
-  dataMessage.innerHTML = 'Something went wrong! Try again n00b';
-
-  console.log(error);
-});*/
-
