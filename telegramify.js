@@ -2,25 +2,26 @@
 let records = [];
 let htmlArray = [];
 let messages = [];
+let htmlOut = '';
 const url = `https://hamilsauce.github.io/telegramData.json`; //${apiKey}
 
 //! list builder
 const lister = list => {
   let listArr = list.map(item => {
-      return `<li class="listItem" id="${item}">${item}</li>`
+      return `<li class="listItem" id="${item}">${item}</li>`;
     })
     .reduce((itemOut, acc) => {
       return acc += itemOut;
     }, '');
   console.log(listArr);
   return listArr;
-}
+};
 //! end list builder
 
 //! general purpose/reusable functions
 const validateName = name => {
   return name.trim() ? true : false;
-}
+};
 
 const showData = data => {
   let objData = Object.entries(data);
@@ -29,28 +30,22 @@ const showData = data => {
 
 const htmlListOut = list => {
   let dataDisplay = document.querySelector('#divContents');
-  dataDisplay.innerHTML = `<ul class="list">${list}</ul>`
-}
+  dataDisplay.innerHTML = `<ul class="list">${list}</ul>`;
+};
 //!end resuable stuff
 
-
 //* will return unique list of names
-const getNameList = messageList => {
-  let uniques = messageList
-    .map(msg => {
-      return msg.from;
-    })
-  return uniques;
-
-}
-
-
-
+const limitMsgs = messageList => {
+  let oneHundredLimit = messageList
+    .filter(msg => {
+      return messageList.indexOf(msg) < 100;
+    });
+  return oneHundredLimit;
+};
 
 let request = obj => {
   return new Promise((resolve, reject) => {
     let xhr = new XMLHttpRequest();
-
     xhr.open(obj.mthod || 'GET', obj.url, true);
     if (obj.headers) {
       Object.keys(obj.headers).forEach(key => {
@@ -67,32 +62,26 @@ let request = obj => {
     xhr.onerror = () => reject(xhr.statusText);
     xhr.send(obj.body);
   });
-}
+};
 request({
     url: url
   })
   .then(data => {
-
     let chatData = JSON.parse(data);
-    let chatList = chatData.chats['list'];
-  let chatNameQuery = document.querySelector('.chatInput').value;
+    let chatList = chatData.chats.list;
+    let chatNameQuery = document.querySelector('.chatInput').value;
 
-  let chatTarget = chatList.find(chat => {
-    return chat.name === chatNameQuery;
-  })
+    let chatTarget = chatList.find(chat => {
+      return chat.name === chatNameQuery;
+    });
 
-  messages = chatTarget.messages
-    .filter(msg => {
-      return msg.type === 'message';
-    })
-  console.log(messages)
-
-
-    let uniqueNames = getNameList(messages);
+    messages = chatTarget.messages
+      .filter(msg => {
+        return msg.type === 'message';
+      });
 
 
-  })
-
+  });
 
 const filterMessagesByName = name => {
   const errorMessage = `Name entered isn't valid.`;
@@ -106,30 +95,71 @@ const filterMessagesByName = name => {
       });
     return msgByName;
   }
+};
+
+const generateMsgCard = propStrings => {
+  let reducedString = propStrings
+    .reduce((acc, string) => {
+      return acc += string;
+    }, '');
+    console.log(reducedString);
+
+  let newCard = document.createElement('div');
+  newCard.innerHTML = reducedString;
+  newCard.setAttribute('class', 'message-card');
+  document.querySelector('.data-display').appendChild(newCard);
+
 }
-//* gets the chat specified by uer
 
-const writeMsgCard = msg => {
 
+const writeMsgCard = msgList => {
+  let reduced = '';
+  let dateTextFrom = [];
+
+  //get data for each objs display card, create html string
+  msgList.forEach(msg => {
+    for (let [prop, val] of Object.entries(msg)) {
+      if (prop === 'date') {
+        let msgDate = new Date(val).toDateString();
+        dateTextFrom[0] = `<div class="card-date">${msgDate}</div>`;
+      } else if (prop === 'text') {
+        //todo need to check if array eventualy
+        dateTextFrom[1] = `<div class="card-body">${val}</div>`;
+      } else if (prop === 'from') {
+        dateTextFrom[2] = `<div class="card-author">${val}</div>`;
+      }
+    }
+
+          generateMsgCard(dateTextFrom);
+  });
 }
 
-//* Listens for the request submit button to run query and return some results
-document.querySelector('.getDataButton').addEventListener('click', e => {
-  e.preventDefault();
-  const displayTotal = document.querySelector('.display-header1');
-  const displayPerc = document.querySelector('.display-header2');
-  const nameInput = document.querySelector('.name-input').value;
-
-  let resultMsgs = filterMessagesByName(nameInput);
-  let percent = Math.round(((resultMsgs.length / messages.length) * 100));
-
-  displayTotal.innerText = `${resultMsgs.length} messages`;
-  displayPerc.innerText = `${percent}% of all`;
-
-})
-console.log();
 
 
+  //* Listens for the request submit button to run query and return some results
+  document.querySelector('.getDataButton').addEventListener('click', e => {
+    e.preventDefault();
+    const displayTotal = document.querySelector('.display-header1');
+    const displayPerc = document.querySelector('.display-header2');
+    const nameInput = document.querySelector('.name-input').value;
+
+    let resultMsgs = filterMessagesByName(nameInput);
+    let percent = Math.round(((resultMsgs.length / messages.length) * 100));
+
+    document.querySelector('.data-display').innerHTML = '';
+    writeMsgCard(limitMsgs(resultMsgs));
+    console.log(htmlOut);
+
+    // document.querySelector('.data-display').innerHTML = htmlOut;
+    displayTotal.innerText = `${resultMsgs.length} messages`;
+    displayPerc.innerText = `${percent}% of all`;
+
+  });
+
+
+  document.querySelector('.saveButton').addEventListener('click', e => {
+    saveDataToFile();
+  });
 
 //*Collapse the form for more space
 document.querySelector('.collapse').addEventListener('click', (e) => {
@@ -140,13 +170,14 @@ document.querySelector('.collapse').addEventListener('click', (e) => {
     userform.style.display = 'block';
   } else {
     userform.style.display = 'none';
-    // container.style.height = '1px';
+
   }
-})
+});
 
 function saveDataToFile() {
-  // const data = document.querySelector('#divContents');
-  const blob = new Blob([JSON.stringify(messages)]);
+  const nameInput = document.querySelector('.name-input').value;
+  let resultMsgs = filterMessagesByName(nameInput)
+  const blob = new Blob([JSON.stringify(resultMsgs)]);
   let a = document.body.appendChild(document.createElement('a'));
 
   a.href = window.URL.createObjectURL(blob);
