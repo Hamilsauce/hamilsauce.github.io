@@ -11,6 +11,7 @@
   <title>Telegramify - the amify for telegr</title>
   <style>
     @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
     html {
       box-sizing: border-box;
       margin: 0;
@@ -23,7 +24,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-image: radial-gradient(rgb(250, 236, 236), rgba(58, 120, 145, 0.219));
+      background-image: radial-gradient(rgb(231, 231, 231), rgba(58, 120, 145, 0.164));
     }
 
     :root {
@@ -48,6 +49,8 @@
       height: 100%;
       max-width: 600px;
       margin: auto;
+      border: 1px solid rgb(90, 90, 90);
+      box-shadow: 0px 0px 25px 3px rgba(122, 122, 122, 0.555);
     }
 
     .headers {
@@ -75,27 +78,27 @@
       justify-content: space-evenly;
       background: rgba(59, 54, 39, 0.472);
       box-sizing: border-box;
-      color: rgba(245, 245, 245, 0.9);
+      color: rgba(245, 245, 245, 1);
       margin: 0px 0px;
       padding: 3px;
-      border-bottom:  2px solid rgb(85, 85, 85);
+      border-bottom: 2px solid rgb(85, 85, 85);
     }
 
     .toolbar input {
-           font-size: 0.9em;
-           padding: 3px
+      font-size: 0.9em;
+      padding: 3px
     }
 
     .toolbar label {
-           font-size: 0.9em;
+      font-size: 0.9em;
     }
 
 
     .search-container {
       padding: 0;
       margin: 0;
-      font-size: ;
     }
+
     .find-button {
       font-size: 1em;
     }
@@ -130,11 +133,13 @@
       border-radius: 3px;
       transition: 300ms background ease, 300ms box-shadow ease-in;
     }
+
     .menu-icon:hover {
       background: rgba(243, 181, 37, 0.76);
       box-shadow: 0px 0px 10px 2px inset rgba(243, 227, 138, 0.514);
 
     }
+
     .menu-icon:focus {
       background: rgba(243, 181, 37, 0.76);
 
@@ -214,7 +219,7 @@
 
     .button-container {
       padding: 2px 2px 1px 0px;
-      margin:  2px auto 0px auto;
+      margin: 2px auto 0px auto;
       box-sizing: border-box;
       display: flex;
       justify-content: flex-end;
@@ -252,8 +257,8 @@
       box-sizing: border-box;
       user-select: initial;
       overflow: auto;
-        padding-bottom: 5px;
-        height: 100%;
+      padding-bottom: 5px;
+      height: 100%;
     }
 
 
@@ -315,9 +320,7 @@
       font-size: 0.8em;
       font-style: italic;
     }
-    .bottom-container {
 
-    }
 
     .footer {
       display: flex;
@@ -405,9 +408,9 @@
       <div class="header-top">
         <h1 class="header-strip">Telegramify</h1>
 
-         <div class="menu-icon" onclick="openNav()">
+        <div class="menu-icon" onclick="openNav()">
           Menu
-         </div>
+        </div>
       </div>
       <!-- Old Navbar
         <header class="nav-bar">
