@@ -8,8 +8,9 @@
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
   <meta name="date" content="2019-10-31">
-  <title>Telegramify - the amify for telgr</title>
+  <title>Telegramify - the amify for telegr</title>
   <style>
+    @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
     html {
       box-sizing: border-box;
       margin: 0;
@@ -22,7 +23,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-image: radial-gradient(rgba(113, 195, 182, 0.329), rgba(199, 231, 236, 0.253));
+      background-image: radial-gradient(rgb(250, 236, 236), rgba(58, 120, 145, 0.219));
     }
 
     :root {
@@ -54,7 +55,7 @@
       display: flex;
       justify-content: space between;
       flex-direction: column;
-      background: rgba(36, 36, 23, 0.527);
+      background: rgba(61, 53, 43, 0.527);
       margin: 0px 0px 2px 0px;
       padding: 0px 0px;
     }
@@ -66,16 +67,37 @@
       margin: 0px 2px;
       border-left: 1px solid rgba(36, 36, 23, 0.26);
       border-right: 1px solid rgba(36, 36, 23, 0.26);
-      background: rgba(102, 102, 85, 0.192);
+      background: rgba(184, 184, 184, 0.192);
     }
 
     .toolbar {
       display: flex;
       justify-content: space-evenly;
-      background: rgba(60, 60, 46, 0.472);
+      background: rgba(59, 54, 39, 0.472);
       box-sizing: border-box;
       color: rgba(245, 245, 245, 0.9);
       margin: 0px 0px;
+      padding: 3px;
+      border-bottom:  2px solid rgb(85, 85, 85);
+    }
+
+    .toolbar input {
+           font-size: 0.9em;
+           padding: 3px
+    }
+
+    .toolbar label {
+           font-size: 0.9em;
+    }
+
+
+    .search-container {
+      padding: 0;
+      margin: 0;
+      font-size: ;
+    }
+    .find-button {
+      font-size: 1em;
     }
 
     .header-top {
@@ -96,14 +118,26 @@
 
     .menu-icon {
       box-sizing: border-box;
-      font-size: 2em;
+      font-size: 1.5em;
       height: 44px;
-      width: 44px;
+      width: fit-content;
       text-align: center;
       margin: auto 10px;
+      padding: 5px 10px;
       font-weight: bold;
-      background: rgb(109, 64, 95);
+      background: rgba(218, 167, 49, 0.76);
       border: 1px solid rgb(199, 199, 199);
+      border-radius: 3px;
+      transition: 300ms background ease, 300ms box-shadow ease-in;
+    }
+    .menu-icon:hover {
+      background: rgba(243, 181, 37, 0.76);
+      box-shadow: 0px 0px 10px 2px inset rgba(243, 227, 138, 0.514);
+
+    }
+    .menu-icon:focus {
+      background: rgba(243, 181, 37, 0.76);
+
     }
 
     .nav-bar {
@@ -126,6 +160,7 @@
       box-sizing: border-box;
       margin: 2px 2px;
       padding: 2px 0px;
+      font-size: 0.8em;
     }
 
     .collapse {
@@ -138,14 +173,21 @@
       border-radius: 2px;
       padding: 5px 10px;
       margin: auto;
-      background: rgba(255, 255, 255, 0.425);
+      height: 100%;
+      background: rgba(255, 255, 255, 0.418);
+    }
+
+    label {
+      font-size: 1.1em;
     }
 
     .text-input {
-      padding: 3px;
+      font-size: 1em;
+      padding: 5px;
       border: 1px solid rgba(255, 255, 255, 0.918);
-      background: rgb(245, 245, 245);
-      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.924);
+      border-radius: 3px;
+      color: rgb(70, 70, 70);
 
     }
 
@@ -154,6 +196,7 @@
       background: rgb(241, 241, 241)(214, 211, 211);
       border: 1px solid white;
       border-radius: 3px;
+      font-size: 1em;
 
     }
 
@@ -170,28 +213,28 @@
     }
 
     .button-container {
-      padding: 5px 2px 2px 0px;
-      margin: auto;
+      padding: 2px 2px 1px 0px;
+      margin:  2px auto 0px auto;
       box-sizing: border-box;
       display: flex;
       justify-content: flex-end;
       /* text-align: center; */
       font-size: 1em;
+
     }
 
     .menu-button {
       box-sizing: border-box;
-      padding: 2px 5px;
       margin: 1px 2px;
       width: 100%;
       color: white;
-      background: rgba(129, 129, 81, 0.486);
+      background: rgba(104, 104, 75, 0.541);
       border: 1px solid rgba(32, 32, 29, 0.274);
     }
 
     .getDataButton {
       text-align: center;
-      padding: 2px;
+      padding: 3px;
       font-size: 1em;
       /* margin: auto */
     }
@@ -208,17 +251,21 @@
       padding-top: 0;
       box-sizing: border-box;
       user-select: initial;
+      overflow: auto;
+        padding-bottom: 5px;
+        height: 100%;
     }
+
 
     .display-header {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3px;
-      margin: 0px 0px 10px 0px;
+      margin: 0px 0px 3px 0px;
       box-sizing: border-box;
       border-bottom: 1px solid rgba(36, 36, 23, 0.527);
-      background: #C9D4D5;
-      padding: 3px 3px 5px 3px;
+      background: rgb(229, 231, 231);
+      padding: 0px 3px 5px 3px;
       z-index: 1;
     }
 
@@ -258,7 +305,6 @@
       font-size: 0.9em;
       padding: 2px 5px;
       /* height: fit-content; */
-
     }
 
     .card-author {
@@ -269,6 +315,9 @@
       font-size: 0.8em;
       font-style: italic;
     }
+    .bottom-container {
+
+    }
 
     .footer {
       display: flex;
@@ -276,32 +325,102 @@
       justify-content: flex-end;
       box-sizing: border-box;
       height: 100%;
+      max-height: fit-content;
       width: 100%;
       text-align: center;
-      padding: 3px;
-      background: rgba(36, 36, 23, 0.527);
+      /* padding-bottom: 13px; */
+      background: rgba(89, 82, 72, 0.507);
+      border-top: 2px solid rgb(85, 85, 85);
+    }
+
+    /*  NAV BAR STYLES */
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(195, 235, 236);
+      background-color: rgba(235, 235, 235, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: rgba(25, 36, 46, 0.7);
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #a1afbd;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px
+      }
+
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
     }
   </style>
 </head>
 
 <body>
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div class="overlay-content">
+      <a href="https://hamilsauce.github.io">Home</a>
+      <a href="#">Go Here</a>
+      <a href="#">Go There</a>
+      <a href="#">Do this thing</a>
+    </div>
+  </div>
   <div class="app">
     <div class="headers main-color">
       <div class="header-top">
         <h1 class="header-strip">Telegramify</h1>
-        <div class="menu-icon">M</div>
+
+         <div class="menu-icon" onclick="openNav()">
+          Menu
+         </div>
       </div>
-      <header class="nav-bar">
+      <!-- Old Navbar
+        <header class="nav-bar">
         <input class="menu-button" type="button" value="Menu Icon">
         <input class="menu-button" type="button" value="Menu Icon">
         <input class="menu-button" type="button" value="Menu Icon">
         <input class="menu-button" type="button" value="Menu Icon">
-      </header>
+      </header> -->
     </div>
     <div class="content-container top-container">
       <div class="top-container-header">
         <p class="welcome-message">
-          Get that shit son.
+          Search by chat member name. Get that shit son.
         </p>
         <p class="welcome-message collapse">
           collapse
@@ -333,17 +452,17 @@
       <label class="search-label" for="date-input">Search for date</label>
       <div class="search-container">
         <input class="text-input date-input" type="text" placeholder="Search date (mm/dd/yyyy)">
-        <button class="btn" id="find-button">Find</button>
+        <button class="btn find-button">Find</button>
       </div>
     </div>
     <div class="results-container content-container">
       <div class="display-header">
         <div class="data-header-item display-header1"></div>
         <div class="data-header-item display-header2"></div>
-        <div class="data-header-item display-header3">Dates!</div>
+        <div class="data-header-item display-header3"></div>
       </div>
       <div class="data-display">
-        <div class="message-card">
+        <!-- <div class="message-card">
           <div class="card-date">Message on 10/7/2018</div>
           <div class="card-body">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -358,13 +477,21 @@
             Reiciendis saepe deserunt cumque voluptate excepturi voluptas?
           </div>
           <div class="card-author">-Hamil sauce</div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="footer">SEAHAG 2019</div>
   </div>
   <script src="telegramify.js"></script>
   <script>
+    //Navbar Code!
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
   </script>
 </body>
 
