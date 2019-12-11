@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    :root {
+      --mainRed: #A04650;
+      --mainBlue: #284B78;
+      --transparentBlue: #e0e7f771;
+      --mainPurple: #9c3a5f;
+      --lightPurple: #ac73ac;
+      --mainWhite: #fffffa;
+    }
+
+    html {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      /* max-height: 100vw; */
+    }
+
+    body {
+      background: rgb(40, 75, 120);
+      color: rgb(255, 255, 255);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin: 1rem 0px 1rem 0px;
+    }
+
+    .hiddenMessage {
+      top: 5px;
+      left: 5px;
+    }
+
+    h2,
+    h3 {
+      padding: 0px 0px 0px 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    h1 {
+         font-weight: 800;
+    }
+
+    h3 {
+      padding-bottom: 15px;
+    }
+
+    .app {
+      box-sizing: border-box;
+      max-width: 750px;
+      max-height: 100%;
+      margin: auto;
+      padding: 0px 0px 0px 0px;
+    }
+
+    main {
+      box-sizing: border-box;
+      max-width: 750px;
+      max-height: 100%;
+      display: grid;
+      gap: 2px;
+      grid-column-gap: 10px;
+      grid-template-columns: [byline-end content-start] 2fr [something-start] 2fr [something-end content-end aside-start];
+      margin: auto;
+      margin-top: 0px;
+      padding: 2px 3px 15px 3px;
+      border: 2px solid var(--transparentBlue);
+      border-radius: 5px;
+      background: var(--mainRed);
+    }
+
+    /* Start of Head Grid Styles*/
+    .grid-head {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      background: var(--mainRed);
+      grid-column: content-start / span 2;
+      min-height: 110px;
+      border-radius: 5px;
+    }
+
+    .header {
+      box-sizing: border-box;
+      background: var(--mainRed);
+      padding: 1vw 5vw;
+      border-radius: 3px;
+    }
+
+    .header1 {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-weight: 800;
+    }
+
+    .header-text-input {
+      box-sizing: border-box;
+      border-radius: 5px;
+      border: 0px;
+      padding: 5px;
+    }
+
+    .header>label {
+      box-sizing: border-box;
+      margin-bottom: 3px;
+      padding: 5px;
+    }
+
+    .header-button {
+      box-sizing: border-box;
+      background: var(--mainBlue);
+      color: var(--mainWhite);
+      border: 1px solid var(--mainWhite);
+      border-radius: 5px;
+      padding: 5px;
+
+    }
+
+    .header2 {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    /* End of Head grid styles */
+    .grid-body {
+      box-sizing: border-box;
+      display: grid;
+      gap: 7px;
+      grid-column-gap: 10px;
+      height: 600px;
+      width: 100%;
+      margin: auto;
+      padding: 3px;
+      background: var(--mainBlue);
+      grid-template-columns: 1fr 2fr;
+      overflow-x: auto;
+      border-radius: 5px;
+      border: 1px solid var(--lightPurple);
+
+    }
+
+    .grid-body:nth-child(2) {
+      grid-column: span 2;
+    }
+
+    .grid-cell {
+      min-height: 75px;
+      padding: 1vw 2vw;
+      color: rgb(59, 58, 59);
+      background: rgb(255, 255, 250);
+      border-radius: 3px;
+      border: 2px solid rgba(255, 255, 255, 0);
+      font-size: 1.2em;
+      transition: 200ms box-shadow ease, 400ms background ease, 200ms border ease;
+
+    }
+
+    .grid-cell:hover {
+      box-shadow: 0px 0px 100px 40px inset var(--lightPurple);
+      background: rgba(255, 255, 255, 0.342);
+      border: 2px solid white;
+      color: white;
+    }
+
+    .grid-cell:nth-child(3n+0) {
+      grid-column: span 2;
+    }
+
+    .grid-cell:nth-child(4n+1) {
+      background: rgba(224, 231, 247, 0.445);
+      color: var(--mainWhite);
+    }
+
+    .grid-cell:nth-child(4n+1):hover {
+      color: var(--mainWhite);
+      background: var(--transparentBlue);
+      box-shadow: 0px 0px 100px 40px inset rgb(192, 77, 102);
+    }
+
+    a {
+      color: hsl(194, 60%, 43%);
+    }
+
+    @media screen and (max-width: 450px) {
+
+      body {
+        margin: 1rem 0px 0rem 0px;
+      }
+
+      header>h3 {
+        display: none;
+      }
+
+      main {
+        height: fit-content;
+        grid-column-gap: 10px;
+        grid-template-columns: [byline-end content-start] 2fr [something-start] 2fr [something-end content-end aside-start];
+        margin: auto;
+        margin-top: 0px;
+        padding: 2px 3px 15px 3px;
+      }
+
+      .grid-head {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        font-size: 0.9em;
+      }
+
+      .grid-body {
+        height: 125vw;
+        background: var(--mainBlue);
+        grid-template-columns: 1fr 2fr;
+        overflow-x: auto;
+        border-radius: 5px;
+        border: 1px solid var(--lightPurple);
+      }
+
+      .header {
+        padding: 1vw 1vw;
+        border-radius: 3px;
+      }
+
+      .header>label {
+        margin-bottom: 3px;
+        padding: 5px 10px;
+      }
+
+      .header1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+        padding-left: 10px;
+      }
+
+      .header1>h1 {
+   font-weight: 800;
+      }
+
+      .header-button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .header-text-input {
+        width: 90%;
+      }
+
+      .hiddenMessage {
+        left: 75%;
+
+        font-size: 0.9em;
+        width: fit-content;
+      }
+
+
+
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <h2>Jake's Sweet Grid Interface</h2>
+      <h3>Such cool, very wow!</h3>
+    </header>
+
+    <main>
+      <div class="grid-head">
+        <div class="header header1">
+          <h1>Grid stuff</h1>
+        </div>
+        <div class="header header2">
+
+          <label for="header-text-input">Inputs in here like a boss</label>
+          <span class="header-button-container">
+            <span><input type="text" name="header-text-input" class="header-text-input"></span>
+            <span><input type="button" class="header-button" value="Ok"></span>
+          </span>
+
+        </div>
+      </div>
+      <div class="grid-body">
+        <div class="grid-cell cell3">
+          Cell 3
+        </div>
+        <div class="grid-cell cell4">
+          Cell 4
+        </div>
+        <div class="grid-cell cell5">
+          Cell 5
+        </div>
+        <div class="grid-cell cell6">
+          Cell 6
+        </div>
+        <div class="grid-cell cell7">
+          Cell 7
+        </div>
+        <div class="grid-cell cell8">
+          Cell 8
+        </div>
+        <div class="grid-cell cell9">
+          Cell 9
+        </div>
+        <div class="grid-cell cell10">
+          Cell 10
+        </div>
+        <div class="grid-cell cell11">
+          Cell 11
+        </div>
+        <div class="grid-cell cell12">
+          Cell 12
+        </div>
+        <div class="grid-cell cell13">
+          Cell 13
+        </div>
+        <div class="grid-cell cell14">
+          Cell 14
+        </div>
+        <div class="grid-cell cell15">
+          Cell 15
+        </div>
+        <div class="grid-cell cell16">
+          Cell 16
+        </div>
+      </div>
+    </main>
+    <div class="hiddenMessage" style="display: none; text-align: center; position: relative;">Show Header</div>
+  </div>
+  <script>
+    const header = document.querySelector('header');
+    const hiddenMsg = document.querySelector('.hiddenMessage');
+    let headerDisplayState = true;
+    console.log(headerDisplayState);
+
+
+    const hiddenDiv = hide => {
+
+
+      if (headerDisplayState === true) {
+        headerDisplayState = false;
+
+        hiddenMsg.style.display = 'block';
+        hiddenMsg.style.display = 'none';
+      } else {
+        headerDisplayState = true;
+
+        hiddenMsg.style.display = 'none';
+        header.style.display = 'block';
+      }
+
+    }
+
+
+    const hideHead = show => {
+
+      if (headerDisplayState === true) {
+        headerDisplayState = false;
+
+        header.style.display = 'none';
+        hiddenMsg.style.display = 'block';
+      } else {
+        headerDisplayState = true;
+
+        header.style.display = 'block';
+        hiddenMsg.style.display = 'none';
+      }
+
+
+
+
+      console.log(headerDisplayState);
+
+      show ? header.style.display = 'none' : header.style.display = 'block';
+
+    }
+
+    header.addEventListener('click', () => {
+      hideHead(headerDisplayState);
+      console.log(headerDisplayState);
+
+    });
+
+    hiddenMsg.addEventListener('click', () => {
+      hiddenDiv(headerDisplayState);
+      console.log(headerDisplayState);
+    });
+  </script>
+</body>
+
+</html>

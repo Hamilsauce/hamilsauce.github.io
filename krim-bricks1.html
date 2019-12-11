@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel='icon' href='./krim-favicon.ico' type='image/x-icon' />
+  <title>krimBricks1</title>
+  <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> -->
+  <style>
+    *:hover {
+      /* border-radius: 6%; */
+      /* border: 2 solid rgba(47, 51, 56, 0.6); */
+      /* transition: 1000ms background-color ease-in-out, 1000ms border-radius ease-in-out; */
+
+    }
+
+    html {
+       background-color: rgb(13, 20, 30, 0.5);
+       background-repeat: no-repeat;
+      background-image: url(./krimages/krimson-bg.jpg);
+      /* background-image: url(https://i2.wp.com/musicaficionado.blog/wp-content/uploads/2019/10/In-The-Court-of-the-Crimson-King-Front-Cover.jpg); */
+      background-size: cover;
+    }
+
+    body {
+
+      font-family: 'Roboto Slab', serif;
+      font-size: 1.8vw;
+      height: 100%;
+      /* width: 100%;  */
+
+      color: #D3E6D9;
+    }
+
+    /* a {
+      color: #D3E6D9;
+    }
+
+    p {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 0.4vw;
+    } */
+
+    #row2b {
+      text-align: right;
+    }
+
+    #row2b>p {
+      font-family: 'Rozha One', serif;
+      position: relative;
+      font-size: 5vw;
+    }
+
+    #row2b>p:nth-child(1) {
+      margin-top: 5vw;
+    }
+
+    #row2b>p:nth-child(2) {
+      margin-top: -1vw;
+      font-size: 7.5vw;
+    }
+
+    #grid {
+      display: grid;
+     /* height:; */
+      /* width: 100%; */
+          grid-gap: 0.5vw;
+          grid-template-rows: 6vw;
+          grid-auto-rows: 8vw;
+          grid-template-columns: 1fr repeat(6, 3fr) 1fr;
+
+    }
+
+    #grid>div {
+      position: relative;
+
+      background-color: rgba(13, 20, 30, 0.95);
+      outline-style: solid;
+      outline-color: rgba(25, 24, 29, 0.8);
+      outline-width: 0.vw;
+     /* -webkit-animation-name: grid-item-phase;
+     -webkit-animation-duration: 10s;
+     animation-name: grid-item-phase;
+     animation-duration: 30s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; */
+        transition: 1000ms outline-width ease, 1000ms background-color ease;
+    }
+
+
+
+
+    div#row1a,
+    div#row2a,
+    div#row3a,
+    div#row3b,
+    div#row4a,
+    div#row5a,
+    div#row5b,
+    div#row6a,
+    div#row7a,
+    div#row8a,
+    div#row9a,
+    div#row10a,
+    div#row12a {
+      background-color: rgba(61, 201, 115, 0.288);
+    }
+
+    #row1a,
+    div#row5a {
+      grid-column-end: span 3;
+    }
+
+    #row1b,
+    div#row2b,
+    div#row3b,
+    div#row5c,
+    div#row8a,
+    div#row8b,
+    div#row9a,
+    div#row12a {
+      grid-column-end: span 3;
+      background-color: rgba(255, 255, 255, 0.315);
+    }
+
+    div#row2b {
+      grid-row: span 2;
+    }
+
+    #filler {
+      width: 100vw;
+      height: 30vw;
+      background-color: rgba(13, 20, 30, 1);
+      margin-left: -2vw;
+
+      width: 100%;
+
+    }
+
+
+
+
+
+
+     /* Safari 4.0 - 8.0 */
+     @-webkit-keyframes grid-item-phase {
+   /* 0% {}
+   25% {background-color: yellow;}
+   50% {background-color: blue;}
+   100% {background-color: green;} */
+   }
+
+
+     /* Standard syntax */
+     /* @keyframes grid-item-phase {
+      0% {outline-width: 0.7vw;}
+     25% {outline-width: 0.5vw;}
+     50% {outline-width: 0.3vw; background-color: rgba(255, 255, 255, 0.2);}
+     100% {outline-width: 0.4vw;}
+     }*/
+
+       #grid>div:hover {
+       background-color: rgba(255, 255, 255, 0.1);
+       /* border-radius: 50%; */
+       outline-width: 0.5vw;
+
+
+       }
+  </style>
+</head>
+
+<body>
+  <div id="grid">
+    <!-- row0 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- row1 -->
+    <div></div>
+    <div></div>
+    <div id="row1a"></div>
+    <div id="row1b"></div>
+    <div></div>
+    <!-- row2 -->
+    <div></div>
+    <div id="row2a"></div>
+    <div id="row2b"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- row3 -->
+    <div></div>
+    <div id="row3a"></div>
+    <div id="row3b"></div>
+    <div></div>
+    <div></div>
+    <!-- row4 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="row4a"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- row5 -->
+    <div></div>
+    <div id="row5a"></div>
+    <div id="row5b"></div>
+    <div id="row5c"></div>
+    <div></div>
+    <!-- row6 -->
+    <div></div>
+    <div></div>
+    <div id="row6a"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- row7 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="row7a"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- row8 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="row8a"></div>
+    <div id="row8b"></div>
+    <div></div>
+    <!-- row9 -->
+    <div></div>
+    <div id="row9a"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- row10 -->
+    <!-- <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div id="row10a"></div>
+    <div></div>
+    <div></div>
+    <div></div> -->
+    <!--row11
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+row12
+    <div></div>
+    <div></div>
+    <div id="row12a"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+row13
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+row14
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>-->
+  </div>
+
+</body>
+
+</html>

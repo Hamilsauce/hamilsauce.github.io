@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
+    <title>Musix</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-family: 'Impact', sans-serif;
+            /* background: #e9dab217; */
+        }
+
+        :root {
+            --mainRed: #BC5B47;
+            --mainBlue: #556489ee;
+            --mainPurple: #826C94;
+            --mainGreen: #7D9949;
+            --mainLight: #CAD2BB;
+        }
+
+        .app {
+            box-sizing: border-box;
+            /* display: grid; */
+            /* gap: 5px;
+            grid-row-gap: 7px;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 3;
+            grid-template-areas:
+                "time time time"
+                "play pause stop"
+                "rName rName rName"; */
+            /* justify-content: center; */
+            /* margin: 100px auto 0px auto;
+            padding: 30px 25px;
+            max-width: 250px; */
+            /* border: 2px solid var(--mainBlue);
+            border-top: 15px solid var(--mainBlue);
+            border-bottom: 20px solid var(--mainBlue);
+            border-radius: 6px;
+            background: rgba(180, 250, 236, 0.5);
+            box-shadow: 0px 0px 25px 3px inset rgba(156, 168, 122, 0.432); */
+        }
+
+        .container {
+            box-sizing: border-box;
+            display: grid;
+            gap: 5px;
+            grid-row-gap: 7px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 4;
+            grid-template-areas:
+                "time time time"
+                "play pause stop"
+                "menu menu menu"
+                "rName rName rName";
+            justify-content: center;
+            margin: 100px auto 0px auto;
+            padding: 30px 25px;
+            max-width: 350px;
+            border: 2px solid var(--mainBlue);
+            border-top: 15px solid var(--mainBlue);
+            border-bottom: 20px solid var(--mainBlue);
+            border-radius: 6px;
+            background: rgba(180, 250, 236, 0.5);
+            box-shadow: 0px 0px 25px 3px inset rgba(156, 168, 122, 0.432);
+        }
+
+        .audio-button {
+            box-sizing: inherit;
+            background: var(--mainBlue);
+            border: 2px solid rgb(64, 74, 116);
+            border-radius: 3px;
+            color: white;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+            font-weight: 900;
+            font-size: 1.4em;
+            max-height: 30px;
+            padding: 0px 5px;
+
+
+
+
+        }
+
+        .radioName {
+            grid-area: rName;
+            margin: 0px;
+            margin: 20px auto 0px auto;
+            padding: 0px;
+            font-weight: 900;
+            font-size: 1.1em;
+            color: rgba(139, 23, 23, 0.473);
+        }
+
+        .showTime {
+            grid-area: time;
+            min-height: 36px;
+            padding: 15px 0px 2px 0px;
+            text-align: center;
+            background: var(--mainRed);
+            color: white;
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.74);
+            box-shadow: 0px 0px 15px 5px inset rgba(85, 85, 85, 0.219);
+            font-size: 1.2em;
+
+        }
+
+        .menu-container {
+            margin: 15px 0px 5px 0px;
+            display: flex;
+            justify-content: space-around;
+            grid-column: 1 / span 3;
+            grid-area: menu;
+
+        }
+
+        .song-menu {
+            border: 1px solid rgba(136, 48, 30, 0.267);
+            border-radius: 6px 6px 3px 3px;
+            border-bottom: 2px solid rgba(136, 48, 30, 0.507);
+            grid-column: 1 / span 3;
+            min-width: min-content;
+            font-size: 1em;
+            font-weight: 500;
+            padding: 3px;
+            background: rgba(255, 255, 255, 0.527);
+
+            color: rgba(34, 39, 65, 0.671);
+        }
+
+        .song-option {
+            text-align: center;
+        }
+
+        .audioTimeText {
+            vertical-align: bottom;
+        }
+
+        #play {
+            grid-area: play;
+        }
+
+        #pause {
+            grid-area: pause;
+        }
+
+        #stop {
+            grid-area: stop;
+        }
+
+        @media screen and (max-width: 400px) {
+            .container {
+                margin: auto;
+                margin: 100px auto 0px auto;
+                max-width: 90vw;
+
+            }
+        }
+    </style>
+    <script src="./audio-player-code.js" type="module"></script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="container">
+            <div class="showTime"></div  >
+            <audio id="audio-player">
+                <source class="source" src="https://hamilsauce.github.io/audio/new space reduced.mp3"
+                    type="audio/mpeg">
+
+            </audio>
+            <button class="audio-button" id="play">PLAY</button>
+            <button class="audio-button" id="pause">PAUSE</button>
+            <button class="audio-button" id="stop">STOP</button>
+
+            <div class="menu-container">
+                <select name="song-select" id="song-select" class="song-menu" >
+                    <option value="pee" class="song-option">poop</option>
+                </select>
+            </div>
+
+            <div class="radioName">Ham Radio </div>
+        </div>
+    </div>
+<script src="./audio-player-code.js" type="module"></script>
+
+</body>
+
+</html>
