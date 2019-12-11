@@ -1,0 +1,53 @@
+<!doctype html><html><head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style></style></head>
+
+<body>
+	<div id="content-container">
+		<form>
+			<button id="start-osc" onclick="startOsc()">Start Oscillator</button>	
+			<button id="stop-osc" onclick="stopper()">Stop Oscillator</button>	
+		
+		</form>
+	</div>
+
+<script>
+	const ctx = new window.AudioContext ;
+	
+	let vol = ctx.createGain();
+	vol.connect(ctx.destination);
+	
+	let sineA = ctx.createOscillator();
+	sineA.frequency.value = 440;
+	sineA.type = 'triangle';
+	sineA.start();
+	sineA.connect(vol);
+	
+	let sineB = ctx.createOscillator();
+	sineB.frequency.value = 554.37;
+	sineB.type = 'sawtooth';
+	sineB.start();
+	sineB.connect(vol);
+
+	let sineC = ctx.createOscillator();
+	sineC.frequency.value = 659.25;
+	sineC.type = 'sine';
+	sineC.start();
+	sineC.connect(vol);
+
+	vol.gain.value = 0.2;
+//	sine.connect(cdestination);
+//	let startOsc = () => {
+	
+//	}
+	
+//let stopOsc = () => {
+//sine.stop();
+//		sine.connect(ctx.destination);
+//};
+//console.log(ctx);
+</script>
+
+
+
+</body></html>

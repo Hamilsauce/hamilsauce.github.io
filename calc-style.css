@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: 475;
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #ed7155, #21acf2);
+  display: contents;
+}
+/* 
+.top-navigation-list {
+  z-index: 2;
+  display: inline;
+  justify-content: space-between;
+  padding: 5px;
+  white-space: nowrap;
+
+} */
+ /* 
+.top-navbar-link {
+ position: r;
+  padding: 0%;
+  margin: 4%;
+  display: inline-block;
+  align-content: center;
+  justify-content:center;
+
+  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8); 
+  transform: scale(0.8);
+  transition: transform 133ms ease-in-out;
+} */
+
+/* .anchor-link {
+  text-decoration: none;
+
+} */
+/* 
+.navbar-link-text {
+  display: inline;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  outline: #d3f0ff71 solid 3px;
+  margin: 0%;
+  padding: 2%;
+  background: rgba(13, 20, 30, 0.7);
+  color: rgb(202, 238, 255);
+  box-shadow: 6px 8px rgba(13, 20, 30, 0.3);
+  font-size: 1.8em;
+  text-decoration-line: none;
+  text-decoration-style: none;
+} */
+
+.playlist-header {
+  padding: 2px;
+  margin: 3px 3px 3px 3px;
+  text-align: center;
+  background-color: rgba(13, 20, 30, 0.7);
+  color: beige;
+  font-size: 2rem;
+  font-weight: 450;
+}
+
+.playlist-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+.playlist-frame {
+  box-shadow: 6px 8px rgba(13, 20, 30, 0.3);
+}
+
+.playlist-frame:hover {
+  box-shadow: 20px 20px rgba(13, 20, 30, 0.5);
+}
+
+.back-button {
+
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  text-align: center;
+
+  /*  border: 1px solid rgb(100%, 100%, 100%);
+  border: 1px solid rgba(100%, 100%, 100%, 0.8); */
+}
+
+.back-text {
+  display: block;
+  outline: #d3f0ff71 solid 3px;
+  justify-content: center;
+  text-align: center;
+  margin: 0%;
+  padding: 2%;
+  background: rgba(13, 20, 30, 0.7);
+  color: rgb(202, 238, 255);
+  box-shadow: 6px 8px rgba(13, 20, 30, 0.3);
+  font-size: 1em;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  word-wrap: inherit;
+}
+
+
+.header {
+  padding: 1%;
+  margin: 2% 1% ;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  background-color: rgba(13, 20, 30, 0.7);
+  color: beige;
+  font-size: 2rem;
+  font-weight: 450;
+  
+}
+
+
+.whole-thing {
+  display: inline;
+  align-content: center;
+  justify-content:  center;
+  text-align: center;
+  position: relative;
+  padding: 5px;
+  margin: 5px;
+  white-space: nowrap;
+}
+
+
+.playlist {
+  display: inline;
+  outline: none;
+  justify-content: space-between;
+  align-content: space-around;
+
+}
+
+.calculator-grid {
+  display: grid;
+  outline: none;
+  justify-content: center;
+  align-content: flex-start;
+  min-height: 90vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(115px, auto) repeat(5, 92px);
+
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2.15rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, .75);
+  box-shadow: 4px 4px rgba(13, 20, 30, 0.3);
+}
+
+.calculator-grid>button:hover {
+  background-color: rgba(255, 255, 255, .9);
+  box-shadow: 4px 6px rgba(13, 20, 30, 0.5);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(13, 20, 30, 0.70);
+  display: flex;
+  box-shadow: 4px 4px rgba(13, 20, 30, 0.5);
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-shadow: 2px 2px rgba(13, 20, 30, 0.9);
+
+}
+
+.output .previous-operand {
+  color: rgba(227, 245, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+
+}
