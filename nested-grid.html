@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -265,6 +266,274 @@
 </div>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nested grid layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <style>
+
+        :root {
+
+      --mainRed: #BC5B47;
+      --mainBlue: #556489;
+      --mainPurple: #826C94;
+      --mainGreen: #7D9949;
+      --mainLight: #CAD2BB;
+        }
+        html {
+
+            background: rgb(153, 183, 192);
+        }
+
+        .app {
+            max-width: 75vw;
+            margin: auto;
+            padding: 5px;
+        }
+
+        .grid-container {
+            margin: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-self: center;
+            align-content: center;
+            background: rgb(231, 243, 166);
+
+        }
+
+        .grid-top {
+            display: grid;
+            gap: 5px;
+            grid-template-columns: [byline-end content-start] 1fr [something-start] 3fr [something-end content-end aside-start];
+            border: 2px solid white;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .grid-headers {
+            display: grid;
+            gap: 10px;
+            min-height: 300px;
+            min-width: 150px;
+        }
+
+        .grid-body {
+            display: grid;
+            gap: 10px;
+            /* grid-template-columns: repeat(auto-fill, minmax(100px, 2fr)); */
+            border-radius: 5px;
+            padding: 20px;
+            border: 2px solid white;
+
+
+        }
+
+       .grid-body>div:nth-of-type(4n+0) {
+           grid-column: span 2;
+         }
+
+        .grid-head {
+            background: var(--mainRed);
+            border: 2px solid var(--mainPurple);
+            border-radius: 5px;
+            border: 1px solid rgba(245, 245, 245, 0.479);
+            padding: 10px;
+            color: white;
+            transition: 400ms background ease, 200ms border ease-in-out, 200ms box-shadow ease;
+        }
+
+       .grid-head:hover {
+            /* background: rgb(199, 111, 93); */
+            box-shadow: 0px 0px 20px 10px inset rgba(187, 110, 95, 0.541);
+            border: 1px solid rgb(231, 231, 231);
+        }
+       .grid-head:active {
+            background: rgba(122, 78, 136, 0.808)
+        }
+
+
+        .body-cell {
+            box-sizing: border-box;
+            background: rgb(255, 255, 255);
+            border-bottom: 2px solid rgb(8, 29, 66);
+            min-width: 100px;
+            min-height: 70px;
+            background: var(--mainBlue);
+            transition: 200ms background ease-in-out, 200ms border ease-in-out;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid rgba(245, 245, 245, 0.479);
+            padding: 10px;
+        }
+
+        .body-cell:hover {
+            background: var(--mainPurple);
+            border: 1px solid rgb(37, 36, 36);
+        }
+        .body-cell:active {
+            background: rgba(122, 78, 136, 0.808)
+        }
+
+        .cell1 {
+            grid-column: span 1;
+        }
+        .cell2 {
+            grid-column: span 2;
+        }
+        .cell3 {
+            grid-column: span 1;
+        }
+        .cell5 {
+            grid-column: span 2;
+        }
+        .cell6 {
+            grid-column: span 1;
+        }
+        .cell7 {
+            grid-column: span 3;
+        }
+        .cell9 {
+            grid-column: span 2;
+        }
+        .cell11 {
+            grid-column: span 3;
+        }
+
+        @media screen and (max-width: 500px) {
+            .app {
+                width: 100%;
+                margin: 0;
+                max-width: 100vw;
+            }
+            .grid-container {
+                margin: auto;
+                width: 100%;
+                /* height: 100%; */
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-self: center;
+                align-content: center;
+
+            }
+            .grid-top {
+
+                grid-template-columns:1fr;
+            }
+            .grid-head>div {
+                height: 100px;
+            }
+            .grid-headers {
+                display: grid;
+                gap: 10px;
+                min-height: 150px;
+                min-width: 150px;
+        }
+
+
+
+            .grid-body {
+                height: 100vw;
+                padding: 20px;
+                grid-template-columns:1fr;
+            }
+
+        .grid-body>div:nth-of-type(2n+0) {
+           grid-column: span 2;
+         }
+             .grid-body>div:nth-of-type(3n+0) {
+           grid-column: span 2;
+         }
+        .cell1 {
+            grid-column: span 1;
+        }
+        .cell2 {
+            grid-column: span 1;
+        }
+        .cell3 {
+            grid-column: span 1;
+        }
+        .cell5 {
+            grid-column: span 1;
+        }
+        .cell6 {
+            grid-column: span 1;
+        }
+        .cell7 {
+            grid-column: span 1;
+        }
+        .cell9 {
+            grid-column: span 1;
+        }
+        .cell11 {
+            grid-column: span 1;
+        }
+      .body-cell {
+
+            min-width: ;
+            min-height: 70px;
+            background: var(--mainBlue);
+            transition: 200ms background ease-in-out, 200ms border ease-in-out;
+            color: white;
+            border-radius: 5px;
+            border: 1px solid rgba(245, 245, 245, 0.479);
+            padding: 10px;
+        }
+
+
+            }
+
+    </style>
+</head>
+
+<body>
+        <div class="app">
+    <div class="top-nav">
+        <h3>THis is the Site!</h3>
+    </div>
+
+    <main class="grid-container">
+        <div class="grid-top">
+
+            <header class="grid-headers">
+                <div class="grid-head main-header">Header 1</div>
+                <div class="grid-head main-header">Sub header</div>
+            </header>
+            <section class="grid-body">
+                <div class="body-cell cell1">1</div>
+                <div class="body-cell cell2">2</div>
+                <div class="body-cell cell3">3</div>
+                <div class="body-cell cell4">4</div>
+                <div class="body-cell cell5">5</div>
+                <div class="body-cell cell6">6</div>
+                <div class="body-cell cell7">7</div>
+                <div class="body-cell cell8">8</div>
+                <div class="body-cell cell9">9</div>
+                <div class="body-cell cell10">10</div>
+                <div class="body-cell cell11">11</div>
+                <div class="body-cell cell12">12</div>
+                <div class="body-cell cell13">13</div>
+                <div class="body-cell cell14">14</div>
+                <div class="body-cell cell15">15</div>
+                <div class="body-cell cell16">16</div>
+                <div class="body-cell cell17">17</div>
+            </section>
+        </div>
+    </main>
+
+</div>
+</body>
+
+>>>>>>> 4df2b7f93bb3e0cd66367abf19a4f6a16da83a8a
 =======
 <!DOCTYPE html>
 <html lang="en">
