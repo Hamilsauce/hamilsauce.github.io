@@ -1,13 +1,20 @@
 const ROOT_NAME = 'https://hamilsauce.github.io/';
 
 export const musicFileList = [
-'audio/Ink%20Erodes%20Slowly2.mp3',
-'audio/appalachia.wav',
-'audio/new%20space%20reduced.mp3',
+'audio/procession(revise1).mp3',
 'audio/syntheticdreams.mp3',
-'audio/Offworld%20(up).mp3',
 'audio/the-third-face.mp3',
-'audio/procession(revise1).mp3'
+'audio/Wild%20Onion.mp3',
+'audio/Chasing%20Bengals.mp3',
+'audio/flecktunes(primary%20full%20band).wav',
+'audio/Offworld%20(up).mp3',
+'audio/Battle%20Star.mp3',
+'audio/Ink%20Erodes%20Slowly2.mp3',
+'audio/The%20Gypsy.mp3',
+'audio/Voyage%20into%20Sample.mp3',
+'audio/appalachia.wav',
+'audio/flecktune%20Slendro%20Bass%20and%20Pianos%20Best%20Blues.mp3',
+'audio/new%20space%20reduced.mp3'
 ];
 
 export const songNames = musicFileList
