@@ -1,5 +1,6 @@
-let songList = () => {
-    const songs = [{
+{
+    [
+        {
             "id": "1",
             "songTitle": "Battle Star",
             "plays": "12",
@@ -397,8 +398,4 @@ let songList = () => {
             "comments": "7 years ago"
         }
     ]
-    return songs;
 }
-
-
-export default songList();
