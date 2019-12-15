@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<style>
+  * {
+    font-size: 1em;
+  }
+  
+  .grid{
+    display: grid;
+    background: rgba(140, 50, 70, 0.9);
+    justify-content: center;
+    border-radius: 5px;
+  }
+  .note-table {
+    width: 250px;
+    background: rgba(90, 120, 160, 1);
+  }
+  .note-table>li {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 5px;
+    
+  }
+  .noteInput {
+    padding: 5px;
+    width: 75px;
+    border: 2px solid rgba(60, 60, 60, 0.4);
+    border-radius: 5px;
+  }
+  
+  .inputs {
+    text-align: center;
+    color: white;
+    
+  }
+  .inputs>h1{
+    font-size: 1.2em;
+  }
+  
+</style>
+</head>
+
+<body>
+  <div class="grid">
+  <div class="inputs">
+  <h1> The Note Frequency-izer </h1>
+  <input type="text" class="noteInput">
+  <input type="button" class="subBut" value="Get Note">
+  </div>
+   <ul class="note-table"></ul> 
+ </div>
+  <script src="./notemondo/toner.js" type="module">
+  
+  </script>
+</body>
+
+</html>
