@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .content {
+            width: 100%;
+            height: fit-content;
+            /* background-image: url("./train-tracks-graphic.svg") */
+        }
+        .app-header {
+            padding: 0px 10px;
+            background: #366F9E;
+            border: 1px solid rgb(61, 61, 61);
+            color: white;
+        }
+        .app-header>h1 {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        .header-pic {
+            position: absolute;
+            opacity: 0.9;
+            right: 15px;
+            top: 10px;
+            z-index: 1;
+            height: 80px;
+
+        }
+        .userform {
+            display: grid;
+            gap: 5px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .stopSelect {
+            box-sizing: border-box;
+            height: fit-content;
+            width: 100%;
+            margin: auto;
+            padding: 5px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid rgb(160, 160, 160);
+        }
+        /* .submitButton {
+            box-sizing: border-box;
+            width: 100%;
+            height: fit-content;
+            padding: 5px 0px;
+            margin-top: 25%;
+        } */
+        .data-display {
+            display: grid;
+            gap: 20px;
+            padding: 10px;
+        }
+        .eta {
+            display: none;
+            /* display: grid; */
+            gap: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            border: 2px solid rgba(87, 121, 165, 0.623);
+            box-shadow: 0px 3px 15px 2px rgba(173, 172, 172, 0.246);
+            color: whitesmoke;
+        }
+        .eta:hover {
+            outline: 2px solid rgb(255, 255, 255);
+            border: 3px solid rgb(200, 200, 200);
+            box-shadow: 0px 3px 5px 2px inset rgba(51, 120, 133, 0.253);
+
+        }
+        .eta1,
+        .eta3 {
+            background: rgb(54, 155, 158);
+            padding: 5px;
+
+        }
+        .eta2,
+        .eta4 {
+            background: rgb(54, 111, 158);
+            color: whitesmoke;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="app-header">
+            <img class="header-pic" src="./train-tracks-graphic2.svg">
+        <div class="header-text">
+            <h1>train tracks</h1>
+        </div>
+        <div class="header-menu">
+
+        </div>
+    </header>
+    <section class="content">
+        <div class="form-container">
+            <form class="userform">
+                <label class="selectLabel">
+                    Choose a station
+                    <select name="stopSelect" class="stopSelect">
+                        <option value="" class="stopOption"></option>
+                    </select>
+                </label>
+                <!-- <input type="submit" class="submitButton" value="get data"> -->
+            </form>
+        </div>
+        <div class="data-display">
+            <div class="eta eta1">
+                <div class="preformat00"></div>
+                <div class="preformat10"></div>
+                <div class="preformat20"></div>
+                <div class="preformat30"></div>
+            </div>
+            <div class="eta eta2">
+                <div class="preformat01"></div>
+                <div class="preformat11"></div>
+                <div class="preformat21"></div>
+                <div class="preformat31"></div>
+            </div>
+            <div class="eta eta3">
+                <div class="preformat02"></div>
+                <div class="preformat12"></div>
+                <div class="preformat22"></div>
+                <div class="preformat32"></div>
+            </div>
+            <div class="eta eta4">
+                <div class="preformat03"></div>
+                <div class="preformat13"></div>
+                <div class="preformat23"></div>
+                <div class="preformat33"></div>
+            </div>
+        </div>
+    </section>
+    <script src="./ctaTrainTracker.js" type="module"></script>
+</body>
+
+</html>
