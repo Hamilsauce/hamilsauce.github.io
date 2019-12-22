@@ -1,36 +1,62 @@
-import {blueLineStops} from './ctaBlueStops.js'
-import {csvToJson} from '../csvToJson12.21.js'
+import {
+    blueLineStops
+} from './ctaBlueStops.js'
+import {
+    csvToJson
+} from './csvToJson12.21.js'
+import * as fetchman from './dataFetch.js'
 
 // get stop data to populate select optuons
-const blueStops = csvToJson(blueLineStops, 'comma');
+// const blueStops = csvToJson(blueLineStops, 'comma');
+App.dataFetcher.fetchJson('https://hamilsauce.github.io/trainStops.json', 'allTrainStops');
 
-(() => {
-    const populateStopSelect = data => {
-        const stopSelect = document.querySelector('.stopSelect');
+let allStops = [];
+const timerTest = () => {
+    setTimeout(() => {
+        let stops = App.dataFetcher.getData('allTrainStops');
+        App.dataFetcher.getData('allTrainStops')
 
-        data.forEach(stop => {
-            let [stopName, mapid] = Object.values(stop);
+        allStops = stops.stops;
+        sortAndAddStops(allStops);
+    }, 5000)
 
-            const newOption = document.createElement('option');
-            newOption.classList.add('stopOption');
-            newOption.textContent = stopName;
-            newOption.value = mapid;
+}
+timerTest();
 
-            stopSelect.appendChild(newOption);
-        });
-    }
-    return populateStopSelect(blueStops);
-})();
 
-/**!
- * !object for holding/organizing random query string parts */
+const sortAndAddStops = (stopList) => {
+    const stopSelect = document.querySelector('.stopSelect');
+
+    stopList.sort((a, b) => {
+        let first = a.stopName.toUpperCase();
+        let second = b.stopName.toUpperCase();
+        let compare = 0;
+
+        if (first > second) compare = 1;
+        else if (first < second) compare = -1;
+        return compare;
+    });
+    console.log(stopList);
+
+    stopList.forEach(stop => {
+        // let [stopName, mapId] = Object.values(stop);
+        const newOption = document.createElement('option');
+
+        newOption.classList.add('stopOption');
+        newOption.textContent = stop.STATION_DESCRIPTIVE_NAME;
+        newOption.value = stop.mapId;
+        stopSelect.appendChild(newOption);
+    });
+};
+
+/*//! object for holding/organizing random query string parts */
 let queryString = {
     trainUrl: 'http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx',
     apiKey: '3106a8d27f8b4f8fb99b7c8d895163dd',
-    mapid: '41020',
+    mapId: '41020',
     outputType: 'JSON',
     constructString(proxy) {
-        const queryString = `${proxy}${this.trainUrl}?key=${this.apiKey}&mapid=${this.mapid}&outputType=${this.outputType}`;
+        const queryString = `${proxy}${this.trainUrl}?key=${this.apiKey}&mapid=${this.mapId}&outputType=${this.outputType}`;
         return queryString;
     }
 }
@@ -82,17 +108,41 @@ const getTrainData = () => {
 
 
 document.querySelector('.stopSelect').addEventListener('change', e => {
-    queryString.mapid = e.target.value;
-        let trainData = getTrainData();
-        let etaData = (getTrainData());
+    console.log(e.target.value)
+    console.log(document.querySelector('.stopSelect').value);
+    queryString.mapId = e.target.value;
+    let etaData = (getTrainData());
 
 })
-//event handle for get data button
-// document.querySelector('.submitButton')
-//     .addEventListener('click', e => {
-//         e.preventDefault();
+const filterByLine = (e) => {
+    const boxes = document.querySelectorAll('.trainCheckbox');
+    let filteredStops = [];
+    boxes.forEach(box => {
 
-//         let trainData = getTrainData();
-//         let etaData = (getTrainData());
 
-//     })
+        if (box.checked) {
+            let lineName = box.value;
+            console.log(lineName);
+
+            filteredStops = allStops
+                .filter(stop => {
+                    return stop[lineName] === true;
+                });
+        }
+        if (filteredStops.length === 0) {
+            filteredStops = allStops;
+
+        }
+
+    });
+    return filteredStops;
+}
+document.querySelector('.trainLineBoxes').addEventListener('click', e => {
+    document.querySelectorAll('.stopOption').forEach(opt => {
+        opt.remove()
+    });
+
+    let filteredList = filterByLine();
+    sortAndAddStops(filteredList);
+
+})

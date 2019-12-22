@@ -11,54 +11,116 @@
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+            width: 100%;
+            height: 100%;
         }
+
         body {
             box-sizing: border-box;
             padding: 0;
             margin: 0;
+            width: 100%;
+            height: 100%;
         }
+        .app {
+            width: 100%;
+            margin: auto;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
         .content {
+            box-sizing: border-box;
+
+            display: grid;
+            row-gap: 15px;
             width: 100%;
             height: fit-content;
             /* background-image: url("./train-tracks-graphic.svg") */
         }
+
         .app-header {
+
             padding: 0px 10px;
             background: #366F9E;
             border: 1px solid rgb(61, 61, 61);
             color: white;
+            width: 100%;
         }
-        .app-header>h1 {
+
+        .header-text {
+            box-sizing: border-box;
             margin: 0;
-            padding: 0;
+            padding: 10px 10px 10px 10px;
+            box-sizing: border-box;
+        }
+
+        .subtitle {
+            box-sizing: border-box;
+            margin: 0px 0px 10px 0px;
+            padding: 0px 10px 10px 100px;
             box-sizing: border-box;
 
         }
-        .header-pic {
-            position: absolute;
-            opacity: 0.9;
-            right: 15px;
-            top: 10px;
-            z-index: 1;
-            height: 80px;
+
+        .header-text>h1 {
+            margin: 0;
+            padding: 10px 10px 0px 10px;
+            box-sizing: border-box;
 
         }
+
+        .header-pic {
+            box-sizing: border-box;
+
+            position: absolute;
+            opacity: 0.3;
+            right: 175px;
+            bottom: 50px;
+            z-index: -1;
+            /* height: 80px; */
+
+        }
+
         .userform {
+            box-sizing: border-box;
+
             display: grid;
-            gap: 5px;
+            gap: 10px;
             justify-content: center;
+
+            width: 560px;
+            margin: auto;
             padding: 10px;
         }
+
         .stopSelect {
+
             box-sizing: border-box;
             height: fit-content;
-            width: 100%;
-            margin: auto;
+
+            margin: 0;
             padding: 5px;
             font-size: 1em;
             border-radius: 5px;
             border: 1px solid rgb(160, 160, 160);
         }
+
+        .trainLineBoxes {
+            box-sizing: border-box;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 80px);
+            gap: 5px;
+            justify-content: center;
+            padding: 10px;
+            padding-top: 5px;
+            max-width: 100%;
+            min-width: 400px;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
         /* .submitButton {
             box-sizing: border-box;
             width: 100%;
@@ -68,93 +130,178 @@
         } */
         .data-display {
             display: grid;
+            box-sizing: border-box;
+
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
+            max-width: 560px;
+            width: 100%;
+            margin: auto;
             padding: 10px;
         }
+
         .eta {
+            box-sizing: border-box;
             display: none;
-            /* display: grid; */
+            display: grid;
             gap: 5px;
-            padding: 10px;
-            border-radius: 5px;
+
+            padding: 15px;
+            border-radius: 3px;
             font-size: 1.2em;
             border: 3px solid rgba(87, 121, 165, 0.623);
             box-shadow: 0px 3px 15px 2px rgba(173, 172, 172, 0.246);
             color: whitesmoke;
             outline: 2px solid rgba(255, 255, 255, 0);
-            transition: 0.5s;
+            transition: 0.2s;
         }
+
         .eta:hover {
             outline: 2px solid rgb(255, 255, 255);
             border: 3px solid rgb(200, 200, 200);
-            box-shadow: 0px 3px 5px 2px inset rgba(51, 120, 133, 0.253);
+            box-shadow: 0px 3px 5px 2px rgba(14, 58, 66, 0.253);
 
         }
+
         .eta1,
         .eta3 {
             background: rgb(54, 155, 158);
             padding: 5px;
 
         }
+
         .eta2,
         .eta4 {
             background: rgb(54, 111, 158);
             color: whitesmoke;
             padding: 5px;
         }
+
+        @media screen and (max-width: 400px) {
+
+            .userform {
+                display: grid;
+                gap: 10px;
+                justify-content: center;
+                width: 360px;
+                margin: auto;
+                padding: 10px;
+            }
+
+            .stopSelect {
+                box-sizing: border-box;
+                height: fit-content;
+                width: 200px;
+                max-width: 200px;
+                margin: auto;
+                padding: 5px;
+                font-size: 0.6;
+overflow: hidden;
+                border-radius: 5px;
+                border: 1px solid rgb(160, 160, 160);
+            }
+            .data-display {
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 100%;
+            width: 360px;
+            margin: auto;
+            padding: 10px;
+        }
+
+        }
     </style>
 </head>
 
 <body>
+<div class="app">
 
-    <header class="app-header">
-            <!-- <img class="header-pic" src="./train-tracks-graphic2.svg"> -->
-        <div class="header-text">
-            <h1>train tracks</h1>
-        </div>
-        <div class="header-menu">
+        <header class="app-header">
+            <img class="header-pic" src="./train-tracks-graphic.png">
+            <div class="header-text">
+                <h1>train tracks</h1>
+                <span class="subtitle">track trains</span>
+            </div>
+            <div class="header-menu">
 
-        </div>
-    </header>
-    <section class="content">
-        <div class="form-container">
-            <form class="userform">
-                <label class="selectLabel">
-                    Choose a station
-                    <select name="stopSelect" class="stopSelect">
-                        <option value="" class="stopOption"></option>
-                    </select>
-                </label>
-                <!-- <input type="submit" class="submitButton" value="get data"> -->
-            </form>
-        </div>
-        <div class="data-display">
-            <div class="eta eta1">
-                <div class="preformat00"></div>
-                <div class="preformat10"></div>
-                <div class="preformat20"></div>
-                <div class="preformat30"></div>
             </div>
-            <div class="eta eta2">
-                <div class="preformat01"></div>
-                <div class="preformat11"></div>
-                <div class="preformat21"></div>
-                <div class="preformat31"></div>
+        </header>
+        <section class="content">
+            <div class="form-container">
+                <form class="userform">
+                    <label class="selectLabel">
+                        Choose a station
+                        <select name="stopSelect" class="stopSelect">
+                            <option value="" class="stopOption"></option>
+                        </select>
+                    </label>
+                    <!-- <input type="submit" class="submitButton" value="get data"> -->
+                    <label class="checkBoxesLabel">
+                        and a train line(s)
+                        <div class="trainLineBoxes">
+                            <span class="checkBox-container" style="background: #366F9E; color: white;"><label for="">Blue
+                                    <input type="checkbox" class="trainCheckbox" value="Blue"></label></span>
+                            <span class="checkBox-container" style="background: rgb(180, 60, 44); color: white;"><label
+                                    for="">Red
+                                    <input type="checkbox" class="trainCheckbox" value="Red"></label></span>
+                            <span class="checkBox-container" style="background: rgb(156, 88, 48); color: white;"><label
+                                    for="">Brown
+                                    <input type="checkbox" class="trainCheckbox" value="Brown"></label></span>
+                            <span class="checkBox-container" style="background: rgb(54, 158, 77); color: white;"><label
+                                    for="">Green
+                                    <input type="checkbox" class="trainCheckbox" value="Green"></label></span>
+                            <span class="checkBox-container" style="background: rgb(187, 144, 24); color: white;"><label
+                                    for="">Yellow
+                                    <input type="checkbox" class="trainCheckbox" value="Yellow"></label></span>
+                            <span class="checkBox-container" style="background: rgb(209, 101, 12); color: white;"><label
+                                    for="">Orange
+                                    <input type="checkbox" class="trainCheckbox" value="Orange"></label></span>
+                            <span class="checkBox-container" style="background: rgb(160, 25, 108); color: white;"><label
+                                    for="">Purple
+                                    <input type="checkbox" class="trainCheckbox" value="Purple"></label></span>
+                            <span class="checkBox-container" style="background: rgb(231, 8, 138); color: white;"><label
+                                    for="">Pink
+                                    <input type="checkbox" class="trainCheckbox" value="Pink"></label></span>
+                            <span class="checkBox-container" style="background: rgb(155, 157, 158); color: white;"><label
+                                    for="">Pexp
+                                    <input type="checkbox" class="trainCheckbox" value="Pexp"></label></span>
+                            <span class="checkBox-container" style="background: rgb(155, 157, 158); color: white;"><label
+                                    for="">ADA
+                                    <input type="checkbox" class="trainCheckbox" value="ADA"></label></span>
+                        </div>
+                    </label>
+                </form>
             </div>
-            <div class="eta eta3">
-                <div class="preformat02"></div>
-                <div class="preformat12"></div>
-                <div class="preformat22"></div>
-                <div class="preformat32"></div>
+            <div class="data-display">
+                <div class="eta eta1">
+                    <div class="preformat00"></div>
+                    <div class="preformat10"></div>
+                    <div class="preformat20"></div>
+                    <div class="preformat30"></div>
+                </div>
+                <div class="eta eta2">
+                    <div class="preformat01"></div>
+                    <div class="preformat11"></div>
+                    <div class="preformat21"></div>
+                    <div class="preformat31"></div>
+                </div>
+                <div class="eta eta3">
+                    <div class="preformat02"></div>
+                    <div class="preformat12"></div>
+                    <div class="preformat22"></div>
+                    <div class="preformat32"></div>
+                </div>
+                <div class="eta eta4">
+                    <div class="preformat03"></div>
+                    <div class="preformat13"></div>
+                    <div class="preformat23"></div>
+                    <div class="preformat33"></div>
+                </div>
             </div>
-            <div class="eta eta4">
-                <div class="preformat03"></div>
-                <div class="preformat13"></div>
-                <div class="preformat23"></div>
-                <div class="preformat33"></div>
-            </div>
-        </div>
-    </section>
+        </section>
+</div>
     <script src="./ctaTrainTracker.js" type="module"></script>
 </body>
 
