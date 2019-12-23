@@ -7,26 +7,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>train tracks - track trains</title>
     <style>
+
+        * {
+            touch-action: manipulation;
+        }
         html {
             box-sizing: border-box;
             padding: 0;
-            margin: 0;
-            width: 100%;
+            margin: auto;
+            width: fit-content;
             height: 100%;
         }
 
         body {
             box-sizing: border-box;
             padding: 0;
-            margin: 0;
-            width: 100%;
+            margin: auto;
+            width: fit-content;
             height: 100%;
         }
         .app {
+            display: flex;
+            flex-direction: column;
             width: 100%;
             margin: auto;
             height: 100%;
+            /* padding: 5px; */
             box-sizing: border-box;
+            text-align: center;
+        }
+        .selectspan {
+            text-align: center;
         }
 
         .content {
@@ -34,18 +45,19 @@
 
             display: grid;
             row-gap: 15px;
-            width: 100%;
+            /* width: 100%; */
             height: fit-content;
             /* background-image: url("./train-tracks-graphic.svg") */
         }
 
         .app-header {
-
-            padding: 0px 10px;
+/* box-sizing: border-box; */
+            /* padding: 0px 10px; */
             background: #366F9E;
             border: 1px solid rgb(61, 61, 61);
             color: white;
             width: 100%;
+            margin-bottom: 15px;
         }
 
         .header-text {
@@ -87,11 +99,12 @@
 
             display: grid;
             gap: 10px;
+            row-gap: 10px;
             justify-content: center;
 
-            width: 560px;
-            margin: auto;
-            padding: 10px;
+            /* width: 560px; */
+            /* margin: auto; */
+            /* padding: 10px; */
         }
 
         .stopSelect {
@@ -100,6 +113,7 @@
             height: fit-content;
 
             margin: 0;
+            margin-bottom: 10px;
             padding: 5px;
             font-size: 1em;
             border-radius: 5px;
@@ -110,15 +124,25 @@
             box-sizing: border-box;
 
             display: grid;
-            grid-template-columns: repeat(auto-fit, 80px);
-            gap: 5px;
-            justify-content: center;
+            grid-template-columns: repeat(auto-fill, 80px);
+            gap: 10px;
+            margin: auto;
+            justify-content: space-around;
             padding: 10px;
+            padding-left: 0px;
             padding-top: 5px;
             max-width: 100%;
-            min-width: 400px;
+            min-width: 385px;
             text-align: center;
             font-size: 1.1em;
+        }
+
+        .checkBox-container {
+            padding: 5px;
+            margin: auto;
+            width: 78px;
+            height: 25px;
+            text-align: center;
         }
 
         /* .submitButton {
@@ -134,7 +158,7 @@
 
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            max-width: 560px;
+            max-width: 500px;
             width: 100%;
             margin: auto;
             padding: 10px;
@@ -177,15 +201,19 @@
             padding: 5px;
         }
 
+        #orangeBox {
+    font-size: 1em;
+}
+
         @media screen and (max-width: 400px) {
 
             .userform {
                 display: grid;
                 gap: 10px;
                 justify-content: center;
-                width: 360px;
+                /* width: 370px; */
                 margin: auto;
-                padding: 10px;
+                /* padding: 10px; */
             }
 
             .stopSelect {
@@ -194,6 +222,7 @@
                 width: 200px;
                 max-width: 200px;
                 margin: auto;
+                margin-bottom: 10px;
                 padding: 5px;
                 font-size: 0.6;
 overflow: hidden;
@@ -219,7 +248,7 @@ overflow: hidden;
 <div class="app">
 
         <header class="app-header">
-            <img class="header-pic" src="./train-tracks-graphic.png">
+            <!-- <img class="header-pic" src="./train-tracks-graphic.png"> -->
             <div class="header-text">
                 <h1>train tracks</h1>
                 <span class="subtitle">track trains</span>
@@ -231,12 +260,12 @@ overflow: hidden;
         <section class="content">
             <div class="form-container">
                 <form class="userform">
-                    <label class="selectLabel">
-                        Choose a station
+                    <span class="selectspan">
+                        Choose a station</span>
                         <select name="stopSelect" class="stopSelect">
                             <option value="" class="stopOption"></option>
                         </select>
-                    </label>
+
                     <!-- <input type="submit" class="submitButton" value="get data"> -->
                     <label class="checkBoxesLabel">
                         and a train line(s)
@@ -257,7 +286,7 @@ overflow: hidden;
                                     <input type="checkbox" class="trainCheckbox" value="Yellow"></label></span>
                             <span class="checkBox-container" style="background: rgb(209, 101, 12); color: white;"><label
                                     for="">Orange
-                                    <input type="checkbox" class="trainCheckbox" value="Orange"></label></span>
+                                    <input type="checkbox" id="orangeBox" class="trainCheckbox" value="Orange"></label></span>
                             <span class="checkBox-container" style="background: rgb(160, 25, 108); color: white;"><label
                                     for="">Purple
                                     <input type="checkbox" class="trainCheckbox" value="Purple"></label></span>
