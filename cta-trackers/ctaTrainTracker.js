@@ -1,5 +1,5 @@
 
-// import * as fetchman from './dataFetch.js'
+import * as fetchman from './dataFetch.js'
 
 App.dataFetcher.fetchJson('https://hamilsauce.github.io/cta-trackers/trainStops.json', 'allTrainStops');
 
