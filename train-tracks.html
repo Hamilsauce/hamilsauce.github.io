@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>train tracks - track trains</title>
     <style>
-
         * {
             touch-action: manipulation;
         }
+
         html {
             box-sizing: border-box;
             padding: 0;
@@ -26,6 +26,7 @@
             width: fit-content;
             height: 100%;
         }
+
         .app {
             display: flex;
             flex-direction: column;
@@ -36,8 +37,18 @@
             box-sizing: border-box;
             text-align: center;
         }
+
+        .checkBoxesLabel {
+            text-align: center;
+            font-size: 1.2em;
+            padding-bottom: 3px;
+            margin-bottom: 0px;
+        }
+
         .selectspan {
             text-align: center;
+            font-size: 1.2em;
+
         }
 
         .content {
@@ -48,10 +59,11 @@
             /* width: 100%; */
             height: fit-content;
             /* background-image: url("./train-tracks-graphic.svg") */
+            /* box-shadow: 0px 0px 50px 5px rgba(156, 156, 144, 0.507); */
         }
 
         .app-header {
-/* box-sizing: border-box; */
+            /* box-sizing: border-box; */
             /* padding: 0px 10px; */
             background: #366F9E;
             border: 1px solid rgb(61, 61, 61);
@@ -111,33 +123,33 @@
 
             box-sizing: border-box;
             height: fit-content;
-
-            margin: 0;
+            width: 300px;
+            margin: auto;
             margin-bottom: 10px;
             padding: 5px;
             font-size: 1em;
             border-radius: 5px;
-            border: 1px solid rgb(160, 160, 160);
+            border: 2px solid rgba(160, 160, 160, 0.582);
         }
 
         .trainLineBoxes {
             box-sizing: border-box;
-
             display: grid;
-            grid-template-columns: repeat(auto-fill, 80px);
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, 90px);
+            gap: 15px;
             margin: auto;
-            justify-content: space-around;
-            padding: 10px;
+            justify-content: center;
+            padding: 0px;
             padding-left: 0px;
             padding-top: 5px;
-            max-width: 100%;
-            min-width: 385px;
+            width: 500px;
             text-align: center;
             font-size: 1.1em;
+            background: rgb(255, 255, 255);
         }
 
         .checkBox-container {
+            border-radius: 3px;
             padding: 5px;
             margin: auto;
             width: 78px;
@@ -156,7 +168,7 @@
             display: grid;
             box-sizing: border-box;
 
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 20px;
             max-width: 500px;
             width: 100%;
@@ -169,7 +181,7 @@
             display: none;
             display: grid;
             gap: 5px;
-
+            grid-template-columns: 1fr 1fr;
             padding: 15px;
             border-radius: 3px;
             font-size: 1.2em;
@@ -201,51 +213,60 @@
             padding: 5px;
         }
 
+        .approaching {
+            color: yellow;
+            font-weight: bold;
+            /* text-decoration: underline;/ */
+            font-size: 1.1em;
+            padding: 3px;
+        }
+
         #orangeBox {
-    font-size: 1em;
-}
+            font-size: 0.95em;
+        }
+
 
         @media screen and (max-width: 400px) {
 
             .userform {
+                box-sizing: border-box;
                 display: grid;
                 gap: 10px;
                 justify-content: center;
+                margin: 0;
                 /* width: 370px; */
-                margin: auto;
+                /* margin: auto; */
                 /* padding: 10px; */
             }
 
             .stopSelect {
                 box-sizing: border-box;
                 height: fit-content;
-                width: 200px;
-                max-width: 200px;
+                width: 300px;
                 margin: auto;
                 margin-bottom: 10px;
                 padding: 5px;
                 font-size: 0.6;
-overflow: hidden;
+                overflow: hidden;
                 border-radius: 5px;
                 border: 1px solid rgb(160, 160, 160);
             }
+
             .data-display {
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            max-width: 100%;
-            width: 360px;
-            margin: auto;
-            padding: 10px;
-        }
+
+                gap: 10px;
+                max-width: 400px;
+
+
+                /* padding: 10px; */
+            }
 
         }
     </style>
 </head>
 
 <body>
-<div class="app">
+    <div class="app">
 
         <header class="app-header">
             <!-- <img class="header-pic" src="./train-tracks-graphic.png"> -->
@@ -262,45 +283,38 @@ overflow: hidden;
                 <form class="userform">
                     <span class="selectspan">
                         Choose a station</span>
-                        <select name="stopSelect" class="stopSelect">
-                            <option value="" class="stopOption"></option>
-                        </select>
+                    <select name="stopSelect" class="stopSelect">
+                        <option value="" class="stopOption"></option>
+                    </select>
 
                     <!-- <input type="submit" class="submitButton" value="get data"> -->
-                    <label class="checkBoxesLabel">
-                        and a train line(s)
-                        <div class="trainLineBoxes">
-                            <span class="checkBox-container" style="background: #366F9E; color: white;"><label for="">Blue
-                                    <input type="checkbox" class="trainCheckbox" value="Blue"></label></span>
-                            <span class="checkBox-container" style="background: rgb(180, 60, 44); color: white;"><label
-                                    for="">Red
-                                    <input type="checkbox" class="trainCheckbox" value="Red"></label></span>
-                            <span class="checkBox-container" style="background: rgb(156, 88, 48); color: white;"><label
-                                    for="">Brown
-                                    <input type="checkbox" class="trainCheckbox" value="Brown"></label></span>
-                            <span class="checkBox-container" style="background: rgb(54, 158, 77); color: white;"><label
-                                    for="">Green
-                                    <input type="checkbox" class="trainCheckbox" value="Green"></label></span>
-                            <span class="checkBox-container" style="background: rgb(187, 144, 24); color: white;"><label
-                                    for="">Yellow
-                                    <input type="checkbox" class="trainCheckbox" value="Yellow"></label></span>
-                            <span class="checkBox-container" style="background: rgb(209, 101, 12); color: white;"><label
-                                    for="">Orange
-                                    <input type="checkbox" id="orangeBox" class="trainCheckbox" value="Orange"></label></span>
-                            <span class="checkBox-container" style="background: rgb(160, 25, 108); color: white;"><label
-                                    for="">Purple
-                                    <input type="checkbox" class="trainCheckbox" value="Purple"></label></span>
-                            <span class="checkBox-container" style="background: rgb(231, 8, 138); color: white;"><label
-                                    for="">Pink
-                                    <input type="checkbox" class="trainCheckbox" value="Pink"></label></span>
-                            <span class="checkBox-container" style="background: rgb(155, 157, 158); color: white;"><label
-                                    for="">Pexp
-                                    <input type="checkbox" class="trainCheckbox" value="Pexp"></label></span>
-                            <span class="checkBox-container" style="background: rgb(155, 157, 158); color: white;"><label
-                                    for="">ADA
-                                    <input type="checkbox" class="trainCheckbox" value="ADA"></label></span>
-                        </div>
-                    </label>
+                    <p class="checkBoxesLabel">
+                        Filter by service line</p>
+                    <div class="trainLineBoxes">
+                        <span class="checkBox-container" style="background: #366F9E; color: white;"><label>Blue
+                                <input type="checkbox" class="trainCheckbox" value="Blue"></label></span>
+                        <span class="checkBox-container" style="background: rgb(180, 60, 44); color: white;"><label>Red
+                                <input type="checkbox" class="trainCheckbox" value="Red"></label></span>
+                        <span class="checkBox-container"
+                            style="background: rgb(156, 88, 48); color: white;"><label>Brown
+                                <input type="checkbox" class="trainCheckbox" value="Brown"></label></span>
+                        <span class="checkBox-container"
+                            style="background: rgb(54, 158, 77); color: white;"><label>Green
+                                <input type="checkbox" class="trainCheckbox" value="Green"></label></span>
+                        <span class="checkBox-container"
+                            style="background: rgb(187, 144, 24); color: white;"><label>Yellow
+                                <input type="checkbox" class="trainCheckbox" value="Yellow"></label></span>
+                        <span class="checkBox-container" id="orangeBox"
+                            style="background: rgb(209, 101, 12); color: white;"><label>Orange
+                                <input type="checkbox" class="trainCheckbox" value="Orange"></label></span>
+                        <span class="checkBox-container"
+                            style="background: rgb(160, 25, 108); color: white;"><label>Purple
+                                <input type="checkbox" class="trainCheckbox" value="Purple"></label></span>
+                        <span class="checkBox-container" style="background: rgb(231, 8, 138); color: white;"><label>Pink
+                                <input type="checkbox" class="trainCheckbox" value="Pink"></label></span>
+
+                    </div>
+
                 </form>
             </div>
             <div class="data-display">
@@ -330,8 +344,8 @@ overflow: hidden;
                 </div>
             </div>
         </section>
-</div>
-    <script src="./cta-trackers/train-tracks-main.js" type="module"></script>
+    </div>
+    <script src="./cta-trackers/ctaTrainTracker.js" type="module"></script>
 </body>
 
 </html>
