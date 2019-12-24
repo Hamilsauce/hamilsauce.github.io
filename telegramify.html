@@ -24,7 +24,7 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-image: radial-gradient(rgb(246, 246, 246), rgba(242, 243, 222, 0.5));
+      background-image: radial-gradient(rgb(231, 231, 231), rgba(58, 120, 145, 0.164));
     }
 
     :root {
@@ -58,8 +58,7 @@
       display: flex;
       justify-content: space between;
       flex-direction: column;
-            background:rgba(165, 100, 26, 0.726);
-
+      background: rgba(61, 53, 43, 0.527);
       margin: 0px 0px 2px 0px;
       padding: 0px 0px;
     }
@@ -71,18 +70,18 @@
       margin: 0px 2px;
       border-left: 1px solid rgba(36, 36, 23, 0.26);
       border-right: 1px solid rgba(36, 36, 23, 0.26);
-      background: rgba(245, 245, 245, 0.685);
+      background: rgba(184, 184, 184, 0.192);
     }
 
     .toolbar {
       display: flex;
       justify-content: space-evenly;
-      background:rgba(165, 100, 26, 0.726);
+      background: rgba(59, 54, 39, 0.472);
       box-sizing: border-box;
       color: rgba(245, 245, 245, 1);
       margin: 0px 0px;
       padding: 3px;
-      border-bottom: 2px solid rgb(146, 146, 146);
+      border-bottom: 2px solid rgb(85, 85, 85);
     }
 
     .toolbar input {
@@ -127,11 +126,11 @@
       width: fit-content;
       text-align: center;
       margin: auto 10px;
-      padding: 2px 10px 0px 10px;
+      padding: 5px 10px;
       font-weight: bold;
-      background: rgb(70, 116, 146);
+      background: rgba(218, 167, 49, 0.76);
       border: 1px solid rgb(199, 199, 199);
-      border-radius: 15px;
+      border-radius: 3px;
       transition: 300ms background ease, 300ms box-shadow ease-in;
     }
 
@@ -177,23 +176,22 @@
       box-sizing: border-box;
       border: 1px solid rgba(73, 73, 73, 0.349);
       border-radius: 2px;
-      padding: 5px 5px;
+      padding: 5px 10px;
       margin: auto;
       height: 100%;
-      background: rgba(241, 241, 241, 0.418);
+      background: rgba(255, 255, 255, 0.418);
     }
 
     label {
-      font-size: 1em;
+      font-size: 1.1em;
     }
 
     .text-input {
       font-size: 1em;
-      padding: 3px;
-      border: 1px solid rgba(97, 136, 148, 0.63);
+      padding: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.918);
       background: rgba(255, 255, 255, 0.924);
       border-radius: 3px;
-
       color: rgb(70, 70, 70);
 
     }
@@ -201,7 +199,7 @@
     select {
       color: rgba(59, 59, 59, 0.788);
       background: rgb(241, 241, 241)(214, 211, 211);
-      border: 1px solid rgba(97, 136, 148, 0.63);
+      border: 1px solid white;
       border-radius: 3px;
       font-size: 1em;
 
@@ -216,12 +214,12 @@
       display: flex;
       justify-content: space-between;
       padding: 5px;
-      margin: 0;
+      margin: auto;
     }
 
     .button-container {
-      padding: 2px 10px 1px 10px;
-      margin: 5px auto 0px auto;
+      padding: 2px 2px 1px 0px;
+      margin: 2px auto 0px auto;
       box-sizing: border-box;
       display: flex;
       justify-content: flex-end;
@@ -235,7 +233,7 @@
       margin: 1px 2px;
       width: 100%;
       color: white;
-      background: rgba(41, 90, 129, 0.726);
+      background: rgba(104, 104, 75, 0.541);
       border: 1px solid rgba(32, 32, 29, 0.274);
     }
 
@@ -285,12 +283,12 @@
     .message-card {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 3fr 1fr;
+      grid-template-rows: 1fr 4fr 1fr;
       gap: 3px;
       box-sizing: border-box;
       width: 335px;
       min-height: fit-content;
-      max-height: 125px;
+      max-height: 150px;
       background: white;
       margin: 0 auto 15px auto;
       border: 1px solid rgba(36, 36, 23, 0.527);
@@ -300,7 +298,7 @@
     }
 
     .card-date {
-      background: rgba(24, 57, 94, 0.527);
+      background: #8E9A92;
       display: flex;
       justify-content: flex-end;
       border: 2px solid white;
@@ -310,17 +308,13 @@
 
     .card-body {
       font-size: 0.9em;
-      max-height: fit-content;
-      overflow: auto;
       padding: 2px 5px;
       /* height: fit-content; */
     }
 
     .card-author {
-      box-sizing: border-box;
       display: flex;
       justify-content: flex-end;
-      height: 25px;
       border: 2px solid white;
       padding: 2px 5px;
       font-size: 0.8em;
@@ -333,13 +327,12 @@
       flex-direction: column;
       justify-content: flex-end;
       box-sizing: border-box;
-
+      height: 100%;
       max-height: fit-content;
       width: 100%;
       text-align: center;
       /* padding-bottom: 13px; */
-      background:rgba(165, 100, 26, 0.726);
-
+      background: rgba(89, 82, 72, 0.507);
       border-top: 2px solid rgb(85, 85, 85);
     }
 
@@ -351,8 +344,8 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: rgb(61, 68, 167);
-      background-color: rgba(251, 251, 251, 0.856);
+      background-color: rgb(195, 235, 236);
+      background-color: rgba(235, 235, 235, 0.9);
       overflow-x: hidden;
       transition: 0.5s;
     }
@@ -414,6 +407,7 @@
     <div class="headers main-color">
       <div class="header-top">
         <h1 class="header-strip">Telegramify</h1>
+
         <div class="menu-icon" onclick="openNav()">
           Menu
         </div>
@@ -437,7 +431,7 @@
       </div>
       <form class="userform">
         <div class="field">
-          <label>Search name: </label><br>
+          <label>Search a name: </label>
           <input class="text-input name-input" id="input1" placeholder="Search sender name">
         </div>
         <div class="field">

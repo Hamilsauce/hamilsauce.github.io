@@ -1,3 +1,4 @@
+
 import {
     urlArray,
     songNames,
@@ -54,7 +55,7 @@ window.onload = function () {
             audioPlayer.currentTime = 0;
         }
 
-   
+
         let songUrl = trackMenu.options[trackMenu.selectedIndex].value;
         let songName = trackMenu.options[trackMenu.selectedIndex].text;
 
@@ -63,7 +64,7 @@ window.onload = function () {
         audioPlayer.load();
         audioPlayer.play();
     }
-     
+
 
 
     function pauseAudio() {
@@ -97,3 +98,4 @@ window.onload = function () {
     //   audioPlayer.play();
     //   console.log(optionValue);
 }
+
