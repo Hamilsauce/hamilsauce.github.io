@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
+
+  <title>Fancy Notemondo</title>
+  <style>
+    * {
+      font-size: 1em;
+      --main1: #AD3528;
+      --main2: #5B6879;
+      --main3: #3EA4AA;
+      --main4: #C9894D;
+    }
+
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      background: rgb(239, 240, 238);
+      min-height: 80vw;
+      max-height: fit-content;
+    }
+
+    body {
+      box-shadow: 0px 0px 100px 10px inset rgba(167, 168, 124, 0.493);
+    }
+
+    h1 {
+      font-size: 1.5em;
+      text-align: center;
+      color: white;
+    }
+
+    .grid {
+      display: grid;
+      gap: 10px;
+      justify-content: center;
+      border-radius: 5px;
+    }
+
+    header {
+      background: rgba(160, 140, 160, 1);
+      background: var(--main4);
+      border-bottom: 3px solid white;
+    }
+
+    .userform {
+      padding: 5px;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .form-text {
+      width: auto;
+      margin: auto;
+      padding: 15px;
+      padding-bottom: 5px;
+      font-size: 1.1em;
+      font-weight: 500;
+    }
+
+    .form-subtext {
+      width: auto;
+      margin: auto;
+      padding: 15px;
+    }
+
+    .noteTable {
+      width: 300px;
+      margin: auto;
+      padding: 10px;
+      background: rgba(90, 120, 160, 1);
+      box-shadow: 0px 0px 10px 2px rgba(102, 102, 102, 0.123);
+    }
+
+    .noteInput {
+      padding: 5px;
+      width: 75px;
+      border: 2px solid rgba(60, 60, 60, 0.4);
+      border-radius: 5px;
+    }
+
+    .inputs {
+      padding: 5px;
+      padding-top: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .subBut {
+      margin-left: 5px;
+      background: var(--main3);
+      padding: 5px;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      border: 1px solid rgb(84, 150, 141);
+      box-shadow: 0px 0px 10px 1px inset rgba(247, 252, 233, 0.123);
+    }
+
+    .noteTable {
+      background: white;
+      border-collapse: collapse;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    th {
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .colNames {
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      background: rgb(80, 133, 218);
+      color: white;
+      padding: 6px;
+      font-size: 1.2em;
+    }
+
+    td {
+      padding: 6px;
+      text-align: center;
+      font-size: 1.1em;
+    }
+
+    tr:nth-child(even) {
+      background: rgba(177, 205, 228, 0.171);
+      border-bottom: 1px solid rgb(225, 248, 248);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="grid">
+    <header>
+      <h1> Notemondo </h1>
+    </header>
+    <form class="userform">
+      <p class="form-text">Enter note, received frequency table (hz).</p>
+      <p class="form-subtext">You can also search for accidentals (sharps, flats) or octave numbers as well</p>
+      <div class="inputs">
+        <input type="text" class="noteInput">
+        <input type="submit" class="subBut" value=" Get ">
+      </div>
+    </form>
+
+    <table class="noteTable">
+      <tr class="colNames">
+        <th>Note</th>
+        <th>Frequency</th>
+        <th>Wavelength</th>
+      </tr>
+    </table>
+  </div>
+  <script src="./notemondo/notemondo.js" type="module">
+
+  </script>
+</body>
+
+</html>

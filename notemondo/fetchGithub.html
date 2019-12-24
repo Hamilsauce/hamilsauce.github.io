@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <section class="content">
+        <div class="form-container">
+            <form action="" class="userform"><input type="submit" class="submitButton" value="get data"></form>
+        </div>
+        <div class="data-display">
+
+        </div>
+    </section>
+<script>
+let reposData;
+fetch('https://github.com/Hamilsauce/hamilsauce.github.io/blob/master/audio/SongData.json')
+    .then(response => response.json())
+    .then(data => {
+        reposData = data;
+    })
+
+document.querySelector('.submitButton').addEventListener('click', e => {
+    e.preventDefault();
+    const dataDiv = document.querySelector('.data-display');
+
+    fetch('https://api.github.com/repos/Hamilsauce/hamilsauce.github.io/contents/audio')
+        .then(response => response.json())
+        .then(data => {
+            reposData = data;
+            console.log(reposData);n
+
+        })
+
+})
+
+
+</script>
+</body>
+</html>
