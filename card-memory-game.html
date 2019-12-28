@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
+  <link rel="stylesheet" href="card-memory-game.css">
+  <title>Card Games!</title>
+  <style>
+  </style>
+</head>
+
+<body>
+  <div class="menu-modal">
+    <div class="modalDiv modalTop">Scores</div>
+    <div class="modalDiv modalMiddle">New Game</div>
+    <div class="modalDiv modalBottom">Settings</div>
+  </div>
+  
+  <div class="app-wrap">
+    <div class="app">
+      <header class="app-header">
+        <p class="header-text">Add new cards here</p>
+        <form class="userform">
+          <input class="symbolIn" type="text" />
+          <input class="submitButton" type="submit" value="add" /><br>
+        </form>
+        <div class="scoreboard">
+          <div class="turns">
+            <span class="turns-label">Turns:</span>
+            <span class="turns-counter"></span>
+          </div>
+          <div class="time">
+            <span class="time-label">Time:</span>
+            <span class="time-counter">0:00</span>
+          </div>
+        </div>
+
+      </header>
+      <section class="content-container">
+        <div class="game-grid">
+          <!--    <div class="grid-cell cell1">1</div>-->
+          <!--    <div class="grid-cell cell2">-->
+          <!--<img width=45px height="55px" src="/https://hamilsauce.github.io/memory-game/symbol-owl.png" class="symbol-img owl">-->
+          <!--    </div>-->
+          <!--    <div class="grid-cell cell3"></div>-->
+          <!--    <div class="grid-cell cell4">2</div>-->
+          <!--    <div class="grid-cell cell5">1</div>-->
+          <!--    <div class="grid-cell cell6"></div>-->
+          <!--    <div class="grid-cell cell7"></div>-->
+          <!--    <div class="grid-cell cell8">3</div>-->
+          <!--    <div class="grid-cell cell9">3</div>-->
+          <!--    <div class="grid-cell cell10">2</div>-->
+          <!--    <div class="grid-cell cell11"></div>-->
+          <!--    <div class="grid-cell cell12"></div>-->
+          <!--    <div class="grid-cell cell13"></div>-->
+          <!--    <div class="grid-cell cell14"></div>-->
+          <!--    <div class="grid-cell cell15"></div>-->
+          <!--    <div class="grid-cell cell16"></div>-->
+          <!--</div>-->
+
+      </section>
+      <div class="app-footer">game stuff here</div>
+    </div>
+  </div>
+  <script type="module" src="card-memory-game.js"></script>
+</body>
+
+</html>
