@@ -1,6 +1,16 @@
 {
     "songs":[
         {
+            "id": "29",
+            "songTitle": "Talk with Me",
+            "plays": "24",
+            "likes": "0",
+            "genre": "Jam",
+            "duration": "05:07",
+            "comments": "0"
+            "audioUrl": "https://hamilsauce.github.io/audio/Talk%20with%20Me.mp3"
+        },
+        {
             "id": "1",
             "songTitle": "Battle Star",
             "plays": "12",
@@ -21,16 +31,7 @@
             "comments": "3",
             "audioUrl": "https://hamilsauce.github.io/audio/the-third-face.mp3"
         },
-        {
-            "id": "3",
-            "songTitle": "The Gypsy",
-            "plays": "12",
-            "likes": "5",
-            "genre": "Folk",
-            "duration": "08:00",
-            "comments": "0",
-            "audioUrl": "https://hamilsauce.github.io/audio/The%20Gypsy.mp3"
-        },
+     
         {
             "id": "4",
             "songTitle": "Voyage into Sample",
@@ -51,15 +52,7 @@
             "comments": "1",
             "audioUrl": "https://hamilsauce.github.io/audio/Wild%20Onion.mp3"
         },
-        {
-            "id": "6",
-            "songTitle": "A Memory Remains",
-            "plays": "6",
-            "likes": "3",
-            "genre": "Ambient",
-            "duration": "04:29",
-            "comments": "1"
-        },
+
         {
             "id": "44",
             "songTitle": "Offworld",
@@ -79,6 +72,16 @@
             "duration": "02:29",
             "comments": "0",
             "audioUrl": "https://hamilsauce.github.io/audio/procession(revise1).mp3"
+        },
+       {
+            "id": "3",
+            "songTitle": "The Gypsy",
+            "plays": "12",
+            "likes": "5",
+            "genre": "Folk",
+            "duration": "08:00",
+            "comments": "0",
+            "audioUrl": "https://hamilsauce.github.io/audio/The%20Gypsy.mp3"
         },
         {
             "id": "8",
@@ -117,6 +120,15 @@
             "genre": "",
             "duration": "02:05",
             "comments": "0"
+        },
+        {
+            "id": "6",
+            "songTitle": "A Memory Remains",
+            "plays": "6",
+            "likes": "3",
+            "genre": "Ambient",
+            "duration": "04:29",
+            "comments": "1"
         },
         {
             "id": "12",
@@ -271,15 +283,7 @@
             "duration": "02:28",
             "comments": "0"
         },
-        {
-            "id": "29",
-            "songTitle": "Stargazer Junk Recording1",
-            "plays": "24",
-            "likes": "0",
-            "genre": "",
-            "duration": "05:43",
-            "comments": "0"
-        },
+
         {
             "id": "30",
             "songTitle": "Glaciers",
