@@ -89,7 +89,11 @@ export class GameClock {
   stop() {
     console.log('in stop');
     this.finalTime = this.display.textContent;
+    this.display.textContent = '0:00';
     clearTimeout(this.timeFunction);
+    this.isRunning = false;
+    this.seconds = 0;
+    this.minutes = 0;
   }
 }
 

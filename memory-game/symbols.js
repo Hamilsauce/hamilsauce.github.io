@@ -7,8 +7,8 @@ export function addSymbol(sym) {
   }
 }
 
-export let symbols = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
-// export let symbols = [1,1,2,2,3,3,4,4];
+// export let symbols = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
+export let symbols = [1,1,2,2,3,3,4,4];
 
 export const shuffle = array => {
   for (let i = array.length - 1; i > 0; i--) {

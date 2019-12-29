@@ -1,6 +1,14 @@
-import { symbols, shuffle } from './symbols.js';
-import { Card, Deck } from './Cards.js';
-import { GameClock } from './game-clock/gameClock.js';
+import {
+  symbols,
+  shuffle
+} from './symbols.js';
+import {
+  Card,
+  Deck
+} from './Cards.js';
+import {
+  GameClock
+} from './game-clock/gameClock.js';
 
 const userform = document.querySelector('.userform');
 let allCards = document.querySelectorAll('.grid-cell');
@@ -9,9 +17,9 @@ const newGameButton = document.querySelector('.modalMiddle');
 
 document.querySelector('.modal').style.display = 'grid';
 document.querySelector('.endModal').style.display = 'none';
-document.querySelector('.endModal').addEventListener('click', e => {
-  e.target.style.display = 'none';
-})
+// document.querySelector('.endModal').addEventListener('click', e => {
+//   e.target.style.display = 'none';
+// })
 
 
 class Game {
@@ -19,46 +27,85 @@ class Game {
     this.selected = [],
       this.matched = [],
       this.turns = turns,
-      this.time = time,
+      this.gameTime = time,
+      this.cardCount = 0,
       this.stars,
       this.playedOn = new Date().toDateString();
-      this.deck = this.newDeck(),
-      this.history = function () {
-        let prevGames = localStorage.getItem('gameHistory');
-        console.log(prevGames);
-      }
+    this.playedAt = new Date().toLocaleTimeString();
+    this.deck = this.newDeck(),
+      this.gameHistory = this.getHistory();
+  }
+  getHistory() {
+    let history = localStorage.getItem('gameHistory') ?
+      JSON.parse(localStorage.getItem('gameHistory')) : [];
+    console.log(history);
+    return history;
   }
   addTurn() {
     this.turns++;
     return this.turns;
   }
+  countCard() {
+    this.cardCount++;
+  }
   newDeck() {
-    return new Deck();
+    let deck = new Deck();
+    this.cardCount = deck.deckSize;
+    console.log(this.cardCount);
+    return deck;
+
   }
   gameOver() {
+    console.log('in gamover');
+console.log(game);
+
     let check =
-      this.matched.length === 16 ? true : false;
-    console.log('order of this.deck.decksize, .deck.getDeckSize(), and check');
-    console.log(this.deck.deckSize);
-    console.log(this.deck.getDeckSize());
-    console.log(check);
+      this.matched.length === this.cardCount ? true : false;
+    console.log(  this.matched.length);
+
+    if (check === true) {
+      console.log('check is true');
+
+      this.calculateStars();
+      this.saveGame();
+    }
+
     return check;
   }
   resetGame() {
     this.turns = 0;
+    this.cardCount = 0;
     this.matched = [];
     this.gameTime = '0:00';
     console.log(`reset - deck size is ${this.deck.cards.length}`);
   }
-  calculateStars() {}
-  saveGame() {
-    let newSave = {
-      gameDate: this.playedOn,
-      gameTime: clock.finalTime,
-      deckSize: this.matched.length,
-      playerTurns: this.turns,
+  calculateStars() {
+    const perfectGame = this.matched.length / 2;
+    let actualGame = this.turns;
+    if (actualGame / perfectGame <= 2) {
+      this.stars = 3;
+    } else if (actualGame / perfectGame <= 3.25) {
+      this.stars = 2;
+    } else {
+      this.stars = 1;
     }
-    console.log(newSave);
+
+  }
+  saveGame() {
+    let gameId = this.gameHistory.length
+    console.log('history:');
+
+    console.log(this.gameHistory);
+    let newSave = {
+      id: gameId,
+      gameDate: this.playedOn,
+      elapsedTime: clock.finalTime,
+      stars: this.stars,
+      deckSize: this.matched.length,
+      playerTurns: this.turns
+    }
+    this.gameHistory.push(newSave);
+    localStorage.setItem('gameHistory',JSON.stringify(this.gameHistory));
 
   }
 }
@@ -68,6 +115,9 @@ let game = new Game(0, 0, 3);
 const clock = new GameClock;
 console.log(clock)
 let prevTarget;
+console.log('gamehistory');
+
+console.log(game.gameHistory);
 
 function cardClicker(event) {
   let card = event.target;
@@ -116,15 +166,13 @@ const checkSelected = cardPair => {
     cardPair.forEach(card => {
       card.classList.remove('selected');
     });
-
-
-
   }
 
   game.selected.length = 0;
   turnDisplay.innerHTML = game.addTurn();
 
   if (deckCheck === 'allCardsMatched') {
+    clock.stop();
     setTimeout(() => {
       endGame();
     }, 1500);
@@ -149,6 +197,8 @@ const addHandlers = () => {
 const cardMaker = (cSymbol, boardName) => {
   let cardClass = `cell${cSymbol}`;
   let newCard = new Card(cardClass, cSymbol);
+  game.countCard();
+  console.log(game.cardCount);
 
   newCard.renderSelf(boardName);
   return newCard;
@@ -160,9 +210,7 @@ const refreshCards = symbols => {
   });
 }
 
-newGameButton.addEventListener('click', e => {
-  document.querySelector('.modal').style.display = 'none';
-
+const newGame = () => {
   game.resetGame();
   shuffle(symbols);
   refreshCards(symbols)
@@ -171,11 +219,15 @@ newGameButton.addEventListener('click', e => {
   addHandlers();
   console.log(game);
 
-  console.log('deck: ')
-  console.log(game.deckSize)
-  console.log(game.deck)
   clock.start(document.querySelector('.time-counter'))
-  console.log(clock);
+
+
+}
+
+newGameButton.addEventListener('click', e => {
+  document.querySelector('.modal').style.display = 'none';
+  newGame();
+
 
 })
 
@@ -189,12 +241,18 @@ userform.addEventListener('submit', e => {
 
 const endGame = () => {
   console.log('Game = ended!');
-  clock.stop();
+  game.gameOver();
   const endModal = document.querySelector('.endModal');
   const restartButton = document.querySelector('.restartButton');
 
+  document.querySelector('.game-grid').innerHTML = '';
+  document.querySelector('.turns-counter').innerHTML = '0';
   endModal.style.display = 'grid';
 
-  game.calculateStars();
-  game.saveGame();
+  restartButton.addEventListener('click', (e) => {
+    endModal.style.display = 'none';
+    newGame();
+
+  });
+
 }

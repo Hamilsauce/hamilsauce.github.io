@@ -31,7 +31,7 @@ export class Card {
 export class Deck {
   constructor(){
     this.cards = [],
-    this.deckSize = this.getDeckSize
+    this.deckSize = 0
   }
   getDeckSize() {
     this.deckSize = this.cards.length;
@@ -43,6 +43,7 @@ export class Deck {
   }
   addCard(card) {
     this.cards.push(card);
+    this.getDeckSize();
   }
 
 }
