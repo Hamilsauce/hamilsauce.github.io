@@ -1,11 +1,6 @@
-import {
-  symbols,
-  shuffle
-} from './symbols.js';
-import {
-  Card,
-  Deck
-} from './Cards.js';
+import { symbols, shuffle } from './symbols.js';
+import { Card, Deck } from './Cards.js';
+import { GameClock } from './game-clock/gameClock.js';
 
 const userform = document.querySelector('.userform');
 let allCards = document.querySelectorAll('.grid-cell');
@@ -13,6 +8,10 @@ let turnDisplay = document.querySelector('.turns-counter');
 const newGameButton = document.querySelector('.modalMiddle');
 
 document.querySelector('.modal').style.display = 'grid';
+document.querySelector('.endModal').style.display = 'none';
+document.querySelector('.endModal').addEventListener('click', e => {
+  e.target.style.display = 'none';
+})
 
 
 class Game {
@@ -23,7 +22,7 @@ class Game {
       this.time = time,
       this.stars,
       this.playedOn = new Date().toDateString();
-    this.deck = this.newDeck(),
+      this.deck = this.newDeck(),
       this.history = function () {
         let prevGames = localStorage.getItem('gameHistory');
         console.log(prevGames);
@@ -38,31 +37,36 @@ class Game {
   }
   gameOver() {
     let check =
-      this.deck.deckSize < 2 ? true : false;
+      this.matched.length === 16 ? true : false;
     console.log('order of this.deck.decksize, .deck.getDeckSize(), and check');
     console.log(this.deck.deckSize);
     console.log(this.deck.getDeckSize());
     console.log(check);
-
-
-
     return check;
   }
   resetGame() {
-    this.deck.cards.length = 0;
+    this.turns = 0;
+    this.matched = [];
+    this.gameTime = '0:00';
     console.log(`reset - deck size is ${this.deck.cards.length}`);
   }
   calculateStars() {}
   saveGame() {
     let newSave = {
-      turns: this.turns,
-      gameTime: this.time,
-      deckSize: Deck.length(),
-      gameTurns: this.turns,
+      gameDate: this.playedOn,
+      gameTime: clock.finalTime,
+      deckSize: this.matched.length,
+      playerTurns: this.turns,
     }
+    console.log(newSave);
+
   }
 }
 
+
+let game = new Game(0, 0, 3);
+const clock = new GameClock;
+console.log(clock)
 let prevTarget;
 
 function cardClicker(event) {
@@ -71,74 +75,62 @@ function cardClicker(event) {
   if (card === prevTarget) {
     card.classList.remove('selected');
   } else if (game.selected.length === 0 && card !== prevTarget) {
-    console.log('event handle length 0');
     selectCard(card);
   } else if (game.selected.length === 1 && card !== prevTarget) {
-    console.log('event handle 1');
     selectCard(card);
     checkSelected(game.selected);
   } else if (game.selected.length === 2) {
-    console.log('event handle 2');
-    console.log(game.selected);
     checkSelected(game.selected);
   }
-console.log(game.deck.length );
-
-  if (game.deck.length == 0) {
-    endGame();
-    return;
-  } else {
-    prevTarget = card;
-    console.log(prevTarget.classList);
-  }
+  prevTarget = card;
 }
 
-const game = new Game(0, 0, 3);
 
 //tests if matching pair when selected array has 2
 const checkSelected = cardPair => {
   let [card1, card2] = cardPair;
+  let deckCheck;
 
-  setTimeout(() => {
-    if (card1.textContent === card2.textContent) {
-      cardPair.forEach(card => {
-        let sym = card.textContent;
+  if (card1.textContent === card2.textContent) {
+    cardPair.forEach(card => {
+      let sym = card.textContent;
+
+      setTimeout(() => {
         card.classList.remove('selected');
         card.classList.add('matched');
-        card.removeEventListener('click', cardClicker);
+      }, 1000);
+      card.removeEventListener('click', cardClicker);
 
-        let cardObjIndex = game.deck.cards //!move into deck class
-          .findIndex(cardObj => {
-            return cardObj.cardSymbol == sym;
-          });
-        let matchedCard = game.deck.cards.splice(cardObjIndex, 1);
-        matchedCard.isMatched = true;
-        game.matched.push(matchedCard);
+      let cardObjIndex = game.deck.cards //!move into deck class
+        .findIndex(cardObj => {
+          return cardObj.cardSymbol == sym;
+        });
+      let matchedCard = game.deck.cards.splice(cardObjIndex, 1);
+      matchedCard.isMatched = true;
+      game.matched.push(matchedCard);
+
+      deckCheck = game.deck.cards.length == 0 ? 'allCardsMatched' : '';
+
+    });
+  } else {
+    cardPair.forEach(card => {
+      card.classList.remove('selected');
+    });
 
 
-      });
 
-    } else {
-      cardPair.forEach(card => {
-        card.classList.remove('selected');
-      });
-    }
-    game.selected.length = 0;
-  }, 1000);
-  turnDisplay.innerHTML = game.addTurn();
-  console.log(game);
-
-  console.log('game over check: ');
-  console.log(game);
-
-  if (game.deck.length == 0) {
-    console.log('fuck me');
-    
-    endGame();
   }
 
-};
+  game.selected.length = 0;
+  turnDisplay.innerHTML = game.addTurn();
 
+  if (deckCheck === 'allCardsMatched') {
+    setTimeout(() => {
+      endGame();
+    }, 1500);
+
+  };
+}
 //adds clicked card to selected array
 const selectCard = (card) => {
   card.classList.add('selected');
@@ -177,9 +169,13 @@ newGameButton.addEventListener('click', e => {
 
   allCards = document.querySelectorAll('.grid-cell');
   addHandlers();
+  console.log(game);
+
   console.log('deck: ')
   console.log(game.deckSize)
   console.log(game.deck)
+  clock.start(document.querySelector('.time-counter'))
+  console.log(clock);
 
 })
 
@@ -193,10 +189,11 @@ userform.addEventListener('submit', e => {
 
 const endGame = () => {
   console.log('Game = ended!');
-
+  clock.stop();
   const endModal = document.querySelector('.endModal');
   const restartButton = document.querySelector('.restartButton');
-  endModal.style.display = 'block';
+
+  endModal.style.display = 'grid';
 
   game.calculateStars();
   game.saveGame();
