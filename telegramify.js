@@ -91,7 +91,7 @@ const filterMessagesByName = name => {
   } else {
     let msgByName = messages
       .filter(msg => {
-        return msg.from === name;
+        return msg.from.trim().toUpperCase() === name.trim().toUpperCase();
       });
     return msgByName;
   }
@@ -102,7 +102,7 @@ const generateMsgCard = propStrings => {
     .reduce((acc, string) => {
       return acc += string;
     }, '');
-    console.log(reducedString);
+  console.log(reducedString);
 
   let newCard = document.createElement('div');
   newCard.innerHTML = reducedString;
@@ -130,36 +130,36 @@ const writeMsgCard = msgList => {
       }
     }
 
-          generateMsgCard(dateTextFrom);
+    generateMsgCard(dateTextFrom);
   });
 }
 
 
 
-  //* Listens for the request submit button to run query and return some results
-  document.querySelector('.getDataButton').addEventListener('click', e => {
-    e.preventDefault();
-    const displayTotal = document.querySelector('.display-header1');
-    const displayPerc = document.querySelector('.display-header2');
-    const nameInput = document.querySelector('.name-input').value;
+//* Listens for the request submit button to run query and return some results
+document.querySelector('.getDataButton').addEventListener('click', e => {
+  e.preventDefault();
+  const displayTotal = document.querySelector('.display-header1');
+  const displayPerc = document.querySelector('.display-header2');
+  const nameInput = document.querySelector('.name-input').value;
 
-    let resultMsgs = filterMessagesByName(nameInput);
-    let percent = Math.round(((resultMsgs.length / messages.length) * 100));
+  let resultMsgs = filterMessagesByName(nameInput);
+  let percent = Math.round(((resultMsgs.length / messages.length) * 100));
 
-    document.querySelector('.data-display').innerHTML = '';
-    writeMsgCard(limitMsgs(resultMsgs));
-    console.log(htmlOut);
+  document.querySelector('.data-display').innerHTML = '';
+  writeMsgCard(limitMsgs(resultMsgs));
+  console.log(htmlOut);
 
-    // document.querySelector('.data-display').innerHTML = htmlOut;
-    displayTotal.innerText = `${resultMsgs.length} messages`;
-    displayPerc.innerText = `${percent}% of all`;
+  // document.querySelector('.data-display').innerHTML = htmlOut;
+  displayTotal.innerText = `${resultMsgs.length} messages`;
+  displayPerc.innerText = `${percent}% of all`;
 
-  });
+});
 
 
-  document.querySelector('.saveButton').addEventListener('click', e => {
-    saveDataToFile();
-  });
+document.querySelector('.saveButton').addEventListener('click', e => {
+  saveDataToFile();
+});
 
 //*Collapse the form for more space
 document.querySelector('.collapse').addEventListener('click', (e) => {
