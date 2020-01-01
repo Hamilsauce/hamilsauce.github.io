@@ -18,22 +18,35 @@ body {
   background: rgba(255, 255, 255, 0.877);
 }
 
+
+.dimmer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  margin: 0;
+  background: rgba(47, 47, 47, 0.76);
+  width: 100%;
+  height: 100%;
+}
 .endModal {
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   display: grid;
   grid-template-rows: 1fr 5fr 2fr;
   gap: 8px;
   padding: 15px;
-  top: 10%;
+  /* top: 10%;
   left: 27%;
-  right: 30%;
+  right: 30%; */
   height: 500px;
   width: 90%;
   max-width: 500px;
-  margin: auto 5%;
+  margin: 50px auto;
   border: 1px solid rgba(170, 170, 170, 0.6);
-  background: rgba(100, 100, 100, 0.8);
+  color: rgba(80, 80, 80, 0.8);
+  background: rgba(80, 80, 80, 0.8);
   border-radius: 6px;
 
 }
@@ -41,8 +54,8 @@ body {
 .endModalDiv {
   display: flex;
   justify-content: space-around;
-  background: rgba(255, 250, 250, 0.8);
-  box-shadow: 0px 0px 5px 2px rgba(60, 80, 80, 0.8);
+  box-shadow: 0px 0px 4px 2px rgba(60, 80, 80, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   color: rgba(80, 80, 80, 0.8);
 
 }
@@ -50,26 +63,20 @@ body {
 
 .modal {
   box-sizing: border-box;
-  position: absolute;
+  position: relative;
   display: grid;
-  /* display: none; */
   grid-gap: 10px;
-
-  width: 300px;
+  margin: 100px auto;
+  width: 350px;
   height: 300px;
-  top: 100px;
-  left: 40%;
-  right: 40%;
   padding: 15px;
-  margin: 0;
   border-radius: 15px;
   border-radius: 15px;
   font-size: 2.5em;
   font-weight: bold;
   color: rgba(80, 80, 80, 0.8);
   background: rgba(80, 80, 80, 0.8);
-  position: absolute;
-  /*display: none;*/
+  z-index: 3;
 }
 
 .modalDiv {
@@ -114,7 +121,7 @@ body {
   box-sizing: border-box;
   background: rgba(59, 90, 158, 0.877);
   height: 100%;
-  padding: 5px 15px;
+  padding:0px 15px;
   justify-content: center;
   text-align: center;
 }
@@ -225,37 +232,6 @@ body {
 
 
 
-
-.cell1 {}
-
-.cell2 {}
-
-.cell3 {}
-
-.cell4 {}
-
-.cell5 {}
-
-.cell6 {}
-
-.cell7 {}
-
-.cell8 {}
-
-.cell9 {}
-
-.cell10 {}
-
-.cell11 {}
-
-.cell12 {}
-
-.cell13 {}
-
-.cell14 {}
-
-.cell15 {}
-
 .app-footer {
   background: rgba(59, 90, 158, 0.877);
   height: 100%;
@@ -296,7 +272,8 @@ body {
 
   }
 
-.endModal {
+
+/* .endModal {
   box-sizing: border-box;
   position: absolute;
   display: grid;
@@ -313,23 +290,22 @@ body {
   background: rgba(100, 100, 100, 0.8);
   border-radius: 6px;
 
-}
+} */
 
 .endModalDiv {
   display: flex;
   justify-content: space-around;
-  background: rgba(255, 250, 250, 0.8);
-  box-shadow: 0px 0px 5px 2px rgba(60, 80, 80, 0.8);
+  box-shadow: 0px 0px 4px 2px rgba(60, 80, 80, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   color: rgba(80, 80, 80, 0.8);
 
 }
 
 
-.modal {
+/* .modal {
   box-sizing: border-box;
   position: absolute;
   display: grid;
-  /* display: none; */
   grid-gap: 10px;
 
   width: 300px;
@@ -345,8 +321,7 @@ body {
   color: rgba(80, 80, 80, 0.8);
   background: rgba(80, 80, 80, 0.8);
   position: absolute;
-  /*display: none;*/
-}
+} */
 
 .modalDiv {
   box-sizing: border-box;

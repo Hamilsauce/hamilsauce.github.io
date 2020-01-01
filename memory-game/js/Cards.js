@@ -10,7 +10,6 @@ export class Card {
 
     cardEl.classList.add(`${this.className}`);
     cardEl.classList.add('grid-cell');
-    // cardEl.setAttribute('class', `${this.sharedClassName} ${this.className}`);
     let cardText = document.createTextNode(this.cardSymbol);
     cardEl.appendChild(cardText);
 

@@ -1,0 +1,22 @@
+[
+	{
+		"path": "$ROOTPATH$\\card-memory-game.html",
+		"bookmarks": [
+			{
+				"line": 56,
+				"column": 57,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\card-memory-game.js",
+		"bookmarks": [
+			{
+				"line": 173,
+				"column": 23,
+				"label": ""
+			}
+		]
+	}
+]
