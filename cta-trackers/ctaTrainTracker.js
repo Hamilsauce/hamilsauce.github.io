@@ -2,7 +2,7 @@
 import * as fetchman from './dataFetch.js'
 
 App.dataFetcher.fetchJson('https://hamilsauce.github.io/cta-trackers/trainStops.json', 'allTrainStops');
-
+document.querySelector('.data-display').style.display = 'none';
 let allStops = [];
 const timerTest = () => {
     setTimeout(() => {
@@ -90,7 +90,9 @@ const getTrainData = () => {
     return ctaData;
 }
 
-document.querySelector('.stopSelect').addEventListener('change', e => {
+document.querySelector('.stopSelect')
+  .addEventListener('change', e => {
+    document.querySelector('.data-display').style.display = 'grid';
     queryString.mapId = e.target.value;
     let etaData = (getTrainData());
 })
