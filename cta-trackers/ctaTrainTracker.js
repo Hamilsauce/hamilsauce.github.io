@@ -1,21 +1,23 @@
 
 import * as fetchman from './dataFetch.js'
 
-App.dataFetcher.fetchJson('https://hamilsauce.github.io/cta-trackers/trainStops.json', 'allTrainStops');
+App.dataFetcher.fetchJson(
+    'https://hamilsauce.github.io/cta-trackers/trainStops.json', 'allTrainStops'); //! Gets a stop list from json file for select drop down
 document.querySelector('.data-display').style.display = 'none';
 let allStops = [];
-const timerTest = () => {
+const delayedData = () => {
     setTimeout(() => {
         let stops = App.dataFetcher.getData('allTrainStops');
         App.dataFetcher.getData('allTrainStops')
 
         allStops = stops.stops;
         sortAndAddStops(allStops);
+        document.querySelector('.dimmer').style.display = 'none';
     }, 4000)
 }
-timerTest();
+delayedData();
 
-const sortAndAddStops = (stopList) => {
+const sortAndAddStops = (stopList) => {     //! sorts stops fetched from json, then adds them as options to seelct
     const stopSelect = document.querySelector('.stopSelect');
 
     stopList.sort((a, b) => {
@@ -54,10 +56,9 @@ const getArrivalData = trainData => {
     let stationEtas = Object.values(trainData)[0].eta
     return stationEtas;
 }
-/**!
- // TODO Need to move this into dataFetch/dataFetcher
- * !makes the request for train data, calls above function to access data */
-const getTrainData = () => {
+/**
+ // TODO Need to move this into dataFetch/dataFetcher */
+const getTrainData = () => {  //!makes the request for train data, calls above function to access data
     let ctaData;
     const proxy = 'https://cors-anywhere.herokuapp.com/';
     const ctaTrainUrl = queryString.constructString(proxy);
@@ -91,13 +92,13 @@ const getTrainData = () => {
 }
 
 document.querySelector('.stopSelect')
-  .addEventListener('change', e => {
-    document.querySelector('.data-display').style.display = 'grid';
-    queryString.mapId = e.target.value;
-    let etaData = (getTrainData());
-})
+    .addEventListener('change', e => {
+        document.querySelector('.data-display').style.display = 'grid';
+        queryString.mapId = e.target.value;
+        let etaData = (getTrainData());
+    })
 
-const filterByLine = (e) => {
+const filterByLine = (e) => { //! filters select options by train line checkboxes
     const boxes = document.querySelectorAll('.trainCheckbox');
     let filteredStops = [];
     boxes.forEach(box => {
@@ -109,9 +110,8 @@ const filterByLine = (e) => {
                     return stop[lineName] === true;
                 });
         }
-        if (filteredStops.length === 0) {
+        if (filteredStops.length === 0) { //! if no results, show all results
             filteredStops = allStops;
-
         }
 
     });
@@ -125,4 +125,17 @@ document.querySelector('.trainLineBoxes').addEventListener('click', e => {
     let filteredList = filterByLine();
     sortAndAddStops(filteredList);
 
+})
+
+document.querySelector('.checkBoxesLabel').addEventListener('click', e => {
+    const filters = document.querySelector('.trainLineBoxes');
+    filters.classList.toggle('trainsLineBoxes')
+    filters.classList.toggle('trainsLineBoxes-collapsed');
+
+
+    // if (filters.style.display != 'none') {
+    //     filters.style.display = 'none';
+    // } else {
+    //     filters.style.display = 'grid';
+    // }
 })
