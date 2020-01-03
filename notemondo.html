@@ -5,25 +5,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
-
   <title>Fancy Notemondo</title>
   <style>
+    @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
     * {
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
       font-size: 1em;
-      --main1: #AD3528;
+      --main1: #AD3528if;
       --main2: #5B6879;
-      --main3: #3EA4AA;
-      --main4: #C9894D;
+      --main3: rgba(62, 164, 170, 1);
+      /*#3EA4AA; */
+      --main4: rgba(201, 137, 77, 1);
+      /*#C9894D; brown/orange*/
     }
 
     html,
     body {
       padding: 0;
       margin: 0;
+      width: 100%;
       box-sizing: border-box;
-      background: rgb(239, 240, 238);
-      min-height: 80vw;
-      max-height: fit-content;
+      background: rgba(239, 240, 238, 0.7);
+      min-height: 185vw;
     }
 
     body {
@@ -41,9 +47,14 @@
       gap: 10px;
       justify-content: center;
       border-radius: 5px;
+      padding: 0;
+      width: 100%;
+      /*min-height: 500px;*/
     }
 
     header {
+      width: 100%;
+      margin: auto;
       background: rgba(160, 140, 160, 1);
       background: var(--main4);
       border-bottom: 3px solid white;
@@ -51,27 +62,31 @@
 
     .userform {
       padding: 5px;
-      width: fit-content;
+      width: 100%;
       margin: auto;
     }
 
     .form-text {
       width: auto;
       margin: auto;
-      padding: 15px;
-      padding-bottom: 5px;
-      font-size: 1.1em;
+      padding: 15px 10px 10px 20px;
+      font-size: 1.2em;
       font-weight: 500;
     }
 
     .form-subtext {
       width: auto;
       margin: auto;
-      padding: 15px;
+      padding: 20px;
+      padding-top: 0px;
+      font-size: 0.9em;
+      font-weight: 300;
+      color: rgba(62, 61, 60, 0.8);
+
     }
 
     .noteTable {
-      width: 300px;
+      width: 100%;
       margin: auto;
       padding: 10px;
       background: rgba(90, 120, 160, 1);
@@ -79,28 +94,41 @@
     }
 
     .noteInput {
-      padding: 5px;
+      padding: 4px;
+      padding-left: 10px;
       width: 75px;
-      border: 2px solid rgba(60, 60, 60, 0.4);
+      border: 1px solid rgba(60, 60, 60, 0.4);
+      font-size: 1.2em;
+      color: rgba(87, 87, 87, 1);
       border-radius: 5px;
+      background: rgba(255, 255, 255, 0.9);
     }
 
     .inputs {
-      padding: 5px;
+      padding: 0px;
       padding-top: 20px;
       text-align: center;
       color: white;
     }
 
     .subBut {
-      margin-left: 5px;
+      margin-left: 2px;
+      margin-bottom: 0px;
+
       background: var(--main3);
       padding: 5px;
       border-radius: 5px;
       color: white;
+      font-size: 1.2em;
       font-weight: bold;
       border: 1px solid rgb(84, 150, 141);
       box-shadow: 0px 0px 10px 1px inset rgba(247, 252, 233, 0.123);
+    }
+
+    .table-container {
+      padding: 10px;
+      width: 100%;
+      margin: auto;
     }
 
     .noteTable {
@@ -109,34 +137,196 @@
       border: 1px solid rgba(255, 255, 255, 0.6);
     }
 
+    td {
+      padding: 8px 7px;
+      text-align: center;
+      font-size: 1.1em;
+      color: rgba(87, 87, 87, 0.8);
+
+    }
+
     th {
-      padding: 10px;
+      padding: 10px 6px;
       border: 1px solid rgba(255, 255, 255, 0.6);
     }
 
-    .colNames {
-      border: 2px solid rgba(255, 255, 255, 0.6);
-      background: rgb(80, 133, 218);
-      color: white;
-      padding: 6px;
-      font-size: 1.2em;
-    }
+    tr {
+      background: rgba (255, 255, 255, 0);
+      transition: 0.8s;
 
-    td {
-      padding: 6px;
-      text-align: center;
-      font-size: 1.1em;
     }
 
     tr:nth-child(even) {
       background: rgba(177, 205, 228, 0.171);
-      border-bottom: 1px solid rgb(225, 248, 248);
+      border-bottom: 1px solid rgba(160, 148, 148, 0.3);
+    }
+
+    .colNames {
+      background: rgb(80, 133, 218);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      color: white;
+      padding: 10px 10px;
+      font-size: 1.2em;
+    }
+
+    tr:hover {
+      border-bottom: 1px solid white;
+      /*rgba(62, 164, 170, 0.4); */
+      border-top: 1px solid white;
+      /*rgba(62, 164, 170, 0.4); */
+      background: rgba(62, 164, 170, 0.3);
+
+    }
+
+    tr>td:hover {
+      border-right: 1px solid rgba(255, 255, 255, 1);
+      border-left: 1px solid rgba(255, 255, 255, 1);
+      border-bottom: 1px solid rgba(62, 164, 170, 0.2);
+      border-top: 1px solid rgba(62, 164, 170, 0.2);
+      background: rgba(62, 190, 170, 0.3);
+      color: rgba(110, 100, 110, 1);
+
+    }
+
+    .colNames:hover {
+      background: rgb(80, 133, 218);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .row1 {
+      font-weight: bold;
+      /*background: blue;*/
+    }
+
+    .row2 {
+      /* background: rgba(62, 164, 170, 0.4);*/
+    }
+
+    .row3 {
+      /* background: rgba(62, 164, 170, 0.4);*/
+    }
+
+    .modal-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      box-sizing: border-box;
+      position: absolute;
+      display: none;
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: rgba(89, 70, 70, 0.0);
+    }
+    .dimmer {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0px;
+      background: rgba(62, 70, 70, 0.6);
+      width: 100%;
+      height: 100%;
+      margin: auto;
+
+      z-index: 1;
+    }
+
+    .loginModal {
+      /*position: absolute;*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(230, 230, 235, 0.9);
+      padding: 10px;
+      width: fit-content;
+      height: auto;
+      margin: auto;
+      top: 100px;
+      border: 1px solid rgba(62, 70, 70, 0.6);;
+      border-radius: 3px;
+      box-shadow: 0px 0px 10px 1px rgba(50, 50, 60, 0.4);
+      z-index: 2;
+    }
+    .msgModal {
+      /* position: absolute; */
+      display: none;
+      /* top: 150px; */
+      /* left: 50%; */
+      flex-direction: column;
+      justify-content: center;
+      background: rgba(230, 230, 235, 0.9);
+      padding: 10px;
+      width: fit-content;
+      height: auto;
+      margin: auto;
+      top: 100px;
+      border: 1px solid rgba(62, 70, 70, 0.6);;
+      border-radius: 3px;
+      box-shadow: 0px 0px 10px 1px rgba(50, 50, 60, 0.4);
+      z-index: 2;
+    }
+
+    .loginText {
+      margin: 10px 5px 10px 5px ;
+      font-weight: 400;
+    }
+    .loginInputs {
+      width: auto;
+      margin: 5px auto;
+    }
+
+    .passwordField {
+      padding: 5px;
+    }
+
+    .pwButton {
+      padding: 5px;
+      width: fit-content;
+      /*border-radius: 3px;*/
+
+    }
+    .toolbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 2px;
+    }
+    .editable:hover {
+      background: rgb(236, 227, 218);
+    }
+
+    @media screen and (max-width: 450px) {
+      /* .msgModal {
+
+      top: 150px;
+      left: 125px;
+
+    } */
     }
   </style>
 </head>
 
 <body>
   <div class="grid">
+
+    <div class="modal-container">
+      <div class="dimmer">
+        <div class="msgModal">
+          <p class="authText">pooping</p>
+      </div>
+      <div class="loginModal">
+        <p class="loginText">Enter password or die.</p>
+        <input type="text" class="passwordField">
+        <div class="loginInputs">
+          <input type="button" class="pwSubmit pwButton" value="Submit">
+          <input type="button" class="pwCancel pwButton" value="Cancel">
+        </div>
+    </div>
+    </div>
+    </div>
     <header>
       <h1> Notemondo </h1>
     </header>
@@ -145,20 +335,23 @@
       <p class="form-subtext">You can also search for accidentals (sharps, flats) or octave numbers as well</p>
       <div class="inputs">
         <input type="text" class="noteInput">
-        <input type="submit" class="subBut" value=" Get ">
+        <input type="submit" class="subBut" value=" Find ">
       </div>
     </form>
-
-    <table class="noteTable">
-      <tr class="colNames">
-        <th>Note</th>
-        <th>Frequency</th>
-        <th>Wavelength</th>
-      </tr>
-    </table>
+    <div class="table-container">
+      <div class="toolbar">
+        <button class="editButton">Edit</button>
+        </div>
+      <table class="noteTable">
+        <tr class="colNames">
+          <th>Note</th>
+          <th>Frequency</th>
+          <th>Wavelength</th>
+        </tr>
+      </table>
+    </div>
   </div>
   <script src="./notemondo/notemondo.js" type="module">
-
   </script>
 </body>
 
