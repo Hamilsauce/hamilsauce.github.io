@@ -8,5 +8,25 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\notemondo\\notemondo.js",
+		"bookmarks": [
+			{
+				"line": 20,
+				"column": 13,
+				"label": ""
+			},
+			{
+				"line": 65,
+				"column": 5,
+				"label": ""
+			},
+			{
+				"line": 88,
+				"column": 8,
+				"label": ""
+			}
+		]
 	}
 ]
