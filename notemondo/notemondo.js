@@ -66,8 +66,8 @@ const filterData = (data, query) => { //! makes new array from CsvToJson return 
 (() => {
   //! build initial table at page load...
   let noteData = csvToJson(toneTable, 'tab');
-  let mapped = mapTheData2(noteData);
-  let reduced = reducer(mapped);
+  let mapped = mapTheData(noteData);
+  reduceAndAppendRows(mapped);
 
   //!  then set event handler for queries
   userform.addEventListener('submit', e => {  //* replace existing table/markup/data w/ headers only (clear out old data)
