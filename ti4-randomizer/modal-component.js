@@ -1,3 +1,4 @@
+//log last updated 1.18.20
 
 export function modularity() {
     const modal = document.querySelector('#modal-menu');
@@ -16,32 +17,19 @@ export function modularity() {
     function showModal(modal, backdrop) {
         const modalText = document.querySelector('.modal-text');
         let pastPlayers = [];
-        let getPast = JSON.parse(localStorage.getItem('pastResults'));
+        let playerHistory = JSON.parse(localStorage.getItem('pastResults'));
 
-        //console.log('before getKeys');
-
-        //console.log(getPast);
-        //console.log(pastPlayers);
-
-        getPast.forEach(p => {
+        playerHistory.forEach(p => {
             pastPlayers.push(`
                 <div class="modal-cell" id="modal-cell${p.id}">${getKeys(p)}</div>
             `);
         });
-
-        //console.log('after getKeys');
-        //console.log(getPast);
-
-        ////console.log(`Object Keys (after getKeys): ${Object.keys(pastPlayers[5])}`);
-
         modalText.innerHTML = pastPlayers.join('');
 
         backdrop.style.display = "block";
         modal.style.display = "block";
 
-        return getPast;
-        //return Object.keys(p);
-
+        return playerHistory;
     }
 
     function getKeys(pl) {
@@ -50,8 +38,6 @@ export function modularity() {
             let value = pl[key];
             key == 'id' ? value++ : value;
             pairs.push(`${key}: ${value}`);
-
-            ////console.log(pairs);
         });
         let joined = pairs.join('<br>');
         return joined;
