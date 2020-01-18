@@ -93,5 +93,20 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\randomeister.js",
+		"bookmarks": [
+			{
+				"line": 162,
+				"column": 13,
+				"label": ""
+			},
+			{
+				"line": 226,
+				"column": 5,
+				"label": ""
+			}
+		]
 	}
 ]

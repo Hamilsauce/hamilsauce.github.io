@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        html,
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .content-container {
+            box-sizing: border-box;
+            display: flex;
+            margin: auto;
+            align-content: center;
+            justify-content: space-around;
+            padding: 20px 0px 0px 0px;
+        }
+
+        .table-container {
+            box-sizing: border-box;
+            padding: 20px 10px 0px 10px;
+            margin: auto;
+        }
+
+        .race-table {
+            box-sizing: border-box;
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 300px;
+            margin: auto;
+            padding-top: 1px;
+            padding-right: 1px;
+            padding-left: 1px;
+            color: black;
+            font-size: 1em;
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            font-family: "Segoe UI", sans-serif;
+
+
+        }
+
+        #column1 {
+            width: 15%;
+        }
+
+        #column2 {
+            width: 65%;
+            text-align: left;
+        }
+
+        #column3 {
+            width: 20%;
+
+        }
+
+        .table-headers {
+            padding: 6px 5%;
+            height: 17.25pt;
+            text-align: center;
+            width: auto;
+            color: white;
+            font-weight: 700;
+            border: .5pt solid rgb(174, 212, 149);
+            background: rgb(106, 144, 94);
+        }
+
+        .table-field {
+            padding: 3px 5%;
+            border: .5pt solid rgb(197, 219, 181);
+        }
+    </style>
+    <title>TI4 Race List!</title>
+</head>
+
+<body>
+    <div class="content-container">
+        <div class="table-container">
+            <table class="race-table">
+                <col id="column1">
+                <col id="column2">
+                <col id="column3">
+                <tr class="table-row">
+                    <td class="table-headers">ID</td>
+                    <td class="table-headers">Race</td>
+                    <td class="table-headers">Freq.</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">1</td>
+                    <td class="table-field">Arborec</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">2</td>
+                    <td class="table-field">Barony of Letnev</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">3</td>
+                    <td class="table-field">Clan of Saar</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">4</td>
+                    <td class="table-field">Embers of Muaat</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">5</td>
+                    <td class="table-field">Emirates of Hacan</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">6</td>
+                    <td class="table-field">Federation of Sol</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">7</td>
+                    <td class="table-field">Ghostsof Creuss</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">8</td>
+                    <td class="table-field">L1Z1X Mindnet</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">9</td>
+                    <td class="table-field">Mentak Coalition</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">10</td>
+                    <td class="table-field">Naalu Collective</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">11</td>
+                    <td class="table-field">Nekro Virus</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">12</td>
+                    <td class="table-field">Sardakk N'orr</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">13</td>
+                    <td class="table-field">Universities of Jol-Nar</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">14</td>
+                    <td class="table-field">Winnu</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">15</td>
+                    <td class="table-field">Xxcha Kingdom</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">16</td>
+                    <td class="table-field">Yin Brotherhood</td>
+                    <td class="table-field"></td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-field">17</td>
+                    <td class="table-field">Yssaril Tribes</td>
+                    <td class="table-field"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src=" ./race-table.js" type="module"></script>
+    <script src=" ./Races.js" type="module"></script>
+</body>
+
+</html>
