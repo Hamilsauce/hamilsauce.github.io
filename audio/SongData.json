@@ -76,8 +76,8 @@
             "songTitle": "Dendrites Once Roamed These lands",
             "plays": "0",
             "likes": "0",
-            "genre": "Ambient",
-            "duration": "01:52",
+            "genre": "synaptic",
+            "duration": "02:10",
             "comments": "",
             "audioUrl": "https://hamilsauce.github.io/audio/dendrites-once-roamed-these-lands.mp3"
         },
@@ -152,6 +152,16 @@
             "audioUrl": "https://hamilsauce.github.io/audio/jerrys-breakdown.mp3"
         },
         {
+            "id": "53",
+            "songTitle": "The Sadness of Ratboot",
+            "plays": "0",
+            "likes": "1",
+            "genre": "Ballad",
+            "duration": "03:20",
+            "comments": "0",
+            "audioUrl": "https://hamilsauce.github.io/audio/The Sadness of Ratboot.mp3"
+        },
+        {
             "id": "50",
             "songTitle": "Quaint Appalachia",
             "plays": "0",
@@ -180,231 +190,7 @@
             "duration": "08:00",
             "comments": "0",
             "audioUrl": "https://hamilsauce.github.io/audio/the-gypsy.mp3"
-        },
-        {
-            "id": "8",
-            "songTitle": "Uncle Frog's Deep Space Chorus",
-            "plays": "11",
-            "likes": "1",
-            "genre": "Rock",
-            "duration": "04:08",
-            "comments": "0"
-        },
-        {
-            "id": "11",
-            "songTitle": "Gregorian Moan",
-            "plays": "126",
-            "likes": "0",
-            "genre": "",
-            "duration": "02:05",
-            "comments": "0"
-        },
-        {
-            "id": "6",
-            "songTitle": "A Memory Remains",
-            "plays": "6",
-            "likes": "3",
-            "genre": "Ambient",
-            "duration": "04:29",
-            "comments": "1"
-        },
-        {
-            "id": "12",
-            "songTitle": "Sunken Garden",
-            "plays": "6",
-            "likes": "0",
-            "genre": "",
-            "duration": "03:15",
-            "comments": "0"
-        },
-        {
-            "id": "13",
-            "songTitle": "Son of Mad Dirt Machine",
-            "plays": "68",
-            "likes": "1",
-            "genre": "",
-            "duration": "07:02",
-            "comments": "0"
-        },
-        {
-            "id": "14",
-            "songTitle": "Desolation",
-            "plays": "22",
-            "likes": "3",
-            "genre": "",
-            "duration": "04:37",
-            "comments": "0"
-        },
-        {
-            "id": "15",
-            "songTitle": "Bootheel p2",
-            "plays": "0",
-            "likes": "6",
-            "genre": "1",
-            "duration": "",
-            "comments": "3 months ago"
-        },
-        {
-            "id": "16",
-            "songTitle": "Bootheel (Dreaming of Life)",
-            "plays": "65",
-            "likes": "1",
-            "genre": "",
-            "duration": "01:58",
-            "comments": "0"
-        },
-        {
-            "id": "17",
-            "songTitle": "Rethinking Bob Dylan's Buckets of Rain",
-            "plays": "39",
-            "likes": "5",
-            "genre": "",
-            "duration": "05:03",
-            "comments": "0"
-        },
-        {
-            "id": "18",
-            "songTitle": "The Howling Menace and the Return of the Synths",
-            "plays": "35",
-            "likes": "2",
-            "genre": "",
-            "duration": "06:28",
-            "comments": "0"
-        },
-        {
-            "id": "19",
-            "songTitle": "The Mad Dirt Machine",
-            "plays": "18",
-            "likes": "5",
-            "genre": "",
-            "duration": "03:05",
-            "comments": "0"
-        },
-        {
-            "id": "21",
-            "songTitle": "Under The Sun",
-            "plays": "16",
-            "likes": "0",
-            "genre": "",
-            "duration": "04:58",
-            "comments": "0"
-        },
-        {
-            "id": "22",
-            "songTitle": "Real FunTown",
-            "plays": "18",
-            "likes": "2",
-            "genre": "",
-            "duration": "04:23",
-            "comments": "0"
-        },
-        {
-            "id": "23",
-            "songTitle": "Singularity M",
-            "plays": "27",
-            "likes": "4",
-            "genre": "",
-            "duration": "04:14",
-            "comments": "0"
-        },
-        {
-            "id": "24",
-            "songTitle": "Baby Girl",
-            "plays": "72",
-            "likes": "1",
-            "genre": "",
-            "duration": "02:06",
-            "comments": "0"
-        },
-        {
-            "id": "25",
-            "songTitle": "Ave Maria",
-            "plays": "121",
-            "likes": "5",
-            "genre": "",
-            "duration": "02:24",
-            "comments": "0"
-        },
-        {
-            "id": "26",
-            "songTitle": "Brown Town",
-            "plays": "40",
-            "likes": "2",
-            "genre": "",
-            "duration": "03:26",
-            "comments": "1"
-        },
-        {
-            "id": "27",
-            "songTitle": "Rat Boot Redux",
-            "plays": "52",
-            "likes": "0",
-            "genre": "",
-            "duration": "04:55",
-            "comments": "0"
-        },
-        {
-            "id": "28",
-            "songTitle": "Jimnopeedie",
-            "plays": "59",
-            "likes": "1",
-            "genre": "",
-            "duration": "02:28",
-            "comments": "0"
-        },
-        {
-            "id": "30",
-            "songTitle": "Glaciers",
-            "plays": "151",
-            "likes": "0",
-            "genre": "",
-            "duration": "04:16",
-            "comments": "0"
-        },
-        {
-            "id": "33",
-            "songTitle": "What Do You Know ?",
-            "plays": "0",
-            "likes": "3",
-            "genre": "",
-            "duration": "05:25",
-            "comments": "0"
-        },
-        {
-            "id": "34",
-            "songTitle": "How to Get a Wink From a Waitress",
-            "plays": "52",
-            "likes": "1",
-            "genre": "",
-            "duration": "04:50",
-            "comments": "1"
-        },
-        {
-            "id": "35",
-            "songTitle": "We're All Victims Now!",
-            "plays": "50",
-            "likes": "2",
-            "genre": "",
-            "duration": "05:27",
-            "comments": "0"
-        },
-        {
-            "id": "40",
-            "songTitle": "Pfizer Entertains",
-            "plays": "60",
-            "likes": "1",
-            "genre": "",
-            "duration": "03:22",
-            "comments": "0"
-        },
-        {
-            "id": "41",
-            "songTitle": "Lulu Goes Away",
-            "plays": "67",
-            "likes": "2",
-            "genre": "",
-            "duration": "04:08",
-            "comments": "0"
         }
+        
     ]
 }
