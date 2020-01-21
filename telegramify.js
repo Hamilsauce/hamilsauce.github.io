@@ -36,6 +36,8 @@ const htmlListOut = list => {
 
 //* will return unique list of names
 const limitMsgs = messageList => {
+  console.log('messageList');
+  console.log(messageList);
   let oneHundredLimit = messageList
     .filter(msg => {
       return messageList.indexOf(msg) < 100;
@@ -63,25 +65,7 @@ let request = obj => {
     xhr.send(obj.body);
   });
 };
-request({
-    url: url
-  })
-  .then(data => {
-    let chatData = JSON.parse(data);
-    let chatList = chatData.chats.list;
-    let chatNameQuery = document.querySelector('.chatInput').value;
 
-    let chatTarget = chatList.find(chat => {
-      return chat.name === chatNameQuery;
-    });
-
-    messages = chatTarget.messages
-      .filter(msg => {
-        return msg.type === 'message';
-      });
-
-
-  });
 
 const filterMessagesByName = name => {
   const errorMessage = `Name entered isn't valid.`;
@@ -139,6 +123,30 @@ const writeMsgCard = msgList => {
 //* Listens for the request submit button to run query and return some results
 document.querySelector('.getDataButton').addEventListener('click', e => {
   e.preventDefault();
+  request({
+    url: url
+  })
+  .then(data => {  //! chat name is acquired here. heeds to refresh every time the selectio changes
+    let chatData = JSON.parse(data);
+    let chatList = chatData.chats.list;
+    let chatNameQuery = document.querySelector('.chatInput').value;
+    console.log('chatinput check');
+    console.log(chatNameQuery);
+
+
+
+    let chatTarget = chatList.find(chat => {
+      return chat.name === chatNameQuery;
+    });
+
+    messages = chatTarget.messages
+      .filter(msg => {
+        return msg.type === 'message';
+      });
+
+
+  });
+
   const displayTotal = document.querySelector('.display-header1');
   const displayPerc = document.querySelector('.display-header2');
   const nameInput = document.querySelector('.name-input').value;
