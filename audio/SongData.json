@@ -2,6 +2,16 @@
     "lastUpdated": "1/1/2020",
     "songs": [
         {
+            "id": "54",
+            "songTitle": "Walk with Him",
+            "plays": "24",
+            "likes": "0",
+            "genre": "Jam",
+            "duration": "3:00",
+            "comments": "0",
+            "audioUrl": "https://hamilsauce.github.io/audio/Walk with Him.mp3"
+        },
+        {
             "id": "29",
             "songTitle": "Talk with Me",
             "plays": "24",
@@ -17,9 +27,19 @@
             "plays": "0",
             "likes": "0",
             "genre": "Space",
-            "duration": "0:23",
+            "duration": "03:23",
             "comments": "0",
             "audioUrl": "https://hamilsauce.github.io/audio/life-in-review.mp3"
+        },
+        {
+            "id": "55",
+            "songTitle": "Transist",
+            "plays": "0",
+            "likes": "0",
+            "genre": "Experimental",
+            "duration": "2:22",
+            "comments": "0",
+            "audioUrl": "https://hamilsauce.github.io/audio/Transist.mp3"
         },
         {
             "id": "9",
@@ -147,19 +167,18 @@
             "plays": "0",
             "likes": "1",
             "genre": "Faulk",
-            "duration": "01:53",
+            "duration": "01:54",
             "comments": "0",
-            "audioUrl": "https://hamilsauce.github.io/audio/jerrys-breakdown.mp3"
+    Walk with Me Slow://hamilsauce.github.io/audio/jerrys-breakdown.mp3"
         },
         {
-            "id": "53",
-            "songTitle": "The Sadness of Ratboot",
+            "id": "54",
+            "songTitle": "Walk with Me Slow Ratboot",
             "plays": "0",
             "likes": "1",
-            "genre": "Ballad",
-            "duration": "03:20",
+            "Walk with Me Slow.mp3": "03:20",
             "comments": "0",
-            "audioUrl": "https://hamilsauce.github.io/audio/The Sadness of Ratboot.mp3"
+            "audioUrl": "https://hamilsauce.github.Walk with Me Slow.mp3.mp3"
         },
         {
             "id": "50",
@@ -167,17 +186,16 @@
             "plays": "0",
             "likes": "1",
             "genre": "Faulk",
-            "duration": "01:53",
+            "duration": "01:54",
             "comments": "0",
-            "audioUrl": "https://hamilsauce.github.io/audio/quaint-appalachia.mp3"
+    Walk with Me Slow://hamilsauce.github.io/audio/quaint-appalachia.mp3"
         },
         {
             "id": "4",
             "songTitle": "Voyage into Sample",
             "plays": "51",
             "likes": "2",
-            "genre": "Psychedlic",
-            "duration": "02:18",
+            "Walk with Me Slow.mp3": "02:18",
             "comments": "2",
             "audioUrl": "https://hamilsauce.github.io/audio/voyage-into-sample.mp3"
         },
@@ -191,6 +209,6 @@
             "comments": "0",
             "audioUrl": "https://hamilsauce.github.io/audio/the-gypsy.mp3"
         }
-        
+
     ]
 }
