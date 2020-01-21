@@ -166,10 +166,10 @@ document.querySelector('.collapse').addEventListener('click', (e) => {
   const userform = document.querySelector('.userform');
   const container = document.querySelector('.top-container');
 
-  if (userform.style.display === 'none') {
-    userform.style.display = 'block';
+  if (userform.style.height === '0px') {
+    userform.style.height = '100%';
   } else {
-    userform.style.display = 'none';
+    userform.style.height = '0px';
 
   }
 });

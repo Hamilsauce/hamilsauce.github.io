@@ -28,5 +28,20 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\telegramify.js",
+		"bookmarks": [
+			{
+				"line": 44,
+				"column": 0,
+				"label": ""
+			},
+			{
+				"line": 45,
+				"column": 22,
+				"label": ""
+			}
+		]
 	}
 ]
