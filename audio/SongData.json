@@ -169,16 +169,16 @@
             "genre": "Faulk",
             "duration": "01:54",
             "comments": "0",
-    Walk with Me Slow://hamilsauce.github.io/audio/jerrys-breakdown.mp3"
+            "audioUrl": "https://hamilsauce.github.io/audio/jerrys-breakdown.mp3"
         },
         {
             "id": "54",
-            "songTitle": "Walk with Me Slow Ratboot",
+            "songTitle": "The Sadness of Ratboot",
             "plays": "0",
             "likes": "1",
-            "Walk with Me Slow.mp3": "03:20",
+            "duration": "03:20",
             "comments": "0",
-            "audioUrl": "https://hamilsauce.github.Walk with Me Slow.mp3.mp3"
+            "audioUrl": "https://hamilsauce.github.io/audio/The Sadness of Ratboot.mp3"
         },
         {
             "id": "50",
@@ -188,14 +188,14 @@
             "genre": "Faulk",
             "duration": "01:54",
             "comments": "0",
-    Walk with Me Slow://hamilsauce.github.io/audio/quaint-appalachia.mp3"
+            "audioUrl": "https://hamilsauce.github.io/audio/quaint-appalachia.mp3"
         },
         {
             "id": "4",
             "songTitle": "Voyage into Sample",
             "plays": "51",
             "likes": "2",
-            "Walk with Me Slow.mp3": "02:18",
+            "duration": "02:18",
             "comments": "2",
             "audioUrl": "https://hamilsauce.github.io/audio/voyage-into-sample.mp3"
         },
