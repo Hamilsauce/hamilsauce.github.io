@@ -3,7 +3,7 @@ let records = [];
 let htmlArray = [];
 let messages = [];
 let htmlOut = '';
-const url = `https://hamilsauce.github.io/tgexport1.22.19.json`; //${apiKey}
+const url = `https://hamilsauce.github.io/telegramify/tgexport1.22.19.json`; //${apiKey}
 
 //! list builder
 const lister = list => {
