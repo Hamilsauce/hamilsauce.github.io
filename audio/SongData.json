@@ -12,6 +12,16 @@
             "audioUrl": "https://hamilsauce.github.io/audio/Walk with Him.mp3"
         },
         {
+            "id": "57",
+            "songTitle": "Detective Song",
+            "plays": "0",
+            "likes": "0",
+            "genre": "Groove",
+            "duration": "02:41",
+            "comments": "0",
+            "audioUrl": "https://hamilsauce.github.io/audio/detective-song.mp3"
+        },
+        {
             "id": "29",
             "songTitle": "Talk with Me",
             "plays": "24",
