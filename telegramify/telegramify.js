@@ -3,8 +3,11 @@ let records = [];
 let htmlArray = [];
 let messages = [];
 let htmlOut = '';
-const url = `https://hamilsauce.github.io/telegramify/tgexport1.22.19.json`; //${apiKey}
 
+const url = `https://hamilsauce.github.io/telegramify/tg-data-export.json`; //${apiKey}
+const apocNowId = 8816899683;
+const funchatId = 8979731584;
+U
 //! list builder
 const lister = list => {
   let listArr = list.map(item => {
@@ -34,8 +37,7 @@ const htmlListOut = list => {
 };
 //!end resuable stuff
 
-//* will return unique list of names
-const limitMsgs = messageList => {
+const limitMsgs = messageList => {  //* will return unique list of names
   console.log('messageList');
   console.log(messageList);
   let oneHundredLimit = messageList
@@ -66,10 +68,8 @@ let request = obj => {
   });
 };
 
-
 const filterMessagesByName = name => {
   const errorMessage = `Name entered isn't valid.`;
-
   if (validateName(name) === false) {
     return errorMessage;
   } else {
@@ -92,9 +92,7 @@ const generateMsgCard = propStrings => {
   newCard.innerHTML = reducedString;
   newCard.setAttribute('class', 'message-card');
   document.querySelector('.data-display').appendChild(newCard);
-
 }
-
 
 const writeMsgCard = msgList => {
   let reduced = '';
@@ -113,40 +111,34 @@ const writeMsgCard = msgList => {
         dateTextFrom[2] = `<div class="card-author">${val}</div>`;
       }
     }
-
     generateMsgCard(dateTextFrom);
   });
 }
-
-
 
 //* Listens for the request submit button to run query and return some results
 document.querySelector('.getDataButton').addEventListener('click', e => {
   e.preventDefault();
   request({
-    url: url
-  })
-  .then(data => {  //! chat name is acquired here. heeds to refresh every time the selectio changes
-    let chatData = JSON.parse(data);
-    let chatList = chatData.chats.list;
-    let chatNameQuery = document.querySelector('.chatInput').value;
-    console.log('chatinput check');
-    console.log(chatNameQuery);
+      url: url
+    })
+    .then(data => { //! chat name is acquired here. heeds to refresh every time the selectio changes
+      let chatData = JSON.parse(data);
+      let chatList = chatData.chats.list;
+      let chatNameQuery = document.querySelector('.chatInput').value;
 
+      let targetChatId = chatNameQuery === 'Apocalypse Now' ? apocNowId : funchatId;
 
-
-    let chatTarget = chatList.find(chat => {
-      return chat.name === chatNameQuery;
-    });
-
-    messages = chatTarget.messages
-      .filter(msg => {
-        return msg.type === 'message';
+      let chatTarget = chatList.find(chat => {
+        return chat.id == targetChatId;
       });
 
+      messages = chatTarget.messages
+        .filter(msg => {
+          return msg.type === 'message';
+        });
+    });
 
-  });
-
+  //! generats minor anaylsis of msg stats for queried name, preps  it for vewing, pushes it to dom
   const displayTotal = document.querySelector('.display-header1');
   const displayPerc = document.querySelector('.display-header2');
   const nameInput = document.querySelector('.name-input').value;
@@ -156,14 +148,11 @@ document.querySelector('.getDataButton').addEventListener('click', e => {
 
   document.querySelector('.data-display').innerHTML = '';
   writeMsgCard(limitMsgs(resultMsgs));
-  console.log(htmlOut);
 
-  // document.querySelector('.data-display').innerHTML = htmlOut;
   displayTotal.innerText = `${resultMsgs.length} messages`;
   displayPerc.innerText = `${percent}% of all`;
 
 });
-
 
 document.querySelector('.saveButton').addEventListener('click', e => {
   saveDataToFile();
