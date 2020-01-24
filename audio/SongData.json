@@ -2,6 +2,16 @@
     "lastUpdated": "1/1/2020",
     "songs": [
         {
+            "id": "60",
+            "songTitle": "Schmoozy Horndog",
+            "plays": "0",
+            "likes": "0",
+            "genre": "Spooky Jazz",
+            "duration": "1:00",
+            "comments": "0",
+            "audioUrl": "https://hamilsauce.github.io/audio/schmoozy-horndog.mp3"
+        },
+        {
             "id": "56",
             "songTitle": "Walk with Him",
             "plays": "24",
