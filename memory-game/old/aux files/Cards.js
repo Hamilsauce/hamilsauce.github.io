@@ -37,14 +37,14 @@ export class Deck {
     this.deckSize = this.cards.length;
     return this.deckSize;
   }
-  shuffle() {
+  () {
     const rando = Math.random(1 - 2 / 0.5);
     return rando;
   }
   addCard(card) {
     this.cards.push(card);
   }
-  
+
 }
 
 {Card, Deck}

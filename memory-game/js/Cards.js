@@ -1,22 +1,22 @@
 export class Card {
-  constructor(className, cardSymbol) {
+  constructor(className, cardSymbol, eventHandler) {
     this.className = className;
     this.cardSymbol = cardSymbol;
     this.sharedClassName = 'grid-cell';
+    this.eventHandler = eventHandler,
     this.isSelected = false
   }
-  renderSelf(parentClassName) {
+  renderSelf() {
     let cardEl = document.createElement('div');
+    let cardText = document.createTextNode(this.cardSymbol);
+
 
     cardEl.classList.add(`${this.className}`);
     cardEl.classList.add('grid-cell');
-    let cardText = document.createTextNode(this.cardSymbol);
     cardEl.appendChild(cardText);
+    cardEl.addEventListener('click', this.eventHandler);
 
-    const gameBoard = document.querySelector(`.${parentClassName}`);
-    gameBoard.appendChild(cardEl);
-
-    console.log(`rendered card`);
+    return cardEl;
   }
 
   toggleSelected() {
@@ -32,19 +32,31 @@ export class Deck {
     this.cards = [],
     this.deckSize = 0
   }
-  getDeckSize() {
+  updateDeckSize() {
     this.deckSize = this.cards.length;
     return this.deckSize;
   }
+  createMatchingCards() {
+  let dupedCards = this.cards
+        .reduce((result, curr) => {
+          return result.concat([curr, curr]);
+        }, []);
+    this.cards = dupedCards;
+
+    this.updateDeckSize();
+  }
   shuffle() {
-    const rando = Math.random(1 - 2 / 0.5);
-    return rando;
+    for (let i = this.cards.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [this.cards[i], this.cards[j]] = [this.cards[j], this.cards[i]];
+    }
   }
-  addCard(card) {
+  generateCard(card) {
     this.cards.push(card);
-    this.getDeckSize();
+    this.updateDeckSize();
   }
+
 
 }
 
-{Card, Deck}
+{ Card, Deck }

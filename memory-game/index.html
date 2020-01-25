@@ -22,21 +22,33 @@
         <div class="modalDiv modalBottom">Settings</div>
       </div>
       <div class="endModal">
-        <div class="endModalDiv endModalTop">Scores</div>
+        <div class="endModalDiv endModalTop">
+          <p class="scoreHeader">Stars</p>
+          <div class="scoresContainer">
+            <div class="turnScore"></div>
+            <div class="starsDisplay"></div>
+            <div class="timeScore"></div>
+
+            <!-- <div class="turns-out"></div> -->
+          </div>
+        </div>
         <div class="endModalDiv endModalMiddle">
           <button class="restartButton">New Game</button></div>
-        <div class="endModalDiv endModalBottom">Settings</div>
+        <div class="endModalDiv endModalBottom"><div class="gameHistoryDisplay"></div></div>
       </div>
 </div>
 
 
     <div class="app">
       <header class="app-header">
-        <p class="header-text">Add new cards here</p>
+        <!-- <p class="header-text">Add new cards here</p>
         <form class="userform">
           <input class="symbolIn" type="text" />
           <input class="submitButton" type="submit" value="add" /><br>
-        </form>
+        </form> -->
+            <div class="header-container">
+              <h2 class="header-text">Crazy Wild Memory Game</h2>
+            </div>
         <div class="scoreboard">
           <div class="turns">
             <span class="turns-label">Turns:</span>
@@ -55,7 +67,7 @@
         </div>
 
       </section>
-      <div class="app-footer">game stuff here</div>
+      <div class="app-footer"></div>
     </div>
   </div>
   <script type="module" src="./js/main.js"></script>

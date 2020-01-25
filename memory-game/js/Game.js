@@ -1,38 +1,37 @@
-import { Deck } from './Cards.js';
+import { Deck, Card } from './Cards.js';
 
 export class Game {
-    constructor(turns, time, stars) {
+    constructor(gameBoard) {
+        this.gameBoard = gameBoard,
         this.selected = [],
         this.matched = [],
-        this.turns = turns,
-        this.gameTime = time,
-        this.cardCount = 0,
+        this.turns = 0,
+        // this.gameTime = '0:00',
         this.stars,
         this.playedOn = new Date().toDateString();
         this.playedAt = new Date().toLocaleTimeString();
         this.deck = this.newDeck(),
             this.gameHistory = this.getHistory();
     }
-    getHistory() {
-        let history = localStorage.getItem('gameHistory') ?
-            JSON.parse(localStorage.getItem('gameHistory')) : [];
-        return history;
+    newDeck() {
+        let deck = new Deck();
+        return deck;
+    }
+    setBoard() {
+        this.deck.cards.forEach(card => {
+            this.gameBoard.appendChild(card.renderSelf());
+        })
+    }
+    countCard() {
+        this.cardCount++;
     }
     addTurn() {
         this.turns++;
         return this.turns;
     }
-    countCard() {
-        this.cardCount++;
-    }
-    newDeck() {
-        let deck = new Deck();
-        this.cardCount = deck.deckSize;
-        return deck;
-    }
     gameOver() {
-        let check = this.matched.length === this.cardCount ?
-            true : false;
+        let check = this.deck.deckSize === 0
+            ?true : false;
 
         if (check === true) {
             this.calculateStars();
@@ -71,6 +70,11 @@ export class Game {
         }
         this.gameHistory.push(newSave);
         localStorage.setItem('gameHistory', JSON.stringify(this.gameHistory));
+    }
+    getHistory() {
+        let history = localStorage.getItem('gameHistory') ?
+            JSON.parse(localStorage.getItem('gameHistory')) : [];
+        return history;
     }
 }
 
