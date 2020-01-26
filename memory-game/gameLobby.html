@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Game Lobby!</title>
+<style>
+    * {
+        outline: none;
+        touch-action: manipulation;
+    }
+
+    html {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.877);
+        font-family: 'Prompt', sans-serif;
+        ;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Prompt:400,700,800&display=swap');
+
+    body {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .main {
+        display: grid;
+        grid-gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width: 750px;
+        font-family: 'Prompt', sans-serif;
+
+    }
+
+    .history-board {
+        border-collapse: collapse;
+        border: 2px solid rgba(70, 163, 58, 0.432);
+    }
+
+    th {
+        background: rgba(53, 163, 39, 0.904);
+        color: white;
+        padding: 5px 10px;
+        margin: auto;
+        min-width: 75px;
+        border-right: 2px solid rgba(223, 223, 223, 0.247);
+    }
+
+    .FinalTime-header {
+        border-right: none;
+    }
+
+    td {
+        padding: 5px;
+        border-right: 1px solid rgba(115, 165, 108, 0.5);
+        ;
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+<div class="main">
+    <header class="lobby-header">
+        <h2 class="lobby-title-text">Welcome to the thunderdome</h2>
+        <div class="menu"><button class="lobbyStarButton">Start a Game</button></div>
+    </header>
+    <section class="history-display">
+        <div class="content-top">
+            <h4>Game History</h4>
+            <p class="subtext">So on and so forth</p>
+        </div>
+        <table class="history-board">
+            <thead>
+                <tr class="table-headers">
+                    <th class="Date-header">Date</th>
+                    <th class="Stars-header">Stars</th>
+                    <th class="Turns-header">Turns</th>
+                    <th class="FinalTime-header">Final Time</th>
+                </tr>
+                <tr class="trow" data-player="">
+                    <td>1/25/2019</td>
+                    <td>3</td>
+                    <td>14</td>
+                    <td>24s</td>
+                </tr>
+            </thead>
+        </table>
+    </section>
+</div>
+
+<script>
+
+    document.querySelector('.lobbyStarButton')
+        .addEventListener('click', e => {
+            setTimeout(() => {
+                e.target.textContent = 'You betcha!';
+            }, 200);
+            setTimeout(() => {
+                parent.location = './index.html';
+            }, 750);
+        });
+
+</script>
+</body>
+
+</html>

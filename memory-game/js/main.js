@@ -176,6 +176,58 @@ document.querySelector('.restartButton').addEventListener('click', (e) => {
   newGame();
 });
 
+document.querySelector('.stop-button').addEventListener('click', (e) => {
+  setTimeout(() => {
+    window.close();
+  }, 300);
+  newGame();
+});
+document.querySelector('.modalTop').addEventListener('click', (e) => {
+  setTimeout(() => {
+    parent.location = './gameLobby.html';
+}, 750);
+});
+
+const shareButton = document.querySelector('.shareButton');
+shareButton.addEventListener('click', () => {
+  const title = document.querySelector('h1').textContent;
+  const buttonContent = shareButton.innerHTML;
+  const url =
+    document.querySelector('link[rel=canonical]') &&
+    document.querySelector('link[rel=canonical]').href ||
+    window.location.href;
+
+  if (navigator.share) {
+    navigator.share({
+        title,
+        url
+      })
+      .then(() => {
+        console.log('Share works');
+
+      })
+      .catch(err => {
+        alert('No built in share technology');
+      });
+  } else {
+
+    setTimeout(() => {
+      shareButton.textContent = 'Not supported by browser...';
+    }, 500);
+    setTimeout(() => {
+      shareButton.innerHTML = buttonContent;
+    }, 2000);
+  }
+});
+
+function showMessage(element, msg) {
+  element.textContent = msg;
+  setTimeout(() => {
+    shareButton.innerHTML = buttonContent;
+  }, 2000);
+}
+
+
 // userform.addEventListener('submit', e => {
 //   e.preventDefault();
 //   let symIn = document.querySelector('.symbolIn');

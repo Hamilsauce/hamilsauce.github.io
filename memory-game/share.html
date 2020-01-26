@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>share</title>
+</head>
+
+<body>
+  <h1>Bitches</h1>
+  <button class="share-btn">Share Me</button>
+  <script>
+    const shareBtn = document.querySelector('.share-btn');
+    shareBtn.style.background = 'blue'
+    const title = document.querySelector('h1').textContent;
+    const url =
+      document.querySelector('link[rel=canonical]') && document.querySelector('link[rel=canonical]').href || window.location.href;
+    shareBtn.addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({ title, url })
+          .then(() => {
+            showMessage(shareBtn, 'Thanks! 😄');
+          })
+          .catch(err => {
+            showMessage(shareBtn, `Couldn't share 🙁`);
+          });
+        } else {
+            showMessage(shareBtn, 'Not supported 🙅‍');
+        }
+    });
+
+    function showMessage(element, msg) {
+    element.textContent = msg;
+      setTimeout(() => { element.textContent = ogBtnContent; }, 2000);
+    }
+  </script>
+</body>
+
+</html>

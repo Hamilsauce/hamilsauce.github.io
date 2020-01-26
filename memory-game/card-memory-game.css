@@ -3,6 +3,7 @@
 * {
   outline: none;
   touch-action: manipulation;
+  user-select: none;
 }
 
 html {
@@ -30,7 +31,7 @@ body {
   justify-content: center;
   z-index: 2;
   margin: 0;
-  background: rgba(47, 47, 47, 0.76);
+  background: rgba(133, 133, 133, 0.877);
   width: 100%;
   height: 100%;
 }
@@ -114,6 +115,20 @@ body {
 .restartButton {
   height: 75px;
   width: 200px;
+  margin: 3px auto;
+  background: rgba(53, 163, 39, 0.904);
+  border: 3px solid rgb(228, 228, 228);
+  box-shadow: 0px 0px 15px 1px rgba(63, 63, 63, 0.4);
+  border-radius: 6px;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: white;
+}
+
+.stop-button {
+  height: 75px;
+  width: 200px;
+  margin: 3px auto;
   background: rgba(53, 163, 39, 0.904);
   border: 3px solid rgb(228, 228, 228);
   box-shadow: 0px 0px 15px 1px rgba(63, 63, 63, 0.4);
@@ -132,12 +147,13 @@ body {
   width: 350px;
   height: 300px;
   padding: 15px;
-  border-radius: 15px;
-  border-radius: 15px;
+  border-radius: 25px;
   font-size: 2.5em;
   font-weight: bold;
   color: rgba(80, 80, 80, 0.8);
   background: rgba(80, 80, 80, 0.8);
+  border: 2px solid rgba(240, 240, 240, 0.459);
+
   z-index: 3;
 }
 
@@ -145,12 +161,15 @@ body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 20px;
   height: auto;
   margin: 0px;
-  padding-top: 20px;
+  padding: 10px;
   box-shadow: 0px 0px 4px 2px rgba(60, 80, 80, 0.8);
   background: rgba(255, 255, 255, 0.9);
   transition: 0.3s;
@@ -173,8 +192,8 @@ body {
   height: 100%;
   max-width: 600px;
   margin: auto;
-  padding: 0px 0px;
   border: 2px solid rgba(212, 157, 84, 0.349);
+  padding: 0px 0px;
   background: rgb(60, 119, 197);
 
 }
@@ -296,9 +315,79 @@ body {
 }
 
 .app-footer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 100%;
   background: rgb(63, 131, 219);
   height: 100%;
   min-height: 130px;
+}
+
+.shareButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 2px 2px 2px 2px;
+  padding: 2px;
+  margin: auto;
+  background: rgb(212, 160, 14);
+  box-shadow: 0px 0px 10px 3px rgba(54, 63, 88, 0.171);
+  border-radius: 5px;
+  border: 5px solid rgb(214, 214, 214);
+  outline: none;
+  transition: 0.2s;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: rgb(71, 71, 71);
+}
+
+.shareButton:active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 2px 2px 2px 2px;
+  padding: 0px;
+  margin: auto;
+  background: rgb(167, 140, 60);
+  box-shadow: 0px 0px 14px 3px rgba(81, 100, 156, 0.623);
+  border-radius: 5px;
+  border: 5px solid rgb(214, 214, 214);
+  outline: none;
+  transition: 0.2s;
+}
+
+.shareIcon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0);
+  padding: 2px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 3px inset rgba(103, 111, 131, 0.671);
+  fill: rgba(235, 230, 240, 1);
+  transition: 0.2s;
+}
+
+.shareIcon:hover {
+  /* width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0);
+  padding: 2px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px 3px rgba(198, 210, 218, 0.657); */
+  fill: rgb(24, 91, 180);
+}
+
+.shareIcon:active {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0);
+  padding: 2px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 17px 3px rgba(198, 210, 218, 0.657);
+  fill: rgb(54, 127, 223);
 }
 
 @media screen and (max-width: 400px) {
@@ -312,6 +401,7 @@ body {
     margin: 0px;
     border: 0px solid rgb(189, 153, 107);
   }
+
   .content-container {
     box-sizing: border-box;
   }
@@ -342,6 +432,7 @@ body {
     background: rgba(255, 255, 255, 0.9);
     color: rgba(80, 80, 80, 0.8);
   }
+
   .modalDiv {
     box-sizing: border-box;
     display: flex;
