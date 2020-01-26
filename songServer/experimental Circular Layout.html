@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>song fetcher</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Mukta:300,400,700&display=swap');
+        html {
+            box-sizing: border-box;
+            font-family: 'Mukta', sans-serif;
+            background: rgb(42, 42, 42) ;
+            padding-top: 50px;
+        }
+        .forms-container {
+            box-sizing: border-box;
+            display: grid;
+            grid-gap: 35px;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            margin: auto;
+            max-width: fit-content;
+            background: rgb(153, 153, 58) ;
+            border: 2px solid rgb(134, 134, 134);
+            border-radius: 9px;
+
+            box-shadow: 0px 0px 50px 10px rgba(22, 22, 22, 0.527);
+        }
+
+        form {
+            box-sizing: border-box;
+            display: grid;
+            gap: 5px;
+            height: 550px;
+            width: 550px;
+            justify-content: center;
+
+            padding: 15px;
+            background: rgb(48, 74, 109);
+            border: 2px solid rgb(165, 118, 42);
+            border-radius: 90%;
+            color: rgba(226, 223, 217, 0.931);
+            box-shadow: 0px 0px 20px 10px rgba(3, 3, 3, 0.384);
+        }
+
+        form>p {
+            font-weight: 300;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <section class="content">
+            <div class="forms-container">
+
+                <form class="postForm">
+                    <h2>POST requests</h2>
+                    <p>enter a name to send to the server</p>
+                    <label for="new-title-field">Song Title</label>
+                    <span class="button-container">
+                        <input type="text" name="new-title-field" class="new-title-field">
+                        <input type="submit" name="submitPost" value="Send!" class="submitPostButton">
+                    </span>
+
+                </form>
+
+                <section class="dataDisplay">
+                    <form class="getForm">
+                        <h2>GET requests</h2>
+                        <p>Push Button to get all data, or push button to request single song</p>
+                        <label for="new-title-field">Song Title</label>
+                        <span class="button-container">
+                        <input type="text" name="new-title-field"  class="new-title-field">
+
+                        <input type="submit" name="submitGETbutton" value="Send!" class="submitGETbutton">
+                    </span>
+                        <input type="button" name="all-data-button" value="Get All!" class="allDataButton">
+                    </form>
+                </section>
+                <div class="data-output">data</div>
+            </section>
+        </div>
+    <script type="module" src="mysql-fetchSongs.js"></script>
+</body>
+
+</html>
