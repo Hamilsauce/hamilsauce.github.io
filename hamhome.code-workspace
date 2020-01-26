@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "C:\\Users\\jacob\\source\\music-library-app\\new-song-form"
 		}
 	],
 	"settings": {
@@ -31,6 +34,7 @@
 			"statusBar.foreground": "#e7e7e7"
 		},
 		"liveServer.settings.port": 5503,
-		"peacock.color": "#215732"
+		"peacock.color": "#215732",
+		"liveServer.settings.multiRootWorkspaceName": "hamilsauce.github.io"
 	}
 }

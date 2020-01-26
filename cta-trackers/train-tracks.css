@@ -1,0 +1,417 @@
+<style>* {
+  touch-action: manipulation;
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.dimmer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(236, 236, 236, 0.26);
+}
+
+.loading-prompt {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 200px;
+  height: fit-content;
+  padding: 10px;
+  margin: auto;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  /*background: rgba(87, 121, 165, 0.986);*/
+  background-image: linear-gradient(-90deg, #6c96cd, #4674b0);
+  box-shadow: 0px 0px 20px 1px rgba(88, 88, 88, 0.808);
+}
+
+.checkBoxesLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2em;
+  padding-bottom: 3px;
+  margin-bottom: 0px;
+}
+
+.selectspan {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.content {
+  box-sizing: border-box;
+  display: grid;
+  row-gap: 15px;
+  height: fit-content;
+}
+
+.app-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+  background: #366F9E;
+  border: 1px solid rgb(61, 61, 61);
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.header-text {
+  box-sizing: border-box;
+  grid-column: 1 / span 2; 
+  margin: 0;
+  
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+}
+
+.subtitle {
+  box-sizing: border-box;
+  margin: 0px 0px 10px 0px;
+  padding: 0px 10px 10px 100px;
+  box-sizing: border-box;
+}
+
+.header-text>h1 {
+  margin: 0;
+  padding: 10px 10px 0px 10px;
+  box-sizing: border-box;
+}
+
+.header-pic {
+  box-sizing: border-box;
+  position: absolute;
+  opacity: 0.3;
+  right: 175px;
+  bottom: 50px;
+  z-index: -1;
+}
+.nav-button {
+  width: 75px;
+  height: 75px;
+  background: white;
+  padding: 0;
+  margin: 0;
+}
+
+.userform {
+  box-sizing: border-box;
+  display: grid;
+  gap: 10px;
+  row-gap: 10px;
+  justify-content: center;
+}
+
+.stopSelect {
+  box-sizing: border-box;
+  height: fit-content;
+  width: 325px;
+  margin: auto;
+  margin-bottom: 5px;
+  padding: 5px;
+  font-size: 1em;
+  border-radius: 5px;
+  background: rgba(237, 240, 242, 1);
+  border: 2px solid rgba(160, 160, 160, 0.582);
+}
+
+.trainLineBoxes {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  gap: 15px;
+  margin: auto;
+  justify-content: center;
+  padding: 0px;
+  padding-top: 5px;
+  height: 100px;
+  width: 500px;
+  text-align: center;
+  font-size: 1.1em;
+  background: rgb(255, 255, 255);
+  transform: 0.5s;
+  transition: 0.5s all;
+}
+
+.trainsLineBoxes-collapsed {
+
+  height: 0px;
+  overflow: hidden;
+
+}
+
+.checkBox-container {
+  border-radius: 3px;
+  padding: 5px;
+  margin: auto;
+  width: 95px;
+  height: 25px;
+  text-align: center;
+
+}
+
+.checkBox-container>label {
+  cursor: pointer;
+}
+
+.trainCheckBox {
+  cursor: pointer;
+}
+
+.data-display {
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.eta {
+  box-sizing: border-box;
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+    "name name2"
+    "time eta";
+  padding: 15px;
+  border-radius: 3px;
+  font-size: 1.2em;
+  border: 3px solid rgba(87, 121, 165, 0.623);
+  box-shadow: 0px 3px 15px 2px rgba(173, 172, 172, 0.246);
+  color: whitesmoke;
+  outline: 2px solid rgba(255, 255, 255, 0);
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.eta:hover {
+  outline: 2px solid rgb(255, 255, 255);
+  border: 3px solid rgb(200, 200, 200);
+  box-shadow: 0px 3px 5px 2px rgba(14, 58, 66, 0.253);
+
+}
+.nameBox1 {
+  grid-area: name;
+  display: flex;
+  flex-direction: row;
+}
+.nameBox2 {
+  grid-area: name2;
+  
+}
+
+.timeBox {
+  grid-area: time;
+} 
+
+.etaBox {
+  grid-area: eta;
+  
+}
+
+.eta1,
+.eta3 {
+  background: rgb(54, 155, 158);
+  padding: 5px;
+
+}
+
+.eta2,
+.eta4 {
+  background: rgb(54, 111, 158);
+  color: whitesmoke;
+  padding: 5px;
+}
+
+.approaching {
+  color: yellow;
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 3px;
+}
+
+#orangeBox {
+  font-size: 0.9em;
+}
+
+.collapse {
+  font-size: 0.6em;
+}
+
+.filterlabel {
+  padding-top: 0px;
+  padding-bottom: 3px;
+  margin-top: 0em;
+  border-bottom: 1px solid rgba(87, 121, 165, 0.185);
+}
+
+.filterlabel:hover {
+  color: rgb(62, 91, 129);
+}
+
+
+/* NAV BAR STYLES */ 
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(195, 235, 236);
+  background-color: rgba(235, 235, 235, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: rgba(25, 36, 46, 0.7);
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #a1afbd;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 400px) {
+
+  .userform {
+    box-sizing: border-box;
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+  }
+
+  .stopSelect {
+    box-sizing: border-box;
+    height: fit-content;
+    width: 325px;
+    margin: auto;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 0.6;
+    overflow: hidden;
+    border-radius: 5px;
+    border: 1px solid rgb(160, 160, 160);
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .trainLineBoxes {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: auto;
+    justify-content: center;
+    padding: 0px;
+    height: 130px;
+    padding-left: 0px;
+    padding-top: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.1em;
+    background: rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+    transform: 0.5s;
+    transition: 0.5s all;
+  }
+
+  .trainsLineBoxes-collapsed {
+    height: 0px;
+    overflow: hidden;
+
+  }
+
+  .checkBoxesLabel {
+    text-align: center;
+    font-size: 1em;
+    padding-bottom: 3px;
+    margin-bottom: 0px;
+    cursor: pointer;
+
+  }
+
+  .data-display {
+
+    gap: 10px;
+    width: 100%;
+
+
+    /* padding: 10px; */
+  }
+
+}
+    
+
+    @media screen and (max-height: 450px) {
+      .overlay a {
+        font-size: 20px
+      }
+
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+    }

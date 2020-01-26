@@ -1,0 +1,224 @@
+{
+    "lastUpdated": "1/24/2020",
+        "songs": [
+            {
+                "id": "60",
+                "songTitle": "Schmoozy Horndog",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Spooky Jazz",
+                "duration": "1:00",
+                "comments": "0",
+                "published": "1/24/2020",
+                "audioUrl": "https://hamilsauce.github.io/audio/schmoozy horndog.mp3"
+            },
+            {
+                "id": "56",
+                "songTitle": "Walk with Him",
+                "plays": "24",
+                "likes": "0",
+                "genre": "Jam",
+                "duration": "3:00",
+                "comments": "0",
+                "published": "1/22/2020",
+                "audioUrl": "https://hamilsauce.github.io/audio/Walk with Him.mp3"
+            },
+            {
+                "id": "57",
+                "songTitle": "Same Place Tomorrow",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Groove",
+                "duration": "02:41",
+                "comments": "0",
+                "published": "1/24/2020",
+                "audioUrl": "https://hamilsauce.github.io/audio/same place tomorrow.mp3"
+            },
+            {
+                "id": "29",
+                "songTitle": "Talk with Me",
+                "plays": "24",
+                "likes": "0",
+                "genre": "Jam",
+                "duration": "05:07",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/talk with me.mp3"
+            },
+            {
+                "id": "48",
+                "songTitle": "Life in Review",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Space",
+                "duration": "03:23",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/life-in-review.mp3"
+            },
+            {
+                "id": "9",
+                "songTitle": "Chasing Bengals",
+                "plays": "4",
+                "likes": "2",
+                "genre": "Ballad",
+                "duration": "03:20",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/chasing-bengals.mp3"
+            },
+            {
+                "id": "59",
+                "songTitle": "lazy-star-orchestra",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Indie ",
+                "duration": "02:31",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/lazy-star-orchestra.mp3"
+            },
+            {
+                "id": "55",
+                "songTitle": "Transist",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Experimental",
+                "duration": "2:22",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/Transist.mp3"
+            },
+            {
+                "id": "2",
+                "songTitle": "The Third Face",
+                "plays": "8",
+                "likes": "5",
+                "genre": "Rock",
+                "duration": "04:47",
+                "comments": "3",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/the-third-face.mp3"
+            },
+            {
+                "id": "47",
+                "songTitle": "Semantic Synthetic",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Electronic",
+                "duration": "02:58",
+                "comments": "",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/semantic-synthetic.mp3"
+            },
+            {
+                "id": "46",
+                "songTitle": "Planet Char",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Ambient",
+                "duration": "01:52",
+                "comments": "",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/planet-char.mp3"
+            },
+            {
+                "id": "52",
+                "songTitle": "Dendrites Once Roamed These lands",
+                "plays": "0",
+                "likes": "0",
+                "genre": "synaptic",
+                "duration": "02:10",
+                "comments": "",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/dendrites once roamed these lands.mp3"
+            },
+            {
+                "id": "1",
+                "songTitle": "Battle Star",
+                "plays": "12",
+                "likes": "4",
+                "genre": "Rock",
+                "duration": "02:45",
+                "comments": "3",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/battle-star.mp3"
+            },
+            {
+                "id": "5",
+                "songTitle": "The Wild Onion",
+                "plays": "6",
+                "likes": "1",
+                "genre": "Folk",
+                "duration": "02:32",
+                "comments": "1",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/wild-onion.mp3"
+            },
+            {
+                "id": "44",
+                "songTitle": "Offworld",
+                "plays": "0",
+                "likes": "0",
+                "genre": "Rock",
+                "duration": "02:05",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/offworld.mp3"
+            },
+            {
+                "id": "7",
+                "songTitle": "Procession",
+                "plays": "7",
+                "likes": "2",
+                "genre": "Electronic",
+                "duration": "02:29",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/procession.mp3"
+            },
+            {
+                "id": "10",
+                "songTitle": "Ink Erodes So Sad",
+                "plays": "22",
+                "likes": "1",
+                "genre": "Zappa",
+                "duration": "03:44",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/inca-so-sad.mp3"
+            },
+            {
+                "id": "49",
+                "songTitle": "Ink Erodes (Not Sad)",
+                "plays": "0",
+                "likes": "1",
+                "genre": "Zappa",
+                "duration": "04:00",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/ink erodes.mp3"
+            },
+            {
+                "id": "51",
+                "songTitle": "Jerry's Psychedelic Breakdown",
+                "plays": "0",
+                "likes": "1",
+                "genre": "Faulk",
+                "duration": "01:54",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/jerrys breakdown.mp3"
+            },
+            {
+                "id": "54",
+                "songTitle": "The Sadness of Ratboot",
+                "plays": "0",
+                "likes": "1",
+                "duration": "03:20",
+                "comments": "0",
+                "published": "",
+                "audioUrl": "https://hamilsauce.github.io/audio/The Sadness of Ratboot.mp3"
+            }
+        ]
+    }

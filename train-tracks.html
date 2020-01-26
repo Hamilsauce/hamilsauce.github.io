@@ -2,408 +2,111 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>train tracks - track trains</title>
-    <style>
-        * {
-            touch-action: manipulation;
-        }
-
-        html {
-            padding: 0;
-            margin: 0;
-            height: 100%;
-        }
-
-        body {
-            box-sizing: border-box;
-            padding: 0;
-            margin: auto;
-            width: 100%;
-            height: 100%;
-        }
-
-        .app {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            margin: 0;
-            height: 100%;
-            box-sizing: border-box;
-            text-align: center;
-        }
-        .dimmer {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(236, 236, 236, 0.26);
-        }
-        .loading-prompt {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            width: 200px;
-            height: fit-content;
-            padding: 10px;
-            margin: auto;
-            border: 2px solid white;
-            border-radius: 20px;
-            color: white;
-            background: rgba(87, 121, 165, 0.986);
-            box-shadow: 0px 0px 20px 1px rgba(88, 88, 88, 0.808);
-        }
-
-        .checkBoxesLabel {
-            display: flex;
-            flex-direction: column;
-            justify-content: right;
-            cursor: pointer;
-            text-align: center;
-            font-size: 1.2em;
-            padding-bottom: 3px;
-            margin-bottom: 0px;
-        }
-
-        .selectspan {
-            text-align: center;
-            font-size: 1.2em;
-        }
-
-        .content {
-            box-sizing: border-box;
-            display: grid;
-            row-gap: 15px;
-            height: fit-content;
-        }
-
-        .app-header {
-            background: #366F9E;
-            border: 1px solid rgb(61, 61, 61);
-            color: white;
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
-        .header-text {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 10px 10px 10px 10px;
-            box-sizing: border-box;
-        }
-
-        .subtitle {
-            box-sizing: border-box;
-            margin: 0px 0px 10px 0px;
-            padding: 0px 10px 10px 100px;
-            box-sizing: border-box;
-        }
-
-        .header-text>h1 {
-            margin: 0;
-            padding: 10px 10px 0px 10px;
-            box-sizing: border-box;
-        }
-
-        .header-pic {
-            box-sizing: border-box;
-            position: absolute;
-            opacity: 0.3;
-            right: 175px;
-            bottom: 50px;
-            z-index: -1;
-        }
-
-        .userform {
-            box-sizing: border-box;
-            display: grid;
-            gap: 10px;
-            row-gap: 10px;
-            justify-content: center;
-        }
-
-        .stopSelect {
-            box-sizing: border-box;
-            height: fit-content;
-            width: 325px;
-            margin: auto;
-            margin-bottom: 5px;
-            padding: 5px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 2px solid rgba(160, 160, 160, 0.582);
-        }
-
-        .trainLineBoxes {
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 100px);
-            gap: 15px;
-            margin: auto;
-            justify-content: center;
-            padding: 0px;
-            padding-top: 5px;
-            height:100px;
-            width: 500px;
-            text-align: center;
-            font-size: 1.1em;
-            background: rgb(255, 255, 255);
-            transform: 0.5s;
-            transition: 0.5s all;
-        }
-        .trainsLineBoxes-collapsed{
-
-            height: 0px;
-            overflow: hidden;
-
-        }
-
-        .checkBox-container {
-            border-radius: 3px;
-            padding: 5px;
-            margin: auto;
-            width: 95px;
-            height: 25px;
-            text-align: center;
-
-        }
-        .checkBox-container>label {
-            cursor: pointer;
-        }
-        .trainCheckBox {
-            cursor: pointer;
-        }
-
-        .data-display {
-            display: grid;
-            box-sizing: border-box;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            max-width: 500px;
-            width: 100%;
-            margin: auto;
-            padding: 10px;
-            transition: 0.5s;
-        }
-
-        .eta {
-            box-sizing: border-box;
-            display: grid;
-            gap: 5px;
-            grid-template-columns: 1fr 1fr;
-            padding: 15px;
-            border-radius: 3px;
-            font-size: 1.2em;
-            border: 3px solid rgba(87, 121, 165, 0.623);
-            box-shadow: 0px 3px 15px 2px rgba(173, 172, 172, 0.246);
-            color: whitesmoke;
-            outline: 2px solid rgba(255, 255, 255, 0);
-            transition: 0.2s;
-            cursor: pointer;
-        }
-
-        .eta:hover {
-            outline: 2px solid rgb(255, 255, 255);
-            border: 3px solid rgb(200, 200, 200);
-            box-shadow: 0px 3px 5px 2px rgba(14, 58, 66, 0.253);
-
-        }
-        .eta1,
-        .eta3 {
-            background: rgb(54, 155, 158);
-            padding: 5px;
-
-        }
-        .eta2,
-        .eta4 {
-            background: rgb(54, 111, 158);
-            color: whitesmoke;
-            padding: 5px;
-        }
-
-        .approaching {
-            color: yellow;
-            font-weight: bold;
-            font-size: 1.1em;
-            padding: 3px;
-        }
-
-        #orangeBox {
-            font-size: 0.9em;
-        }
-        .collapse {
-            font-size: 0.6em;
-        }
-        .filterlabel {
-            padding-top: 0px;
-            padding-bottom: 3px;
-            margin-top: 0em;
-            border-bottom: 1px solid rgba(87, 121, 165, 0.185);
-        }
-        .filterlabel:hover {
-            color: rgb(62, 91, 129);
-        }
-
-        @media screen and (max-width: 400px) {
-
-            .userform {
-                box-sizing: border-box;
-                display: grid;
-                gap: 10px;
-                justify-content: center;
-                margin: 0;
-                width: 100%;
-            }
-
-            .stopSelect {
-                box-sizing: border-box;
-                height: fit-content;
-                width: 325px;
-                margin: auto;
-                margin-bottom: 5px;
-                padding: 5px;
-                font-size: 0.6;
-                overflow: hidden;
-                border-radius: 5px;
-                border: 1px solid rgb(160, 160, 160);
-            }
-
-            p {
-                margin: 0;
-            }
-            .trainLineBoxes {
-                box-sizing: border-box;
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-                margin: auto;
-                justify-content: center;
-                padding: 0px;
-                height: 130px;
-                padding-left: 0px;
-                padding-top: 5px;
-                width: 100%;
-                text-align: center;
-                font-size: 1.1em;
-                background: rgb(255, 255, 255);
-                background: rgb(255, 255, 255);
-                transform: 0.5s;
-                transition: 0.5s all;
-        }
-        .trainsLineBoxes-collapsed{
-            height: 0px;
-            overflow: hidden;
-
-        }
-
-            .checkBoxesLabel {
-            text-align: center;
-            font-size: 1em;
-            padding-bottom: 3px;
-            margin-bottom: 0px;
-            cursor: pointer;
-
-        }
-
-            .data-display {
-
-                gap: 10px;
-                width: 100%;
-
-
-                /* padding: 10px; */
-            }
-
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./cta-trackers/train-tracks.css">
+  <title>train tracks - track trains</title>
 </head>
 
 <body>
-    <div class="app">
-        <div class="dimmer">
-            <div class="loading-prompt">One second...</div>
-        </div>
-        <header class="app-header">
-            <div class="header-text">
-                <h1>train tracks</h1>
-                <span class="subtitle">track trains</span>
-            </div>
-            <div class="header-menu">
-
-            </div>
-        </header>
-        <section class="content">
-            <div class="form-container">
-                <form class="userform">
-                    <span class="selectspan">
-                        Choose a station</span>
-                    <select name="stopSelect" class="stopSelect">
-                        <option value="" class="stopOption"></option>
-                    </select>
-
-                    <!-- <input type="submit" class="submitButton" value="get data"> -->
-                    <p class="checkBoxesLabel">
-                        <span class="filterlabel">Filter by service line</span> <span class="collapse">(click to collapse)</span></p>
-                    <div class="trainLineBoxes">
-                        <span class="checkBox-container" style="background: #366F9E; color: white;"><label>Blue
-                                <input type="checkbox" class="trainCheckbox" value="Blue"></label></span>
-                        <span class="checkBox-container" style="background: rgb(180, 60, 44); color: white;"><label>Red
-                                <input type="checkbox" class="trainCheckbox" value="Red"></label></span>
-                        <span class="checkBox-container"
-                            style="background: rgb(156, 88, 48); color: white;"><label>Brown
-                                <input type="checkbox" class="trainCheckbox" value="Brown"></label></span>
-                        <span class="checkBox-container"
-                            style="background: rgb(54, 158, 77); color: white;"><label>Green
-                                <input type="checkbox" class="trainCheckbox" value="Green"></label></span>
-                        <span class="checkBox-container"
-                            style="background: rgb(187, 144, 24); color: white;"><label>Yellow
-                                <input type="checkbox" class="trainCheckbox" value="Yellow"></label></span>
-                        <span class="checkBox-container" id="orangeBox"
-                            style="background: rgb(209, 101, 12); color: white;"><label>Orange
-                                <input type="checkbox" class="trainCheckbox" value="Orange"></label></span>
-                        <span class="checkBox-container"
-                            style="background: rgb(160, 25, 108); color: white;"><label>Purple
-                                <input type="checkbox" class="trainCheckbox" value="Purple"></label></span>
-                        <span class="checkBox-container" style="background: rgb(231, 8, 138); color: white;"><label>Pink
-                                <input type="checkbox" class="trainCheckbox" value="Pink"></label></span>
-
-                    </div>
-
-                </form>
-            </div>
-            <div class="data-display">
-                <div class="eta eta1">
-                    <div class="preformat00"></div>
-                    <div class="preformat10"></div>
-                    <div class="preformat20"></div>
-                    <div class="preformat30"></div>
-                </div>
-                <div class="eta eta2">
-                    <div class="preformat01"></div>
-                    <div class="preformat11"></div>
-                    <div class="preformat21"></div>
-                    <div class="preformat31"></div>
-                </div>
-                <div class="eta eta3">
-                    <div class="preformat02"></div>
-                    <div class="preformat12"></div>
-                    <div class="preformat22"></div>
-                    <div class="preformat32"></div>
-                </div>
-                <div class="eta eta4">
-                    <div class="preformat03"></div>
-                    <div class="preformat13"></div>
-                    <div class="preformat23"></div>
-                    <div class="preformat33"></div>
-                </div>
-            </div>
-        </section>
+   <div id="myNav" class="overlay">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+     <div class="overlay-content">
+       <a href="https://hamilsauce.github.io">Home</a>
+       <a href="#">Go Here</a>
+       <a href="#">Go There</a>
+       <a href="#">Do this thing</a>
+     </div>
+   </div>
+  
+  <div class="app">
+    <div class="dimmer">
+      <div class="loading-prompt">One second...</div>
     </div>
-    <script src="./cta-trackers/ctaTrainTracker.js" type="module"></script>
+    <header class="app-header">
+      <div class="header-text">
+        <h1>train tracks</h1>
+        <span class="subtitle">track trains</span>
+      </div>
+      <!--<div class="header-menu">-->
+      <!--</div>-->
+      <div class="nav-button" onclick="openNav()">
+           
+      </div>
+      
+      
+    </header>
+    <section class="content">
+      <div class="form-container">
+        <form class="userform">
+          <span class="selectspan">
+            Choose a station</span>
+          <select name="stopSelect" class="stopSelect">
+            <option value="" class="stopOption"></option>
+          </select>
+          <!-- <input type="submit" class="submitButton" value="get data"> -->
+          <p class="checkBoxesLabel">
+            <span class="filterlabel">Filter by service line</span> <span class="collapse">(click to collapse)</span></p>
+          <div class="trainLineBoxes">
+            <span class="checkBox-container" style="background: #366F9E; color: white;"><label>Blue
+                <input type="checkbox" class="trainCheckbox" value="Blue"></label></span>
+            <span class="checkBox-container" style="background: rgb(180, 60, 44); color: white;"><label>Red
+                <input type="checkbox" class="trainCheckbox" value="Red"></label></span>
+            <span class="checkBox-container" style="background: rgb(156, 88, 48); color: white;"><label>Brown
+                <input type="checkbox" class="trainCheckbox" value="Brown"></label></span>
+            <span class="checkBox-container" style="background: rgb(54, 158, 77); color: white;"><label>Green
+                <input type="checkbox" class="trainCheckbox" value="Green"></label></span>
+            <span class="checkBox-container" style="background: rgb(187, 144, 24); color: white;"><label>Yellow
+                <input type="checkbox" class="trainCheckbox" value="Yellow"></label></span>
+            <span class="checkBox-container" id="orangeBox" style="background: rgb(209, 101, 12); color: white;"><label>Orange
+                <input type="checkbox" class="trainCheckbox" value="Orange"></label></span>
+            <span class="checkBox-container" style="background: rgb(160, 25, 108); color: white;"><label>Purple
+                <input type="checkbox" class="trainCheckbox" value="Purple"></label></span>
+            <span class="checkBox-container" style="background: rgb(231, 8, 138); color: white;"><label>Pink
+                <input type="checkbox" class="trainCheckbox" value="Pink"></label></span>
+          </div>
+        </form>
+      </div>
+      <div class="data-display">
+        <div class="eta eta1">
+          <div class="nameBox1 preformat00"></div>
+          <div class="nameBox2 preformat10"></div>
+          <div class="timeBox preformat20"></div>
+          <div class="etaBox preformat30"></div>
+        </div>
+        <div class="eta eta2">
+          <div class="nameBox1 preformat01"></div>
+          <div class="nameBox2 preformat11"></div>
+          <div class="timeBox preformat21"></div>
+          <div class="etaBox preformat31"></div>
+        </div>
+        <div class="eta eta3">
+          <div class="nameBox1 preformat02"></div>
+          <div class="nameBox2 preformat12"></div>
+          <div class="timeBox preformat22"></div>
+          <div class="etaBox preformat32"></div>
+        </div>
+        <div class="eta eta4">
+          <div class="nameBox1 preformat03"></div>
+          <div class="nameBox2 preformat13"></div>
+          <div class="timeBox preformat23"></div>
+          <div class="etaBox preformat33"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="./cta-trackers/ctaTrainTracker.js" type="module"></script>
+  <script>
+    //Navbar Code!
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+  
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
 </body>
 
 </html>

@@ -10,7 +10,6 @@ export class Card {
     let cardEl = document.createElement('div');
     let cardText = document.createTextNode(this.cardSymbol);
 
-
     cardEl.classList.add(`${this.className}`);
     cardEl.classList.add('grid-cell');
     cardEl.appendChild(cardText);
@@ -55,7 +54,6 @@ export class Deck {
     this.cards.push(card);
     this.updateDeckSize();
   }
-
 
 }
 

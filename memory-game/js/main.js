@@ -14,12 +14,11 @@ import {
 const userform = document.querySelector('.userform');
 document.querySelector('.endModal').style.display = 'none';
 
-//*  page initialization stuff
+//@  page initialization stuff
 let game = new Game(document.querySelector('.game-grid'));
 const clock = new GameClock;
 let prevTarget;
-//* End page initialization stuff
-
+//@ End page initialization stuff
 
 //* Handles card select state, routes cards for match testing if appropriate
 function handleCardSelect(event) {
@@ -98,7 +97,6 @@ const checkSelected = cardPair => {
     }, 1500);
   };
   console.log(game);
-
 }
 
 const cardMaker = (cSymbol) => {
@@ -107,10 +105,9 @@ const cardMaker = (cSymbol) => {
   game.countCard();
   return newCard;
 }
-
-//*
-//* End of  game functions
-//*
+//@
+//@ End of  game functions
+//@
 
 const buildDeck = cardSymbols => { //! takes array of symbols, calls cardMaker on each, then adds each to game.deck. deck then duplicates to create matches
   cardSymbols.forEach(symbol => {
@@ -127,8 +124,6 @@ const newGame = () => {
   game.deck.shuffle();
   game.setBoard();
 
-  // allCards = document.querySelectorAll('.grid-cell');
-  // addHandlers();
   clock.start(document.querySelector('.time-counter'))
 }
 
@@ -160,11 +155,12 @@ const endGame = () => {
   console.log(game);
 }
 
+
+//@ Eventlisteners!!
 document.querySelector('.newGameButton').addEventListener('click', e => {
   setTimeout(() => {
     document.querySelector('.modal').style.display = 'none';
     document.querySelector('.dimmer').style.display = 'none';
-
   }, 300);
 
   newGame();
@@ -180,10 +176,9 @@ document.querySelector('.restartButton').addEventListener('click', (e) => {
   newGame();
 });
 
-userform.addEventListener('submit', e => {
-  e.preventDefault();
-  let symIn = document.querySelector('.symbolIn');
+// userform.addEventListener('submit', e => {
+//   e.preventDefault();
+//   let symIn = document.querySelector('.symbolIn');
 
-  symIn.value = '';
-});
-
+//   symIn.value = '';
+// });
