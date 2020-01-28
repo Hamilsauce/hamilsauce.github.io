@@ -1,4 +1,4 @@
-<style>* {
+* {
   touch-action: manipulation;
 }
 
@@ -204,7 +204,7 @@ body {
 .eta {
   box-sizing: border-box;
   display: grid;
-  gap: 5px;
+  grid-row-gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
     "name name2"
@@ -227,9 +227,12 @@ body {
 
 }
 .nameBox1 {
+  text-align: left;
+  font-size: 0.9em;
+  font-weight: 400;
   grid-area: name;
-  display: flex;
-  flex-direction: row;
+  /* display: flex; */
+  /* flex-direction: row; */
 }
 .nameBox2 {
   grid-area: name2;

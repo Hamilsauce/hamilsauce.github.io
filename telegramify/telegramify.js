@@ -75,7 +75,7 @@ const filterMessagesByName = name => {
   } else {
     let msgByName = messages
       .filter(msg => {
-        return msg.from.trim().toUpperCase() === name.trim().toUpperCase();
+        return msg.from.trim().toUpperCase().indexOf( name.trim().toUpperCase()) >= 0;
       });
     return msgByName;
   }

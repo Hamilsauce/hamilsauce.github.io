@@ -69,6 +69,17 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
       let time = new Date();
       let etas = getArrivalData(ctaData);
       let i = 0;
+      etas.sort((a, b) => {
+       if (a.destNm < b.destNm) {
+     return -1;
+   }
+   if (a.destNm > b.destNm) {
+     return 1;
+   }
+   
+   // names must be equal
+   return 0;
+   }) 
       etas.forEach(eta => {
         let time = new Date(JSON.stringify(eta.arrT).slice(1, eta.arrT.length + 1));
         let isApproaching = JSON.stringify(eta.isApp).slice(1, eta.isApp.length + 1) === '1' ? 'Due' : '';
@@ -95,6 +106,7 @@ document.querySelector('.stopSelect')
     document.querySelector('.data-display').style.display = 'grid';
     queryString.mapId = e.target.value;
     let etaData = (getTrainData());
+    toggleCollapse(e)
   })
 
 const filterByLine = (e) => { //! filters select options by train line checkboxes
@@ -127,14 +139,24 @@ document.querySelector('.trainLineBoxes').addEventListener('click', e => {
 })
 
 document.querySelector('.checkBoxesLabel').addEventListener('click', e => {
-  const filters = document.querySelector('.trainLineBoxes');
-  filters.classList.toggle('trainsLineBoxes')
-  filters.classList.toggle('trainsLineBoxes-collapsed');
-
-
-  // if (filters.style.display != 'none') {
-  //     filters.style.display = 'none';
-  // } else {
-  //     filters.style.display = 'grid';
-  // }
+  toggleCollapse(e);
 })
+
+const toggleCollapse = e => {
+  const filters = document.querySelector('.trainLineBoxes');
+  const collapseLabel = document.querySelector('.collapse');
+  let labelText = '';
+ 
+  if (e.target.classList.contains('filterlabel')) {
+    filters.classList.toggle('trainsLineBoxes-collapsed');
+  } else if (e.target.classList.contains('stopSelect')) {
+    filters.classList.add('trainsLineBoxes-collapsed');
+  }
+
+  if (filters.classList.contains('trainsLineBoxes-collapsed')) {
+    labelText = 'Click to expand';
+  } else {
+    labelText = 'Click to collapse';
+  }
+  collapseLabel.textContent = labelText;
+}
