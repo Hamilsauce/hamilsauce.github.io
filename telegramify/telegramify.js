@@ -7,7 +7,7 @@ let htmlOut = '';
 const url = `https://hamilsauce.github.io/telegramify/tg-data-export.json`; //${apiKey}
 const apocNowId = 8816899683;
 const funchatId = 8979731584;
-U
+
 //! list builder
 const lister = list => {
   let listArr = list.map(item => {
