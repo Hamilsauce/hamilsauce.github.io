@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
 * {
   touch-action: manipulation;
 }
@@ -6,6 +8,7 @@ html {
   padding: 0;
   margin: 0;
   height: 100%;
+  /* font-family: 'Montserrat', sans-serif; */
 }
 
 body {
@@ -89,10 +92,14 @@ body {
 
 .header-text {
   box-sizing: border-box;
-  grid-column: 1 / span 2; 
+  grid-column: 1 / span 2;
   margin: 0;
-  
   padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+}
+.header-text>h1 {
+  margin: 0;
+  padding: 10px 10px 0px 10px;
   box-sizing: border-box;
 }
 
@@ -103,11 +110,6 @@ body {
   box-sizing: border-box;
 }
 
-.header-text>h1 {
-  margin: 0;
-  padding: 10px 10px 0px 10px;
-  box-sizing: border-box;
-}
 
 .header-pic {
   box-sizing: border-box;
@@ -165,10 +167,8 @@ body {
 }
 
 .trainsLineBoxes-collapsed {
-
   height: 0px;
   overflow: hidden;
-
 }
 
 .checkBox-container {
@@ -200,13 +200,15 @@ body {
   padding: 10px;
   transition: 0.5s;
 }
-
+.station-name {
+  color: black;
+}
 .eta {
   box-sizing: border-box;
   display: grid;
   grid-row-gap: 10px;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "name name2"
     "time eta";
   padding: 15px;
@@ -227,25 +229,26 @@ body {
 
 }
 .nameBox1 {
+  grid-area: name;
+  padding-left: 10px;
   text-align: left;
   font-size: 0.9em;
   font-weight: 400;
-  grid-area: name;
-  /* display: flex; */
-  /* flex-direction: row; */
+  display: flex;
+  flex-direction: column;
 }
 .nameBox2 {
   grid-area: name2;
-  
+
 }
 
 .timeBox {
   grid-area: time;
-} 
+}
 
 .etaBox {
   grid-area: eta;
-  
+
 }
 
 .eta1,
@@ -289,7 +292,7 @@ body {
 }
 
 
-/* NAV BAR STYLES */ 
+/* NAV BAR STYLES */
 .overlay {
   height: 100%;
   width: 0;
@@ -405,7 +408,7 @@ body {
   }
 
 }
-    
+
 
     @media screen and (max-height: 450px) {
       .overlay a {

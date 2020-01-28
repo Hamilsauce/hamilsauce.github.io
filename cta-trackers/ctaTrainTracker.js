@@ -2,12 +2,13 @@ import * as fetchman from './dataFetch.js'
 
 App.dataFetcher.fetchJson(
   'https://hamilsauce.github.io/cta-trackers/trainStops.json', 'allTrainStops'); //! Gets a stop list from json file for select drop down
-document.querySelector('.data-display').style.display = 'none';
+
 let allStops = [];
+
 const delayedData = () => {
+  document.querySelector('.data-display').style.display = 'none';
   setTimeout(() => {
-    let stops = App.dataFetcher.getData('allTrainStops');
-    App.dataFetcher.getData('allTrainStops')
+    let stops = App.dataFetcher.getStoredData('allTrainStops');
 
     allStops = stops.stops;
     sortAndAddStops(allStops);
@@ -55,7 +56,19 @@ const getArrivalData = trainData => {
   let stationEtas = Object.values(trainData)[0].eta
   return stationEtas;
 }
-/**
+const calculateETA = (timeOfPrediction, predictedETA) => {
+  let predTime = new Date(timeOfPrediction);
+  let arrTime = new Date(predictedETA);
+  console.log(predTime);
+  console.log(arrTime);
+
+  let timeDiff = predictedETA - timeOfPrediction;
+console.log(timeDiff);
+
+}
+
+
+
  // TODO Need to move this into dataFetch/dataFetcher */
 const getTrainData = () => { //!makes the request for train data, calls above function to access data
   let ctaData;
@@ -66,34 +79,29 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
     .then(response => response.json())
     .then(data => {
       ctaData = data;
-      let time = new Date();
       let etas = getArrivalData(ctaData);
       let i = 0;
+
+      //TODO All the below should be in its own render function
       etas.sort((a, b) => {
-       if (a.destNm < b.destNm) {
-     return -1;
-   }
-   if (a.destNm > b.destNm) {
-     return 1;
-   }
-   
-   // names must be equal
-   return 0;
-   }) 
-      etas.forEach(eta => {
+        if (a.destNm < b.destNm) {
+          return -1;
+        } else if (a.destNm > b.destNm) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }).forEach(eta => {
+        calculateETA(eta.prdt, eta.arrT)
         let time = new Date(JSON.stringify(eta.arrT).slice(1, eta.arrT.length + 1));
         let isApproaching = JSON.stringify(eta.isApp).slice(1, eta.isApp.length + 1) === '1' ? 'Due' : '';
-        document.querySelector('.preformat0' + i).innerHTML = JSON.stringify(eta.staNm).slice(1, eta.staNm.length + 1);
+        document.querySelector('.preformat0' + i).innerHTML = `<span>${eta.staNm}</span>`;
+        document.querySelector('.preformat1' + i).innerHTML = `to ${eta.destNm.replace('Service ', '')}`;
         document.querySelector('.preformat2' + i).innerHTML = `ETA: ${time.toLocaleTimeString()}`;
-        document.querySelector('.preformat1' + i).innerHTML = `${JSON.stringify(eta.destNm).slice(1, eta.destNm.length + 1).replace('Service ', '')}`;
         document.querySelector('.preformat3' + i).innerHTML = `<span class="approaching">${isApproaching}</span>`;
         i++;
       })
-      // document.querySelectorAll('.eta').forEach(div => {
-      //   if (div.textContent) {
-      //     div.style.display = 'grid';
-      //   }
-      // });
+
     })
     .catch(err => {
       console.log(err);
@@ -146,7 +154,7 @@ const toggleCollapse = e => {
   const filters = document.querySelector('.trainLineBoxes');
   const collapseLabel = document.querySelector('.collapse');
   let labelText = '';
- 
+
   if (e.target.classList.contains('filterlabel')) {
     filters.classList.toggle('trainsLineBoxes-collapsed');
   } else if (e.target.classList.contains('stopSelect')) {

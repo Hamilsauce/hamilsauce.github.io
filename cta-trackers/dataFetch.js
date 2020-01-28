@@ -1,4 +1,4 @@
-class Fetcher {
+class Fetcher {     //* fetches json and stores it as a property in data object property
     constructor(data) {
         this.data = data || {};
     }
@@ -6,15 +6,14 @@ class Fetcher {
         fetch(url)
             .then(res => res.json())
             .then(res => {
-                this.data[dataKey] = res;
+                this.data[dataKey] = res; //* dataKey is defined by user when calling method
         })
     }
-    getData(dataKey) {
+    getStoredData(dataKey) {
         return this.data[dataKey];
     }
     test() {
         console.log('i work bitches');
-
     }
 }
 
