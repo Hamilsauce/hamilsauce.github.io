@@ -2,6 +2,7 @@
 
 * {
   touch-action: manipulation;
+  user-select: none;
 }
 
 html {
@@ -74,7 +75,7 @@ body {
 .content {
   box-sizing: border-box;
   display: grid;
-  row-gap: 15px;
+  row-gap: 5px;
   height: fit-content;
 }
 
@@ -99,15 +100,14 @@ body {
 }
 .header-text>h1 {
   margin: 0;
-  padding: 10px 10px 0px 10px;
+  padding: 0px 0px 0px 10px;
   box-sizing: border-box;
 }
 
 .subtitle {
   box-sizing: border-box;
   margin: 0px 0px 10px 0px;
-  padding: 0px 10px 10px 100px;
-  box-sizing: border-box;
+  padding: 0px 10px 5px 100px;
 }
 
 
@@ -120,11 +120,19 @@ body {
   z-index: -1;
 }
 .nav-button {
-  width: 75px;
-  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
   background: white;
   padding: 0;
-  margin: 0;
+  color: #6c96cd;
+  margin: 0px auto;
+  border: 1px solid rgba(0, 0, 0, 0.753);
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .userform {
@@ -153,11 +161,12 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
   gap: 15px;
-  margin: auto;
+  grid-row-gap: 10px;
+  margin: 0px auto;
   justify-content: center;
-  padding: 0px;
-  padding-top: 5px;
-  height: 100px;
+  /* padding: 0px;
+  padding-top: 5px; */
+  height: 75px;
   width: 500px;
   text-align: center;
   font-size: 1.1em;
@@ -168,13 +177,15 @@ body {
 
 .trainsLineBoxes-collapsed {
   height: 0px;
+  /* padding: 0; */
+  margin: 0;
   overflow: hidden;
 }
 
 .checkBox-container {
   border-radius: 3px;
   padding: 5px;
-  margin: auto;
+  margin: 0px auto;
   width: 95px;
   height: 25px;
   text-align: center;
@@ -188,17 +199,37 @@ body {
 .trainCheckBox {
   cursor: pointer;
 }
+.action-bar {
+  overflow: hidden;
+  transform: 0.2s;
+  transition: 0.2s all;
+}
+.hide-action-bar {
+  height: 0px;
+  padding: 0;
+  margin: 0;
+  transform: 0.2s;
+  transition: 0.2s all;
+}
 
+.show-action-bar {
+  height: 23px;
+  display: block;
+  transform: 0.2s;
+  transition: 0.2s all;
+}
 .data-display {
   display: grid;
   box-sizing: border-box;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 15px;
   max-width: 500px;
   width: 100%;
   margin: auto;
-  padding: 10px;
+  padding: 3px 10px 10px 10px;
   transition: 0.5s;
+  background: white;
+
 }
 .station-name {
   color: black;
@@ -211,7 +242,7 @@ body {
   grid-template-areas:
     "name name2"
     "time eta";
-  padding: 15px;
+  padding: 0px 0px 5px 0px;
   border-radius: 3px;
   font-size: 1.2em;
   border: 3px solid rgba(87, 121, 165, 0.623);
@@ -230,31 +261,43 @@ body {
 }
 .nameBox1 {
   grid-area: name;
-  padding-left: 10px;
-  text-align: left;
-  font-size: 0.9em;
-  font-weight: 400;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding-left: 5px;
+  text-align: left;
+  color: rgba(240, 255, 255, 0.753);
+  font-size: 0.85em;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.452);
+  background: rgba(43, 50, 58, 0.397);
 }
 .nameBox2 {
   grid-area: name2;
-
+  text-align: left;
+  padding: 2px;
+  color: rgba(240, 255, 255, 1);
+  font-size: 1em;
+  font-weight: 400;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.452);
+  background: rgba(43, 50, 58, 0.397);
+  /* grid-column: 1 / span 2; */
 }
 
 .timeBox {
   grid-area: time;
+  text-align: center;
 }
 
 .etaBox {
   grid-area: eta;
-
+  text-align: center;
 }
 
 .eta1,
 .eta3 {
-  background: rgb(54, 155, 158);
-  padding: 5px;
+  background: rgb(53, 153, 156);
+  /* padding: 5px; */
 
 }
 
@@ -262,7 +305,7 @@ body {
 .eta4 {
   background: rgb(54, 111, 158);
   color: whitesmoke;
-  padding: 5px;
+  /* padding: 5px; */
 }
 
 .approaching {
@@ -368,12 +411,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    margin: auto;
+    margin: 0px auto;
     justify-content: center;
     padding: 0px;
-    height: 130px;
+    height: 125px;
     padding-left: 0px;
-    padding-top: 5px;
     width: 100%;
     text-align: center;
     font-size: 1.1em;
@@ -385,8 +427,9 @@ body {
 
   .trainsLineBoxes-collapsed {
     height: 0px;
+    padding: 0;
+    margin: 0;
     overflow: hidden;
-
   }
 
   .checkBoxesLabel {
