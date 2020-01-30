@@ -10,16 +10,15 @@
 </head>
 
 <body>
-   <div id="myNav" class="overlay">
-     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-     <div class="overlay-content">
-       <a href="https://hamilsauce.github.io">Home</a>
-       <a href="#">Go Here</a>
-       <a href="#">Go There</a>
-       <a href="#">Do this thing</a>
-     </div>
-   </div>
-
+  <div id="myNav" class="overlay">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <div class="overlay-content">
+      <a href="https://hamilsauce.github.io">Home</a>
+      <a href="#">Go Here</a>
+      <a href="#">Go There</a>
+      <a href="#">Do this thing</a>
+    </div>
+  </div>
   <div class="app">
     <div class="dimmer">
       <div class="loading-prompt">One second...</div>
@@ -32,9 +31,12 @@
       <!--<div class="header-menu">-->
       <!--</div>-->
       <div class="nav-button" onclick="openNav()">Menu</div>
-
-
     </header>
+    <div class="favorites-bar">
+      <button class="view-fave-button">View Faves</button>
+      <button class="view-all-button">View All</button>
+      <button class="clear-fave-button">Clear Faves</button>
+    </div>
     <section class="content">
       <div class="form-container">
         <form class="userform">
@@ -67,8 +69,10 @@
         </form>
       </div>
       <div class="data-display">
-        <div class="action-bar"><button class="favorite-button">Add to Faves</button></div>
-          <!-- <span class="station-name"></span> -->
+        <div class="action-bar">
+          <button class="add-fave-button">Add to Faves</button>
+        </div>
+        <!-- <span class="station-name"></span> -->
         <div class="eta eta1">
           <div class="nameBox1 preformat00"></div>
           <div class="nameBox2 preformat10"></div>
