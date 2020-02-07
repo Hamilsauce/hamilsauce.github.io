@@ -3,6 +3,7 @@
 import * as modularMan from "./modal-component.js";
 import {handleWelcome} from "./ti4WelcomeModal.js";
 import * as raceTable from "./race-table.js";
+import * as raceStuff from "./Races.js";
 
 const playerCounter = document.querySelector('#player-counter');
 const nameInputContainer = document.querySelector('.player-details-container');
@@ -23,6 +24,13 @@ let ins = [];
 ;(() => {
     handleWelcome();
 })();
+
+let raceList2 = [];
+const createRaces = () => { //TODO finish this
+    races.forEach(race => {
+        const newRace = race;
+    })
+}
 
 /* Event Listeners */
 

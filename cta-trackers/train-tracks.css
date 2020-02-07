@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600,700&display=swap');
 
     * {
       touch-action: manipulation;
@@ -9,7 +9,7 @@
       padding: 0;
       margin: 0;
       height: 100%;
-      /* font-family: 'Montserrat', sans-serif; */
+      font-family: 'Roboto', sans-serif;
     }
 
     body {
@@ -70,6 +70,7 @@
     .selectspan {
       text-align: center;
       font-size: 1.2em;
+      color: #4b4b4b;
     }
 
     .content {
@@ -138,14 +139,29 @@
     }
 
     .favorites-bar {
-      margin-bottom: 10px;;
+      margin-bottom: 10px;
     }
+    .favorites-bar>button {
+      background: rgba(255, 255, 255, 0.0);
+      border: 1px solid rgba(255, 255, 255, 0);
+      font-weight: 600;
+      padding: 8px;
+      color: rgb(50, 138, 141) ;
+    }
+    .add-fave-button {
+      background: rgba(255, 255, 255, 0.0);
+      border: 1px solid rgba(255, 255, 255, 0);
+      font-weight: 600;
+      padding: 4px;
+      color:  rgb(53, 153, 156);
 
+    }
     .userform {
       box-sizing: border-box;
       display: grid;
       gap: 10px;
       row-gap: 10px;
+      color: #414141;
       justify-content: center;
     }
 
@@ -159,6 +175,7 @@
       font-size: 1em;
       border-radius: 5px;
       background: rgba(237, 240, 242, 1);
+      color: #414141;
       border: 2px solid rgba(160, 160, 160, 0.582);
     }
 
@@ -207,9 +224,14 @@
     }
 
     .action-bar {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction:row;
+      justify-content: flex-end;
       overflow: hidden;
       transform: 0.2s;
       transition: 0.2s all;
+
     }
 
     .hide-action-bar {
@@ -221,8 +243,10 @@
     }
 
     .show-action-bar {
+      display: flex;
+      flex-direction:row;
+      justify-content: flex-end;
       height: 23px;
-      display: block;
       transform: 0.2s;
       transition: 0.2s all;
     }
@@ -231,7 +255,7 @@
       display: grid;
       box-sizing: border-box;
       grid-template-columns: 1fr;
-      gap: 15px;
+      gap: 8px;
       max-width: 500px;
       width: 100%;
       margin: auto;
@@ -314,15 +338,14 @@
 
     .eta1,
     .eta3 {
-      background: rgb(53, 153, 156);
+      background: rgb(54, 111, 158);
+      color: whitesmoke;
       /* padding: 5px; */
-
     }
 
     .eta2,
     .eta4 {
-      background: rgb(54, 111, 158);
-      color: whitesmoke;
+      background: rgb(53, 153, 156);
       /* padding: 5px; */
     }
 
@@ -461,7 +484,7 @@
 
       .data-display {
 
-        gap: 10px;
+        gap: 8px;
         width: 100%;
 
 

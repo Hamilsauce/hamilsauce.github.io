@@ -37,11 +37,38 @@ export class Race {
 }
 
 
-let races = [];
+let baseRaceList = [
+    "Arborec",
+    "Barony of Letnev",
+    "Clan of Saar",
+    "Embers of Muaat",
+    "Emirates of Hacan",
+    "Federation of Sol",
+    "Ghosts of Creuss",
+    "L1Z1X Mindnet",
+    "Mentak Coalition",
+    "Naalu Collective",
+    "Nekro Virus",
+    "Sardakk N'Orr",
+    "Universities of Jol-Nar",
+    "Winnu",
+    "Xxcha Kingdom",
+    "Yin Brotherhood",
+    "Yssaril Tribes"
+];
+console.log(races);
 
-export const createRace = (raceName) => {
-    let newRace = new Race(raceName, history);
-    races.push(newRace);
+
+export const createRace = () => {
+    let retrievedRaces = [];
+    let storedRaces = JSON.parse(localStorage.getItem('galacticCouncil')) || {};
+    storedRaces.forEach(race => {
+        let raceName = race.name
+        let history = race.selectionRecord;
+        let newRace = new Race(raceName, history);
+        retrievedRaces.push(newRace);
+    })
+    return retrievedRaces;
 };
 
 export const storeRaces = (races) => {

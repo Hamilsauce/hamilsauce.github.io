@@ -1,6 +1,7 @@
 export class Favorites {
   constructor() {
-    this.favorites = this.getFavorites()
+    this.favorites = this.getFavorites(),
+    this.viewingFavorites = false 
   }
   addFavorite(fave) {
     this.favorites.push(fave);
@@ -17,7 +18,7 @@ export class Favorites {
       console.log('no faves')
       return [];
     }
-    
+
   }
   storeFavorites() {
     const favesObject = {
@@ -28,7 +29,6 @@ export class Favorites {
   clear() {
     this.favorites.length = 0;
     localStorage.removeItem('favorites')
-   console.log(this.favorites) 
   }
 }
 {Favorites}

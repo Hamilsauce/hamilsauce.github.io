@@ -1,5 +1,7 @@
 import * as fetchman from './dataFetch.js'
-import {Favorites} from './faves.js'
+import {
+  Favorites
+} from './faves.js'
 
 let allStops = [];
 const faves = new Favorites();
@@ -22,27 +24,26 @@ App.dataFetcher.fetchJson( //! Gets a stop list from json file for select drop d
 
 
 
-const sortAndAddStops = (stopList) => { //! sorts stops fetched from json, then adds them as options to seelct
+const buildStopList = (stopList) => { //! sorts stops fetched from json, then adds them as options to seelct
   const stopSelect = document.querySelector('.stopSelect');
+  document.querySelectorAll('.stopOption').forEach(opt => { //! remove each option from select box
+    opt.remove()
+  })
 
-  const cleanList = stopList
-    .filter(el => {
-      return el.stopName !== "\n";
-    })
-  cleanList.sort((a, b) => {
-      let first = a.stopName.toUpperCase();
-      let second = b.stopName.toUpperCase();
-      let compare = 0;
+  stopList.sort((a, b) => {
+    let first = a.stopName.toUpperCase();
+    let second = b.stopName.toUpperCase();
+    let compare = 0;
 
-      if (first > second) compare = 1;
-      else if (first < second) compare = -1;
-      return compare;
-    })
+    if (first > second) compare = 1;
+    else if (first < second) compare = -1;
+    return compare;
+  })
     .forEach(stop => {
       const newOption = document.createElement('option');
 
       newOption.classList.add('stopOption');
-      newOption.textContent = stop.stopName;
+      newOption.textContent = stop.STATION_DESCRIPTIVE_NAME;
       newOption.value = stop.mapId;
       stopSelect.appendChild(newOption);
     });
@@ -68,13 +69,12 @@ const filterByLine = (e) => { //! filters select options by train line checkboxe
   return filteredStops;
 }
 
-//TODO finish eta Calc
 const calculateETA = (timeOfPrediction, predictedETA) => {
   let predTime = new Date(timeOfPrediction);
   let arrTime = new Date(predictedETA);
 
   let timeDiff = (arrTime - predTime);
-  let minDiff = Math.round((timeDiff / 1000)/60);
+  let minDiff = Math.round((timeDiff / 1000) / 60);
   return minDiff;
 }
 
@@ -88,7 +88,6 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
     .then(data => {
       let etas = Object.values(data)[0].eta
 
-      //TODO All the below should be in its own render function
       etas.sort((a, b) => {
         if (a.destNm < b.destNm) {
           return -1;
@@ -114,9 +113,8 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
 
 const renderArrivals = (eta, incrementer) => {
   calculateETA(eta.prdt, eta.arrT)
-
-  let time = new Date(eta.arrT);
   let isApproaching = parseInt(eta.isApp) === 1 ? 'Due' : '';
+
   document.querySelector('.preformat0' + incrementer).innerHTML = `<span>${eta.staNm}</span>`;
   document.querySelector('.preformat1' + incrementer).innerHTML = `to ${eta.destNm.replace('Service ', '')}`;
   document.querySelector('.preformat2' + incrementer).innerHTML =
@@ -126,6 +124,10 @@ const renderArrivals = (eta, incrementer) => {
 }
 
 const showActionBar = e => {
+  if (faves.viewingFavorites === true) {
+    hideActionBar();
+    return
+  }
   const actionBar = document.querySelector('.action-bar');
   actionBar.classList.remove('hide-action-bar');
   actionBar.classList.add('show-action-bar');
@@ -172,7 +174,7 @@ document.querySelector('.trainLineBoxes').addEventListener('click', e => {
     opt.remove()
   });
   let filteredList = filterByLine(); //! get stop list filtered by each selected train line
-  sortAndAddStops(filteredList); //! re-render that bia
+  buildStopList(filteredList); //! re-render that bia
 })
 
 document.querySelector('.checkBoxesLabel').addEventListener('click', e => {
@@ -190,29 +192,36 @@ document.querySelector('.add-fave-button').addEventListener('click', e => {
   faves.addFavorite(parseInt(stopSelect.value));
   faves.storeFavorites();
 });
+
 document.querySelector('.view-fave-button').addEventListener('click', e => {
   const stopSelect = document.querySelector('.stopSelect');
   document.querySelectorAll('.stopOption').forEach(opt => { //! remove each option from select box
     opt.remove()
   });
-  console.log('allstops');
-  console.log(allStops);
+  faves.viewingFavorites = true;
+  hideActionBar();
 
   const faveList = allStops
     .filter(stp => {
       return faves.favorites.indexOf(stp.mapId) !== -1;
     })
-    console.log(faveList);
-  sortAndAddStops(faveList)
+
+  buildStopList(faveList);
+  trainDataUrl.mapId = stopSelect.value;
+  getTrainData();
 });
 
 document.querySelector('.clear-fave-button').addEventListener('click', e => {
   faves.clear();
-  console.log(faves.favorites)
+  faves.viewingFavorites = false;
+  showActionBar();
 });
 
 document.querySelector('.view-all-button').addEventListener('click', e => {
-  sortAndAddStops(allStops)
+  buildStopList(allStops);
+  getTrainData();
+  faves.viewingFavorites = false;
+  showActionBar();
 });
 
 
@@ -224,7 +233,7 @@ document.querySelector('.view-all-button').addEventListener('click', e => {
     let stops = App.dataFetcher.getStoredData('allTrainStops');
 
     allStops = stops.stops;
-    sortAndAddStops(allStops);
+    buildStopList(allStops);
     document.querySelector('.dimmer').style.display = 'none';
   }, 4000)
 })();
