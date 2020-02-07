@@ -41,7 +41,6 @@ const buildStopList = (stopList) => { //! sorts stops fetched from json, then ad
   })
     .forEach(stop => {
       const newOption = document.createElement('option');
-
       newOption.classList.add('stopOption');
       newOption.textContent = stop.stopName;
       newOption.value = stop.mapId;
