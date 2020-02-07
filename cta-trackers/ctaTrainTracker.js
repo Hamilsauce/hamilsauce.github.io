@@ -43,7 +43,7 @@ const buildStopList = (stopList) => { //! sorts stops fetched from json, then ad
       const newOption = document.createElement('option');
 
       newOption.classList.add('stopOption');
-      newOption.textContent = stop.STATION_DESCRIPTIVE_NAME;
+      newOption.textContent = stop.stopName;
       newOption.value = stop.mapId;
       stopSelect.appendChild(newOption);
     });
