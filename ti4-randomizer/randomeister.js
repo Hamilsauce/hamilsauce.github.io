@@ -2,8 +2,8 @@
 
 import * as modularMan from "./modal-component.js";
 import {handleWelcome} from "./ti4WelcomeModal.js";
-import * as raceTable from "./race-table.js";
-import * as raceStuff from "./Races.js";
+// import * as raceTable from "./race-table.js";
+// import * as raceStuff from "./Races.js";
 
 const playerCounter = document.querySelector('#player-counter');
 const nameInputContainer = document.querySelector('.player-details-container');

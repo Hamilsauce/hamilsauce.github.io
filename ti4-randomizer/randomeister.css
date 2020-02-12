@@ -395,12 +395,12 @@ label {
 
 .name-input-field {
     padding-top: 0px;
-    padding: 5px;
+    padding: 8px;
     width: 100%;
     height: 25px;
     margin: 0;
     vertical-align: middle;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-bottom: 10px;
     background: rgba(146, 151, 156, 0.082);
     border: 1px solid rgba(124, 124, 124, 0.377);
