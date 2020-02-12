@@ -23,7 +23,7 @@ App.dataFetcher.fetchJson( //! Gets a stop list from json file for select drop d
   'https://hamilsauce.github.io/cta-trackers/trainStops.json', 'allTrainStops');
 
 
-//@ Begin train stop list construction functions
+
 const buildStopList = (stopList) => { //! sorts stops fetched from json, then adds them as options to seelct
   const stopSelect = document.querySelector('.stopSelect');
   document.querySelectorAll('.stopOption').forEach(opt => { //! remove each option from select box
@@ -31,14 +31,14 @@ const buildStopList = (stopList) => { //! sorts stops fetched from json, then ad
   })
 
   stopList.sort((a, b) => {
-      let first = a.stopName.toUpperCase();
-      let second = b.stopName.toUpperCase();
-      let compare = 0;
+    let first = a.stopName.toUpperCase();
+    let second = b.stopName.toUpperCase();
+    let compare = 0;
 
-      if (first > second) compare = 1;
-      else if (first < second) compare = -1;
-      return compare;
-    })
+    if (first > second) compare = 1;
+    else if (first < second) compare = -1;
+    return compare;
+  })
     .forEach(stop => {
       const newOption = document.createElement('option');
       newOption.classList.add('stopOption');
@@ -67,7 +67,6 @@ const filterByLine = (e) => { //! filters select options by train line checkboxe
   });
   return filteredStops;
 }
-//@ End train stop list construction functions
 
 const calculateETA = (timeOfPrediction, predictedETA) => {
   let predTime = new Date(timeOfPrediction);
@@ -88,10 +87,6 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
     .then(data => {
       let etas = Object.values(data)[0].eta
 
-      document.querySelectorAll('.eta').forEach(eta => { //! remove each option from select box
-        eta.remove()
-      })
-
       etas.sort((a, b) => {
         if (a.destNm < b.destNm) {
           return -1;
@@ -101,7 +96,7 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
           return 0;
         }
       }).forEach(eta => {
-        renderArrivals(eta, i);
+        renderEta(eta, i);
         console.log(i);
         i++;
       })
@@ -113,30 +108,27 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
     });
 }
 
-//@ Begin UI state functions
-  //* Begin ETA Display functions
-const renderArrivals = (eta, incrementer) => { //! combines renderContainer and renderDetails for etas
-  const dataDisplay = document.querySelector('.data-display');
-  dataDisplay.appendChild(renderEtaContainer(incrementer));
-  renderEtas(eta, incrementer);
-}
+//@ UI state and functions
 
-const renderEtaContainer = (incrementer) => { //! builds the markup for eta displays
+const renderEta = (eta, incrementer) => {
   const dataDisplay = document.querySelector('.data-display');
   const etaContainer = document.createElement('div');
-  etaContainer.classList.add('eta', `eta${incrementer + 1}`)
+  etaContainer.classList.add('eta');
 
-  const etaDetails = `
-    <div class="nameBox1 preformat0${incrementer}"></div>
-    <div class="nameBox2 preformat1${incrementer}"></div>
-    <div class="timeBox preformat2${incrementer}"></div>
-    <div class="etaBox preformat3${incrementer}"></div>
+  const etaCells  = `
+      <div class="nameBox1 preformat0${incrementer}"></div>
+      <div class="nameBox2 preformat1${incrementer}"></div>
+      <div class="timeBox preformat2${incrementer}"></div>
+      <div class="etaBox preformat3${incrementer}"></div>
   `;
-  etaContainer.innerHTML = etaDetails;
-  return etaContainer;
+
+  etaContainer.innerHTML = etaCells;
+
+  renderEtaDetails(eta, incrementer);
+  dataDisplay.appendChild(etaContainer);
 }
 
-const renderEtas = (eta, incrementer) => { //! fills rendered Eta containers with fetched content
+const renderEtaDetails = (eta, incrementer) => {
   calculateETA(eta.prdt, eta.arrT)
   let isApproaching = parseInt(eta.isApp) === 1 ? 'Due' : '';
 
@@ -147,7 +139,6 @@ const renderEtas = (eta, incrementer) => { //! fills rendered Eta containers wit
     <span class="time-div2">${calculateETA(eta.prdt, eta.arrT)} minutes</span>`;
   document.querySelector('.preformat3' + incrementer).innerHTML = `<span class="approaching">${isApproaching}</span>`;
 }
-  //* End ETA Display functions
 
 const showActionBar = e => {
   if (faves.viewingFavorites === true) {
@@ -182,9 +173,9 @@ const toggleCollapse = e => {
   }
   collapseLabel.textContent = labelText;
 }
-//@ End UI state  functions
 
 //@ BEGIN Eventlisteners
+
 document.querySelector('.stopSelect')
   .addEventListener('change', e => {
     document.querySelector('.data-display').style.display = 'grid';
