@@ -140,12 +140,15 @@ const renderEtas = (eta, incrementer) => { //! fills rendered Eta containers wit
   calculateETA(eta.prdt, eta.arrT)
   let isApproaching = parseInt(eta.isApp) === 1 ? 'Due' : '';
 
-  document.querySelector('.preformat0' + incrementer).innerHTML = `<span>${eta.staNm}</span>`;
-  document.querySelector('.preformat1' + incrementer).innerHTML = `to ${eta.destNm.replace('Service ', '')}`;
+  document.querySelector('.preformat0' + incrementer).innerHTML =
+    `<span>${eta.staNm}</span>`;
+  document.querySelector('.preformat1' + incrementer).innerHTML =
+    `to ${eta.destNm.replace('Service ', '')}`;
   document.querySelector('.preformat2' + incrementer).innerHTML =
     `<span class="arriving-label">Arrival: </span>
     <span class="time-div2">${calculateETA(eta.prdt, eta.arrT)} minutes</span>`;
-  document.querySelector('.preformat3' + incrementer).innerHTML = `<span class="approaching">${isApproaching}</span>`;
+  document.querySelector('.preformat3' + incrementer).innerHTML =
+    `<span class="approaching">${isApproaching}</span>`;
 }
   //* End ETA Display functions
 
@@ -165,23 +168,32 @@ const hideActionBar = e => {
 }
 
 const toggleCollapse = e => {
-  const filters = document.querySelector('.trainLineBoxes');
+  const filters = document.querySelector('.line-filter-grid');
   const collapseLabel = document.querySelector('.collapse');
   let labelText = '';
 
   if (e.target.classList.contains('filterlabel')) {
-    filters.classList.toggle('trainsLineBoxes-collapsed');
+    filters.classList.toggle('line-filter-grid-collapsed');
   } else if (e.target.classList.contains('stopSelect')) {
-    filters.classList.add('trainsLineBoxes-collapsed');
+    filters.classList.add('line-filter-grid-collapsed');
   }
 
-  if (filters.classList.contains('trainsLineBoxes-collapsed')) {
+  if (filters.classList.contains('line-filter-grid-collapsed')) {
     labelText = 'Click to expand';
   } else {
     labelText = 'Click to collapse';
   }
   collapseLabel.textContent = labelText;
 }
+const uncheckLineFilters = () => { //TODO: For some reason can't clear checkboxes
+  const filterBoxes = document.querySelectorAll('.trainCheckbox');
+  console.log(filterBoxes);
+
+  filterBoxes.forEach(filterBox => {
+    filterBox.checked = false;
+  });
+}
+
 //@ End UI state  functions
 
 //@ BEGIN Eventlisteners
@@ -195,7 +207,7 @@ document.querySelector('.stopSelect')
   })
 
 //* when a train line filter is clicked, rebuild select box
-document.querySelector('.trainLineBoxes').addEventListener('click', e => {
+document.querySelector('.line-filter-grid').addEventListener('click', e => {
   document.querySelectorAll('.stopOption').forEach(opt => { //! remove each option from select box
     opt.remove()
   });
@@ -205,7 +217,7 @@ document.querySelector('.trainLineBoxes').addEventListener('click', e => {
 
 document.querySelector('.checkBoxesLabel').addEventListener('click', e => {
   toggleCollapse(e);
-  if (document.querySelector('.trainLineBoxes').classList.contains('trainsLineBoxes-collapsed')) {
+  if (document.querySelector('.line-filter-grid').classList.contains('line-filter-grid-collapsed')) {
     showActionBar()
   } else {
     hideActionBar();
@@ -220,21 +232,27 @@ document.querySelector('.add-fave-button').addEventListener('click', e => {
 });
 
 document.querySelector('.view-fave-button').addEventListener('click', e => {
+  uncheckLineFilters();
   const stopSelect = document.querySelector('.stopSelect');
   document.querySelectorAll('.stopOption').forEach(opt => { //! remove each option from select box
     opt.remove()
   });
-  faves.viewingFavorites = true;
   hideActionBar();
 
   const faveList = allStops
     .filter(stp => {
       return faves.favorites.indexOf(stp.mapId) !== -1;
-    })
+    });
+  if (faveList.length > 0) {
+    faves.viewingFavorites = true;
 
-  buildStopList(faveList);
-  trainDataUrl.mapId = stopSelect.value;
-  getTrainData();
+    buildStopList(faveList);
+    trainDataUrl.mapId = stopSelect.value;
+    getTrainData();
+  } else {
+    faves.viewingFavorites = false;
+    alert('No favorites saved. Select a stop and add it to faves.')
+  }
 });
 
 document.querySelector('.clear-fave-button').addEventListener('click', e => {
@@ -244,6 +262,7 @@ document.querySelector('.clear-fave-button').addEventListener('click', e => {
 });
 
 document.querySelector('.view-all-button').addEventListener('click', e => {
+  uncheckLineFilters();
   buildStopList(allStops);
   getTrainData();
   faves.viewingFavorites = false;

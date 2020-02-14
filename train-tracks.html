@@ -24,9 +24,11 @@
       <div class="loading-prompt">One second...</div>
     </div>
     <header class="app-header">
-      <div class="header-text">
-        <h1>train tracks</h1>
-        <span class="subtitle">track trains</span>
+      <div class="header-text-container">
+        <div class="header-text">
+          <h1>train tracks</h1>
+          <span class="subtitle">track trains</span>
+        </div>
       </div>
       <!--<div class="header-menu">-->
       <!--</div>-->
@@ -49,7 +51,7 @@
           <!-- <input type="submit" class="submitButton" value="get data"> -->
           <p class="checkBoxesLabel">
             <span class="filterlabel">Filter by service line</span> <span class="collapse">(click to collapse)</span></p>
-          <div class="trainLineBoxes">
+          <div class="line-filter-grid">
             <span class="checkBox-container" style="background: #366F9E; color: white;"><label>Blue
                 <input type="checkbox" class="trainCheckbox" value="Blue"></label></span>
             <span class="checkBox-container" style="background: rgb(180, 60, 44); color: white;"><label>Red
@@ -105,11 +107,17 @@
   <script>
     //Navbar Code!
     function openNav() {
-      document.getElementById("myNav").style.width = "100%";
+      setTimeout(() => {
+        document.getElementById("myNav").style.width = "100%";
+
+      }, 350);
     }
 
     function closeNav() {
-      document.getElementById("myNav").style.width = "0%";
+      setTimeout(() => {
+        document.getElementById("myNav").style.width = "0%";
+
+      }, 350);
     }
   </script>
 </body>
