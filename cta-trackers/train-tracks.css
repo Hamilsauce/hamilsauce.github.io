@@ -230,13 +230,13 @@ button:active {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fill, 100px);
-  gap: 10px;
+  gap: 7px;
   grid-row-gap: 10px;
   margin: 0px auto;
   justify-content: center;
   /* padding: 0px;
       padding-top: 5px; */
-  height: 85px;
+  height: 60px;
   width: 500px;
   text-align: center;
   font-size: 1.1em;
@@ -247,7 +247,9 @@ button:active {
 
 .line-filter-grid-collapsed {
   height: 0px;
-  margin: 0;
+  margin: 0px;
+  transform: 0.5s;
+  transition: 0.5s all;
   overflow: hidden;
 }
 
@@ -511,7 +513,7 @@ button:active {
     margin: 0px auto;
     justify-content: center;
     padding: 0px;
-    height: 105px;
+    height: 100px;
     padding-left: 0px;
     width: 100%;
     text-align: center;
