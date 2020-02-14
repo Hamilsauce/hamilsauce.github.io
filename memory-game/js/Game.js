@@ -1,5 +1,6 @@
 import { Deck, Card } from './Cards.js';
 
+//* Class managing game state
 export class Game {
     constructor(gameBoard) {
         this.gameBoard = gameBoard,

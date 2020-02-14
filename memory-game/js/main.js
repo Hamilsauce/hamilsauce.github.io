@@ -10,6 +10,9 @@ import {
 import {
   Game
 } from './Game.js';
+import {
+  settingsAlert
+} from './settings.js';
 
 const userform = document.querySelector('.userform');
 document.querySelector('.endModal').style.display = 'none';
@@ -18,6 +21,7 @@ document.querySelector('.endModal').style.display = 'none';
 let game = new Game(document.querySelector('.game-grid'));
 const clock = new GameClock;
 let prevTarget;
+
 //@ End page initialization stuff
 
 //* Handles card select state, routes cards for match testing if appropriate
@@ -105,10 +109,8 @@ const cardMaker = (cSymbol) => {
   game.countCard();
   return newCard;
 }
-//@
-//@ End of  game functions
-//@
 
+//@ End-of-game functions
 const buildDeck = cardSymbols => { //! takes array of symbols, calls cardMaker on each, then adds each to game.deck. deck then duplicates to create matches
   cardSymbols.forEach(symbol => {
     game.deck.generateCard(cardMaker(symbol, 'game-grid'));
@@ -176,15 +178,20 @@ document.querySelector('.restartButton').addEventListener('click', (e) => {
   newGame();
 });
 
-document.querySelector('.stop-button').addEventListener('click', (e) => {
+document.querySelector('.stop-button').addEventListener('click', (e) => { //TODO broken, disabled for now
   setTimeout(() => {
+    alert('close button dont work')
     window.close();
   }, 300);
-  newGame();
 });
 document.querySelector('.modalTop').addEventListener('click', (e) => {
   setTimeout(() => {
     parent.location = './gameLobby.html';
+}, 750);
+});
+document.querySelector('.modalBottom').addEventListener('click', (e) => { //!settings button
+  setTimeout(() => {
+    settingsAlert();
 }, 750);
 });
 

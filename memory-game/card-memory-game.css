@@ -12,6 +12,7 @@ html {
   margin: auto;
   width: 100%;
   background: rgba(255, 255, 255, 0.877);
+  background: rgb(60, 119, 197);
   font-family: 'Prompt', sans-serif;
   ;
 }
@@ -21,7 +22,8 @@ body {
   width: 100%;
   padding: 0;
   margin: auto;
-  background: rgba(255, 255, 255, 0.877);
+  /* background: rgba(255, 255, 255, 0.877); */
+  background: rgb(60, 119, 197);
 }
 
 .dimmer {
@@ -145,7 +147,7 @@ body {
   grid-gap: 10px;
   margin: 100px auto;
   width: 350px;
-  height: 300px;
+  /* height: 100%; */
   padding: 15px;
   border-radius: 25px;
   font-size: 2.5em;
@@ -167,7 +169,7 @@ body {
   text-align: center;
   cursor: pointer;
   border-radius: 20px;
-  height: auto;
+  height: fit-content;
   margin: 0px;
   padding: 10px;
   box-shadow: 0px 0px 4px 2px rgba(60, 80, 80, 0.8);
@@ -189,12 +191,12 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   width: 100%;
-  height: 100%;
+  height: 640px;
   max-width: 600px;
   margin: auto;
-  border: 2px solid rgba(212, 157, 84, 0.349);
+  /* border: 2px solid rgba(212, 157, 84, 0.349); */
   padding: 0px 0px;
-  background: rgb(60, 119, 197);
+  /* background: rgb(60, 119, 197); */
 
 }
 
@@ -202,8 +204,8 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  background: rgb(61, 123, 206);
-  height: 100%;
+  /* background: rgb(61, 123, 206); */
+  /* height: 100%; */
   padding: 0px 0px;
   justify-content: center;
   text-align: center;
@@ -319,9 +321,9 @@ body {
   flex-direction: column;
   margin: auto;
   width: 100%;
-  background: rgb(63, 131, 219);
+  /* background: rgb(63, 131, 219); */
   height: 100%;
-  min-height: 130px;
+  min-height: 100px;
 }
 
 .shareButton {
@@ -390,14 +392,14 @@ body {
   fill: rgb(54, 127, 223);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .app {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 3fr 2fr;
+    grid-auto-rows: 1fr 2fr 2fr;
     width: 100%;
-    height: 600px;
+    height: 640px;
     margin: 0px;
     border: 0px solid rgb(189, 153, 107);
   }
@@ -440,7 +442,7 @@ body {
     text-align: center;
     cursor: pointer;
     border-radius: 15px;
-    height: auto;
+    height: fit-content;
     margin: 0px;
     padding-top: 20px;
     box-shadow: 0px 0px 4px 2px rgba(60, 80, 80, 0.8);
