@@ -188,7 +188,7 @@ button:active {
   border: 1px solid rgba(255, 255, 255, 0);
   font-weight: 600;
   padding: 4px;
-  color: rgb(50, 138, 141);
+  color: rgb(55, 82, 126);
 }
 
 .userform {
@@ -236,21 +236,23 @@ button:active {
   justify-content: center;
   /* padding: 0px;
       padding-top: 5px; */
-  height: 60px;
+  height: 70px;
   width: 500px;
   text-align: center;
   font-size: 1.1em;
   /* background: rgb(255, 255, 255); */
+  opacity: 1;
   transform: 0.5s;
   transition: 0.5s all;
 }
 
 .line-filter-grid-collapsed {
   height: 0px;
-  margin: 0px;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
   transform: 0.5s;
   transition: 0.5s all;
-  overflow: hidden;
 }
 
 .checkBox-container {
@@ -282,8 +284,12 @@ button:active {
   flex-direction: row;
   justify-content: flex-end;
   overflow: hidden;
-  transform: 0.2s;
-  transition: 0.2s all;
+  transform: 0.6s ease-in-out;
+  height: 28px;
+  border-bottom: 1px solid rgba(87, 121, 165, 0.623);
+  padding: 2px;
+  transition: 0.6s ease-in-out all;
+  background: rgba(4, 122, 158, 0.123);
 
 }
 
@@ -291,8 +297,10 @@ button:active {
   height: 0px;
   padding: 0;
   margin: 0;
-  transform: 0.2s;
-  transition: 0.2s all;
+  border-bottom: 1px solid rgba(87, 121, 165, 0);
+
+  transform: 0.6s ease-in-out;
+  transition: 0.6s ease-in-out all;
 }
 
 .show-action-bar {
@@ -484,7 +492,7 @@ button:active {
     gap: 10px;
     justify-content: center;
     margin: 0;
-    height: fit-content;
+    height: 100%;
     width: 100%;
   }
 
@@ -520,7 +528,7 @@ button:active {
     font-size: 1.1em;
     background: rgb(255, 255, 255);
     transform: 0.5s;
-    transition: 0.5s all;
+    transition: opacity 0.2s ease-in-out, height 0.35s;
   }
 
   .line-filter-grid-collapsed {
@@ -528,6 +536,10 @@ button:active {
     padding: 0;
     margin: 0;
     overflow: hidden;
+    transform: 0.5s;
+    /* transition: 0.3s all; */
+    transition: opacity 0.2s ease-in-out, height 0.35s;
+
   }
 
   .checkBoxesLabel {

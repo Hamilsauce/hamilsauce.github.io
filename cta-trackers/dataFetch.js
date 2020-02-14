@@ -1,13 +1,30 @@
-class Fetcher { //* fetches json and stores it as a property in data object property
+export class DataStore { //* fetches json and stores it as a property in data object property
   constructor(data) {
-    this.data = data || {};
+    this.data = data || {},
+      this.trainDataUrl = { //! object for holding/organizing random query string parts
+        baseUrl: 'http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx',
+        apiKey: '3106a8d27f8b4f8fb99b7c8d895163dd',
+        mapId: '',
+        stpId: '',
+        outputType: 'JSON',
+      }
   }
-  fetchJson(url, dataKey) {
-    fetch(url)
-      .then(res => res.json())
-      .then(res => {
-        this.data[dataKey] = res; //* dataKey is defined by user when calling method
-      })
+  fetchTrainStops(url, dataKey) {
+    if (localStorage.getItem(dataKey)) {
+      this.data[dataKey] = JSON.parse(localStorage.getItem(dataKey));
+    } else {
+      fetch(url)
+        .then(res => res.json())
+        .then(res => {
+          this.data[dataKey] = res; //* dataKey is defined by user when calling method
+          localStorage.setItem(dataKey, JSON.stringify(this.data[dataKey]));
+        });
+    }
+  }
+  constructUrl(proxy) {
+    const queryString =
+      `${proxy}${this.trainDataUrl.baseUrl}?key=${this.trainDataUrl.apiKey}&mapid=${this.trainDataUrl.mapId}&outputType=${this.trainDataUrl.outputType}`;
+    return queryString;
   }
   getStoredData(dataKey) {
     return this.data[dataKey];
@@ -17,17 +34,4 @@ class Fetcher { //* fetches json and stores it as a property in data object prop
   }
 }
 
-((window) => {
-  const App = window.App || {};
-  App.dataFetcher = new Fetcher();
-  window.App = App;
-})(window);
-
-// export const fetcher = () => {
-//     fetch('https://hamilsauce.github.io/trainStops.json')
-//         .then(res => res.json())
-//         .then(res => {
-//             console.log(res);
-//         })
-// }
-window.App.dataFetcher.test();
+{DataStore}

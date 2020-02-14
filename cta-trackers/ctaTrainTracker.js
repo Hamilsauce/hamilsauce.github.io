@@ -1,27 +1,12 @@
-import * as fetchman from './dataFetch.js'
-import {
-  Favorites
-} from './faves.js'
+import { DataStore } from './dataFetch.js'
+import { Favorites } from './faves.js'
 
 let allStops = [];
+const dataStore = new DataStore();
 const faves = new Favorites();
 
-// TODO Need to move this into dataFetch/dataFetcher
-let trainDataUrl = { //! object for holding/organizing random query string parts
-  baseUrl: 'http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx',
-  apiKey: '3106a8d27f8b4f8fb99b7c8d895163dd',
-  mapId: '41020',
-  outputType: 'JSON',
-  constructUrl(proxy) {
-    const queryString =
-      `${proxy}${this.baseUrl}?key=${this.apiKey}&mapid=${this.mapId}&outputType=${this.outputType}`;
-    return queryString;
-  }
-}
-
-App.dataFetcher.fetchJson( //! Gets a stop list from json file for select drop down
+dataStore.fetchTrainStops( //! Gets a stop list from json file for select drop down
   'https://hamilsauce.github.io/cta-trackers/trainStops.json', 'allTrainStops');
-
 
 //@ Begin train stop list construction functions
 const buildStopList = (stopList) => { //! sorts stops fetched from json, then adds them as options to seelct
@@ -69,19 +54,12 @@ const filterByLine = (e) => { //! filters select options by train line checkboxe
 }
 //@ End train stop list construction functions
 
-const calculateETA = (timeOfPrediction, predictedETA) => {
-  let predTime = new Date(timeOfPrediction);
-  let arrTime = new Date(predictedETA);
 
-  let timeDiff = (arrTime - predTime);
-  let minDiff = Math.round((timeDiff / 1000) / 60);
-  return minDiff;
-}
 
 // TODO Need to move this into dataFetch/dataFetcher */
 const getTrainData = () => { //!makes the request for train data, calls above function to access data
   const proxy = 'https://cors-anywhere.herokuapp.com/';
-  const ctaTrainUrl = trainDataUrl.constructUrl(proxy);
+  const ctaTrainUrl = dataStore.constructUrl(proxy);
   let i = 0;
   fetch(ctaTrainUrl)
     .then(response => response.json())
@@ -114,7 +92,15 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
 }
 
 //@ Begin UI state functions
-  //* Begin ETA Display functions
+//* Begin ETA Display functions
+const calculateETA = (timeOfPrediction, predictedETA) => {
+  let predTime = new Date(timeOfPrediction);
+  let arrTime = new Date(predictedETA);
+
+  let timeDiff = (arrTime - predTime);
+  let minDiff = Math.round((timeDiff / 1000) / 60);
+  return minDiff;
+}
 const renderArrivals = (eta, incrementer) => { //! combines renderContainer and renderDetails for etas
   const dataDisplay = document.querySelector('.data-display');
   dataDisplay.appendChild(renderEtaContainer(incrementer));
@@ -150,7 +136,7 @@ const renderEtas = (eta, incrementer) => { //! fills rendered Eta containers wit
   document.querySelector('.preformat3' + incrementer).innerHTML =
     `<span class="approaching">${isApproaching}</span>`;
 }
-  //* End ETA Display functions
+//* End ETA Display functions
 
 const showActionBar = e => {
   if (faves.viewingFavorites === true) {
@@ -172,17 +158,16 @@ const toggleCollapse = e => {
   const collapseLabel = document.querySelector('.collapse');
   let labelText = '';
 
-  if (e.target.classList.contains('filterlabel')) {
+  if (e.currentTarget.classList.contains('checkBoxesLabel')) {
     filters.classList.toggle('line-filter-grid-collapsed');
   } else if (e.target.classList.contains('stopSelect')) {
     filters.classList.add('line-filter-grid-collapsed');
   }
 
-  if (filters.classList.contains('line-filter-grid-collapsed')) {
-    labelText = 'Click to expand';
-  } else {
+  filters.classList.contains('line-filter-grid-collapsed') ? //! Test if filters collapsed, update label
+    labelText = 'Click to expand' :
     labelText = 'Click to collapse';
-  }
+
   collapseLabel.textContent = labelText;
 }
 const uncheckLineFilters = () => { //TODO: For some reason can't clear checkboxes
@@ -199,7 +184,7 @@ const uncheckLineFilters = () => { //TODO: For some reason can't clear checkboxe
 document.querySelector('.stopSelect')
   .addEventListener('change', e => {
     document.querySelector('.data-display').style.display = 'grid';
-    trainDataUrl.mapId = e.target.value;
+    dataStore.trainDataUrl.mapId = e.target.value;
     getTrainData();
     showActionBar();
     toggleCollapse(e)
@@ -246,7 +231,7 @@ document.querySelector('.view-fave-button').addEventListener('click', e => {
     faves.viewingFavorites = true;
 
     buildStopList(faveList);
-    trainDataUrl.mapId = stopSelect.value;
+    dataStore.trainDataUrl.mapId = stopSelect.value;
     getTrainData();
   } else {
     faves.viewingFavorites = false;
@@ -274,10 +259,10 @@ document.querySelector('.view-all-button').addEventListener('click', e => {
   document.querySelector('.data-display').style.display = 'none';
   document.querySelector('.action-bar').classList.add('show-action-bar');
   setTimeout(() => { //! delayed to allow for trainStops.json to fetch, then sets json to allStops variable
-    let stops = App.dataFetcher.getStoredData('allTrainStops');
+    let stops = dataStore.getStoredData('allTrainStops');
 
     allStops = stops.stops;
     buildStopList(allStops);
     document.querySelector('.dimmer').style.display = 'none';
-  }, 4000)
+  }, 1500)
 })();
