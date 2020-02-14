@@ -188,7 +188,6 @@ const toggleCollapse = e => {
 const uncheckLineFilters = () => { //TODO: For some reason can't clear checkboxes
   const filterBoxes = document.querySelectorAll('.trainCheckbox');
   console.log(filterBoxes);
-
   filterBoxes.forEach(filterBox => {
     filterBox.checked = false;
   });
