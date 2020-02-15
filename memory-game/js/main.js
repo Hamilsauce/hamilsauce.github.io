@@ -13,11 +13,26 @@ import {
 import {
   settingsAlert
 } from './settings.js';
+import * as firebase from 'firebase';
 
+var firebaseConfig = {
+    apiKey: "AIzaSyDlj4rmHO_kq3Z6ya2zqgGdP0AUg2znX9I",
+    authDomain: "memory-card-app.firebaseapp.com",
+    databaseURL: "https://memory-card-app.firebaseio.com",
+    projectId: "memory-card-app",
+    storageBucket: "memory-card-app.appspot.com",
+    messagingSenderId: "174804862889",
+    appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
+    measurementId: "G-9ENQL2QJRE"
+};
+firebase.initializeApp(firebaseConfig);
+
+const dbRef = firebase.database().ref();
 const userform = document.querySelector('.userform');
 document.querySelector('.endModal').style.display = 'none';
 
 //@  page initialization stuff
+
 let game = new Game(document.querySelector('.game-grid'));
 const clock = new GameClock;
 let prevTarget;
@@ -109,8 +124,10 @@ const cardMaker = (cSymbol) => {
   game.countCard();
   return newCard;
 }
+//@
+//@ End of  game functions
+//@
 
-//@ End-of-game functions
 const buildDeck = cardSymbols => { //! takes array of symbols, calls cardMaker on each, then adds each to game.deck. deck then duplicates to create matches
   cardSymbols.forEach(symbol => {
     game.deck.generateCard(cardMaker(symbol, 'game-grid'));

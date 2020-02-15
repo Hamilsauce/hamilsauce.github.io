@@ -1,15 +1,31 @@
-import { Deck, Card } from './Cards.js';
+import {
+    Deck,
+    Card
+} from './Cards.js';
+// import * as firebase from 'firebase';
+
+// var firebaseConfig = {
+//     apiKey: "AIzaSyDlj4rmHO_kq3Z6ya2zqgGdP0AUg2znX9I",
+//     authDomain: "memory-card-app.firebaseapp.com",
+//     databaseURL: "https://memory-card-app.firebaseio.com",
+//     projectId: "memory-card-app",
+//     storageBucket: "memory-card-app.appspot.com",
+//     messagingSenderId: "174804862889",
+//     appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
+//     measurementId: "G-9ENQL2QJRE"
+// };
+// firebase.initializeApp(firebaseConfig);
 
 //* Class managing game state
 export class Game {
     constructor(gameBoard) {
         this.gameBoard = gameBoard,
-        this.selected = [],
-        this.matched = [],
-        this.turns = 0,
-        // this.gameTime = '0:00',
-        this.stars,
-        this.playedOn = new Date().toDateString();
+            this.selected = [],
+            this.matched = [],
+            this.turns = 0,
+            // this.gameTime = '0:00',
+            this.stars,
+            this.playedOn = new Date().toDateString();
         this.playedAt = new Date().toLocaleTimeString();
         this.deck = this.newDeck(),
             this.gameHistory = this.getHistory();
@@ -31,8 +47,8 @@ export class Game {
         return this.turns;
     }
     gameOver() {
-        let check = this.deck.deckSize === 0
-            ?true : false;
+        let check = this.deck.deckSize === 0 ?
+            true : false;
 
         if (check === true) {
             this.calculateStars();
@@ -79,4 +95,6 @@ export class Game {
     }
 }
 
-{Game}
+{
+    Game
+}
