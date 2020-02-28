@@ -284,36 +284,45 @@ body {
   text-align: center;
   font-size: 2em;
   font-weight: 800;
-  color: white;
-  margin: 0;
+  color: rgb(255, 255, 255);
   background: rgb(255, 255, 255);
-  border: 5px solid rgba(152, 154, 158, 0.219);
+  border: 10px solid rgba(49, 49, 49, 0.164);
+  margin: 0;
+  /* border: 10px solid #369F36; */
   border-radius: 5px;
-  box-shadow: 0px 0px 10px 1px rgba(52, 56, 59, 0.315);
-  transition: 300ms border-radius ease-in-out, 300ms background ease-in-out, 200ms border ease-in;
+  box-shadow: 0px 0px 10px 1px rgba(77, 77, 77, 0.342);
+  transition: 250ms border-radius ease-in-out, 225ms background ease-in-out, 200ms border ease-in, 500ms color ease;
   cursor: pointer;
 }
 
 .selected {
   background: rgba(29, 144, 197, 0.822);
   box-shadow: 0px 0px 10px 1px rgba(150, 125, 135, 0.315);
-  outline: 1px solid rgba(255, 255, 255, 0.5);
+  outline: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 3px;
   border: 10px solid rgba(246, 246, 246, 0.205);
   padding: 15px;
 }
 
 .matched {
-  background: rgba(63, 122, 24, 0.685);
+  background: rgb(123, 197, 63);
   box-shadow: 0px 0px 10px 1px rgba(150, 125, 135, 0.315);
-  color: rgba(255, 255, 255, 0.226);
+  color: rgba(255, 255, 255, 0.349);
   outline: 2px solid rgba(220, 220, 220, 0);
-  border: 4px solid rgb(216, 183, 94);
-  outline-offset: 5px;
+  border: 2px solid rgb(113, 184, 55);
+
+  outline-offset: 15px;
 }
 
 .noMatch {
-  background: rgba(170, 41, 41, 0.692);
+  background: rgb(212, 77, 77);
+  color: white;
+  color: rgb(212, 77, 77);
+  border: 10px solid rgb(212, 77, 77);
+  background: rgb(255, 255, 255);
+  border: 10px solid rgba(7, 7, 7, 0.219);
+  border: 10px solid rgb(255, 255, 255);
+
 }
 
 .app-footer {
@@ -332,12 +341,12 @@ body {
   align-items: center;
   height: fit-content;
   padding: 2px 2px 2px 2px;
-  padding: 2px;
+  padding: 5px;
   margin: auto;
   background: rgb(212, 160, 14);
   box-shadow: 0px 0px 10px 3px rgba(54, 63, 88, 0.171);
-  border-radius: 5px;
-  border: 5px solid rgb(214, 214, 214);
+  border-radius: 100px;
+  border: 2px solid rgb(214, 214, 214);
   outline: none;
   transition: 0.2s;
   font-size: 1.3em;
@@ -358,16 +367,16 @@ body {
   border-radius: 5px;
   border: 5px solid rgb(214, 214, 214);
   outline: none;
-  transition: 0.2s;
+  transition: 0.29s;
 }
 
 .shareIcon {
-  width: 60px;
-  height: 60px;
+  width: 28px;
+  height: 28px;
   background: rgba(255, 255, 255, 0);
   padding: 2px;
   border-radius: 2px;
-  box-shadow: 0px 0px 10px 3px inset rgba(103, 111, 131, 0.671);
+  box-shadow: 0px 0px 10px 3px inset rgba(103, 111, 131, 0);
   fill: rgba(235, 230, 240, 1);
   transition: 0.2s;
 }

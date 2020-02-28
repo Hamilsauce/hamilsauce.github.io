@@ -67,11 +67,17 @@ export class Game {
         const perfectGame = this.matched.length / 2;
         let actualGame = this.turns;
 
-        if (actualGame / perfectGame <= 2) {
+        if (actualGame / perfectGame <= 1.6) {
+            console.log(actualGame / perfectGame);
+
             this.stars = 3;
-        } else if (actualGame / perfectGame <= 3.25) {
+        } else if (actualGame / perfectGame <= 2) {
+            console.log(actualGame / perfectGame);
+
             this.stars = 2;
         } else {
+            console.log(actualGame / perfectGame);
+
             this.stars = 1;
         }
     }

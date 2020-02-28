@@ -13,21 +13,21 @@ import {
 import {
   settingsAlert
 } from './settings.js';
-import * as firebase from 'firebase';
+// import * as firebase from 'firebase';
 
-var firebaseConfig = {
-    apiKey: "AIzaSyDlj4rmHO_kq3Z6ya2zqgGdP0AUg2znX9I",
-    authDomain: "memory-card-app.firebaseapp.com",
-    databaseURL: "https://memory-card-app.firebaseio.com",
-    projectId: "memory-card-app",
-    storageBucket: "memory-card-app.appspot.com",
-    messagingSenderId: "174804862889",
-    appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
-    measurementId: "G-9ENQL2QJRE"
-};
-firebase.initializeApp(firebaseConfig);
+// var firebaseConfig = {
+//     apiKey: "AIzaSyDlj4rmHO_kq3Z6ya2zqgGdP0AUg2znX9I",
+//     authDomain: "memory-card-app.firebaseapp.com",
+//     databaseURL: "https://memory-card-app.firebaseio.com",
+//     projectId: "memory-card-app",
+//     storageBucket: "memory-card-app.appspot.com",
+//     messagingSenderId: "174804862889",
+//     appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
+//     measurementId: "G-9ENQL2QJRE"
+// };
+// firebase.initializeApp(firebaseConfig);
 
-const dbRef = firebase.database().ref();
+// const dbRef = firebase.database().ref();
 const userform = document.querySelector('.userform');
 document.querySelector('.endModal').style.display = 'none';
 
@@ -98,7 +98,7 @@ const checkSelected = cardPair => {
       setTimeout(() => {
         card.classList.remove('selected');
         card.classList.add('noMatch');
-      }, 250);
+      }, 300);
       setTimeout(() => { //remove selected class, replace with matched. then remove event lsiteners
         card.classList.remove('noMatch');
       }, 1000);
