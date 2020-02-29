@@ -1,5 +1,0 @@
-
-
-newGameButton.addEventListener('click', e => {
-  
-})
