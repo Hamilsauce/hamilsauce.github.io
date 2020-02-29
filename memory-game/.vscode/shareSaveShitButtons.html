@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    .shit-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+      padding: 5px 5px 5px 5px;
+      margin: auto;
+      background: rgba(242, 245, 244, 1);
+      box-shadow: 0px 0px 5px 2px rgba(120, 110, 70, 0.5);
+      border-radius: 8px;
+      border: 6px solid rgba(140, 125, 130, 0.9);
+      outline: none;
+      transition: 0.8s;
+    }
+
+    .shit-button:active {
+      padding: 2px;
+      box-shadow: 0px 0px 15px 4px rgba(80, 70, 120, 0.9);
+      border-radius: 15px;
+      border: 8px solid rgba(120, 90, 110, 1);
+
+    }
+
+    .shit-icon {
+      width: 96px;
+      height: 96px;
+      padding: 2px 2px 2px 2px;
+      margin: auto;
+      fill: rgba(120, 100, 100, 1);
+      background: rgba(255, 255, 255, 0);
+      transition: 0.35s;
+
+    }
+
+    .shit-icon:active {
+      /* box-shadow: 0px 0px 10px 2px rgba(120, 110, 150, 0.9)  */
+      ;
+      width: 108px;
+      height: 108px;
+      padding: 0px;
+      fill: rgba(120, 110, 80, 1);
+
+
+
+    }
+
+    .btnContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 1fr);
+      justify-content: left;
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      padding: 5px;
+      background: rgba(205, 235, 200, 0.8);
+      /* background: rgba(80, 80, 80, 0.8); */
+    }
+
+    .saveButton {
+      display: flex;
+      width: fit-content;
+      height: fit-content;
+      padding: 2px 2px 0px 2px;
+      padding: 0px;
+      margin: auto;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 0px 5px 2px rgba(120, 110, 70, 0.5);
+      border-radius: 4px;
+      border: 4px solid rgba(135, 80, 120, 0.8);
+      outline: none;
+      transition: 0.8s;
+    }
+
+    .saveIcon {
+      width: 64px;
+      height: 64px;
+      fill: rgba(150, 80, 120, 0.8);
+      background: rgba(255, 255, 255, 0);
+      border-radius: 4px;
+      box-shadow: 0px 0px 5px 2px inset rgba(200, 200, 180, 0.5);
+    }
+    .shareButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      padding: 2px 2px 2px 2px;
+      padding: 0px;
+      margin: auto;
+      background: rgba(50, 100, 140, 1);
+      box-shadow: 0px 0px 10px 3px rgba(90, 110, 70, 0.5);
+      border-radius: 2px;
+      border: 5px solid rgba(255, 255, 255, 1);
+      outline: none;
+      transition: 0.8s;
+    }
+    .shareIcon {
+      width: 64px;
+      height: 64px;
+      fill: rgba(150, 80, 120, 0.8);
+      background: rgba(255, 255, 255, 0);
+      border-radius: 2px;
+      fill: rgba(235, 230, 240, 1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="btnContainer">
+    <button class="saveButton">
+      <svg class="saveIcon" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;">
+        <g>
+          <path d="M18,10c-0.6,0-1-0.4-1-1V7c0-0.6,0.4-1,1-1s1,0.4,1,1v2C19,9.6,18.6,10,18,10z" />
+        </g>
+        <path d="M28.7,8.3l-5-5C23.5,3.1,23.3,3,23,3v7c0,1.7-1.3,3-3,3h-8c-1.7,0-3-1.3-3-3V3H6C4.3,3,3,4.3,3,6v20c0,1.7,1.3,3,3,3h2h16
+      	c2.8,0,5-2.2,5-5V9C29,8.7,28.9,8.5,28.7,8.3z M24,27H8V17c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1V27z" />
+      </svg>
+    </button>
+    <button class="shareButton">
+      <svg class="shareIcon" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 483 483" >
+        <g>
+          <path d="M395.72,0c-48.204,0-87.281,39.078-87.281,87.281c0,2.036,0.164,4.03,0.309,6.029l-161.233,75.674
+      		c-15.668-14.971-36.852-24.215-60.231-24.215c-48.204,0.001-87.282,39.079-87.282,87.282c0,48.204,39.078,87.281,87.281,87.281
+      		c15.206,0,29.501-3.907,41.948-10.741l69.789,58.806c-3.056,8.896-4.789,18.396-4.789,28.322c0,48.204,39.078,87.281,87.281,87.281
+      		c48.205,0,87.281-39.078,87.281-87.281s-39.077-87.281-87.281-87.281c-15.205,0-29.5,3.908-41.949,10.74l-69.788-58.805
+      		c3.057-8.891,4.789-18.396,4.789-28.322c0-2.035-0.164-4.024-0.308-6.029l161.232-75.674c15.668,14.971,36.852,24.215,60.23,24.215
+      		c48.203,0,87.281-39.078,87.281-87.281C482.999,39.079,443.923,0,395.72,0z" />
+        </g>
+      </svg>
+    </button>
+  </div>
+  <button class="shit-button">
+    <!-- aria-hidden="true" focusable="false" data-prefix="fas" data-icon="poo"  -->
+    <svg class="shit-icon" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+      <path d="M451.4 369.1C468.7 356 480 335.4 480 312c0-39.8-32.2-72-72-72h-14.1c13.4-11.7 22.1-28.8 22.1-48 0-35.3-28.7-64-64-64h-5.9c3.6-10.1 5.9-20.7 5.9-32 0-53-43-96-96-96-5.2 0-10.2.7-15.1 1.5C250.3 14.6 256 30.6 256 48c0 44.2-35.8 80-80 80h-16c-35.3 0-64 28.7-64 64 0 19.2 8.7 36.3 22.1 48H104c-39.8 0-72 32.2-72 72 0 23.4 11.3 44 28.6 57.1C26.3 374.6 0 404.1 0 440c0 39.8 32.2 72 72 72h368c39.8 0 72-32.2 72-72 0-35.9-26.3-65.4-60.6-70.9zM192 256c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm159.5 139C341 422.9 293 448 256 448s-85-25.1-95.5-53c-2-5.3 2-11 7.8-11h175.4c5.8 0 9.8 5.7 7.8 11zM320 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z">,
+      </path>
+    </svg>
+  </button>
+</body>
+
+</html>

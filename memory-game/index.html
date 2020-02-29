@@ -7,6 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
   <link rel="stylesheet" href="card-memory-game.css">
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-database.js"></script>
+
   <title>Card Games!</title>
   <style>
   </style>
@@ -22,17 +25,21 @@
     </div>
     <div class="endModal">
       <div class="endModalDiv endModalTop">
-        <p class="scoreHeader">Stars</p>
+        <p class="playerName"></p>
+        <p class="scoreHeader"></p>
         <div class="scoresContainer">
-          <div class="turnScore"></div>
-          <div class="starsDisplay"></div>
-          <div class="timeScore"></div>
+          <span class="scoreHeader">Turns</span>
+          <span class="scoreHeader">Stars</span>
+          <span class="scoreHeader">Time</span>
+          <div class="turnScore gameStat"></div>
+          <div class="starsDisplay gameStat"></div>
+          <div class="timeScore gameStat"></div>
 
           <!-- <div class="turns-out"></div> -->
         </div>
       </div>
       <div class="endModalDiv endModalMiddle">
-        <button class="restartButton">New Game</button>
+        <button class="restartButton">Play Again</button>
         <button class="stop-button">Done</button></div>
       <div class="endModalDiv endModalBottom">
         <div class="gameHistoryDisplay"></div>
@@ -80,7 +87,6 @@
     </div>
   </div>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <!-- <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script> -->
 
   <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->

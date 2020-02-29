@@ -16,19 +16,8 @@ import {settingsAlert} from './settings.js';
 //     measurementId: "G-9ENQL2QJRE"
 // };
 // firebase.initializeApp(firebaseConfig);
-var firebaseConfig = {
-  apiKey: "AIzaSyDlj4rmHO_kq3Z6ya2zqgGdP0AUg2znX9I",
-  authDomain: "memory-card-app.firebaseapp.com",
-  databaseURL: "https://memory-card-app.firebaseio.com",
-  projectId: "memory-card-app",
-  storageBucket: "memory-card-app.appspot.com",
-  messagingSenderId: "174804862889",
-  appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
-  measurementId: "G-9ENQL2QJRE"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const dbRef = firebase.database().ref().child('game');
+
+// const dbRef = firebase.database().ref();
 const userform = document.querySelector('.userform');
 document.querySelector('.endModal').style.display = 'none';
 
@@ -149,25 +138,14 @@ const newGame = () => {
 //TODO move into a module for UI updates (modal module maybe)
 const displayStats = () => {
   const endModalTop = document.querySelector('.endModalTop');
-  const nameDisplay = document.querySelector('.playerName');
   const starsDisplay = document.querySelector('.starsDisplay');
-  const turnScore = document.querySelector('.turnScore');
-  const timeScore = document.querySelector('.timeScore');
   const historyDisplay = document.querySelector('.gameHistoryDisplay');
 
   let pastGamesCount = game.gameHistory.length;
   historyDisplay.textContent = `Total Games ${pastGamesCount}`;
 
-  let playerName = `Player: ${game.playerName}`;
   let playerStars = game.stars;
-  let playerTurns = game.turns;
-  let playerTime = game.gameTime;
-
-  nameDisplay.textContent = playerName;
   starsDisplay.textContent = playerStars;
-  turnScore.textContent = playerTurns;
-  timeScore.textContent = playerTime;
-
 }
 
 const endGame = () => {
@@ -208,9 +186,8 @@ document.querySelector('.restartButton').addEventListener('click', (e) => {
 
 document.querySelector('.stop-button').addEventListener('click', (e) => { //TODO broken, disabled for now
   setTimeout(() => {
-    // alert('close button dont work')
-    location.reload();
-    // window.close();
+    alert('close button dont work')
+    window.close();
   }, 300);
 });
 document.querySelector('.modalTop').addEventListener('click', (e) => {

@@ -33,13 +33,11 @@
     }
 
     .main {
-        box-sizing: border-box;
         display: grid;
         grid-gap: 10px;
         justify-content: center;
         align-items: center;
         margin: auto;
-        padding: 10px;
         max-width: 750px;
         font-family: 'Prompt', sans-serif;
 
@@ -48,8 +46,6 @@
     .history-board {
         border-collapse: collapse;
         border: 2px solid rgba(70, 163, 58, 0.432);
-        width: 100%;
-        margin: auto;
     }
 
     th {
@@ -57,7 +53,7 @@
         color: white;
         padding: 5px 10px;
         margin: auto;
-        /* min-width: fit-content; */
+        min-width: 75px;
         border-right: 2px solid rgba(223, 223, 223, 0.247);
     }
 
@@ -68,8 +64,8 @@
     td {
         padding: 5px;
         border-right: 1px solid rgba(115, 165, 108, 0.5);
+        ;
         text-align: center;
-        overflow: hidden;
     }
 </style>
 </head>
@@ -89,14 +85,12 @@
             <thead>
                 <tr class="table-headers">
                     <th class="Date-header">Date</th>
-                    <th class="Name-header">Name</th>
                     <th class="Stars-header">Stars</th>
                     <th class="Turns-header">Turns</th>
                     <th class="FinalTime-header">Final Time</th>
                 </tr>
                 <tr class="trow" data-player="">
                     <td>1/25/2019</td>
-                    <td>Buttguy</td>
                     <td>3</td>
                     <td>14</td>
                     <td>24s</td>
