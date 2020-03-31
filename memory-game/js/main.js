@@ -2,20 +2,10 @@ import {symbols} from './symbols.js';
 import {Card} from './Cards.js';
 import {GameClock} from './gameClock.js';
 import {Game} from './Game.js';
-import {settingsAlert} from './settings.js';
-// import * as firebase from 'firebase';
+import { settingsAlert } from './settings.js';
+import { HistoryTable, initiateGameTable } from './historyTable.js';
 
-// var firebaseConfig = {
-//     apiKey: "AIzaSyDlj4rmHO_kq3Z6ya2zqgGdP0AUg2znX9I",
-//     authDomain: "memory-card-app.firebaseapp.com",
-//     databaseURL: "https://memory-card-app.firebaseio.com",
-//     projectId: "memory-card-app",
-//     storageBucket: "memory-card-app.appspot.com",
-//     messagingSenderId: "174804862889",
-//     appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
-//     measurementId: "G-9ENQL2QJRE"
-// };
-// firebase.initializeApp(firebaseConfig);
+
 var firebaseConfig = {
   apiKey: "AIzaSyDlj4rmHO_kq3Z6ya2zqgGdP0AUg2znX9I",
   authDomain: "memory-card-app.firebaseapp.com",
@@ -26,22 +16,18 @@ var firebaseConfig = {
   appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
   measurementId: "G-9ENQL2QJRE"
 };
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const dbRef = firebase.database().ref().child('game');
-const userform = document.querySelector('.userform');
+firebase.initializeApp(firebaseConfig);   // Initialize Firebase
+
+const userform = document.querySelector('.userform'); // const dbRef = firebase.database().ref().child('game');
 document.querySelector('.endModal').style.display = 'none';
 
 //@  page initialization stuff
-
 let game = new Game(document.querySelector('.game-grid'));
 const clock = new GameClock;
 let prevTarget;
 
 //@ End page initialization stuff
-
-//* Handles card select state, routes cards for match testing if appropriate
-function handleCardSelect(event) {
+function handleCardSelect(event) {  //* Handles card select state, routes cards for match testing if appropriate
   let card = event.target;
 
   const selectCard = (card) => { //adds clicked card to selected array
@@ -167,7 +153,6 @@ const displayStats = () => {
   starsDisplay.textContent = playerStars;
   turnScore.textContent = playerTurns;
   timeScore.textContent = playerTime;
-
 }
 
 const endGame = () => {
@@ -184,7 +169,6 @@ const endGame = () => {
   }, 300);
   console.log(game);
 }
-
 
 //@ Eventlisteners!!
 document.querySelector('.newGameButton').addEventListener('click', e => {
@@ -208,16 +192,16 @@ document.querySelector('.restartButton').addEventListener('click', (e) => {
 
 document.querySelector('.stop-button').addEventListener('click', (e) => { //TODO broken, disabled for now
   setTimeout(() => {
-    // alert('close button dont work')
     location.reload();
-    // window.close();
   }, 300);
 });
-document.querySelector('.modalTop').addEventListener('click', (e) => {
-  setTimeout(() => {
-    parent.location = './gameLobby.html';
-}, 750);
+document.querySelector('.modalTop').addEventListener('click', (e) => {  //!gamehistory
+  initiateGameTable(game.gameHistory);
+  //   setTimeout(() => {
+  //     parent.location = './gameLobby.html';
+  // }, 750);
 });
+
 document.querySelector('.modalBottom').addEventListener('click', (e) => { //!settings button
   setTimeout(() => {
     settingsAlert();

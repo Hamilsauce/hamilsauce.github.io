@@ -1,21 +1,18 @@
-import {
-    Deck,
-    Card
-} from './Cards.js';
+import { Deck, Card } from './Cards.js';
 
 //* Class managing game state
 export class Game {
     constructor(gameBoard) {
         this.gameBoard = gameBoard,
-        this.selected = [],
-        this.matched = [],
-        this.turns = 0,
-        this.stars,
-        this.playerName = '',
-        this.playedOn = new Date().toDateString(),
-        this.playedAt = new Date().toLocaleTimeString(),
-        this.deck = this.newDeck(),
-        this.gameHistory = this.getHistory()
+            this.selected = [],
+            this.matched = [],
+            this.turns = 0,
+            this.stars,
+            this.playerName = '',
+            this.playedOn = new Date().toDateString(),
+            this.playedAt = new Date().toLocaleTimeString(),
+            this.deck = this.newDeck(),
+            this.gameHistory = this.getHistory()
     }
     newDeck() {
         let deck = new Deck();
@@ -86,8 +83,10 @@ export class Game {
             deckSize: this.matched.length,
             playerTurns: this.turns
         }
+        console.log('new game');
+        console.log(newSave);
+
         firebase.database().ref("gameHistory/" + newSave.id).update(newSave);
-        this.gameHistory.push(newSave);
     }
     async getHistory() {
         const snapshot = await firebase.database().ref('/gameHistory/').once('value');
@@ -95,18 +94,14 @@ export class Game {
             .sort((a, b) => {
                 if (a.id > b.id) {
                     return -1;
-                }
-                else if (a.id < b.id) {
+                } else if (a.id < b.id) {
                     return 1;
-                }
-                else {
+                } else {
                     return 0;
                 }
             });
-        console.log(this.gameHistory);
+        // console.log(this.gameHistory);
     }
 }
 
-{
-    Game
-}
+{Game}

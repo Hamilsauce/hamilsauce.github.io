@@ -1,0 +1,230 @@
+{
+  "gameHistory": [
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:08",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 0,
+      "playerName": "jakr",
+      "playerTurns": 6,
+      "stars": 3
+    },
+    null,
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:08",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 2,
+      "playerName": "Anon",
+      "playerTurns": 6,
+      "stars": 3
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:10",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 3,
+      "playerName": "Anon",
+      "playerTurns": 6,
+      "stars": 3
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:22",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 4,
+      "playerName": "Anon",
+      "playerTurns": 13,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:10",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 5,
+      "playerName": "jake",
+      "playerTurns": 6,
+      "stars": 3
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:13",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 6,
+      "playerName": "Anon",
+      "playerTurns": 11,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:57",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 7,
+      "playerName": "jake",
+      "playerTurns": 12,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:16",
+      "gameDate": "Fri Feb 28 2020",
+      "id": 8,
+      "playerName": "jake",
+      "playerTurns": 12,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:21",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 9,
+      "playerName": "jake",
+      "playerTurns": 13,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:15",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 10,
+      "playerName": "jake",
+      "playerTurns": 10,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:13",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 11,
+      "playerName": "jake",
+      "playerTurns": 9,
+      "stars": 3
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:16",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 12,
+      "playerName": "jake",
+      "playerTurns": 11,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:21",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 13,
+      "playerName": "jake",
+      "playerTurns": 14,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:22",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 14,
+      "playerName": "jake",
+      "playerTurns": 14,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:38",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 15,
+      "playerName": "jake",
+      "playerTurns": 23,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:19",
+      "gameDate": "Sat Feb 29 2020",
+      "id": 16,
+      "playerName": "jake",
+      "playerTurns": 11,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:53",
+      "gameDate": "Fri Mar 13 2020",
+      "id": 17,
+      "playerName": "jake",
+      "playerTurns": 15,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:42",
+      "gameDate": "Sat Mar 14 2020",
+      "id": 18,
+      "playerName": "jake",
+      "playerTurns": 15,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:19",
+      "gameDate": "Sat Mar 14 2020",
+      "id": 19,
+      "playerName": "jake",
+      "playerTurns": 11,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:24",
+      "gameDate": "Tue Mar 24 2020",
+      "id": 20,
+      "playerName": "Anon",
+      "playerTurns": 14,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:19",
+      "gameDate": "Thu Mar 26 2020",
+      "id": 21,
+      "playerName": "jake",
+      "playerTurns": 12,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:24",
+      "gameDate": "Mon Mar 30 2020",
+      "id": 22,
+      "playerName": "5462",
+      "playerTurns": 12,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:41",
+      "gameDate": "Mon Mar 30 2020",
+      "id": 23,
+      "playerName": "5462",
+      "playerTurns": 15,
+      "stars": 1
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:21",
+      "gameDate": "Tue Mar 31 2020",
+      "id": 24,
+      "playerName": "poo",
+      "playerTurns": 11,
+      "stars": 2
+    },
+    {
+      "deckSize": 12,
+      "elapsedTime": "00:20",
+      "gameDate": "Tue Mar 31 2020",
+      "id": 25,
+      "playerName": "qop",
+      "playerTurns": 11,
+      "stars": 2
+    }
+  ]
+}

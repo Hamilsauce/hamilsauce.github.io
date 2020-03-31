@@ -36,8 +36,9 @@ body {
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  max-width: 800px;
   height: 100%;
-  background-color: rgba(236, 236, 236, 0.26);
+  background: rgba(236, 236, 236, 0.26);
 }
 
 .loading-prompt {

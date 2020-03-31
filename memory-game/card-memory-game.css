@@ -307,8 +307,8 @@ body {
   text-align: center;
   font-size: 2em;
   font-weight: 800;
-  color: rgba(0, 0, 0, 0.904);
-  /* color: rgba(255, 255, 255, 0.904); */
+  /* color: rgba(0, 0, 0, 0.904); */
+  color: rgba(255, 255, 255, 0.904);
   background: rgb(255, 255, 255);
   border: 10px solid rgba(49, 49, 49, 0.164);
   margin: 0;

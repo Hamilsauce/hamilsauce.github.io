@@ -1,0 +1,13 @@
+{
+    "gameHistory": [
+        {
+            "deckSize": 12,
+            "elapsedTime": "00:08",
+            "gameDate": "Fri Feb 28 2020",
+            "id": 2,
+            "playerName": "jakr",
+            "playerTurns": 6,
+            "stars": 3
+        }
+    ]
+}
