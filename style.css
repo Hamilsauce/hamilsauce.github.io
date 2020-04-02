@@ -1,0 +1,401 @@
+:root {
+    --header-backgroundColor: rgba(238, 176, 61, 0.781);
+    --brown-text: rgba(63, 51, 27, 0.877);
+    --header-shadow: 0px 0px 5px rgba(78, 78, 78, 0.925);
+    --card-shadow: 4px 6px 6px rgba(77, 76, 76, 0.267);
+    --card-backgroundColor: rgba(248, 244, 188, 0.774);
+
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #ffffff;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: var(--header-backgroundColor);
+    box-shadow: var(--card-shadow);
+    border: 5px solid rgb(236, 236, 236);
+
+}
+
+.header h1 {
+    font-size: 60px;
+    color: var(--brown-text);
+    text-shadow: var(--header-shadow);
+
+}
+
+.header h2 {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.904);
+    text-shadow: var(--header-shadow);
+    font-size: 28px;
+}
+
+
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: rgba(26, 106, 131, 0.952);
+    box-shadow: 4px 4px 7px rgba(77, 76, 76, 0.26);
+    margin-bottom: 1%;
+
+
+
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-bottom: 4px solid rgba(221, 129, 54, 0.877);
+    border-right: 5px solid rgba(24, 113, 139, 0.527);
+
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: rgba(255, 255, 255, 0.856);
+    color: rgba(139, 110, 46, 0.952);
+    font-weight: 700;
+    box-shadow: 4px 5px 4px rgba(76, 77, 77, 0.651);
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 70%;
+
+}
+
+.playlist-frame {
+
+    position: relative;
+    height: 400px;
+    outline: 5px;
+    border: 5px solid rgba(219, 128, 67, 0.61);
+    box-shadow: var(--card-shadow);
+
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 29%;
+    height: 100%;
+    background-color: #ffffff;
+    padding-left: 20px;
+    margin-left: 1%;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: rgb(253, 253, 253);
+    position: relative;
+    display: contents;
+    height: 50%;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+
+}
+
+#seahag-logo {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+.iframe-container {
+position: relative;
+    /* display: contents; */
+    /* height: 100%; */
+    /* width: 100%; */
+    /* margin: auto; */
+    /* padding: 10px; */
+
+}
+
+.tictactoe-frame {
+    height: 700px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid rgba(77, 76, 76, 0.267);
+    background-color: white;
+
+
+}
+.amaze-frame {
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid rgba(77, 76, 76, 0.267);
+    background-color: white;
+
+
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: var(--card-backgroundColor);
+    text-decoration: none;
+position: relative;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: var(--card-shadow);
+    border: 8px solid rgba(19, 118, 148, 0.726);
+    height: 100%;
+}
+
+
+.card a {
+    color: var(--brown-text);
+    text-decoration: none
+
+}
+
+.card #text-link {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+
+
+/* TICT-AC-TOE */
+
+
+
+/*
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(219, 219, 208, 0.479);
+    } */
+    .content-container {
+        display: flex;
+        position: relative;
+        padding: 5%;
+        margin-bottom: 2%;
+        height: 550px;
+        width: 80%;
+        /* box-sizing: border-box; */
+        align-content: flex-start;
+        justify-content: center;
+
+        top: 25px;
+        left: 75px;
+        border: 5px solid rgba(238, 145, 116, 0.815);
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+        border-radius: 25%;
+    }
+    .table-container {
+        display: block;
+        position: absolute;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        border: 5px solid rgba(243, 187, 3, 0.068);
+        border-radius: 5%;
+        box-shadow: 0px 0px 20px rgba(54, 51, 47, 0.548);
+        overflow: hidden;
+    }
+    .button-container {
+        display: block;
+        position: relative;
+        /* left: 150px; */
+        margin: auto;
+        margin-top: 250px;
+        text-align: center;
+        font-family: 'Schoolbell', cursive;
+        color: rgba(230, 96, 34, 0.9);
+        font-size: 5rem;
+        font-weight: 500;
+        z-index: 2;
+        text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+        text-shadow:
+            -3px -2px 0 rgba(255, 255, 255, 0.404),
+            2px -3px 0 rgba(252, 246, 246, 0.308),
+            -2px 2px 0 rgba(255, 255, 255, 0.555),
+            2px 2px 0 rgba(255, 255, 255, 0.295)
+    }
+
+
+    button {
+        color: white;
+        font-weight: 600;
+        font-size: 2em;
+        height: 75px;
+        border-radius: 60%;
+        margin: auto;
+
+        background-color: rgba(45, 91, 122, 0.8);
+
+    }
+
+    h1{
+        color: rgba(39, 67, 87, 0.8);
+        display:  flex;
+        position: relative;
+        align-content: center ;
+        justify-content: center;
+        text-align: center;
+    }
+    table {
+            /* padding-top: 6%;
+            padding-bottom: 6%; */
+        border-collapse: collapse;
+        margin: auto;
+        height: auto;
+        display:  flex;
+        position: relative;
+        align-content: center;
+        /* background-color: rgba(230, 231, 218, 0.212); */
+        justify-content: center;
+        /* left: 50%; */
+        /* margin-left: -160px; */
+        /* top: 50px; */
+        /* box-shadow: -5px 5px 15px rgba(36, 34, 21, 0.363); */
+
+    }
+
+    td {
+        background-color:  rgba(255, 239, 160, 0.356);
+        padding: 0px;
+        margin: 5px;
+        border-radius: 5%;
+        border: 5px solid rgba(54, 97, 126, 0.8);
+        height: 150px;
+        width: 130px;
+        text-align: center;
+        vertical-align: middle;
+        font-family: 'Schoolbell', cursive;
+        font-weight: 100;
+        font-size:  6em;
+        cursor: pointer;
+        color: rgba(43, 40, 40, 0.781);
+        text-shadow: 0px 0px 15px rgba(221, 189, 145, 0.8);
+        box-shadow: 0px 0px 10px rgba(48, 65, 66, 0.5);
+        z-index: 3;
+    }
+
+    td:hover {
+
+        background-color: rgba(252, 252, 252, 0.918);
+        box-shadow: 0px 0px 15px rgba(61, 61, 61, 0.795);
+
+        z-index: 2;
+    }
+    td:active {
+        background-color: rgba(48, 52, 54, 0.452);
+        box-shadow: -5px -5px 10px rgba(66, 66, 66, 0.589);
+    }
+
+    /* selects the top of table, the first-child table row of the table, and then applies the style for each TD in the the row */
+    table tr:first-child td {
+        border-top: 0;
+    }
+
+    table tr:last-child td {
+        border-bottom: 0;
+    }
+
+    /* this is selecting the left-side cells of the table (the first-child of all the table rows, so the first cell in each row)*/
+    table tr td:first-child {
+        border-left: 0;
+    }
+
+    /* this is selecting the left-side cells of the table (the first-child of all the table rows, so the first cell in each row)*/
+    table tr td:last-child {
+        border-right: 0;
+    }
+
+    .endgame {
+        display: none;
+        position: absolute;
+        justify-content: center;
+        width: 300px;
+        height: auto;
+        top: 100px;
+        background-color: rgba(34, 110, 133, 0.938);
+        border-radius: 20px;
+        left: 50%;
+        margin-left: -155px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        text-align: center;
+        font-family: 'Schoolbell', cursive;
+        color: rgba(255, 255, 255, 0.822);
+        font-size :3.2em;
+        font-weight: 300;
+        cursor: pointer;
+        border: 8px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+    .endgame .winner-text {
+        display: inline;
+    }
+
+
+
+    .endgame:hover {
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+    }
+
+
+
+
+
+
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
