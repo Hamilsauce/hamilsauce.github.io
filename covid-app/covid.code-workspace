@@ -1,13 +1,7 @@
 {
 	"folders": [
 		{
-			"path": "."
-		},
-		{
-			"path": "C:\\Users\\jacob\\source\\music-library-app\\new-song-form"
-		},
-		{
-			"path": "C:\\Users\\jacob\\source\\01-My-Code\\covid19\\data"
+			"path": "C:\\Users\\jacob\\source\\hamilsauce.github.io\\covid-app"
 		}
 	],
 	"settings": {
@@ -23,21 +17,23 @@
 			"tab.inactiveForeground": "#e0ebf086",
 			"editor.background": "#2b2a2a5e",
 			"terminal.background": "#202020",
-			"activityBar.background": "#2f7c47",
-			"activityBar.foreground": "#e7e7e7",
-			"activityBar.inactiveForeground": "#e7e7e799",
-			"activityBarBadge.background": "#422c74",
-			"activityBarBadge.foreground": "#e7e7e7",
-			"titleBar.activeBackground": "#215732",
-			"titleBar.inactiveBackground": "#21573299",
+			"activityBar.background": "#ef7853",
+			"activityBar.activeBackground": "#ef7853",
+			"activityBar.activeBorder": "#8af4a3",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#8af4a3",
+			"activityBarBadge.foreground": "#15202b",
+			"titleBar.activeBackground": "#eb5424",
+			"titleBar.inactiveBackground": "#eb542499",
 			"titleBar.activeForeground": "#e7e7e7",
 			"titleBar.inactiveForeground": "#e7e7e799",
-			"statusBar.background": "#215732",
-			"statusBarItem.hoverBackground": "#2f7c47",
+			"statusBar.background": "#eb5424",
+			"statusBarItem.hoverBackground": "#ef7853",
 			"statusBar.foreground": "#e7e7e7"
 		},
 		"liveServer.settings.port": 5503,
-		"peacock.color": "#215732",
+		"peacock.color": "#eb5424",
 		"liveServer.settings.multiRootWorkspaceName": "hamilsauce.github.io"
 	}
 }
