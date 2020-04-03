@@ -4,35 +4,30 @@
 
 const covidFetch = () => {
     const outDiv = document.querySelector('.dataDisplay');
-    var raw = "";
-    var requestOptions = {
+    let requestOptions = {
         method: 'GET',
-        body: raw,
+        body: '',
         redirect: 'follow'
     };
 
     fetch("https://covidapi.info/api/v1/country/USA")
         .then(res => res.json())
         .then(data => {
-            let [date, latestData] = Object.entries(data.result).pop();
-            let latestDate = new Date(date).toLocaleDateString();
+            let [date, detaills] = Object.entries(data.result).pop();
+            let [year, month, day] = date.split("-");
 
-            // let covidData = JSON.stringify(latestData,  undefined, '\t')
-            let covidData = formatDateData(latestData);
+            let latestDate = new Date(`${month}/${day}/${year}`).toLocaleDateString();
+            let covidData = formatDateData(detaills);
 
             document.querySelector('.inner.cover').classList.add('collapsed');
             setTimeout(() => {
-                outDiv.innerHTML =
-                `
-                <h4>United States as of ${latestDate}</h4>
-                ${covidData}
-            `;
+                outDiv.innerHTML = `
+                    <h2>United States</h2>
+                    <h6 class="detail-date">${latestDate}</h6>
+                    ${covidData}
+                `;
             document.querySelector('.dataDisplay').classList.add('show')
             }, 750);
-
-
-            // document.querySelector('.inner.cover').style.height = '0px';
-
         })
         .catch(err => {
             console.log(err);
@@ -62,6 +57,3 @@ document.querySelector('#submitButton')
         covidFetch();
 
     })
-
-
-    console.log('fuck');
