@@ -13,16 +13,18 @@ const covidFetch = () => {
     fetch("https://covidapi.info/api/v1/country/USA")
         .then(res => res.json())
         .then(data => {
+            const innerCover = document.querySelector('.inner.cover');
             let [date, detaills] = Object.entries(data.result).pop();
             let [year, month, day] = date.split("-");
 
             let latestDate = new Date(`${month}/${day}/${year}`).toLocaleDateString();
             let covidData = formatDateData(detaills);
 
-            document.querySelector('.inner.cover').classList.add('collapsed');
+            innerCover.classList.add('collapsed');
             setTimeout(() => {
+                innerCover.style.display = 'none';
                 outDiv.innerHTML = `
-                    <h2>United States</h2>
+                    <h1>United States</h1>
                     <h6 class="detail-date">${latestDate}</h6>
                     ${covidData}
                 `;
@@ -37,7 +39,8 @@ const covidFetch = () => {
 const formatDateData = dateData => {
     const details = Object.entries(dateData)
         .map(([key, val]) => {
-            let detail = `${key.charAt(0).toUpperCase() + key.slice(1)}: ${Number(val).toLocaleString()} `
+            let detail =
+                `<span class="detail-name">${key.charAt(0).toUpperCase() + key.slice(1)}:</span> <span class="detail-value">${Number(val).toLocaleString()} </span>`
 
             return `<li>${detail}</li>`;
         }).reduce((acc, curr) => {

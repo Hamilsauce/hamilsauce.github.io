@@ -17,7 +17,7 @@
             margin: 0;
             padding: 0;
             /* height: 100vh; */
-            background: #444444;
+            background: var(--mainBlue);
         }
 
         .app {
@@ -31,8 +31,8 @@
             box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.144);
             border-left: 1px solid rgb(69, 167, 69);
             border-right: 1px solid rgb(69, 167, 69);
-            border-left: 2px solid var(--mainBlue);
-            border-right: 2px solid var(--mainBlue);
+            border-left: 1px solid var(--mainBlue);
+            border-right: 1px solid var(--mainBlue);
         }
 
         .header {
@@ -40,11 +40,9 @@
             grid-column: span 6;
             background-color: rgb(69, 167, 69);
             background-color: var(--mainOrange);
-            background-color: var(--mainTeal);
-            background-color: var(--mainBlue);
             width: 100%;
-            /* border-bottom: 2px solid rgb(62, 155, 62); */
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid rgb(62, 155, 62);
+            border-bottom: 2px solid var(--mainBlue);
         }
         .header-title {
             color: white;
@@ -56,8 +54,6 @@
             box-sizing: border-box;
             background-color: rgb(236, 236, 236);
             background: rgb(212, 212, 212);
-            background: var(--mainOrange);
-            border-right: 1px solid #854731;
         }
 
         .right-section {
