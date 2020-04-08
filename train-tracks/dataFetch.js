@@ -9,6 +9,17 @@ export class DataStore { //* fetches json and stores it as a property in data ob
         outputType: 'JSON',
       }
   }
+  constructUrl(proxy) {
+    const queryString =
+      `${proxy}${this.trainDataUrl.baseUrl}?key=${this.trainDataUrl.apiKey}&mapid=${this.trainDataUrl.mapId}&outputType=${this.trainDataUrl.outputType}`;
+    return queryString;
+  }
+  getStoredData(dataKey) {
+    return this.data[dataKey];
+  }
+  test() {
+    console.log('i work bitches');
+  }
   fetchTrainStops(url, dataKey) {
     if (localStorage.getItem(dataKey)) {
       this.data[dataKey] = JSON.parse(localStorage.getItem(dataKey));
@@ -20,17 +31,6 @@ export class DataStore { //* fetches json and stores it as a property in data ob
           localStorage.setItem(dataKey, JSON.stringify(this.data[dataKey]));
         });
     }
-  }
-  constructUrl(proxy) {
-    const queryString =
-      `${proxy}${this.trainDataUrl.baseUrl}?key=${this.trainDataUrl.apiKey}&mapid=${this.trainDataUrl.mapId}&outputType=${this.trainDataUrl.outputType}`;
-    return queryString;
-  }
-  getStoredData(dataKey) {
-    return this.data[dataKey];
-  }
-  test() {
-    console.log('i work bitches');
   }
 }
 

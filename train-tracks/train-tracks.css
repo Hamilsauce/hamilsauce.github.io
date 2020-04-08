@@ -347,6 +347,7 @@ button:active {
   color: whitesmoke;
   outline: 2px solid rgba(255, 255, 255, 0);
   transition: 0.4s;
+  
   cursor: pointer;
 }
 
