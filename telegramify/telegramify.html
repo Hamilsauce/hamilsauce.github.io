@@ -6,401 +6,10 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
   <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">
+  <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/">
   <meta name="date" content="2019-10-31">
-  <link rel="stylesheet" href="./telegramify/telegramify.css">
+  <link rel="stylesheet" href="./telegramify.css">
   <title>Telegramify - the amify for telegr</title>
-  <style>
-    @import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-
-    html {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      color: white;
-      font-family: 'Titillium Web', sans-serif;
-    }
-
-    body {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      background-image: radial-gradient(rgb(246, 246, 246), rgba(242, 243, 222, 0.5));
-    }
-
-    :root {
-      --blue1: #8DBACD;
-      --blue2: #7EA6BB;
-      --blue3: #6694A9;
-      --blue4: #588FA1;
-      --blue5: #446C81;
-    }
-
-    * {
-      user-select: none;
-    }
-
-    .app {
-      box-sizing: border-box;
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 3fr 1fr 6fr 1fr;
-      color: rgba(245, 245, 245, 0.9);
-      padding: 0px 0px 0px 0px;
-      height: 100%;
-      max-width: 600px;
-      margin: auto;
-      border: 1px solid rgb(90, 90, 90);
-      box-shadow: 0px 0px 25px 3px rgba(122, 122, 122, 0.555);
-    }
-
-    .headers {
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space between;
-      flex-direction: column;
-            background:rgba(165, 100, 26, 0.726);
-
-      margin: 0px 0px 2px 0px;
-      padding: 0px 0px;
-    }
-
-    .content-container {
-      padding: 10px 0px 5px 0px;
-      box-sizing: border-box;
-      color: rgb(54, 54, 54);
-      margin: 0px 2px;
-      border-left: 1px solid rgba(36, 36, 23, 0.26);
-      border-right: 1px solid rgba(36, 36, 23, 0.26);
-      background: rgba(245, 245, 245, 0.685);
-    }
-
-    .toolbar {
-      display: flex;
-      justify-content: space-evenly;
-      background:rgba(165, 100, 26, 0.726);
-      box-sizing: border-box;
-      color: rgba(245, 245, 245, 1);
-      margin: 0px 0px;
-      padding: 3px;
-      border-bottom: 2px solid rgb(146, 146, 146);
-    }
-
-    .toolbar input {
-      font-size: 0.9em;
-      padding: 3px
-    }
-
-    .toolbar label {
-      font-size: 0.9em;
-    }
-
-
-    .search-container {
-      padding: 0;
-      margin: 0;
-    }
-
-    .find-button {
-      font-size: 1em;
-    }
-
-    .header-top {
-      box-sizing: border-box;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin: 0px 0px 1px 0px;
-      padding: 5px;
-      background: rgba(36, 36, 23, 0.157);
-    }
-
-    .header-top>h1 {
-      box-sizing: border-box;
-      margin: 5px 0px 5px 10px;
-    }
-
-    .menu-icon {
-      box-sizing: border-box;
-      font-size: 1.5em;
-      height: 44px;
-      width: fit-content;
-      text-align: center;
-      margin: auto 10px;
-      padding: 2px 10px 0px 10px;
-      font-weight: bold;
-      background: rgb(70, 116, 146);
-      border: 1px solid rgb(199, 199, 199);
-      border-radius: 15px;
-      transition: 300ms background ease, 300ms box-shadow ease-in;
-    }
-
-    .menu-icon:hover {
-      background: rgba(243, 181, 37, 0.76);
-      box-shadow: 0px 0px 10px 2px inset rgba(243, 227, 138, 0.514);
-
-    }
-
-    .menu-icon:focus {
-      background: rgba(243, 181, 37, 0.76);
-
-    }
-
-    .nav-bar {
-      display: flex;
-      justify-content: space-around;
-      background: rgba(192, 192, 182, 0.383);
-      padding: 0px 0px;
-    }
-
-    .top-container {
-      padding-top: 10px;
-    }
-
-    .top-container-header {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .welcome-message {
-      box-sizing: border-box;
-      margin: 2px 2px;
-      padding: 2px 0px;
-      font-size: 0.8em;
-    }
-
-    .collapse {
-      font-size: 0.8em;
-    }
-
-    .userform {
-      box-sizing: border-box;
-      border: 1px solid rgba(73, 73, 73, 0.349);
-      border-radius: 2px;
-      padding: 5px 5px;
-      margin: auto;
-      height: 100%;
-      transition: 0.5s;
-      background: rgba(241, 241, 241, 0.418);
-      overflow: hidden;
-    }
-
-    label {
-      font-size: 1em;
-    }
-
-    .text-input {
-      font-size: 1em;
-      padding: 3px;
-      border: 1px solid rgba(97, 136, 148, 0.63);
-      background: rgba(255, 255, 255, 0.924);
-      border-radius: 3px;
-
-      color: rgb(70, 70, 70);
-
-    }
-
-    select {
-      color: rgba(59, 59, 59, 0.788);
-      background: rgb(241, 241, 241)(214, 211, 211);
-      border: 1px solid rgba(97, 136, 148, 0.63);
-      border-radius: 3px;
-      font-size: 1em;
-
-    }
-
-    .chat-option {
-      color: rgb(63, 63, 63);
-    }
-
-    .field {
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      padding: 5px;
-      margin: 0;
-    }
-
-    .button-container {
-      padding: 2px 10px 1px 10px;
-      margin: 5px auto 0px auto;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: flex-end;
-      /* text-align: center; */
-      font-size: 1em;
-
-    }
-
-    .menu-button {
-      box-sizing: border-box;
-      margin: 1px 2px;
-      width: 100%;
-      color: white;
-      background: rgba(41, 90, 129, 0.726);
-      border: 1px solid rgba(32, 32, 29, 0.274);
-    }
-
-    .getDataButton {
-      text-align: center;
-      padding: 3px;
-      font-size: 1em;
-      /* margin: auto */
-    }
-
-    .saveButton {
-      text-align: center;
-      padding: 2px;
-      font-size: 1em;
-      width: 40%;
-      /* margin: auto; */
-    }
-
-    .results-container {
-      padding-top: 0;
-      box-sizing: border-box;
-      user-select: initial;
-      overflow: auto;
-      padding-bottom: 5px;
-      height: 100%;
-    }
-
-
-    .display-header {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3px;
-      margin: 0px 0px 3px 0px;
-      box-sizing: border-box;
-      border-bottom: 1px solid rgba(36, 36, 23, 0.527);
-      background: rgb(229, 231, 231);
-      padding: 0px 3px 5px 3px;
-      z-index: 1;
-    }
-
-    .data-header-item {
-      box-sizing: border-box;
-      margin: 0;
-      text-align: center;
-    }
-
-    .message-card {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 3fr 1fr;
-      gap: 3px;
-      box-sizing: border-box;
-      width: 335px;
-      min-height: fit-content;
-      max-height: 125px;
-      background: white;
-      margin: 0 auto 15px auto;
-      border: 1px solid rgba(36, 36, 23, 0.527);
-      border-radius: 3px;
-      box-shadow: 0px 1px 10px 1px rgba(71, 71, 56, 0.226);
-      z-index: 0;
-    }
-
-    .card-date {
-      background: rgba(24, 57, 94, 0.527);
-      display: flex;
-      justify-content: flex-end;
-      border: 2px solid white;
-      color: white;
-      padding: 2px 5px;
-    }
-
-    .card-body {
-      font-size: 0.9em;
-      max-height: fit-content;
-      overflow: auto;
-      padding: 2px 5px;
-      /* height: fit-content; */
-    }
-
-    .card-author {
-      box-sizing: border-box;
-      display: flex;
-      justify-content: flex-end;
-      height: 25px;
-      border: 2px solid white;
-      padding: 2px 5px;
-      font-size: 0.8em;
-      font-style: italic;
-    }
-
-
-    .footer {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      box-sizing: border-box;
-
-      max-height: fit-content;
-      width: 100%;
-      text-align: center;
-      /* padding-bottom: 13px; */
-      background:rgba(165, 100, 26, 0.726);
-
-      border-top: 2px solid rgb(85, 85, 85);
-    }
-
-    /*  NAV BAR STYLES */
-    .overlay {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      background-color: rgb(61, 68, 167);
-      background-color: rgba(251, 251, 251, 0.856);
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-
-    .overlay-content {
-      position: relative;
-      top: 25%;
-      width: 100%;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .overlay a {
-      padding: 8px;
-      text-decoration: none;
-      font-size: 36px;
-      color: rgba(25, 36, 46, 0.7);
-      display: block;
-      transition: 0.3s;
-    }
-
-    .overlay a:hover,
-    .overlay a:focus {
-      color: #a1afbd;
-    }
-
-    .overlay .closebtn {
-      position: absolute;
-      top: 20px;
-      right: 45px;
-      font-size: 60px;
-    }
-
-    @media screen and (max-height: 450px) {
-      .overlay a {
-        font-size: 20px
-      }
-
-      .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -439,41 +48,48 @@
         </p>
       </div>
       <form class="userform">
-        <div class="field">
-          <label>Search name: </label><br>
-          <input class="text-input name-input" id="input1" placeholder="Search sender name">
-        </div>
-        <div class="field">
-          <label for="select-el">Select chat: </label>
-          <select class="select-control chatInput" class="select-el">
-            <option class="chat-option">Apocalypse Now</option>
-            <option class="chat-option">Funpocalypse Now</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="select-el">Select something: </label>
-          <select class="select-control" class="select-el">
-            <option>Options</option>
-          </select>
-        </div>
+        <fieldset>
+          <div class="field">
+            <label>Search name: </label><br>
+            <input class="text-input name-input" id="input1" placeholder="Search sender name">
+          </div>
+          <div class="field">
+            <label for="select-el">Select chat: </label>
+            <select class="select-control chatInput">
+              <option class="chat-option">Apocalypse Now</option>
+              <option class="chat-option">Funpocalypse Now</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="select-el">Select something: </label>
+            <select class="select-control" class="select-el">
+              <option>Options</option>
+            </select>
+          </div>
+        </fieldset>
         <div class="button-container">
           <input class="getDataButton menu-button" id=" submit-button " type="submit" value="Get messages">
           <button class="saveButton menu-button">Save to File</button> </div>
       </form>
     </div>
-    <div class="toolbar content-container">
-      <label class="search-label" for="date-input">Search for date</label>
-      <div class="search-container">
-        <input class="text-input date-input" type="text" placeholder="Search date (mm/dd/yyyy)">
-        <button class="btn find-button">Find</button>
+    <div class="middle-container">
+      <div class="toolbar content-container">
+        <div class="search-container">
+          <label class="search-label" for="date-input">Search for date </label>
+          <input class="text-input date-input" type="text" placeholder="Search date (mm/dd/yyyy)">
+          <button class="btn find-button">Find</button>
+        </div>
+        <!-- <div class="queryMsg1">Queries may take a second, so just tap button again if it dumb</div> -->
+      </div>
+      <div class="results-container content-container">
+        <div class="display-header">
+          <div class="data-header-item display-header1"></div>
+          <div class="data-header-item display-header2"></div>
+          <div class="data-header-item display-header3"></div>
+        </div>
       </div>
     </div>
-    <div class="results-container content-container">
-      <div class="display-header">
-        <div class="data-header-item display-header1"></div>
-        <div class="data-header-item display-header2"></div>
-        <div class="data-header-item display-header3"></div>
-      </div>
+    <div class="display-container">
       <div class="data-display">
         <!-- <div class="message-card">
           <div class="card-date">Message on 10/7/2018</div>
@@ -492,10 +108,10 @@
           <div class="card-author">-Hamil sauce</div>
         </div> -->
       </div>
+      <div class="footer">SEAHAG 2019</div>
     </div>
-    <div class="footer">SEAHAG 2019</div>\
   </div>
-  <script src="./telegramify/telegramify.js"></script>C:
+  <script src="./telegramify.js"></script>
   <script>
     //Navbar Code!
     function openNav() {

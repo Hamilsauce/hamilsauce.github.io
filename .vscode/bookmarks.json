@@ -43,8 +43,78 @@
 		"path": "$ROOTPATH$\\telegramify\\telegramify.js",
 		"bookmarks": [
 			{
-				"line": 50,
+				"line": 49,
 				"column": 22,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\telegramify\\telegramify.css",
+		"bookmarks": [
+			{
+				"line": 27,
+				"column": 6,
+				"label": ""
+			},
+			{
+				"line": 42,
+				"column": 10,
+				"label": ""
+			},
+			{
+				"line": 331,
+				"column": 9,
+				"label": ""
+			}
+		]
+	},
+	{
+		"path": "$ROOTPATH$\\telegramify\\telegramify.html",
+		"bookmarks": [
+			{
+				"line": 24,
+				"column": 18,
+				"label": ""
+			},
+			{
+				"line": 25,
+				"column": 3,
+				"label": ""
+			},
+			{
+				"line": 40,
+				"column": 4,
+				"label": ""
+			},
+			{
+				"line": 72,
+				"column": 6,
+				"label": ""
+			},
+			{
+				"line": 80,
+				"column": 4,
+				"label": ""
+			},
+			{
+				"line": 87,
+				"column": 24,
+				"label": ""
+			},
+			{
+				"line": 89,
+				"column": 5,
+				"label": ""
+			},
+			{
+				"line": 105,
+				"column": 22,
+				"label": ""
+			},
+			{
+				"line": 107,
+				"column": 5,
 				"label": ""
 			}
 		]

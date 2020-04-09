@@ -8,10 +8,13 @@ const url = `https://hamilsauce.github.io/telegramify/tg-data-export.json`; //${
 const apocNowId = 8816899683;
 const funchatId = 8979731584;
 
+const toggleClass = (el, className) => el.classList.toggle(className);
+
+
 //! list builder
 const lister = list => {
   let listArr = list.map(item => {
-      return `<li class="listItem" id="${item}">${item}</li>`;
+      return `<li class="listItem" id="${item}">${item}</li>`
     })
     .reduce((itemOut, acc) => {
       return acc += itemOut;
@@ -37,7 +40,7 @@ const htmlListOut = list => {
 };
 //!end resuable stuff
 
-const limitMsgs = messageList => {  //* will return unique list of names
+const limitMsgs = messageList => { //* will return unique list of names
   console.log('messageList');
   console.log(messageList);
   let oneHundredLimit = messageList
@@ -75,7 +78,7 @@ const filterMessagesByName = name => {
   } else {
     let msgByName = messages
       .filter(msg => {
-        return msg.from.trim().toUpperCase().indexOf( name.trim().toUpperCase()) >= 0;
+        return msg.from.trim().toUpperCase().indexOf(name.trim().toUpperCase()) >= 0;
       });
     return msgByName;
   }
@@ -86,8 +89,6 @@ const generateMsgCard = propStrings => {
     .reduce((acc, string) => {
       return acc += string;
     }, '');
-  console.log(reducedString);
-
   let newCard = document.createElement('div');
   newCard.innerHTML = reducedString;
   newCard.setAttribute('class', 'message-card');
@@ -115,15 +116,29 @@ const writeMsgCard = msgList => {
   });
 }
 
-//* Listens for the request submit button to run query and return some results
+const toggleQueryMsg = () => {
+  const resultContainer = document.querySelector('.results-container');
+
+  resultContainer.style.height = '100%'
+
+  setTimeout(() => {
+    toggleClass(msgDiv, 'show');
+  }, 5000);
+}
+
+
+
+//! Listens for the request submit button to run query and return some results
 document.querySelector('.getDataButton').addEventListener('click', e => {
   e.preventDefault();
+  toggleQueryMsg();
   request({
       url: url
     })
     .then(data => { //! chat name is acquired here. heeds to refresh every time the selectio changes
       let chatData = JSON.parse(data);
       let chatList = chatData.chats.list;
+      console.log(chatList);
       let chatNameQuery = document.querySelector('.chatInput').value;
 
       let targetChatId = chatNameQuery === 'Apocalypse Now' ? apocNowId : funchatId;
@@ -136,6 +151,7 @@ document.querySelector('.getDataButton').addEventListener('click', e => {
         .filter(msg => {
           return msg.type === 'message';
         });
+
     });
 
   //! generats minor anaylsis of msg stats for queried name, preps  it for vewing, pushes it to dom
@@ -174,11 +190,22 @@ document.querySelector('.collapse').addEventListener('click', (e) => {
 function saveDataToFile() {
   const nameInput = document.querySelector('.name-input').value;
   let resultMsgs = filterMessagesByName(nameInput)
-  const blob = new Blob([JSON.stringify(resultMsgs)]);
+  const blob = new Blob([JSON.stringify(resultMsgs, null, 2)]);
   let a = document.body.appendChild(document.createElement('a'));
 
   a.href = window.URL.createObjectURL(blob);
   a.download = 'telegram-messages' + '.txt';
   a.click();
   a = null;
+}
+
+const tallies = (msgArray) => {
+  let totalMsgs = msgArray.length;
+
+  let jakeMsgs = messages.filter(msgArray => {
+    return msg.from_id == 523989469
+  });
+  console.log('jakeMsgs.length');
+  console.log(jakeMsgs.length);
+
 }
