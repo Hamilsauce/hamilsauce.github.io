@@ -5,46 +5,46 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>BOTW Koroks!</title>
+  <title>Dynamic Table Component</title>
   <!-- Vue.js -->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
   <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.2/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.2/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./components/DataTable.css">
-  <style>
-    .header {
-      margin: 10px;
-      font-size: 1.4em;
-      font-weight: 500;
-      color: rgb(37, 37, 37);
-
-    }
-  </style>
+  <link rel="stylesheet" href="./DataTable.css">
 </head>
 
 <body>
   <div id="vue-app">
-    <div class=" container text-center">
-      <h1 class="">{{heading}}</h1>
+    <div class="container text-center">
+      <h1 v-if="result" class="">{{heading}}</h1>
+      <p class="lead">{{  }}</p>
     </div>
-
+    
     <!-- demo root element -->
-    <div class="tableContainer">
+   <div class="tableContainer">
       <form id="search">
-        <label for="">Search <input name="query" v-model="searchQuery"></label>
-        <span class="lead">Count: {{ korokCount }}</span>
+        Search <input name="query" v-model="searchQuery">
       </form>
-      <demo-grid :heroes="gridData" :columns="gridColumns" :filter-key="searchQuery">
+      <demo-grid 
+       v-model="dataReady"
+       :heroes="gridData" 
+       :columns="gridColumns" 
+       :filter-key="searchQuery"
+       :dataSet="result"
+      >
       </demo-grid>
     </div>
-  </div>
+    </div>
 
   <!-- Project -->
   <script type="text/x-template" id="grid-template">
-    <table>
+   <div> 
+     <div v-if="dataReady">
+      {{dataSet}}
+     </div>
+     <table>
       <thead>
         <tr>
           <th v-for="key in columns"
@@ -63,11 +63,9 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </table></div>
   </script>
   <script src="app.js" type="module"></script>
-  <!-- <script src="./components/koroks2.js"></script> -->
-
 </body>
 
 </html>

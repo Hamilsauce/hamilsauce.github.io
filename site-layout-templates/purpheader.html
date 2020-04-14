@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Purple Pager</title>
+  <script src="https://unpkg.com/vue@latest"></script>
+  <script src="https://unpkg.com/vue-select@latest"></script>
+  <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
+  <link rel="stylesheet" href="./css/purpleheader.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <h1 class="title">{{heading}}</h1>
+    <div class="appBody">
+      <header class="app-header">
+      </header>
+      <p class="subtitle">{{text}}</p>
+      <div class="formContainer">
+        <form class="userform">
+          <div class="selectContainer">
+            <v-select label="COUNTRY" :options="options"></v-select>
+          </div>
+        </form>
+      </div>
+      <pre class="contentContainer">
+   {
+   "codes": [
+   {
+   "CODE": "ABW",
+   "COUNTRY": "Aruba"
+   },
+   {
+   "CODE": "AFG",
+   "COUNTRY": "Afghanistan"
+   },
+   {
+   "CODE": "AGO",
+   "COUNTRY": "Angola"
+   },
+   {
+   "CODE": "AIA",
+   "COUNTRY": "Anguilla"
+   },
+   {
+   "CODE": "ALA",
+   "COUNTRY": "Åland Islands"
+   },
+   {
+   "CODE": "ALB",
+   "COUNTRY": "Albania"
+   },
+   {
+   "CODE": "AND",
+   "COUNTRY": "Andorra"
+   },
+   {
+   "CODE": "ARE",
+   "COUNTRY": "United Arab Emirates"
+   },
+   {
+   "CODE": "ARG",
+   "COUNTRY": "Argentina"
+   },
+   {
+   "CODE": "ARM",
+   "COUNTRY": "Armenia"
+   },
+   {
+   "CODE": "ASM",
+   "COUNTRY": "American Samoa"
+   },
+   {
+   "CODE": "ATA",
+   "COUNTRY": "Antarctica"
+   },
+   {
+   "CODE": "ATF",
+   "COUNTRY": "French Southern Territories"
+   },
+   {
+   "CODE": "ATG",
+   "COUNTRY": "Antigua and Barbuda"
+   },
+   {
+   "CODE": "AUS",
+   "COUNTRY": "Australia"
+   },
+   {
+   "CODE": "AUT",
+   "COUNTRY": "Austria"
+   },
+   {
+   "CODE": "AZE",
+   "COUNTRY": "Azerbaijan"
+   },
+   {
+   "CODE": "BDI",
+   "COUNTRY": "Burundi"
+   },
+   {
+   "CODE": "BEL",
+   "COUNTRY": "Belgium"
+   },
+  </pre>
+      <footer class="app-footer">
+      </footer>
+    </div>
+  </div>
+  <!-- Project -->
+  <script src="./js/app.js"></script>
+  <!-- <script src="./js/covid.js"></script> -->
+</body>
+
+</html>

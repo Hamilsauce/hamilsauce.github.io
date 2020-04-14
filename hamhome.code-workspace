@@ -30,7 +30,7 @@
 			"statusBarItem.hoverBackground": "#2f7c47",
 			"statusBar.foreground": "#e7e7e7"
 		},
-		"liveServer.settings.port": 5503,
+		"liveServer.settings.port": 5504,
 		"peacock.color": "#215732",
 		"liveServer.settings.multiRootWorkspaceName": "hamilsauce.github.io"
 	}
