@@ -21,26 +21,21 @@
       <h1 v-if="result" class="">{{heading}}</h1>
       <p class="lead">{{  }}</p>
     </div>
-    
+
     <!-- demo root element -->
-   <div class="tableContainer">
+    <div class="tableContainer">
       <form id="search">
-        Search <input name="query" v-model="searchQuery">
+        Search <input name="query" v-model="searchQuery" type="search">
       </form>
-      <demo-grid 
-       v-model="dataReady"
-       :heroes="gridData" 
-       :columns="gridColumns" 
-       :filter-key="searchQuery"
-       :dataSet="result"
-      >
+      <demo-grid v-model="dataReady" :heroes="gridData" :columns="gridColumns" :filter-key="searchQuery"
+        :dataSet="result">
       </demo-grid>
     </div>
-    </div>
+  </div>
 
   <!-- Project -->
   <script type="text/x-template" id="grid-template">
-   <div> 
+   <div>
      <div v-if="dataReady">
       {{dataSet}}
      </div>
@@ -57,7 +52,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="entry in filteredHeroes">
+        <tr v-for="entry in filteredHeroes" id="entry.date" :key="entry.date" @click="selectedRow = entry.date"
+        :class="{hilight: selectedRow == entry.date}" @dblclick="console.log(entry.date)">
           <td v-for="key in columns">
             {{entry[key]}}
           </td>
@@ -69,3 +65,6 @@
 </body>
 
 </html>
+<!--    v-for="item in items"
+:class="{highlight:item.id == selected}"
+@click="selected = item.id">{{item.id}}</li> -->
