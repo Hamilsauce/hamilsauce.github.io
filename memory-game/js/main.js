@@ -1,9 +1,22 @@
-import {symbols} from './symbols.js';
-import {Card} from './Cards.js';
-import {GameClock} from './gameClock.js';
-import {Game} from './Game.js';
-import { settingsAlert } from './settings.js';
-import { HistoryTable, initiateGameTable } from './historyTable.js';
+import {
+  symbols
+} from './symbols.js';
+import {
+  Card
+} from './Cards.js';
+import {
+  GameClock
+} from './gameClock.js';
+import {
+  Game
+} from './Game.js';
+import {
+  settingsAlert
+} from './settings.js';
+import {
+  HistoryTable,
+  initiateGameTable
+} from './historyTable.js';
 
 
 var firebaseConfig = {
@@ -16,7 +29,7 @@ var firebaseConfig = {
   appId: "1:174804862889:web:64474a9820dd9d87c6e6b8",
   measurementId: "G-9ENQL2QJRE"
 };
-firebase.initializeApp(firebaseConfig);   // Initialize Firebase
+firebase.initializeApp(firebaseConfig); // Initialize Firebase
 
 const userform = document.querySelector('.userform'); // const dbRef = firebase.database().ref().child('game');
 document.querySelector('.endModal').style.display = 'none';
@@ -27,7 +40,7 @@ const clock = new GameClock;
 let prevTarget;
 
 //@ End page initialization stuff
-function handleCardSelect(event) {  //* Handles card select state, routes cards for match testing if appropriate
+function handleCardSelect(event) { //* Handles card select state, routes cards for match testing if appropriate
   let card = event.target;
 
   const selectCard = (card) => { //adds clicked card to selected array
@@ -85,10 +98,10 @@ const checkSelected = cardPair => {
       setTimeout(() => {
         card.classList.remove('selected');
         card.classList.add('noMatch');
-      }, 300);
+      }, 600);
       setTimeout(() => { //remove selected class, replace with matched. then remove event lsiteners
         card.classList.remove('noMatch');
-      }, 1000);
+      }, 1200);
     });
 
   }
@@ -195,7 +208,7 @@ document.querySelector('.stop-button').addEventListener('click', (e) => { //TODO
     location.reload();
   }, 300);
 });
-document.querySelector('.modalTop').addEventListener('click', (e) => {  //!gamehistory
+document.querySelector('.modalTop').addEventListener('click', (e) => { //!gamehistory
   initiateGameTable(game.gameHistory);
   //   setTimeout(() => {
   //     parent.location = './gameLobby.html';
@@ -205,12 +218,12 @@ document.querySelector('.modalTop').addEventListener('click', (e) => {  //!gameh
 document.querySelector('.modalBottom').addEventListener('click', (e) => { //!settings button
   setTimeout(() => {
     settingsAlert();
-}, 750);
+  }, 750);
 });
 
 //TODO Put sharebutton in module
 document.querySelector('.shareButton').addEventListener('click', () => {
-const shareButton = document.querySelector('.shareButton');
+  const shareButton = document.querySelector('.shareButton');
   const title = document.querySelector('h1').textContent;
   const buttonContent = shareButton.innerHTML;
   const url =
