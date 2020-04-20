@@ -356,7 +356,7 @@ body {
   border: 10px solid rgb(255, 255, 255);
   transition: transform 0.5s;
 
-  transform: rotate(360deg);
+  transform: rotate(720deg);
 
 }
 
