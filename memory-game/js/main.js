@@ -13,10 +13,10 @@ import {
 import {
   settingsAlert
 } from './settings.js';
-import {
-  HistoryTable,
-  initiateGameTable
-} from './historyTable.js';
+// import {
+
+//   initiateGameTable
+// } from './historyTable.js';
 
 
 var firebaseConfig = {
@@ -209,10 +209,10 @@ document.querySelector('.stop-button').addEventListener('click', (e) => { //TODO
   }, 300);
 });
 document.querySelector('.modalTop').addEventListener('click', (e) => { //!gamehistory
-  initiateGameTable(game.gameHistory);
-  //   setTimeout(() => {
-  //     parent.location = './gameLobby.html';
-  // }, 750);
+  // initiateGameTable(game.gameHistory);
+    setTimeout(() => {
+      parent.location = './gameLobby.html';
+  }, 750);
 });
 
 document.querySelector('.modalBottom').addEventListener('click', (e) => { //!settings button

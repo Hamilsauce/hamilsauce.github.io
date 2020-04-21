@@ -195,16 +195,16 @@
       border: 2px solid rgba(255, 255, 255, 0.6);
     }
 
-    .row1 {
+    .column1 {
       font-weight: bold;
       /*background: blue;*/
     }
 
-    .row2 {
+    .column2 {
       /* background: rgba(62, 164, 170, 0.4);*/
     }
 
-    .row3 {
+    .column3 {
       /* background: rgba(62, 164, 170, 0.4);*/
     }
 
@@ -221,6 +221,7 @@
       z-index: 0;
       background: rgba(89, 70, 70, 0.0);
     }
+
     .dimmer {
       box-sizing: border-box;
       display: flex;
@@ -246,11 +247,13 @@
       height: auto;
       margin: auto;
       top: 100px;
-      border: 1px solid rgba(62, 70, 70, 0.6);;
+      border: 1px solid rgba(62, 70, 70, 0.6);
+      ;
       border-radius: 3px;
       box-shadow: 0px 0px 10px 1px rgba(50, 50, 60, 0.4);
       z-index: 2;
     }
+
     .msgModal {
       /* position: absolute; */
       display: none;
@@ -264,16 +267,18 @@
       height: auto;
       margin: auto;
       top: 100px;
-      border: 1px solid rgba(62, 70, 70, 0.6);;
+      border: 1px solid rgba(62, 70, 70, 0.6);
+      ;
       border-radius: 3px;
       box-shadow: 0px 0px 10px 1px rgba(50, 50, 60, 0.4);
       z-index: 2;
     }
 
     .loginText {
-      margin: 10px 5px 10px 5px ;
+      margin: 10px 5px 10px 5px;
       font-weight: 400;
     }
+
     .loginInputs {
       width: auto;
       margin: 5px auto;
@@ -289,12 +294,14 @@
       /*border-radius: 3px;*/
 
     }
+
     .toolbar {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
       padding: 2px;
     }
+
     .editable:hover {
       background: rgb(236, 227, 218);
     }
@@ -317,16 +324,16 @@
       <div class="dimmer">
         <div class="msgModal">
           <p class="authText">pooping</p>
-      </div>
-      <div class="loginModal">
-        <p class="loginText">Enter password or die.</p>
-        <input type="text" class="passwordField">
-        <div class="loginInputs">
-          <input type="button" class="pwSubmit pwButton" value="Submit">
-          <input type="button" class="pwCancel pwButton" value="Cancel">
         </div>
-    </div>
-    </div>
+        <div class="loginModal">
+          <p class="loginText">Enter password or die.</p>
+          <input type="text" class="passwordField">
+          <div class="loginInputs">
+            <input type="button" class="pwSubmit pwButton" value="Submit">
+            <input type="button" class="pwCancel pwButton" value="Cancel">
+          </div>
+        </div>
+      </div>
     </div>
     <header>
       <h1> Notemondo </h1>
@@ -342,13 +349,16 @@
     <div class="table-container">
       <div class="toolbar">
         <button class="editButton">Edit</button>
-        </div>
+      </div>
       <table class="noteTable">
-        <tr class="colNames">
-          <th>Note</th>
-          <th>Frequency</th>
-          <th>Wavelength</th>
-        </tr>
+        <thead>
+          <tr class="colNames">
+            <th>Note</th>
+            <th>Frequency</th>
+            <th>Wavelength</th>
+          </tr>
+        </thead>
+        <tbody class="tableBody"></tbody>
       </table>
     </div>
   </div>
