@@ -1,0 +1,83 @@
+html, body {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ background: white;
+ font-size: 1em;
+}
+.app {
+ box-sizing: border-box;
+
+ display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr 4fr 7fr;
+
+justify-content: center;
+
+width: 100vw;
+max-width: 500px;
+height: 100vh;
+margin: auto;
+padding: 10px;
+background: rgba(220, 220, 220, 0.9)
+}
+.appHeader {
+ border: 1px solid blue;
+}
+.formContainer {
+margin: auto;
+padding: 10px; background: rgba(235, 235, 245, 1);
+ border: 1px solid red;
+}
+
+.userform {
+ display: flex;
+ flex-direction: column;
+  margin: auto;
+ padding: 10px;
+ border: 1px solid blue;
+ height: 100%;
+ min-height: 150px;
+
+
+}
+.delimInput {
+ font-size: 1.1em;
+ margin: 0px 0px 5px 0px;
+ width: fit-content;
+}
+.customInputContainer {
+ opacity: 0;
+ background: grey;
+ margin: 0px 0px;
+ padding: 5px 0px;
+}
+.customInputContainer.show {
+ display: flex;
+ flex-direction: row;
+ padding: 5px;
+ align-content: center;
+ opacity: 1;
+}
+.label {
+ padding: 0px;
+ margin: 0px;
+}
+.customInput {
+ width: 100px;
+ margin: 0px 10px;
+ padding: 2px;
+}
+.saveButton{
+ 
+}
+.customInput.show {
+ display: block;
+}
+.contentContainer {
+ border: 1px solid blue;
+ width: 350px;
+ height: 400px;
+ overflow: auto;
+
+}

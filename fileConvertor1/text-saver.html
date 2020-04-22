@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>File Download Bitches</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <link rel="stylesheet">
+ <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+  body {
+   font-family: 'Open Sans', sans serif:
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #333;
+   background-color: #fff;
+  }
+  h3 {
+   font-weight: 600;
+  }
+
+  * {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+  }
+
+  .app {
+   display: grid;
+   justify-content: space-around;
+   gap: 10px;
+   width: 95vw;
+   max-width: 700px;
+   height: 100vh;
+   margin: auto;
+   box-sizing: border-box;
+  }
+
+  .text-group {
+   font-family: 'Open Sans', sans-serif;
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 500px;
+   height: 100%;
+   margin: auto 5px;
+   padding-left: 4px;
+   font-size: 14px;
+
+  }
+
+  .form-container {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: column;
+   max-width: 500px;
+   min-width: fit-content;
+   min-height: 400px;
+   max-height: 800px;
+   height: fit-content;
+   margin: auto 0px;
+   padding: 5px 5px 15px 5px;
+   background: rgba(228, 228, 228, 0.835);
+   border: 2px solid rgb(197, 197, 197);
+   /* background-color: rgb(42, 42, 42); */
+   /* text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.548); */
+   box-shadow: 0 0 1em rgba(54, 54, 54, 0.466);
+   border-radius: 4px;
+
+  }
+
+  .userform {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: 1;
+   width: 100%;
+   min-width: fit-content;
+   height: 100%;
+   min-height: fit-content;
+   margin: 0;
+   box-sizing: border-box;
+   padding: 0px;
+
+  }
+
+  .form-group {
+   box-sizing: border-box;
+   display: grid;
+   grid-template-columns: 1fr;
+   /* display: flex;
+    flex-direction: column; */
+   width: 100%;
+   margin: 0;
+   margin-bottom: 10px;
+   padding: 5px;
+  }
+
+  .form-group>label {
+   margin: auto 5px;
+   color: rgb(80, 80, 80);
+  }
+
+  #fileTypeList {
+   display: none;
+   max-width: 50px;
+  }
+
+  #fileTypeInput {
+   max-width: 75px;
+   padding-left: 5px;
+   /* display: block; */
+   /* width: 100%; */
+   height: 34px;
+   padding: 6px 12px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #555;
+   background-color: #fff;
+   background-image: none;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+   -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+   -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  }
+
+  .top-inputs {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+  }
+
+  .formSeparator {
+   box-sizing: border-box;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   height: 1px;
+   font-weight: 600;
+   border: 2px solid rgba(255, 255, 255, 0.445);
+   font-size: 16px;
+   opacity: 1;
+   color: rgb(80, 80, 80);
+   background: rgba(255, 255, 255, 0.582);
+   text-shadow: 0 0rem 0.5rem rgba(161, 161, 161, 0.26);
+   margin: 10px 0px;
+  }
+
+  .btn {
+   display: inline-block;
+   padding: 6px 12px;
+   margin-bottom: 0;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 1.42857143;
+   text-align: center;
+   white-space: nowrap;
+   vertical-align: middle;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   background-image: none;
+   border: 1px solid transparent;
+
+   border-radius: 4px;
+  }
+
+  .btn-primary {
+   color: #fff;
+   background-color: #428bca;
+   border-color: #357ebd;
+  }
+ </style>
+</head>
+
+<body>
+ <main class="app">
+  <div class="text-group">
+   <h3>Create, fetch, and download.</h3>
+   <p>Create your own file below enter
+    the address to a file you'd like
+    to download</p>
+  </div>
+  <div class="form-container">
+   <form class="userform">
+    <div class="urlContainer">
+     <div class="form-group">
+      <label for="urlAddress">Enter a URL</label>
+      <input type="text" class="form-control" id="urlAddress" value="" placeholder="Enter Url">
+     </div>
+     <div class="formSeparator">OR</div>
+     <div class="top-inputs">
+      <div class="form-group grid-cells">
+       <label for="input-fileName">File name</label>
+       <input type="text" class="form-control" id="input-fileName" value="textFile" placeholder="Enter file name">
+      </div>
+      <div class="form-group grid-cells">
+       <label for="fileTypeInput">File Type</label>
+       <input list="fileTypeList" id="fileTypeInput" name="fileTypeInput" placeholder=".txt">
+       <datalist class="fileTypeList" id="fileTypeList">
+        <option class="fileTypeOption" label="Save as text" value=".txt">
+        <option class="fileTypeOption" label="Save as Javascript file" value=".js">
+        <option class="fileTypeOption" label="Save as JSON file" value=".json">
+        <option class="fileTypeOption" label="Save as CSV" value=".csv">
+       <option class="fileTypeOption" label="Save as HTML" value=".html">
+       </datalist>
+      </div>
+     </div>
+     <div class="form-group grid-cells">
+      <label for="textarea">Content</label>
+      <textarea id="textarea" class="form-control" rows="10" placeholder="Enter text to save">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iure ab voluptate sunt reiciendis, officia, aliquam temporibus. Quo laudantium quaerat ad, deleniti optio ex, dignissimos, ea accusamus placeat tempora minima!</textarea>
+     </div>
+     <button id="btn-save" type="submit" class="btn btn-primary">Save to file</button>
+   </form>
+  </div>
+  <footer class="app-footer">
+  </footer>
+ </main>
+ <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/FileSaver.js"></script>
+ <script src="text-saver.js"></script>
+</body>
+
+</html>

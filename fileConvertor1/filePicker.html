@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title></title>
+<link rel="stylesheet" href="./styles.css" type="text/css"/>
+
+</head>
+
+<body>
+ <main class="app">
+  <header class="appHeader">
+   <h1>Jsonify</h1>
+   <p class="subtitle">
+    Pick a text file, enter how its delimited.
+   </p>
+  </header>
+  <div class="formContainer">
+   <form class="userform">
+    <label for="delimInput">Pick a delimiter</label>
+    <select name="delimInput" id="delimInput" class="delimInput" value=",">
+     <option value=",">comma</option>
+     <option value="\t">tab</option>
+     <option value=" ">space</option>
+     <option value="custom">custom</option>
+    </select>
+
+     <div class="customInputContainer">
+     <label for="customInput">Enter Delimiter</label>
+    <input type="text" name="customInput" class="customInput" id="customInput" value="" />
+  </div>
+    <label for="filePicker"></label>
+    <input class="filePicker" type="file" name="filePicker" id="filePicker" value="" />
+    <!-- <input class="filePicker" type="file"> -->
+    <input type="submit" class="submitButton" name="submitButton" id="submitButton" value="Convert!" />
+   </form>
+  </div>
+  <section class="contentContainer">
+    <input type="button" class="saveButton" name="saveButton" id="saveButton" value="Save" />
+   <pre class="contentDisplay">
+    See output here
+   </pre>
+  </section>
+ </main>
+ <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/FileSaver.js"></script>
+ <script src="./fileReader.js" type="module"></script>
+</body>
+
+</html>
