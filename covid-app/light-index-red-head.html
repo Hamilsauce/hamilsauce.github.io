@@ -2,83 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        :root {
-            --mainBlue: #306785;
-            --mainTeal: #307c85;
-            --mainOrange: #a05539;
-        }
-        html,
-        body {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            /* height: 100vh; */
-            background: var(--mainBlue);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root {
+      --mainBlue: #4c8fb6;
+      --mainTeal: #307c85;
+      --mainOrange: #a05539;
+    }
 
-        .app {
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            grid-template-rows: 1fr 4fr;
-            max-width: 700px;
-            height: 100vh;
-            margin: auto;
-            box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.144);
-            border-left: 1px solid rgb(69, 167, 69);
-            border-right: 1px solid rgb(69, 167, 69);
-            border-left: 1px solid var(--mainBlue);
-            border-right: 1px solid var(--mainBlue);
-        }
+    html,
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      /* height: 100vh; */
+      background: var(--mainBlue);
+    }
 
-        .header {
-            box-sizing: border-box;
-            grid-column: span 6;
-            background-color: rgb(69, 167, 69);
-            background-color: var(--mainOrange);
-            width: 100%;
-            border-bottom: 2px solid rgb(62, 155, 62);
-            border-bottom: 2px solid var(--mainBlue);
-        }
-        .header-title {
-            color: white;
-            padding: 10px;
-            margin: 0;
-        }
-        .left-section {
-            grid-column: 1 / span 2;
-            box-sizing: border-box;
-            background-color: rgb(236, 236, 236);
-            background: rgb(212, 212, 212);
-        }
+    .app {
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr 4fr;
+      justify-content: center;
 
-        .right-section {
-            box-sizing: border-box;
-            grid-column: 3 / span 4;
-            border-left: 1px solid rgb(185, 185, 185);
-            background-color: rgb(236, 236, 236)
-        }
+      max-width: 700px;
+      min-height: 100vh;
+      margin: auto;
+      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.288);
+      border-left: 2px solid rgba(0, 0, 0, 0.315);
+      border-right: 2px solid rgba(0, 0, 0, 0.342);
+    }
 
-        @media screen (max-width: 450px) {
-            .app {
-                /* width: 100% */
-            }
-        }
-    </style>
+    .header {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr;
+      box-sizing: border-box;
+      grid-column: span 6;
+      background-color: var(--mainOrange);
+      width: 100%;
+      /* border: 4px solid #642c1788; */
+      /* border-bottom: 2px solid var(--mainBlue);
+      border-top: 4px solid #6b321b9b;
+      border-left: 2px solid #6b321b9b;
+      border-right: 2px solid #6b321b9b; */
+    }
+
+    .header-top {
+      border-top: 5px solid #6b321b73;
+      border-left: 5px solid #6b321b73;
+      border-right: 5px solid #6b321b73;
+      border: 5px solid #6b321b73;
+
+    }
+
+    .header-title {
+      color: white;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .header-bottom {
+      background: #307d85;
+      border-top: 5px solid #165961a8;
+      border: 5px solid #135e6694;
+      /* border-top: 2px solid rgba(0, 0, 0, 0.267); */
+      /* border-top: 2px solid rgba(255, 255, 255, 0.575); */
+      /* border-bottom: 2px solid white; */
+    }
+
+    .left-section {
+      grid-column: 1 / span 1;
+      box-sizing: border-box;
+      background-color: rgb(236, 236, 236);
+      background: rgb(212, 212, 212);
+      border-left: 5px solid rgba(156, 156, 156, 0.63);
+    }
+
+    .links {
+      width: 60px;
+    }
+
+    .right-section {
+      box-sizing: border-box;
+      grid-column: 2 / span 2;
+      border-left: 5px solid rgba(156, 156, 156, 0.63);
+      background-color: rgb(236, 236, 236);
+      border-right: 5px solid rgba(156, 156, 156, 0.63);
+    }
+
+    @media screen and (max-width: 450px) {
+      .app {
+        box-sizing: border-box;
+        grid-template-columns: 1fr;
+        grid-auto-rows: autofill 1fr;
+        justify-content: center;
+      }
+  </style>
 </head>
 
 <body>
-    <div class="app">
-        <header class="header">
-            <h1 class="header-title">covid app</h1>
-        </header>
-        <div class="left-section"></div>
-        <div class="right-section"></div>
+  <div class="app">
+    <header class="header">
+      <div class="header-top">
+        <h1 class="header-title">covid app</h1>
+      </div>
+      <div class="header-bottom"></div>
+    </header>
+    <div class="left-section">
+      <ul class="links">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#">Link4</a>
+        <a href="#">Link5</a>
+        <a href="#">Link6</a>
+      </ul>
+      <div class="sidebar-content"></div>
     </div>
+    <div class="right-section"></div>
 
 </body>
 
