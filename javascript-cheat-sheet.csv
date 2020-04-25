@@ -1,0 +1,368 @@
+ID,Method/Property,Description,cratedCategories
+1,sort(),Sorts elements alphabetically,ARRAY
+2,splice(),Adds elements in a specified way and position,ARRAY
+3,toString(),Converts elements to strings,ARRAY
+4,unshift(),Adds a new element to the beginning,ARRAY
+5,valueOf(),Returns the first position at which a given elementappears in an array,ARRAY
+7,Basic Operators,Returns the first position at which a given elementappears in an array,OPERATORS
+8,+,Addition,OPERATORS
+9,-,Subtraction,OPERATORS
+10,*,Multiplication,OPERATORS
+11,/,Division,OPERATORS
+12,(...),"Grouping operator, operations within brackets are executedearlier than those outside",OPERATORS
+13,%,Modulus (remainder ),OPERATORS
+14,++,Increment numbers,OPERATORS
+15,--,Decrement numbers,OPERATORS
+16,Comparison Operators,Decrement numbers,OPERATORS
+17,==,Equal to,OPERATORS
+18,===,Equal value and equal type,OPERATORS
+19,!=,Not equal,OPERATORS
+20,!==,Not equal value or not equal type,OPERATORS
+21,>,Greater than,OPERATORS
+22,<,Less than,OPERATORS
+23,>=,Greater than or equal to,OPERATORS
+24,THE NEXT LEVEL: ARRAYS,Greater than or equal to,ARRAY
+25,"var fruit = [Banana, Apple, Pear];",Greater than or equal to,ARRAY
+26,Array Methods,Greater than or equal to,ARRAY
+27,concat(),Join several arrays into one,ARRAY
+28,indexOf(),Returns the primitive value of the specified object,ARRAY
+29,join(),Combine elements of an array into a single string and returnthe string,ARRAY
+30,lastIndexOf(),Gives the last position at which a given elementappears in an array,ARRAY
+31,pop(),Removes the last element of an array,ARRAY
+32,push(),Add a new element at the end,ARRAY
+33,reverse(),Sort elements in descending order,ARRAY
+34,shift(),Remove the first element of an array,ARRAY
+35,slice(),Pulls a copy of a portion of an array into a new array,ARRAY
+37,var person = John Doe;,Pulls a copy of a portion of an array into a new array,STRINGS
+38,Escape Characters,Pulls a copy of a portion of an array into a new array,STRINGS
+39,\',Single quote,STRINGS
+40,\ — Double quote,Single quote,STRINGS
+41,\\,Backslash,STRINGS
+42,\b,Backspace,STRINGS
+43,\f,Form feed,STRINGS
+44,\n,New line,STRINGS
+45,\r,Carriage return,STRINGS
+46,\t,Horizontal tabulator,STRINGS
+47,\v,Vertical tabulator,STRINGS
+48,String Methods,Vertical tabulator,STRINGS
+49,charAt(),Returns a character at a specified position inside a,STRINGS
+50,string,Returns a character at a specified position inside a,STRINGS
+51,charCodeAt(),Gives you the unicode of character at that position,STRINGS
+52,concat(),Concatenates (joins) two or more strings into one,STRINGS
+53,fromCharCode(),Returns a string created from the specified sequence,STRINGS
+54,of UTF-16 code units,Returns a string created from the specified sequence,STRINGS
+55,indexOf(),Provides the position of the first occurrence of aspecified text within a string,STRINGS
+56,lastIndexOf(),"Same as indexOf() but with the last occurrence,searching backwards",STRINGS
+57,match(),Retrieves the matches of a string against a search pattern,STRINGS
+58,replace(),Find and replace specified text in a string,STRINGS
+59,search(),Executes a search for a matching text and returns itsposition,STRINGS
+60,slice(),Extracts a section of a string and returns it as a newstring,STRINGS
+61,split(),Splits a string object into an array of strings at aspecified position,STRINGS
+62,substr(),Similar to slice() but extracts a substring depended on a,STRINGS
+63,specified number of characters,Similar to slice() but extracts a substring depended on a,STRINGS
+64,substring(),Also similar to slice() but can’t accept negativeindices,STRINGS
+65,toLowerCase(),Convert strings to lower case,STRINGS
+66,toUpperCase(),Convert strings to upper case,STRINGS
+67,valueOf(),Returns the primitive value (that has no properties ormethods) of a string object,STRINGS
+69,Pattern Modifiers,Returns the primitive value (that has no properties ormethods) of a string object,REGULAR EXPRESSION SYNTAX
+70,e,Evaluate replacement,REGULAR EXPRESSION SYNTAX
+71,i,Perform case-insensitive matching,REGULAR EXPRESSION SYNTAX
+72,g,Perform global matching,REGULAR EXPRESSION SYNTAX
+73,m,Perform multiple line matching,REGULAR EXPRESSION SYNTAX
+74,s,Treat strings as single line,REGULAR EXPRESSION SYNTAX
+75,x,Allow comments and whitespace in pattern,REGULAR EXPRESSION SYNTAX
+76,U,Ungreedy pattern,REGULAR EXPRESSION SYNTAX
+77,Brackets,Ungreedy pattern,REGULAR EXPRESSION SYNTAX
+78,[abc],Find any of the characters between the brackets,REGULAR EXPRESSION SYNTAX
+79,[^abc],Find any character not in the brackets,REGULAR EXPRESSION SYNTAX
+80,[0-9],Used to find any digit from 0 to 9,REGULAR EXPRESSION SYNTAX
+81,[A-z],Find any character from uppercase A to lowercase z,REGULAR EXPRESSION SYNTAX
+82,(a|b|c),Find any of the alternatives separated with |,REGULAR EXPRESSION SYNTAX
+83,Metacharacters,Find any of the alternatives separated with |,REGULAR EXPRESSION SYNTAX
+84,.,"Find a single character, except newline or line terminator",REGULAR EXPRESSION SYNTAX
+85,\w,Word character,REGULAR EXPRESSION SYNTAX
+86,\W,Non-word character,REGULAR EXPRESSION SYNTAX
+87,\d,A digit,REGULAR EXPRESSION SYNTAX
+88,\D,A non-digit character,REGULAR EXPRESSION SYNTAX
+89,\s,Whitespace character,REGULAR EXPRESSION SYNTAX
+90,\S,Non-whitespace character,REGULAR EXPRESSION SYNTAX
+91,\b,Find a match at the beginning/end of a word,REGULAR EXPRESSION SYNTAX
+92,\B,A match not at the beginning/end of a word,REGULAR EXPRESSION SYNTAX
+93,\0,NUL character,REGULAR EXPRESSION SYNTAX
+94,\n,A new line character,REGULAR EXPRESSION SYNTAX
+95,\f,Form feed character,REGULAR EXPRESSION SYNTAX
+96,\r,Carriage return character,REGULAR EXPRESSION SYNTAX
+97,\t,Tab character,REGULAR EXPRESSION SYNTAX
+98,\v,Vertical tab character,REGULAR EXPRESSION SYNTAX
+99,\xxx,The character specified by an octal number xxx,REGULAR EXPRESSION SYNTAX
+100,\xdd,Character specified by a hexadecimal number dd,REGULAR EXPRESSION SYNTAX
+101,\uxxxx,The Unicode character specified by a hexadecimal number xxxx,REGULAR EXPRESSION SYNTAX
+102,Quantifiers,The Unicode character specified by a hexadecimal number xxxx,REGULAR EXPRESSION SYNTAX
+103,n+,Matches any string that contains at least one n,REGULAR EXPRESSION SYNTAX
+104,n*,Any string that contains zero or more occurrences of n,REGULAR EXPRESSION SYNTAX
+105,n?,A string that contains zero or one occurrences of n,REGULAR EXPRESSION SYNTAX
+106,n{X},String that contains a sequence of X n’s,REGULAR EXPRESSION SYNTAX
+107,"n{X,Y}",Strings that contains a sequence of X to Y n’s,REGULAR EXPRESSION SYNTAX
+108,"n{X,}",Matches any string that contains a sequence of at least X n’s,REGULAR EXPRESSION SYNTAX
+109,n$,Any string with n at the end of it,REGULAR EXPRESSION SYNTAX
+110,^n,String with n at the beginning of it,REGULAR EXPRESSION SYNTAX
+111,?=n,Any string that is followed by a specific string n,REGULAR EXPRESSION SYNTAX
+112,?!n,String that is not followed by a specific string n,REGULAR EXPRESSION SYNTAX
+114,Number Properties,String that is not followed by a specific string n,NUMBERS AND MATH
+115,MAX_VALUE,The maximum numeric value representable in JavaScript,NUMBERS AND MATH
+116,MIN_VALUE,Smallest positive numeric value representable inJavaScript,NUMBERS AND MATH
+117,NaN,The “Not-a-Number” value,NUMBERS AND MATH
+118,NEGATIVE_INFINITY,The negative Infinity value,NUMBERS AND MATH
+119,POSITIVE_INFINITY,Positive Infinity value,NUMBERS AND MATH
+120,Number Methods,Positive Infinity value,NUMBERS AND MATH
+121,toExponential(),Returns a string with a rounded number written as,NUMBERS AND MATH
+122,exponential notation,Returns a string with a rounded number written as,NUMBERS AND MATH
+123,toFixed(),Returns the string of a number with a specified number of,NUMBERS AND MATH
+124,decimals,Returns the string of a number with a specified number of,NUMBERS AND MATH
+125,toPrecision(),String of a number written with a specified length,NUMBERS AND MATH
+126,toString(),Returns a number as a string,NUMBERS AND MATH
+127,valueOf(),Returns a number as a number,NUMBERS AND MATH
+128,Math Properties,Returns a number as a number,NUMBERS AND MATH
+129,E,Euler’s number,NUMBERS AND MATH
+130,LN2,The natural logarithm of 2,NUMBERS AND MATH
+131,LN10,Natural logarithm of 10,NUMBERS AND MATH
+132,LOG2E,Base 2 logarithm of E,NUMBERS AND MATH
+133,LOG10E,Base 10 logarithm of E,NUMBERS AND MATH
+134,PI,The number PI,NUMBERS AND MATH
+135,SQRT1_2,Square root of 1/2,NUMBERS AND MATH
+136,SQRT2,The square root of 2,NUMBERS AND MATH
+137,Math Methods,The square root of 2,NUMBERS AND MATH
+138,abs(x),Returns the absolute (positive) value of x,NUMBERS AND MATH
+139,acos(x),"The arccosine of x, in radians",NUMBERS AND MATH
+140,asin(x),"Arcsine of x, in radians",NUMBERS AND MATH
+141,atan(x),The arctangent of x as a numeric value,NUMBERS AND MATH
+142,"atan2(y,x)",Arctangent of the quotient of its arguments,NUMBERS AND MATH
+143,ceil(x),Value of x rounded up to its nearest integer,NUMBERS AND MATH
+144,cos(x),The cosine of x (x is in radians),NUMBERS AND MATH
+145,exp(x),Value of Ex,NUMBERS AND MATH
+146,floor(x),The value of x rounded down to its nearest integer,NUMBERS AND MATH
+147,log(x),The natural logarithm (base E) of x,NUMBERS AND MATH
+148,getUTCDate(),The day (date) of the month in the specified date,NUMBERS AND MATH
+149,"according to universal time (also available for day, month, fullyear,",The day (date) of the month in the specified date,NUMBERS AND MATH
+150,"hours, minutes etc.)",The day (date) of the month in the specified date,NUMBERS AND MATH
+151,parse,"Parses a string representation of a date, and returns thenumber of milliseconds since January 1, 1970",NUMBERS AND MATH
+152,Set Part of a Date,"Parses a string representation of a date, and returns thenumber of milliseconds since January 1, 1970",NUMBERS AND MATH
+153,setDate(),Set the day as a number (1-31),NUMBERS AND MATH
+154,setFullYear(),Sets the year (optionally month and day),NUMBERS AND MATH
+155,setHours(),Set the hour (0-23),NUMBERS AND MATH
+156,setMilliseconds(),Set milliseconds (0-999),NUMBERS AND MATH
+157,setMinutes(),Sets the minutes (0-59),NUMBERS AND MATH
+158,setMonth(),Set the month (0-11),NUMBERS AND MATH
+159,setSeconds(),Sets the seconds (0-59),NUMBERS AND MATH
+160,setTime(),"Set the time (milliseconds since January 1, 1970)",NUMBERS AND MATH
+161,setUTCDate(),"Sets the day of the month for a specified dateaccording to universal time (also available for day, month, fullyear,hours, minutes etc.)",NUMBERS AND MATH
+163,Node Properties,"Sets the day of the month for a specified dateaccording to universal time (also available for day, month, fullyear,hours, minutes etc.)",DOM MODE
+164,attributes,Returns a live collection of all attributes registered,DOM MODE
+165,to and element,Returns a live collection of all attributes registered,DOM MODE
+166,baseURI,Provides the absolute base URL of an HTML element,DOM MODE
+167,childNodes,Gives a collection of an element’s child nodes,DOM MODE
+168,firstChild,Returns the first child node of an element,DOM MODE
+169,lastChild,The last child node of an element,DOM MODE
+170,nextSibling,Gives you the next node at the same node tree level,DOM MODE
+171,nodeName,Returns the name of a node,DOM MODE
+172,nodeType,Returns the type of a node,DOM MODE
+173,nodeValue,Sets or returns the value of a node,DOM MODE
+174,ownerDocument,The top-level document object for this node,DOM MODE
+175,parentNode,Returns the parent node of an element,DOM MODE
+176,previousSibling,Returns the node immediately preceding the currentone,DOM MODE
+177,textContent,Sets or returns the textual content of a node and itsdescendants,DOM MODE
+178,Node Methods,Sets or returns the textual content of a node and itsdescendants,DOM MODE
+179,appendChild(),Adds a new child node to an element as the last child,DOM MODE
+180,node,Adds a new child node to an element as the last child,DOM MODE
+181,cloneNode(),Clones an HTML element,DOM MODE
+182,compareDocumentPosition(),Compares the document position of twoelements,DOM MODE
+183,getFeature(),Returns an object which implements the APIs of aspecified feature,DOM MODE
+184,hasAttributes(),"Returns true if an element has any attributes,otherwise false",DOM MODE
+185,hasChildNodes(),"Returns true if an element has any child nodes,otherwise false",DOM MODE
+186,insertBefore(),"Inserts a new child node before a specified,existing child node",DOM MODE
+187,isDefaultNamespace(),"Returns true if a specified namespaceURI isthe default, otherwise false",DOM MODE
+188,isEqualNode(),Checks if two elements are equal,DOM MODE
+189,isSameNode(),Checks if two elements are the same node,DOM MODE
+190,isSupported(),Returns true if a specified feature is supported onthe element,DOM MODE
+191,lookupNamespaceURI(),Returns the namespaceURI associated with agiven node,DOM MODE
+192,lookupPrefix(),Returns a DOMString containing the prefix for a,DOM MODE
+193,"given namespaceURI, if present",Returns a DOMString containing the prefix for a,DOM MODE
+194,normalize(),Joins adjacent text nodes and removes empty text nodesin an element,DOM MODE
+195,removeChild(),Removes a child node from an element,DOM MODE
+196,replaceChild(),Replaces a child node in an element,DOM MODE
+197,Element Methods,Replaces a child node in an element,DOM MODE
+198,getAttribute(),Returns the specified attribute value of an element,DOM MODE
+199,node,Returns the specified attribute value of an element,DOM MODE
+200,getAttributeNS(),Returns string value of the attribute with thespecified namespace and name,DOM MODE
+201,getAttributeNode(),Gets the specified attribute node,DOM MODE
+202,getAttributeNodeNS(),Returns the attribute node for the attributewith the given namespace and name,DOM MODE
+203,getElementsByTagName(),Provides a collection of all child elementswith the specified tag name,DOM MODE
+204,getElementsByTagNameNS(),Returns a live HTMLCollection of elements,DOM MODE
+205,with a certain tag name belonging to the given namespace,Returns a live HTMLCollection of elements,DOM MODE
+206,hasAttribute(),"Returns true if an element has any attributes,otherwise false",DOM MODE
+207,hasAttributeNS(),Provides a true/false value indicating whether thecurrent element in a given namespace has the specified attribute,DOM MODE
+208,removeAttribute(),Removes a specified attribute from an element,DOM MODE
+209,removeAttributeNS(),Removes the specified attribute from an elementwithin a certain namespace,DOM MODE
+210,removeAttributeNode(),Takes away a specified attribute node andreturns the removed node,DOM MODE
+211,setAttribute(),Sets or changes the specified attribute to aspecified value,DOM MODE
+212,setAttributeNS(),Adds a new attribute or changes the value of an,DOM MODE
+213,attribute with the given namespace and name,Adds a new attribute or changes the value of an,DOM MODE
+214,setAttributeNode(),Sets or changes the specified attribute node,DOM MODE
+215,setAttributeNodeNS(),Adds a new namespaced attribute node to an,DOM MODE
+216,element,Adds a new namespaced attribute node to an,DOM MODE
+218,Window Properties,Adds a new namespaced attribute node to an,WORKING WITH THE USER BROWSER
+219,closed,Checks whether a window has been closed or not and returns,WORKING WITH THE USER BROWSER
+220,true or false,Checks whether a window has been closed or not and returns,WORKING WITH THE USER BROWSER
+221,defaultStatus,Sets or returns the default text in the statusbar ofa window,WORKING WITH THE USER BROWSER
+222,document,Returns the document object for the window,WORKING WITH THE USER BROWSER
+223,frames,Returns all <iframe> elements in the current window,WORKING WITH THE USER BROWSER
+224,history,Provides the History object for the window,WORKING WITH THE USER BROWSER
+225,innerHeight,The inner height of a window’s content area,WORKING WITH THE USER BROWSER
+226,innerWidth,The inner width of the content area,WORKING WITH THE USER BROWSER
+227,length,Find out the number of<iframe> elements in the window,WORKING WITH THE USER BROWSER
+228,location,Returns the location object for the window,WORKING WITH THE USER BROWSER
+229,name,Sets or returns the name of a window,WORKING WITH THE USER BROWSER
+230,navigator,Returns the Navigator object for the window,WORKING WITH THE USER BROWSER
+231,opener,Returns a reference to the window that created the window,WORKING WITH THE USER BROWSER
+232,outerHeight,"The outer height of a window, including toolbars/scrollbars",WORKING WITH THE USER BROWSER
+233,outerWidth,"The outer width of a window, including toolbars/scrollbars",WORKING WITH THE USER BROWSER
+234,pageXOffset,Number of pixels the current document has been scrolledhorizontally,WORKING WITH THE USER BROWSER
+235,pageYOffset,Number of pixels the document has been scrolledvertically,WORKING WITH THE USER BROWSER
+236,parent,The parent window of the current window,WORKING WITH THE USER BROWSER
+237,screen,Returns the Screen object for the window,WORKING WITH THE USER BROWSER
+238,screenLeft,The horizontal coordinate of the window (relative to,WORKING WITH THE USER BROWSER
+239,screen),The horizontal coordinate of the window (relative to,WORKING WITH THE USER BROWSER
+240,screenTop,The vertical coordinate of the window,WORKING WITH THE USER BROWSER
+241,screenX,Same as screenLeft but needed for some browsers,WORKING WITH THE USER BROWSER
+242,screenY,Same as screenTop but needed for some browsers,WORKING WITH THE USER BROWSER
+243,self,Returns the current window,WORKING WITH THE USER BROWSER
+244,status,Sets or returns the text in the statusbar of a window,WORKING WITH THE USER BROWSER
+245,top,Returns the topmost browser window,WORKING WITH THE USER BROWSER
+246,Window Methods,Returns the topmost browser window,WORKING WITH THE USER BROWSER
+247,alert(),Displays an alert box with a message and an OK button,WORKING WITH THE USER BROWSER
+248,blur(),Removes focus from the current window,WORKING WITH THE USER BROWSER
+249,clearInterval(),Clears a timer set with setInterval(),WORKING WITH THE USER BROWSER
+250,clearTimeout(),Clears a timer set with setTimeout(),WORKING WITH THE USER BROWSER
+251,close(),Closes the current window,WORKING WITH THE USER BROWSER
+252,confirm(),Displays a dialogue box with a message andan OK and Cancelbutton,WORKING WITH THE USER BROWSER
+253,focus(),Sets focus to the current window,WORKING WITH THE USER BROWSER
+254,moveBy(),Moves a window relative to its current position,WORKING WITH THE USER BROWSER
+255,moveTo(),Moves a window to a specified position,WORKING WITH THE USER BROWSER
+256,open(),Opens a new browser window,WORKING WITH THE USER BROWSER
+257,print(),Prints the content of the current window,WORKING WITH THE USER BROWSER
+258,prompt(),Displays a dialogue box that prompts the visitor for input,WORKING WITH THE USER BROWSER
+259,resizeBy(),Resizes the window by the specified number of pixels,WORKING WITH THE USER BROWSER
+260,resizeTo(),Resizes the window to a specified width and height,WORKING WITH THE USER BROWSER
+261,scrollBy(),Scrolls the document by a specified number of pixels,WORKING WITH THE USER BROWSER
+262,scrollTo(),Scrolls the document to specified coordinates,WORKING WITH THE USER BROWSER
+263,setInterval(),Calls a function or evaluates an expression at,WORKING WITH THE USER BROWSER
+264,specified intervals,Calls a function or evaluates an expression at,WORKING WITH THE USER BROWSER
+265,setTimeout(),Calls a function or evaluates an expression after aspecified interval,WORKING WITH THE USER BROWSER
+266,stop(),Stops the window from loading,WORKING WITH THE USER BROWSER
+267,Screen Properties,Stops the window from loading,WORKING WITH THE USER BROWSER
+268,availHeight,Returns the height of the screen (excluding the Windows,WORKING WITH THE USER BROWSER
+269,Taskbar),Returns the height of the screen (excluding the Windows,WORKING WITH THE USER BROWSER
+270,availWidth,Returns the width of the screen (excluding the WindowsTaskbar),WORKING WITH THE USER BROWSER
+271,colorDepth,Returns the bit depth of the color palette fordisplaying images,WORKING WITH THE USER BROWSER
+272,height,The total height of the screen,WORKING WITH THE USER BROWSER
+273,pixelDepth,The color resolution of the screen in bits per pixel,WORKING WITH THE USER BROWSER
+274,width,The total width of the screen,WORKING WITH THE USER BROWSER
+276,Mouse,The total width of the screen,JAVASCRIPT EVENTS
+277,onclick,The event occurs when the user clicks on an element,JAVASCRIPT EVENTS
+278,oncontextmenu,User right-clicks on an element to open a contextmenu,JAVASCRIPT EVENTS
+279,ondblclick,The user double-clicks on an element,JAVASCRIPT EVENTS
+280,onmousedown,User presses a mouse button over an element,JAVASCRIPT EVENTS
+281,onmouseenter,The pointer moves onto an element,JAVASCRIPT EVENTS
+282,onmouseleave,Pointer moves out of an element,JAVASCRIPT EVENTS
+283,onmousemove,The pointer is moving while it is over an element,JAVASCRIPT EVENTS
+284,onmouseover,When the pointer is moved onto an element or one of itschildren,JAVASCRIPT EVENTS
+285,onmouseout,User moves the mouse pointer out of an element or one of,JAVASCRIPT EVENTS
+286,its children,User moves the mouse pointer out of an element or one of,JAVASCRIPT EVENTS
+287,onmouseup,The user releases a mouse button while over an element,JAVASCRIPT EVENTS
+288,Keyboard,The user releases a mouse button while over an element,JAVASCRIPT EVENTS
+289,onkeydown,When the user is pressing a key down,JAVASCRIPT EVENTS
+290,onkeypress,The moment the user starts pressing a key,JAVASCRIPT EVENTS
+291,onkeyup,The user releases a key,JAVASCRIPT EVENTS
+292,Frame,The user releases a key,JAVASCRIPT EVENTS
+293,onabort,The loading of a media is aborted,JAVASCRIPT EVENTS
+294,onbeforeunload,Event occurs before the document is about to beunloaded,JAVASCRIPT EVENTS
+295,onerror,An error occurs while loading an external file,JAVASCRIPT EVENTS
+296,onhashchange,There have been changes to the anchor part of a URL,JAVASCRIPT EVENTS
+297,onload,When an object has loaded,JAVASCRIPT EVENTS
+298,onpagehide,The user navigates away from a webpage,JAVASCRIPT EVENTS
+299,onpageshow,When the user navigates to a webpage,JAVASCRIPT EVENTS
+300,onresize,The document view is resized,JAVASCRIPT EVENTS
+301,onscroll,An element’s scrollbar is being scrolled,JAVASCRIPT EVENTS
+302,onunload,Event occurs when a page has unloaded,JAVASCRIPT EVENTS
+303,Form,Event occurs when a page has unloaded,JAVASCRIPT EVENTS
+304,onblur,When an element loses focus,JAVASCRIPT EVENTS
+305,onchange,"The content of a form element changes(for <input>, <select>and <textarea>)",JAVASCRIPT EVENTS
+306,onfocus,An element gets focus,JAVASCRIPT EVENTS
+307,onfocusin,When an element is about to get focus,JAVASCRIPT EVENTS
+308,onfocusout,The element is about to lose focus,JAVASCRIPT EVENTS
+309,oninput,User input on an element,JAVASCRIPT EVENTS
+310,oninvalid,An element is invalid,JAVASCRIPT EVENTS
+311,onreset,A form is reset,JAVASCRIPT EVENTS
+312,onsearch,The user writes something in a search field(for <input=search>),JAVASCRIPT EVENTS
+313,onselect,The user selects some text (for <input> and <textarea>),JAVASCRIPT EVENTS
+314,onsubmit,A form is submitted,JAVASCRIPT EVENTS
+315,Drag,A form is submitted,JAVASCRIPT EVENTS
+316,ondrag,An element is dragged,JAVASCRIPT EVENTS
+317,ondragend,The user has finished dragging the element,JAVASCRIPT EVENTS
+318,ondragenter,The dragged element enters a drop target,JAVASCRIPT EVENTS
+319,ondragleave,A dragged element leaves the drop target,JAVASCRIPT EVENTS
+320,ondragover,The dragged element is on top of the drop target,JAVASCRIPT EVENTS
+321,ondragstart,User starts to drag an element,JAVASCRIPT EVENTS
+322,ondrop,Dragged element is dropped on the drop target,JAVASCRIPT EVENTS
+323,Clipboard,Dragged element is dropped on the drop target,JAVASCRIPT EVENTS
+324,oncopy,User copies the content of an element,JAVASCRIPT EVENTS
+325,oncut,The user cuts an element’s content,JAVASCRIPT EVENTS
+326,onpaste,A user pastes content in an element,JAVASCRIPT EVENTS
+327,Media,A user pastes content in an element,JAVASCRIPT EVENTS
+328,onabort,Media loading is aborted,JAVASCRIPT EVENTS
+329,oncanplay,The browser can start playing media (e.g. a file hasbuffered enough),JAVASCRIPT EVENTS
+330,oncanplaythrough,When browser can play through media withoutstopping,JAVASCRIPT EVENTS
+331,ondurationchange,The duration of the media changes,JAVASCRIPT EVENTS
+332,onended,The media has reach its end,JAVASCRIPT EVENTS
+333,onerror,Happens when an error occurs while loading an external file,JAVASCRIPT EVENTS
+334,onloadeddata,Media data is loaded,JAVASCRIPT EVENTS
+335,onloadedmetadata,Meta data (like dimensions and duration) areloaded,JAVASCRIPT EVENTS
+336,onloadstart,Browser starts looking for specified media,JAVASCRIPT EVENTS
+337,onpause,Media is paused either by the user or automatically,JAVASCRIPT EVENTS
+338,onplay,The media has been started or is no longer paused,JAVASCRIPT EVENTS
+339,onplaying,Media is playing after having been paused or stopped forbuffering,JAVASCRIPT EVENTS
+340,onprogress,Browser is in the process of downloading the media,JAVASCRIPT EVENTS
+341,onratechange,The playing speed of the media changes,JAVASCRIPT EVENTS
+342,onseeked,User is finished moving/skipping to a new position in themedia,JAVASCRIPT EVENTS
+343,onseeking,The user starts moving/skipping,JAVASCRIPT EVENTS
+344,onstalled,The browser is trying to load the media but it is notavailable,JAVASCRIPT EVENTS
+345,onsuspend,Browser is intentionally not loading media,JAVASCRIPT EVENTS
+346,ontimeupdate,The playing position has changed (e.g. because of fastforward),JAVASCRIPT EVENTS
+347,onvolumechange,Media volume has changed (including mute),JAVASCRIPT EVENTS
+348,onwaiting,"Media paused but expected to resume (for example,buffering)",JAVASCRIPT EVENTS
+349,Animation,"Media paused but expected to resume (for example,buffering)",JAVASCRIPT EVENTS
+350,animationend,A CSS animation is complete,JAVASCRIPT EVENTS
+351,animationiteration,CSS animation is repeated,JAVASCRIPT EVENTS
+352,animationstart,CSS animation has started,JAVASCRIPT EVENTS
+353,Other,CSS animation has started,JAVASCRIPT EVENTS
+354,transitionend,Fired when a CSS transition has completed,JAVASCRIPT EVENTS
+355,onmessage,A message is received through the event source,JAVASCRIPT EVENTS
+356,onoffline,Browser starts to work offline,JAVASCRIPT EVENTS
+357,ononline,The browser starts to work online,JAVASCRIPT EVENTS
+358,onpopstate,When the window’s history changes,JAVASCRIPT EVENTS
+359,onshow,A <menu> element is shown as a context menu,JAVASCRIPT EVENTS
+360,onstorage,A Web Storage area is updated,JAVASCRIPT EVENTS
+361,ontoggle,The user opens or closes the <details> element,JAVASCRIPT EVENTS
+362,onwheel,Mouse wheel rolls up or down over an element,JAVASCRIPT EVENTS
+363,ontouchcancel,Screen touch is interrupted,JAVASCRIPT EVENTS
+364,ontouchend,User finger is removed from a touch screen,JAVASCRIPT EVENTS
+365,ontouchmove,A finger is dragged across the screen,JAVASCRIPT EVENTS
+366,ontouchstart,Finger is placed on touch screen,JAVASCRIPT EVENTS
+367,Errors,Finger is placed on touch screen,JAVASCRIPT EVENTS
+368,try,Lets you define a block of code to test for errors,JAVASCRIPT EVENTS
+369,catch,Set up a block of code to execute in case of an error,JAVASCRIPT EVENTS
+370,throw,Create custom error messages instead of the standardJavaScript errors,JAVASCRIPT EVENTS
+371,finally,"Lets you execute code, after try and catch, regardless ofthe result",JAVASCRIPT EVENTS
+372,Error Name Values,"Lets you execute code, after try and catch, regardless ofthe result",JAVASCRIPT EVENTS
+373,name,Sets or returns the error name,JAVASCRIPT EVENTS
+374,message,Sets or returns an error message in string from,JAVASCRIPT EVENTS

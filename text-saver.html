@@ -29,7 +29,7 @@
       gap: 10px;
       width: 95vw;
       max-width: 700px;
-      height: 100vh;
+      /* height: 100vh; */
       margin: auto;
       box-sizing: border-box;
     }
@@ -41,10 +41,10 @@
       flex-direction: column;
       justify-content: center;
       max-width: 500px;
-      height: 100%;
-      margin: auto 5px;
+      height: fit-content;
+      margin: 5px 5px;
       padding-left: 4px;
-      font-size: 14px;
+      font-size: 13px;
 
     }
 
@@ -55,8 +55,8 @@
       max-width: 500px;
       min-width: fit-content;
       min-height: fit-content;
-      height: 550px;
-      margin: auto 0px;
+      /* height: 550px; */
+      margin: 0 0px;
       padding: 5px 5px 15px 5px;
       background: rgba(228, 228, 228, 0.835);
       border: 2px solid rgb(197, 197, 197);
@@ -73,8 +73,8 @@
       gap: 1;
       width: 100%;
       min-width: fit-content;
-      height: 100%;
-      min-height: fit-content;
+      /* height: 100%;
+      min-height: fit-content; */
       margin: 0;
       box-sizing: border-box;
       padding: 0px;
@@ -180,10 +180,10 @@
 <body>
   <main class="app">
     <div class="text-group">
-      <h3>Saving a file with pure JS!</h3>
-      <p>Uses HTML5 W3C saveAs() function and the
-        <a href="https://github.com/eligrey/FileSaver.js" target="_blank">FileSaver.js</a> polyfill for this. </p>
-      <p> I didn't think this was even possible without a server but the docs say it should work in IE 10+, Sweet!</p>
+      <h3>Create, fetch, and download.</h3>
+      <p>Create your own file below enter
+        the address to a file you'd like
+        to download</p>
     </div>
     <div class="form-container">
       <form class="userform">
