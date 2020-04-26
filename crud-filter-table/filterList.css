@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  color: rgb(87, 87, 87);
+}
+
+.fa-times-circle {
+  position: absolute;
+  opacity: 0;
+  color: #88787b;
+  z-index: 3;
+  bottom: 20px;
+  right: 30px;
+  transition: 0.1s;
+}
+
+.fa-times-circle.show {
+  opacity: 0.95;
+}
+
+.content {
+  width: fit-content;
+  margin: auto;
+
+}
+
+#search-input {
+  background-image: url('./assets/search-icon-small.svg');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 18px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.clearButton {
+  width: 32px;
+  height: 100%;
+  top: -5px;
+  bottom: 500px
+}
+
+.table-container {
+  display: grid;
+}
+
+#datatable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+  /* border: 1px solid #ddd;*/
+  font-size: 18px;
+  width: 500px;
+  touch-action: manipulation;
+  z-index: 1;
+}
+
+.tableBody {
+  z-index: 0;
+}
+
+.header,
+.table-field {
+  text-align: left;
+  padding: 12px;
+}
+
+.header {
+  color: rgb(47, 47, 47);
+}
+
+.header-text {
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+.header-text:hover {
+  text-shadow: 0 0 13px rgba(22, 53, 50, 0.39);
+  transition: 0.3s;
+}
+
+.action-column {
+  background: rgba(12, 58, 53, 0.514);
+  font-size: 0.8em;
+
+}
+
+.tableRow {
+  border-bottom: 1px solid #dddddd50;
+  cursor: pointer;
+}
+
+.header-row {
+  background-color: rgba(177, 183, 179, 0.4);
+
+}
+
+.tableRow:hover {
+  background-color: rgba(232, 232, 232, 0.5);
+  /* border-bottom: 1px solid #f1f1f1; */
+
+}
+
+.selectedRow {
+  /* background: rgba(49, 117, 142, 0.4); */
+  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid rgba(232, 232, 232, 1);
+  transition: 0.2s ease-in-out;
+  outline: none;
+  cursor: auto;
+  background: rgba(78, 186, 186, 0.85);
+
+  box-shadow: 0 0 7px 1px inset rgba(218, 228, 220, 1);
+  border: 1px solid black;
+  /* transform: scale(0.98, 0.99) translateX(4px); */
+}
+
+.selectedRow td {
+
+  background: rgba(78, 186, 186, 0.85);
+
+}
+
+/**/
+/* .editing {
+  box-shadow: 0 0 8px 1px inset rgba(220, 237, 232, 0.9);
+} */
+
+::selection {
+  color: #ffffff;
+  box-shadow: 0 0 20px 1px rgba(220, 237, 232, 0.8);
+  padding: 10px;
+  background: rgba(78, 186, 186, 0.85);
+}
