@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+  <script type="text/x-template" id="app-template">
+    <v-app>
+      <v-container>
+        poop
+         <v-card dark true ripple>{{message}} </v-card>
+      </v-container>
+    </v-app>
+  </script>
+
+  <div id="v-app"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script id="vcard-template" type="text/x-template">
+    <v-card
+    class="mx-auto"
+    max-width="344"
+  >
+    <v-card-text>
+      <div>Word of the Day</div>
+      <p class="display-1 text--primary">
+        be•nev•o•lent
+      </p>
+      <p>adjective</p>
+      <div class="text--primary">
+        well meaning and kindly.<br>
+        "a benevolent smile"
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="deep-purple accent-4"
+      >
+        Learn More
+      </v-btn>
+    </v-card-actions>
+  </v-card>
+  </script>
+
+  <script id="app-template" type="text/x-template">
+  <v-app>
+    <v-toolbar class="deep-purple">
+      <v-toolbar-title class="text--darken-1">Artixun Softwares</v-toolbar-title>
+      <v-toolbar-items>
+        <v-btn text dark>
+      <v-card value="fuck">{{message}}</v-card>
+
+
+          <!-- <router-link :to="{name: 'home' }">Home</router-link> -->
+        </v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    <v-content>
+    </v-content>
+
+    <v-footer class="pa-3 deep-purple">
+      <v-spacer></v-spacer>
+      <div> {{ new Date().getFullYear() }}</div>
+    </v-footer>
+    </v-app>
+  </script>
+  <script>
+
+
+    const App = {
+      template: '#app-template',
+      data() {
+        return {
+          message: 'hope this works!'
+        }
+      }
+
+    }
+
+
+    new Vue({
+      vuetify: new Vuetify(),
+      render: h => h(App)
+    }).$mount('#v-app')
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+* {
+  box-sizing: border;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10px 1fr 10px;
+  padding: 0px;
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  background: rgb(250, 248, 244);
+  border: 2px solid rgba(128, 128, 128, 0.692);
+}
+
+.app-header {
+  /* min-height: 50px; */
+}
+
+.grid-container {
+
+  display: grid;
+  grid-template-areas:
+    "g3 g3 . . g2 g2"
+    "g3 g3 . . g2 g2"
+    "g3 g3 g1 g1 g1 g1"
+    "g3 g3 g4 g4 g5 g5"
+    "g7 g7 g4 g4 g6 g6"
+    "g8 g8 . . g6 g6";
+  grid-gap: 3px;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  max-width: 700px;
+  background: rgb(255, 255, 255);
+  border: 2px solid rgba(128, 128, 128, 0.692);
+}
+
+.grid-item {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: 1fr 1fr 1fr; */
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 5px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: rgb(87, 53, 200);
+  /* box-shadow: 0px 0px 5px 2px rgba(97, 97, 97, 0.842); */
+  border: 4px solid rgb(9, 56, 100);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.app-footer {
+  /* min-height: 50px; */
+}
+
+
+/* .grid-item2+2) {
+  background: rgb(241, 255, 248);
+  transition: 0.3s ease-in-out;
+} */
+
+.grid-item:hover {
+  background: rgb(255, 255, 255);
+  /* box-shadow: 0px 0px 10px 5px rgba(190, 23, 23, 0.767); */
+  /* transform: scale(1.5); */
+
+  transition: 0.3s ease;
+}
+
+.grid-item:active {
+  /* background: rgba(202, 193, 193, 0.767); */
+  /* box-shadow: 0px 0px 10px 2px rgba(255, 39, 39, 0.767); */
+  /* transition: 0.3s ease-in-out; */
+}
+
+.item1 {
+  grid-area: g1;
+  /* grid-column: 1 / span 3; */
+}
+
+.item2 {
+  grid-area: g2;
+}
+
+.item3 {
+  grid-area: g3;
+}
+
+.item4 {
+  grid-area: g4;
+}
+
+.item5 {
+  grid-area: g5;
+}
+
+.item6 {
+  grid-area: g6;
+}
+
+.item7 {
+  grid-area: g7;
+}
+
+.item8 {
+  grid-area: g8;
+}
+
+.item9 {
+  grid-area: g9;
+}
+
+.item10 {
+  grid-area: g10;
+}
+
+.item11 {
+  grid-area: g11;
+}
+
+.item12 {
+  grid-area: g12;
+}
