@@ -16,14 +16,14 @@ const styleStore = {
     return this.fontColor;
   }
 }
-
-const addClass = (el, className) => {
-  el.classList.add(className)
+const toggleClass = (el, className) => {
+  el.classList.toggle(className)
 }
+const addClass = (el, className) => {}
 const removeClass = (el, className) => {
   el.classList.remove(className)
 }
-
+// End Utils
 
 const filterTable = () => {
   const table = document.querySelector("#datatable");
@@ -53,15 +53,17 @@ const filterTable = () => {
   }
 }
 
-document.querySelector('#search-input')
-  .addEventListener('keyup', e => {
-    filterTable();
-  });
+// document.querySelector('#search-input')
+//   .addEventListener('keyup', e => {
+//     filterTable();
+//   });
 
 
 const tableBody = document.querySelector(".tableBody");
 tableBody.querySelectorAll('tr').forEach((row, index, tableRows) => {
   row.addEventListener('dblclick', e => {
+    if (!e.target.classList.contains('table-field')) return;
+
     let activeField = e.target;
     if (window.activeRowIndex == index) { //tableBody.querySelectorAll('tr').indexOf(row)) {
       stopEdit(activeField, row);
@@ -129,21 +131,17 @@ const deselectText = () => {
 document.querySelector('#search-input').addEventListener('keyup', e => {
   const clearButton = document.querySelector('.clearButton')
   const search = document.querySelector('#search-input');
-  console.log('clearbutton');
-
-
+  filterTable()
   if (search.value.length > 0) {
     addClass(clearButton, 'show')
   } else if (search.value.length === 0) {
     removeClass(clearButton, 'show')
   }
-  filterTable()
 })
 
 // document.querySelector('#search-input').addEventListener('change', e => {
-//   const clearButton = document.querySelector('.clearButton')
-//   console.log('clearbutton');
-//   const search = e.target;
+//   const clearButton = document.querySelector('.fa-times-circle')
+//   const search = document.querySelector('#search-input');
 //   if (search.value.length > 0) {
 //     addClass(clearButton, 'show')
 //   } else if (search.value.length === 0) {
@@ -153,9 +151,40 @@ document.querySelector('#search-input').addEventListener('keyup', e => {
 
 document.querySelector('.clearButton').addEventListener('click', e => {
   const search = document.querySelector('#search-input');
-  const clearButton = document.querySelector('.clearButton');
+  const clearButton = document.querySelector('.fa-times-circle');
   search.value = '';
   filterTable();
-  removeClass(clearButton, 'show');
+  removeClass(e.target, 'show');
 
 })
+const tableHeader = document.querySelector('.tableHeader')
+tableHeader.querySelectorAll('.header')
+  .forEach((head, index) => {
+    head.addEventListener('click', e => {
+      let menu = head.childNodes[1];
+      if (menu.contains(e.target)) return;
+      toggleClass(menu, 'show')
+
+      // const col = document.querySelector('.')
+      // const col = document.querySelector('.fa-times-circle')
+      // col.style.backgroundColor = 'blue'
+    })
+
+
+  });
+document.querySelectorAll('.header-menu')
+  .forEach(menu => {
+    menu.childNodes.forEach(li => {
+
+      li.addEventListener('click', e => {
+        console.log(e.target);
+        setTimeout((e) => {
+
+          console.log('pooping');
+          // }
+          removeClass(menu, 'show')
+        }, 600)
+      })
+
+    })
+  })
