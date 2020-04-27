@@ -16,14 +16,14 @@ const styleStore = {
     return this.fontColor;
   }
 }
-
-const addClass = (el, className) => {
-  el.classList.add(className)
+const toggleClass = (el, className) => {
+  el.classList.toggle(className)
 }
+const addClass = (el, className) => {}
 const removeClass = (el, className) => {
   el.classList.remove(className)
 }
-
+// End Utils
 
 const filterTable = () => {
   const table = document.querySelector("#datatable");
@@ -62,6 +62,8 @@ document.querySelector('#search-input')
 const tableBody = document.querySelector(".tableBody");
 tableBody.querySelectorAll('tr').forEach((row, index, tableRows) => {
   row.addEventListener('dblclick', e => {
+    if (!e.target.classList.contains('table-field')) return;
+
     let activeField = e.target;
     if (window.activeRowIndex == index) { //tableBody.querySelectorAll('tr').indexOf(row)) {
       stopEdit(activeField, row);
@@ -155,3 +157,34 @@ document.querySelector('.clearButton').addEventListener('click', e => {
   removeClass(e.target, 'show');
 
 })
+const tableHeader = document.querySelector('.tableHeader')
+tableHeader.querySelectorAll('.header')
+  .forEach((head, index) => {
+    head.addEventListener('click', e => {
+      let menu = head.childNodes[1];
+      if (menu.contains(e.target)) return;
+      toggleClass(menu, 'show')
+
+      // const col = document.querySelector('.')
+      // const col = document.querySelector('.fa-times-circle')
+      // col.style.backgroundColor = 'blue'
+    })
+
+
+  });
+document.querySelectorAll('.header-menu')
+  .forEach(menu => {
+    menu.childNodes.forEach(li => {
+
+      li.addEventListener('click', e => {
+        console.log(e.target);
+        setTimeout((e) => {
+
+          console.log('pooping');
+          // }
+          removeClass(menu, 'show')
+        }, 600)
+      })
+
+    })
+  })

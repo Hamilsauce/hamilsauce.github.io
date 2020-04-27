@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./filterList.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="content">
+    <h2>List with Filter</h2>
+    <div class="search-container">
+      <input type="text" id="search-input" onkeyup="filterTable()" placeholder="Search for names.."
+        title="Type in a name">
+      <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle"
+        class="svg-inline--fa fa-times-circle fa-w-16 clearButton" role="img" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512">
+        <path fill="currentColor" class="clearButton"
+          d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z">
+        </path>
+      </svg>
+    </div>
+    <div class="table-container">
+      <table id="datatable">
+        <colgroup>
+          <col span="1" class="data-columns col1">
+          <col span="1" class="data-columns col2">
+          <col class="action-column col3">
+        </colgroup>
+        <thead class="tableHeader">
+          <tr class="header-row">
+            <th class="header" style="width:60%;">
+              Name
+              <ul class="header-menu">
+                <li>Sort</li>
+                <li>Hilight</li>
+              </ul>
+            </th>
+            <th class="header" style="width:60%;">
+              Country
+              <ul class="header-menu">
+                <li>Sort</li>
+                <li>Hilight</li>
+              </ul>
+            </th>
+            <th class="header actions-header" style="width:10%;"><span class="header-text"></span></th>
+          </tr>
+        </thead>
+        <tbody class="tableBody">
+          <tr class="tableRow">
+            <td class="table-field">Alfreds Futterkiste</td>
+            <td class="table-field">Germany</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td class="table-field">Berglunds snabbkop</td>
+            <td class="table-field">Sweden</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td class="table-field">Island Trading</td>
+            <td class="table-field">UK</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td class="table-field">Koniglich Essen</td>
+            <td class="table-field">Germany</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td class="table-field">Laughing Bacchus Winecellars</td>
+            <td class="table-field">Canada</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td class="table-field">Magazzini Alimentari Riuniti</td>
+            <td class="table-field">Italy</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td class="table-field">North/South</td>
+            <td class="table-field">UK</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+          <tr class="tableRow">
+            <td class="table-field">Paris specialites</td>
+            <td class="table-field">France</td>
+            <td class="action-field">
+              <div class="row-action-menu">action</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script src="./filterList.js"></script>
+</body>
+
+</html>
