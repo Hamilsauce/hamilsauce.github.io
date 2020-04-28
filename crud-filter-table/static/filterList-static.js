@@ -1,3 +1,5 @@
+import { DataTable } from './js/tableBuilder.js'
+
 //Util functions
 const styleStore = {
   elementReference(el) {
@@ -30,6 +32,47 @@ const removeClass = (el, className) => {
 }
 // End Utils
 
+const colNames = ['Name', 'Country'];
+
+const sampleData = [
+  {
+    "Name": "Alfreds Futterkiste",
+    "Country": "Germany"
+   },
+  {
+    "Name": "Berglunds snabbkop",
+    "Country": "Sweden"
+   },
+  {
+    "Name": "Island Trading",
+    "Country": "UK"
+   },
+  {
+    "Name": "Koniglich Essen",
+    "Country": "Germany"
+   },
+  {
+    "Name": "Laughing Winecellars",
+    "Country": "Canada"
+   },
+  {
+    "Name": "Magazzin Riuniti",
+    "Country": "Italy"
+   },
+  {
+    "Name": "North/South",
+    "Country": "UK"
+   },
+  {
+    "Name": "Paris specialites",
+    "Country": "France"
+   }
+  ]
+
+
+const datatable = new DataTable(sampleData, colNames, document.querySelector('.table-container'));
+datatable.createTable()
+
 const filterTable = () => {
   const table = document.querySelector("#datatable");
   const tableBody = document.querySelector(".tableBody");
@@ -44,7 +87,6 @@ const filterTable = () => {
 
     fields.forEach(field => {
       if (field && appState.filters.includes(field.dataset.columnIndex)) {
-        console.log('found filter');
 
         let txtValue = field.textContent || field.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -65,7 +107,6 @@ document.querySelector('#search-input')
     filterTable();
   });
 
-
 const tableBody = document.querySelector(".tableBody");
 tableBody.querySelectorAll('tr').forEach((row, index, tableRows) => {
   row.addEventListener('dblclick', e => {
@@ -83,8 +124,6 @@ tableBody.querySelectorAll('tr').forEach((row, index, tableRows) => {
 
   row.addEventListener('blur', e => {
     let activeField = e.target;
-
-    // if (window.activeRowIndex == index) { //tableBody.querySelectorAll('tr').indexOf(row)) {
     stopEdit(activeField, tableRows[window.activeRowIndex]);
     window.activeRowIndex = index;
   })
@@ -100,7 +139,6 @@ const startEdit = (field, row) => {
   styleStore.storeFontColor()
   row.style.backgroundColor = 'rgba(255, 255, 255, 1)';
   row.style.color = 'rgba(90, 87, 90, 1);'
-  // field.style.textDecoration = 'underline';
   row.style.textDecoration = 'underline';
   selectText(field);
 }
@@ -151,7 +189,6 @@ document.querySelector('#search-input').addEventListener('keyup', e => {
 
 document.querySelector('#search-input').addEventListener('change', e => {
   const clearButton = document.querySelector('.clearButton')
-  console.log(clearButton);
 
   const search = e.target;
   if (search.value.length > 0) {
@@ -176,10 +213,6 @@ tableHeader.querySelectorAll('.header')
       let menu = head.childNodes[1];
       if (menu.contains(e.target)) return;
       toggleClass(menu, 'show')
-
-      // const col = document.querySelector('.')
-      // const col = document.querySelector('.fa-times-circle')
-      // col.style.backgroundColor = 'blue'
     })
   });
 
@@ -194,9 +227,6 @@ document.querySelectorAll('.header-menu')
           updateFilters(targetHeader)
         }
         setTimeout((e) => {
-
-          console.log('pooping');
-
           removeClass(menu, 'show')
         }, 600)
       })
@@ -206,8 +236,6 @@ document.querySelectorAll('.header-menu')
 const highlightColumn = (index) => {
   const column = `col${index + 1}`;
   const fields = document.querySelectorAll(`.${column}`);
-  console.log(column);
-  console.log(fields);
   fields.forEach(field => {
     toggleClass(field, 'highlight');
   })
@@ -216,7 +244,6 @@ const highlightColumn = (index) => {
 const updateFilters = (selectedAction) => {
   const filters = appState.filters;
   const columnHeader = selectedAction.parentNode.parentNode;
-  console.log(columnHeader);
 
   const columnId = columnHeader.dataset.columnIndex;
   if (filters.includes(columnId)) {
@@ -231,5 +258,4 @@ const updateFilters = (selectedAction) => {
     console.log(selectedAction);
     filters.push(columnId)
   }
-  console.log(filters);
 }

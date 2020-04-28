@@ -118,5 +118,15 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\crud-filter-table\\filterList-dynamic\\filterList-dynamic.css",
+		"bookmarks": [
+			{
+				"line": 101,
+				"column": 15,
+				"label": ""
+			}
+		]
 	}
 ]

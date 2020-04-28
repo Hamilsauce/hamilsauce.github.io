@@ -33,7 +33,7 @@ h2 {
 }
 
 #search-input {
-  background-image: url('./assets/search-icon-small.svg');
+  background-image: url('../assets/search-icon-small.svg');
   background-position: 10px 10px;
   background-repeat: no-repeat;
   width: 100%;
@@ -83,21 +83,30 @@ h2 {
   z-index: 1;
 }
 
+.datatable {
+
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 360px;
+  border: 1px solid black;
+  /* border: 1px solid #ddd;*/
+  font-size: 16px;
+  touch-action: manipulation;
+  z-index: 1;
+}
+
 .column1 {
   transition: 0.4s;
 }
 
-.action-column {
-  background: rgba(22, 68, 63, 0.514);
-  font-size: 0.8em;
-}
+
 
 .highlight {
   background: rgba(229, 236, 182, 0.8);
   transition: 0.4s;
 }
 
-.tableBody {
+.tbody {
   z-index: 0;
 }
 
@@ -111,16 +120,7 @@ h2 {
   font-size: medium;
 }
 
-.header {
-  position: relative;
-  color: rgba(47, 47, 47, 0.664);
-  cursor: pointer;
-}
 
-.header:hover {
-  position: relative;
-  color: rgb(49, 49, 49);
-}
 
 .header-menu {
   position: absolute;
@@ -144,7 +144,7 @@ h2 {
 .header-menu.show {
   display: grid;
   opacity: 1;
-  padding: 2px;
+  /* padding: 2px; */
   height: fit-content;
   width: fit;
   border: 2px solid rgba(248, 248, 248, 0.904);
@@ -157,7 +157,7 @@ h2 {
   opacity: 0.7;
   height: 0px;
   color: rgba(87, 87, 88, 0);
-  transition: 0.2s
+  /* transition: 0.2s */
 }
 
 .show>li {
@@ -171,7 +171,7 @@ h2 {
   background: rgba(253, 253, 253, 0.932);
   color: rgba(87, 87, 88, 1);
   font-size: 0.9em;
-  transition: 0.3s
+  transition: 0.2s
 }
 
 .show>li:active {
@@ -181,12 +181,17 @@ h2 {
 .show>li:hover {}
 
 .header {
+  position: relative;
   cursor: pointer;
   user-select: none;
   padding: 10px;
+  color: rgba(47, 47, 47, 0.664);
 }
 
+
 .header:hover {
+  position: relative;
+  color: rgb(49, 49, 49);
   transition: 0.3s;
 }
 
@@ -202,7 +207,6 @@ h2 {
   border-bottom: 1px solid #dddddd50;
   cursor: pointer;
   background-color: rgba(242, 242, 255, 0.4);
-  user-select: none;
 }
 
 .header-row {
@@ -225,6 +229,68 @@ td {
   color: rgba(218, 228, 220, 0.9);
   padding: 0 5px;
 }
+
+.action-field {
+  background: rgba(86, 88, 88, 0.63);
+  border-top: 2px solid rgb(150, 159, 168);
+  border-bottom: 2px solid rgb(161, 169, 177);
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.rowButtons {
+
+  display: none;
+}
+
+.btn {
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 0;
+}
+
+.rowButtons.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+
+.deleteRowButton {
+  width: 24px;
+  height: 24px;
+  fill: rgb(255, 255, 255);
+  transition: 0.3s;
+  /* margin-left: 5px;
+  margin-right: 5px; */
+}
+
+
+.deleteRowButton:active {
+  color: white;
+  fill: rgb(236, 70, 70);
+}
+
+.editRowButton {
+  width: 24px;
+  height: 24px;
+  fill: rgb(255, 255, 255);
+  transition: 0.13s;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.editRowButton:active {
+  color: white;
+  fill: rgb(43, 121, 8);
+}
+
 
 .selectedRow {
   /* background: rgba(49, 117, 142, 0.4); */

@@ -83,6 +83,18 @@ h2 {
   z-index: 1;
 }
 
+.datatable {
+
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 360px;
+  border: 1px solid black;
+  /* border: 1px solid #ddd;*/
+  font-size: 16px;
+  touch-action: manipulation;
+  z-index: 1;
+}
+
 .column1 {
   transition: 0.4s;
 }
@@ -202,7 +214,6 @@ h2 {
   border-bottom: 1px solid #dddddd50;
   cursor: pointer;
   background-color: rgba(242, 242, 255, 0.4);
-  user-select: none;
 }
 
 .header-row {

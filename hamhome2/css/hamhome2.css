@@ -63,7 +63,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 10px 1fr 10px;
-    justify-content: space-around;
+    justify-content: center;
     padding: 0px;
     margin: 0;
     height: 100%;
@@ -73,7 +73,8 @@
   }
 
   .app-header {
-    /* min-height: 50px; */
+    padding: 0;
+    margin: 0;
   }
 
   .banner {
@@ -83,6 +84,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: fit-content;
     background: rgba(255, 255, 255, 0.562);
     margin-top: 25px;
     border-top: 1px solid rgb(153, 153, 153);
@@ -91,11 +93,13 @@
   }
 
   .title {
+    padding: 5px 0px;
     padding-left: 10px;
+    margin: 0px;
     margin-right: 450px;
     letter-spacing: 2px;
     color: rgb(182, 73, 75);
-    color: #1F1521;
+    color: rgba(31, 21, 33, 0.733);
   }
 
   .grid-container {
@@ -110,8 +114,8 @@
       "g8 g8 g8 g8 g6 g6";
 
     grid-gap: 2px;
-    padding: 2px;
-    margin: auto;
+    padding: 0px;
+    margin: 0 auto;
     height: 100%;
     width: 100vw;
     max-width: 700px;
@@ -142,7 +146,8 @@
   }
 
   .app-footer {
-    /* min-height: 50px; */
+    padding: 0;
+    margin: 0;
   }
 
 
@@ -166,6 +171,19 @@
     /* transition: 0.3s ease-in-out; */
   }
 
+  .grid-item:nth-child(4) {
+    background: rgb(182, 73, 75);
+  }
+
+  .grid-item:nth-child(4):hover {
+    background: rgb(160, 54, 56);
+  }
+
+  .grid-item:nth-child(4):active {
+    background: rgb(255, 184, 184);
+    transition: 0.3s ease;
+  }
+
   .grid-item:nth-child(5) {
     background: rgb(182, 73, 75);
   }
@@ -177,7 +195,6 @@
   .grid-item:nth-child(5):active {
     background: rgb(255, 184, 184);
     transition: 0.3s ease;
-
   }
 
   .item1 {
@@ -218,8 +235,8 @@
   @media screen and (max-width: 400px) {
     .title {
       margin-right: 100px;
-      margin-top: 8px;
-      margin-bottom: 8px;
+      margin-top: 0px;
+      margin-bottom: 5px;
 
     }
 
