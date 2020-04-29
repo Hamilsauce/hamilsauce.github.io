@@ -30,6 +30,8 @@ const appState = {
     this.clickCount < 1 ? this.clickCount += 1 : this.clickCount = 0;
   }
 };
+console.log(appState);
+
 const toggleClass = (el, className) => {
   el.classList.toggle(className)
 }
@@ -288,7 +290,7 @@ const updateFilters = (selectedAction) => {
 
 document.querySelectorAll('.tableRow').forEach(row => {
   row.addEventListener('click', e => {
-    const rowButtons = document.querySelectorAll('.rowButtons');
+    const rowButtons = document.querySelectorAll('.action-field');
     if (!e.target.classList.contains('table-field')) return;
 
     const rowIndex = e.target.dataset.rowIndex;
@@ -304,6 +306,7 @@ document.querySelectorAll('.tableRow').forEach(row => {
 console.log(document.querySelector('.deleteRowButton'));
 
 window.addEventListener('click', e => {
+  appState.clickTarget = e.target;
   if (!appState.activeHeaderMenu) return;
 
   let clicks = appState.clickCount;
@@ -322,14 +325,15 @@ window.addEventListener('click', e => {
   }
 })
 
+console.log(document.querySelector('.deleteRowButton').childNodes);
 
 //!!! DELETE ENTRIES Needs some fixing
 //
 const btnContainers = document.querySelectorAll('.rowButtons');
 btnContainers.forEach(div => {
   div.addEventListener('click', e => {
-    console.log('test');
-    if (e.target.classList.contains('deleteRowButton')) {
+    const deleteButton = document.querySelector('.deleteRowButton');
+    if (e.currentTarget.contains(deleteButton)) {
       console.log('gottem!');
 
 

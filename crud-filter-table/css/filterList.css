@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
 * {
   box-sizing: border-box;
   /* color: rgb(87, 87, 87); */
@@ -10,6 +19,8 @@
 .app {
   display: flex;
   flex-direction: column;
+  width: fit-content;
+  margin: auto;
 
 
 }
@@ -166,7 +177,7 @@ h2 {
   /* transition: 0.2s */
 }
 
-.show>li {
+ul.show>li {
   display: "";
   opacity: 1;
   padding: 2px 5px;
@@ -180,11 +191,11 @@ h2 {
   transition: 0.2s
 }
 
-.show>li:active {
+ul.show>li:active {
   box-shadow: 0 0 10px inset #00000080;
 }
 
-.show>li:hover {}
+ul.show>li:hover {}
 
 .header {
   position: relative;
@@ -205,13 +216,14 @@ h2 {
 .header:hover {
   position: relative;
   color: rgb(49, 49, 49);
+  text-decoration: underline;
   transition: 0.3s;
 }
 
 .action-header {
   background-color: rgba(177, 183, 179, 0.9);
   opacity: 0;
-  border-bottom: 2px solid #6b6b6b7a;
+  border-bottom: 2px solid #8b8b8b7a;
   border-left: 2px solid rgba(177, 183, 179, 0);
 }
 
@@ -238,24 +250,18 @@ td {
 
 }
 
-.row-action-menu {
+/* .row-action-menu {
   font-size: 0.8em;
   color: rgba(218, 228, 220, 0.9);
   padding: 0 5px;
+} */
+
+.button-wrapper {
+  display: inline-block;
+  margin: 0px 5px;
 }
 
-.action-field {
-  position: relative;
-  background: rgba(86, 88, 88, 0.555);
-  border-top: 1px solid rgb(116, 116, 116);
-  border-bottom: 1px solid rgb(190, 190, 190);
-  border-left: 1px solid rgb(0, 0, 0);
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
+/*
 .rowButtons {
   position: absolute;
   opacity: 0;
@@ -264,13 +270,6 @@ td {
   transition: 0.15s;
   transform: scaleX(1.1);
 }
-
-.btn {
-  box-sizing: border-box;
-  padding: 5px;
-  margin: 0;
-}
-
 .rowButtons.show {
   opacity: 1;
   height: 100%;
@@ -278,17 +277,49 @@ td {
   transition: transform 0.3s ease;
   transform: scaleY(1);
   margin: 0;
-}
-
+} */
 
 .deleteRowButton {
-  width: 28px;
+  /* width: 28px;
   height: 28px;
   fill: rgb(255, 255, 255);
   transition: 0.3s;
   z-index: 2;
-  /* margin-left: 5px;
-  margin-right: 5px; */
+  border-left: 1px solid rgba(204, 204, 204, 0.466);
+  margin-left: 0px;
+  padding: 0px 0px 0px 0px; */
+}
+
+.action-field {
+  height: 0px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: rgb(182, 182, 182);
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: opacity 0.15s, height 0.3s ease-out;
+}
+
+.action-field.show {
+  opacity: 1;
+  height: 45px;
+  padding: 9px 0px;
+  justify-content: space-around;
+  background: rgb(106, 109, 110);
+  color: rgb(182, 182, 182);
+  text-decoration: none;
+
+}
+
+.button-wrapper {
+  margin: 0px 5px;
+  padding: 0;
+  color: white;
+  font-size: 16px;
 }
 
 
@@ -302,14 +333,12 @@ td {
 }
 
 .editRowButton {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   fill: rgb(255, 255, 255);
   transition: 0.13s;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-right: 5px;
-  border-right: 2px solid rgba(235, 235, 235, 0.644);
+
+  /* border-right: 2px solid rgba(235, 235, 235, 0.644); */
   z-index: 2;
 }
 

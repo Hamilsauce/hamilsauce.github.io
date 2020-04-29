@@ -78,21 +78,22 @@ export class DataTable {
         if (index === fields.length - 1) {
           const actionCell = row.insertCell();
           actionCell.dataset.rowIndex = row.dataset.rowIndex;
-          this.addColumnIndex(actionCell, index + 1)
+          this.addColumnIndex(actionCell, index)
           this.addClass(actionCell, 'action-field');
-          const deleteRowButton = `
-              <svg version="1.1" class="deleteRowButton"  id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width = "22px"
-                height = "22px" viewBox = "0 0 512 512" enable - background = "new 0 0 512 512" xml: space = "preserve" >
-                <g><path d="M128,405.429C128,428.846,147.198,448,170.667,448h170.667C364.802,448,384,428.846,384,405.429V160H128V405.429z M416,96 h-80l-26.785-32H202.786L176,96H96v32h320V96z"/>
-                < /g></svg>`;
-          const editRowButton = `<svg version="1.1" class="editRowButton" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    width="22px" height="22px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
-                  <g><rect x="178.846" y="92.087" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 224.3476 631.1498)" width="128.085" height="354.049"/>
-                  <path d="M471.723,88.393l-48.115-48.114c-11.723-11.724-31.558-10.896-44.304,1.85l-45.202,45.203l90.569,90.568l45.202-45.202 C482.616,119.952,483.445,100.116,471.723,88.393z"/><polygon points="64.021,363.252 32,480 148.737,447.979 	"/>
-                  </g></svg>
-              </span>`;
+          const deleteRowButton = /*html*/ `<div class="button-wrapper">
+            <i class="button-icon deleteRowButton fas fa-trash"></i>
+          </div>`;
+          const filterRowButton = /*html*/ `<div class="button-wrapper">
+            <i class="button-icon filterRowButton fas fa-filter"></i>
+          </div>`;
+          const undoRowButton = /*html*/ `<div class="button-wrapper">
+            <i class="button-icon const undoRowButton fas fa-undo"></i>
+          </div>`;
+          const pinRowButton = /*html*/ `<div class="button-wrapper">
+            <i class="button-icon pinRowButton fas fa-thumbtack"></i>
+          </div>`;
 
-          actionCell.innerHTML += `<div class="rowButtons" data-row-index="${actionCell.dataset.rowIndex}" data-column-index="${index + 1}">${editRowButton}${deleteRowButton}</div>`
+          actionCell.innerHTML += `${pinRowButton} | ${deleteRowButton}`
           // this.appendNewTextNode('action', actionCell);
 
         }
