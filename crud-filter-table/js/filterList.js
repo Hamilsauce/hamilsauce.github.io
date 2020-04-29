@@ -24,7 +24,11 @@ const styleStore = {
   }
 }
 const appState = {
-  filters: ['1']
+  filters: ['1'],
+  clickCount: 0,
+  incrementClicks() {
+    this.clickCount < 1 ? this.clickCount += 1 : this.clickCount = 0;
+  }
 };
 const toggleClass = (el, className) => {
   el.classList.toggle(className)
@@ -217,15 +221,27 @@ tableHeader.querySelectorAll('.header')
   .forEach((head, index) => {
     head.addEventListener('click', e => {
       let menu = head.childNodes[1];
-      if (menu.contains(e.target)) return;
+      if (appState.activeHeaderMenu && menu != appState.activeHeaderMenu) {
+        console.log(menu != appState.activeHeaderMenu);
+
+        removeClass(appState.activeHeaderMenu, 'show');
+      }
+
+      if (menu.contains(e.target)) return; //!stops the menu from closing if it is clicked
       toggleClass(menu, 'show')
+      appState.activeHeaderMenu = menu;
+
     })
+
   });
 
+//! Handles/routes header clicks to actions
 document.querySelectorAll('.header-menu')
   .forEach((menu, index) => {
     menu.childNodes.forEach(li => {
       li.addEventListener('click', e => {
+
+
         const targetHeader = e.target
         const colIndex = targetHeader.dataset.columnIndex;
 
@@ -275,7 +291,6 @@ document.querySelectorAll('.tableRow').forEach(row => {
     const rowButtons = document.querySelectorAll('.rowButtons');
     if (!e.target.classList.contains('table-field')) return;
 
-
     const rowIndex = e.target.dataset.rowIndex;
     rowButtons.forEach(buttons => {
       if (buttons.dataset.rowIndex == rowIndex) {
@@ -287,3 +302,74 @@ document.querySelectorAll('.tableRow').forEach(row => {
   })
 })
 console.log(document.querySelector('.deleteRowButton'));
+
+window.addEventListener('click', e => {
+  if (!appState.activeHeaderMenu) return;
+
+  let clicks = appState.clickCount;
+  appState.incrementClicks();
+  if (e.target != appState.activeHeaderMenu.contains(e.target)) {
+
+    if (appState.clickCount > 0) {
+      removeClass(appState.activeHeaderMenu, 'show');
+      appState.activeHeaderMenu = '';
+      clicks = 0;
+    }
+
+  } else if (e.target.childNodes.classList.contains('header-menu')) {
+    appState.activeHeaderMenu = e.target;
+    addClass(appState.activeHeaderMenu, 'show')
+  }
+})
+
+
+//!!! DELETE ENTRIES Needs some fixing
+//
+const btnContainers = document.querySelectorAll('.rowButtons');
+btnContainers.forEach(div => {
+  div.addEventListener('click', e => {
+    console.log('test');
+    if (e.target.classList.contains('deleteRowButton')) {
+      console.log('gottem!');
+
+
+      const index = parseInt(e.target.parentNode.dataset.rowIndex);
+      const rows = document.querySelectorAll('.tableRow');
+      console.log(index);
+      console.log(rows[index]);
+
+      addClass(rows[index], 'delete');
+      rows.forEach((row, id) => {
+        if (id == index) {
+          addClass(row, 'deleted')
+        }
+      })
+    }
+  })
+
+})
+
+
+// const btnContainers = document.querySelectorAll('.rowButtons');
+// btnContainers.forEach(div => {
+//   div.addEventListener('click', e => {
+//     console.log('test');
+//     if (e.target.classList.contains('deleteRowButton')) {
+//       console.log('gottem!');
+
+
+//       const index = parseInt(e.target.parentNode.dataset.rowIndex);
+//       console.log(index);
+
+//       let filteredData = sampleData
+//         .filter((item, id, data) => {
+//           console.log(item, index, id);
+
+//           return id !== index;
+//         })
+//       console.log(filteredData);
+//       datatable.rebuild(filteredData)
+
+//     }
+//   })
+// })

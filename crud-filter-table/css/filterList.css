@@ -4,8 +4,16 @@
   box-sizing: border-box;
   /* color: rgb(87, 87, 87); */
   font-family: 'Lato', sans-serif;
+  user-select: none;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+
 
 }
+
 
 .fa-times-circle {
   position: absolute;
@@ -22,11 +30,7 @@
 }
 
 
-.content {
-  width: fit-content;
-  margin: auto;
-
-}
+.content {}
 
 h2 {
   color: #0c25b440;
@@ -69,6 +73,8 @@ h2 {
 .table-container {
   display: grid;
   max-width: 100vw;
+  width: fit-content;
+  margin: auto;
 }
 
 #datatable {
@@ -101,26 +107,26 @@ h2 {
 
 
 
-.highlight {
-  background: rgba(229, 236, 182, 0.8);
-  transition: 0.4s;
-}
 
 .tbody {
   z-index: 0;
 }
 
-.header,
-.table-field {
-  text-align: left;
-  padding: 12px;
-}
+
 
 .table-field {
   font-size: medium;
+  border-right: 1px solid rgba(255, 255, 255, 0);
+  ;
 }
 
-
+.highlight {
+  background: rgba(233, 220, 105, 0.87);
+  color: rgb(68, 68, 68);
+  border-right: 1px solid rgba(190, 143, 41, 0.774);
+  border-bottom: 1px solid rgba(109, 109, 109, 0.198);
+  transition: 0.4s;
+}
 
 .header-menu {
   position: absolute;
@@ -186,8 +192,15 @@ h2 {
   user-select: none;
   padding: 10px;
   color: rgba(47, 47, 47, 0.664);
+  border-right: 1px solid rgba(255, 255, 255, 0.746);
+
 }
 
+.header,
+.table-field {
+  text-align: left;
+  padding: 12px;
+}
 
 .header:hover {
   position: relative;
@@ -198,19 +211,20 @@ h2 {
 .action-header {
   background-color: rgba(177, 183, 179, 0.9);
   opacity: 0;
-
+  border-bottom: 2px solid #6b6b6b7a;
+  border-left: 2px solid rgba(177, 183, 179, 0);
 }
 
-
-
 .tableRow {
-  border-bottom: 1px solid #dddddd50;
+  border-bottom: 1px solid #c8c8c850;
   cursor: pointer;
   background-color: rgba(242, 242, 255, 0.4);
 }
 
 .header-row {
-  background-color: rgba(177, 183, 179, 0.4);
+  background: rgba(177, 183, 179, 0.4);
+  border-bottom: 2px solid #a1a1a17a;
+  box-shadow: 0px 2px 5px 1px rgb(192, 192, 192);
 
 }
 
@@ -231,9 +245,11 @@ td {
 }
 
 .action-field {
-  background: rgba(86, 88, 88, 0.63);
-  border-top: 2px solid rgb(150, 159, 168);
-  border-bottom: 2px solid rgb(161, 169, 177);
+  position: relative;
+  background: rgba(86, 88, 88, 0.555);
+  border-top: 1px solid rgb(116, 116, 116);
+  border-bottom: 1px solid rgb(190, 190, 190);
+  border-left: 1px solid rgb(0, 0, 0);
   height: 100%;
   padding: 0;
   margin: 0;
@@ -241,8 +257,12 @@ td {
 }
 
 .rowButtons {
-
-  display: none;
+  position: absolute;
+  opacity: 0;
+  top: 10px;
+  left: 5px;
+  transition: 0.15s;
+  transform: scaleX(1.1);
 }
 
 .btn {
@@ -252,21 +272,21 @@ td {
 }
 
 .rowButtons.show {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: fit-content;
+  opacity: 1;
   height: 100%;
   width: 100%;
+  transition: transform 0.3s ease;
+  transform: scaleY(1);
   margin: 0;
 }
 
 
 .deleteRowButton {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   fill: rgb(255, 255, 255);
   transition: 0.3s;
+  z-index: 2;
   /* margin-left: 5px;
   margin-right: 5px; */
 }
@@ -277,13 +297,20 @@ td {
   fill: rgb(236, 70, 70);
 }
 
+.deleted {
+  display: none;
+}
+
 .editRowButton {
   width: 24px;
   height: 24px;
   fill: rgb(255, 255, 255);
   transition: 0.13s;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 5px;
+  border-right: 2px solid rgba(235, 235, 235, 0.644);
+  z-index: 2;
 }
 
 .editRowButton:active {
@@ -294,8 +321,8 @@ td {
 
 .selectedRow {
   /* background: rgba(49, 117, 142, 0.4); */
-  border-top: 1px solid #f1f1f1;
-  border-bottom: 1px solid rgba(232, 232, 232, 1);
+  border-top: 2px solid #f1f1f1;
+  border-bottom: 2px solid rgba(232, 232, 232, 1);
   transition: 0.2s ease-in-out;
   outline: none;
   cursor: auto;
