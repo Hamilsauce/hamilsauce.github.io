@@ -9,9 +9,9 @@ body {
 
 .app {
   box-sizing: border-box;
-  padding: 50px;
-  margin: 0 auto;
-  min-height: 100vh;
+  padding: 0px;
+  margin: 0;
+  height: 100vh;
 
   width: 100%;
   background: rgb(250, 248, 244);
@@ -45,12 +45,16 @@ body {
   box-shadow: 0px 0px 10px 2px rgba(110, 110, 110, 0.842);
   border: 1px solid white;
   background: rgb(16, 173, 194);
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease;
   cursor: pointer;
   user-select: none;
   color: rgba(110, 110, 110, 0.014);
 }
 
+.grid-item:hover {
+  background: rgb(16, 108, 194);
+  transform: scale(1.2, 1.7)
+}
 
 /* .grid-item:nth-child(2n+2) {
   background: rgb(241, 255, 248);

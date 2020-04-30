@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="cdn.jsdelivr.net/npm/normalize.css/" type="text/html">;
+  <style>
+    html {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 100%;
+      margin: auto;
+      max-width: 800px;
+      min-height: 400px
+    }
+
+    .overlay {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: rgb(160, 76, 90);
+      background-color: rgba(150, 55, 71, 0.89);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .overlay-content {
+      position: relative;
+      top: 25%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .overlay a {
+      padding: 8px;
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover,
+    .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 45px;
+      font-size: 60px;
+    }
+
+    /*  End modal Styles, start page styles*/
+    .nav-wrapper {
+      display: flex;
+      flex-direction: row;
+      margin: 0px;
+      padding: 10px;
+      width: auto;
+      min-width: 90px;
+    }
+
+    .content-container {
+      box-sizing: border-box;
+      display: grid;
+
+      width: fit-content;
+      min-width: 450px;
+      /* margin: auto; */
+      padding: 10px 15px 30px 15px;
+      border-radius: 30px;
+      background: rgb(57, 85, 138);
+      color: white;
+      box-shadow: 0px 0px 50px 3px inset rgba(64, 49, 133, 0.445);
+    }
+
+    .data-output {
+      box-sizing: border-box;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(2, minmax(250px, 1fr));
+      margin: auto;
+      border-radius: 25px 10px  25px 30px;
+      min-height: 150px;
+      min-width: 400px;
+      padding: 2px;
+      background: rgb(250, 251, 246);
+      overflow: auto;
+      border: 2px solid rgba(29, 41, 153, 0.692);
+      box-shadow: 0px 0px 50px 3px inset rgba(221, 210, 195, 0.829);
+      overflow: auto;
+
+    }
+.placeholder {
+  background: rgba(107, 45, 112, 0.836);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0;
+      box-shadow: 0px 0px 50px 3px inset rgba(64, 49, 133, 0.445);
+
+}
+    .prop-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-content: center;
+      padding: 5px 10px;
+      min-height: max-content;
+      background: rgb(48, 156, 120);
+      color: white;
+      border-radius: 3px;
+      font-size: 1.1em;
+      font-weight: 500;
+      box-shadow: 0px 0px 50px 3px inset rgba(22, 110, 82, 0.295);
+    }
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  /* background: rgba(77, 114, 194, 0.24); */
+  padding: 5px 15px;
+  box-shadow: 0px 0px 25px 6px inset rgba(43, 66, 114, 0.322);
+  border-radius: 15px;
+}
+    .show-data-btn {
+      margin: 5px 0px;
+      padding: 5px 10px;
+      font-size: 1.1em;
+      font-weight: bolder;
+      background: rgb(72, 160, 141);
+      border: 2px solid rgba(196, 219, 212, 0.712);
+      box-shadow: 0px 0px 5px 3px inset rgba(11, 107, 75, 0.342);
+      border-radius: 15px;
+      color: rgba(233, 233, 233, 0.959);
+
+    }
+    @media screen and (max-height: 800px) {
+.data-output {
+
+}
+
+    }
+
+    @media screen and (min-height: 450px) {
+      .overlay a {
+        font-size: 20px
+      }
+
+      .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+      }
+      .data-output {
+        grid-template-columns: 1fr;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <div id="myNav" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="overlay-content">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+        <a href="#">Option 4</a>
+      </div>
+    </div>
+    <div class="nav-wrapper">
+      <span style=" font-size:30px;cursor:pointer" onclick="openNav()">☰ nav</span>
+    </div>
+
+    <section class="content-container">
+      <h2>music project test page</h2>
+      <form>
+        <div class="button-container"> <button class="show-data-btn">Do it</button></div>
+      </form>
+      <div class="data-output" ">
+        <div class="placeholder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, at!</div>
+        <div class="placeholder">Repudiandae, distinctio odit blanditiis accusantium cumque eum molestiae omnis quod?</div>
+        <div class="placeholder">Beatae, cupiditate. Aut ratione ipsam est explicabo dolor, exercitationem quia!</div>
+        <div class="placeholder">Dolore optio consequuntur obcaecati quis repellendus dicta, architecto dolores fuga?</div>
+        <div class="placeholder">Quo in, odio quis distinctio veniam unde quos impedit deserunt.</div>
+      </div>
+    </section>
+  </div>
+  <script>
+
+
+    class Comp {                      //slimmed down object model (see js file or full)
+      constructor(title, description, author, type, genre, dateCreated, status) {
+        this.title = title,
+          this.description = description,
+          this.author = author,
+          this.type = type,
+          this.genre = genre
+      }
+      dateCreated = new Date().toDateString();
+      status = ''
+      notes = ''
+      audioFile = {
+        filename: '',
+        fileType: '',
+        url: '',
+        duration: '',
+        datePublished: ''
+      }
+      mutateData() {
+        //return do some stuff;
+      }
+
+      exposeData() {
+        //return do some stuff;
+      }
+    }
+
+    //dummy data to instantiate class
+    const incaRoades = new Comp('Inca Roades in Dorian', 'Pretty good song', 'Jake')
+
+    let propsArray = [];
+
+    const showCompData = comp => {
+      Object.keys(comp).forEach(prop => {
+        if (comp[prop]) {
+          let dataString =
+            `<div class=" prop-text" id="${prop}-display">${prop}: ${comp[prop]}</div>`;
+          propsArray.push(dataString);
+        }
+      });
+    }
+
+    document.querySelector('.show-data-btn').addEventListener('click', (e) => {
+      e.preventDefault()
+      const dataDisplay = document.querySelector('.data-output')
+
+      showCompData(incaRoades);
+      const propsOut = propsArray.reduce((prop, acc) => {
+        return acc += prop;
+      }, '');
+
+      dataDisplay.innerHTML = propsOut;
+    });
+
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+</body>
+
+</html>
