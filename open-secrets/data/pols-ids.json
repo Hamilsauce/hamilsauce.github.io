@@ -1,0 +1,5053 @@
+[
+ {
+  "Id": "1",
+  "CID": "N00036633",
+  "LastName": "Abraham",
+  "FirstName": "Ralph",
+  "Party": "R",
+  "Office": "LA05",
+  "FECCandID": "H4LA05221"
+ },
+ {
+  "Id": "2",
+  "CID": "N00035451",
+  "LastName": "Adams",
+  "FirstName": "Alma",
+  "Party": "D",
+  "Office": "NC12",
+  "FECCandID": "H4NC12100"
+ },
+ {
+  "Id": "3",
+  "CID": "N00003028",
+  "LastName": "Aderholt",
+  "FirstName": "Robert B",
+  "Party": "R",
+  "Office": "AL04",
+  "FECCandID": "H6AL04098"
+ },
+ {
+  "Id": "4",
+  "CID": "N00033997",
+  "LastName": "Aguilar",
+  "FirstName": "Pete",
+  "Party": "D",
+  "Office": "CA31",
+  "FECCandID": "H2CA31125"
+ },
+ {
+  "Id": "5",
+  "CID": "N00009888",
+  "LastName": "Alexander",
+  "FirstName": "Lamar",
+  "Party": "R",
+  "Office": "TNS2",
+  "FECCandID": "S2TN00058"
+ },
+ {
+  "Id": "6",
+  "CID": "N00033720",
+  "LastName": "Allen",
+  "FirstName": "Richard W",
+  "Party": "R",
+  "Office": "GA12",
+  "FECCandID": "H2GA12121"
+ },
+ {
+  "Id": "7",
+  "CID": "N00031938",
+  "LastName": "Amash",
+  "FirstName": "Justin",
+  "Party": "R",
+  "Office": "MI03",
+  "FECCandID": "H0MI03126"
+ },
+ {
+  "Id": "8",
+  "CID": "N00031177",
+  "LastName": "Amodei",
+  "FirstName": "Mark",
+  "Party": "R",
+  "Office": "NV02",
+  "FECCandID": "H2NV02395"
+ },
+ {
+  "Id": "9",
+  "CID": "N00038285",
+  "LastName": "Arrington",
+  "FirstName": "Jodey",
+  "Party": "R",
+  "Office": "TX19",
+  "FECCandID": "H6TX19099"
+ },
+ {
+  "Id": "10",
+  "CID": "N00005736",
+  "LastName": "Babin",
+  "FirstName": "Brian",
+  "Party": "R",
+  "Office": "TX36",
+  "FECCandID": "H6TX02079"
+ },
+ {
+  "Id": "11",
+  "CID": "N00037049",
+  "LastName": "Bacon",
+  "FirstName": "Donald John",
+  "Party": "R",
+  "Office": "NE02",
+  "FECCandID": "H6NE02125"
+ },
+ {
+  "Id": "12",
+  "CID": "N00042194",
+  "LastName": "Balderson",
+  "FirstName": "Troy",
+  "Party": "R",
+  "Office": "OH12",
+  "FECCandID": "H8OH12180"
+ },
+ {
+  "Id": "13",
+  "CID": "N00004367",
+  "LastName": "Baldwin",
+  "FirstName": "Tammy",
+  "Party": "D",
+  "Office": "WIS1",
+  "FECCandID": "S2WI00219"
+ },
+ {
+  "Id": "14",
+  "CID": "N00037185",
+  "LastName": "Banks",
+  "FirstName": "Jim",
+  "Party": "R",
+  "Office": "IN03",
+  "FECCandID": "H6IN03229"
+ },
+ {
+  "Id": "15",
+  "CID": "N00025495",
+  "LastName": "Barletta",
+  "FirstName": "Lou",
+  "Party": "R",
+  "Office": "PA11",
+  "FECCandID": "S8PA00320"
+ },
+ {
+  "Id": "16",
+  "CID": "N00031233",
+  "LastName": "Barr",
+  "FirstName": "Andy",
+  "Party": "R",
+  "Office": "KY06",
+  "FECCandID": "H0KY06104"
+ },
+ {
+  "Id": "17",
+  "CID": "N00037019",
+  "LastName": "Barragan",
+  "FirstName": "Nanette",
+  "Party": "D",
+  "Office": "CA44",
+  "FECCandID": "H6CA44103"
+ },
+ {
+  "Id": "18",
+  "CID": "N00006236",
+  "LastName": "Barrasso",
+  "FirstName": "John A",
+  "Party": "R",
+  "Office": "WYS1",
+  "FECCandID": "S6WY00068"
+ },
+ {
+  "Id": "19",
+  "CID": "N00005656",
+  "LastName": "Barton",
+  "FirstName": "Joe",
+  "Party": "R",
+  "Office": "TX06",
+  "FECCandID": "H4TX06117"
+ },
+ {
+  "Id": "20",
+  "CID": "N00031877",
+  "LastName": "Bass",
+  "FirstName": "Karen",
+  "Party": "D",
+  "Office": "CA37",
+  "FECCandID": "H0CA33117"
+ },
+ {
+  "Id": "21",
+  "CID": "N00033904",
+  "LastName": "Beatty",
+  "FirstName": "Joyce",
+  "Party": "D",
+  "Office": "OH03",
+  "FECCandID": "H2OH03125"
+ },
+ {
+  "Id": "22",
+  "CID": "N00009774",
+  "LastName": "Becerra",
+  "FirstName": "Xavier",
+  "Party": "D",
+  "Office": "CA34",
+  "FECCandID": "H2CA30143"
+ },
+ {
+  "Id": "23",
+  "CID": "N00030608",
+  "LastName": "Bennet",
+  "FirstName": "Michael",
+  "Party": "D",
+  "Office": "COS1",
+  "FECCandID": "S0CO00211"
+ },
+ {
+  "Id": "24",
+  "CID": "N00030717",
+  "LastName": "Bera",
+  "FirstName": "Ami",
+  "Party": "D",
+  "Office": "CA07",
+  "FECCandID": "H0CA03078"
+ },
+ {
+  "Id": "25",
+  "CID": "N00039533",
+  "LastName": "Bergman",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "MI01",
+  "FECCandID": "H6MI01226"
+ },
+ {
+  "Id": "26",
+  "CID": "N00031559",
+  "LastName": "Beutler",
+  "FirstName": "Jaime Herrera",
+  "Party": "R",
+  "Office": "WA03",
+  "FECCandID": "H0WA03187"
+ },
+ {
+  "Id": "27",
+  "CID": "N00036018",
+  "LastName": "Beyer",
+  "FirstName": "Don",
+  "Party": "D",
+  "Office": "VA08",
+  "FECCandID": "H4VA08224"
+ },
+ {
+  "Id": "28",
+  "CID": "N00039293",
+  "LastName": "Biggs",
+  "FirstName": "Andy",
+  "Party": "R",
+  "Office": "AZ05",
+  "FECCandID": "H6AZ05083"
+ },
+ {
+  "Id": "29",
+  "CID": "N00027462",
+  "LastName": "Bilirakis",
+  "FirstName": "Gus",
+  "Party": "R",
+  "Office": "FL12",
+  "FECCandID": "H6FL09070"
+ },
+ {
+  "Id": "30",
+  "CID": "N00036449",
+  "LastName": "Bishop",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "MI08",
+  "FECCandID": "H4MI08135"
+ },
+ {
+  "Id": "31",
+  "CID": "N00025292",
+  "LastName": "Bishop",
+  "FirstName": "Rob",
+  "Party": "R",
+  "Office": "UT01",
+  "FECCandID": "H2UT01094"
+ },
+ {
+  "Id": "32",
+  "CID": "N00002674",
+  "LastName": "Bishop",
+  "FirstName": "Sanford",
+  "Party": "D",
+  "Office": "GA02",
+  "FECCandID": "H2GA02031"
+ },
+ {
+  "Id": "33",
+  "CID": "N00031539",
+  "LastName": "Black",
+  "FirstName": "Diane",
+  "Party": "R",
+  "Office": "TN06",
+  "FECCandID": "H0TN06257"
+ },
+ {
+  "Id": "34",
+  "CID": "N00003105",
+  "LastName": "Blackburn",
+  "FirstName": "Marsha",
+  "Party": "R",
+  "Office": "TN07",
+  "FECCandID": "S8TN00337"
+ },
+ {
+  "Id": "35",
+  "CID": "N00033744",
+  "LastName": "Blum",
+  "FirstName": "Rod",
+  "Party": "R",
+  "Office": "IA01",
+  "FECCandID": "H2IA01055"
+ },
+ {
+  "Id": "36",
+  "CID": "N00007727",
+  "LastName": "Blumenauer",
+  "FirstName": "Earl",
+  "Party": "D",
+  "Office": "OR03",
+  "FECCandID": "H6OR03064"
+ },
+ {
+  "Id": "37",
+  "CID": "N00031685",
+  "LastName": "Blumenthal",
+  "FirstName": "Richard",
+  "Party": "D",
+  "Office": "CTS2",
+  "FECCandID": "S0CT00177"
+ },
+ {
+  "Id": "38",
+  "CID": "N00005195",
+  "LastName": "Blunt",
+  "FirstName": "Roy",
+  "Party": "R",
+  "Office": "MOS1",
+  "FECCandID": "S0MO00183"
+ },
+ {
+  "Id": "39",
+  "CID": "N00033474",
+  "LastName": "Bonamici",
+  "FirstName": "Suzanne",
+  "Party": "D",
+  "Office": "OR01",
+  "FECCandID": "H2OR01133"
+ },
+ {
+  "Id": "40",
+  "CID": "N00035267",
+  "LastName": "Booker",
+  "FirstName": "Cory",
+  "Party": "D",
+  "Office": "NJS2",
+  "FECCandID": "S4NJ00185"
+ },
+ {
+  "Id": "41",
+  "CID": "N00013873",
+  "LastName": "Boozman",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "ARS2",
+  "FECCandID": "S0AR00150"
+ },
+ {
+  "Id": "42",
+  "CID": "N00024866",
+  "LastName": "Bordallo",
+  "FirstName": "Madeleine Z",
+  "Party": "D",
+  "Office": "GU00",
+  "FECCandID": "H2GU00033"
+ },
+ {
+  "Id": "43",
+  "CID": "N00035420",
+  "LastName": "Bost",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "IL12",
+  "FECCandID": "H4IL12060"
+ },
+ {
+  "Id": "44",
+  "CID": "N00035307",
+  "LastName": "Boyle",
+  "FirstName": "Brendan",
+  "Party": "D",
+  "Office": "PA13",
+  "FECCandID": "H4PA13199"
+ },
+ {
+  "Id": "45",
+  "CID": "N00005883",
+  "LastName": "Brady",
+  "FirstName": "Kevin",
+  "Party": "R",
+  "Office": "TX08",
+  "FECCandID": "H6TX08100"
+ },
+ {
+  "Id": "46",
+  "CID": "N00001619",
+  "LastName": "Brady",
+  "FirstName": "Robert A",
+  "Party": "D",
+  "Office": "PA01",
+  "FECCandID": "H8PA01153"
+ },
+ {
+  "Id": "47",
+  "CID": "N00036013",
+  "LastName": "Brat",
+  "FirstName": "Dave",
+  "Party": "R",
+  "Office": "VA07",
+  "FECCandID": "H4VA07143"
+ },
+ {
+  "Id": "48",
+  "CID": "N00033532",
+  "LastName": "Bridenstine",
+  "FirstName": "James",
+  "Party": "R",
+  "Office": "OK01",
+  "FECCandID": "H2OK01143"
+ },
+ {
+  "Id": "49",
+  "CID": "N00030910",
+  "LastName": "Brooks",
+  "FirstName": "Mo",
+  "Party": "R",
+  "Office": "AL05",
+  "FECCandID": "H0AL05163"
+ },
+ {
+  "Id": "50",
+  "CID": "N00033495",
+  "LastName": "Brooks",
+  "FirstName": "Susan",
+  "Party": "R",
+  "Office": "IN05",
+  "FECCandID": "H2IN05082"
+ },
+ {
+  "Id": "51",
+  "CID": "N00036999",
+  "LastName": "Brown",
+  "FirstName": "Anthony",
+  "Party": "D",
+  "Office": "MD04",
+  "FECCandID": "H6MD04209"
+ },
+ {
+  "Id": "52",
+  "CID": "N00003535",
+  "LastName": "Brown",
+  "FirstName": "Sherrod",
+  "Party": "D",
+  "Office": "OHS1",
+  "FECCandID": "S6OH00163"
+ },
+ {
+  "Id": "53",
+  "CID": "N00034254",
+  "LastName": "Brownley",
+  "FirstName": "Julia",
+  "Party": "D",
+  "Office": "CA26",
+  "FECCandID": "H2CA00120"
+ },
+ {
+  "Id": "54",
+  "CID": "N00027626",
+  "LastName": "Buchanan",
+  "FirstName": "Vernon",
+  "Party": "R",
+  "Office": "FL16",
+  "FECCandID": "H6FL13148"
+ },
+ {
+  "Id": "55",
+  "CID": "N00030829",
+  "LastName": "Buck",
+  "FirstName": "Ken",
+  "Party": "R",
+  "Office": "CO04",
+  "FECCandID": "H4CO04090"
+ },
+ {
+  "Id": "56",
+  "CID": "N00031227",
+  "LastName": "Bucshon",
+  "FirstName": "Larry",
+  "Party": "R",
+  "Office": "IN08",
+  "FECCandID": "H0IN08114"
+ },
+ {
+  "Id": "57",
+  "CID": "N00039551",
+  "LastName": "Budd",
+  "FirstName": "Ted",
+  "Party": "R",
+  "Office": "NC13",
+  "FECCandID": "H6NC13129"
+ },
+ {
+  "Id": "58",
+  "CID": "N00025219",
+  "LastName": "Burgess",
+  "FirstName": "Michael",
+  "Party": "R",
+  "Office": "TX26",
+  "FECCandID": "H2TX26093"
+ },
+ {
+  "Id": "59",
+  "CID": "N00002221",
+  "LastName": "Burr",
+  "FirstName": "Richard",
+  "Party": "R",
+  "Office": "NCS2",
+  "FECCandID": "S4NC00089"
+ },
+ {
+  "Id": "60",
+  "CID": "N00033390",
+  "LastName": "Bustos",
+  "FirstName": "Cheri",
+  "Party": "D",
+  "Office": "IL17",
+  "FECCandID": "H2IL17071"
+ },
+ {
+  "Id": "61",
+  "CID": "N00027035",
+  "LastName": "Butterfield",
+  "FirstName": "G K",
+  "Party": "D",
+  "Office": "NC01",
+  "FECCandID": "H4NC01046"
+ },
+ {
+  "Id": "62",
+  "CID": "N00035380",
+  "LastName": "Byrne",
+  "FirstName": "Bradley",
+  "Party": "R",
+  "Office": "AL01",
+  "FECCandID": "H4AL01123"
+ },
+ {
+  "Id": "63",
+  "CID": "N00007099",
+  "LastName": "Calvert",
+  "FirstName": "Ken",
+  "Party": "R",
+  "Office": "CA42",
+  "FECCandID": "H2CA37023"
+ },
+ {
+  "Id": "64",
+  "CID": "N00007836",
+  "LastName": "Cantwell",
+  "FirstName": "Maria",
+  "Party": "D",
+  "Office": "WAS1",
+  "FECCandID": "S8WA00194"
+ },
+ {
+  "Id": "65",
+  "CID": "N00009771",
+  "LastName": "Capito",
+  "FirstName": "Shelley Moore",
+  "Party": "R",
+  "Office": "WVS2",
+  "FECCandID": "S4WV00159"
+ },
+ {
+  "Id": "66",
+  "CID": "N00000267",
+  "LastName": "Capuano",
+  "FirstName": "Michael E",
+  "Party": "D",
+  "Office": "MA07",
+  "FECCandID": "H8MA08071"
+ },
+ {
+  "Id": "67",
+  "CID": "N00037015",
+  "LastName": "Carbajal",
+  "FirstName": "Salud",
+  "Party": "D",
+  "Office": "CA24",
+  "FECCandID": "H6CA24303"
+ },
+ {
+  "Id": "68",
+  "CID": "N00033373",
+  "LastName": "Cardenas",
+  "FirstName": "Tony",
+  "Party": "D",
+  "Office": "CA29",
+  "FECCandID": "H2CA28113"
+ },
+ {
+  "Id": "69",
+  "CID": "N00001955",
+  "LastName": "Cardin",
+  "FirstName": "Ben",
+  "Party": "D",
+  "Office": "MDS1",
+  "FECCandID": "S6MD03177"
+ },
+ {
+  "Id": "70",
+  "CID": "N00012508",
+  "LastName": "Carper",
+  "FirstName": "Tom",
+  "Party": "D",
+  "Office": "DES1",
+  "FECCandID": "S8DE00079"
+ },
+ {
+  "Id": "71",
+  "CID": "N00029513",
+  "LastName": "Carson",
+  "FirstName": "Andre",
+  "Party": "D",
+  "Office": "IN07",
+  "FECCandID": "H8IN07184"
+ },
+ {
+  "Id": "72",
+  "CID": "N00035346",
+  "LastName": "Carter",
+  "FirstName": "Buddy",
+  "Party": "R",
+  "Office": "GA01",
+  "FECCandID": "H4GA01039"
+ },
+ {
+  "Id": "73",
+  "CID": "N00025095",
+  "LastName": "Carter",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "TX31",
+  "FECCandID": "H2TX31044"
+ },
+ {
+  "Id": "74",
+  "CID": "N00034128",
+  "LastName": "Cartwright",
+  "FirstName": "Matt",
+  "Party": "D",
+  "Office": "PA17",
+  "FECCandID": "H2PA17079"
+ },
+ {
+  "Id": "75",
+  "CID": "N00027503",
+  "LastName": "Casey",
+  "FirstName": "Bob",
+  "Party": "D",
+  "Office": "PAS2",
+  "FECCandID": "S6PA00217"
+ },
+ {
+  "Id": "76",
+  "CID": "N00030245",
+  "LastName": "Cassidy",
+  "FirstName": "Bill",
+  "Party": "R",
+  "Office": "LAS1",
+  "FECCandID": "S4LA00107"
+ },
+ {
+  "Id": "77",
+  "CID": "N00027514",
+  "LastName": "Castor",
+  "FirstName": "Kathy",
+  "Party": "D",
+  "Office": "FL14",
+  "FECCandID": "H6FL11126"
+ },
+ {
+  "Id": "78",
+  "CID": "N00033316",
+  "LastName": "Castro",
+  "FirstName": "Joaquin",
+  "Party": "D",
+  "Office": "TX20",
+  "FECCandID": "H2TX35011"
+ },
+ {
+  "Id": "79",
+  "CID": "N00003689",
+  "LastName": "Chabot",
+  "FirstName": "Steve",
+  "Party": "R",
+  "Office": "OH01",
+  "FECCandID": "H8OH01043"
+ },
+ {
+  "Id": "80",
+  "CID": "N00028958",
+  "LastName": "Chaffetz",
+  "FirstName": "Jason",
+  "Party": "R",
+  "Office": "UT03",
+  "FECCandID": "H8UT03089"
+ },
+ {
+  "Id": "81",
+  "CID": "N00035504",
+  "LastName": "Cheney",
+  "FirstName": "Liz",
+  "Party": "R",
+  "Office": "WY01",
+  "FECCandID": "H6WY00159"
+ },
+ {
+  "Id": "82",
+  "CID": "N00030600",
+  "LastName": "Chu",
+  "FirstName": "Judy",
+  "Party": "D",
+  "Office": "CA27",
+  "FECCandID": "H0CA32101"
+ },
+ {
+  "Id": "83",
+  "CID": "N00032019",
+  "LastName": "Cicilline",
+  "FirstName": "David",
+  "Party": "D",
+  "Office": "RI01",
+  "FECCandID": "H0RI01073"
+ },
+ {
+  "Id": "84",
+  "CID": "N00035278",
+  "LastName": "Clark",
+  "FirstName": "Katherine",
+  "Party": "D",
+  "Office": "MA05",
+  "FECCandID": "H4MA05084"
+ },
+ {
+  "Id": "85",
+  "CID": "N00026961",
+  "LastName": "Clarke",
+  "FirstName": "Yvette D",
+  "Party": "D",
+  "Office": "NY09",
+  "FECCandID": "H4NY11138"
+ },
+ {
+  "Id": "86",
+  "CID": "N00012460",
+  "LastName": "Clay",
+  "FirstName": "William L Jr",
+  "Party": "D",
+  "Office": "MO01",
+  "FECCandID": "H0MO01066"
+ },
+ {
+  "Id": "87",
+  "CID": "N00026790",
+  "LastName": "Cleaver",
+  "FirstName": "Emanuel",
+  "Party": "D",
+  "Office": "MO05",
+  "FECCandID": "H4MO05234"
+ },
+ {
+  "Id": "88",
+  "CID": "N00041882",
+  "LastName": "Cloud",
+  "FirstName": "Michael",
+  "Party": "R",
+  "Office": "TX27",
+  "FECCandID": "H8TX27049"
+ },
+ {
+  "Id": "89",
+  "CID": "N00002408",
+  "LastName": "Clyburn",
+  "FirstName": "James E",
+  "Party": "D",
+  "Office": "SC06",
+  "FECCandID": "H2SC02042"
+ },
+ {
+  "Id": "90",
+  "CID": "N00003328",
+  "LastName": "Cochran",
+  "FirstName": "Thad",
+  "Party": "R",
+  "Office": "MSS1",
+  "FECCandID": "S8MS00055"
+ },
+ {
+  "Id": "91",
+  "CID": "N00024753",
+  "LastName": "Coffman",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "CO06",
+  "FECCandID": "H8CO06138"
+ },
+ {
+  "Id": "92",
+  "CID": "N00003225",
+  "LastName": "Cohen",
+  "FirstName": "Steve",
+  "Party": "D",
+  "Office": "TN09",
+  "FECCandID": "H6TN09068"
+ },
+ {
+  "Id": "93",
+  "CID": "N00025726",
+  "LastName": "Cole",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "OK04",
+  "FECCandID": "H2OK04055"
+ },
+ {
+  "Id": "94",
+  "CID": "N00036158",
+  "LastName": "Coleman",
+  "FirstName": "Bonnie",
+  "Party": "D",
+  "Office": "NJ12",
+  "FECCandID": "H4NJ12149"
+ },
+ {
+  "Id": "95",
+  "CID": "N00001285",
+  "LastName": "Collins",
+  "FirstName": "Chris",
+  "Party": "R",
+  "Office": "NY27",
+  "FECCandID": "H8NY29032"
+ },
+ {
+  "Id": "96",
+  "CID": "N00033518",
+  "LastName": "Collins",
+  "FirstName": "Doug",
+  "Party": "R",
+  "Office": "GA09",
+  "FECCandID": "H2GA09150"
+ },
+ {
+  "Id": "97",
+  "CID": "N00000491",
+  "LastName": "Collins",
+  "FirstName": "Susan M",
+  "Party": "R",
+  "Office": "MES2",
+  "FECCandID": "S6ME00159"
+ },
+ {
+  "Id": "98",
+  "CID": "N00038260",
+  "LastName": "Comer",
+  "FirstName": "James",
+  "Party": "R",
+  "Office": "KY01",
+  "FECCandID": "H6KY01110"
+ },
+ {
+  "Id": "99",
+  "CID": "N00036023",
+  "LastName": "Comstock",
+  "FirstName": "Barbara",
+  "Party": "R",
+  "Office": "VA10",
+  "FECCandID": "H4VA10089"
+ },
+ {
+  "Id": "100",
+  "CID": "N00026041",
+  "LastName": "Conaway",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "TX11",
+  "FECCandID": "H4TX19136"
+ },
+ {
+  "Id": "101",
+  "CID": "N00029891",
+  "LastName": "Connolly",
+  "FirstName": "Gerry",
+  "Party": "D",
+  "Office": "VA11",
+  "FECCandID": "H8VA11062"
+ },
+ {
+  "Id": "102",
+  "CID": "N00004029",
+  "LastName": "Conyers",
+  "FirstName": "John Jr",
+  "Party": "D",
+  "Office": "MI13",
+  "FECCandID": "H6MI01028"
+ },
+ {
+  "Id": "103",
+  "CID": "N00034224",
+  "LastName": "Cook",
+  "FirstName": "Paul",
+  "Party": "R",
+  "Office": "CA08",
+  "FECCandID": "H2CA08164"
+ },
+ {
+  "Id": "104",
+  "CID": "N00031820",
+  "LastName": "Coons",
+  "FirstName": "Chris",
+  "Party": "D",
+  "Office": "DES2",
+  "FECCandID": "S0DE00092"
+ },
+ {
+  "Id": "105",
+  "CID": "N00003132",
+  "LastName": "Cooper",
+  "FirstName": "Jim",
+  "Party": "D",
+  "Office": "TN05",
+  "FECCandID": "H2TN05131"
+ },
+ {
+  "Id": "106",
+  "CID": "N00027441",
+  "LastName": "Corker",
+  "FirstName": "Bob",
+  "Party": "R",
+  "Office": "TNS1",
+  "FECCandID": "S6TN00216"
+ },
+ {
+  "Id": "107",
+  "CID": "N00024852",
+  "LastName": "Cornyn",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "TXS1",
+  "FECCandID": "S2TX00106"
+ },
+ {
+  "Id": "108",
+  "CID": "N00037260",
+  "LastName": "Correa",
+  "FirstName": "Lou",
+  "Party": "D",
+  "Office": "CA46",
+  "FECCandID": "H6CA46116"
+ },
+ {
+  "Id": "109",
+  "CID": "N00026341",
+  "LastName": "Costa",
+  "FirstName": "Jim",
+  "Party": "D",
+  "Office": "CA16",
+  "FECCandID": "H4CA20082"
+ },
+ {
+  "Id": "110",
+  "CID": "N00031064",
+  "LastName": "Costello",
+  "FirstName": "Ryan",
+  "Party": "R",
+  "Office": "PA06",
+  "FECCandID": "H0PA06076"
+ },
+ {
+  "Id": "111",
+  "CID": "N00033363",
+  "LastName": "Cotton",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "ARS1",
+  "FECCandID": "S4AR00103"
+ },
+ {
+  "Id": "112",
+  "CID": "N00024842",
+  "LastName": "Courtney",
+  "FirstName": "Joe",
+  "Party": "D",
+  "Office": "CT02",
+  "FECCandID": "H2CT02112"
+ },
+ {
+  "Id": "113",
+  "CID": "N00004614",
+  "LastName": "Cramer",
+  "FirstName": "Kevin",
+  "Party": "R",
+  "Office": "ND01",
+  "FECCandID": "S8ND00120"
+ },
+ {
+  "Id": "114",
+  "CID": "N00006267",
+  "LastName": "Crapo",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "IDS2",
+  "FECCandID": "S8ID00027"
+ },
+ {
+  "Id": "115",
+  "CID": "N00030770",
+  "LastName": "Crawford",
+  "FirstName": "Rick",
+  "Party": "R",
+  "Office": "AR01",
+  "FECCandID": "H0AR01083"
+ },
+ {
+  "Id": "116",
+  "CID": "N00002942",
+  "LastName": "Crist",
+  "FirstName": "Charlie",
+  "Party": "D",
+  "Office": "FL13",
+  "FECCandID": "H6FL13205"
+ },
+ {
+  "Id": "117",
+  "CID": "N00001127",
+  "LastName": "Crowley",
+  "FirstName": "Joseph",
+  "Party": "D",
+  "Office": "NY14",
+  "FECCandID": "H8NY07046"
+ },
+ {
+  "Id": "118",
+  "CID": "N00033085",
+  "LastName": "Cruz",
+  "FirstName": "Ted",
+  "Party": "R",
+  "Office": "TXS2",
+  "FECCandID": "S2TX00312"
+ },
+ {
+  "Id": "119",
+  "CID": "N00024978",
+  "LastName": "Cuellar",
+  "FirstName": "Henry",
+  "Party": "D",
+  "Office": "TX28",
+  "FECCandID": "H2TX23082"
+ },
+ {
+  "Id": "120",
+  "CID": "N00009738",
+  "LastName": "Culberson",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "TX07",
+  "FECCandID": "H0TX07055"
+ },
+ {
+  "Id": "121",
+  "CID": "N00001971",
+  "LastName": "Cummings",
+  "FirstName": "Elijah E",
+  "Party": "D",
+  "Office": "MD07",
+  "FECCandID": "H6MD07160"
+ },
+ {
+  "Id": "122",
+  "CID": "N00035403",
+  "LastName": "Curbelo",
+  "FirstName": "Carlos",
+  "Party": "R",
+  "Office": "FL26",
+  "FECCandID": "H4FL26038"
+ },
+ {
+  "Id": "123",
+  "CID": "N00041221",
+  "LastName": "Curtis",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "UT03",
+  "FECCandID": "H8UT03238"
+ },
+ {
+  "Id": "124",
+  "CID": "N00033054",
+  "LastName": "Daines",
+  "FirstName": "Steven",
+  "Party": "R",
+  "Office": "MTS2",
+  "FECCandID": "S2MT00096"
+ },
+ {
+  "Id": "125",
+  "CID": "N00038767",
+  "LastName": "Davidson",
+  "FirstName": "Warren",
+  "Party": "R",
+  "Office": "OH08",
+  "FECCandID": "H6OH08315"
+ },
+ {
+  "Id": "126",
+  "CID": "N00004884",
+  "LastName": "Davis",
+  "FirstName": "Danny K",
+  "Party": "D",
+  "Office": "IL07",
+  "FECCandID": "H4IL07037"
+ },
+ {
+  "Id": "127",
+  "CID": "N00034784",
+  "LastName": "Davis",
+  "FirstName": "Rodney",
+  "Party": "R",
+  "Office": "IL13",
+  "FECCandID": "H2IL13120"
+ },
+ {
+  "Id": "128",
+  "CID": "N00009604",
+  "LastName": "Davis",
+  "FirstName": "Susan A",
+  "Party": "D",
+  "Office": "CA53",
+  "FECCandID": "H0CA49055"
+ },
+ {
+  "Id": "129",
+  "CID": "N00007781",
+  "LastName": "DeFazio",
+  "FirstName": "Peter",
+  "Party": "D",
+  "Office": "OR04",
+  "FECCandID": "H6OR04047"
+ },
+ {
+  "Id": "130",
+  "CID": "N00006134",
+  "LastName": "DeGette",
+  "FirstName": "Diana",
+  "Party": "D",
+  "Office": "CO01",
+  "FECCandID": "H6CO01141"
+ },
+ {
+  "Id": "131",
+  "CID": "N00033897",
+  "LastName": "Delaney",
+  "FirstName": "John K",
+  "Party": "D",
+  "Office": "MD06",
+  "FECCandID": "H2MD06195"
+ },
+ {
+  "Id": "132",
+  "CID": "N00000615",
+  "LastName": "DeLauro",
+  "FirstName": "Rosa L",
+  "Party": "D",
+  "Office": "CT03",
+  "FECCandID": "H0CT03072"
+ },
+ {
+  "Id": "133",
+  "CID": "N00030693",
+  "LastName": "DelBene",
+  "FirstName": "Suzan",
+  "Party": "D",
+  "Office": "WA01",
+  "FECCandID": "H0WA08046"
+ },
+ {
+  "Id": "134",
+  "CID": "N00033449",
+  "LastName": "Demings",
+  "FirstName": "Val",
+  "Party": "D",
+  "Office": "FL10",
+  "FECCandID": "H2FL08063"
+ },
+ {
+  "Id": "135",
+  "CID": "N00031593",
+  "LastName": "Denham",
+  "FirstName": "Jeff",
+  "Party": "R",
+  "Office": "CA10",
+  "FECCandID": "H0CA19173"
+ },
+ {
+  "Id": "136",
+  "CID": "N00026171",
+  "LastName": "Dent",
+  "FirstName": "Charlie",
+  "Party": "R",
+  "Office": "PA15",
+  "FECCandID": "H4PA15087"
+ },
+ {
+  "Id": "137",
+  "CID": "N00034746",
+  "LastName": "DeSantis",
+  "FirstName": "Ron",
+  "Party": "R",
+  "Office": "FL06",
+  "FECCandID": "H2FL00292"
+ },
+ {
+  "Id": "138",
+  "CID": "N00030709",
+  "LastName": "Desaulnier",
+  "FirstName": "Mark",
+  "Party": "D",
+  "Office": "CA11",
+  "FECCandID": "H0CA10073"
+ },
+ {
+  "Id": "139",
+  "CID": "N00030957",
+  "LastName": "Desjarlais",
+  "FirstName": "Scott",
+  "Party": "R",
+  "Office": "TN04",
+  "FECCandID": "H0TN04195"
+ },
+ {
+  "Id": "140",
+  "CID": "N00031317",
+  "LastName": "Deutch",
+  "FirstName": "Ted",
+  "Party": "D",
+  "Office": "FL22",
+  "FECCandID": "H0FL19080"
+ },
+ {
+  "Id": "141",
+  "CID": "N00025337",
+  "LastName": "Diaz-Balart",
+  "FirstName": "Mario",
+  "Party": "R",
+  "Office": "FL25",
+  "FECCandID": "H2FL25018"
+ },
+ {
+  "Id": "142",
+  "CID": "N00036149",
+  "LastName": "Dingell",
+  "FirstName": "Debbie",
+  "Party": "D",
+  "Office": "MI12",
+  "FECCandID": "H4MI12079"
+ },
+ {
+  "Id": "143",
+  "CID": "N00006023",
+  "LastName": "Doggett",
+  "FirstName": "Lloyd",
+  "Party": "D",
+  "Office": "TX35",
+  "FECCandID": "H4TX10028"
+ },
+ {
+  "Id": "144",
+  "CID": "N00026586",
+  "LastName": "Donnelly",
+  "FirstName": "Joe",
+  "Party": "D",
+  "Office": "INS1",
+  "FECCandID": "S2IN00091"
+ },
+ {
+  "Id": "145",
+  "CID": "N00036928",
+  "LastName": "Donovan",
+  "FirstName": "Dan",
+  "Party": "R",
+  "Office": "NY11",
+  "FECCandID": "H6NY11174"
+ },
+ {
+  "Id": "146",
+  "CID": "N00001373",
+  "LastName": "Doyle",
+  "FirstName": "Mike",
+  "Party": "D",
+  "Office": "PA14",
+  "FECCandID": "H4PA18131"
+ },
+ {
+  "Id": "147",
+  "CID": "N00027860",
+  "LastName": "Duckworth",
+  "FirstName": "Tammy",
+  "Party": "D",
+  "Office": "ILS2",
+  "FECCandID": "S6IL00292"
+ },
+ {
+  "Id": "148",
+  "CID": "N00030967",
+  "LastName": "Duffy",
+  "FirstName": "Sean P",
+  "Party": "R",
+  "Office": "WI07",
+  "FECCandID": "H0WI07051"
+ },
+ {
+  "Id": "149",
+  "CID": "N00030752",
+  "LastName": "Duncan",
+  "FirstName": "Jeff",
+  "Party": "R",
+  "Office": "SC03",
+  "FECCandID": "H0SC03077"
+ },
+ {
+  "Id": "150",
+  "CID": "N00003209",
+  "LastName": "Duncan",
+  "FirstName": "John J Jr",
+  "Party": "R",
+  "Office": "TN02",
+  "FECCandID": "H8TN02069"
+ },
+ {
+  "Id": "151",
+  "CID": "N00037442",
+  "LastName": "Dunn",
+  "FirstName": "Neal",
+  "Party": "R",
+  "Office": "FL02",
+  "FECCandID": "H6FL02208"
+ },
+ {
+  "Id": "152",
+  "CID": "N00004981",
+  "LastName": "Durbin",
+  "FirstName": "Dick",
+  "Party": "D",
+  "Office": "ILS1",
+  "FECCandID": "S6IL00151"
+ },
+ {
+  "Id": "153",
+  "CID": "N00028257",
+  "LastName": "Ellison",
+  "FirstName": "Keith",
+  "Party": "D",
+  "Office": "MN05",
+  "FECCandID": "H6MN05183"
+ },
+ {
+  "Id": "154",
+  "CID": "N00035440",
+  "LastName": "Emmer",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "MN06",
+  "FECCandID": "H4MN06087"
+ },
+ {
+  "Id": "155",
+  "CID": "N00001003",
+  "LastName": "Engel",
+  "FirstName": "Eliot L",
+  "Party": "D",
+  "Office": "NY16",
+  "FECCandID": "H8NY19058"
+ },
+ {
+  "Id": "156",
+  "CID": "N00006249",
+  "LastName": "Enzi",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "WYS2",
+  "FECCandID": "S6WY00126"
+ },
+ {
+  "Id": "157",
+  "CID": "N00035483",
+  "LastName": "Ernst",
+  "FirstName": "Joni",
+  "Party": "R",
+  "Office": "IAS2",
+  "FECCandID": "S4IA00129"
+ },
+ {
+  "Id": "158",
+  "CID": "N00007335",
+  "LastName": "Eshoo",
+  "FirstName": "Anna",
+  "Party": "D",
+  "Office": "CA18",
+  "FECCandID": "H8CA12098"
+ },
+ {
+  "Id": "159",
+  "CID": "N00034549",
+  "LastName": "Espaillat",
+  "FirstName": "Adriano",
+  "Party": "D",
+  "Office": "NY13",
+  "FECCandID": "H2NY13096"
+ },
+ {
+  "Id": "160",
+  "CID": "N00040712",
+  "LastName": "Estes",
+  "FirstName": "Ron",
+  "Party": "R",
+  "Office": "KS04",
+  "FECCandID": "H8KS04112"
+ },
+ {
+  "Id": "161",
+  "CID": "N00033217",
+  "LastName": "Esty",
+  "FirstName": "Elizabeth",
+  "Party": "D",
+  "Office": "CT05",
+  "FECCandID": "H2CT05131"
+ },
+ {
+  "Id": "162",
+  "CID": "N00038450",
+  "LastName": "Evans",
+  "FirstName": "Dwight",
+  "Party": "D",
+  "Office": "PA02",
+  "FECCandID": "H6PA02171"
+ },
+ {
+  "Id": "163",
+  "CID": "N00031672",
+  "LastName": "Farenthold",
+  "FirstName": "Blake",
+  "Party": "R",
+  "Office": "TX27",
+  "FECCandID": "H0TX27061"
+ },
+ {
+  "Id": "164",
+  "CID": "N00037288",
+  "LastName": "Faso",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "NY19",
+  "FECCandID": "H6NY19169"
+ },
+ {
+  "Id": "165",
+  "CID": "N00007364",
+  "LastName": "Feinstein",
+  "FirstName": "Dianne",
+  "Party": "D",
+  "Office": "CAS2",
+  "FECCandID": "S0CA00199"
+ },
+ {
+  "Id": "166",
+  "CID": "N00039090",
+  "LastName": "Ferguson",
+  "FirstName": "Drew",
+  "Party": "R",
+  "Office": "GA03",
+  "FECCandID": "H6GA03113"
+ },
+ {
+  "Id": "167",
+  "CID": "N00033443",
+  "LastName": "Fischer",
+  "FirstName": "Deb",
+  "Party": "R",
+  "Office": "NES1",
+  "FECCandID": "S2NE00094"
+ },
+ {
+  "Id": "168",
+  "CID": "N00038779",
+  "LastName": "Fitzpatrick",
+  "FirstName": "Brian",
+  "Party": "R",
+  "Office": "PA08",
+  "FECCandID": "H6PA08277"
+ },
+ {
+  "Id": "169",
+  "CID": "N00009573",
+  "LastName": "Flake",
+  "FirstName": "Jeff",
+  "Party": "R",
+  "Office": "AZS2",
+  "FECCandID": "S2AZ00141"
+ },
+ {
+  "Id": "170",
+  "CID": "N00030815",
+  "LastName": "Fleischmann",
+  "FirstName": "Chuck",
+  "Party": "R",
+  "Office": "TN03",
+  "FECCandID": "H0TN03254"
+ },
+ {
+  "Id": "171",
+  "CID": "N00031545",
+  "LastName": "Flores",
+  "FirstName": "Bill",
+  "Party": "R",
+  "Office": "TX17",
+  "FECCandID": "H0TX17104"
+ },
+ {
+  "Id": "172",
+  "CID": "N00026631",
+  "LastName": "Fortenberry",
+  "FirstName": "Jeff",
+  "Party": "R",
+  "Office": "NE01",
+  "FECCandID": "H4NE01064"
+ },
+ {
+  "Id": "173",
+  "CID": "N00029139",
+  "LastName": "Foster",
+  "FirstName": "Bill",
+  "Party": "D",
+  "Office": "IL11",
+  "FECCandID": "H8IL14067"
+ },
+ {
+  "Id": "174",
+  "CID": "N00026166",
+  "LastName": "Foxx",
+  "FirstName": "Virginia",
+  "Party": "R",
+  "Office": "NC05",
+  "FECCandID": "H4NC05146"
+ },
+ {
+  "Id": "175",
+  "CID": "N00002893",
+  "LastName": "Frankel",
+  "FirstName": "Lois J",
+  "Party": "D",
+  "Office": "FL21",
+  "FECCandID": "H2FL14053"
+ },
+ {
+  "Id": "176",
+  "CID": "N00029016",
+  "LastName": "Franken",
+  "FirstName": "Al",
+  "Party": "D",
+  "Office": "MNS1",
+  "FECCandID": "S8MN00438"
+ },
+ {
+  "Id": "177",
+  "CID": "N00006423",
+  "LastName": "Franks",
+  "FirstName": "Trent",
+  "Party": "R",
+  "Office": "AZ08",
+  "FECCandID": "H4AZ04024"
+ },
+ {
+  "Id": "178",
+  "CID": "N00000684",
+  "LastName": "Frelinghuysen",
+  "FirstName": "Rodney",
+  "Party": "R",
+  "Office": "NJ11",
+  "FECCandID": "H2NJ05014"
+ },
+ {
+  "Id": "179",
+  "CID": "N00030490",
+  "LastName": "Fudge",
+  "FirstName": "Marcia L",
+  "Party": "D",
+  "Office": "OH11",
+  "FECCandID": "H8OH11141"
+ },
+ {
+  "Id": "180",
+  "CID": "N00033281",
+  "LastName": "Gabbard",
+  "FirstName": "Tulsi",
+  "Party": "D",
+  "Office": "HI02",
+  "FECCandID": "H2HI02508"
+ },
+ {
+  "Id": "181",
+  "CID": "N00039503",
+  "LastName": "Gaetz",
+  "FirstName": "Matt",
+  "Party": "R",
+  "Office": "FL01",
+  "FECCandID": "H6FL01119"
+ },
+ {
+  "Id": "182",
+  "CID": "N00039330",
+  "LastName": "Gallagher",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "WI08",
+  "FECCandID": "H6WI08155"
+ },
+ {
+  "Id": "183",
+  "CID": "N00036097",
+  "LastName": "Gallego",
+  "FirstName": "Ruben",
+  "Party": "D",
+  "Office": "AZ07",
+  "FECCandID": "H4AZ07043"
+ },
+ {
+  "Id": "184",
+  "CID": "N00030856",
+  "LastName": "Garamendi",
+  "FirstName": "John",
+  "Party": "D",
+  "Office": "CA03",
+  "FECCandID": "H0CA10149"
+ },
+ {
+  "Id": "185",
+  "CID": "N00030780",
+  "LastName": "Gardner",
+  "FirstName": "Cory",
+  "Party": "R",
+  "Office": "COS2",
+  "FECCandID": "S4CO00395"
+ },
+ {
+  "Id": "186",
+  "CID": "N00038847",
+  "LastName": "Garrett",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "VA05",
+  "FECCandID": "H6VA05142"
+ },
+ {
+  "Id": "187",
+  "CID": "N00040733",
+  "LastName": "Gianforte",
+  "FirstName": "Greg",
+  "Party": "R",
+  "Office": "MT01",
+  "FECCandID": "H8MT01182"
+ },
+ {
+  "Id": "188",
+  "CID": "N00031128",
+  "LastName": "Gibbs",
+  "FirstName": "Bob",
+  "Party": "R",
+  "Office": "OH07",
+  "FECCandID": "H0OH18077"
+ },
+ {
+  "Id": "189",
+  "CID": "N00027658",
+  "LastName": "Gillibrand",
+  "FirstName": "Kirsten",
+  "Party": "D",
+  "Office": "NYS1",
+  "FECCandID": "S0NY00410"
+ },
+ {
+  "Id": "190",
+  "CID": "N00026148",
+  "LastName": "Gohmert",
+  "FirstName": "Louis B Jr",
+  "Party": "R",
+  "Office": "TX01",
+  "FECCandID": "H4TX04039"
+ },
+ {
+  "Id": "191",
+  "CID": "N00040597",
+  "LastName": "Gomez",
+  "FirstName": "Jimmy",
+  "Party": "D",
+  "Office": "CA34",
+  "FECCandID": "H8CA34266"
+ },
+ {
+  "Id": "192",
+  "CID": "N00037615",
+  "LastName": "Gonzalez",
+  "FirstName": "Jenniffer",
+  "Party": "3",
+  "Office": "PR00",
+  "FECCandID": "H6PR00082"
+ },
+ {
+  "Id": "193",
+  "CID": "N00038809",
+  "LastName": "Gonzalez",
+  "FirstName": "Vicente",
+  "Party": "D",
+  "Office": "TX15",
+  "FECCandID": "H6TX15162"
+ },
+ {
+  "Id": "194",
+  "CID": "N00009154",
+  "LastName": "Goodlatte",
+  "FirstName": "Bob",
+  "Party": "R",
+  "Office": "VA06",
+  "FECCandID": "H2VA06115"
+ },
+ {
+  "Id": "195",
+  "CID": "N00030771",
+  "LastName": "Gosar",
+  "FirstName": "Paul",
+  "Party": "R",
+  "Office": "AZ04",
+  "FECCandID": "H0AZ01259"
+ },
+ {
+  "Id": "196",
+  "CID": "N00036944",
+  "LastName": "Gottheimer",
+  "FirstName": "Josh",
+  "Party": "D",
+  "Office": "NJ05",
+  "FECCandID": "H6NJ05171"
+ },
+ {
+  "Id": "197",
+  "CID": "N00030880",
+  "LastName": "Gowdy",
+  "FirstName": "Trey",
+  "Party": "R",
+  "Office": "SC04",
+  "FECCandID": "H0SC04257"
+ },
+ {
+  "Id": "198",
+  "CID": "N00009975",
+  "LastName": "Graham",
+  "FirstName": "Lindsey",
+  "Party": "R",
+  "Office": "SCS2",
+  "FECCandID": "S0SC00149"
+ },
+ {
+  "Id": "199",
+  "CID": "N00008799",
+  "LastName": "Granger",
+  "FirstName": "Kay",
+  "Party": "R",
+  "Office": "TX12",
+  "FECCandID": "H6TX12060"
+ },
+ {
+  "Id": "200",
+  "CID": "N00001758",
+  "LastName": "Grassley",
+  "FirstName": "Chuck",
+  "Party": "R",
+  "Office": "IAS1",
+  "FECCandID": "S0IA00028"
+ },
+ {
+  "Id": "201",
+  "CID": "N00036135",
+  "LastName": "Graves",
+  "FirstName": "Garret",
+  "Party": "R",
+  "Office": "LA06",
+  "FECCandID": "H4LA06153"
+ },
+ {
+  "Id": "202",
+  "CID": "N00013323",
+  "LastName": "Graves",
+  "FirstName": "Sam",
+  "Party": "R",
+  "Office": "MO06",
+  "FECCandID": "H0MO06073"
+ },
+ {
+  "Id": "203",
+  "CID": "N00030788",
+  "LastName": "Graves",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "GA14",
+  "FECCandID": "H0GA09030"
+ },
+ {
+  "Id": "204",
+  "CID": "N00026686",
+  "LastName": "Green",
+  "FirstName": "Al",
+  "Party": "D",
+  "Office": "TX09",
+  "FECCandID": "H4TX09095"
+ },
+ {
+  "Id": "205",
+  "CID": "N00005870",
+  "LastName": "Green",
+  "FirstName": "Gene",
+  "Party": "D",
+  "Office": "TX29",
+  "FECCandID": "H2TX29030"
+ },
+ {
+  "Id": "206",
+  "CID": "N00032029",
+  "LastName": "Griffith",
+  "FirstName": "Morgan",
+  "Party": "R",
+  "Office": "VA09",
+  "FECCandID": "H0VA09055"
+ },
+ {
+  "Id": "207",
+  "CID": "N00025284",
+  "LastName": "Grijalva",
+  "FirstName": "Raul M",
+  "Party": "D",
+  "Office": "AZ03",
+  "FECCandID": "H2AZ07070"
+ },
+ {
+  "Id": "208",
+  "CID": "N00029400",
+  "LastName": "Grisham",
+  "FirstName": "Michelle Lujan",
+  "Party": "D",
+  "Office": "NM01",
+  "FECCandID": "H8NM01257"
+ },
+ {
+  "Id": "209",
+  "CID": "N00036409",
+  "LastName": "Grothman",
+  "FirstName": "Glenn S",
+  "Party": "R",
+  "Office": "WI06",
+  "FECCandID": "H4WI06048"
+ },
+ {
+  "Id": "210",
+  "CID": "N00029675",
+  "LastName": "Guthrie",
+  "FirstName": "Brett",
+  "Party": "R",
+  "Office": "KY02",
+  "FECCandID": "H8KY02031"
+ },
+ {
+  "Id": "211",
+  "CID": "N00004874",
+  "LastName": "Gutierrez",
+  "FirstName": "Luis V",
+  "Party": "D",
+  "Office": "IL04",
+  "FECCandID": "H2IL08039"
+ },
+ {
+  "Id": "212",
+  "CID": "N00025881",
+  "LastName": "Hanabusa",
+  "FirstName": "Colleen",
+  "Party": "D",
+  "Office": "HI01",
+  "FECCandID": "H2HI02110"
+ },
+ {
+  "Id": "213",
+  "CID": "N00035477",
+  "LastName": "Handel",
+  "FirstName": "Karen",
+  "Party": "R",
+  "Office": "GA06",
+  "FECCandID": "H8GA06286"
+ },
+ {
+  "Id": "214",
+  "CID": "N00029632",
+  "LastName": "Harper",
+  "FirstName": "Gregg",
+  "Party": "R",
+  "Office": "MS03",
+  "FECCandID": "H8MS03067"
+ },
+ {
+  "Id": "215",
+  "CID": "N00029147",
+  "LastName": "Harris",
+  "FirstName": "Andy",
+  "Party": "R",
+  "Office": "MD01",
+  "FECCandID": "H8MD01094"
+ },
+ {
+  "Id": "216",
+  "CID": "N00036915",
+  "LastName": "Harris",
+  "FirstName": "Kamala",
+  "Party": "D",
+  "Office": "CAS1",
+  "FECCandID": "S6CA00584"
+ },
+ {
+  "Id": "217",
+  "CID": "N00031005",
+  "LastName": "Hartzler",
+  "FirstName": "Vicky",
+  "Party": "R",
+  "Office": "MO04",
+  "FECCandID": "H0MO04086"
+ },
+ {
+  "Id": "218",
+  "CID": "N00038397",
+  "LastName": "Hassan",
+  "FirstName": "Maggie",
+  "Party": "D",
+  "Office": "NHS1",
+  "FECCandID": "S6NH00091"
+ },
+ {
+  "Id": "219",
+  "CID": "N00002884",
+  "LastName": "Hastings",
+  "FirstName": "Alcee L",
+  "Party": "D",
+  "Office": "FL20",
+  "FECCandID": "H2FL23021"
+ },
+ {
+  "Id": "220",
+  "CID": "N00009869",
+  "LastName": "Hatch",
+  "FirstName": "Orrin G",
+  "Party": "R",
+  "Office": "UTS1",
+  "FECCandID": "S6UT00063"
+ },
+ {
+  "Id": "221",
+  "CID": "N00031557",
+  "LastName": "Heck",
+  "FirstName": "Dennis",
+  "Party": "D",
+  "Office": "WA10",
+  "FECCandID": "H0WA03161"
+ },
+ {
+  "Id": "222",
+  "CID": "N00029835",
+  "LastName": "Heinrich",
+  "FirstName": "Martin",
+  "Party": "D",
+  "Office": "NMS1",
+  "FECCandID": "S2NM00088"
+ },
+ {
+  "Id": "223",
+  "CID": "N00033782",
+  "LastName": "Heitkamp",
+  "FirstName": "Heidi",
+  "Party": "D",
+  "Office": "NDS2",
+  "FECCandID": "S2ND00099"
+ },
+ {
+  "Id": "224",
+  "CID": "N00027522",
+  "LastName": "Heller",
+  "FirstName": "Dean",
+  "Party": "R",
+  "Office": "NVS1",
+  "FECCandID": "S2NV00183"
+ },
+ {
+  "Id": "225",
+  "CID": "N00024922",
+  "LastName": "Hensarling",
+  "FirstName": "Jeb",
+  "Party": "R",
+  "Office": "TX05",
+  "FECCandID": "H2TX05121"
+ },
+ {
+  "Id": "226",
+  "CID": "N00040829",
+  "LastName": "Hern",
+  "FirstName": "Kevin",
+  "Party": "R",
+  "Office": "OK01",
+  "FECCandID": "H8OK01157"
+ },
+ {
+  "Id": "227",
+  "CID": "N00032243",
+  "LastName": "Hice",
+  "FirstName": "Jody",
+  "Party": "R",
+  "Office": "GA10",
+  "FECCandID": "H0GA07125"
+ },
+ {
+  "Id": "228",
+  "CID": "N00027060",
+  "LastName": "Higgins",
+  "FirstName": "Brian M",
+  "Party": "D",
+  "Office": "NY26",
+  "FECCandID": "H4NY27076"
+ },
+ {
+  "Id": "229",
+  "CID": "N00039953",
+  "LastName": "Higgins",
+  "FirstName": "Clay",
+  "Party": "R",
+  "Office": "LA03",
+  "FECCandID": "H6LA03148"
+ },
+ {
+  "Id": "230",
+  "CID": "N00035792",
+  "LastName": "Hill",
+  "FirstName": "French",
+  "Party": "R",
+  "Office": "AR02",
+  "FECCandID": "H4AR02141"
+ },
+ {
+  "Id": "231",
+  "CID": "N00029070",
+  "LastName": "Himes",
+  "FirstName": "Jim",
+  "Party": "D",
+  "Office": "CT04",
+  "FECCandID": "H8CT04172"
+ },
+ {
+  "Id": "232",
+  "CID": "N00028139",
+  "LastName": "Hirono",
+  "FirstName": "Mazie K",
+  "Party": "D",
+  "Office": "HIS2",
+  "FECCandID": "S2HI00106"
+ },
+ {
+  "Id": "233",
+  "CID": "N00031688",
+  "LastName": "Hoeven",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "NDS1",
+  "FECCandID": "S0ND00093"
+ },
+ {
+  "Id": "234",
+  "CID": "N00033399",
+  "LastName": "Holding",
+  "FirstName": "George",
+  "Party": "R",
+  "Office": "NC02",
+  "FECCandID": "H2NC13110"
+ },
+ {
+  "Id": "235",
+  "CID": "N00038429",
+  "LastName": "Hollingsworth",
+  "FirstName": "Trey",
+  "Party": "R",
+  "Office": "IN09",
+  "FECCandID": "H6IN09176"
+ },
+ {
+  "Id": "236",
+  "CID": "N00001821",
+  "LastName": "Hoyer",
+  "FirstName": "Steny H",
+  "Party": "D",
+  "Office": "MD05",
+  "FECCandID": "H2MD05155"
+ },
+ {
+  "Id": "237",
+  "CID": "N00033630",
+  "LastName": "Hudson",
+  "FirstName": "Richard",
+  "Party": "R",
+  "Office": "NC08",
+  "FECCandID": "H2NC08185"
+ },
+ {
+  "Id": "238",
+  "CID": "N00033030",
+  "LastName": "Huffman",
+  "FirstName": "Jared",
+  "Party": "D",
+  "Office": "CA02",
+  "FECCandID": "H2CA06259"
+ },
+ {
+  "Id": "239",
+  "CID": "N00030673",
+  "LastName": "Huizenga",
+  "FirstName": "Bill",
+  "Party": "R",
+  "Office": "MI02",
+  "FECCandID": "H0MI02094"
+ },
+ {
+  "Id": "240",
+  "CID": "N00031104",
+  "LastName": "Hultgren",
+  "FirstName": "Randy",
+  "Party": "R",
+  "Office": "IL14",
+  "FECCandID": "H0IL14080"
+ },
+ {
+  "Id": "241",
+  "CID": "N00029258",
+  "LastName": "Hunter",
+  "FirstName": "Duncan D",
+  "Party": "R",
+  "Office": "CA50",
+  "FECCandID": "H8CA52052"
+ },
+ {
+  "Id": "242",
+  "CID": "N00031417",
+  "LastName": "Hurd",
+  "FirstName": "Will",
+  "Party": "R",
+  "Office": "TX23",
+  "FECCandID": "H0TX23086"
+ },
+ {
+  "Id": "243",
+  "CID": "N00043298",
+  "LastName": "Hyde-Smith",
+  "FirstName": "Cindy",
+  "Party": "R",
+  "Office": "MSS1",
+  "FECCandID": "S8MS00261"
+ },
+ {
+  "Id": "244",
+  "CID": "N00005582",
+  "LastName": "Inhofe",
+  "FirstName": "James M",
+  "Party": "R",
+  "Office": "OKS2",
+  "FECCandID": "S4OK00083"
+ },
+ {
+  "Id": "245",
+  "CID": "N00002593",
+  "LastName": "Isakson",
+  "FirstName": "Johnny",
+  "Party": "R",
+  "Office": "GAS2",
+  "FECCandID": "S6GA00119"
+ },
+ {
+  "Id": "246",
+  "CID": "N00007017",
+  "LastName": "Issa",
+  "FirstName": "Darrell",
+  "Party": "R",
+  "Office": "CA49",
+  "FECCandID": "H0CA48024"
+ },
+ {
+  "Id": "247",
+  "CID": "N00005818",
+  "LastName": "Jackson Lee",
+  "FirstName": "Lee",
+  "Party": " Sheila",
+  "Office": "D",
+  "FECCandID": "TX18",
+  "undefined": "H4TX18054"
+ },
+ {
+  "Id": "248",
+  "CID": "N00038858",
+  "LastName": "Jayapal",
+  "FirstName": "Pramila",
+  "Party": "D",
+  "Office": "WA07",
+  "FECCandID": "H6WA07458"
+ },
+ {
+  "Id": "249",
+  "CID": "N00033640",
+  "LastName": "Jeffries",
+  "FirstName": "Hakeem",
+  "Party": "D",
+  "Office": "NY08",
+  "FECCandID": "H2NY10092"
+ },
+ {
+  "Id": "250",
+  "CID": "N00035531",
+  "LastName": "Jenkins",
+  "FirstName": "Evan",
+  "Party": "R",
+  "Office": "WV03",
+  "FECCandID": "S8WV00127"
+ },
+ {
+  "Id": "251",
+  "CID": "N00029077",
+  "LastName": "Jenkins",
+  "FirstName": "Lynn",
+  "Party": "R",
+  "Office": "KS02",
+  "FECCandID": "H8KS02090"
+ },
+ {
+  "Id": "252",
+  "CID": "N00032088",
+  "LastName": "Johnson",
+  "FirstName": "Bill",
+  "Party": "R",
+  "Office": "OH06",
+  "FECCandID": "H0OH06189"
+ },
+ {
+  "Id": "253",
+  "CID": "N00008122",
+  "LastName": "Johnson",
+  "FirstName": "Eddie Bernice",
+  "Party": "D",
+  "Office": "TX30",
+  "FECCandID": "H2TX00015"
+ },
+ {
+  "Id": "254",
+  "CID": "N00027848",
+  "LastName": "Johnson",
+  "FirstName": "Hank",
+  "Party": "D",
+  "Office": "GA04",
+  "FECCandID": "H6GA04129"
+ },
+ {
+  "Id": "255",
+  "CID": "N00039106",
+  "LastName": "Johnson",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "LA04",
+  "FECCandID": "H6LA04138"
+ },
+ {
+  "Id": "256",
+  "CID": "N00032546",
+  "LastName": "Johnson",
+  "FirstName": "Ron",
+  "Party": "R",
+  "Office": "WIS2",
+  "FECCandID": "S0WI00197"
+ },
+ {
+  "Id": "257",
+  "CID": "N00008028",
+  "LastName": "Johnson",
+  "FirstName": "Sam",
+  "Party": "R",
+  "Office": "TX03",
+  "FECCandID": "H2TX03118"
+ },
+ {
+  "Id": "258",
+  "CID": "N00042648",
+  "LastName": "Jones",
+  "FirstName": "Brenda",
+  "Party": "D",
+  "Office": "MI13",
+  "FECCandID": "H8MI13243"
+ },
+ {
+  "Id": "259",
+  "CID": "N00024817",
+  "LastName": "Jones",
+  "FirstName": "Doug",
+  "Party": "D",
+  "Office": "ALS1",
+  "FECCandID": "S0AL00156"
+ },
+ {
+  "Id": "260",
+  "CID": "N00002299",
+  "LastName": "Jones",
+  "FirstName": "Walter B Jr",
+  "Party": "R",
+  "Office": "NC03",
+  "FECCandID": "H2NC01081"
+ },
+ {
+  "Id": "261",
+  "CID": "N00027894",
+  "LastName": "Jordan",
+  "FirstName": "Jim",
+  "Party": "R",
+  "Office": "OH04",
+  "FECCandID": "H6OH04082"
+ },
+ {
+  "Id": "262",
+  "CID": "N00035007",
+  "LastName": "Joyce",
+  "FirstName": "David P",
+  "Party": "R",
+  "Office": "OH14",
+  "FECCandID": "H2OH14064"
+ },
+ {
+  "Id": "263",
+  "CID": "N00033177",
+  "LastName": "Kaine",
+  "FirstName": "Tim",
+  "Party": "D",
+  "Office": "VAS1",
+  "FECCandID": "S2VA00142"
+ },
+ {
+  "Id": "264",
+  "CID": "N00003522",
+  "LastName": "Kaptur",
+  "FirstName": "Marcy",
+  "Party": "D",
+  "Office": "OH09",
+  "FECCandID": "H2OH09031"
+ },
+ {
+  "Id": "265",
+  "CID": "N00035934",
+  "LastName": "Katko",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "NY24",
+  "FECCandID": "H4NY24073"
+ },
+ {
+  "Id": "266",
+  "CID": "N00031933",
+  "LastName": "Keating",
+  "FirstName": "Bill",
+  "Party": "D",
+  "Office": "MA09",
+  "FECCandID": "H0MA10082"
+ },
+ {
+  "Id": "267",
+  "CID": "N00031647",
+  "LastName": "Kelly",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "PA03",
+  "FECCandID": "H0PA03271"
+ },
+ {
+  "Id": "268",
+  "CID": "N00035215",
+  "LastName": "Kelly",
+  "FirstName": "Robin",
+  "Party": "D",
+  "Office": "IL02",
+  "FECCandID": "H2IL02172"
+ },
+ {
+  "Id": "269",
+  "CID": "N00037003",
+  "LastName": "Kelly",
+  "FirstName": "Trent",
+  "Party": "R",
+  "Office": "MS01",
+  "FECCandID": "H6MS01131"
+ },
+ {
+  "Id": "270",
+  "CID": "N00034044",
+  "LastName": "Kennedy",
+  "FirstName": "Joe III",
+  "Party": "D",
+  "Office": "MA04",
+  "FECCandID": "H2MA04073"
+ },
+ {
+  "Id": "271",
+  "CID": "N00026823",
+  "LastName": "Kennedy",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "LAS2",
+  "FECCandID": "S4LA00065"
+ },
+ {
+  "Id": "272",
+  "CID": "N00026427",
+  "LastName": "Khanna",
+  "FirstName": "Ro",
+  "Party": "D",
+  "Office": "CA17",
+  "FECCandID": "H4CA12055"
+ },
+ {
+  "Id": "273",
+  "CID": "N00033530",
+  "LastName": "Kihuen",
+  "FirstName": "Ruben",
+  "Party": "D",
+  "Office": "NV04",
+  "FECCandID": "H2NV00050"
+ },
+ {
+  "Id": "274",
+  "CID": "N00033395",
+  "LastName": "Kildee",
+  "FirstName": "Dan",
+  "Party": "D",
+  "Office": "MI05",
+  "FECCandID": "H2MI05119"
+ },
+ {
+  "Id": "275",
+  "CID": "N00034453",
+  "LastName": "Kilmer",
+  "FirstName": "Derek",
+  "Party": "D",
+  "Office": "WA06",
+  "FECCandID": "H2WA06129"
+ },
+ {
+  "Id": "276",
+  "CID": "N00004403",
+  "LastName": "Kind",
+  "FirstName": "Ron",
+  "Party": "D",
+  "Office": "WI03",
+  "FECCandID": "H6WI03099"
+ },
+ {
+  "Id": "277",
+  "CID": "N00034580",
+  "LastName": "King",
+  "FirstName": "Angus",
+  "Party": "I",
+  "Office": "MES1",
+  "FECCandID": "S2ME00109"
+ },
+ {
+  "Id": "278",
+  "CID": "N00001193",
+  "LastName": "King",
+  "FirstName": "Pete",
+  "Party": "R",
+  "Office": "NY02",
+  "FECCandID": "H2NY03089"
+ },
+ {
+  "Id": "279",
+  "CID": "N00025237",
+  "LastName": "King",
+  "FirstName": "Steven A",
+  "Party": "R",
+  "Office": "IA04",
+  "FECCandID": "H2IA05072"
+ },
+ {
+  "Id": "280",
+  "CID": "N00030667",
+  "LastName": "Kinzinger",
+  "FirstName": "Adam",
+  "Party": "R",
+  "Office": "IL16",
+  "FECCandID": "H0IL11052"
+ },
+ {
+  "Id": "281",
+  "CID": "N00027500",
+  "LastName": "Klobuchar",
+  "FirstName": "Amy",
+  "Party": "D",
+  "Office": "MNS2",
+  "FECCandID": "S6MN00267"
+ },
+ {
+  "Id": "282",
+  "CID": "N00035820",
+  "LastName": "Knight",
+  "FirstName": "Steve",
+  "Party": "R",
+  "Office": "CA25",
+  "FECCandID": "H4CA25123"
+ },
+ {
+  "Id": "283",
+  "CID": "N00033240",
+  "LastName": "Krishnamoorthi",
+  "FirstName": "Raja",
+  "Party": "D",
+  "Office": "IL08",
+  "FECCandID": "H6IL08147"
+ },
+ {
+  "Id": "284",
+  "CID": "N00030875",
+  "LastName": "Kuster",
+  "FirstName": "Ann",
+  "Party": "D",
+  "Office": "NH02",
+  "FECCandID": "H0NH02181"
+ },
+ {
+  "Id": "285",
+  "CID": "N00025445",
+  "LastName": "Kustoff",
+  "FirstName": "David",
+  "Party": "R",
+  "Office": "TN08",
+  "FECCandID": "H2TN07103"
+ },
+ {
+  "Id": "286",
+  "CID": "N00006406",
+  "LastName": "Kyl",
+  "FirstName": "Jon",
+  "Party": "R",
+  "Office": "AZS1",
+  "FECCandID": "S4AZ00030"
+ },
+ {
+  "Id": "287",
+  "CID": "N00031377",
+  "LastName": "Labrador",
+  "FirstName": "Raul",
+  "Party": "R",
+  "Office": "ID01",
+  "FECCandID": "H0ID01253"
+ },
+ {
+  "Id": "288",
+  "CID": "N00037031",
+  "LastName": "LaHood",
+  "FirstName": "Darin",
+  "Party": "R",
+  "Office": "IL18",
+  "FECCandID": "H6IL18088"
+ },
+ {
+  "Id": "289",
+  "CID": "N00033987",
+  "LastName": "LaMalfa",
+  "FirstName": "Doug",
+  "Party": "R",
+  "Office": "CA01",
+  "FECCandID": "H2CA02142"
+ },
+ {
+  "Id": "290",
+  "CID": "N00041870",
+  "LastName": "Lamb",
+  "FirstName": "Conor",
+  "Party": "D",
+  "Office": "PA18",
+  "FECCandID": "H8PA18181"
+ },
+ {
+  "Id": "291",
+  "CID": "N00028133",
+  "LastName": "Lamborn",
+  "FirstName": "Douglas L",
+  "Party": "R",
+  "Office": "CO05",
+  "FECCandID": "H6CO05159"
+ },
+ {
+  "Id": "292",
+  "CID": "N00000898",
+  "LastName": "Lance",
+  "FirstName": "Leonard",
+  "Party": "R",
+  "Office": "NJ07",
+  "FECCandID": "H6NJ12136"
+ },
+ {
+  "Id": "293",
+  "CID": "N00009724",
+  "LastName": "Langevin",
+  "FirstName": "Jim",
+  "Party": "D",
+  "Office": "RI02",
+  "FECCandID": "H0RI02139"
+ },
+ {
+  "Id": "294",
+  "CID": "N00031129",
+  "LastName": "Lankford",
+  "FirstName": "James",
+  "Party": "R",
+  "Office": "OKS1",
+  "FECCandID": "S4OK00232"
+ },
+ {
+  "Id": "295",
+  "CID": "N00009759",
+  "LastName": "Larsen",
+  "FirstName": "Rick",
+  "Party": "D",
+  "Office": "WA02",
+  "FECCandID": "H0WA02080"
+ },
+ {
+  "Id": "296",
+  "CID": "N00000575",
+  "LastName": "Larson",
+  "FirstName": "John B",
+  "Party": "D",
+  "Office": "CT01",
+  "FECCandID": "H8CT01046"
+ },
+ {
+  "Id": "297",
+  "CID": "N00012233",
+  "LastName": "Latta",
+  "FirstName": "Robert E",
+  "Party": "R",
+  "Office": "OH05",
+  "FECCandID": "H8OH05036"
+ },
+ {
+  "Id": "298",
+  "CID": "N00034068",
+  "LastName": "Lawrence",
+  "FirstName": "Brenda",
+  "Party": "D",
+  "Office": "MI14",
+  "FECCandID": "H2MI14111"
+ },
+ {
+  "Id": "299",
+  "CID": "N00030642",
+  "LastName": "Lawson",
+  "FirstName": "Al",
+  "Party": "D",
+  "Office": "FL05",
+  "FECCandID": "H0FL02086"
+ },
+ {
+  "Id": "300",
+  "CID": "N00009918",
+  "LastName": "Leahy",
+  "FirstName": "Patrick",
+  "Party": "D",
+  "Office": "VTS2",
+  "FECCandID": "S4VT00017"
+ },
+ {
+  "Id": "301",
+  "CID": "N00008046",
+  "LastName": "Lee",
+  "FirstName": "Barbara",
+  "Party": "D",
+  "Office": "CA13",
+  "FECCandID": "H8CA09060"
+ },
+ {
+  "Id": "302",
+  "CID": "N00031696",
+  "LastName": "Lee",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "UTS2",
+  "FECCandID": "S0UT00165"
+ },
+ {
+  "Id": "303",
+  "CID": "N00042056",
+  "LastName": "Lesko",
+  "FirstName": "Debbie",
+  "Party": "R",
+  "Office": "AZ08",
+  "FECCandID": "H8AZ08158"
+ },
+ {
+  "Id": "304",
+  "CID": "N00003950",
+  "LastName": "Levin",
+  "FirstName": "Sander",
+  "Party": "D",
+  "Office": "MI09",
+  "FECCandID": "H2MI17023"
+ },
+ {
+  "Id": "305",
+  "CID": "N00038400",
+  "LastName": "Lewis",
+  "FirstName": "Jason",
+  "Party": "R",
+  "Office": "MN02",
+  "FECCandID": "H6MN02149"
+ },
+ {
+  "Id": "306",
+  "CID": "N00002577",
+  "LastName": "Lewis",
+  "FirstName": "John",
+  "Party": "D",
+  "Office": "GA05",
+  "FECCandID": "H6GA05217"
+ },
+ {
+  "Id": "307",
+  "CID": "N00035825",
+  "LastName": "Lieu",
+  "FirstName": "Ted",
+  "Party": "D",
+  "Office": "CA33",
+  "FECCandID": "H4CA33119"
+ },
+ {
+  "Id": "308",
+  "CID": "N00027239",
+  "LastName": "Lipinski",
+  "FirstName": "Daniel",
+  "Party": "D",
+  "Office": "IL03",
+  "FECCandID": "H4IL03077"
+ },
+ {
+  "Id": "309",
+  "CID": "N00000851",
+  "LastName": "LoBiondo",
+  "FirstName": "Frank",
+  "Party": "R",
+  "Office": "NJ02",
+  "FECCandID": "H2NJ02037"
+ },
+ {
+  "Id": "310",
+  "CID": "N00027741",
+  "LastName": "Loebsack",
+  "FirstName": "David",
+  "Party": "D",
+  "Office": "IA02",
+  "FECCandID": "H6IA02146"
+ },
+ {
+  "Id": "311",
+  "CID": "N00007479",
+  "LastName": "Lofgren",
+  "FirstName": "Zoe",
+  "Party": "D",
+  "Office": "CA19",
+  "FECCandID": "H4CA16049"
+ },
+ {
+  "Id": "312",
+  "CID": "N00030676",
+  "LastName": "Long",
+  "FirstName": "Billy",
+  "Party": "R",
+  "Office": "MO07",
+  "FECCandID": "H0MO07113"
+ },
+ {
+  "Id": "313",
+  "CID": "N00035347",
+  "LastName": "Loudermilk",
+  "FirstName": "Barry",
+  "Party": "R",
+  "Office": "GA11",
+  "FECCandID": "H4GA11061"
+ },
+ {
+  "Id": "314",
+  "CID": "N00033842",
+  "LastName": "Love",
+  "FirstName": "Mia",
+  "Party": "R",
+  "Office": "UT04",
+  "FECCandID": "H2UT04023"
+ },
+ {
+  "Id": "315",
+  "CID": "N00033274",
+  "LastName": "Lowenthal",
+  "FirstName": "Alan",
+  "Party": "D",
+  "Office": "CA47",
+  "FECCandID": "H2CA00104"
+ },
+ {
+  "Id": "316",
+  "CID": "N00001024",
+  "LastName": "Lowey",
+  "FirstName": "Nita M",
+  "Party": "D",
+  "Office": "NY17",
+  "FECCandID": "H8NY20056"
+ },
+ {
+  "Id": "317",
+  "CID": "N00005559",
+  "LastName": "Lucas",
+  "FirstName": "Frank D",
+  "Party": "R",
+  "Office": "OK03",
+  "FECCandID": "H4OK06056"
+ },
+ {
+  "Id": "318",
+  "CID": "N00030026",
+  "LastName": "Luetkemeyer",
+  "FirstName": "Blaine",
+  "Party": "R",
+  "Office": "MO03",
+  "FECCandID": "H8MO09153"
+ },
+ {
+  "Id": "319",
+  "CID": "N00029562",
+  "LastName": "Lujan",
+  "FirstName": "Ben Ray",
+  "Party": "D",
+  "Office": "NM03",
+  "FECCandID": "H8NM03196"
+ },
+ {
+  "Id": "320",
+  "CID": "N00013855",
+  "LastName": "Lynch",
+  "FirstName": "Stephen F",
+  "Party": "D",
+  "Office": "MA08",
+  "FECCandID": "H2MA09072"
+ },
+ {
+  "Id": "321",
+  "CID": "N00036155",
+  "LastName": "MacArthur",
+  "FirstName": "Thomas",
+  "Party": "R",
+  "Office": "NJ03",
+  "FECCandID": "H4NJ03130"
+ },
+ {
+  "Id": "322",
+  "CID": "N00000078",
+  "LastName": "Maloney",
+  "FirstName": "Carolyn B",
+  "Party": "D",
+  "Office": "NY12",
+  "FECCandID": "H2NY14037"
+ },
+ {
+  "Id": "323",
+  "CID": "N00034277",
+  "LastName": "Maloney",
+  "FirstName": "Sean Patrick",
+  "Party": "D",
+  "Office": "NY18",
+  "FECCandID": "H2NY22139"
+ },
+ {
+  "Id": "324",
+  "CID": "N00032838",
+  "LastName": "Manchin",
+  "FirstName": "Joe",
+  "Party": "D",
+  "Office": "WVS1",
+  "FECCandID": "S0WV00090"
+ },
+ {
+  "Id": "325",
+  "CID": "N00026710",
+  "LastName": "Marchant",
+  "FirstName": "Kenny",
+  "Party": "R",
+  "Office": "TX24",
+  "FECCandID": "H4TX24094"
+ },
+ {
+  "Id": "326",
+  "CID": "N00031777",
+  "LastName": "Marino",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "PA10",
+  "FECCandID": "H0PA10078"
+ },
+ {
+  "Id": "327",
+  "CID": "N00000270",
+  "LastName": "Markey",
+  "FirstName": "Ed",
+  "Party": "D",
+  "Office": "MAS2",
+  "FECCandID": "S4MA00028"
+ },
+ {
+  "Id": "328",
+  "CID": "N00037034",
+  "LastName": "Marshall",
+  "FirstName": "Roger",
+  "Party": "R",
+  "Office": "KS01",
+  "FECCandID": "H6KS01179"
+ },
+ {
+  "Id": "329",
+  "CID": "N00034041",
+  "LastName": "Massie",
+  "FirstName": "Thomas",
+  "Party": "R",
+  "Office": "KY04",
+  "FECCandID": "H2KY04121"
+ },
+ {
+  "Id": "330",
+  "CID": "N00037269",
+  "LastName": "Mast",
+  "FirstName": "Brian",
+  "Party": "R",
+  "Office": "FL18",
+  "FECCandID": "H6FL18097"
+ },
+ {
+  "Id": "331",
+  "CID": "N00037161",
+  "LastName": "Masto",
+  "FirstName": "Catherine Cortez",
+  "Party": "D",
+  "Office": "NVS2",
+  "FECCandID": "S6NV00200"
+ },
+ {
+  "Id": "332",
+  "CID": "N00027459",
+  "LastName": "Matsui",
+  "FirstName": "Doris O",
+  "Party": "D",
+  "Office": "CA06",
+  "FECCandID": "H6CA05195"
+ },
+ {
+  "Id": "333",
+  "CID": "N00006424",
+  "LastName": "McCain",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "AZS1",
+  "FECCandID": "S6AZ00019"
+ },
+ {
+  "Id": "334",
+  "CID": "N00028152",
+  "LastName": "McCarthy",
+  "FirstName": "Kevin",
+  "Party": "R",
+  "Office": "CA23",
+  "FECCandID": "H6CA22125"
+ },
+ {
+  "Id": "335",
+  "CID": "N00027694",
+  "LastName": "McCaskill",
+  "FirstName": "Claire",
+  "Party": "D",
+  "Office": "MOS2",
+  "FECCandID": "S6MO00305"
+ },
+ {
+  "Id": "336",
+  "CID": "N00026460",
+  "LastName": "McCaul",
+  "FirstName": "Michael",
+  "Party": "R",
+  "Office": "TX10",
+  "FECCandID": "H4TX10093"
+ },
+ {
+  "Id": "337",
+  "CID": "N00006863",
+  "LastName": "McClintock",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "CA04",
+  "FECCandID": "H8CA04152"
+ },
+ {
+  "Id": "338",
+  "CID": "N00012942",
+  "LastName": "McCollum",
+  "FirstName": "Betty",
+  "Party": "D",
+  "Office": "MN04",
+  "FECCandID": "H0MN04049"
+ },
+ {
+  "Id": "339",
+  "CID": "N00003389",
+  "LastName": "McConnell",
+  "FirstName": "Mitch",
+  "Party": "R",
+  "Office": "KYS1",
+  "FECCandID": "S2KY00012"
+ },
+ {
+  "Id": "340",
+  "CID": "N00039327",
+  "LastName": "McEachin",
+  "FirstName": "Donald",
+  "Party": "D",
+  "Office": "VA04",
+  "FECCandID": "H6VA04061"
+ },
+ {
+  "Id": "341",
+  "CID": "N00000179",
+  "LastName": "McGovern",
+  "FirstName": "James P",
+  "Party": "D",
+  "Office": "MA02",
+  "FECCandID": "H4MA03022"
+ },
+ {
+  "Id": "342",
+  "CID": "N00026627",
+  "LastName": "McHenry",
+  "FirstName": "Patrick",
+  "Party": "R",
+  "Office": "NC10",
+  "FECCandID": "H4NC10047"
+ },
+ {
+  "Id": "343",
+  "CID": "N00031681",
+  "LastName": "McKinley",
+  "FirstName": "David",
+  "Party": "R",
+  "Office": "WV01",
+  "FECCandID": "H0WV01072"
+ },
+ {
+  "Id": "344",
+  "CID": "N00026926",
+  "LastName": "McNerney",
+  "FirstName": "Jerry",
+  "Party": "D",
+  "Office": "CA09",
+  "FECCandID": "H4CA11081"
+ },
+ {
+  "Id": "345",
+  "CID": "N00033982",
+  "LastName": "McSally",
+  "FirstName": "Martha",
+  "Party": "R",
+  "Office": "AZ02",
+  "FECCandID": "S8AZ00221"
+ },
+ {
+  "Id": "346",
+  "CID": "N00033631",
+  "LastName": "Meadows",
+  "FirstName": "Mark R",
+  "Party": "R",
+  "Office": "NC11",
+  "FECCandID": "H2NC11080"
+ },
+ {
+  "Id": "347",
+  "CID": "N00031134",
+  "LastName": "Meehan",
+  "FirstName": "Patrick",
+  "Party": "R",
+  "Office": "PA07",
+  "FECCandID": "H0PA07082"
+ },
+ {
+  "Id": "348",
+  "CID": "N00001171",
+  "LastName": "Meeks",
+  "FirstName": "Gregory W",
+  "Party": "D",
+  "Office": "NY05",
+  "FECCandID": "H8NY06048"
+ },
+ {
+  "Id": "349",
+  "CID": "N00000699",
+  "LastName": "Menendez",
+  "FirstName": "Robert",
+  "Party": "D",
+  "Office": "NJS1",
+  "FECCandID": "S6NJ00289"
+ },
+ {
+  "Id": "350",
+  "CID": "N00034547",
+  "LastName": "Meng",
+  "FirstName": "Grace",
+  "Party": "D",
+  "Office": "NY06",
+  "FECCandID": "H2NY06116"
+ },
+ {
+  "Id": "351",
+  "CID": "N00029303",
+  "LastName": "Merkley",
+  "FirstName": "Jeff",
+  "Party": "D",
+  "Office": "ORS1",
+  "FECCandID": "S8OR00207"
+ },
+ {
+  "Id": "352",
+  "CID": "N00012546",
+  "LastName": "Messer",
+  "FirstName": "Luke",
+  "Party": "R",
+  "Office": "IN06",
+  "FECCandID": "S8IN00163"
+ },
+ {
+  "Id": "353",
+  "CID": "N00036274",
+  "LastName": "Mitchell",
+  "FirstName": "Paul",
+  "Party": "R",
+  "Office": "MI10",
+  "FECCandID": "H4MI04118"
+ },
+ {
+  "Id": "354",
+  "CID": "N00036275",
+  "LastName": "Moolenaar",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "MI04",
+  "FECCandID": "H4MI04126"
+ },
+ {
+  "Id": "355",
+  "CID": "N00033814",
+  "LastName": "Mooney",
+  "FirstName": "Alex",
+  "Party": "R",
+  "Office": "WV02",
+  "FECCandID": "H4WV02080"
+ },
+ {
+  "Id": "356",
+  "CID": "N00026914",
+  "LastName": "Moore",
+  "FirstName": "Gwen",
+  "Party": "D",
+  "Office": "WI04",
+  "FECCandID": "H4WI04183"
+ },
+ {
+  "Id": "357",
+  "CID": "N00005282",
+  "LastName": "Moran",
+  "FirstName": "Jerry",
+  "Party": "R",
+  "Office": "KSS2",
+  "FECCandID": "S0KS00091"
+ },
+ {
+  "Id": "358",
+  "CID": "N00043207",
+  "LastName": "Morelle",
+  "FirstName": "Joseph D",
+  "Party": "D",
+  "Office": "NY25",
+  "FECCandID": "H8NY25105"
+ },
+ {
+  "Id": "359",
+  "CID": "N00035431",
+  "LastName": "Moulton",
+  "FirstName": "Seth",
+  "Party": "D",
+  "Office": "MA06",
+  "FECCandID": "H4MA06090"
+ },
+ {
+  "Id": "360",
+  "CID": "N00033410",
+  "LastName": "Mullin",
+  "FirstName": "Markwayne",
+  "Party": "R",
+  "Office": "OK02",
+  "FECCandID": "H2OK02083"
+ },
+ {
+  "Id": "361",
+  "CID": "N00031412",
+  "LastName": "Mulvaney",
+  "FirstName": "Mick",
+  "Party": "R",
+  "Office": "SC05",
+  "FECCandID": "H0SC05031"
+ },
+ {
+  "Id": "362",
+  "CID": "N00026050",
+  "LastName": "Murkowski",
+  "FirstName": "Lisa",
+  "Party": "R",
+  "Office": "AKS2",
+  "FECCandID": "S4AK00099"
+ },
+ {
+  "Id": "363",
+  "CID": "N00027566",
+  "LastName": "Murphy",
+  "FirstName": "Christopher S",
+  "Party": "D",
+  "Office": "CTS1",
+  "FECCandID": "S2CT00132"
+ },
+ {
+  "Id": "364",
+  "CID": "N00040133",
+  "LastName": "Murphy",
+  "FirstName": "Stephanie",
+  "Party": "D",
+  "Office": "FL07",
+  "FECCandID": "H6FL07140"
+ },
+ {
+  "Id": "365",
+  "CID": "N00024992",
+  "LastName": "Murphy",
+  "FirstName": "Tim",
+  "Party": "R",
+  "Office": "PA18",
+  "FECCandID": "H2PA18143"
+ },
+ {
+  "Id": "366",
+  "CID": "N00007876",
+  "LastName": "Murray",
+  "FirstName": "Patty",
+  "Party": "D",
+  "Office": "WAS2",
+  "FECCandID": "S2WA00189"
+ },
+ {
+  "Id": "367",
+  "CID": "N00000939",
+  "LastName": "Nadler",
+  "FirstName": "Jerrold",
+  "Party": "D",
+  "Office": "NY10",
+  "FECCandID": "H2NY17071"
+ },
+ {
+  "Id": "368",
+  "CID": "N00006789",
+  "LastName": "Napolitano",
+  "FirstName": "Grace",
+  "Party": "D",
+  "Office": "CA32",
+  "FECCandID": "H8CA34068"
+ },
+ {
+  "Id": "369",
+  "CID": "N00000153",
+  "LastName": "Neal",
+  "FirstName": "Richard E",
+  "Party": "D",
+  "Office": "MA01",
+  "FECCandID": "H8MA02041"
+ },
+ {
+  "Id": "370",
+  "CID": "N00009926",
+  "LastName": "Nelson",
+  "FirstName": "Bill",
+  "Party": "D",
+  "Office": "FLS1",
+  "FECCandID": "S8FL00166"
+ },
+ {
+  "Id": "371",
+  "CID": "N00036403",
+  "LastName": "Newhouse",
+  "FirstName": "Dan",
+  "Party": "R",
+  "Office": "WA04",
+  "FECCandID": "H4WA04104"
+ },
+ {
+  "Id": "372",
+  "CID": "N00032022",
+  "LastName": "Noem",
+  "FirstName": "Kristi",
+  "Party": "R",
+  "Office": "SD01",
+  "FECCandID": "H0SD00054"
+ },
+ {
+  "Id": "373",
+  "CID": "N00021207",
+  "LastName": "Nolan",
+  "FirstName": "Rick",
+  "Party": "D",
+  "Office": "MN08",
+  "FECCandID": "H2MN08111"
+ },
+ {
+  "Id": "374",
+  "CID": "N00036154",
+  "LastName": "Norcross",
+  "FirstName": "Don",
+  "Party": "D",
+  "Office": "NJ01",
+  "FECCandID": "H4NJ01084"
+ },
+ {
+  "Id": "375",
+  "CID": "N00027783",
+  "LastName": "Norman",
+  "FirstName": "Ralph",
+  "Party": "R",
+  "Office": "SC05",
+  "FECCandID": "H8SC05158"
+ },
+ {
+  "Id": "376",
+  "CID": "N00001692",
+  "LastName": "Norton",
+  "FirstName": "Eleanor Holmes",
+  "Party": "D",
+  "Office": "DC00",
+  "FECCandID": "H0DC00058"
+ },
+ {
+  "Id": "377",
+  "CID": "N00007248",
+  "LastName": "Nunes",
+  "FirstName": "Devin",
+  "Party": "R",
+  "Office": "CA22",
+  "FECCandID": "H8CA20059"
+ },
+ {
+  "Id": "378",
+  "CID": "N00037515",
+  "LastName": "O'Halleran",
+  "FirstName": "Tom",
+  "Party": "D",
+  "Office": "AZ01",
+  "FECCandID": "H6AZ01199"
+ },
+ {
+  "Id": "379",
+  "CID": "N00033540",
+  "LastName": "O'Rourke",
+  "FirstName": "Beto",
+  "Party": "D",
+  "Office": "TX16",
+  "FECCandID": "S8TX00285"
+ },
+ {
+  "Id": "380",
+  "CID": "N00029285",
+  "LastName": "Olson",
+  "FirstName": "Pete",
+  "Party": "R",
+  "Office": "TX22",
+  "FECCandID": "H8TX22107"
+ },
+ {
+  "Id": "381",
+  "CID": "N00031958",
+  "LastName": "Palazzo",
+  "FirstName": "Steven",
+  "Party": "R",
+  "Office": "MS04",
+  "FECCandID": "H0MS04120"
+ },
+ {
+  "Id": "382",
+  "CID": "N00000781",
+  "LastName": "Pallone",
+  "FirstName": "Frank Jr",
+  "Party": "D",
+  "Office": "NJ06",
+  "FECCandID": "H8NJ03073"
+ },
+ {
+  "Id": "383",
+  "CID": "N00035691",
+  "LastName": "Palmer",
+  "FirstName": "Gary",
+  "Party": "R",
+  "Office": "AL06",
+  "FECCandID": "H4AL06098"
+ },
+ {
+  "Id": "384",
+  "CID": "N00038601",
+  "LastName": "Panetta",
+  "FirstName": "Jimmy",
+  "Party": "D",
+  "Office": "CA20",
+  "FECCandID": "H6CA20152"
+ },
+ {
+  "Id": "385",
+  "CID": "N00000751",
+  "LastName": "Pascrell",
+  "FirstName": "Bill Jr",
+  "Party": "D",
+  "Office": "NJ09",
+  "FECCandID": "H6NJ08118"
+ },
+ {
+  "Id": "386",
+  "CID": "N00030836",
+  "LastName": "Paul",
+  "FirstName": "Rand",
+  "Party": "R",
+  "Office": "KYS2",
+  "FECCandID": "S0KY00156"
+ },
+ {
+  "Id": "387",
+  "CID": "N00029391",
+  "LastName": "Paulsen",
+  "FirstName": "Erik",
+  "Party": "R",
+  "Office": "MN03",
+  "FECCandID": "H8MN03077"
+ },
+ {
+  "Id": "388",
+  "CID": "N00034639",
+  "LastName": "Payne",
+  "FirstName": "Donald M Jr",
+  "Party": "D",
+  "Office": "NJ10",
+  "FECCandID": "H2NJ10154"
+ },
+ {
+  "Id": "389",
+  "CID": "N00012672",
+  "LastName": "Pearce",
+  "FirstName": "Steve",
+  "Party": "R",
+  "Office": "NM02",
+  "FECCandID": "H2NM02126"
+ },
+ {
+  "Id": "390",
+  "CID": "N00007360",
+  "LastName": "Pelosi",
+  "FirstName": "Nancy",
+  "Party": "D",
+  "Office": "CA12",
+  "FECCandID": "H8CA05035"
+ },
+ {
+  "Id": "391",
+  "CID": "N00035516",
+  "LastName": "Perdue",
+  "FirstName": "David",
+  "Party": "R",
+  "Office": "GAS1",
+  "FECCandID": "S4GA11285"
+ },
+ {
+  "Id": "392",
+  "CID": "N00027510",
+  "LastName": "Perlmutter",
+  "FirstName": "Ed",
+  "Party": "D",
+  "Office": "CO07",
+  "FECCandID": "H6CO07023"
+ },
+ {
+  "Id": "393",
+  "CID": "N00034120",
+  "LastName": "Perry",
+  "FirstName": "Scott",
+  "Party": "R",
+  "Office": "PA04",
+  "FECCandID": "H2PA04135"
+ },
+ {
+  "Id": "394",
+  "CID": "N00029277",
+  "LastName": "Peters",
+  "FirstName": "Gary",
+  "Party": "D",
+  "Office": "MIS1",
+  "FECCandID": "S4MI00355"
+ },
+ {
+  "Id": "395",
+  "CID": "N00033591",
+  "LastName": "Peters",
+  "FirstName": "Scott",
+  "Party": "D",
+  "Office": "CA52",
+  "FECCandID": "H2CA52089"
+ },
+ {
+  "Id": "396",
+  "CID": "N00004558",
+  "LastName": "Peterson",
+  "FirstName": "Collin",
+  "Party": "D",
+  "Office": "MN07",
+  "FECCandID": "H2MN07014"
+ },
+ {
+  "Id": "397",
+  "CID": "N00013817",
+  "LastName": "Pingree",
+  "FirstName": "Chellie",
+  "Party": "D",
+  "Office": "ME01",
+  "FECCandID": "H8ME01120"
+ },
+ {
+  "Id": "398",
+  "CID": "N00034416",
+  "LastName": "Pittenger",
+  "FirstName": "Robert",
+  "Party": "R",
+  "Office": "NC09",
+  "FECCandID": "H2NC09134"
+ },
+ {
+  "Id": "399",
+  "CID": "N00035000",
+  "LastName": "Plaskett",
+  "FirstName": "Stacey",
+  "Party": "D",
+  "Office": "VI00",
+  "FECCandID": "H2VI00082"
+ },
+ {
+  "Id": "400",
+  "CID": "N00033549",
+  "LastName": "Pocan",
+  "FirstName": "Mark",
+  "Party": "D",
+  "Office": "WI02",
+  "FECCandID": "H2WI02124"
+ },
+ {
+  "Id": "401",
+  "CID": "N00026457",
+  "LastName": "Poe",
+  "FirstName": "Ted",
+  "Party": "R",
+  "Office": "TX02",
+  "FECCandID": "H4TX02108"
+ },
+ {
+  "Id": "402",
+  "CID": "N00034584",
+  "LastName": "Poliquin",
+  "FirstName": "Bruce",
+  "Party": "R",
+  "Office": "ME02",
+  "FECCandID": "H4ME02234"
+ },
+ {
+  "Id": "403",
+  "CID": "N00029127",
+  "LastName": "Polis",
+  "FirstName": "Jared",
+  "Party": "D",
+  "Office": "CO02",
+  "FECCandID": "H8CO02137"
+ },
+ {
+  "Id": "404",
+  "CID": "N00030744",
+  "LastName": "Pompeo",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "KS04",
+  "FECCandID": "H0KS04051"
+ },
+ {
+  "Id": "405",
+  "CID": "N00003682",
+  "LastName": "Portman",
+  "FirstName": "Rob",
+  "Party": "R",
+  "Office": "OHS2",
+  "FECCandID": "S0OH00133"
+ },
+ {
+  "Id": "406",
+  "CID": "N00029662",
+  "LastName": "Posey",
+  "FirstName": "Bill",
+  "Party": "R",
+  "Office": "FL08",
+  "FECCandID": "H8FL15107"
+ },
+ {
+  "Id": "407",
+  "CID": "N00002260",
+  "LastName": "Price",
+  "FirstName": "David",
+  "Party": "D",
+  "Office": "NC04",
+  "FECCandID": "H6NC04037"
+ },
+ {
+  "Id": "408",
+  "CID": "N00026160",
+  "LastName": "Price",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "GA06",
+  "FECCandID": "H4GA06087"
+ },
+ {
+  "Id": "409",
+  "CID": "N00030581",
+  "LastName": "Quigley",
+  "FirstName": "Mike",
+  "Party": "D",
+  "Office": "IL05",
+  "FECCandID": "H0IL05096"
+ },
+ {
+  "Id": "410",
+  "CID": "N00007635",
+  "LastName": "Radewagen",
+  "FirstName": "Amata Coleman",
+  "Party": "R",
+  "Office": "AS00",
+  "FECCandID": "H4AS00036"
+ },
+ {
+  "Id": "411",
+  "CID": "N00037036",
+  "LastName": "Raskin",
+  "FirstName": "Jamie",
+  "Party": "D",
+  "Office": "MD08",
+  "FECCandID": "H6MD08457"
+ },
+ {
+  "Id": "412",
+  "CID": "N00035972",
+  "LastName": "Ratcliffe",
+  "FirstName": "John Lee",
+  "Party": "R",
+  "Office": "TX04",
+  "FECCandID": "H4TX04153"
+ },
+ {
+  "Id": "413",
+  "CID": "N00000362",
+  "LastName": "Reed",
+  "FirstName": "Jack",
+  "Party": "D",
+  "Office": "RIS2",
+  "FECCandID": "S6RI00163"
+ },
+ {
+  "Id": "414",
+  "CID": "N00030949",
+  "LastName": "Reed",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "NY23",
+  "FECCandID": "H0NY29054"
+ },
+ {
+  "Id": "415",
+  "CID": "N00026885",
+  "LastName": "Reichert",
+  "FirstName": "Dave",
+  "Party": "R",
+  "Office": "WA08",
+  "FECCandID": "H4WA08071"
+ },
+ {
+  "Id": "416",
+  "CID": "N00031127",
+  "LastName": "Renacci",
+  "FirstName": "Jim",
+  "Party": "R",
+  "Office": "OH16",
+  "FECCandID": "S8OH00102"
+ },
+ {
+  "Id": "417",
+  "CID": "N00035927",
+  "LastName": "Rice",
+  "FirstName": "Kathleen",
+  "Party": "D",
+  "Office": "NY04",
+  "FECCandID": "H4NY04075"
+ },
+ {
+  "Id": "418",
+  "CID": "N00033832",
+  "LastName": "Rice",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "SC07",
+  "FECCandID": "H2SC07066"
+ },
+ {
+  "Id": "419",
+  "CID": "N00030184",
+  "LastName": "Richmond",
+  "FirstName": "Cedric",
+  "Party": "D",
+  "Office": "LA02",
+  "FECCandID": "H8LA02054"
+ },
+ {
+  "Id": "420",
+  "CID": "N00029441",
+  "LastName": "Risch",
+  "FirstName": "James E",
+  "Party": "R",
+  "Office": "IDS1",
+  "FECCandID": "S8ID00092"
+ },
+ {
+  "Id": "421",
+  "CID": "N00005285",
+  "LastName": "Roberts",
+  "FirstName": "Pat",
+  "Party": "R",
+  "Office": "KSS1",
+  "FECCandID": "S6KS00080"
+ },
+ {
+  "Id": "422",
+  "CID": "N00030768",
+  "LastName": "Roby",
+  "FirstName": "Martha",
+  "Party": "R",
+  "Office": "AL02",
+  "FECCandID": "H0AL02087"
+ },
+ {
+  "Id": "423",
+  "CID": "N00038414",
+  "LastName": "Rochester",
+  "FirstName": "Lisa Blunt",
+  "Party": "D",
+  "Office": "DE01",
+  "FECCandID": "H6DE00206"
+ },
+ {
+  "Id": "424",
+  "CID": "N00026314",
+  "LastName": "Rodgers",
+  "FirstName": "Cathy McMorris",
+  "Party": "R",
+  "Office": "WA05",
+  "FECCandID": "H4WA05077"
+ },
+ {
+  "Id": "425",
+  "CID": "N00028463",
+  "LastName": "Roe",
+  "FirstName": "Phil",
+  "Party": "R",
+  "Office": "TN01",
+  "FECCandID": "H6TN01388"
+ },
+ {
+  "Id": "426",
+  "CID": "N00003473",
+  "LastName": "Rogers",
+  "FirstName": "Hal",
+  "Party": "R",
+  "Office": "KY05",
+  "FECCandID": "H0KY05015"
+ },
+ {
+  "Id": "427",
+  "CID": "N00024759",
+  "LastName": "Rogers",
+  "FirstName": "Mike D",
+  "Party": "R",
+  "Office": "AL03",
+  "FECCandID": "H2AL03032"
+ },
+ {
+  "Id": "428",
+  "CID": "N00007151",
+  "LastName": "Rohrabacher",
+  "FirstName": "Dana",
+  "Party": "R",
+  "Office": "CA48",
+  "FECCandID": "H8CA42061"
+ },
+ {
+  "Id": "429",
+  "CID": "N00031741",
+  "LastName": "Rokita",
+  "FirstName": "Todd",
+  "Party": "R",
+  "Office": "IN04",
+  "FECCandID": "S8IN00189"
+ },
+ {
+  "Id": "430",
+  "CID": "N00040007",
+  "LastName": "Rooney",
+  "FirstName": "Francis",
+  "Party": "R",
+  "Office": "FL19",
+  "FECCandID": "H6FL19087"
+ },
+ {
+  "Id": "431",
+  "CID": "N00029018",
+  "LastName": "Rooney",
+  "FirstName": "Tom",
+  "Party": "R",
+  "Office": "FL17",
+  "FECCandID": "H8FL16022"
+ },
+ {
+  "Id": "432",
+  "CID": "N00002858",
+  "LastName": "Ros-Lehtinen",
+  "FirstName": "Ileana",
+  "Party": "R",
+  "Office": "FL27",
+  "FECCandID": "H0FL18025"
+ },
+ {
+  "Id": "433",
+  "CID": "N00038734",
+  "LastName": "Rosen",
+  "FirstName": "Jacky",
+  "Party": "D",
+  "Office": "NV03",
+  "FECCandID": "S8NV00156"
+ },
+ {
+  "Id": "434",
+  "CID": "N00004719",
+  "LastName": "Roskam",
+  "FirstName": "Peter",
+  "Party": "R",
+  "Office": "IL06",
+  "FECCandID": "H6IL06117"
+ },
+ {
+  "Id": "435",
+  "CID": "N00030645",
+  "LastName": "Ross",
+  "FirstName": "Dennis",
+  "Party": "R",
+  "Office": "FL15",
+  "FECCandID": "H0FL12101"
+ },
+ {
+  "Id": "436",
+  "CID": "N00031253",
+  "LastName": "Rothfus",
+  "FirstName": "Keith J",
+  "Party": "R",
+  "Office": "PA12",
+  "FECCandID": "H0PA04220"
+ },
+ {
+  "Id": "437",
+  "CID": "N00035187",
+  "LastName": "Rounds",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "SDS2",
+  "FECCandID": "S4SD00049"
+ },
+ {
+  "Id": "438",
+  "CID": "N00033527",
+  "LastName": "Rouzer",
+  "FirstName": "David",
+  "Party": "R",
+  "Office": "NC07",
+  "FECCandID": "H2NC07096"
+ },
+ {
+  "Id": "439",
+  "CID": "N00006671",
+  "LastName": "Roybal-Allard",
+  "FirstName": "Lucille",
+  "Party": "D",
+  "Office": "CA40",
+  "FECCandID": "H2CA33048"
+ },
+ {
+  "Id": "440",
+  "CID": "N00008264",
+  "LastName": "Royce",
+  "FirstName": "Ed",
+  "Party": "R",
+  "Office": "CA39",
+  "FECCandID": "H6CA39020"
+ },
+ {
+  "Id": "441",
+  "CID": "N00030612",
+  "LastName": "Rubio",
+  "FirstName": "Marco",
+  "Party": "R",
+  "Office": "FLS2",
+  "FECCandID": "S0FL00338"
+ },
+ {
+  "Id": "442",
+  "CID": "N00033510",
+  "LastName": "Ruiz",
+  "FirstName": "Raul",
+  "Party": "D",
+  "Office": "CA36",
+  "FECCandID": "H2CA36439"
+ },
+ {
+  "Id": "443",
+  "CID": "N00025482",
+  "LastName": "Ruppersberger",
+  "FirstName": "Dutch",
+  "Party": "D",
+  "Office": "MD02",
+  "FECCandID": "H2MD02160"
+ },
+ {
+  "Id": "444",
+  "CID": "N00004887",
+  "LastName": "Rush",
+  "FirstName": "Bobby L",
+  "Party": "D",
+  "Office": "IL01",
+  "FECCandID": "H2IL01042"
+ },
+ {
+  "Id": "445",
+  "CID": "N00036175",
+  "LastName": "Russell",
+  "FirstName": "Steven",
+  "Party": "R",
+  "Office": "OK05",
+  "FECCandID": "H4OK05132"
+ },
+ {
+  "Id": "446",
+  "CID": "N00039777",
+  "LastName": "Rutherford",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "FL04",
+  "FECCandID": "H6FL04105"
+ },
+ {
+  "Id": "447",
+  "CID": "N00004357",
+  "LastName": "Ryan",
+  "FirstName": "Paul",
+  "Party": "R",
+  "Office": "WI01",
+  "FECCandID": "H8WI01024"
+ },
+ {
+  "Id": "448",
+  "CID": "N00025280",
+  "LastName": "Ryan",
+  "FirstName": "Tim",
+  "Party": "D",
+  "Office": "OH13",
+  "FECCandID": "H2OH17109"
+ },
+ {
+  "Id": "449",
+  "CID": "N00030418",
+  "LastName": "Sablan",
+  "FirstName": "Gregorio",
+  "Party": "I",
+  "Office": "MP00",
+  "FECCandID": "H8MP00041"
+ },
+ {
+  "Id": "450",
+  "CID": "N00024870",
+  "LastName": "Sanchez",
+  "FirstName": "Linda",
+  "Party": "D",
+  "Office": "CA38",
+  "FECCandID": "H2CA39078"
+ },
+ {
+  "Id": "451",
+  "CID": "N00000528",
+  "LastName": "Sanders",
+  "FirstName": "Bernie",
+  "Party": "I",
+  "Office": "VTS1",
+  "FECCandID": "S4VT00033"
+ },
+ {
+  "Id": "452",
+  "CID": "N00002424",
+  "LastName": "Sanford",
+  "FirstName": "Mark",
+  "Party": "R",
+  "Office": "SC01",
+  "FECCandID": "H4SC01073"
+ },
+ {
+  "Id": "453",
+  "CID": "N00027751",
+  "LastName": "Sarbanes",
+  "FirstName": "John",
+  "Party": "D",
+  "Office": "MD03",
+  "FECCandID": "H6MD03292"
+ },
+ {
+  "Id": "454",
+  "CID": "N00035544",
+  "LastName": "Sasse",
+  "FirstName": "Ben",
+  "Party": "R",
+  "Office": "NES2",
+  "FECCandID": "S4NE00090"
+ },
+ {
+  "Id": "455",
+  "CID": "N00009660",
+  "LastName": "Scalise",
+  "FirstName": "Steve",
+  "Party": "R",
+  "Office": "LA01",
+  "FECCandID": "H0LA01087"
+ },
+ {
+  "Id": "456",
+  "CID": "N00042706",
+  "LastName": "Scanlon",
+  "FirstName": "Mary Gay",
+  "Party": "D",
+  "Office": "PA07",
+  "FECCandID": "H8PA07200"
+ },
+ {
+  "Id": "457",
+  "CID": "N00004724",
+  "LastName": "Schakowsky",
+  "FirstName": "Jan",
+  "Party": "D",
+  "Office": "IL09",
+  "FECCandID": "H8IL09067"
+ },
+ {
+  "Id": "458",
+  "CID": "N00028138",
+  "LastName": "Schatz",
+  "FirstName": "Brian",
+  "Party": "D",
+  "Office": "HIS1",
+  "FECCandID": "S4HI00136"
+ },
+ {
+  "Id": "459",
+  "CID": "N00009585",
+  "LastName": "Schiff",
+  "FirstName": "Adam",
+  "Party": "D",
+  "Office": "CA28",
+  "FECCandID": "H0CA27085"
+ },
+ {
+  "Id": "460",
+  "CID": "N00033101",
+  "LastName": "Schneider",
+  "FirstName": "Brad",
+  "Party": "D",
+  "Office": "IL10",
+  "FECCandID": "H2IL10068"
+ },
+ {
+  "Id": "461",
+  "CID": "N00030071",
+  "LastName": "Schrader",
+  "FirstName": "Kurt",
+  "Party": "D",
+  "Office": "OR05",
+  "FECCandID": "H8OR05107"
+ },
+ {
+  "Id": "462",
+  "CID": "N00026106",
+  "LastName": "Schultz",
+  "FirstName": "Debbie Wasserman",
+  "Party": "D",
+  "Office": "FL23",
+  "FECCandID": "H4FL20023"
+ },
+ {
+  "Id": "463",
+  "CID": "N00001093",
+  "LastName": "Schumer",
+  "FirstName": "Charles E",
+  "Party": "D",
+  "Office": "NYS2",
+  "FECCandID": "S8NY00082"
+ },
+ {
+  "Id": "464",
+  "CID": "N00006460",
+  "LastName": "Schweikert",
+  "FirstName": "David",
+  "Party": "R",
+  "Office": "AZ06",
+  "FECCandID": "H4AZ06045"
+ },
+ {
+  "Id": "465",
+  "CID": "N00032457",
+  "LastName": "Scott",
+  "FirstName": "Austin",
+  "Party": "R",
+  "Office": "GA08",
+  "FECCandID": "H0GA08099"
+ },
+ {
+  "Id": "466",
+  "CID": "N00002147",
+  "LastName": "Scott",
+  "FirstName": "Bobby",
+  "Party": "D",
+  "Office": "VA03",
+  "FECCandID": "H6VA01117"
+ },
+ {
+  "Id": "467",
+  "CID": "N00024871",
+  "LastName": "Scott",
+  "FirstName": "David",
+  "Party": "D",
+  "Office": "GA13",
+  "FECCandID": "H2GA13012"
+ },
+ {
+  "Id": "468",
+  "CID": "N00031782",
+  "LastName": "Scott",
+  "FirstName": "Tim",
+  "Party": "R",
+  "Office": "SCS1",
+  "FECCandID": "S4SC00240"
+ },
+ {
+  "Id": "469",
+  "CID": "N00004291",
+  "LastName": "Sensenbrenner",
+  "FirstName": "F James Jr",
+  "Party": "R",
+  "Office": "WI05",
+  "FECCandID": "H8WI09050"
+ },
+ {
+  "Id": "470",
+  "CID": "N00001813",
+  "LastName": "Serrano",
+  "FirstName": "Jose E",
+  "Party": "D",
+  "Office": "NY15",
+  "FECCandID": "H0NY18065"
+ },
+ {
+  "Id": "471",
+  "CID": "N00003062",
+  "LastName": "Sessions",
+  "FirstName": "Jeff",
+  "Party": "R",
+  "Office": "ALS1",
+  "FECCandID": "S6AL00195"
+ },
+ {
+  "Id": "472",
+  "CID": "N00005681",
+  "LastName": "Sessions",
+  "FirstName": "Pete",
+  "Party": "R",
+  "Office": "TX32",
+  "FECCandID": "H2TX03126"
+ },
+ {
+  "Id": "473",
+  "CID": "N00030622",
+  "LastName": "Sewell",
+  "FirstName": "Terri A",
+  "Party": "D",
+  "Office": "AL07",
+  "FECCandID": "H0AL07086"
+ },
+ {
+  "Id": "474",
+  "CID": "N00024790",
+  "LastName": "Shaheen",
+  "FirstName": "Jeanne",
+  "Party": "D",
+  "Office": "NHS2",
+  "FECCandID": "S0NH00219"
+ },
+ {
+  "Id": "475",
+  "CID": "N00028091",
+  "LastName": "Shea-Porter",
+  "FirstName": "Carol",
+  "Party": "D",
+  "Office": "NH01",
+  "FECCandID": "H6NH01230"
+ },
+ {
+  "Id": "476",
+  "CID": "N00009920",
+  "LastName": "Shelby",
+  "FirstName": "Richard C",
+  "Party": "R",
+  "Office": "ALS2",
+  "FECCandID": "S6AL00013"
+ },
+ {
+  "Id": "477",
+  "CID": "N00006897",
+  "LastName": "Sherman",
+  "FirstName": "Brad",
+  "Party": "D",
+  "Office": "CA30",
+  "FECCandID": "H6CA24113"
+ },
+ {
+  "Id": "478",
+  "CID": "N00004961",
+  "LastName": "Shimkus",
+  "FirstName": "John M",
+  "Party": "R",
+  "Office": "IL15",
+  "FECCandID": "H2IL20042"
+ },
+ {
+  "Id": "479",
+  "CID": "N00013770",
+  "LastName": "Shuster",
+  "FirstName": "Bill",
+  "Party": "R",
+  "Office": "PA09",
+  "FECCandID": "H2PA09035"
+ },
+ {
+  "Id": "480",
+  "CID": "N00006263",
+  "LastName": "Simpson",
+  "FirstName": "Mike",
+  "Party": "R",
+  "Office": "ID02",
+  "FECCandID": "H8ID02064"
+ },
+ {
+  "Id": "481",
+  "CID": "N00033983",
+  "LastName": "Sinema",
+  "FirstName": "Kyrsten",
+  "Party": "D",
+  "Office": "AZ09",
+  "FECCandID": "S8AZ00197"
+ },
+ {
+  "Id": "482",
+  "CID": "N00027523",
+  "LastName": "Sires",
+  "FirstName": "Albio",
+  "Party": "D",
+  "Office": "NJ08",
+  "FECCandID": "H6NJ13191"
+ },
+ {
+  "Id": "483",
+  "CID": "N00001311",
+  "LastName": "Slaughter",
+  "FirstName": "Louise M",
+  "Party": "D",
+  "Office": "NY25",
+  "FECCandID": "H6NY03031"
+ },
+ {
+  "Id": "484",
+  "CID": "N00007833",
+  "LastName": "Smith",
+  "FirstName": "Adam",
+  "Party": "D",
+  "Office": "WA09",
+  "FECCandID": "H6WA09025"
+ },
+ {
+  "Id": "485",
+  "CID": "N00027623",
+  "LastName": "Smith",
+  "FirstName": "Adrian",
+  "Party": "R",
+  "Office": "NE03",
+  "FECCandID": "H6NE03115"
+ },
+ {
+  "Id": "486",
+  "CID": "N00009816",
+  "LastName": "Smith",
+  "FirstName": "Chris",
+  "Party": "R",
+  "Office": "NJ04",
+  "FECCandID": "H8NJ04014"
+ },
+ {
+  "Id": "487",
+  "CID": "N00035282",
+  "LastName": "Smith",
+  "FirstName": "Jason",
+  "Party": "R",
+  "Office": "MO08",
+  "FECCandID": "H4MO08162"
+ },
+ {
+  "Id": "488",
+  "CID": "N00001811",
+  "LastName": "Smith",
+  "FirstName": "Lamar",
+  "Party": "R",
+  "Office": "TX21",
+  "FECCandID": "H6TX21012"
+ },
+ {
+  "Id": "489",
+  "CID": "N00042353",
+  "LastName": "Smith",
+  "FirstName": "Tina",
+  "Party": "D",
+  "Office": "MNS1",
+  "FECCandID": "S8MN00578"
+ },
+ {
+  "Id": "490",
+  "CID": "N00038781",
+  "LastName": "Smucker",
+  "FirstName": "Lloyd",
+  "Party": "R",
+  "Office": "PA16",
+  "FECCandID": "H6PA16320"
+ },
+ {
+  "Id": "491",
+  "CID": "N00037422",
+  "LastName": "Soto",
+  "FirstName": "Darren",
+  "Party": "D",
+  "Office": "FL09",
+  "FECCandID": "H6FL09179"
+ },
+ {
+  "Id": "492",
+  "CID": "N00029649",
+  "LastName": "Speier",
+  "FirstName": "Jackie",
+  "Party": "D",
+  "Office": "CA14",
+  "FECCandID": "H8CA12171"
+ },
+ {
+  "Id": "493",
+  "CID": "N00004118",
+  "LastName": "Stabenow",
+  "FirstName": "Debbie",
+  "Party": "D",
+  "Office": "MIS2",
+  "FECCandID": "S8MI00281"
+ },
+ {
+  "Id": "494",
+  "CID": "N00035523",
+  "LastName": "Stefanik",
+  "FirstName": "Elise",
+  "Party": "R",
+  "Office": "NY21",
+  "FECCandID": "H4NY21079"
+ },
+ {
+  "Id": "495",
+  "CID": "N00033932",
+  "LastName": "Stewart",
+  "FirstName": "Chris",
+  "Party": "R",
+  "Office": "UT02",
+  "FECCandID": "H2UT02324"
+ },
+ {
+  "Id": "496",
+  "CID": "N00029574",
+  "LastName": "Stivers",
+  "FirstName": "Steve",
+  "Party": "R",
+  "Office": "OH15",
+  "FECCandID": "H8OH15076"
+ },
+ {
+  "Id": "497",
+  "CID": "N00040607",
+  "LastName": "Strange",
+  "FirstName": "Luther",
+  "Party": "R",
+  "Office": "ALS1",
+  "FECCandID": "S8AL00308"
+ },
+ {
+  "Id": "498",
+  "CID": "N00035774",
+  "LastName": "Sullivan",
+  "FirstName": "Dan",
+  "Party": "R",
+  "Office": "AKS1",
+  "FECCandID": "S4AK00214"
+ },
+ {
+  "Id": "499",
+  "CID": "N00038742",
+  "LastName": "Suozzi",
+  "FirstName": "Tom",
+  "Party": "D",
+  "Office": "NY03",
+  "FECCandID": "H6NY03247"
+ },
+ {
+  "Id": "500",
+  "CID": "N00033508",
+  "LastName": "Swalwell",
+  "FirstName": "Eric",
+  "Party": "D",
+  "Office": "CA15",
+  "FECCandID": "H2CA15094"
+ },
+ {
+  "Id": "501",
+  "CID": "N00006701",
+  "LastName": "Takano",
+  "FirstName": "Mark",
+  "Party": "D",
+  "Office": "CA41",
+  "FECCandID": "H2CA43245"
+ },
+ {
+  "Id": "502",
+  "CID": "N00031263",
+  "LastName": "Taylor",
+  "FirstName": "Scott",
+  "Party": "R",
+  "Office": "VA02",
+  "FECCandID": "H0VA02118"
+ },
+ {
+  "Id": "503",
+  "CID": "N00036351",
+  "LastName": "Tenney",
+  "FirstName": "Claudia",
+  "Party": "R",
+  "Office": "NY22",
+  "FECCandID": "H4NY22051"
+ },
+ {
+  "Id": "504",
+  "CID": "N00027605",
+  "LastName": "Tester",
+  "FirstName": "Jon",
+  "Party": "D",
+  "Office": "MTS1",
+  "FECCandID": "S6MT00162"
+ },
+ {
+  "Id": "505",
+  "CID": "N00003288",
+  "LastName": "Thompson",
+  "FirstName": "Bennie G",
+  "Party": "D",
+  "Office": "MS02",
+  "FECCandID": "H4MS02068"
+ },
+ {
+  "Id": "506",
+  "CID": "N00029736",
+  "LastName": "Thompson",
+  "FirstName": "Glenn",
+  "Party": "R",
+  "Office": "PA05",
+  "FECCandID": "H8PA05071"
+ },
+ {
+  "Id": "507",
+  "CID": "N00007419",
+  "LastName": "Thompson",
+  "FirstName": "Mike",
+  "Party": "D",
+  "Office": "CA05",
+  "FECCandID": "H8CA01109"
+ },
+ {
+  "Id": "508",
+  "CID": "N00006052",
+  "LastName": "Thornberry",
+  "FirstName": "Mac",
+  "Party": "R",
+  "Office": "TX13",
+  "FECCandID": "H4TX13014"
+ },
+ {
+  "Id": "509",
+  "CID": "N00004572",
+  "LastName": "Thune",
+  "FirstName": "John",
+  "Party": "R",
+  "Office": "SDS1",
+  "FECCandID": "S2SD00068"
+ },
+ {
+  "Id": "510",
+  "CID": "N00009699",
+  "LastName": "Tiberi",
+  "FirstName": "Pat",
+  "Party": "R",
+  "Office": "OH12",
+  "FECCandID": "H0OH12062"
+ },
+ {
+  "Id": "511",
+  "CID": "N00035492",
+  "LastName": "Tillis",
+  "FirstName": "Thom",
+  "Party": "R",
+  "Office": "NCS1",
+  "FECCandID": "S4NC00162"
+ },
+ {
+  "Id": "512",
+  "CID": "N00027509",
+  "LastName": "Tipton",
+  "FirstName": "Scott",
+  "Party": "R",
+  "Office": "CO03",
+  "FECCandID": "H6CO03139"
+ },
+ {
+  "Id": "513",
+  "CID": "N00030191",
+  "LastName": "Titus",
+  "FirstName": "Dina",
+  "Party": "D",
+  "Office": "NV01",
+  "FECCandID": "H8NV03036"
+ },
+ {
+  "Id": "514",
+  "CID": "N00030196",
+  "LastName": "Tonko",
+  "FirstName": "Paul",
+  "Party": "D",
+  "Office": "NY20",
+  "FECCandID": "H8NY21203"
+ },
+ {
+  "Id": "515",
+  "CID": "N00001489",
+  "LastName": "Toomey",
+  "FirstName": "Pat",
+  "Party": "R",
+  "Office": "PAS1",
+  "FECCandID": "S4PA00121"
+ },
+ {
+  "Id": "516",
+  "CID": "N00036107",
+  "LastName": "Torres",
+  "FirstName": "Norma",
+  "Party": "D",
+  "Office": "CA35",
+  "FECCandID": "H4CA35031"
+ },
+ {
+  "Id": "517",
+  "CID": "N00035607",
+  "LastName": "Trott",
+  "FirstName": "Dave",
+  "Party": "R",
+  "Office": "MI11",
+  "FECCandID": "H4MI11097"
+ },
+ {
+  "Id": "518",
+  "CID": "N00029026",
+  "LastName": "Tsongas",
+  "FirstName": "Niki",
+  "Party": "D",
+  "Office": "MA03",
+  "FECCandID": "H8MA05143"
+ },
+ {
+  "Id": "519",
+  "CID": "N00025175",
+  "LastName": "Turner",
+  "FirstName": "Michael R",
+  "Party": "R",
+  "Office": "OH10",
+  "FECCandID": "H2OH03067"
+ },
+ {
+  "Id": "520",
+  "CID": "N00006561",
+  "LastName": "Udall",
+  "FirstName": "Tom",
+  "Party": "D",
+  "Office": "NMS2",
+  "FECCandID": "S8NM00184"
+ },
+ {
+  "Id": "521",
+  "CID": "N00004133",
+  "LastName": "Upton",
+  "FirstName": "Fred",
+  "Party": "R",
+  "Office": "MI06",
+  "FECCandID": "H6MI04113"
+ },
+ {
+  "Id": "522",
+  "CID": "N00033367",
+  "LastName": "Valadao",
+  "FirstName": "David",
+  "Party": "R",
+  "Office": "CA21",
+  "FECCandID": "H2CA20094"
+ },
+ {
+  "Id": "523",
+  "CID": "N00013820",
+  "LastName": "Van Hollen",
+  "FirstName": "Hollen",
+  "Party": " Chris",
+  "Office": "D",
+  "FECCandID": "MDS2",
+  "undefined": "S6MD03441"
+ },
+ {
+  "Id": "524",
+  "CID": "N00007021",
+  "LastName": "Vargas",
+  "FirstName": "Juan",
+  "Party": "D",
+  "Office": "CA51",
+  "FECCandID": "H2CA50026"
+ },
+ {
+  "Id": "525",
+  "CID": "N00033839",
+  "LastName": "Veasey",
+  "FirstName": "Marc",
+  "Party": "D",
+  "Office": "TX33",
+  "FECCandID": "H2TX33073"
+ },
+ {
+  "Id": "526",
+  "CID": "N00034349",
+  "LastName": "Vela",
+  "FirstName": "Filemon",
+  "Party": "D",
+  "Office": "TX34",
+  "FECCandID": "H2TX27190"
+ },
+ {
+  "Id": "527",
+  "CID": "N00001102",
+  "LastName": "Velazquez",
+  "FirstName": "Nydia M",
+  "Party": "D",
+  "Office": "NY07",
+  "FECCandID": "H2NY00010"
+ },
+ {
+  "Id": "528",
+  "CID": "N00003813",
+  "LastName": "Visclosky",
+  "FirstName": "Pete",
+  "Party": "D",
+  "Office": "IN01",
+  "FECCandID": "H4IN01012"
+ },
+ {
+  "Id": "529",
+  "CID": "N00033106",
+  "LastName": "Wagner",
+  "FirstName": "Ann L",
+  "Party": "R",
+  "Office": "MO02",
+  "FECCandID": "H2MO02102"
+ },
+ {
+  "Id": "530",
+  "CID": "N00026368",
+  "LastName": "Walberg",
+  "FirstName": "Tim",
+  "Party": "R",
+  "Office": "MI07",
+  "FECCandID": "H4MI07103"
+ },
+ {
+  "Id": "531",
+  "CID": "N00007690",
+  "LastName": "Walden",
+  "FirstName": "Greg",
+  "Party": "R",
+  "Office": "OR02",
+  "FECCandID": "H6OR02116"
+ },
+ {
+  "Id": "532",
+  "CID": "N00035311",
+  "LastName": "Walker",
+  "FirstName": "Mark",
+  "Party": "R",
+  "Office": "NC06",
+  "FECCandID": "H4NC06052"
+ },
+ {
+  "Id": "533",
+  "CID": "N00031226",
+  "LastName": "Walorski",
+  "FirstName": "Jackie",
+  "Party": "R",
+  "Office": "IN02",
+  "FECCandID": "H0IN02190"
+ },
+ {
+  "Id": "534",
+  "CID": "N00035391",
+  "LastName": "Walters",
+  "FirstName": "Mimi",
+  "Party": "R",
+  "Office": "CA45",
+  "FECCandID": "H4CA45097"
+ },
+ {
+  "Id": "535",
+  "CID": "N00027467",
+  "LastName": "Walz",
+  "FirstName": "Tim",
+  "Party": "D",
+  "Office": "MN01",
+  "FECCandID": "H6MN01174"
+ },
+ {
+  "Id": "536",
+  "CID": "N00002097",
+  "LastName": "Warner",
+  "FirstName": "Mark",
+  "Party": "D",
+  "Office": "VAS2",
+  "FECCandID": "S6VA00093"
+ },
+ {
+  "Id": "537",
+  "CID": "N00033492",
+  "LastName": "Warren",
+  "FirstName": "Elizabeth",
+  "Party": "D",
+  "Office": "MAS1",
+  "FECCandID": "S2MA00170"
+ },
+ {
+  "Id": "538",
+  "CID": "N00006690",
+  "LastName": "Waters",
+  "FirstName": "Maxine",
+  "Party": "D",
+  "Office": "CA43",
+  "FECCandID": "H4CA23011"
+ },
+ {
+  "Id": "539",
+  "CID": "N00033539",
+  "LastName": "Weber",
+  "FirstName": "Randy",
+  "Party": "R",
+  "Office": "TX14",
+  "FECCandID": "H2TX14149"
+ },
+ {
+  "Id": "540",
+  "CID": "N00026335",
+  "LastName": "Webster",
+  "FirstName": "Daniel",
+  "Party": "R",
+  "Office": "FL11",
+  "FECCandID": "H0FL08208"
+ },
+ {
+  "Id": "541",
+  "CID": "N00000515",
+  "LastName": "Welch",
+  "FirstName": "Peter",
+  "Party": "D",
+  "Office": "VT01",
+  "FECCandID": "H6VT00160"
+ },
+ {
+  "Id": "542",
+  "CID": "N00033310",
+  "LastName": "Wenstrup",
+  "FirstName": "Brad",
+  "Party": "R",
+  "Office": "OH02",
+  "FECCandID": "H2OH02085"
+ },
+ {
+  "Id": "543",
+  "CID": "N00035527",
+  "LastName": "Westerman",
+  "FirstName": "Bruce",
+  "Party": "R",
+  "Office": "AR04",
+  "FECCandID": "H4AR04048"
+ },
+ {
+  "Id": "544",
+  "CID": "N00027533",
+  "LastName": "Whitehouse",
+  "FirstName": "Sheldon",
+  "Party": "D",
+  "Office": "RIS1",
+  "FECCandID": "S6RI00221"
+ },
+ {
+  "Id": "545",
+  "CID": "N00003280",
+  "LastName": "Wicker",
+  "FirstName": "Roger",
+  "Party": "R",
+  "Office": "MSS2",
+  "FECCandID": "S8MS00196"
+ },
+ {
+  "Id": "546",
+  "CID": "N00041997",
+  "LastName": "Wild",
+  "FirstName": "Susan",
+  "Party": "D",
+  "Office": "PA15",
+  "FECCandID": "H8PA15229"
+ },
+ {
+  "Id": "547",
+  "CID": "N00030602",
+  "LastName": "Williams",
+  "FirstName": "Roger",
+  "Party": "R",
+  "Office": "TX25",
+  "FECCandID": "H2TX33040"
+ },
+ {
+  "Id": "548",
+  "CID": "N00030650",
+  "LastName": "Wilson",
+  "FirstName": "Frederica",
+  "Party": "D",
+  "Office": "FL24",
+  "FECCandID": "H0FL17068"
+ },
+ {
+  "Id": "549",
+  "CID": "N00024809",
+  "LastName": "Wilson",
+  "FirstName": "Joe",
+  "Party": "R",
+  "Office": "SC02",
+  "FECCandID": "H2SC02059"
+ },
+ {
+  "Id": "550",
+  "CID": "N00029459",
+  "LastName": "Wittman",
+  "FirstName": "Rob",
+  "Party": "R",
+  "Office": "VA01",
+  "FECCandID": "H8VA01147"
+ },
+ {
+  "Id": "551",
+  "CID": "N00031857",
+  "LastName": "Womack",
+  "FirstName": "Steve",
+  "Party": "R",
+  "Office": "AR03",
+  "FECCandID": "H0AR03055"
+ },
+ {
+  "Id": "552",
+  "CID": "N00032416",
+  "LastName": "Woodall",
+  "FirstName": "Rob",
+  "Party": "R",
+  "Office": "GA07",
+  "FECCandID": "H0GA07133"
+ },
+ {
+  "Id": "553",
+  "CID": "N00007724",
+  "LastName": "Wyden",
+  "FirstName": "Ron",
+  "Party": "D",
+  "Office": "ORS2",
+  "FECCandID": "S6OR00110"
+ },
+ {
+  "Id": "554",
+  "CID": "N00028073",
+  "LastName": "Yarmuth",
+  "FirstName": "John A",
+  "Party": "D",
+  "Office": "KY03",
+  "FECCandID": "H6KY03124"
+ },
+ {
+  "Id": "555",
+  "CID": "N00031502",
+  "LastName": "Yoder",
+  "FirstName": "Kevin",
+  "Party": "R",
+  "Office": "KS03",
+  "FECCandID": "H0KS03137"
+ },
+ {
+  "Id": "556",
+  "CID": "N00033220",
+  "LastName": "Yoho",
+  "FirstName": "Ted",
+  "Party": "R",
+  "Office": "FL03",
+  "FECCandID": "H2FL06109"
+ },
+ {
+  "Id": "557",
+  "CID": "N00035509",
+  "LastName": "Young",
+  "FirstName": "David",
+  "Party": "R",
+  "Office": "IA03",
+  "FECCandID": "H4IA03115"
+ },
+ {
+  "Id": "558",
+  "CID": "N00007999",
+  "LastName": "Young",
+  "FirstName": "Don",
+  "Party": "R",
+  "Office": "AK01",
+  "FECCandID": "H6AK00045"
+ },
+ {
+  "Id": "559",
+  "CID": "N00030670",
+  "LastName": "Young",
+  "FirstName": "Todd",
+  "Party": "R",
+  "Office": "INS2",
+  "FECCandID": "S6IN00191"
+ },
+ {
+  "Id": "560",
+  "CID": "N00029404",
+  "LastName": "Zeldin",
+  "FirstName": "Lee",
+  "Party": "R",
+  "Office": "NY01",
+  "FECCandID": "H8NY01148"
+ },
+ {
+  "Id": "561",
+  "CID": "N00035616",
+  "LastName": "Zinke",
+  "FirstName": "Ryan K",
+  "Party": "R",
+  "Office": "MT01",
+  "FECCandID": "H4MT01041"
+ }
+]
