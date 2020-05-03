@@ -6,7 +6,7 @@ body {
 }
 
 * {
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -15,34 +15,36 @@ body {
 
 .search-container {
   width: 100%;
-
   padding: 5px;
   margin: 0;
 }
 
 .list-group {
   max-width: max-content;
-  padding: 0px 5px 10px 5px;
+  padding: 0px 5px 5px 5px;
   margin: 6px auto;
   position: sticky;
-
 }
 
 .caption {
-  line-height: 1.26;
+  line-height: 0.9;
   letter-spacing: 1px;
   margin: 0px auto 5px auto;
 }
 
 .title {
-	letter-spacing: 2px;
-	margin: 0;
-	
+  letter-spacing: 3px;
+  margin: 0;
+  font-size: 1.1em;
 }
-.subtitle{
-	margin: 0;
-	color: #6B6B6B;
+
+.subtitle {
+  margin: 0;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  color: #6B6B6B;
 }
+
 p {
   margin: 0px 0px 5px 0px;
   max-width: 300px;
@@ -70,7 +72,6 @@ p {
   font-size: 1em;
   background: white;
   width: 300px;
-  
 }
 
 #candidate-list.show {
@@ -86,75 +87,21 @@ p {
   height: 0px;
   padding: 0;
   height: 0;
-  border: 0px solid #ffffff00
+  border: 0px solid #ffffff00;
+  opacity: 0;
 }
 
 .candidate-option {
   padding: 10px 5px;
   font-size: 1em;
   font-weight: 300;
+  cursor: pointer;
 }
 
 .candidate-option:nth-of-type(odd) {
   background: #B3B3B329;
 }
 
-
-/*   .dropbtn {
-        background-color: #4CAF50;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: none;
-        cursor: pointer;
-      }
-  
-      .dropbtn:hover,
-      .dropbtn:focus {
-        background-color: #3e8e41;
-      }
-  
-      #list-search {
-        box-sizing: border-box;
-        background-image: url('searchicon.png');
-        background-position: 14px 12px;
-        background-repeat: no-repeat;
-        font-size: 16px;
-        padding: 14px 20px 12px 45px;
-        border: none;
-        border-bottom: 1px solid #ddd;
-      }
-  
-    #list-search:focus {
-        outline: 3px solid #ddd;
-      }
-  
-      .dropdown {
-        position: relative;
-        display: inline-block;
-      }
-  
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f6f6f6;
-        min-width: 230px;
-        overflow: auto;
-        border: 1px solid #ddd;
-        z-index: 1;
-      }
-  
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-  
-      .dropdown a:hover {
-        background-color: #ddd;
-      }
-  
-      .show {
-        display: block;
-      }*/
+#list-search:focus {
+  outline: 3px solid #ddd;
+}
