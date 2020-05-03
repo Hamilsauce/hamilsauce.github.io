@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="collapsible.css" type="text/css" media="all" />
   <link rel="stylesheet" href="secrets.css" type="text/css" media="all" />
 </head>
-<main class="app">
+<main class="app">'
   <section class="content">
     <div class="candidate-display"></div>
     </div>
@@ -21,22 +21,22 @@
   <script src="secrets.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript" charset="utf-8">
     setTimeout(() => {
-
-      var coll = document.getElementsByClassName("collapsible");
-      var i;
-      for (i = 0; i < coll.length; i++) {
-        coll[i].addEventListener("click", function () {
-          console.log('clixk');
-          this.classList.toggle("active");
-          var content = this.nextElementSibling;
-          if (content.style.maxHeight) {
-            content.style.maxHeight = null;
-          } else {
-            content.style.maxHeight = content.scrollHeight + "px";
-          }
-        });
-      }
-    }, 700)
+    	
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    for (i = 0; i < coll.length; i++) { 
+    	coll[i].addEventListener("click", function() { 
+    		console.log('clixk'); 
+    		this.classList.toggle("active"); 
+    		var content = this.nextElementSibling; 
+    		if (content.style.maxHeight) { 
+    			content.style.maxHeight = null; 
+    		} else { 
+    			content.style.maxHeight = content.scrollHeight + "px"; 
+    		} 
+    	}); 
+    }
+ }, 1000)
   </script>
   <!-- <script src="collapsible.js" type="text/javascript" charset="utf-8"></script> -->
 </body>

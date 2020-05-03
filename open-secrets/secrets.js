@@ -41,8 +41,7 @@ fetchCands(query.constructString());
 const assembleDisplay = (cand, inds) => {
   const container = document.querySelector('.ind-container')
   const candDisplay = document.querySelector('.candidate-display')
-  append(createCandHeader(cand, 1), candDisplay);
-
+createCandHeader(cand, candDisplay)
   inds.forEach((ind, index) => {
     append(createListCard(ind, index), container);
   })
@@ -50,11 +49,18 @@ const assembleDisplay = (cand, inds) => {
 
 
 }
-const createCandHeader = (cand, index) => {
+const createCandHeader = (cand, parent) => {
   const candHeader = document.createElement('h2');
-  // const candHeader = generateNewEl('h3', 'candidate-header', index)
+  addClass(candHeader, 'cand-header')
   candHeader.appendChild(document.createTextNode(cand));
-  return candHeader
+  append(candHeader, parent);
+
+
+  const yearHeader = document.createElement('p');
+  addClass(yearHeader, 'year-header')
+  yearHeader.appendChild(document.createTextNode(`2020`));
+  append(yearHeader, parent);
+
 }
 const createListCard = (ind, index) => {
   // const indContainer = generateNewEl('div', 'industry-container', index)
@@ -90,15 +96,27 @@ const createList = (ind) => {
   Object.entries(ind)
     .forEach(([key, val]) => {
       if (keepList.includes(key)) {
+        if (key === 'indivs') key = 'Individuals'
+        if (key === 'pacs') key = 'PACs'
         const li = document.createElement('li');
         addClass(li, 'ind-item')
         // const li = this.generateNewEl('li', 'industry-item');
-        const text = `${key}:    $${Number(val).toLocaleString()}`
-        append(document.createTextNode(text), li);
+        const keyDiv = document.createElement('div');
+        addClass(keyDiv, 'list-key')
+        append(document.createTextNode(`${key}:`), keyDiv);
+        append(keyDiv, li);
+
+        const valDiv = document.createElement('div');
+        addClass(valDiv, 'list-value')
+        append(document.createTextNode(`$${Number(val).toLocaleString()}`), valDiv);
+        append(valDiv, li);
+
+        // const text = `${key}:    $${Number(val).toLocaleString()}`
+        // append(document.createTextNode(text), li);
         append(li, list);
       }
     });
-    append(list, indContent)
+  append(list, indContent)
   return indContent;
 }
 
