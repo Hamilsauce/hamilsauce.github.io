@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="sort-cards.css" type="text/css" media="all">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>sort</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
+  <link rel="stylesheet" href="sort-cards.css" type="text/css" media="all" />
+</head>
+
+<body>
+    <div id="v-app" class="app">
+    	<box v-for="card in cards" :key="card.id" :firstCard="firstCard" :card="card" @click.native="handleSelection" @cardSelected="cardSelected"></box>
+    
+    </div>
+  <!-- TEMPLATE -->
+  <script id="card-template" type="text/x-template">
+    <card class="card" v-bind:style="styleObject"  @click="handleClick"  :class="{target: isFirst}"  :class="{selected: isSelected}">
+      {{card.id}}
+      </card>
+    </script>
+    
+  <script src="sort-cards.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+</body>
+
+</html>
