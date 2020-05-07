@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vis</title>
+  <!-- <link rel="stylesheet" href="grid-column-chart.css"> -->
+  <link rel="stylesheet" href="visual.css">
+</head>
+
+<body>
+  <header class="app-header">
+    <div class="title-container">
+      <h2 class="title">Confirmed Covid Cases Dynamic Chart</h2>
+    </div>
+  </header>
+  <div class="grid" id="chart">
+    <!-- <div class="grid-col y-axis">
+      <div class="axis cell1   row0 y-axis0 ">50</div>
+      <div class="axis cell7   row1 y-axis1 ">40</div>
+      <div class="axis cell13  row2 y-axis2 ">30</div>
+      <div class="axis cell19  row3 y-axis3 ">20</div>
+      <div class="axis cell25  row4 y-axis4 ">10</div>
+    </div> -->
+
+    <div class="column column0">
+      <div class="column-value" contenteditable="false">
+      </div>
+      <div class="column-name" contenteditable="false">
+        column0
+      </div>
+    </div>
+    <div class="column column1">
+      <div class="column-name" contenteditable="false">
+        column1
+      </div>
+    </div>
+    <div class="column column2">
+      <div class="column-name" contenteditable="false">
+        column2
+      </div>
+    </div>
+    <div class="column column3">
+      <div class="column-name" contenteditable="false">
+        column3
+      </div>
+    </div>
+    <div class="column column4">
+      <div class="column-name" contenteditable="false">
+        column4
+      </div>
+    </div>
+    <!-- <div class="x-axis">
+      <div class="axis cell32 row0 x-axis0 ">Canada</div>
+      <div class="axis cell33 row1 x-axis1 ">USA</div>
+      <div class="axis cell34 row2 x-axis2 ">China</div>
+      <div class="axis cell35 row3 x-axis3 ">France</div>
+      <div class="axis cell36 row4 x-axis4 ">Germany</div>
+    </div> -->
+  </div>
+  <footer>Enter and ISO Country code (ex. USA, CHN, CAN). See link for a list of codes</footer>
+  <script src="visual.js"></script>
+</body>
+
+</html>

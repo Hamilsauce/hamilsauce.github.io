@@ -1,0 +1,37 @@
+[
+  {
+    "CHN": {
+      "confirmed": 83970,
+      "deaths": 4637,
+      "recovered": 78929
+    }
+  },
+  {
+    "ITA": {
+      "confirmed": 214457,
+      "deaths": 29684,
+      "recovered": 93245
+    }
+  },
+  {
+    "KOR": {
+      "confirmed": 10810,
+      "deaths": 256,
+      "recovered": 9419
+    }
+  },
+  {
+    "ESP": {
+      "confirmed": 220325,
+      "deaths": 25857,
+      "recovered": 126002
+    }
+  },
+  {
+    "USA": {
+      "confirmed": 1228603,
+      "deaths": 73431,
+      "recovered": 189910
+    }
+  }
+]

@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+}
+
+.grid {
+  position: sticky;
+  top: 50px;
+  display: grid;
+  grid-template-columns: 50px repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr) 50px;
+  grid-column-gap: 20px;
+  width: 600px;
+  height: 600px;
+  margin: auto;
+  /* border: 2px solid rgb(50, 145, 182); */
+  grid-template-areas:
+    "ya c0 c1 c2 c3 c4"
+    "ya c0 c1 c2 c3 c4"
+    "ya c0 c1 c2 c3 c4"
+    "ya c0 c1 c2 c3 c4"
+    "ya c0 c1 c2 c3 c4"
+    " . xa xa xa xa xa";
+}
+
+.cell {
+  background: blue;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.356);
+}
+
+.axis {
+  background: white;
+
+}
+
+.x-axis {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 50px;
+  grid-area: xa;
+}
+
+.y-axis {
+  display: grid;
+  grid-template-columns: 50px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-area: ya;
+  display: grid;
+}
+
+.y-axis:nth-child(1n+4) {
+  border-bottom: 1px solid rgba(95, 52, 52, 0.356);
+
+}
+
+.col0 {
+  display: grid;
+  grid-area: c0;
+}
+
+.col1 {
+  display: grid;
+  grid-area: c1;
+}
+
+.col2 {
+  display: grid;
+  grid-area: c2;
+}
+
+.col3 {
+  display: grid;
+  grid-area: c3;
+}
+
+.col4 {
+  display: grid;
+  grid-area: c4;
+  grid-row: 3 / span 3;
+  background: yellow;
+}
+
+.col5 {
+  display: grid;
+  grid-area: c5;
+}
