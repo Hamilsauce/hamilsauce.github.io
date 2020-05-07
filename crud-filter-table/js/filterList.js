@@ -4,8 +4,11 @@
 import {
   DataTable
 } from './tableBuilder.js'
+import {
+  sampleData
+} from './data.js'
 
-//Util functions
+//@Util functions
 const styleStore = {
   elementReference(el) {
     this.element = el;
@@ -23,14 +26,6 @@ const styleStore = {
     return this.fontColor;
   }
 }
-const appState = {
-  filters: ['1'],
-  clickCount: 0,
-  incrementClicks() {
-    this.clickCount < 1 ? this.clickCount += 1 : this.clickCount = 0;
-  }
-};
-console.log(appState);
 
 const toggleClass = (el, className) => {
   el.classList.toggle(className)
@@ -41,52 +36,26 @@ const addClass = (el, className) => {
 const removeClass = (el, className) => {
   el.classList.remove(className)
 }
-// End Utils
+//@ End Utils
 
-const colNames = ['Name', 'Country'];
-
-const sampleData = [{
-    "Name": "Alfreds Futterkiste",
-    "Country": "Germany"
-  },
-  {
-    "Name": "Berglunds snabbkop",
-    "Country": "Sweden"
-  },
-  {
-    "Name": "Island Trading",
-    "Country": "UK"
-  },
-  {
-    "Name": "Koniglich Essen",
-    "Country": "Germany"
-  },
-  {
-    "Name": "Laughing Winecellars",
-    "Country": "Canada"
-  },
-  {
-    "Name": "Magazzin Riuniti",
-    "Country": "Italy"
-  },
-  {
-    "Name": "North/South",
-    "Country": "UK"
-  },
-  {
-    "Name": "Paris specialites",
-    "Country": "France"
+const appState = {
+  filters: ['1'],
+  clickCount: 0,
+  pinnedRowId: -1,
+  incrementClicks() {
+    this.clickCount < 1 ? this.clickCount += 1 : this.clickCount = 0;
   }
-]
+};
 
-
+//! initalize table
+const colNames = ['Name', 'Country'];
 const datatable = new DataTable(sampleData, colNames, document.querySelector('.table-container'));
+
 datatable.createTable()
+//! end
+
 
 const filterTable = () => {
-  const table = document.querySelector(".datatable");
-  const tableBody = document.querySelector("tbody");
-  const headerRow = document.querySelector(".header-row");
   const rows = document.querySelectorAll(".tableRow");
   const input = document.querySelector("#search-input");
   const filter = input.value.toUpperCase();
@@ -96,8 +65,7 @@ const filterTable = () => {
     let colMatches = 0;
 
     fields.forEach(field => {
-      if (field && appState.filters.includes(field.dataset.columnIndex)) {
-
+      if (field && appState.filters.includes(field.dataset.columnId)) {
         let txtValue = field.textContent || field.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
           colMatches += 1;
@@ -112,38 +80,43 @@ const filterTable = () => {
   }
 }
 
+//! EVENTLISTENER
+//* search input
 document.querySelector('#search-input')
   .addEventListener('keyup', e => {
     filterTable();
   });
 
-
-
+//! EVENTLISTENER
+//*handles row selection/editing
 const tableBody = document.querySelector('tbody');
 tableBody.querySelectorAll('tr').forEach((row, index, tableRows) => {
   row.addEventListener('dblclick', e => {
     if (!e.target.classList.contains('table-field')) return;
 
     let activeField = e.target;
-    if (window.activeRowIndex == index) { //tableBody.querySelectorAll('tr').indexOf(row)) {
+    if (window.activerowId == index) {
       stopEdit(activeField, row);
-      window.activeRowIndex = -1;
+      window.activerowId = -1;
     } else {
       startEdit(activeField, row);
-      window.activeRowIndex = index;
+      window.activerowId = index;
     }
   })
-
+  //! EVENTLISTENER
+  //* deselects row on blur
   row.addEventListener('blur', e => {
     let activeField = e.target;
-    stopEdit(activeField, tableRows[window.activeRowIndex]);
-    window.activeRowIndex = index;
+    stopEdit(activeField, tableRows[window.activerowId]);
+    window.activerowId = index;
   })
 });
 
+//* row edit/selection
 const startEdit = (field, row) => {
   field.focus();
   row.contentEditable = true;
+  row.querySelector('.action-field').contentEditable = false;
   addClass(field, 'editing')
   addClass(row, 'selectedRow')
   styleStore.elementReference(field);
@@ -155,6 +128,7 @@ const startEdit = (field, row) => {
   selectText(field);
 }
 
+//* row edit/selection
 const stopEdit = (field, row) => {
   row.style.textDecoration = 'none';
   row.style.color = styleStore.getStoredFontColor()
@@ -166,8 +140,7 @@ const stopEdit = (field, row) => {
   row.contentEditable = false;
 }
 
-
-//!text select code
+//*text select code
 const selectText = (el) => {
   if (document.body.createTextRange) {
     let range = document.body.createTextRange();
@@ -187,7 +160,8 @@ const deselectText = () => {
 }
 
 
-//! filter clear button code   - event listeners
+//!EVENTLISTENER
+//* toggles clearButton
 document.querySelector('#search-input').addEventListener('keyup', e => {
   const clearButton = document.querySelector('.clearButton')
   const search = e.target;
@@ -199,9 +173,10 @@ document.querySelector('#search-input').addEventListener('keyup', e => {
   }
 })
 
+//! EVENTLISTENER
+//* toggles clearButton
 document.querySelector('#search-input').addEventListener('change', e => {
   const clearButton = document.querySelector('.clearButton')
-
   const search = e.target;
   if (search.value.length > 0) {
     addClass(clearButton, 'show')
@@ -210,47 +185,47 @@ document.querySelector('#search-input').addEventListener('change', e => {
   }
 })
 
+//! EVENTLISTENER
+//* toggles clearButton
 document.querySelector('.clearButton').addEventListener('click', e => {
   const search = document.querySelector('#search-input');
-  const clearButton = document.querySelector('.fa-times-circle');
+  // const clearButton = document.querySelector('.fa-times-circle');
   search.value = '';
   filterTable();
   removeClass(e.target, 'show');
 
 })
-const tableHeader = document.querySelector('.tableHeader')
-tableHeader.querySelectorAll('.header')
-  .forEach((head, index) => {
+
+//! EVENTLISTENER - header menus
+//* toggles header menus when header is clicked, makes sure only 1 displays at ta time
+document.querySelector('.tableHeader').querySelectorAll('.header')
+  .forEach(head => {
     head.addEventListener('click', e => {
       let menu = head.childNodes[1];
       if (appState.activeHeaderMenu && menu != appState.activeHeaderMenu) {
-        console.log(menu != appState.activeHeaderMenu);
-
         removeClass(appState.activeHeaderMenu, 'show');
       }
-
       if (menu.contains(e.target)) return; //!stops the menu from closing if it is clicked
       toggleClass(menu, 'show')
       appState.activeHeaderMenu = menu;
-
     })
-
   });
 
-//! Handles/routes header clicks to actions
+//! EVENTLISTENER - header menus
+//* Handles/routes header menu list item/buttons to col specific actions
 document.querySelectorAll('.header-menu')
   .forEach((menu, index) => {
     menu.childNodes.forEach(li => {
       li.addEventListener('click', e => {
-
-
         const targetHeader = e.target
-        const colIndex = targetHeader.dataset.columnIndex;
+        const colIndex = targetHeader.dataset.columnId;
 
         if (li.dataset.columnAction === 'highlight') {
           highlightColumn(colIndex)
         } else if (li.dataset.columnAction === 'addToFilter') {
           updateFilters(targetHeader)
+        } else if (li.dataset.columnAction === 'sort') {
+          sortTable(colIndex)
         }
         setTimeout((e) => {
           removeClass(menu, 'show')
@@ -262,118 +237,155 @@ document.querySelectorAll('.header-menu')
 const highlightColumn = (index) => {
   const allFields = document.querySelectorAll('.table-field');
   allFields.forEach(td => {
-    if (td.dataset.columnIndex === index) toggleClass(td, 'highlight');
+    if (td.dataset.columnId === index) toggleClass(td, 'highlight');
   })
 }
 
+//* adds/removes columsn from the filter list
 const updateFilters = (selectedAction) => {
   const filters = appState.filters;
   const columnHeader = selectedAction.parentNode.parentNode;
+  const columnId = selectedAction.dataset.columnId;
 
-  const columnId = selectedAction.dataset.columnIndex;
   if (filters.includes(columnId)) { //! If alrady filtering by that column, remove from filter list and remove filtering class
     filters.splice(filters.indexOf(columnId), 1)
-
     removeClass(selectedAction, 'filterSelected')
     removeClass(columnHeader, 'filterSelected')
-    console.log(selectedAction);
   } else {
     filters.push(columnId)
-
     addClass(selectedAction, 'filterSelected')
     addClass(columnHeader, 'filterSelected')
-    console.log(selectedAction);
   }
-  console.log(appState.filters);
-
 }
 
+const showRowActionButtons = targetRow => {
+  const rowButtons = document.querySelectorAll('.action-field');
+  if (!targetRow.classList.contains('table-field')) return;
+
+  const rowId = targetRow.dataset.rowId;
+  rowButtons.forEach(buttons => {
+    if (buttons.dataset.rowId == rowId) {
+      addClass(buttons, 'show');
+    } else {
+      removeClass(buttons, 'show');
+    }
+  })
+}
+
+//! EVENTLISTENER - Displays row actions when row is clicked on
 document.querySelectorAll('.tableRow').forEach(row => {
   row.addEventListener('click', e => {
-    const rowButtons = document.querySelectorAll('.action-field');
-    if (!e.target.classList.contains('table-field')) return;
-
-    const rowIndex = e.target.dataset.rowIndex;
-    rowButtons.forEach(buttons => {
-      if (buttons.dataset.rowIndex == rowIndex) {
-        addClass(buttons, 'show');
-      } else {
-        removeClass(buttons, 'show');
-      }
-    })
+    showRowActionButtons(e.target)
   })
 })
-console.log(document.querySelector('.deleteRowButton'));
 
+//! EVENTLISTENER - listens for any click outside menu
 window.addEventListener('click', e => {
   appState.clickTarget = e.target;
   if (!appState.activeHeaderMenu) return;
-
   let clicks = appState.clickCount;
   appState.incrementClicks();
   if (e.target != appState.activeHeaderMenu.contains(e.target)) {
-
     if (appState.clickCount > 0) {
       removeClass(appState.activeHeaderMenu, 'show');
       appState.activeHeaderMenu = '';
       clicks = 0;
     }
-
   } else if (e.target.childNodes.classList.contains('header-menu')) {
     appState.activeHeaderMenu = e.target;
     addClass(appState.activeHeaderMenu, 'show')
   }
 })
 
-console.log(document.querySelector('.deleteRowButton').childNodes);
+const pinRow = (targetRow) => {
+  const table = document.querySelector('.datatable');
+  const rows = table.querySelectorAll('.tableRow');
+  let pinRowButton = targetRow.querySelector('.pinRowButton');
+  let actionField = targetRow.querySelector('.action-field');
 
-//!!! DELETE ENTRIES Needs some fixing
-//
-const btnContainers = document.querySelectorAll('.rowButtons');
-btnContainers.forEach(div => {
-  div.addEventListener('click', e => {
-    const deleteButton = document.querySelector('.deleteRowButton');
-    if (e.currentTarget.contains(deleteButton)) {
-      console.log('gottem!');
+  rows[0].parentNode.insertBefore(targetRow, rows[0])
+  addClass(targetRow, 'pinned')
+  addClass(actionField, 'pinned')
+  addClass(pinRowButton, 'active')
+}
 
+const unpinRow = (targetRow) => {
+  const table = document.querySelector('.datatable');
+  const rows = table.querySelectorAll('.tableRow');
+  let pinRowButton = targetRow.querySelector('.pinRowButton');
+  let actionField = targetRow.querySelector('.action-field');
+  let rowId = rows[0].dataset.rowId;
+  removeClass(targetRow, 'pinned')
+  removeClass(pinRowButton, 'active')
+  removeClass(actionField, 'pinned')
 
-      const index = parseInt(e.target.parentNode.dataset.rowIndex);
-      const rows = document.querySelectorAll('.tableRow');
-      console.log(index);
-      console.log(rows[index]);
+  let originalIndex = rowId - 1; //*if unpinned, put row back in original order
+  rows[originalIndex].parentNode.insertBefore(rows[0], rows[originalIndex])
+}
 
-      addClass(rows[index], 'delete');
-      rows.forEach((row, id) => {
-        if (id == index) {
-          addClass(row, 'deleted')
-        }
-      })
-    }
+//!EVENT LISTENER - Pin Rows
+document.querySelectorAll('.pinRowButton')
+  .forEach((btn) => {
+    btn.addEventListener('click', e => {
+      let targetRow = e.target.parentNode.parentNode.parentNode;
+      let rowId = targetRow.dataset.rowId;
+      if (targetRow.classList.contains("pinned")) {
+        unpinRow(targetRow)
+        appState.pinnedRowId = -1;
+
+      } else {
+        appState.pinnedRowId = rowId;
+        pinRow(targetRow)
+      }
+      console.log(appState);
+    })
   })
 
-})
+const sortTable = (colIndex) => {
+  var table, rows, switching, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.querySelector(".datatable");
+  switching = true;
+  dir = "asc";
 
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    //! test if a pinned row needs to be skupped during sort (if so, sip 2, if not skip 1)
+    let skipRows = appState.pinnedRowId != -1 ? 2 : 1;
+    let i = skipRows;
 
-// const btnContainers = document.querySelectorAll('.rowButtons');
-// btnContainers.forEach(div => {
-//   div.addEventListener('click', e => {
-//     console.log('test');
-//     if (e.target.classList.contains('deleteRowButton')) {
-//       console.log('gottem!');
+    //! dont loop through headers (length - 1)
+    for (i; i < (rows.length - 2); i++) {
+      shouldSwitch = false;
+      /* current row td and next row td: */
+      x = rows[i].getElementsByTagName("TD")[colIndex - 1];
+      y = rows[i + 1].getElementsByTagName("TD")[colIndex - 1];
 
-
-//       const index = parseInt(e.target.parentNode.dataset.rowIndex);
-//       console.log(index);
-
-//       let filteredData = sampleData
-//         .filter((item, id, data) => {
-//           console.log(item, index, id);
-
-//           return id !== index;
-//         })
-//       console.log(filteredData);
-//       datatable.rebuild(filteredData)
-
-//     }
-//   })
-// })
+      if (dir == "asc") {
+        //* Check if the two rows should switch place based on the direction, asc or desc, If so, mark as a switch and break the loop:
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      //* If a switch has been marked, make the switch and mark that a switch has been done:
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //* Each time a switch is done, increase this count by 1:
+      switchcount++;
+    } else {
+      /* If no switching has been done AND the direction is "asc", set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}

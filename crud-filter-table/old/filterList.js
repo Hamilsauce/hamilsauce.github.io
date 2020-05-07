@@ -1,3 +1,10 @@
+//* Dynamic table generations
+//TODO: Add ability to inject custom data into the table (file input, copy paste, etc)
+
+import {
+  DataTable
+} from './tableBuilder.js'
+
 //Util functions
 const styleStore = {
   elementReference(el) {
@@ -17,8 +24,14 @@ const styleStore = {
   }
 }
 const appState = {
-  filters: ['1']
+  filters: ['1'],
+  clickCount: 0,
+  incrementClicks() {
+    this.clickCount < 1 ? this.clickCount += 1 : this.clickCount = 0;
+  }
 };
+console.log(appState);
+
 const toggleClass = (el, className) => {
   el.classList.toggle(className)
 }
@@ -30,11 +43,51 @@ const removeClass = (el, className) => {
 }
 // End Utils
 
+const colNames = ['Name', 'Country'];
+
+const sampleData = [{
+    "Name": "Alfreds Futterkiste",
+    "Country": "Germany"
+  },
+  {
+    "Name": "Berglunds snabbkop",
+    "Country": "Sweden"
+  },
+  {
+    "Name": "Island Trading",
+    "Country": "UK"
+  },
+  {
+    "Name": "Koniglich Essen",
+    "Country": "Germany"
+  },
+  {
+    "Name": "Laughing Winecellars",
+    "Country": "Canada"
+  },
+  {
+    "Name": "Magazzin Riuniti",
+    "Country": "Italy"
+  },
+  {
+    "Name": "North/South",
+    "Country": "UK"
+  },
+  {
+    "Name": "Paris specialites",
+    "Country": "France"
+  }
+]
+
+
+const datatable = new DataTable(sampleData, colNames, document.querySelector('.table-container'));
+datatable.createTable()
+
 const filterTable = () => {
-  const table = document.querySelector("#datatable");
-  const tableBody = document.querySelector(".tableBody");
+  const table = document.querySelector(".datatable");
+  const tableBody = document.querySelector("tbody");
   const headerRow = document.querySelector(".header-row");
-  const rows = tableBody.querySelectorAll("tr");
+  const rows = document.querySelectorAll(".tableRow");
   const input = document.querySelector("#search-input");
   const filter = input.value.toUpperCase();
 
@@ -43,8 +96,7 @@ const filterTable = () => {
     let colMatches = 0;
 
     fields.forEach(field => {
-      if (field && appState.filters.includes(field.dataset.columnIndex)) {
-        console.log('found filter');
+      if (field && appState.filters.includes(field.dataset.columnId)) {
 
         let txtValue = field.textContent || field.innerText;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
@@ -66,7 +118,8 @@ document.querySelector('#search-input')
   });
 
 
-const tableBody = document.querySelector(".tableBody");
+
+const tableBody = document.querySelector('tbody');
 tableBody.querySelectorAll('tr').forEach((row, index, tableRows) => {
   row.addEventListener('dblclick', e => {
     if (!e.target.classList.contains('table-field')) return;
@@ -83,8 +136,6 @@ tableBody.querySelectorAll('tr').forEach((row, index, tableRows) => {
 
   row.addEventListener('blur', e => {
     let activeField = e.target;
-
-    // if (window.activeRowIndex == index) { //tableBody.querySelectorAll('tr').indexOf(row)) {
     stopEdit(activeField, tableRows[window.activeRowIndex]);
     window.activeRowIndex = index;
   })
@@ -100,7 +151,6 @@ const startEdit = (field, row) => {
   styleStore.storeFontColor()
   row.style.backgroundColor = 'rgba(255, 255, 255, 1)';
   row.style.color = 'rgba(90, 87, 90, 1);'
-  // field.style.textDecoration = 'underline';
   row.style.textDecoration = 'underline';
   selectText(field);
 }
@@ -151,7 +201,6 @@ document.querySelector('#search-input').addEventListener('keyup', e => {
 
 document.querySelector('#search-input').addEventListener('change', e => {
   const clearButton = document.querySelector('.clearButton')
-  console.log(clearButton);
 
   const search = e.target;
   if (search.value.length > 0) {
@@ -174,29 +223,36 @@ tableHeader.querySelectorAll('.header')
   .forEach((head, index) => {
     head.addEventListener('click', e => {
       let menu = head.childNodes[1];
-      if (menu.contains(e.target)) return;
-      toggleClass(menu, 'show')
+      if (appState.activeHeaderMenu && menu != appState.activeHeaderMenu) {
+        console.log(menu != appState.activeHeaderMenu);
 
-      // const col = document.querySelector('.')
-      // const col = document.querySelector('.fa-times-circle')
-      // col.style.backgroundColor = 'blue'
+        removeClass(appState.activeHeaderMenu, 'show');
+      }
+
+      if (menu.contains(e.target)) return; //!stops the menu from closing if it is clicked
+      toggleClass(menu, 'show')
+      appState.activeHeaderMenu = menu;
+
     })
+
   });
 
+//! Handles/routes header clicks to actions
 document.querySelectorAll('.header-menu')
   .forEach((menu, index) => {
     menu.childNodes.forEach(li => {
       li.addEventListener('click', e => {
+
+
         const targetHeader = e.target
+        const colIndex = targetHeader.dataset.columnId;
+
         if (li.dataset.columnAction === 'highlight') {
-          highlightColumn(index)
+          highlightColumn(colIndex)
         } else if (li.dataset.columnAction === 'addToFilter') {
           updateFilters(targetHeader)
         }
         setTimeout((e) => {
-
-          console.log('pooping');
-
           removeClass(menu, 'show')
         }, 600)
       })
@@ -204,32 +260,120 @@ document.querySelectorAll('.header-menu')
   })
 
 const highlightColumn = (index) => {
-  const column = `col${index + 1}`;
-  const fields = document.querySelectorAll(`.${column}`);
-  console.log(column);
-  console.log(fields);
-  fields.forEach(field => {
-    toggleClass(field, 'highlight');
+  const allFields = document.querySelectorAll('.table-field');
+  allFields.forEach(td => {
+    if (td.dataset.columnId === index) toggleClass(td, 'highlight');
   })
 }
 
 const updateFilters = (selectedAction) => {
   const filters = appState.filters;
   const columnHeader = selectedAction.parentNode.parentNode;
-  console.log(columnHeader);
 
-  const columnId = columnHeader.dataset.columnIndex;
-  if (filters.includes(columnId)) {
+  const columnId = selectedAction.dataset.columnId;
+  if (filters.includes(columnId)) { //! If alrady filtering by that column, remove from filter list and remove filtering class
+    filters.splice(filters.indexOf(columnId), 1)
+
     removeClass(selectedAction, 'filterSelected')
     removeClass(columnHeader, 'filterSelected')
     console.log(selectedAction);
-    filters.splice(filters.indexOf(columnId), 1)
-
   } else {
+    filters.push(columnId)
+
     addClass(selectedAction, 'filterSelected')
     addClass(columnHeader, 'filterSelected')
     console.log(selectedAction);
-    filters.push(columnId)
   }
-  console.log(filters);
+  console.log(appState.filters);
+
 }
+
+document.querySelectorAll('.tableRow').forEach(row => {
+  row.addEventListener('click', e => {
+    const rowButtons = document.querySelectorAll('.action-field');
+    if (!e.target.classList.contains('table-field')) return;
+
+    const rowIndex = e.target.dataset.rowIndex;
+    rowButtons.forEach(buttons => {
+      if (buttons.dataset.rowIndex == rowIndex) {
+        addClass(buttons, 'show');
+      } else {
+        removeClass(buttons, 'show');
+      }
+    })
+  })
+})
+console.log(document.querySelector('.deleteRowButton'));
+
+window.addEventListener('click', e => {
+  appState.clickTarget = e.target;
+  if (!appState.activeHeaderMenu) return;
+
+  let clicks = appState.clickCount;
+  appState.incrementClicks();
+  if (e.target != appState.activeHeaderMenu.contains(e.target)) {
+
+    if (appState.clickCount > 0) {
+      removeClass(appState.activeHeaderMenu, 'show');
+      appState.activeHeaderMenu = '';
+      clicks = 0;
+    }
+
+  } else if (e.target.childNodes.classList.contains('header-menu')) {
+    appState.activeHeaderMenu = e.target;
+    addClass(appState.activeHeaderMenu, 'show')
+  }
+})
+
+console.log(document.querySelector('.deleteRowButton').childNodes);
+
+//!!! DELETE ENTRIES Needs some fixing
+//
+const btnContainers = document.querySelectorAll('.rowButtons');
+btnContainers.forEach(div => {
+  div.addEventListener('click', e => {
+    const deleteButton = document.querySelector('.deleteRowButton');
+    if (e.currentTarget.contains(deleteButton)) {
+      console.log('gottem!');
+
+
+      const index = parseInt(e.target.parentNode.dataset.rowIndex);
+      const rows = document.querySelectorAll('.tableRow');
+      console.log(index);
+      console.log(rows[index]);
+
+      addClass(rows[index], 'delete');
+      rows.forEach((row, id) => {
+        if (id == index) {
+          addClass(row, 'deleted')
+        }
+      })
+    }
+  })
+
+})
+
+
+// const btnContainers = document.querySelectorAll('.rowButtons');
+// btnContainers.forEach(div => {
+//   div.addEventListener('click', e => {
+//     console.log('test');
+//     if (e.target.classList.contains('deleteRowButton')) {
+//       console.log('gottem!');
+
+
+//       const index = parseInt(e.target.parentNode.dataset.rowIndex);
+//       console.log(index);
+
+//       let filteredData = sampleData
+//         .filter((item, id, data) => {
+//           console.log(item, index, id);
+
+//           return id !== index;
+//         })
+//       console.log(filteredData);
+//       datatable.rebuild(filteredData)
+
+//     }
+//   })
+// })

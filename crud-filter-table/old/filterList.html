@@ -3,114 +3,34 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./filterList.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="./css/filterList.css" type="text/css" media="all" />
+  <!-- <link rel="stylesheet" href="./css/flexitable.css" type="text/css" media="all" /> -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
+<!-- TO DO: Add ability to inject custom data into the table (file input, copy paste, etc) -->
 
 <body>
-  <div class="content">
+  <div class="app">
     <h2>List with Filter</h2>
     <div class="search-container">
       <input type="text" id="search-input" placeholder="Search for names.." title="Type in a name">
       <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle"
         class="svg-inline--fa fa-times-circle fa-w-16 clearButton" role="img" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512">
+        viewBox="0 0 512 512" width="24px" height="24px">
         <path fill="currentColor" class=""
           d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z">
         </path>
       </svg>
     </div>
-    <div class="table-container">
-      <table id="datatable">
-        <colgroup>
-          <col span="1" class="column1">
-          <col span="1" class="column2">
-          <col class="column3 action-column">
-        </colgroup>
-        <thead class="tableHeader">
-          <tr class="header-row">
-            <th class="header" data-column-index="1" style="width:55%;">
-              Name
-              <ul class="header-menu" data-column-name="Name">
-                <li data-column-action="sort">Sort</li>
-                <li data-column-action="addToFilter">Add to filter</li>
-                <li data-column-action="highlight">Highlight</li>
-              </ul>
-            </th>
-            <th class="header" data-column-index="2" style="width:35%;">
-              Country
-              <ul class="header-menu" data-column-name="Country">
-                <li data-column-action="sort">Sort</li>
-                <li data-column-action="addToFilter">Add to filter</li>
-                <li data-column-action="highlight">Highlight</li>
-              </ul>
-            </th>
-            <th class="header actions-header" data-column-index="3" style="width:10%;"><span class="header-text"></span>
-            </th>
-          </tr>
-        </thead>
-        <tbody class="tableBody">
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">Alfreds Futterkiste</td>
-            <td data-column-index="2" class="table-field col2">Germany</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">Berglunds snabbkop</td>
-            <td data-column-index="2" class="table-field col2">Sweden</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">Island Trading</td>
-            <td data-column-index="2" class="table-field col2">UK</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">Koniglich Essen</td>
-            <td data-column-index="2" class="table-field col2">Germany</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">Laughing Bacchus Winecellars</td>
-            <td data-column-index="2" class="table-field col2">Canada</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">Magazzini Alimentari Riuniti</td>
-            <td data-column-index="2" class="table-field col2">Italy</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">North/South</td>
-            <td data-column-index="2" class="table-field col2">UK</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-          <tr class="tableRow">
-            <td data-column-index="1" class="table-field col1">Paris specialites</td>
-            <td data-column-index="2" class="table-field col2">France</td>
-            <td data-column-index="3" class="action-field col3">
-              <div class="row-action-menu">action</div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <div class="table-container"></div>
+
+
   </div>
-  <script src="./filterList.js"></script>
-</body>
+  <script src="./js/filterList.js" type="module"></script>
+
+  <body>
+
+  </body>
 
 </html>

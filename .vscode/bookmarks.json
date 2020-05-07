@@ -136,21 +136,6 @@
 				"line": 288,
 				"column": 10,
 				"label": ""
-			},
-			{
-				"line": 305,
-				"column": 8,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\crud-filter-table\\css\\filterList.css",
-		"bookmarks": [
-			{
-				"line": 186,
-				"column": 7,
-				"label": ""
 			}
 		]
 	}
