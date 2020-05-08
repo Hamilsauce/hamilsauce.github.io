@@ -7,7 +7,6 @@ export class DataTable {
       this.parentElement = parentElement || document.querySelector('body'),
       this.columnActions = ['sort', 'addToFilter', 'highlight']
   }
-
   createTable() {
     this.table = document.createElement('table');
     this.table.classList.add('datatable');
@@ -16,13 +15,11 @@ export class DataTable {
     this.createHeaders(thead);
     this.append(this.table, this.parentElement);
   }
-
   createTableHead() {
     let thead = this.table.createTHead();
     this.addClass(thead, 'tableHeader');
     return thead;
   }
-
   createHeaders(thead) {
     const headerRow = thead.insertRow();
     this.addClass(headerRow, 'header-row')
@@ -44,7 +41,6 @@ export class DataTable {
       }
     })
   }
-
   createHeaderMenu(index) {
     const menu = this.generateNewEl('ul', 'header-menu', index)
     this.columnActions
@@ -56,7 +52,6 @@ export class DataTable {
       })
     return menu;
   }
-
   createRows() {
     this.data.forEach((entry, index) => { //* Don't need to append or return inserted rows - .insertRows() does appends automatically
       const newRow = this.table.insertRow()
@@ -67,7 +62,6 @@ export class DataTable {
     })
     //! tbody was automatically created when we inserted rows, so setting class now
   }
-
   createCells(row, entry) {
     Object.entries(entry)
       .forEach(([key, val], index, fields) => {

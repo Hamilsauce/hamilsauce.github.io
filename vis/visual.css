@@ -2,7 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 html,
@@ -16,17 +15,19 @@ body {
   text-align: center;
 }
 
+.content {
+  display: flex;
+  flex-shrink: 0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(5, 90px);
-
-  /* position: sticky; */
   top: 50px;
   gap: 40px;
   width: fit-content;
   height: 600px;
   margin: auto;
-  /* background: rgb(72, 101, 197); */
   padding: 0px 20px 20px 20px;
   transform: rotateX(180deg);
   border: 2px solid rgb(61, 65, 70);
@@ -34,24 +35,18 @@ body {
   box-shadow: 0px 0px 300px 10px inset rgba(83, 116, 121, 0.171);
 }
 
-
 .axis {
   background: white;
-
 }
 
 .column {
-  /* position: sticky; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  /* padding: 10px; */
   box-shadow: 0px 0px 50px 2px inset rgba(0, 0, 0, 0.274);
   border-radius: 5px 5px 0px 0px;
-  /* bottom: 0; */
   background: red;
-  /* border: 5px solid white; */
   transform: rotateX(180deg);
   border: 5px solid rgb(240, 240, 240);
   border-bottom: 0px solid rgba(163, 51, 51, 0.418);
