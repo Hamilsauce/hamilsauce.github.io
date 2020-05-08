@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Jost:400,500,600,700&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Jost', sans-serif;
 }
 
 html,
@@ -13,63 +16,93 @@ body {
 
 .app-header {
   text-align: center;
+  padding: 15px;
+
 }
 
-.content {
-  display: flex;
-  flex-shrink: 0;
+.title {
+  color: rgba(0, 0, 0, 0.794);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 90px);
+  grid-template-columns: repeat(3, 90px);
   top: 50px;
-  gap: 40px;
+  gap: 45px;
   width: fit-content;
-  height: 600px;
+  height: 550px;
   margin: auto;
-  padding: 0px 20px 20px 20px;
+  padding: 0px 10px 10px 10px;
   transform: rotateX(180deg);
-  border: 2px solid rgb(61, 65, 70);
-  border-radius: 8px;
-  box-shadow: 0px 0px 300px 10px inset rgba(83, 116, 121, 0.171);
+  border: 2px solid rgba(17, 31, 47, 0.637);
+  border-radius: 3px;
+  box-shadow: 0px 0px 100px 10px inset rgba(207, 209, 199, 0.404);
 }
+
 
 .axis {
   background: white;
+
 }
 
 .column {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  box-shadow: 0px 0px 50px 2px inset rgba(0, 0, 0, 0.274);
-  border-radius: 5px 5px 0px 0px;
-  background: red;
-  transform: rotateX(180deg);
-  border: 5px solid rgb(240, 240, 240);
+  align-content: center;
+  width: 85px;
+  background: rgb(22, 144, 175);
+  border: 3px solid rgb(240, 240, 240);
+  border-radius: 8px 8px 0px 0px;
+  border: 2px solid rgba(172, 180, 182, 0.637);
+  box-shadow: 0px 0px 50px 2px inset rgba(73, 73, 73, 0.363);
   border-bottom: 0px solid rgba(163, 51, 51, 0.418);
+  cursor: pointer;
+  transform: rotateX(180deg);
+  transition: 0.5s ease;
 }
 
-.column-name {
-  font-size: 1.1em;
-  font-weight: 500;
-  background: white;
-  padding: 2px 5px;
-  width: 80px;
+.column:hover {
+  background: rgb(173, 112, 71);
+  box-shadow: 0px 0px 25px 2px inset rgba(134, 134, 134, 0.356);
+  border: 2px solid rgba(100, 106, 107, 0.774);
+  border-bottom: 0px solid rgba(100, 106, 107, 0.774);
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.column:active {
+  box-shadow: 0px 0px 25px 2px inset rgba(134, 134, 134, 0.356);
+  border: 2px solid rgba(100, 106, 107, 0.774);
+  font-weight: bold;
+}
+
+.listInput {
+  display: flex;
+
+  padding: 0;
+  width: fit-content;
   border-radius: 2px;
-  border: 2px solid rgba(156, 154, 154, 0.822);
-  text-align: center;
-  cursor: pointer;
+  border: 1px solid rgba(156, 154, 154, 0.822);
   position: absolute;
   bottom: -50px;
   overflow: auto;
 }
 
+.listInput {
+  width: 110px;
+  font-size: 1.1em;
+  padding-left: 5px;
+  font-weight: 500;
+  background: white;
+}
+
 .column-value {
-  color: white;
+  color: rgb(47, 47, 47);
   font-weight: 600;
+  position: absolute;
+  top: -25px;
 }
 
 .cell27 {
@@ -92,22 +125,32 @@ footer {
 @media screen and (max-width:450px) {
   .grid {
     /* width: 360px; */
+    width: 95%;
+  }
+
+  .listInput {
+    font-size: 1.1em;
+    width: 110px;
+    left: -7px;
+
   }
 
   .column-name {
-    font-size: 1.3em;
+    width: 120px;
+    margin: 0 -0px
   }
 
   html,
   body {
-    width: fit-content;
+    /* width: fit-content; */
     height: fit-content;
   }
 
   footer {
-    bottom: 10px;
-    left: 20%;
-    font-size: 1.1em;
-    width: 100%;
+    /* bottom: 10px; */
+    /* left: 20%; */
+    left: 0;
+    font-size: 1em;
+    width: fit-content
   }
 }
