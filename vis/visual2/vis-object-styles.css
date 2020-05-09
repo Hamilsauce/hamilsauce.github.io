@@ -1,0 +1,84 @@
+.vis {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgb(111, 112, 114);
+  box-shadow: 0px 0px 10px 0px #3b3b3b8c;
+  border-radius: 100px;
+  cursor: pointer;
+  top: 120px;
+  left: 210px;
+  z-index: 1;
+  position: absolute;
+  background: rgb(207, 116, 42);
+  box-shadow: 0px 0px 30px 3px inset #0c5e7755;
+  border: 1px solid rgba(133, 133, 133, 0.596);
+  border-radius: 100px;
+  z-index: 0;
+  /* transition: 0.5s ease-in-out; */
+  animation-name: visObj;
+  animation-duration: 5s;
+  /* animation-fill-mode: both; */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.vis:hover {
+  background: rgba(233, 120, 27, 0.932);
+  box-shadow: 0px 0px 20px 3px inset #416c79b7;
+  transition: 0.3s ease-in-out;
+  transform: rotate3d(-55px, 453px, 1110px, 1234deg);
+}
+
+
+.vis:active {
+  background: rgba(231, 107, 6, 0.267);
+  box-shadow: 0px 0px 30px 3px inset #404242be;
+  transition: 0.4s ease;
+  transform: rotate3d(-55px, 453px, 1110px, 1234deg) ;
+}
+
+
+.shape-square {
+  border-radius: 100px;
+  transition: 1s ease;
+}
+
+@media screen and (max-width: 450px) {
+
+
+  .vis {
+    height: 70px;
+    width: 70px;
+  }
+
+  .vis-interior {}
+}
+
+@keyframes visObj {
+  0% {
+    background-color: rgb(175, 31, 31);
+    box-shadow: 11px -4px 20px 3px #1cb1dfb7;
+    transform: rotate3d(-55px, 453px, 1110px, 1234deg) skewX(55deg);
+  }
+
+  25% {
+    background-color: rgb(59, 146, 228);
+    box-shadow: 0px 0px 50px 3px #33a14eb7;
+    transform: rotate3d(-453px, 453px, -220., -3124deg) skewX(-423deg) skewY(-423deg);
+    transition: 0.6s ease;
+  }
+
+  50% {
+    box-shadow: -5px 10px 20px 3px #df9203b7;
+    background: rgba(189, 226, 22, 0.308);
+  }
+
+  100% {
+    box-shadow: 0px 22px 5px 10px #b91a84b7;
+    background-color: rgb(124, 114, 123);
+  }
+}
+
+/* The element to apply the animation to */

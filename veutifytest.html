@@ -11,9 +11,12 @@
 <body>
   <script type="text/x-template" id="app-template">
     <v-app>
+      <v-toolbar dark dense>
+        <v-toolbar-title>Sup grl</v-toolbar-title>
+      </v-toolbar>
       <v-container>
-        poop
-         <v-card dark true ripple>{{message}} </v-card>
+       <v-col cols="12">
+         <v-card dark true ripple>{{message}} </v-card></v-col>
       </v-container>
     </v-app>
   </script>
@@ -50,7 +53,7 @@
   </script>
 
   <script id="app-template" type="text/x-template">
-  <v-app>
+    <v-app>
     <v-toolbar class="deep-purple">
       <v-toolbar-title class="text--darken-1">Artixun Softwares</v-toolbar-title>
       <v-toolbar-items>
@@ -73,8 +76,6 @@
     </v-app>
   </script>
   <script>
-
-
     const App = {
       template: '#app-template',
       data() {

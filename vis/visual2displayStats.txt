@@ -1,0 +1,37 @@
+clientX: 345
+clientY: 208
+
+layerX: 62
+layerY: 54
+
+offsetX: 62
+offsetY: 54
+
+x: 345
+y: 208
+display: 523px (x) x 375px (y)
+Transform-origin:261.502px 187.681px; (display)
+pageX: 345
+pageY: 208
+
+screenX: 2009
+screenY: 299
+
+TOP LEFT CORNER OF DISPLAY ELEM:
+
+Screen:	2078, 109 (less often used)
+Window:	166, 117 (default)
+Client:	156, 117 (recommended)
+Color:	685CAC (Red=68 Green=5C Blue=AC)
+	x: 1912	y: -8	w: 1936	h: 1096
+Client:	x: 0	y: 0	w: 1918	h: 1088
+
+
+
+
+TOP LEFT CORNER OF VISOBJ:
+
+Screen:	2362, 275 (less often used)
+Window:	450, 283 (default)
+Client:	440, 283 (recommended)
+Color:	A0C5E8 (Red=A0 Green=C5 Blue=E8)

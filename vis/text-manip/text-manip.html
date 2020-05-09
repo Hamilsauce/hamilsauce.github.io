@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      width: 100vw;
+      height: 100vh;
+
+      transition: 0.7s ease-in-out;
+    }
+
+    app {
+      margin: 10px auto auto auto;
+      padding: 10px;
+      box-sizing: border-box;
+      width: 100%;
+      height: 100vh;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .textDiv {
+      height: 100%;
+      max-height: 400px;
+      max-width: 95vw;
+      margin: auto;
+      overflow: auto;
+      transition: 0.7s ease-in-out;
+    }
+
+    .userform {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0.83);
+      color: black;
+      margin: auto;
+      padding: 5px auto;
+      border-top: 2px soldid rgb(190, 145, 93);
+      border-bottom: 2px soldid rgb(190, 145, 93);
+      ;
+    }
+
+    .selector-group {
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      border: 2px solid rgb(209, 209, 209);
+      border-radius: 6px;
+      width: fit-content;
+
+    }
+
+    .font-selectors {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .text-size-selector {
+      border: 1px solid rgba(255, 255, 255, 0.0);
+      outline: none;
+      margin: auto 10px;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .color-selector {
+      width: 200px;
+    }
+
+    .selector-container {
+      display: flex;
+      margin: 0px auto 10px auto;
+
+    }
+
+    output {
+      min-width: 30px;
+      padding: auto 3px;
+      margin: auto 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="app">
+    <section class="text-container">
+      <h3 class="title">Text Manip</h3>
+      <form class="userform">
+        <fieldset class="selector-group">
+          <legend>Adjust the color</legend>
+          <label for="color-selector-red">Red</label>
+          <div class="selector-container"> <input type="range" name="color-selector-red" data-color="red"
+              class="color-selector redSelector" value="240" min="0" max="255" />
+            <output class="red-value-output" for="color-selector-red"></output> </div>
+          </div>
+
+          <label for="color-selector-green">Green</label>
+          <div class="selector-container">
+            <input type="range" name="color-selector-green" data-color="green"
+              class="color-selector greenSelector" value="240" min="0" max="255" />
+            <output class="green-value-output" for="color-selector-green"></output> </div>
+          </div>
+
+          <label for="color-selector-blue">Blue</label>
+          <div class="selector-container">
+            <input type="range" name="color-selector-blue" data-color="blue" class="color-selector blueSelector"
+              value="240" min="0" max="255" />
+            <output class="blue-value-output" for="color-selector-blue" value="240"></output>
+          </div>
+        </fieldset>
+        <div class="font-selectors">
+          <label for="text-size-selector">Font size</label>
+          <!-- <input type="number" name="text-size-selector" class="text-size-selector" value="12" min="8" max="32" /> -->
+          <input type="range" name="text-size-selector" class="text-size-selector" value="12" min="8" max="32" />
+
+        </div>
+      </form>
+
+
+      <div class="textDiv" contenteditable="true">
+        <p>This free book is what I wanted when I started working with single page apps. It's not an API reference on a
+          particular framework, rather, the focus is on discussing patterns, implementation choices and decent
+          practices.
+        </p>
+        <p>I'm taking a "code and concepts" approach to the topic - the best way to learn how to use something is to
+          understand
+          how it is implemented. My ambition here is to decompose the problem of writing a web app, take a fresh look at
+          it and
+          hopefully make better decisions the next time you make one.</p>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="./text-select.js"></script>
+</body>
+
+</html>
