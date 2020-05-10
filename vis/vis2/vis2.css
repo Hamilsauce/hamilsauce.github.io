@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,500,700|Ubuntu:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600,700&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 	color: white;
 	font-weight: 500;
+	font-family: 'Montserrat Alternates', sans-serif;
 }
 
 html {
-	box-shadow: 0px 0px 500px 10px inset rgba(196, 128, 223, 0.301);
+	box-shadow: 0px 0px 500px 10px inset rgba(126, 124, 107, 0.301);
 
 }
 
@@ -15,7 +19,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	background: rgba(175, 188, 189, 0.308);
-	margin: 10px auto 0px auto;
+	margin: 5px auto 0px auto;
 }
 
 .objOut {
@@ -27,7 +31,7 @@ body {
 	position: relative;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 1fr;
+	grid-template-rows: 350px 1fr;
 	height: 94%;
 	max-width: 550px;
 	padding: 0.5em;
@@ -38,15 +42,15 @@ body {
 	border: 1px solid grey;
 	border-radius: 9px;
 	background: rgb(231, 231, 231);
-	background: rgb(156, 158, 165);
+	background: rgba(143, 144, 151, 0.842);
 	box-shadow: 0px 0px 15px 2px inset rgba(188, 195, 202, 0.863);
 }
 
 .display {
 	position: relative;
-	background: white;
+	background: rgb(58, 58, 58);
 	border: 2px ridge rgba(192, 183, 183, 0.616);
-	margin: 10px 5px;
+	margin: 0px 5px;
 	border-radius: 7px;
 	overflow: hidden;
 }
@@ -55,9 +59,9 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: rgb(149, 150, 155);
-	padding: 15px 0px;
-	box-shadow: 0px 0px 75px 10px inset rgba(160, 165, 172, 0.514);
+	background: rgb(171, 171, 175);
+	padding: 0px 0px;
+	box-shadow: 0px 0px 75px 10px inset rgba(105, 108, 112, 0.767);
 }
 
 .group-section {
@@ -66,45 +70,50 @@ body {
 	justify-content: space-between;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	column-gap: 10px;
+	column-gap: 5px;
 }
 
 .userform {
 	display: flex;
+	display: grid;
+	gap: 15px;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-starts;
 	height: 100%;
-	background: rgba(169, 171, 180, 0.829);
+	background: rgba(135, 135, 139, 0.603);
 	box-shadow: 0px 0px 20px 15px inset rgb(151, 153, 163);
 	border-radius: 5px;
-	padding: 5px 0px;
+	padding: 10px 0px 20px;
 }
 
 fieldset {
 	padding: 5px 8px;
-	border: 3px ridge rgba(214, 214, 214, 0.699);
-	border-radius: 6px;
-	box-shadow: 0px 0px 35px 5px inset rgba(111, 113, 117, 0.644);
-	background: rgba(203, 207, 214, 0.575);
+	border: 2px ridge rgba(144, 150, 163, 0.418);
+	border-radius: 4px;
+	box-shadow: 0px 0px 35px 5px inset rgba(143, 145, 148, 0.644);
+	background: rgba(207, 208, 209, 0.472);
 }
 
 legend {
 	font-size: 1.05em;
 	line-height: 1.05;
-	background: rgba(235, 235, 236, 0.904);
+	background: rgba(238, 238, 238, 0.904);
 	border-radius: 10px;
-	padding: 0px 5px 3px 5px;
+	padding: 2px 5px 3px 5px;
 	margin-top: 4px;
-	border: 1px double rgb(108, 117, 122);
+	border: 1px double rgb(144, 150, 163);
+
 
 }
 
 legend>span {
 	color: rgb(105, 106, 109);
+
 }
 
 label {
 	text-shadow: 0px 0px 10px rgba(50, 51, 53, 0.842);
+	font-weight: 600;
 }
 
 #thumb {
@@ -114,7 +123,7 @@ label {
 }
 
 .dim-controls {
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 
@@ -158,7 +167,7 @@ label {
 	opacity: 0.9;
 	-webkit-transition: 0.5s;
 	transition: opacity 0.5s;
-	box-shadow: 0px 0px 10px 3px inset rgba(190, 193, 195, 0.671);
+	box-shadow: 0px 0px 10px 3px inset rgba(190, 193, 195, 0.144);
 	background: rgba(60, 80, 138, 0.8);
 }
 
@@ -166,13 +175,14 @@ label {
 .control {
 	-webkit-appearance: none;
 	width: 100%;
-	height: 5px;
+	height: 7px;
 	outline: none;
 	opacity: 0.9;
 	-webkit-transition: 0.3s ease-in-out;
 	transition: 0.2s ease;
 	background: rgb(255, 255, 255);
-	border: 1px solid rgba(90, 90, 90, 0.877);
+	border: 1px solid rgba(90, 90, 90, 0);
+	border-radius: 5px;
 }
 
 .control:hover {
@@ -184,8 +194,8 @@ label {
 .control::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
-	width: 23px;
-	height: 15px;
+	width: 26px;
+	height: 26px;
 	background: rgba(221, 221, 221, 0.966);
 	border: 2px solid rgba(248, 248, 248, 0.966);
 	box-shadow: 0px 0px 1px 1px rgba(63, 63, 63, 0.603);
@@ -198,8 +208,8 @@ label {
 .control::-webkit-slider-thumb:hover {
 	-webkit-appearance: none;
 	appearance: none;
-	width: 23px;
-	height: 15px;
+	width: 27px;
+	height: 30px;
 	background: #fffffff5;
 	cursor: pointer;
 	border-radius: 100px;
@@ -208,14 +218,18 @@ label {
 }
 
 @media screen and (max-width: 450px) {
+	body {
+		height: 100%;
+	}
+
 	.app {
 		position: relative;
 		display: grid;
-		grid-template-columns: 1fr;
-		grid-template-rows: 2fr 1fr;
+		grid-template-rows: 350px 1fr;
 		height: 97%;
 		max-width: 98vw;
 		background-color: rgba(86, 89, 102, 0.63);
+		padding-bottom: 15px;
 	}
 
 	.display {

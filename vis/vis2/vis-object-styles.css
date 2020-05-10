@@ -36,7 +36,7 @@
   background: rgba(231, 107, 6, 0.267);
   box-shadow: 0px 0px 30px 3px inset #404242be;
   transition: 0.4s ease;
-  transform: rotate3d(-55px, 453px, 1110px, 1234deg) ;
+  transform: rotate3d(-55px, 453px, 1110px, 1234deg);
 }
 
 
@@ -58,21 +58,29 @@
 
 @keyframes visObj {
   0% {
-    background-color: rgb(175, 31, 31);
+    background-color: rgb(12, 59, 30);
     box-shadow: 11px -4px 20px 3px #1cb1dfb7;
+    height: 105%;
+    width: 75%;
+    left: 120px;
+    border: 3px solid rgba(100, 33, 102, 0.76);
     transform: rotate3d(-55px, 453px, 1110px, 1234deg) skewX(55deg);
   }
 
   25% {
     background-color: rgb(59, 146, 228);
-    box-shadow: 0px 0px 50px 3px #33a14eb7;
-    transform: rotate3d(-453px, 453px, -220., -3124deg) skewX(-423deg) skewY(-423deg);
+    box-shadow: 0px 0px 50px 3px #66a074b7;
+    height: 90%;
+    ox-shadow: 0px 0px 50px 3px inset #fa0000b7;
+    width: 65%;
+    transform: skewY(-423deg);
     transition: 0.6s ease;
   }
 
   50% {
     box-shadow: -5px 10px 20px 3px #df9203b7;
     background: rgba(189, 226, 22, 0.308);
+    transform: rotate(-1126deg);
   }
 
   100% {
@@ -82,3 +90,24 @@
 }
 
 /* The element to apply the animation to */
+@media screen and (max-width: 450px) {
+  body {
+    height: 100%;
+  }
+
+  .app {
+    position: relative;
+    display: grid;
+    grid-template-rows: 350px 1fr;
+    height: 97%;
+    max-width: 98vw;
+    background-color: rgba(86, 89, 102, 0.63);
+    padding-bottom: 15px;
+  }
+
+  .display {
+    margin-top: 5px;
+  }
+
+
+}
