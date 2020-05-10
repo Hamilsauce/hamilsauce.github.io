@@ -15,10 +15,8 @@
   border: 1px solid rgba(133, 133, 133, 0.596);
   border-radius: 100px;
   z-index: 0;
-  /* transition: 0.5s ease-in-out; */
   animation-name: visObj;
   animation-duration: 5s;
-  /* animation-fill-mode: both; */
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -30,30 +28,21 @@
   transition: 0.3s ease-in-out;
   transform: rotate3d(-55px, 453px, 1110px, 1234deg);
 }
-
-
 .vis:active {
   background: rgba(231, 107, 6, 0.267);
   box-shadow: 0px 0px 30px 3px inset #404242be;
   transition: 0.4s ease;
   transform: rotate3d(-55px, 453px, 1110px, 1234deg);
 }
-
-
 .shape-square {
   border-radius: 100px;
   transition: 1s ease;
 }
-
 @media screen and (max-width: 450px) {
-
-
   .vis {
     height: 70px;
     width: 70px;
   }
-
-  .vis-interior {}
 }
 
 @keyframes visObj {
@@ -66,7 +55,6 @@
     border: 3px solid rgba(100, 33, 102, 0.76);
     transform: rotate3d(-55px, 453px, 1110px, 1234deg) skewX(55deg);
   }
-
   25% {
     background-color: rgb(59, 146, 228);
     box-shadow: 0px 0px 50px 3px #66a074b7;
@@ -76,25 +64,21 @@
     transform: skewY(-423deg);
     transition: 0.6s ease;
   }
-
   50% {
     box-shadow: -5px 10px 20px 3px #df9203b7;
     background: rgba(189, 226, 22, 0.308);
     transform: rotate(-1126deg);
   }
-
   100% {
     box-shadow: 0px 22px 5px 10px #b91a84b7;
     background-color: rgb(124, 114, 123);
   }
 }
-
 /* The element to apply the animation to */
 @media screen and (max-width: 450px) {
   body {
     height: 100%;
   }
-
   .app {
     position: relative;
     display: grid;
@@ -104,10 +88,8 @@
     background-color: rgba(86, 89, 102, 0.63);
     padding-bottom: 15px;
   }
-
   .display {
     margin-top: 5px;
   }
-
 
 }

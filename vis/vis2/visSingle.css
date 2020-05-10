@@ -13,14 +13,12 @@
 html {
 	box-shadow: 0px 0px 500px 10px inset rgba(126, 124, 107, 0.301);
 }
-
 body {
 	width: 100vw;
 	height: 100vh;
 	background: rgba(175, 188, 189, 0.308);
 	margin: 5px auto 0px auto;
 }
-
 .objOut {
 	height: fit-content;
 	background: rgba(50, 51, 53, 0.842);
@@ -101,11 +99,9 @@ legend {
 	margin-top: 4px;
 	border: 1px double rgb(144, 150, 163);
 }
-
 legend>span {
 	color: rgb(105, 106, 109);
 }
-
 label {
 	text-shadow: 0px 0px 10px rgba(50, 51, 53, 0.842);
 	font-weight: 600;
@@ -116,7 +112,6 @@ label {
 	fill: green;
 	color: rgb(122, 146, 122);
 }
-
 .dim-controls {
 	margin-bottom: 0px;
 }
@@ -132,7 +127,6 @@ label {
 .slidecontainer {
 	width: 100%;
 }
-
 .control {
 	-webkit-appearance: none;
 	width: 100%;
@@ -145,7 +139,6 @@ label {
 	box-shadow: 0px 0px 10px 3px inset rgba(190, 193, 195, 0.144);
 	background: rgba(60, 80, 138, 0.8);
 }
-
 .control {
 	-webkit-appearance: none;
 	width: 100%;
@@ -164,7 +157,6 @@ label {
 	border: 1px solid rgba(66, 66, 66, 0.699);
 	box-shadow: 0px 0px 10px 3px inset rgba(235, 237, 238, 0.274);
 }
-
 .control::-webkit-slider-thumb {
 	-webkit-appearance: none;
 	appearance: none;
@@ -192,13 +184,115 @@ label {
 }
 
 
+.vis {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background: rgb(111, 112, 114);
+	box-shadow: 0px 0px 10px 0px #3b3b3b8c;
+	border-radius: 100px;
+	cursor: pointer;
+	top: 120px;
+	left: 210px;
+	z-index: 1;
+	position: absolute;
+	background: rgb(207, 116, 42);
+	box-shadow: 0px 0px 30px 3px inset #0c5e7755;
+	border: 1px solid rgba(133, 133, 133, 0.596);
+	border-radius: 100px;
+	z-index: 0;
+	animation-name: visObj;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
 
+.vis:hover {
+	background: rgba(233, 120, 27, 0.932);
+	box-shadow: 0px 0px 20px 3px inset #416c79b7;
+	transition: 0.3s ease-in-out;
+	transform: rotate3d(-55px, 453px, 1110px, 1234deg);
+}
 
+.vis:active {
+	background: rgba(231, 107, 6, 0.267);
+	box-shadow: 0px 0px 30px 3px inset #404242be;
+	transition: 0.4s ease;
+	transform: rotate3d(-55px, 453px, 1110px, 1234deg);
+}
+
+.shape-square {
+	border-radius: 100px;
+	transition: 1s ease;
+}
+
+@media screen and (max-width: 450px) {
+	.vis {
+		height: 70px;
+		width: 70px;
+	}
+}
+
+@keyframes visObj {
+	0% {
+		background-color: rgb(12, 59, 30);
+		box-shadow: 11px -4px 20px 3px #1cb1dfb7;
+		height: 105%;
+		width: 75%;
+		left: 120px;
+		border: 3px solid rgba(100, 33, 102, 0.76);
+		transform: rotate3d(-55px, 453px, 1110px, 1234deg) skewX(55deg);
+	}
+
+	25% {
+		background-color: rgb(59, 146, 228);
+		box-shadow: 0px 0px 50px 3px #66a074b7;
+		height: 90%;
+		ox-shadow: 0px 0px 50px 3px inset #fa0000b7;
+		width: 65%;
+		transform: skewY(-423deg);
+		transition: 0.6s ease;
+	}
+
+	50% {
+		box-shadow: -5px 10px 20px 3px #df9203b7;
+		background: rgba(189, 226, 22, 0.308);
+		transform: rotate(-1126deg);
+	}
+
+	100% {
+		box-shadow: 0px 22px 5px 10px #b91a84b7;
+		background-color: rgb(124, 114, 123);
+	}
+}
+
+/* The element to apply the animation to */
 @media screen and (max-width: 450px) {
 	body {
 		height: 100%;
 	}
 
+	.app {
+		position: relative;
+		display: grid;
+		grid-template-rows: 350px 1fr;
+		height: 97%;
+		max-width: 98vw;
+		background-color: rgba(86, 89, 102, 0.63);
+		padding-bottom: 15px;
+	}
+
+	.display {
+		margin-top: 5px;
+	}
+
+}
+
+@media screen and (max-width: 450px) {
+	body {
+		height: 100%;
+	}
 	.app {
 		position: relative;
 		display: grid;

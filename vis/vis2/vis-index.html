@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>vis2</title>
+  <link rel="stylesheet" href="./vis2/vis2.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="./vis2/vis-object-styles.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <main class="app">
+    <section class="display">
+      <span class="vis-exterior vis">
+        <!-- <div class="vis-interior vis"></div> -->
+      </span>
+    </section>
+    <section class="controls">
+      <form class="userform">
+        <div class="group-section">
+          <fieldset class="pos-controls">
+            <legend class="pos-legend"><span>Position</span></legend>
+            <div class="cgroup">
+              <label for="x-control">X-axis</label>
+              <input data-attribute="x" class="x-control control" id="x-control" type="range" name="x-control"
+                value="261" min="0" max="420" />
+            </div>
+            <div class="cgroup">
+              <label for="y-control">Y-axis</label>
+              <input data-attribute="y" class="y-control control" id="y-control" type="range" name="y-control"
+                value="187" min="0" max="275" />
+          </fieldset>
+
+          <fieldset class="dim-controls">
+            <legend class="dim-legend"><span>Dimensions</span></legend>
+            <div class="cgroup">
+              <label for="w-control">Width</label>
+              <input data-attribute="w" class="w-control control" id="w-control" type="range" name="w-control"
+                value="100" min="0" max="500" />
+            </div>
+            <div class="cgroup">
+              <label for="h-control">Height</label>
+              <input data-attribute="h" class="h-control control" id="h-control" type="range" name="h-control"
+                value="100" min="0" max="500" />
+            </div>
+          </fieldset>
+        </div>
+
+        <fieldset class="transform-controls">
+          <legend class="trans-legend"><span>Transform</span></legend>
+          <div class="transform-group">
+            <div class="cgroup">
+              <label for="rot-control">Rotate</label>
+              <input data-attribute="rotate" class="rotate-control control" id="rotate-control" type="range"
+                name="rotate-control" value="0" min="-2000" max="2000" />
+            </div>
+            <div class="cgroup">
+              <label for="skew-control">Skew-control</label>
+              <input data-attribute="skew" class="skew-control control" id="skew-control" type="range"
+                name="skew-control" value="187" />
+            </div>
+            <div class="cgroup">
+              <label for="translate-control">Translate</label>
+              <input data-attribute="translate" class="translate-control control" id="translate-control" type="range"
+                name="translate-control" value="1" min="-300" max="300" /> </div>
+            <div class="cgroup">
+              <label for="scale-control">Scale</label>
+              <input data-attribute="scale" class="scale-control control" id="scale-control" type="range"
+                name="scale-control" value="0.1" min="0.1" max="5" /> </div>
+          </div>
+          </div>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+  <pre class="objOut"></pre>
+  <script src="./vis2/vis2.js"></script>
+</body>
+
+</html>
