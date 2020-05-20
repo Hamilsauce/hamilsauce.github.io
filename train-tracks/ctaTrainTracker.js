@@ -6,7 +6,7 @@ const dataStore = new DataStore();
 const faves = new Favorites();
 
 dataStore.fetchTrainStops( //! Gets a stop list from json file for select drop down
-  'https://hamilsauce.github.io/data/train-tracks/trainStops.json', 'allTrainStops');
+  'https://hamilsauce.github.io/train-tracks/data/trainStops.json', 'allTrainStops');
 
 //@ Begin train stop list construction functions
 const buildStopList = (stopList) => { //! sorts stops fetched from json, then adds them as options to seelct
