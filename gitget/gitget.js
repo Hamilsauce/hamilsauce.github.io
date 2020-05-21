@@ -35,16 +35,30 @@ const toggleCollapse = (el) => {
   })
 }
 
-const handleUrlCheckBox = (chBox) => {
+const handleUrlCheckBox = () => {
+  let chBox = document.querySelector('.hamhomeCheck')
   const urlIn = document.querySelector('.urlInput')
+  let urlTest = true;
+  let url = '';
+  console.log('url value at start of handleChbox');
+
+  console.log(urlIn.value);
 
   if (chBox.checked) {
-  let hamBase = 'https://hamilsauce.github.io/'
-    urlIn.value = `${hamBase}${urlIn.value}`
-    console.log(urlIn.value);
+    let hamBase = 'https://hamilsauce.github.io/'
+    urlIn.value = `${urlIn.value}`
+    urlTest = true;
   } else {
+    let proxy = 'https://cors-anywhere.herokuapp.com/';
+    url = `${proxy}/${urlIn.value}`
     urlIn.value = '';
+    urlTest = false;
+
   }
+
+  let urlOut = urlTest === false ? url : urlIn.value;
+
+  return urlOut;
 }
 
 const out = file => {
@@ -57,26 +71,26 @@ const out = file => {
 
 document.querySelector('.userform').addEventListener('submit', e => {
   e.preventDefault();
-  const fileIn = document.querySelector('.urlInput')
-  getgit(fileIn.value);
+
+  const chBox = document.querySelector('.hamhomeCheck');
+  let url = handleUrlCheckBox()
+  console.log(url);
+
+  getgit(url);
 })
 
 document.querySelector('.hamhomeCheck').addEventListener('change', e => {
-  handleUrlCheckBox(e.target)
+  handleUrlCheckBox()
 })
 
 document.querySelector('.submitButton').addEventListener('click', e => {
   e.preventDefault();
-  const fileIn = document.querySelector('.urlInput')
   const form = document.querySelector('.userform')
-  getgit(fileIn.value);
+  getgit(handleUrlCheckBox());
   toggleCollapse(form);
-  
-
-  
 })
 
 window.onload = () => {
-	// handleUrlCheckBox(document.querySelector('.hamhomeCheck'))
-	console.log(document.querySelector('.hamhomeCheck').checked);
+  // handleUrlCheckBox()
+  console.log(document.querySelector('.hamhomeCheck').checked);
 };

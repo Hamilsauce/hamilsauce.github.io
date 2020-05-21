@@ -18,5 +18,15 @@
 				"label": ""
 			}
 		]
+	},
+	{
+		"path": "$ROOTPATH$\\js\\main.js",
+		"bookmarks": [
+			{
+				"line": 148,
+				"column": 51,
+				"label": ""
+			}
+		]
 	}
 ]

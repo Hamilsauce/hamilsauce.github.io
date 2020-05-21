@@ -31,7 +31,8 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig); // Initialize Firebase
 
-const userform = document.querySelector('.userform'); // const dbRef = firebase.database().ref().child('game');
+const userform = document.querySelector('.userform');
+// const dbRef = firebase.database().ref().child('game');
 document.querySelector('.endModal').style.display = 'none';
 
 //@  page initialization stuff
@@ -40,6 +41,7 @@ const clock = new GameClock;
 let prevTarget;
 
 //@ End page initialization stuff
+
 function handleCardSelect(event) { //* Handles card select state, routes cards for match testing if appropriate
   let card = event.target;
 
@@ -63,7 +65,6 @@ function handleCardSelect(event) { //* Handles card select state, routes cards f
     checkSelected(game.selected);
     prevTarget = card;
   }
-
 }
 
 //* Manages general card and card array states
@@ -124,7 +125,7 @@ const cardMaker = (cSymbol) => {
   return newCard;
 }
 //@
-//@ End of  game functions
+//@ End of game functions
 //@
 
 const buildDeck = cardSymbols => { //! takes array of symbols, calls cardMaker on each, then adds each to game.deck. deck then duplicates to create matches
@@ -147,7 +148,6 @@ const newGame = () => {
 
 //TODO move into a module for UI updates (modal module maybe)
 const displayStats = () => {
-  const endModalTop = document.querySelector('.endModalTop');
   const nameDisplay = document.querySelector('.playerName');
   const starsDisplay = document.querySelector('.starsDisplay');
   const turnScore = document.querySelector('.turnScore');
@@ -189,7 +189,6 @@ document.querySelector('.newGameButton').addEventListener('click', e => {
     document.querySelector('.modal').style.display = 'none';
     document.querySelector('.dimmer').style.display = 'none';
   }, 300);
-
   newGame();
 })
 
@@ -237,7 +236,6 @@ document.querySelector('.shareButton').addEventListener('click', () => {
         url
       })
       .then(() => {
-        console.log('Share works');
       })
       .catch(err => {
         alert('No built in share technology');

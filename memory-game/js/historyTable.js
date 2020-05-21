@@ -9,14 +9,14 @@
     //...
   }
   generateHTML() {
-    //@ Possible Better idea than below?!? - Create new objects for each game, have the objects write their own HTML and store it
-    //@ internally; use an API to access the HTML, simplifying the rendering, reducing extra arrays
+    @ Possible Better idea than below?!? - Create new objects for each game, have the objects write their own HTML and store it
+    @ internally; use an API to access the HTML, simplifying the rendering, reducing extra arrays
 
     //* Write code that creates and stores table HTML for each game, complete with dynamic references for each row
     //* Every game object's markup will get stored in an array
     //* Using a render function, loop through array, adding to/inserting/embedding into on-page html Table
   }
-  //@  Sample of table row mark up
+  @  Sample of table row mark up
   //*   <tr class="trow" data-player="">
   //*     <td>1/25/2019</td>
   //*     <td>Buttguy</td>
@@ -25,12 +25,12 @@
   //*     <td>24s</td>
   //*   </tr>
 
-
   renderTable() {
     //...
   }
 }
-// let colNames = ['elapsedTime', 'gameDate', 'playerName', 'playerTurns', 'stars']
+
+let colNames = ['elapsedTime', 'gameDate', 'playerName', 'playerTurns', 'stars']
 const getGameData = () => {
   let gameData = [];
   fetch('../memoryGameHistory.json')
@@ -48,7 +48,7 @@ const getGameData = () => {
 
 
 export const getStoredHistory = () => {
-let history = JSON.parse(sessionStorage.getItem('gameHistory'));
+  let history = JSON.parse(sessionStorage.getItem('gameHistory'));
   let games = Object.values(history);
   buildTable(games);
 }

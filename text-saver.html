@@ -264,7 +264,6 @@
           alert(errorMsg);
           return
         }
-
       } else {
         try {
           saveFile();
@@ -272,11 +271,9 @@
           let errorMsg = e.name + ': ' + e.message;
           alert(errorMsg);
           return
-
         }
       }
     })
-
     const saveFile = () => {
       const fileNameInput = document.querySelector('#input-fileName');
       const fileContentInput = document.querySelector('#textarea');
@@ -294,7 +291,6 @@
       fetch(url)
         .then(res => res.json())
         .then(data => {
-          // const fileContent = JSON.stringify(data);
           const fileContent = JSON.stringify(data, null, 2);
           const fileParts = getFileParts(url);
           fileParts.fileContent = fileContent;
@@ -314,7 +310,6 @@
         fileExtension: fileExt
       }
     }
-
   </script>
 </body>
 

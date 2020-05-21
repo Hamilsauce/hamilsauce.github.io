@@ -29,7 +29,7 @@ export class GameClock {
   }
   start(el) {
     this.display = el;
-    console.log(this.display);
+    // console.log(this.display);
     this.isRunning = true;
     this.timer();
   }

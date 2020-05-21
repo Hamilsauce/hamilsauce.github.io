@@ -1,13 +1,13 @@
 import {
   Deck,
-  Card
+
 } from './Cards.js';
 
 //* Class managing game state
 export class Game {
   constructor(gameBoard) {
     this.gameHistory = this.getHistory(),
-    this.gameBoard = gameBoard,
+      this.gameBoard = gameBoard,
       this.selected = [],
       this.matched = [],
       this.turns = 0,
@@ -61,15 +61,15 @@ export class Game {
     const perfectGame = this.matched.length / 2;
     let actualGame = this.turns;
 
-    if (actualGame / perfectGame <= 1.6) {
+    if (actualGame / perfectGame <= 1.7) { //* Gotta win w/in 10 turns for 3 stars
       starsDisplay.style.color = 'rgba(53, 163, 39, 0.904)';
       console.log(actualGame / perfectGame);
       this.stars = 3;
-    } else if (actualGame / perfectGame <= 2) {
+    } else if (actualGame / perfectGame <= 2.17) { //* Gotta win w/in 13 turns for 2 stars
       starsDisplay.style.color = 'rgba(189, 162, 40, 0.904)';
       console.log(actualGame / perfectGame);
       this.stars = 2;
-    } else {
+    } else { //* 14+ turns and awarded 1 star
       starsDisplay.style.color = 'rgba(189, 40, 40, 0.904)';
       console.log(actualGame / perfectGame);
       this.stars = 1;
