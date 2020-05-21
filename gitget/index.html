@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Files</title>
+  <link rel="stylesheet" href="gitget.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <form class="userform">
+    <h3 class="inputTitle ctrl">File Url</h3>
+    <input type="text" class="urlInput ctrl" name="urlInput" id="urlInput" value="" />
+    <div class="control-group ctrl">
+      <label class="chBoxLabel label ctrl" for="hamhomeCheck">Target is at hamhome?</label>
+      <input type="checkbox" class="hamhomeCheck ctrl" name="hamhomeCheck" id="hamhomeCheck" checked="true" />
+    </div>
+    <input type="submit" class="submitButton ctrl" name="submitButton" id="submitButton" value="Go" />
+  </form>
+  <section class="content">
+    <h3 class="fileHeader"></h3>
+    <iframe class="content-view" src="" frameborder="0"></iframe>
+    <div class="output"></div>
+  </section>
+  <script src="gitget.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
