@@ -18,7 +18,7 @@ export class DataStore { //* fetches json and stores it as a property in data ob
     return this.data[dataKey];
   }
   test() {
-    console.log('i work bitches');
+    // console.log('i work bitches');
   }
   fetchTrainStops(url, dataKey) {
     if (localStorage.getItem(dataKey)) {
@@ -34,4 +34,6 @@ export class DataStore { //* fetches json and stores it as a property in data ob
   }
 }
 
-{DataStore}
+{
+  DataStore
+}

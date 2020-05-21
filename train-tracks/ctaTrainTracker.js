@@ -80,14 +80,14 @@ const getTrainData = () => { //!makes the request for train data, calls above fu
         }
       }).forEach(eta => {
         renderArrivals(eta, i);
-        console.log(i);
+        // console.log(i);
         i++;
       })
-      console.log(etas);
+      // console.log(etas);
 
     })
     .catch(err => {
-      console.log(err);
+      // console.log(err);
     });
 }
 
@@ -172,7 +172,7 @@ const toggleCollapse = e => {
 }
 const uncheckLineFilters = () => { //TODO: For some reason can't clear checkboxes
   const filterBoxes = document.querySelectorAll('.trainCheckbox');
-  console.log(filterBoxes);
+  // console.log(filterBoxes);
   filterBoxes.forEach(filterBox => {
     filterBox.checked = false;
   });
