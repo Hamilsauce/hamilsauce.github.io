@@ -37,9 +37,9 @@ const toggleCollapse = (el) => {
 
 const handleUrlCheckBox = (chBox) => {
   const urlIn = document.querySelector('.urlInput')
-  let hamBase = 'https://hamilsauce.github.io/'
 
   if (chBox.checked) {
+  let hamBase = 'https://hamilsauce.github.io/'
     urlIn.value = `${hamBase}${urlIn.value}`
     console.log(urlIn.value);
   } else {
@@ -77,6 +77,6 @@ document.querySelector('.submitButton').addEventListener('click', e => {
 })
 
 window.onload = () => {
-	handleUrlCheckBox(document.querySelector('.hamhomeCheck'))
+	// handleUrlCheckBox(document.querySelector('.hamhomeCheck'))
 	console.log(document.querySelector('.hamhomeCheck').checked);
 };
