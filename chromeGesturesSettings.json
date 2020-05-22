@@ -1,0 +1,317 @@
+{
+  "backup": {
+    "drag": false,
+    "gesture": true,
+    "scroll": true,
+    "scrollgesture": true,
+    "strokegesture": true
+  },
+  "blackList": [],
+  "cfgver": "4.4.4",
+  "drag": {
+    "ddirect": true,
+    "ddirectcolor": "f7c705",
+    "ddirectopa": 0.9,
+    "dholdkey": "none",
+    "dragimage": true,
+    "draginput": false,
+    "draglink": true,
+    "dragtext": true,
+    "dragui": true,
+    "dstroke": true,
+    "dstrokecolor": "f5f23f",
+    "dstrokeopa": 0.8,
+    "dstrokewidth": 5,
+    "dtooltip": true,
+    "dtooltipcolor": "f7c705",
+    "dtooltipopa": 0.9,
+    "dtooltipwidth": 18,
+    "image": [
+      {
+        "action": "I_open",
+        "direct": "L",
+        "moreDes": "Open image in new tab(New tab & Background)",
+        "morePinned": "unpinned",
+        "morePosition": "left",
+        "moreTarget": "newback"
+      },
+      {
+        "action": "I_open",
+        "direct": "R",
+        "moreDes": "Open image in new tab(New tab & Front)",
+        "morePinned": "unpinned",
+        "morePosition": "right",
+        "moreTarget": "newfront"
+      },
+      {
+        "action": "I_save",
+        "direct": "D"
+      }
+    ],
+    "imgfirst": "none",
+    "imgfirstcheck": false,
+    "link": [
+      {
+        "action": "L_open",
+        "direct": "L",
+        "moreDes": "Open link in new tab(New tab & Background)",
+        "morePinned": "unpinned",
+        "morePosition": "left",
+        "moreTarget": "newback"
+      },
+      {
+        "action": "L_open",
+        "direct": "R",
+        "moreDes": "Open link in new tab(New tab & Front)",
+        "morePinned": "unpinned",
+        "morePosition": "right",
+        "moreTarget": "newfront"
+      },
+      {
+        "action": "L_copytext",
+        "direct": "D"
+      },
+      {
+        "action": "L_copyurl",
+        "direct": "U"
+      }
+    ],
+    "setdragurl": true,
+    "text": [
+      {
+        "action": "T_search",
+        "direct": "L",
+        "moreDes": "Use %name to search \"%s\"(New tab & Background)",
+        "morePinned": "unpinned",
+        "morePosition": "left",
+        "moreTarget": "newback",
+        "moreTsearch": "sgoogle"
+      },
+      {
+        "action": "T_search",
+        "direct": "R",
+        "moreDes": "Use %name to search \"%s\"(New tab & Front)",
+        "morePinned": "unpinned",
+        "morePosition": "right",
+        "moreTarget": "newfront",
+        "moreTsearch": "sgoogle"
+      },
+      {
+        "action": "T_copytext",
+        "direct": "D"
+      }
+    ]
+  },
+  "extid": "jlgkpaicikihijadgifklkbpdajbkhjo",
+  "gesture": {
+    "direct": true,
+    "directcolor": "000000",
+    "directopa": "0.6",
+    "gesPos": "cc",
+    "geskey": "right",
+    "gesture": [
+      {
+        "action": "G_back",
+        "direct": "L",
+        "whitelist": []
+      },
+      {
+        "action": "G_go",
+        "direct": "R",
+        "whitelist": []
+      },
+      {
+        "action": "G_up",
+        "direct": "U",
+        "whitelist": []
+      },
+      {
+        "action": "G_down",
+        "direct": "D",
+        "whitelist": []
+      },
+      {
+        "action": "G_close",
+        "direct": "DR",
+        "moreCloseopts": "close",
+        "moreClosesel": "chrome",
+        "moreCloseurl": "chrome://newtab/",
+        "whitelist": []
+      },
+      {
+        "action": "G_reclosedtab",
+        "direct": "LU",
+        "moreDes": "Reopen closed tab",
+        "morePinned": "unpinned",
+        "morePosition": "chrome",
+        "moreTarget": "newfront",
+        "whitelist": []
+      },
+      {
+        "action": "G_bottom",
+        "direct": "RD",
+        "whitelist": []
+      },
+      {
+        "action": "G_top",
+        "direct": "RU",
+        "whitelist": []
+      },
+      {
+        "action": "G_reload",
+        "direct": "UD",
+        "whitelist": []
+      },
+      {
+        "action": "G_reloadall",
+        "direct": "UDU",
+        "whitelist": []
+      },
+      {
+        "action": "G_lefttab",
+        "direct": "UL",
+        "whitelist": []
+      },
+      {
+        "action": "G_righttab",
+        "direct": "UR",
+        "whitelist": []
+      },
+      {
+        "action": "G_closewindow",
+        "direct": "URD",
+        "whitelist": []
+      },
+      {
+        "action": "G_crxsettings",
+        "direct": "RDLU",
+        "moreDes": "CrxMouse settings",
+        "morePinned": "unpinned",
+        "morePosition": "chrome",
+        "moreTarget": "newfront",
+        "whitelist": []
+      },
+      {
+        "action": "G_newtab",
+        "direct": "RLD",
+        "moreDes": "New tab",
+        "morePinned": "unpinned",
+        "morePosition": "chrome",
+        "moreTarget": "newfront",
+        "whitelist": []
+      },
+      {
+        "action": "G_mergeTab",
+        "direct": "RL",
+        "whitelist": []
+      },
+      {
+        "action": "G_splitTab",
+        "direct": "LR",
+        "whitelist": []
+      }
+    ],
+    "gestureui": true,
+    "gholdkey": "none",
+    "gholdkeydisable": "alt",
+    "gholdkeytype": "enable",
+    "stenable": true,
+    "stroke": true,
+    "strokecolor": "4599ff",
+    "strokeopa": 0.8,
+    "strokewidth": "4",
+    "tooltip": true,
+    "tooltipcolor": "db4b1f",
+    "tooltipopa": "0.8",
+    "tooltipwidth": "35"
+  },
+  "isGesturesOff": false,
+  "isOnboardingShownOnce": false,
+  "lastEditedGesture": null,
+  "normal": {
+    "autocancel": false,
+    "autocancelvalue": 2,
+    "cancelcontextmenu": true,
+    "capturetype": "jpeg",
+    "clickedOptin": true,
+    "cursorimg": null,
+    "cursorimgscale": "1",
+    "dbclicktime": 600,
+    "drag": false,
+    "gesture": true,
+    "hidetrash": false,
+    "jpegquality": 100,
+    "lasttab": false,
+    "minilength": "10",
+    "newtabposition": "chrome",
+    "scroll": true,
+    "scrolleffects": true,
+    "scrollgesture": true,
+    "strokegesture": true
+  },
+  "optedout": false,
+  "others": {
+    "tuilink": false
+  },
+  "scroll": {
+    "scrollaccele": 1,
+    "scrollspeed": 3,
+    "smooth": true
+  },
+  "scrollgesture": {
+    "fastSwitch": false,
+    "reverseFS": false,
+    "sgsleft": [
+      {
+        "action": "G_top"
+      },
+      {
+        "action": "G_bottom"
+      }
+    ],
+    "sgsleftenable": true,
+    "sgsright": [
+      {
+        "action": "G_top"
+      },
+      {
+        "action": "G_bottom"
+      }
+    ],
+    "sgsrightenable": false,
+    "tablist": true,
+    "tablistVisual": true,
+    "tablistkey": "right"
+  },
+  "strokegesture": {
+    "strleft": [
+      {
+        "action": "G_none"
+      },
+      {
+        "action": "G_righttab"
+      }
+    ],
+    "strleftenable": true,
+    "strmiddle": [
+      {
+        "action": "G_lefttab"
+      },
+      {
+        "action": "G_righttab"
+      }
+    ],
+    "strmiddleenable": false,
+    "strpress": "up",
+    "strright": [
+      {
+        "action": "G_lefttab"
+      },
+      {
+        "action": "G_none"
+      }
+    ],
+    "strrightenable": true
+  },
+  "sync": true
+}

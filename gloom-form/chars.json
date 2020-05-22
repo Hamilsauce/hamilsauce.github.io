@@ -1,0 +1,23 @@
+{
+  "characters": [
+  {
+    "id": "1",
+    "name": "Bilbo",
+    "level": "1",
+    "gold": "30"
+        },
+  {
+    "id": "2",
+    "name": "Nards",
+    "level": "3",
+    "gold": "26"
+        },
+  {
+    "id": "3",
+    "name": "Scab",
+    "level": "4",
+    "gold": "12"
+    
+  }
+  ] 
+}

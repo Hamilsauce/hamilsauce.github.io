@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
+  <title>character</title>
+  <link rel="stylesheet" href="./gloomguy.css">
+</head>
+
+<body>
+  <div id="app"></div>
+  <header class="header">
+    <h1 class="headerText">gloomGUY</h1>
+  </header>
+  <div class="content">
+    <form class="userform" autocomplete="off">
+     
+      <div data-cell-name="name-cell" class="cell name-cell">
+        <p>Name</p>
+        <input type="text" class="textIn" value="John Doe">
+      </div>
+     
+      <div data-cell-name="class-cell" class="cell class-cell">
+        <p>Class</p>
+        <input type="text" class="textIn">
+      </div>
+     
+      <div data-cell-name="level-cell" class="cell level-cell">
+        <p>Level</p>
+        <!--<input type="text" class="textIn">-->
+      </div>
+    </form>
+    <div :characters="characters" v-for="char in characters" class="list">
+    </div>
+  </div>
+  <div class="counter-guy">
+    <button class="minus">-</button>
+    <div class="counter-display">0</div>
+    <button class="add">+</button>
+  </div>
+  <!--<div class="counter-guy">-->
+  <!--  <button class="minus lvlButton buttonHide">-</button>-->
+  <!--  <div class="counter-display">0</div>-->
+  <!--  <button class="add lvlButton buttonHide">+</button>-->
+  <!--</div>-->
+  <script>
+    class Character {
+      constructor(name, charClass, level) {
+        this.name = name,
+          this.charClass = charClass,
+          this.level = level,
+          this.gold = 0,
+          this.xp = 0,
+          this.items = [],
+          this.actionCards = [{}]
+      }
+      addXp() {}
+      addGold(amt) {
+        this.gold += amt;
+      }
+      removeGold(amt) {
+        this.gold -= amt;
+      }
+      buyItem() {} //will need to subtract gold + add card}
+      addCard() {}
+
+    }
+
+    const factory = (name, charClass, level) => {
+
+    }
+    const countDisplay = document.querySelector('.counter-display');
+    const countAdd = document.querySelector('.add');
+    const countMinus = document.querySelector('.minus');
+
+    const char1 = new Character('frodo', 'hobbit', 2);
+    console.log(char1.name)
+
+    countAdd.addEventListener('click', () => {
+      char1.addGold(1);
+      countDisplay.textContent = char1.gold;
+    });
+    countMinus.addEventListener('click', () => {
+      char1.removeGold(1);
+      countDisplay.textContent = char1.gold;
+    });
+    // countAdd.addEventListener('click', () => {
+    // });
+  </script>
+  <script type="module" src="gloomguy.js"></script>
+</body>
+
+</html>
