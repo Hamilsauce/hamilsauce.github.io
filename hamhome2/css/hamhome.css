@@ -13,7 +13,8 @@ body {
   margin: 0;
   height: 100vh;
   width: 100%;
-  background: rgb(250, 248, 244);
+  background: rgb(255, 255, 255);
+  transition: 1s ease-out;
   border: 2px solid rgba(128, 128, 128, 0.692);
 }
 
@@ -29,6 +30,7 @@ body {
   width: 100%;
   background: rgb(200, 190, 170);
   border: 2px solid rgba(128, 128, 128, 0.692);
+  transition: 1s ease-out;
   overflow: hidden;
 }
 
@@ -42,8 +44,8 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.842);
-  border: 1px solid white;
+  box-shadow: 0px 0px 10px 2px rgba(51, 51, 51, 0.705);
+  border: 2px solid rgba(255, 255, 255, 0.712);
   background: rgba(12, 156, 175, 0.747);
   transition: 0.25s ease-out;
   cursor: pointer;
@@ -52,14 +54,30 @@ body {
 }
 
 .grid-item:hover {
-  background: rgba(16, 72, 194, 0.671);
+  background: rgba(80, 150, 230, 0.514);
   transform: scale(1.15, 1.55);
+  transition: 0.3s ease-out;
+  border: 2px solid rgba(68, 93, 148, 0.671);
+
 }
 
-/* .grid-item:nth-child(2n+2) {
-  background: rgb(241, 255, 248);
-  transition: 0.3s ease-in-out;
-} */
+.grid-item:nth-child(5n+7) {
+  background: rgba(173, 210, 221, 0.603);
+  transition: 0.3s ease-out;
+}
+
+.grid-item:nth-child(5n+7):hover {
+  background: rgba(189, 223, 233, 0.911);
+  transition: 1s ease-in-out;
+  transform: rotate3d(-2005, 666, -400, 720deg) scale(1.4);
+  border: 2px solid rgb(255, 255, 255);
+
+  border-radius: 100px;
+  position: sticky;
+  width: 90;
+  z-index: 3;
+
+}
 
 /*
 .cell {
