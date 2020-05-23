@@ -12,7 +12,6 @@ body {
   padding: 0px;
   margin: 0;
   height: 100vh;
-
   width: 100%;
   background: rgb(250, 248, 244);
   border: 2px solid rgba(128, 128, 128, 0.692);
@@ -30,6 +29,7 @@ body {
   width: 100%;
   background: rgb(200, 190, 170);
   border: 2px solid rgba(128, 128, 128, 0.692);
+  overflow: hidden;
 }
 
 .grid-item {
@@ -42,18 +42,18 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-shadow: 0px 0px 10px 2px rgba(110, 110, 110, 0.842);
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.842);
   border: 1px solid white;
-  background: rgb(16, 173, 194);
-  transition: 0.3s ease;
+  background: rgba(12, 156, 175, 0.747);
+  transition: 0.25s ease-out;
   cursor: pointer;
   user-select: none;
   color: rgba(110, 110, 110, 0.014);
 }
 
 .grid-item:hover {
-  background: rgb(16, 108, 194);
-  transform: scale(1.2, 1.7)
+  background: rgba(16, 72, 194, 0.671);
+  transform: scale(1.15, 1.55);
 }
 
 /* .grid-item:nth-child(2n+2) {
@@ -85,6 +85,7 @@ body {
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 75px;
+    padding: 3px;
 
   }
 }
