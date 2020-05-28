@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
+  <title>character</title>
+  <link rel="stylesheet" href="./gloomguy.css">
+</head>
+
+<body>
+  <div id="app">
+    <header class="header">
+      <h1 class="headerText">Dope Data Cards</h1>
+    </header>
+    <div class="content">
+      <div class="content-top">
+        <p>Slick looking cards fro entering data yeah.</p>
+      </div>
+      <form class="userform" autocomplete="off">
+        <div class="card-container">
+
+          <div data-card-name="name-card" class="card name-card">
+            <p class="card-caption">Name</p>
+            <input type="text" class="textIn" value="John Doe">
+          </div>
+
+          <div data-card-name="class-card" class="card class-card">
+            <p class="card-caption">Title</p>
+            <input type="text" class="textIn">
+          </div>
+
+          <div data-card-name="level-card" class="card level-card">
+            <p class="card-caption">Specialty</p>
+            <input type="text" class="textIn">
+          </div>
+          <div data-card-name="name-card" class="card name-card">
+            <p class="card-caption">Dog's Name</p>
+            <input type="text" class="textIn" value="John Doe">
+          </div>
+
+          <div data-card-name="class-card" class="card class-card">
+            <p class="card-caption">Got a Cat?</p>
+            <input type="text" class="textIn">
+          </div>
+
+          <div data-card-name="level-card" class="card level-card">
+            <p class="card-caption">What level is the cat?</p>
+            <input type="text" class="textIn">
+          </div>
+        </div>
+      </form>
+      <!-- <div :characters="characters" v-for="char in characters" class="list">
+      </div> -->
+    </div>
+    <div class="counter-guy">
+      <button class="minus">-</button>
+      <div class="counter-display">0</div>
+      <button class="add">+</button>
+    </div>
+  </div>
+  <script>
+    class Character {
+      constructor(name, charClass, level) {
+        this.name = name,
+          this.charClass = charClass,
+          this.level = level,
+          this.gold = 0,
+          this.xp = 0,
+          this.items = [],
+          this.actionCards = [{}]
+      }
+      addXp() { }
+      addGold(amt) {
+        this.gold += amt;
+      }
+      removeGold(amt) {
+        this.gold -= amt;
+      }
+      buyItem() { } //will need to subtract gold + add card
+      addCard() { }
+
+    }
+
+    const factory = (name, charClass, level) => {
+
+    }
+    const countDisplay = document.querySelector('.counter-display');
+    const countAdd = document.querySelector('.add');
+    const countMinus = document.querySelector('.minus');
+
+    const char1 = new Character('frodo', 'hobbit', 2);
+    console.log(char1.name)
+
+    countAdd.addEventListener('click', () => {
+      char1.addGold(1);
+      countDisplay.textContent = char1.gold;
+    });
+    countMinus.addEventListener('click', () => {
+      char1.removeGold(1);
+      countDisplay.textContent = char1.gold;
+    });
+    // countAdd.addEventListener('click', () => {
+    // });
+  </script>
+  <script type="module" src="gloomguy.js"></script>
+</body>
+
+</html>

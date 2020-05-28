@@ -4,31 +4,106 @@
   box-sizing: border-box;
   font-family: 'Raleway', sans-serif;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-html {
+html,
+body {
   background: rgba(50, 50, 50, 0.1);
-
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0px;
 }
 
 .list {
-  background: blue;
+  background: rgba(80, 80, 80, 0.685);
+}
+
+#app {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  grid-template-rows: 50px 1fr 75px;
+  height: 95vh;
+  width: 100vw;
+  margin: auto;
+  padding: 0px;
+  background: rgba(255, 255, 255, 0.472);
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+
+  box-sizing: border-box;
+}
+
+.header {
+  background: rgba(80, 80, 80, 0.685);
+  padding: 7px 10px;
+  margin: 0;
+}
+
+.headerText {
+  margin: 0;
+  padding: 0;
+  color: #dadada;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+}
+
+.content {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 1fr;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 0px 10px;
+}
+
+.content-top {
+  padding: 0px 5px;
 }
 
 .userform {
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 5px;
-  width: 95vw;
-  max-width: 300px;
-  margin: auto;
-
+  grid-row-gap: 15px;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100%;
+  max-width: 450px;
+  max-height: 500px;
+  padding: 5px 15px 10px 15px;
+  margin: 0px auto;
+  background: rgba(255, 255, 255, 0.472);
+  border-left: 2px groove rgb(102, 100, 110);
+  border-right: 2px groove rgb(102, 100, 110);
+  border-top: 1px solid rgb(156, 156, 156);
+  border-bottom: 1px solid rgb(156, 156, 156);
+  border-radius: 6px;
+  box-shadow: 0px 0px 6px 1px inset rgba(102, 102, 102, 0.753);
+  overflow: auto;
 }
 
-.cell {
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 15px;
+  justify-content: space-evenly;
+  width: 100%;
+  /* max-width: 450px; */
+  /* max-height: 490px; */
+  padding: 6px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
+  overflow: auto;
+  border-bottom: 3px solid rgb(224, 224, 224);
+}
+
+.card {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: auto;
   padding: 10px;
   padding-bottom: 10px;
@@ -36,105 +111,79 @@ html {
   height: fit-content;
   text-align: left;
   border-radius: 6px;
-  border: 2px solid rgba(240, 240, 240, 0.9);
-  background: rgba(65, 64, 65, 0.9);
-  /*   transform: scale(1);
- */
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.activeCell {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin: auto;
-  padding: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  height: fit-content;
-  text-align: left;
-  border-radius: 6px;
-  border: 2px solid rgba(240, 240, 240, 0.9);
-  background: rgba(65, 64, 65, 0.9);
-  transform: scale(1.05);
-  opacity: 1;
-  /* transition: 0.3s; */
-}
-
-.cell:hover {
-  transform: scale(1.05);
-  opacity: 1;
-
-}
-
-.cell:active {
+  border: 2px double rgba(240, 240, 240, 0.9);
+  background: rgb(46, 46, 46);
+  box-shadow: 0px 2px 7px rgba(68, 68, 112, 0.671);
+  cursor: pointer;
   transform: scale(0.99);
-  opacity: 0.69;
-  transition: 0.2s;
-
+  opacity: 0.75;
+  transition: 0.3s ease;
 }
 
-.activeCell:hover {
-  opacity: 1;
-  transform: scale(1.05);
-  transition: 0.2s ease;
-
+.activeCard {
+  transform: scale(1.03);
+  opacity: 0.99;
+  cursor: auto;
+  background: rgb(51, 51, 51);
+  transition: 0.3s ease;
 }
 
-.activeCell:active {
-  transform: scale(1.05);
-  opacity: 1;
-  transition: 0.2s ease;
-
+.card:hover {
+  transform: scale(1.02);
+  opacity: 0.85;
 }
 
-.cell>p {
+.card:active {
+  transform: scale(1);
+  /* opacity: 0.8; */
+}
+
+.activeCard:hover {
+  /* opacity: 0.9; */
+  transform: scale(1.03);
+}
+
+.activeCard:active {
+  transform: scale(1.03);
+  /* opacity: 0.9; */
+}
+
+.card>p {
   font-size: 1.5em;
   margin: 10px;
   padding: 5px;
   color: white;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.6);
+  border: 2px solid rgba(50, 50, 50, 0);
+  border-bottom: 2px solid rgba(250, 250, 250, 0.6);
 }
-.activeCell>p {
+
+.activeCard>p {
   font-size: 1.5em;
   margin: 10px;
   padding: 5px;
   color: white;
-  border-bottom: 1px solid rgba(250, 250, 250, 0.6);
+  border: 2px solid rgba(50, 50, 50, 0);
+  border-bottom: 2px solid rgba(250, 250, 250, 0.6);
 }
 
 .textIn {
   font-size: 1.1em;
   border-radius: 3px;
-  width: 100%;
+  width: 92%;
   background: rgba(255, 255, 255, 0);
   border: 1px solid rgba(50, 50, 50, 0);
-  padding: 5px;
+  padding: 5px 10px;
   margin: auto;
-  /* text-align: center; */
   color: rgba(250, 250, 250, 0.8);
   transition: 0.4s;
-}
-
-.textIn:hover {
-  /* box-shadow:  0px 0px 26px 1px inset rgba(255, 255, 255, 0.40);;
-   /* background: rgba(255, 255, 255, 0.90); */
-  color: black;
+  pointer-events: none;
 }
 
 .textIn:focus {
-  color: white;
-
+  color: #515151;
+  background: #DCDCDC;
 }
 
-.textIn:active {}
-
-/*  background: rgba(255, 255, 255, 0.90);
-  /* box-shadow:  0px 0px 26px 1px inset rgba(255, 255, 255, 0.40);;
-  
-  color: white;
-*/
 .counter-guy {
   display: flex;
   flex-direction: row;
@@ -153,10 +202,8 @@ html {
   color: white;
   color: rgba(250, 250, 250, 0.8);
   opacity: 0.7;
-  /*background: rgba(190, 195, 195, 0.1);*/
   width: 30px;
   text-align: center;
-
 }
 
 .counter-guy>button {
@@ -169,21 +216,17 @@ html {
   width: 40px;
   color: white;
   transition: 0.2s ease-out;
-
 }
 
 .buttonHide {
   opacity: 0;
-
 }
 
 .buttonShow {
   opacity: 1;
-
 }
 
 .counter-guy>button:active {
   background: rgba(255, 255, 255, 0.3);
   box-shadow: 0px 0px 5px 1px inset rgba(150, 150, 155, 0.2);
-
 }
