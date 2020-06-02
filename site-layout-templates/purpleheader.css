@@ -2,14 +2,15 @@
 formContainer, selectContainer,
 contentContainer, app-footer
 */
-
-html,
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 
 }
+
+html,
+body {}
 
 body {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
@@ -22,35 +23,43 @@ body {
 
 h1,
 .muted {
-  /* color: #2c3e5099;*/
+  /* color: #ffffff99; */
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 1.5em;
   font-weight: 600;
 }
 
 #app {
+  position: relative;
   box-sizing: border-box;
   display: grid;
   max-width: 30em;
-  grid-template-rows: 80px 1fr 3fr 50px;
+  justify-content: space-between;
+  /* grid-template-rows: 70px 1fr; */
   /* color: #2c3e5099;*/
-  box-shadow: 0 0 140px 8px inset rgba(60, 25, 60, 0.7);
+  box-shadow: 0 0 140px 8px inset rgba(70, 38, 70, 0.596);
   margin: 0em auto;
-  color: white;
+  color: rgba(255, 255, 255, 0.808);
   height: 100vh;
   padding: 0px;
-
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .app-header {
+  /* position: sticky;
+  top: 0;
+  left: 0; */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0px 0px 10px 0px;
-  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  box-shadow: 0 3px 10px 1px rgba(55, 30, 60, 0.5);
+  border-bottom: 2px solid rgba(223, 216, 224, 0.3);
+  border-bottom: 1px solid rgba(60, 25, 65, 0.657);
 
 }
 
@@ -59,42 +68,93 @@ h1 {
   margin: 0;
   padding: 20px 10px;
   width: 100%;
-  box-shadow: 0 3px 10px 1px rgba(55, 30, 60, 0.5);
+  /* box-shadow: 0 3px 10px 1px rgba(55, 30, 60, 0.5); */
 
   background: rgba(75, 30, 75, 0.5);
   border-bottom: 2px solid rgba(60, 25, 65, 0.3);
-}
-
-.subtitle {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 15px;
+  border-bottom: 2px solid rgba(157, 134, 160, 0.356);
 }
 
 .appBody {
+  /* position: relative; */
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 120px; */
   height: 90vh;
   width: 100%;
   overflow-y: auto;
   overflow-x: hidden;
+  padding: 12px 10px 0px 10px;
+}
+
+.contentContainer {
+  margin: 0;
+  /* padding: 10px 10px 0px 10px; */
 }
 
 .formContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 97%;
+  height: fit-content;
   padding: 15px;
+  margin: 4px;
+  background: rgba(223, 222, 222, 0.89);
+  border: 2px solid rgba(248, 248, 248, 0.575);
+  border-radius: 4px;
+  box-shadow: 0 3px 150px 1px inset rgba(163, 195, 207, 0.63);
+  z-index: 5;
+}
+
+.subtitle {
+  margin: 0px 0px 5px;
+  font-weight: 500;
+  padding: 5px 5px;
+  color: rgba(56, 28, 56, 0.808);
+}
+
+.userform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  border-top: 2px ridge rgba(63, 23, 39, 0.438);
+}
+
+.textInput {
+  padding: 3px;
+  margin: 5px 0px 10px 0px;
+}
+
+.submitButton {
+  padding: 2px;
+  background: rgb(99, 77, 110);
+  color: white;
+  border: 2px solid rgb(48, 61, 77)(194, 192, 192);
+  border-radius: 4px;
+  box-shadow: 0 0px 5px 0px rgba(46, 15, 53, 0.452);
+
 }
 
 .selectContainer {
   color: white;
+  /* position: sticky;
+  bottom: 0;
+  left: 0; */
   background: rgba(60, 35, 80, 0.6);
   border-radius: 3px;
   width: 100%;
   max-width: 330px;
   margin: auto;
-
 }
 
-.v-select {
+/* .v-select {
   background: white;
   border: 1px solid rgba(55, 20, 60, 0.8);
   border-radius: 3px;
   font-size: 1.1em;
-}
+} */

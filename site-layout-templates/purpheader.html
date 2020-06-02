@@ -13,106 +13,191 @@
 </head>
 
 <body>
+
   <div id="app">
 
-    <h1 class="title">{{heading}}</h1>
+    <header class="app-header">
+      <h1 class="title">Chat God</h1>
+    </header>
+
     <div class="appBody">
-      <header class="app-header">
-      </header>
-      <p class="subtitle">{{text}}</p>
-      <div class="formContainer">
-        <form class="userform">
-          <div class="selectContainer">
-            <v-select label="COUNTRY" :options="options"></v-select>
-          </div>
-        </form>
+      <div class="contentContainer">
       </div>
-      <pre class="contentContainer">
-   {
-   "codes": [
-   {
-   "CODE": "ABW",
-   "COUNTRY": "Aruba"
-   },
-   {
-   "CODE": "AFG",
-   "COUNTRY": "Afghanistan"
-   },
-   {
-   "CODE": "AGO",
-   "COUNTRY": "Angola"
-   },
-   {
-   "CODE": "AIA",
-   "COUNTRY": "Anguilla"
-   },
-   {
-   "CODE": "ALA",
-   "COUNTRY": "Åland Islands"
-   },
-   {
-   "CODE": "ALB",
-   "COUNTRY": "Albania"
-   },
-   {
-   "CODE": "AND",
-   "COUNTRY": "Andorra"
-   },
-   {
-   "CODE": "ARE",
-   "COUNTRY": "United Arab Emirates"
-   },
-   {
-   "CODE": "ARG",
-   "COUNTRY": "Argentina"
-   },
-   {
-   "CODE": "ARM",
-   "COUNTRY": "Armenia"
-   },
-   {
-   "CODE": "ASM",
-   "COUNTRY": "American Samoa"
-   },
-   {
-   "CODE": "ATA",
-   "COUNTRY": "Antarctica"
-   },
-   {
-   "CODE": "ATF",
-   "COUNTRY": "French Southern Territories"
-   },
-   {
-   "CODE": "ATG",
-   "COUNTRY": "Antigua and Barbuda"
-   },
-   {
-   "CODE": "AUS",
-   "COUNTRY": "Australia"
-   },
-   {
-   "CODE": "AUT",
-   "COUNTRY": "Austria"
-   },
-   {
-   "CODE": "AZE",
-   "COUNTRY": "Azerbaijan"
-   },
-   {
-   "CODE": "BDI",
-   "COUNTRY": "Burundi"
-   },
-   {
-   "CODE": "BEL",
-   "COUNTRY": "Belgium"
-   },
-  </pre>
-      <footer class="app-footer">
-      </footer>
+
+      <!-- <footer class="app-footer">
+      </footer> -->
+    </div>
+    <div class="formContainer">
+      <p class="subtitle">Stick your name in that and then chat in it too.</p>
+      <form class="userform">
+        <input id="name" type="text" class="textInput" name="name" value="" placeholder="Enter your name!">
+        <button type="button" class="submitButton" name="button" onclick="setUsername()">Let me chat!</button>
+
+        <div class="selectContainer">
+          <!-- <v-select label="COUNTRY" :options="options"></v-select> -->
+        </div>
+      </form>
     </div>
   </div>
   <!-- Project -->
   <script src="./js/app.js"></script>
+  <script>
+    const data = [
+      {
+        "CODE": "ABW",
+        "COUNTRY": "Aruba"
+      },
+      {
+        "CODE": "AFG",
+        "COUNTRY": "Afghanistan"
+      },
+      {
+        "CODE": "AGO",
+        "COUNTRY": "Angola"
+      },
+      {
+        "CODE": "AIA",
+        "COUNTRY": "Anguilla"
+      },
+      {
+        "CODE": "ALA",
+        "COUNTRY": "Åland Islands"
+      },
+      {
+        "CODE": "ALB",
+        "COUNTRY": "Albania"
+      },
+      {
+        "CODE": "AND",
+        "COUNTRY": "Andorra"
+      },
+      {
+        "CODE": "ARE",
+        "COUNTRY": "United Arab Emirates"
+      },
+      {
+        "CODE": "ARG",
+        "COUNTRY": "Argentina"
+      },
+      {
+        "CODE": "ARM",
+        "COUNTRY": "Armenia"
+      },
+      {
+        "CODE": "ASM",
+        "COUNTRY": "American Samoa"
+      },
+      {
+        "CODE": "ATA",
+        "COUNTRY": "Antarctica"
+      },
+      {
+        "CODE": "ATF",
+        "COUNTRY": "French Southern Territories"
+      },
+      {
+        "CODE": "ATG",
+        "COUNTRY": "Antigua and Barbuda"
+      },
+      {
+        "CODE": "AUS",
+        "COUNTRY": "Australia"
+      },
+      {
+        "CODE": "AUT",
+        "COUNTRY": "Austria"
+      },
+      {
+        "CODE": "AZE",
+        "COUNTRY": "Azerbaijan"
+      },
+      {
+        "CODE": "BDI",
+        "COUNTRY": "Burundi"
+      },
+      {
+        "CODE": "BEL",
+        "COUNTRY": "Belgium"
+      },
+      {
+        "CODE": "ABW",
+        "COUNTRY": "Aruba"
+      },
+      {
+        "CODE": "AFG",
+        "COUNTRY": "Afghanistan"
+      },
+      {
+        "CODE": "AGO",
+        "COUNTRY": "Angola"
+      },
+      {
+        "CODE": "AIA",
+        "COUNTRY": "Anguilla"
+      },
+      {
+        "CODE": "ALA",
+        "COUNTRY": "Åland Islands"
+      },
+      {
+        "CODE": "ALB",
+        "COUNTRY": "Albania"
+      },
+      {
+        "CODE": "AND",
+        "COUNTRY": "Andorra"
+      },
+      {
+        "CODE": "ARE",
+        "COUNTRY": "United Arab Emirates"
+      },
+      {
+        "CODE": "ARG",
+        "COUNTRY": "Argentina"
+      },
+      {
+        "CODE": "ARM",
+        "COUNTRY": "Armenia"
+      },
+      {
+        "CODE": "ASM",
+        "COUNTRY": "American Samoa"
+      },
+      {
+        "CODE": "ATA",
+        "COUNTRY": "Antarctica"
+      },
+      {
+        "CODE": "ATF",
+        "COUNTRY": "French Southern Territories"
+      },
+      {
+        "CODE": "ATG",
+        "COUNTRY": "Antigua and Barbuda"
+      },
+      {
+        "CODE": "AUS",
+        "COUNTRY": "Australia"
+      },
+      {
+        "CODE": "AUT",
+        "COUNTRY": "Austria"
+      },
+      {
+        "CODE": "AZE",
+        "COUNTRY": "Azerbaijan"
+      },
+      {
+        "CODE": "BDI",
+        "COUNTRY": "Burundi"
+      },
+      {
+        "CODE": "BEL",
+        "COUNTRY": "Belgium"
+      }]
+    document.querySelector('.contentContainer').textContent = JSON.stringify(data, null, 2)
+
+  </script>
   <!-- <script src="./js/covid.js"></script> -->
 </body>
 
