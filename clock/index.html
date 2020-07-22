@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Clock</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.min.js"></script>
-  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap');
 
-<body>
-  <div id="vue-app">
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   
-    <h1 class="">{{heading}}</h1>
-    <p class="">{{text}}</p>
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Dosis', sans-serif;
   
-  <clock>{{message}}</clock>
-</div>
-  <!-- Project -->
-  <script src="app.js"></script>
-</body>
-</html>
+  background: blue;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: rgb(85, 175, 130);
+
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 100px;
+  grid-gap: 10px;
+  justify-content: center;
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  /* background: rgb(85, 175, 130); */
+}
+
+.clock {
+  disp

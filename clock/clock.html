@@ -1,30 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+const setTime = () => {
+  const secOut = document.querySelector('.timeOut')
+  const minOut = document.querySelector('.minsText')
+  // const hourOut = document.querySelector('.hourText')
+  const secHand = document.querySelector('.second-hand')
+  const minHand = document.querySelector('.minute-hand')
+  const hourHand = document.querySelector('.hour-hand')
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-</head>
+  const initPosition = 90;
+  let now = new Date();
 
-<body>
-  <main class="app">
-    <div class="clock">
-      <div class="clock-face">
-        <div class="clock-center"></div>
-				<div class="hand second-hand"></div>
-				<div class="hand minute-hand"></div>
-			<!-- 	<div class="hand minute-hand"></div>
-			<div class="hand hour-hand"></div> -->
-      </div>
-    </div>
-		<div class="timeOut">
-		<div class="minsOut">
+  let seconds = now.getSeconds();
+  let secDegrees = ((seconds / 60) * 360) + initPosition;
+  if (seconds === 0) {
+    secHand.style.transition = '0s'
+    // secHand.style.transform = `rotate(${secDegrees}deg)`
+    secHand.style.transform = `rotate(${secDegrees}deg)`
+  } else if (seconds >= 1) {
+    secHand.style.transition = '1s'
+  }
+  secHand.style.transform = `rotate(${secDegrees}deg)`
 
-		</div>
-  </main>
-  <script src="clock.js"></script>
-</body>
-
-</html>
+  let minutes = now.getMinutes();
+  let minDegrees = ((minutes / 60) * 360) + initPosition;
+  
