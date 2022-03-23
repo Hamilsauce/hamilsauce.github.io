@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <script type='text/javascript' src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script>
+  <title>Android XML Parser</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .app {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1024px;
+      height: 100%;
+      margin: auto;
+      padding: 16px;
+      gap: 32px;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+.instructions {
+  width: 100%;
+  text-align: left;
+  line-height: 1.7;
+}
+    #parserForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      width: 100%;
+      background: rgb(237, 237, 237)
+    }
+
+    textarea {
+      width: 100%;
+      height: 400px;
+    }
+    .control-group {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 8px;
+    }
+
+    .control-group label {
+      width: 100%;
+    }
+
+    #filePathInput {
+      width: 100%;
+    }
+
+    #submit-submit-container {
+      align-items: flex-end;
+      justify-content: flex-end;
+    }
+
+    .emphasize {
+      font-weight: 700;
+    }
+
+    #xmlTextArea {
+      padding: 8px;
+      border: 2px solid rgb(79, 79, 79);
+    }
+
+    #errorMsg {
+      width: 100%;
+      height: 20px;
+      text-align: center;
+      color: transparent;
+    }
+
+    #errorMsg.hasError {
+
+      color: rgb(233, 47, 47);
+    }
+
+    @media (max-width: 400px) {
+      .control-group {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .control-group label {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <h3>Get a Android App XML Selectors</h3>
+    <div>
+      <div class="instructions">Will create a dictionary/map/object containing the selectors/attributes from the xml document that's pasted
+        into the text area below.
+        The dictionary keys will be the attribute values converted to camel case if snake or kebab.</div>
+        <br>
+        <div class="instructions">The dictionary keys will be the attribute values converted to camel case if snake or kebab</div>
+    </div>
+      <form id="parserForm">
+
+      <div class="control-group">
+        <label for="attributeInput">Enter attribute to be selected: </label>
+        <input type="text" name="attributeInput" id="attributeInput" placeholder="ex.: resource-id">
+      </div>
+      <div id="submit-submit-container" class="control-group">
+        <input type="submit" id="submitButton" value="Get Selectors!">
+      </div>
+      <div id="errorMsg">Error: Parsed all wrong! Try again </div>
+      <textarea spellcheck="false" name="xmlTextArea" id="xmlTextArea" cols="100" rows="20"
+        placeholder="Paste Android screen XML into me..."></textarea>
+    </form>
+  </div>
+  <script src="https://rawgit.com/Microsoft/TypeScript/master/lib/typescriptServices.js"></script>
+  <script src="https://rawgit.com/basarat/typescript-script/master/transpiler.js"></script>
+  <script src="./script.js" type="module"></script>
+  <!-- <script type="module" src="./fbase.js"></script> -->
+  <!-- <script type="module" src="./firestore-batch.js"></script> -->
+  <!-- <script type="text/typescript" src="../../firebase.ts"></script> -->
+</body>
+
+</html>
