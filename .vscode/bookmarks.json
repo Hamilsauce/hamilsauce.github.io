@@ -1,142 +1,144 @@
-[
-	{
-		"path": "$ROOTPATH$\\style.css",
-		"bookmarks": [
-			{
-				"line": 196,
-				"column": 13,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\notemondo\\notemondo.js",
-		"bookmarks": [
-			{
-				"line": 20,
-				"column": 13,
-				"label": ""
-			},
-			{
-				"line": 65,
-				"column": 5,
-				"label": ""
-			},
-			{
-				"line": 88,
-				"column": 8,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\telegramify.js",
-		"bookmarks": [
-			{
-				"line": 70,
-				"column": 17,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\telegramify\\telegramify.js",
-		"bookmarks": [
-			{
-				"line": 49,
-				"column": 22,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\telegramify\\telegramify.css",
-		"bookmarks": [
-			{
-				"line": 27,
-				"column": 6,
-				"label": ""
-			},
-			{
-				"line": 42,
-				"column": 10,
-				"label": ""
-			},
-			{
-				"line": 331,
-				"column": 9,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\telegramify\\telegramify.html",
-		"bookmarks": [
-			{
-				"line": 24,
-				"column": 18,
-				"label": ""
-			},
-			{
-				"line": 25,
-				"column": 3,
-				"label": ""
-			},
-			{
-				"line": 40,
-				"column": 4,
-				"label": ""
-			},
-			{
-				"line": 72,
-				"column": 6,
-				"label": ""
-			},
-			{
-				"line": 80,
-				"column": 4,
-				"label": ""
-			},
-			{
-				"line": 87,
-				"column": 24,
-				"label": ""
-			},
-			{
-				"line": 89,
-				"column": 5,
-				"label": ""
-			},
-			{
-				"line": 105,
-				"column": 22,
-				"label": ""
-			},
-			{
-				"line": 107,
-				"column": 5,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\crud-filter-table\\filterList-dynamic\\filterList-dynamic.css",
-		"bookmarks": [
-			{
-				"line": 101,
-				"column": 15,
-				"label": ""
-			}
-		]
-	},
-	{
-		"path": "$ROOTPATH$\\crud-filter-table\\js\\filterList.js",
-		"bookmarks": [
-			{
-				"line": 288,
-				"column": 10,
-				"label": ""
-			}
-		]
-	}
-]
+{
+	"files": [
+		{
+			"path": "style.css",
+			"bookmarks": [
+				{
+					"line": 196,
+					"column": 13,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "notemondo/notemondo.js",
+			"bookmarks": [
+				{
+					"line": 20,
+					"column": 13,
+					"label": ""
+				},
+				{
+					"line": 65,
+					"column": 5,
+					"label": ""
+				},
+				{
+					"line": 88,
+					"column": 8,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "telegramify.js",
+			"bookmarks": [
+				{
+					"line": 70,
+					"column": 17,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "telegramify/telegramify.js",
+			"bookmarks": [
+				{
+					"line": 49,
+					"column": 22,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "telegramify/telegramify.css",
+			"bookmarks": [
+				{
+					"line": 27,
+					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 42,
+					"column": 10,
+					"label": ""
+				},
+				{
+					"line": 331,
+					"column": 9,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "telegramify/telegramify.html",
+			"bookmarks": [
+				{
+					"line": 24,
+					"column": 18,
+					"label": ""
+				},
+				{
+					"line": 25,
+					"column": 3,
+					"label": ""
+				},
+				{
+					"line": 40,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 72,
+					"column": 6,
+					"label": ""
+				},
+				{
+					"line": 80,
+					"column": 4,
+					"label": ""
+				},
+				{
+					"line": 87,
+					"column": 24,
+					"label": ""
+				},
+				{
+					"line": 89,
+					"column": 5,
+					"label": ""
+				},
+				{
+					"line": 105,
+					"column": 22,
+					"label": ""
+				},
+				{
+					"line": 107,
+					"column": 5,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "crud-filter-table/filterList-dynamic/filterList-dynamic.css",
+			"bookmarks": [
+				{
+					"line": 101,
+					"column": 15,
+					"label": ""
+				}
+			]
+		},
+		{
+			"path": "crud-filter-table/js/filterList.js",
+			"bookmarks": [
+				{
+					"line": 288,
+					"column": 10,
+					"label": ""
+				}
+			]
+		}
+	]
+}
