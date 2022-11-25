@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop up test</title>
+</head>
+
+<body>
+  <button id="open-popup">Pop!</button>
+</body>
+
+<script>
+
+  const popupButton = document.querySelector('#open-popup');
+
+  popupButton.addEventListener('click', e => {
+    const popup = open('https://www.scatter.art/collection/0x8fc0d90f2c45a5e7f94904075c952e0943cfccfd?tab=mint', 'Mint your Milady!', 'popup=true');
+    console.warn({ popup });
+    // popup.onbeforeunload = e => {
+    //   console.warn('HEARD POPUP CLOSE IN INDEX.HTML', { e });
+    // };
+  })
+</script>
+
+</html>

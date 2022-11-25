@@ -29,7 +29,11 @@ body {
 #app>* {
   padding: 8px;
 }
+.output {
 
+  font-size: 32px;
+  color: black;
+}
 #app-header {
   display: flex;
   flex-direction: row;
