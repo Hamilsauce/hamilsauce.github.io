@@ -145,8 +145,6 @@ body {
   height: 100%;
   padding: 0 8px;
   overflow: hidden;
-  /* overflow-y: scroll; */
-  /* max-width: 500px; */
 }
 
 /* #app-body {
