@@ -1,0 +1,107 @@
+{
+  "4gyouqykssyd2uuego": {
+    "id": "4gyouqykssyd2uuego",
+  "isRoot": true,
+    "name": "Final Word (Cruisin with the Dragon)",
+    "nodeType": "Folder",
+    "_parentId": "8y17ynkbytusbghytq",
+    "parentId": null,
+    "size": 8,
+    "depth": 2,
+    "fileRefs": [
+        "e1bujelegkysxpoeqyx",
+        "ewlayqkqxsxogregey",
+        "ewgyikqyjvokjdc4se4"
+      ],
+    "children": {
+      "ufy8ebwqxup9kogs8yp": {
+        "id": "ufy8ebwqxup9kogs8yp",
+        "name": "Current Versions (Full Song)",
+        "nodeType": "Folder",
+        "parentId": "4gyouqykssyd2uuego",
+        "size": 2,
+        "depth": 3,
+        "fileRefs": [
+            "fgbkbeqyqt5yrs1moy",
+            "zeymcp7k0q2ovg9ehys"
+          ]
+      },
+      "wy9h1ugkjeqoslz7fy": {
+        "id": "wy9h1ugkjeqoslz7fy",
+        "name": "MIDI files",
+        "nodeType": "Folder",
+        "parentId": "4gyouqykssyd2uuego",
+        "size": 4,
+        "depth": 3,
+        "fileRefs": [
+            "qgloq5ysxgkl8neyiei",
+            "bz96y1dsgk9ek1oqyyr",
+            "8qylggo9sy0uf4mktfe",
+            "r2ogqqwyyeot9tmk1sv"
+          ]
+      },
+      "6lsweehykjq58ghoey": {
+        "id": "6lsweehykjq58ghoey",
+        "name": "Tabs, Lyrics, Misc",
+        "nodeType": "Folder",
+        "parentId": "4gyouqykssyd2uuego",
+        "size": 2,
+        "depth": 3,
+        "fileRefs": [
+            "hynxedogtiqqy7sck09",
+            "kmoqmseyu5wgokjwyq"
+          ]
+      },
+      "m79elgs9yrjoqksjyw": {
+        "id": "m79elgs9yrjoqksjyw",
+        "name": "The Final Word",
+        "nodeType": "Folder",
+        "parentId": "4gyouqykssyd2uuego",
+        "size": 9,
+        "depth": 3,
+        "fileRefs": [
+            "lyotzny4kiesh2gqjop",
+            "yc1vkcqedujq7g24osy",
+            "hz29yqxsgrkyos2iesy",
+            "pymhksk9ehnqydogja5",
+            "y5ctdvy4foasgoqke9u",
+            "qqsnyvg1k6loyfsgp8e",
+            "rse4kgiqjooyusynqim",
+            "eaxgq2svk9piesoykuy"
+          ],
+        "children": {
+          "ok3efyabs4y3owqtg0f": {
+            "id": "ok3efyabs4y3owqtg0f",
+            "name": "Track Audio and MIDI Files",
+            "nodeType": "Folder",
+            "parentId": "m79elgs9yrjoqksjyw",
+            "size": 6,
+            "depth": 4,
+            "fileRefs": [
+                "csl98gyk9fqqmfyyogo",
+                "30fsi7rl03yky1qg3ow",
+                "4y533y65qafs7oskgo6",
+                "ylmglqyfosfuk2gnsf",
+                "frtkso68i5wqo5gkoyy",
+                "ygu3c1fom3kytsqofg"
+              ]
+          }
+        }
+      },
+      "7t6gjyvkfo8vqyo9pbs": {
+        "id": "7t6gjyvkfo8vqyo9pbs",
+        "name": "Track Audio and MIDI Files",
+        "nodeType": "Folder",
+        "parentId": "4gyouqykssyd2uuego",
+        "size": 4,
+        "depth": 3,
+        "fileRefs": [
+            "qagssyroysisdfkjn3o",
+            "k4l8rsufvoqssyrygl3",
+            "9njbyyqjskfg10onsoo",
+            "wgoff3p28wk6sqy1cly"
+          ]
+      }
+    }
+  }
+}

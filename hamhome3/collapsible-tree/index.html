@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <title>Collapsible Tree Web Component</title>
+
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+</head>
+
+<body>
+  <div class="gradient" id="app">
+    <header id="app-header">
+      <h1 id="app-title">Collapsible Tree</h1>
+      <h3 id="app-subtitle">web component</h3>
+    </header>
+    <main id="main">
+      <collapsible-tree id="tree"></collapsible-tree>
+    </main>
+    <footer id="app-footer">
+      <a id="github-link" href="https://hamilsauce.github.io/">
+        <span>jake hamilton</span>
+        <span>2022</span>
+      </a>
+    </footer>
+  </div>
+
+  <template id="root-template">
+    <div id="component-container">
+      <ul id="tree-list"></ul>
+    </div>
+    <!-- <li data-active="false" class="node">
+      <button id="" class="collapsible-button">
+        <div class="collapsible-button-content">
+          <div class="button-name"></div>
+          <div class="button-size"></div>
+        </div>
+      </button>
+      <section data-active="false" class="collapsible-content-wrapper">
+        <ul class="collapsible-content"></ul>
+      </section>
+    </li> -->
+  </template>
+
+  <template id="node-template">
+    <li data-active="false" class="node">
+      <button id="" class="collapsible-button">
+        <div class="collapsible-button-content">
+          <div class="button-name"></div>
+          <div class="button-size"></div>
+        </div>
+      </button>
+      <section data-active="false" class="collapsible-content-wrapper">
+        <ul class="collapsible-content"></ul>
+      </section>
+    </li>
+  </template>
+
+  <script src="./js/CollapsibleTree.component.js" type="module" charset="utf-8"></script>
+  <script src="./script.js" type="module" charset="utf-8"></script>
+</body>
+
+</html>
