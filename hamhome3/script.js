@@ -75,10 +75,6 @@ const filtered = repoData
 
 const repoList = document.querySelector('#repo-list');
 repoList.append(...filtered);
-// console.log(filtered)
-
-
-
 
 appTitle.addEventListener('click', e => {
   const isInverted = app.classList.contains('invert');
