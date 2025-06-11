@@ -21,7 +21,6 @@ const init = async () => {
 
 const repoData = await init();
 
-
 const owner = repoData[0].owner;
 const img = document.createElement('img');
 img.src = owner.avatar_url;
