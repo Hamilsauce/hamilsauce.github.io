@@ -5,7 +5,7 @@ const appBody = document.querySelector('#app-body');
 const appTitle = document.querySelector('#app-title');
 const appHeaderRight = document.querySelector('#app-header-right');
 const appHeaderLeft = document.querySelector('#app-header-left');
-const containers = document.querySelectorAll('.container');
+const repoSearch = document.querySelector('#repo-search-input')
 
 const STORE_KEY = 'HAMILSAUCE_REPOS';
 
@@ -62,10 +62,9 @@ const filtered = repoData
     const el = document.createElement('li');
     el.classList.add('list-item');
     el.innerHTML = template;
+    el.dataset.name = formattedName
 
     el.addEventListener('pointerup', (e) => {
-      // history.pushState({}, '', url);
-      // location.href = url
       el.querySelector('a').click()
     });
 
@@ -86,4 +85,31 @@ appTitle.addEventListener('click', e => {
     app.classList.add('invert');
     app.classList.remove('outvert');
   }
+});
+
+
+appTitle.addEventListener('click', e => {
+  const isInverted = app.classList.contains('invert')
+
+  if (isInverted) {
+    app.classList.remove('invert')
+    app.classList.add('outvert')
+  }
+  else {
+    app.classList.add('invert')
+    app.classList.remove('outvert')
+  }
+});
+
+repoSearch.addEventListener('input', e => {
+  console.log(e.data)
+
+  const listItems = [...document.querySelectorAll('.list-item')];
+
+  listItems.forEach((el, i) => {
+    const repoName = el.dataset.name
+    console.warn('repoName.includes(repoSearch.value)', repoName.includes(repoSearch.value))
+    el.dataset.hide = repoName.includes(repoSearch.value) ?
+      false : true;
+  });
 });
