@@ -35,8 +35,10 @@ img.addEventListener('click', e => {
 });
 
 const filtered = repoData
-  .filter(({ fork, has_pages }, i) => has_pages && !fork)
-  .sort(({updated_at: datestringA}, {updated_at: datestringB}) => new Date(Date.parse(datestringB)) - new Date(Date.parse(datestringA)))
+  // .filter(({ fork, has_pages }, i) => has_pages && !fork)
+  // .sort(({updated_at: datestringA}, {updated_at: datestringB}) => new Date(Date.parse(datestringB)) - new Date(Date.parse(datestringA)))
+  .filter(({ fork, has_pages }, i) => !fork && has_pages)
+  .sort((a, b) => a.updated_at < b.updated_at ? 1 : -1)
   .map((x, i) => {
     if (x.has_pages === true) {
       x.pages_url = `https://hamilsauce.github.io/${x.name}/`;
