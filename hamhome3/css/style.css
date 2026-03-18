@@ -198,6 +198,7 @@ body {
   overflow: scroll;
   background: #00000063;
   background: transparent;
+  scroll-behavior: smooth;
 }
 
 .list-item {
