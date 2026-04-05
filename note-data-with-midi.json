@@ -11,6 +11,16 @@
     "midi": 12
   },
   {
+    "id": 1,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 17.32,
+    "wavelength": 1991.47,
+    "octave": 0,
+    "pitchClass": "C#/Db",
+    "pitch": "C#0/Db0",
     "midi": 13
   },
   {
@@ -25,6 +35,16 @@
     "midi": 14
   },
   {
+    "id": 3,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 19.45,
+    "wavelength": 1774.2,
+    "octave": 0,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#0/Eb0",
     "midi": 15
   },
   {
@@ -50,6 +70,16 @@
     "midi": 17
   },
   {
+    "id": 6,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 23.12,
+    "wavelength": 1491.91,
+    "octave": 0,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#0/Gb0",
     "midi": 18
   },
   {
@@ -64,6 +94,16 @@
     "midi": 19
   },
   {
+    "id": 8,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 25.96,
+    "wavelength": 1329.14,
+    "octave": 0,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#0/Ab0",
     "midi": 20
   },
   {
@@ -78,6 +118,16 @@
     "midi": 21
   },
   {
+    "id": 10,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 29.14,
+    "wavelength": 1184.13,
+    "octave": 0,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#0/Bb0",
     "midi": 22
   },
   {
@@ -103,6 +153,16 @@
     "midi": 24
   },
   {
+    "id": 13,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 34.65,
+    "wavelength": 995.73,
+    "octave": 1,
+    "pitchClass": "C#/Db",
+    "pitch": "C#1/Db1",
     "midi": 25
   },
   {
@@ -117,6 +177,16 @@
     "midi": 26
   },
   {
+    "id": 15,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 38.89,
+    "wavelength": 887.1,
+    "octave": 1,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#1/Eb1",
     "midi": 27
   },
   {
@@ -142,6 +212,16 @@
     "midi": 29
   },
   {
+    "id": 18,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 46.25,
+    "wavelength": 745.96,
+    "octave": 1,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#1/Gb1",
     "midi": 30
   },
   {
@@ -156,6 +236,16 @@
     "midi": 31
   },
   {
+    "id": 20,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 51.91,
+    "wavelength": 664.57,
+    "octave": 1,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#1/Ab1",
     "midi": 32
   },
   {
@@ -170,6 +260,16 @@
     "midi": 33
   },
   {
+    "id": 22,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 58.27,
+    "wavelength": 592.07,
+    "octave": 1,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#1/Bb1",
     "midi": 34
   },
   {
@@ -195,6 +295,16 @@
     "midi": 36
   },
   {
+    "id": 25,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 69.3,
+    "wavelength": 497.87,
+    "octave": 2,
+    "pitchClass": "C#/Db",
+    "pitch": "C#2/Db2",
     "midi": 37
   },
   {
@@ -209,6 +319,16 @@
     "midi": 38
   },
   {
+    "id": 27,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 77.78,
+    "wavelength": 443.55,
+    "octave": 2,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#2/Eb2",
     "midi": 39
   },
   {
@@ -234,6 +354,16 @@
     "midi": 41
   },
   {
+    "id": 30,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 92.5,
+    "wavelength": 372.98,
+    "octave": 2,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#2/Gb2",
     "midi": 42
   },
   {
@@ -248,6 +378,16 @@
     "midi": 43
   },
   {
+    "id": 32,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 103.83,
+    "wavelength": 332.29,
+    "octave": 2,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#2/Ab2",
     "midi": 44
   },
   {
@@ -262,6 +402,16 @@
     "midi": 45
   },
   {
+    "id": 34,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 116.54,
+    "wavelength": 296.03,
+    "octave": 2,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#2/Bb2",
     "midi": 46
   },
   {
@@ -287,6 +437,16 @@
     "midi": 48
   },
   {
+    "id": 37,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 138.59,
+    "wavelength": 248.93,
+    "octave": 3,
+    "pitchClass": "C#/Db",
+    "pitch": "C#3/Db3",
     "midi": 49
   },
   {
@@ -301,6 +461,16 @@
     "midi": 50
   },
   {
+    "id": 39,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 155.56,
+    "wavelength": 221.77,
+    "octave": 3,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#3/Eb3",
     "midi": 51
   },
   {
@@ -326,6 +496,16 @@
     "midi": 53
   },
   {
+    "id": 42,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 185,
+    "wavelength": 186.49,
+    "octave": 3,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#3/Gb3",
     "midi": 54
   },
   {
@@ -340,6 +520,16 @@
     "midi": 55
   },
   {
+    "id": 44,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 207.65,
+    "wavelength": 166.14,
+    "octave": 3,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#3/Ab3",
     "midi": 56
   },
   {
@@ -354,6 +544,16 @@
     "midi": 57
   },
   {
+    "id": 46,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 233.08,
+    "wavelength": 148.02,
+    "octave": 3,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#3/Bb3",
     "midi": 58
   },
   {
@@ -379,6 +579,16 @@
     "midi": 60
   },
   {
+    "id": 49,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 277.18,
+    "wavelength": 124.47,
+    "octave": 4,
+    "pitchClass": "C#/Db",
+    "pitch": "C#4/Db4",
     "midi": 61
   },
   {
@@ -393,6 +603,16 @@
     "midi": 62
   },
   {
+    "id": 51,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 311.13,
+    "wavelength": 110.89,
+    "octave": 4,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#4/Eb4",
     "midi": 63
   },
   {
@@ -418,6 +638,16 @@
     "midi": 65
   },
   {
+    "id": 54,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 369.99,
+    "wavelength": 93.24,
+    "octave": 4,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#4/Gb4",
     "midi": 66
   },
   {
@@ -432,6 +662,16 @@
     "midi": 67
   },
   {
+    "id": 56,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 415.3,
+    "wavelength": 83.07,
+    "octave": 4,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#4/Ab4",
     "midi": 68
   },
   {
@@ -446,6 +686,16 @@
     "midi": 69
   },
   {
+    "id": 58,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 466.16,
+    "wavelength": 74.01,
+    "octave": 4,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#4/Bb4",
     "midi": 70
   },
   {
@@ -471,6 +721,16 @@
     "midi": 72
   },
   {
+    "id": 61,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 554.37,
+    "wavelength": 62.23,
+    "octave": 5,
+    "pitchClass": "C#/Db",
+    "pitch": "C#5/Db5",
     "midi": 73
   },
   {
@@ -485,6 +745,16 @@
     "midi": 74
   },
   {
+    "id": 63,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 622.25,
+    "wavelength": 55.44,
+    "octave": 5,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#5/Eb5",
     "midi": 75
   },
   {
@@ -510,6 +780,16 @@
     "midi": 77
   },
   {
+    "id": 66,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 739.99,
+    "wavelength": 46.62,
+    "octave": 5,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#5/Gb5",
     "midi": 78
   },
   {
@@ -524,6 +804,16 @@
     "midi": 79
   },
   {
+    "id": 68,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 830.61,
+    "wavelength": 41.54,
+    "octave": 5,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#5/Ab5",
     "midi": 80
   },
   {
@@ -538,6 +828,16 @@
     "midi": 81
   },
   {
+    "id": 70,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 932.33,
+    "wavelength": 37,
+    "octave": 5,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#5/Bb5",
     "midi": 82
   },
   {
@@ -563,6 +863,16 @@
     "midi": 84
   },
   {
+    "id": 73,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 1108.73,
+    "wavelength": 31.12,
+    "octave": 6,
+    "pitchClass": "C#/Db",
+    "pitch": "C#6/Db6",
     "midi": 85
   },
   {
@@ -577,6 +887,16 @@
     "midi": 86
   },
   {
+    "id": 75,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 1244.51,
+    "wavelength": 27.72,
+    "octave": 6,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#6/Eb6",
     "midi": 87
   },
   {
@@ -602,6 +922,16 @@
     "midi": 89
   },
   {
+    "id": 78,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 1479.98,
+    "wavelength": 23.31,
+    "octave": 6,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#6/Gb6",
     "midi": 90
   },
   {
@@ -616,6 +946,16 @@
     "midi": 91
   },
   {
+    "id": 80,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 1661.22,
+    "wavelength": 20.77,
+    "octave": 6,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#6/Ab6",
     "midi": 92
   },
   {
@@ -630,6 +970,16 @@
     "midi": 93
   },
   {
+    "id": 82,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 1864.66,
+    "wavelength": 18.5,
+    "octave": 6,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#6/Bb6",
     "midi": 94
   },
   {
@@ -655,6 +1005,16 @@
     "midi": 96
   },
   {
+    "id": 85,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 2217.46,
+    "wavelength": 15.56,
+    "octave": 7,
+    "pitchClass": "C#/Db",
+    "pitch": "C#7/Db7",
     "midi": 97
   },
   {
@@ -669,6 +1029,16 @@
     "midi": 98
   },
   {
+    "id": 87,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 2489.02,
+    "wavelength": 13.86,
+    "octave": 7,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#7/Eb7",
     "midi": 99
   },
   {
@@ -694,6 +1064,16 @@
     "midi": 101
   },
   {
+    "id": 90,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 2959.96,
+    "wavelength": 11.66,
+    "octave": 7,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#7/Gb7",
     "midi": 102
   },
   {
@@ -708,6 +1088,16 @@
     "midi": 103
   },
   {
+    "id": 92,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 3322.44,
+    "wavelength": 10.38,
+    "octave": 7,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#7/Ab7",
     "midi": 104
   },
   {
@@ -722,6 +1112,16 @@
     "midi": 105
   },
   {
+    "id": 94,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 3729.31,
+    "wavelength": 9.25,
+    "octave": 7,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#7/Bb7",
     "midi": 106
   },
   {
@@ -747,6 +1147,16 @@
     "midi": 108
   },
   {
+    "id": 97,
+    "step": 1,
+    "isNatural": false,
+    "sharp": "C#",
+    "flat": "Db",
+    "frequency": 4434.92,
+    "wavelength": 7.78,
+    "octave": 8,
+    "pitchClass": "C#/Db",
+    "pitch": "C#8/Db8",
     "midi": 109
   },
   {
@@ -761,6 +1171,16 @@
     "midi": 110
   },
   {
+    "id": 99,
+    "step": 3,
+    "isNatural": false,
+    "sharp": "D#",
+    "flat": "Eb",
+    "frequency": 4978.03,
+    "wavelength": 6.93,
+    "octave": 8,
+    "pitchClass": "D#/Eb",
+    "pitch": "D#8/Eb8",
     "midi": 111
   },
   {
@@ -786,6 +1206,16 @@
     "midi": 113
   },
   {
+    "id": 102,
+    "step": 6,
+    "isNatural": false,
+    "sharp": "F#",
+    "flat": "Gb",
+    "frequency": 5919.91,
+    "wavelength": 5.83,
+    "octave": 8,
+    "pitchClass": "F#/Gb",
+    "pitch": "F#8/Gb8",
     "midi": 114
   },
   {
@@ -800,6 +1230,16 @@
     "midi": 115
   },
   {
+    "id": 104,
+    "step": 8,
+    "isNatural": false,
+    "sharp": "G#",
+    "flat": "Ab",
+    "frequency": 6644.88,
+    "wavelength": 5.19,
+    "octave": 8,
+    "pitchClass": "G#/Ab",
+    "pitch": "G#8/Ab8",
     "midi": 116
   },
   {
@@ -814,6 +1254,16 @@
     "midi": 117
   },
   {
+    "id": 106,
+    "step": 10,
+    "isNatural": false,
+    "sharp": "A#",
+    "flat": "Bb",
+    "frequency": 7458.62,
+    "wavelength": 4.63,
+    "octave": 8,
+    "pitchClass": "A#/Bb",
+    "pitch": "A#8/Bb8",
     "midi": 118
   },
   {
